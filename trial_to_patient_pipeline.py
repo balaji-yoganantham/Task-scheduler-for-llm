@@ -204,7 +204,7 @@ class TrialToPatientOrchestrator:
                 # Show all evaluated patients with detailed results
                 final_ranking = matching_results.get('final_ranking', [])
                 if final_ranking:
-                    print(f"\nALL {len(final_ranking)} PATIENTS EVALUATED BY GEMINI:")
+                    print(f"\nALL {len(final_ranking)} PATIENTS EVALUATED BY GPT-4O MINI:")
                     print("=" * 100)
                     
                     # Show detailed results for all patients

@@ -95,7 +95,7 @@ class TrialEvaluator:
         print(f"BATCH Running BATCH evaluation for {len(detailed_patients)} patients...")
         print(f"TRIAL Trial: {trial_info['title']} (Phase: {trial_info['phase']}, Status: {trial_info['status']})")
         
-        # Use batch evaluation - this sends ALL patients to Gemini in one API call
+        # Use batch evaluation - this sends ALL patients to GPT-4o Mini in one API call
         batch_result = self.llm_utils.evaluate_trial_patient_matches_batch(detailed_patients, trial_info)
         
         if "error" in batch_result:

@@ -6,13 +6,15 @@ Common LLM API calls and prompt templates for both patient-to-trial and trial-to
 import json
 from datetime import datetime
 from typing import Dict, Any, List
-import google.generativeai as genai
-from config import GEMINI_API_KEY
+import openai
+from config import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_TEMPERATURE, OPENAI_MAX_TOKENS
 
 class LLMUtils:
     def __init__(self):
-        genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        openai.api_key = OPENAI_API_KEY
+        self.model = OPENAI_MODEL
+        self.temperature = OPENAI_TEMPERATURE
+        self.max_tokens = OPENAI_MAX_TOKENS
 
     def generate_keywords_prompt(self, patient_data: Dict[str, Any]) -> str:
         """Generate prompt for patient keyword extraction"""
@@ -174,11 +176,20 @@ class LLMUtils:
     def call_llm(self, prompt: str) -> Dict[str, Any]:
         """Make LLM API call and parse response"""
         try:
-            response = self.model.generate_content(prompt)
+            response = openai.ChatCompletion.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": "You are a medical research assistant specializing in clinical trial matching. Always respond with valid JSON format."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=self.temperature,
+                max_tokens=self.max_tokens
+            )
+            
+            response_text = response.choices[0].message.content.strip()
             
             try:
                 # Clean the response - remove code block markers
-                response_text = response.text.strip()
                 if response_text.startswith("```json"):
                     response_text = response_text[7:]
                 if response_text.endswith("```"):
@@ -186,13 +197,13 @@ class LLMUtils:
                 response_text = response_text.strip()
                 
                 result = json.loads(response_text)
-                return {"response": response.text, **result}
+                return {"response": response_text, **result}
             except json.JSONDecodeError as e:
                 print(f"Failed to parse JSON response: {str(e)}")
-                print(f"Response text (first 500 chars): {response.text[:500]}")
+                print(f"Response text (first 500 chars): {response_text[:500]}")
                 return {
                     "error": "Failed to parse JSON response",
-                    "raw_response": response.text
+                    "raw_response": response_text
                 }
                 
         except Exception as e:

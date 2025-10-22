@@ -113,7 +113,7 @@ class HybridMatcher:
         return tokens
 
     def generate_embedding(self, text: str) -> np.ndarray:
-        """Generate embedding for text using Gemini"""
+        """Generate embedding for text using GPT-4o Mini"""
         return self.embedding_utils.generate_embedding(text)
 
     def get_embedding_similarity(self, query_embedding: np.ndarray, index_type: str = "trial") -> List[Tuple[int, float]]:

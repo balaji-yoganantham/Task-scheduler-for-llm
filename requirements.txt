@@ -24,8 +24,8 @@ sentencepiece==0.2.1
 # Vector search and similarity
 faiss-cpu==1.12.0
 
-# Google AI
-google-generativeai==0.3.2
+# OpenAI API
+openai==1.3.0
 
 # HTTP requests
 requests==2.31.0

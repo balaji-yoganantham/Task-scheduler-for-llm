@@ -90,7 +90,7 @@ class PatientEvaluator:
         print(f"📊 Running BATCH evaluation for {len(detailed_trials)} trials...")
         print(f"📋 Patient: MRN {patient_info['mrn']} (Age: {patient_info['age']}, Gender: {patient_info['gender']})")
         
-        # Use batch evaluation - this sends ALL trials to Gemini in one API call
+        # Use batch evaluation - this sends ALL trials to GPT-4o Mini in one API call
         batch_result = self.llm_utils.evaluate_patient_trial_matches_batch(detailed_trials, patient_info)
         
         if "error" in batch_result:
@@ -313,7 +313,7 @@ def main():
     batch_summary = results.get('batch_summary', {})
     top_recommendations = batch_summary.get('top_recommendations', [])
     if top_recommendations:
-        print("🎯 TOP RECOMMENDATIONS FROM GEMINI:")
+                        print("🎯 TOP RECOMMENDATIONS FROM GPT-4O MINI:")
         for i, rec in enumerate(top_recommendations[:3], 1):
             print(f"  {i}. {rec}")
         print()

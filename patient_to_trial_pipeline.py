@@ -211,14 +211,14 @@ class PatientToTrialOrchestrator:
                 # Show all evaluated trials with detailed results
                 final_ranking = matching_results.get('final_ranking', [])
                 if final_ranking:
-                    print(f"\n🏆 ALL {len(final_ranking)} TRIALS EVALUATED BY GEMINI:")
+                    print(f"\n🏆 ALL {len(final_ranking)} TRIALS EVALUATED BY GPT-4O MINI:")
                     print("=" * 100)
                     
                     # Show top recommendations first
                     batch_summary = matching_results.get('batch_summary', {})
                     top_recommendations = batch_summary.get('top_recommendations', [])
                     if top_recommendations:
-                        print("🎯 TOP RECOMMENDATIONS FROM GEMINI:")
+                        print("🎯 TOP RECOMMENDATIONS FROM GPT-4O MINI:")
                         for i, rec in enumerate(top_recommendations[:3], 1):
                             print(f"  {i}. {rec}")
                         print()

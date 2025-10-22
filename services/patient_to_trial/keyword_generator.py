@@ -102,7 +102,7 @@ class PatientKeywordGenerator:
             "metadata": {
                 "total_patients": len(patients),
                 "generated_at": datetime.now().isoformat(),
-                "model": "gemini-2.0-flash-exp",
+                "model": "gpt-4o-mini",
                 "matching_direction": "patient_to_trial",
                 "batch_processing": "optimized_new_patients_only"
             }
