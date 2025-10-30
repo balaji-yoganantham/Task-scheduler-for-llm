@@ -10878,5 +10878,599 @@
     "latitude": 33.4484367,
     "longitude": -112.074141,
     "original_address": "Phoenix, AZ"
+  },
+  "san jose, ca": {
+    "success": true,
+    "latitude": 37.3361663,
+    "longitude": -121.890591,
+    "original_address": "San Jose, CA"
+  },
+  "austin, tx": {
+    "success": true,
+    "latitude": 30.2711286,
+    "longitude": -97.7436995,
+    "original_address": "Austin, TX"
+  },
+  "decatur, georgia, united states": {
+    "success": true,
+    "latitude": 30.8736613,
+    "longitude": -84.5740953,
+    "original_address": "Decatur, Georgia, United States"
+  },
+  "silver spring, maryland, united states": {
+    "success": true,
+    "latitude": 38.9997621,
+    "longitude": -77.0240371,
+    "original_address": "Silver Spring, Maryland, United States"
+  },
+  "kirkland, washington, united states": {
+    "success": true,
+    "latitude": 47.6765382,
+    "longitude": -122.2070775,
+    "original_address": "Kirkland, Washington, United States"
+  },
+  "huntington, west virginia, united states": {
+    "success": true,
+    "latitude": 38.4192496,
+    "longitude": -82.445154,
+    "original_address": "Huntington, West Virginia, United States"
+  },
+  "tours, centre-val de loire, france": {
+    "success": true,
+    "latitude": 47.3900474,
+    "longitude": 0.6889268,
+    "original_address": "Tours, Centre-Val de Loire, France"
+  },
+  "jena, thuringia, germany": {
+    "success": true,
+    "latitude": 50.9281717,
+    "longitude": 11.5879359,
+    "original_address": "Jena, Thuringia, Germany"
+  },
+  "bologna, bologna, italy": {
+    "success": true,
+    "latitude": 44.4938203,
+    "longitude": 11.3426327,
+    "original_address": "Bologna, Bologna, Italy"
+  },
+  "poznan, greater poland voivodeship, poland": {
+    "success": true,
+    "latitude": 52.4082663,
+    "longitude": 16.9335199,
+    "original_address": "Poznan, Greater Poland Voivodeship, Poland"
+  },
+  "gdansk, pomeranian voivodeship, poland": {
+    "success": true,
+    "latitude": 54.3482907,
+    "longitude": 18.6540233,
+    "original_address": "Gdansk, Pomeranian Voivodeship, Poland"
+  },
+  "katowice, silesian voivodeship, poland": {
+    "success": true,
+    "latitude": 50.2137315,
+    "longitude": 19.0058848,
+    "original_address": "Katowice, Silesian Voivodeship, Poland"
+  },
+  "málaga, andalusia, spain": {
+    "success": true,
+    "latitude": 36.7213028,
+    "longitude": -4.4216366,
+    "original_address": "Málaga, Andalusia, Spain"
+  },
+  "madrid, madrid, spain": {
+    "success": true,
+    "latitude": 40.4237276,
+    "longitude": -3.6899043,
+    "original_address": "Madrid, Madrid, Spain"
+  },
+  "fayetteville, arkansas, united states": {
+    "success": true,
+    "latitude": 36.0625843,
+    "longitude": -94.1574328,
+    "original_address": "Fayetteville, Arkansas, United States"
+  },
+  "lake forest, california, united states": {
+    "success": true,
+    "latitude": 33.6469261,
+    "longitude": -117.6859213,
+    "original_address": "Lake Forest, California, United States"
+  },
+  "paramount, california, united states": {
+    "success": true,
+    "latitude": 33.898917,
+    "longitude": -118.171005,
+    "original_address": "Paramount, California, United States"
+  },
+  "rolling hills estates, california, united states": {
+    "success": true,
+    "latitude": 33.7877943,
+    "longitude": -118.3581284,
+    "original_address": "Rolling Hills Estates, California, United States"
+  },
+  "santa clara, california, united states": {
+    "success": true,
+    "latitude": 37.3541132,
+    "longitude": -121.955174,
+    "original_address": "Santa Clara, California, United States"
+  },
+  "highlands ranch, colorado, united states": {
+    "success": true,
+    "latitude": 39.538565,
+    "longitude": -104.9725904,
+    "original_address": "Highlands Ranch, Colorado, United States"
+  },
+  "spring hill, florida, united states": {
+    "success": true,
+    "latitude": 28.483576,
+    "longitude": -82.5338633,
+    "original_address": "Spring Hill, Florida, United States"
+  },
+  "union city, georgia, united states": {
+    "success": true,
+    "latitude": 33.5870558,
+    "longitude": -84.5424299,
+    "original_address": "Union City, Georgia, United States"
+  },
+  "ankeny, iowa, united states": {
+    "success": true,
+    "latitude": 41.7320796,
+    "longitude": -93.605092,
+    "original_address": "Ankeny, Iowa, United States"
+  },
+  "newton, kansas, united states": {
+    "success": true,
+    "latitude": 38.0469166,
+    "longitude": -97.3447244,
+    "original_address": "Newton, Kansas, United States"
+  },
+  "ridgeland, mississippi, united states": {
+    "success": true,
+    "latitude": 32.4284761,
+    "longitude": -90.1323087,
+    "original_address": "Ridgeland, Mississippi, United States"
+  },
+  "hastings, nebraska, united states": {
+    "success": true,
+    "latitude": 40.5861322,
+    "longitude": -98.3898883,
+    "original_address": "Hastings, Nebraska, United States"
+  },
+  "gresham, oregon, united states": {
+    "success": true,
+    "latitude": 45.4978623,
+    "longitude": -122.4329883,
+    "original_address": "Gresham, Oregon, United States"
+  },
+  "erie, pennsylvania, united states": {
+    "success": true,
+    "latitude": 42.1294712,
+    "longitude": -80.0852695,
+    "original_address": "Erie, Pennsylvania, United States"
+  },
+  "east greenwich, rhode island, united states": {
+    "success": true,
+    "latitude": 41.6603788,
+    "longitude": -71.4558911,
+    "original_address": "East Greenwich, Rhode Island, United States"
+  },
+  "summerville, south carolina, united states": {
+    "success": true,
+    "latitude": 33.0186699,
+    "longitude": -80.1762704,
+    "original_address": "Summerville, South Carolina, United States"
+  },
+  "memphis, tennessee, united states": {
+    "success": true,
+    "latitude": 35.1460249,
+    "longitude": -90.0517638,
+    "original_address": "Memphis, Tennessee, United States"
+  },
+  "corpus christi, texas, united states": {
+    "success": true,
+    "latitude": 27.7635302,
+    "longitude": -97.4033191,
+    "original_address": "Corpus Christi, Texas, United States"
+  },
+  "frisco, texas, united states": {
+    "success": true,
+    "latitude": 33.1505998,
+    "longitude": -96.8238183,
+    "original_address": "Frisco, Texas, United States"
+  },
+  "galveston, texas, united states": {
+    "success": true,
+    "latitude": 29.3872254,
+    "longitude": -94.992736,
+    "original_address": "Galveston, Texas, United States"
+  },
+  "syracuse, utah, united states": {
+    "success": true,
+    "latitude": 41.0895938,
+    "longitude": -112.0638903,
+    "original_address": "Syracuse, Utah, United States"
+  },
+  "salvador, estado de bahia, brazil": {
+    "success": true,
+    "latitude": -23.5930228,
+    "longitude": -46.9131215,
+    "original_address": "Salvador, Estado de Bahia, Brazil"
+  },
+  "belo horizonte, minas gerais, brazil": {
+    "success": true,
+    "latitude": -19.9227318,
+    "longitude": -43.9450948,
+    "original_address": "Belo Horizonte, Minas Gerais, Brazil"
+  },
+  "curitiba, paraná, brazil": {
+    "success": true,
+    "latitude": -25.4944375,
+    "longitude": -49.284271,
+    "original_address": "Curitiba, Paraná, Brazil"
+  },
+  "natal, rio grande do norte, brazil": {
+    "success": true,
+    "latitude": -5.805398,
+    "longitude": -35.2080905,
+    "original_address": "Natal, Rio Grande do Norte, Brazil"
+  },
+  "porto alegre, rio grande do sul, brazil": {
+    "success": true,
+    "latitude": -30.0324999,
+    "longitude": -51.2303767,
+    "original_address": "Porto Alegre, Rio Grande do Sul, Brazil"
+  },
+  "são josé do rio preto, são paulo, brazil": {
+    "success": true,
+    "latitude": -20.8125851,
+    "longitude": -49.3804212,
+    "original_address": "São José do Rio Preto, São Paulo, Brazil"
+  },
+  "guayama, puerto rico": {
+    "success": true,
+    "latitude": 18.0179594,
+    "longitude": -66.1465019,
+    "original_address": "Guayama, Puerto Rico"
+  },
+  "east london, eastern cape, south africa": {
+    "success": true,
+    "latitude": -33.0191604,
+    "longitude": 27.8998573,
+    "original_address": "East London, Eastern Cape, South Africa"
+  },
+  "welkom, free state, south africa": {
+    "success": true,
+    "latitude": -27.982298,
+    "longitude": 26.737969,
+    "original_address": "Welkom, Free State, South Africa"
+  },
+  "boksburg, gauteng, south africa": {
+    "success": true,
+    "latitude": -26.2124639,
+    "longitude": 28.2617471,
+    "original_address": "Boksburg, Gauteng, South Africa"
+  },
+  "johannesburg, gauteng, south africa": {
+    "success": true,
+    "latitude": -26.205,
+    "longitude": 28.049722,
+    "original_address": "Johannesburg, Gauteng, South Africa"
+  },
+  "pretoria, gauteng, south africa": {
+    "success": true,
+    "latitude": -25.7459277,
+    "longitude": 28.1879101,
+    "original_address": "Pretoria, Gauteng, South Africa"
+  },
+  "sandton, gauteng, south africa": {
+    "success": true,
+    "latitude": -26.1045525,
+    "longitude": 28.0545147,
+    "original_address": "Sandton, Gauteng, South Africa"
+  },
+  "polokwane, limpopo, south africa": {
+    "success": true,
+    "latitude": -23.9058333,
+    "longitude": 29.4613889,
+    "original_address": "Polokwane, Limpopo, South Africa"
+  },
+  "middelburg, mpumalanga, south africa": {
+    "success": true,
+    "latitude": -25.7678012,
+    "longitude": 29.4555234,
+    "original_address": "Middelburg, Mpumalanga, South Africa"
+  },
+  "klerksdorp, north west, south africa": {
+    "success": true,
+    "latitude": -26.8625383,
+    "longitude": 26.6656814,
+    "original_address": "Klerksdorp, North West, South Africa"
+  },
+  "cape town, western cape, south africa": {
+    "success": true,
+    "latitude": -33.9288301,
+    "longitude": 18.4172197,
+    "original_address": "Cape Town, Western Cape, South Africa"
+  },
+  "plettenberg bay, western cape, south africa": {
+    "success": true,
+    "latitude": -34.052778,
+    "longitude": 23.369444,
+    "original_address": "Plettenberg Bay, Western Cape, South Africa"
+  },
+  "antioch, california, united states": {
+    "success": true,
+    "latitude": 38.0093296,
+    "longitude": -121.8106925,
+    "original_address": "Antioch, California, United States"
+  },
+  "modesto, california, united states": {
+    "success": true,
+    "latitude": 37.6393419,
+    "longitude": -120.9968892,
+    "original_address": "Modesto, California, United States"
+  },
+  "rancho cordova, california, united states": {
+    "success": true,
+    "latitude": 38.5890723,
+    "longitude": -121.302728,
+    "original_address": "Rancho Cordova, California, United States"
+  },
+  "redwood city, california, united states": {
+    "success": true,
+    "latitude": 37.4863239,
+    "longitude": -122.232523,
+    "original_address": "Redwood City, California, United States"
+  },
+  "richmond, california, united states": {
+    "success": true,
+    "latitude": 37.9357576,
+    "longitude": -122.347748,
+    "original_address": "Richmond, California, United States"
+  },
+  "rohnert park, california, united states": {
+    "success": true,
+    "latitude": 38.3396367,
+    "longitude": -122.701098,
+    "original_address": "Rohnert Park, California, United States"
+  },
+  "roseville, california, united states": {
+    "success": true,
+    "latitude": 38.7521235,
+    "longitude": -121.2880059,
+    "original_address": "Roseville, California, United States"
+  },
+  "san jose, california, united states": {
+    "success": true,
+    "latitude": 37.3361663,
+    "longitude": -121.890591,
+    "original_address": "San Jose, California, United States"
+  },
+  "san leandro, california, united states": {
+    "success": true,
+    "latitude": 37.7249296,
+    "longitude": -122.1560768,
+    "original_address": "San Leandro, California, United States"
+  },
+  "san rafael, california, united states": {
+    "success": true,
+    "latitude": 37.9747795,
+    "longitude": -122.5316686,
+    "original_address": "San Rafael, California, United States"
+  },
+  "south san francisco, california, united states": {
+    "success": true,
+    "latitude": 37.6535403,
+    "longitude": -122.4168664,
+    "original_address": "South San Francisco, California, United States"
+  },
+  "vacaville, california, united states": {
+    "success": true,
+    "latitude": 38.3565773,
+    "longitude": -121.9877444,
+    "original_address": "Vacaville, California, United States"
+  },
+  "coral gables, florida, united states": {
+    "success": true,
+    "latitude": 25.7331105,
+    "longitude": -80.2585107,
+    "original_address": "Coral Gables, Florida, United States"
+  },
+  "deerfield beach, florida, united states": {
+    "success": true,
+    "latitude": 26.318342,
+    "longitude": -80.0996306,
+    "original_address": "Deerfield Beach, Florida, United States"
+  },
+  "duluth, georgia, united states": {
+    "success": true,
+    "latitude": 34.0028569,
+    "longitude": -84.1441046,
+    "original_address": "Duluth, Georgia, United States"
+  },
+  "elmhurst, illinois, united states": {
+    "success": true,
+    "latitude": 41.8994745,
+    "longitude": -87.9403418,
+    "original_address": "Elmhurst, Illinois, United States"
+  },
+  "lake forest, illinois, united states": {
+    "success": true,
+    "latitude": 42.2586461,
+    "longitude": -87.8407055,
+    "original_address": "Lake Forest, Illinois, United States"
+  },
+  "naperville, illinois, united states": {
+    "success": true,
+    "latitude": 41.7728699,
+    "longitude": -88.1479278,
+    "original_address": "Naperville, Illinois, United States"
+  },
+  "plainfield, illinois, united states": {
+    "success": true,
+    "latitude": 41.6086711,
+    "longitude": -88.2054345,
+    "original_address": "Plainfield, Illinois, United States"
+  },
+  "carroll, iowa, united states": {
+    "success": true,
+    "latitude": 42.0193628,
+    "longitude": -94.860335,
+    "original_address": "Carroll, Iowa, United States"
+  },
+  "adrian, michigan, united states": {
+    "success": true,
+    "latitude": 41.8975152,
+    "longitude": -84.0373054,
+    "original_address": "Adrian, Michigan, United States"
+  },
+  "east china, michigan, united states": {
+    "success": true,
+    "latitude": 42.7706968,
+    "longitude": -82.4834285,
+    "original_address": "East China, Michigan, United States"
+  },
+  "monroe, michigan, united states": {
+    "success": true,
+    "latitude": 41.9153358,
+    "longitude": -83.5135665,
+    "original_address": "Monroe, Michigan, United States"
+  },
+  "basking ridge, new jersey, united states": {
+    "success": true,
+    "latitude": 40.7064088,
+    "longitude": -74.5492725,
+    "original_address": "Basking Ridge, New Jersey, United States"
+  },
+  "middletown, new jersey, united states": {
+    "success": true,
+    "latitude": 40.3898188,
+    "longitude": -74.1162152,
+    "original_address": "Middletown, New Jersey, United States"
+  },
+  "montvale, new jersey, united states": {
+    "success": true,
+    "latitude": 41.0467635,
+    "longitude": -74.0229173,
+    "original_address": "Montvale, New Jersey, United States"
+  },
+  "neptune city, new jersey, united states": {
+    "success": true,
+    "latitude": 40.2001133,
+    "longitude": -74.0279152,
+    "original_address": "Neptune City, New Jersey, United States"
+  },
+  "red bank, new jersey, united states": {
+    "success": true,
+    "latitude": 40.3470543,
+    "longitude": -74.0643065,
+    "original_address": "Red Bank, New Jersey, United States"
+  },
+  "commack, new york, united states": {
+    "success": true,
+    "latitude": 40.8393515,
+    "longitude": -73.2858994,
+    "original_address": "Commack, New York, United States"
+  },
+  "east white plains, new york, united states": {
+    "success": true,
+    "latitude": 40.9564425,
+    "longitude": -73.7409862,
+    "original_address": "East White Plains, New York, United States"
+  },
+  "glens falls, new york, united states": {
+    "success": true,
+    "latitude": 43.309941,
+    "longitude": -73.644447,
+    "original_address": "Glens Falls, New York, United States"
+  },
+  "uniondale, new york, united states": {
+    "success": true,
+    "latitude": 40.7157545,
+    "longitude": -73.5898872,
+    "original_address": "Uniondale, New York, United States"
+  },
+  "avon, ohio, united states": {
+    "success": true,
+    "latitude": 41.4516512,
+    "longitude": -82.0350598,
+    "original_address": "Avon, Ohio, United States"
+  },
+  "maumee, ohio, united states": {
+    "success": true,
+    "latitude": 41.5628294,
+    "longitude": -83.6538244,
+    "original_address": "Maumee, Ohio, United States"
+  },
+  "new albany, ohio, united states": {
+    "success": true,
+    "latitude": 40.0811745,
+    "longitude": -82.8087864,
+    "original_address": "New Albany, Ohio, United States"
+  },
+  "sandusky, ohio, united states": {
+    "success": true,
+    "latitude": 41.2951563,
+    "longitude": -83.1555438,
+    "original_address": "Sandusky, Ohio, United States"
+  },
+  "hershey, pennsylvania, united states": {
+    "success": true,
+    "latitude": 40.2850285,
+    "longitude": -76.6534662,
+    "original_address": "Hershey, Pennsylvania, United States"
+  },
+  "berlin corners, vermont, united states": {
+    "success": true,
+    "latitude": 44.2100604,
+    "longitude": -72.5759414,
+    "original_address": "Berlin Corners, Vermont, United States"
+  },
+  "bremerton, washington, united states": {
+    "success": true,
+    "latitude": 47.5653663,
+    "longitude": -122.6246836,
+    "original_address": "Bremerton, Washington, United States"
+  },
+  "mukwonago, wisconsin, united states": {
+    "success": true,
+    "latitude": 42.8666803,
+    "longitude": -88.3334274,
+    "original_address": "Mukwonago, Wisconsin, United States"
+  },
+  "oconomowoc, wisconsin, united states": {
+    "success": true,
+    "latitude": 43.1116731,
+    "longitude": -88.4992659,
+    "original_address": "Oconomowoc, Wisconsin, United States"
+  },
+  "waukesha, wisconsin, united states": {
+    "success": true,
+    "latitude": 43.0622536,
+    "longitude": -88.3123889,
+    "original_address": "Waukesha, Wisconsin, United States"
+  },
+  "cheyenne, wyoming, united states": {
+    "success": true,
+    "latitude": 41.139981,
+    "longitude": -104.820246,
+    "original_address": "Cheyenne, Wyoming, United States"
+  },
+  "minneapolis, mn": {
+    "success": true,
+    "latitude": 44.9772995,
+    "longitude": -93.2654692,
+    "original_address": "Minneapolis, MN"
+  },
+  "jacksonville, fl": {
+    "success": true,
+    "latitude": 30.3321838,
+    "longitude": -81.655651,
+    "original_address": "Jacksonville, FL"
+  },
+  "fort worth, tx": {
+    "success": true,
+    "latitude": 32.753177,
+    "longitude": -97.3327459,
+    "original_address": "Fort Worth, TX"
   }
 }

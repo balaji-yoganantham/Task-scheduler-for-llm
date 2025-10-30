@@ -33,6 +33,17 @@ SCHEDULER_INTERVAL_MINUTES = int(os.getenv("SCHEDULER_INTERVAL_MINUTES", "30"))
 MAX_CONCURRENT_TASKS = int(os.getenv("MAX_CONCURRENT_TASKS", "5"))
 TASK_TIMEOUT_SECONDS = int(os.getenv("TASK_TIMEOUT_SECONDS", "300"))
 
+# Fixed ID execution (explicit run lists)
+ENABLE_FIXED_IDS = os.getenv("ENABLE_FIXED_IDS", "true").lower() == "true"
+FIXED_TRIAL_IDS = os.getenv("FIXED_TRIAL_IDS", "NCT04929223,NCT01120353").split(",")
+FIXED_TRIAL_IDS = [t.strip() for t in FIXED_TRIAL_IDS if t.strip()]
+
+FIXED_PATIENT_IDS = os.getenv("FIXED_PATIENT_IDS", "1,2").split(",")
+FIXED_PATIENT_IDS = [p.strip() for p in FIXED_PATIENT_IDS if p.strip()]
+
+# Run interval jobs once immediately on scheduler start
+RUN_JOBS_ON_START = os.getenv("RUN_JOBS_ON_START", "true").lower() == "true"
+
 # Patient Processing Configuration
 DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "50"))
 

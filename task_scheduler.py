@@ -12,24 +12,29 @@ from apscheduler.triggers.interval import IntervalTrigger
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.jobstores.memory import MemoryJobStore
 from apscheduler.executors.asyncio import AsyncIOExecutor
+import sys
+import os
+from asyncio.subprocess import PIPE
 
 from config import (
     SCHEDULER_INTERVAL_MINUTES,
     MAX_CONCURRENT_TASKS,
     TASK_TIMEOUT_SECONDS,
     USE_LLM_PROCESSING,
-    USE_DATABASE
+    USE_DATABASE,
+    ENABLE_FIXED_IDS,
+    FIXED_TRIAL_IDS,
+    FIXED_PATIENT_IDS,
+    RUN_JOBS_ON_START
 )
 
-# Import our services
-from database.patient_db import PatientDB
-from database.trial_database_service import TrialDatabaseService
+# Database services will be imported lazily in initialize() to avoid import errors when optional
 
 class TaskScheduler:
     def __init__(self):
         self.scheduler = AsyncIOScheduler(
             jobstores={'default': MemoryJobStore()},
-            executors={'default': AsyncIOExecutor(max_workers=MAX_CONCURRENT_TASKS)},
+            executors={'default': AsyncIOExecutor()},
             job_defaults={'coalesce': True, 'max_instances': 1}
         )
         self.running = False
@@ -38,6 +43,10 @@ class TaskScheduler:
         self.patient_db = None
         self.trial_db = None
         
+        # Locks to prevent overlapping job executions
+        self._patient_job_lock = asyncio.Lock()
+        self._trial_job_lock = asyncio.Lock()
+        
     async def initialize(self):
         """Initialize all services and database connections"""
         logger.info("Initializing Task Scheduler services...")
@@ -45,11 +54,18 @@ class TaskScheduler:
         try:
             # Initialize database services
             if USE_DATABASE:
-                self.patient_db = PatientDB()
-                self.trial_db = TrialDatabaseService()
-                await self.patient_db.initialize()
-                await self.trial_db.initialize()
-                logger.info("Database services initialized")
+                try:
+                    from database.patient_db import PatientDB  # type: ignore
+                    from database.trial_database_service import TrialDatabaseService  # type: ignore
+                    self.patient_db = PatientDB()
+                    self.trial_db = TrialDatabaseService()
+                    await self.patient_db.initialize()
+                    await self.trial_db.initialize()
+                    logger.info("Database services initialized")
+                except ModuleNotFoundError:
+                    logger.warning("Database service modules not found; proceeding without database integration")
+                    self.patient_db = None
+                    self.trial_db = None
             
             # Initialize LLM services
             if USE_LLM_PROCESSING:
@@ -77,6 +93,18 @@ class TaskScheduler:
         self.running = True
         
         logger.info(f"Task scheduler started with {len(self.scheduler.get_jobs())} jobs")
+        
+        # Optionally kick off both jobs once immediately
+        if RUN_JOBS_ON_START:
+            logger.info("Running initial trial and patient jobs immediately on start")
+            try:
+                await self.process_trial_patient_matches()
+            except Exception as e:
+                logger.error(f"Initial trial job failed: {e}")
+            try:
+                await self.process_patient_trial_matches()
+            except Exception as e:
+                logger.error(f"Initial patient job failed: {e}")
         
         # Keep the scheduler running
         try:
@@ -144,28 +172,30 @@ class TaskScheduler:
         logger.info("Starting patient-trial matching task...")
         
         try:
-            if not self.patient_db:
-                logger.warning("Required database services not initialized")
-                return
+            async with self._patient_job_lock:
+                # Only check database if not using fixed IDs and database is required
+                if not ENABLE_FIXED_IDS and USE_DATABASE and not self.patient_db:
+                    logger.warning("Required database services not initialized")
+                    return
                 
-            # Get pending patient IDs that need trial matching
-            pending_patients = await self._get_pending_patient_trial_tasks()
+                # Get pending patient IDs that need trial matching
+                pending_patients = await self._get_pending_patient_trial_tasks()
             
-            if not pending_patients:
-                logger.info("No pending patient-trial tasks found")
-                return
+                if not pending_patients:
+                    logger.info("No pending patient-trial tasks found")
+                    return
                 
-            logger.info(f"Processing {len(pending_patients)} patient-trial tasks")
+                logger.info(f"Processing {len(pending_patients)} patient-trial tasks")
             
-            # Process each patient
-            for patient_id in pending_patients:
-                try:
-                    await self._process_single_patient_trial_match(patient_id)
-                except Exception as e:
-                    logger.error(f"Failed to process patient {patient_id}: {e}")
-                    continue
+                # Process each patient sequentially
+                for patient_id in pending_patients:
+                    try:
+                        await self._process_single_patient_trial_match(patient_id)
+                    except Exception as e:
+                        logger.error(f"Failed to process patient {patient_id}: {e}")
+                        continue
                     
-            logger.info("Patient-trial matching task completed")
+                logger.info("Patient-trial matching task completed")
             
         except Exception as e:
             logger.error(f"Error in patient-trial matching task: {e}")
@@ -175,28 +205,30 @@ class TaskScheduler:
         logger.info("Starting trial-patient matching task...")
         
         try:
-            if not self.trial_db:
-                logger.warning("Required database services not initialized")
-                return
+            async with self._trial_job_lock:
+                # Only check database if not using fixed IDs and database is required
+                if not ENABLE_FIXED_IDS and USE_DATABASE and not self.trial_db:
+                    logger.warning("Required database services not initialized")
+                    return
                 
-            # Get pending trial IDs that need patient matching
-            pending_trials = await self._get_pending_trial_patient_tasks()
+                # Get pending trial IDs that need patient matching
+                pending_trials = await self._get_pending_trial_patient_tasks()
             
-            if not pending_trials:
-                logger.info("No pending trial-patient tasks found")
-                return
+                if not pending_trials:
+                    logger.info("No pending trial-patient tasks found")
+                    return
                 
-            logger.info(f"Processing {len(pending_trials)} trial-patient tasks")
+                logger.info(f"Processing {len(pending_trials)} trial-patient tasks")
             
-            # Process each trial
-            for trial_id in pending_trials:
-                try:
-                    await self._process_single_trial_patient_match(trial_id)
-                except Exception as e:
-                    logger.error(f"Failed to process trial {trial_id}: {e}")
-                    continue
+                # Process each trial sequentially
+                for trial_id in pending_trials:
+                    try:
+                        await self._process_single_trial_patient_match(trial_id)
+                    except Exception as e:
+                        logger.error(f"Failed to process trial {trial_id}: {e}")
+                        continue
                     
-            logger.info("Trial-patient matching task completed")
+                logger.info("Trial-patient matching task completed")
             
         except Exception as e:
             logger.error(f"Error in trial-patient matching task: {e}")
@@ -249,14 +281,16 @@ class TaskScheduler:
     # Helper methods for database operations
     async def _get_pending_patient_trial_tasks(self) -> List[str]:
         """Get list of patient IDs that need trial matching"""
-        # This would query your database for pending tasks
-        # For now, return empty list as placeholder
+        if ENABLE_FIXED_IDS:
+            return list(FIXED_PATIENT_IDS)
+        # Placeholder for database-backed retrieval
         return []
         
     async def _get_pending_trial_patient_tasks(self) -> List[str]:
         """Get list of trial IDs that need patient matching"""
-        # This would query your database for pending tasks
-        # For now, return empty list as placeholder
+        if ENABLE_FIXED_IDS:
+            return list(FIXED_TRIAL_IDS)
+        # Placeholder for database-backed retrieval
         return []
         
     async def _get_trials_needing_eligibility_update(self) -> List[str]:
@@ -269,15 +303,25 @@ class TaskScheduler:
         """Process a single patient-trial matching task"""
         logger.info(f"Processing patient-trial match for patient {patient_id}")
         
-        # Implement the actual processing logic here
-        # This would use the patient_to_trial_service to process the patient
+        # Execute: python patient_to_trial_pipeline.py --patient-id <id>
+        cmd = [
+            sys.executable,
+            os.path.join(os.path.dirname(__file__), 'patient_to_trial_pipeline.py'),
+            '--patient-id', str(patient_id)
+        ]
+        await self._run_pipeline_cmd(cmd, context={"patient_id": patient_id})
         
     async def _process_single_trial_patient_match(self, trial_id: str):
         """Process a single trial-patient matching task"""
         logger.info(f"Processing trial-patient match for trial {trial_id}")
         
-        # Implement the actual processing logic here
-        # This would use the trial_to_patient_service to process the trial
+        # Execute: python trial_to_patient_pipeline.py --trial-id <id>
+        cmd = [
+            sys.executable,
+            os.path.join(os.path.dirname(__file__), 'trial_to_patient_pipeline.py'),
+            '--trial-id', str(trial_id)
+        ]
+        await self._run_pipeline_cmd(cmd, context={"trial_id": trial_id})
         
     async def _update_single_trial_eligibility(self, trial_id: str):
         """Update eligibility for a single trial"""
@@ -310,3 +354,72 @@ class TaskScheduler:
                 "trial_db": self.trial_db is not None
             }
         }
+
+    async def _run_pipeline_cmd(self, cmd: List[str], context: Optional[Dict[str, Any]] = None) -> None:
+        """Run a pipeline command with timeout and detailed logging, streaming output in real-time."""
+        context = context or {}
+        cmd_str = ' '.join(cmd)
+        logger.info(f"Running command: {cmd_str} | context={context}")
+        start_time = time.time()
+        
+        try:
+            process = await asyncio.create_subprocess_exec(
+                *cmd, 
+                stdout=PIPE, 
+                stderr=PIPE,
+                bufsize=0  # Unbuffered
+            )
+            
+            async def stream_output(stream, prefix="OUT"):
+                """Stream output from subprocess in real-time."""
+                try:
+                    while True:
+                        line = await stream.readline()
+                        if not line:
+                            break
+                        decoded = line.decode(errors='ignore').rstrip()
+                        if decoded:  # Only log non-empty lines
+                            logger.info(f"[{prefix}] {decoded}")
+                except Exception as e:
+                    logger.error(f"Error reading {prefix} stream: {e}")
+            
+            # Start streaming stdout and stderr concurrently
+            stdout_task = asyncio.create_task(stream_output(process.stdout, "STDOUT"))
+            stderr_task = asyncio.create_task(stream_output(process.stderr, "STDERR"))
+            
+            try:
+                # Wait for process to complete with timeout
+                returncode = await asyncio.wait_for(process.wait(), timeout=TASK_TIMEOUT_SECONDS)
+            except asyncio.TimeoutError:
+                logger.error(f"Command timed out after {TASK_TIMEOUT_SECONDS}s: {cmd_str} | context={context}")
+                process.kill()
+                await process.wait()
+                stdout_task.cancel()
+                stderr_task.cancel()
+                return
+            
+            # Wait for output streaming to complete
+            await stdout_task
+            await stderr_task
+            
+            duration = time.time() - start_time
+            if returncode == 0:
+                logger.info(f"✓ Command succeeded in {duration:.2f}s | context={context}")
+            else:
+                logger.error(f"✗ Command failed (exit {returncode}) in {duration:.2f}s | context={context}")
+                
+        except Exception as e:
+            logger.error(f"Failed to execute command: {cmd_str} | context={context} | error={e}")
+
+
+async def _main():
+    scheduler = TaskScheduler()
+    await scheduler.initialize()
+    await scheduler.start()
+
+
+if __name__ == "__main__":
+    try:
+        asyncio.run(_main())
+    except KeyboardInterrupt:
+        pass
