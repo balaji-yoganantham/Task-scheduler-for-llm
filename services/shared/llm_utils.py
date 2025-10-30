@@ -625,8 +625,17 @@ class LLMUtils:
                 return {"error": "Invalid response format: missing batch_evaluations"}
             
             evaluations = result["batch_evaluations"]
+            
+            # Handle count mismatch - LLM sometimes returns more or fewer evaluations
             if len(evaluations) != len(trials):
-                return {"error": f"Response has {len(evaluations)} evaluations but expected {len(trials)}"}
+                # Log warning but continue processing
+                if len(evaluations) > len(trials):
+                    # Truncate to expected number if we got more
+                    print(f"⚠️ LLM returned {len(evaluations)} evaluations but expected {len(trials)}. Truncating to {len(trials)}.")
+                    evaluations = evaluations[:len(trials)]
+                else:
+                    # If we got fewer, we'll process what we have but log the issue
+                    print(f"⚠️ LLM returned {len(evaluations)} evaluations but expected {len(trials)}. Processing {len(evaluations)} evaluations.")
             
             # Add trial and patient info to each evaluation
             for i, evaluation in enumerate(evaluations):
@@ -805,8 +814,17 @@ class LLMUtils:
                 return {"error": "Invalid response format: missing batch_evaluations"}
             
             evaluations = result["batch_evaluations"]
+            
+            # Handle count mismatch - LLM sometimes returns more or fewer evaluations
             if len(evaluations) != len(patients):
-                return {"error": f"Response has {len(evaluations)} evaluations but expected {len(patients)}"}
+                # Log warning but continue processing
+                if len(evaluations) > len(patients):
+                    # Truncate to expected number if we got more
+                    print(f"⚠️ LLM returned {len(evaluations)} evaluations but expected {len(patients)}. Truncating to {len(patients)}.")
+                    evaluations = evaluations[:len(patients)]
+                else:
+                    # If we got fewer, we'll process what we have but log the issue
+                    print(f"⚠️ LLM returned {len(evaluations)} evaluations but expected {len(patients)}. Processing {len(evaluations)} evaluations.")
             
             # Add patient and trial info to each evaluation
             for i, evaluation in enumerate(evaluations):

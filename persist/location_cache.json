@@ -10842,5 +10842,41 @@
     "latitude": 38.6280278,
     "longitude": -90.1910154,
     "original_address": "St. Louis, MO"
+  },
+  "charlotte, north carolina, united states": {
+    "success": true,
+    "latitude": 35.2272086,
+    "longitude": -80.8430827,
+    "original_address": "Charlotte, North Carolina, United States"
+  },
+  "richmond hill, ontario, canada": {
+    "success": true,
+    "latitude": 43.8801166,
+    "longitude": -79.4392925,
+    "original_address": "Richmond Hill, Ontario, Canada"
+  },
+  "san francisco, ca": {
+    "success": true,
+    "latitude": 37.7792588,
+    "longitude": -122.4193286,
+    "original_address": "San Francisco, CA"
+  },
+  "charlotte, nc": {
+    "success": true,
+    "latitude": 35.2272086,
+    "longitude": -80.8430827,
+    "original_address": "Charlotte, NC"
+  },
+  "chicago, il": {
+    "success": true,
+    "latitude": 41.8755616,
+    "longitude": -87.6244212,
+    "original_address": "Chicago, IL"
+  },
+  "phoenix, az": {
+    "success": true,
+    "latitude": 33.4484367,
+    "longitude": -112.074141,
+    "original_address": "Phoenix, AZ"
   }
 }

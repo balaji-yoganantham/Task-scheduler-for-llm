@@ -10,6 +10,7 @@ from datetime import datetime
 from typing import List, Dict, Any
 from services.shared.database_utils import DatabaseUtils
 from services.shared.embedding_utils import EmbeddingUtils
+from config import USE_CHUNKED_TRIAL_EMBEDDINGS
 
 class TrialEmbeddingGenerator:
     def __init__(self):
@@ -67,11 +68,20 @@ class TrialEmbeddingGenerator:
         for i, trial in enumerate(new_trials):
             print(f"Processing trial {i+1}/{len(new_trials)}: {trial['trial_id']}")
             
-            # Generate embedding for trial text
-            embedding = self.embedding_utils.generate_embedding(
-                trial['combined_trial_text'], 
-                task_type="retrieval_document"
-            )
+            # Generate embedding using chunking if enabled, otherwise use original method
+            if USE_CHUNKED_TRIAL_EMBEDDINGS:
+                embedding, chunk_metadata = self.embedding_utils.generate_chunked_embedding(
+                    trial,
+                    task_type="retrieval_document"
+                )
+                print(f"   Generated chunked embedding with {chunk_metadata.get('total_chunks', 0)} chunks")
+            else:
+                embedding = self.embedding_utils.generate_embedding(
+                    trial['combined_trial_text'], 
+                    task_type="retrieval_document"
+                )
+                chunk_metadata = {}
+            
             trial_embeddings.append(embedding)
             
             # Store metadata
@@ -84,7 +94,9 @@ class TrialEmbeddingGenerator:
                 "created_date": trial['created_date'],
                 "patients_matched": trial['patients_matched'],
                 "matching_status": trial['matching_status'],
-                "embedding_index": i
+                "embedding_index": i,
+                "embedding_method": "chunked" if USE_CHUNKED_TRIAL_EMBEDDINGS else "single",
+                "chunk_metadata": chunk_metadata
             }
             
             # Save individual trial embedding

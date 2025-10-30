@@ -252,17 +252,8 @@ class TrialEvaluator:
         filepath = self.save_evaluation_results(results)
         results['results_file'] = filepath
         
-        # Save results to database (new functionality)
-        print(f"\nSAVING Saving results to database...")
-        try:
-            db_id = self.eval_db.save_trial_to_patient_evaluation(results)
-            if db_id:
-                results['database_id'] = db_id
-                print(f"OK Results saved to database with ID: {db_id}")
-            else:
-                print("WARNING Failed to save results to database")
-        except Exception as e:
-            print(f"WARNING Database save error (continuing with JSON): {e}")
+        # Note: Database saving is handled by the orchestrator to avoid duplicate saves
+        # The orchestrator (trial_to_patient_pipeline.py) will save to the database
         
         # Print summary
         print(f"\nPipeline Summary:")

@@ -47,6 +47,20 @@ LOCATION_WEIGHT = float(os.getenv("LOCATION_WEIGHT", "0.1"))  # Weight for locat
 GEOCODING_CACHE_ENABLED = os.getenv("GEOCODING_CACHE_ENABLED", "true").lower() == "true"
 NOMINATIM_USER_AGENT = os.getenv("NOMINATIM_USER_AGENT", "clinical-trial-matcher")
 
+# Embedding Chunking Configuration
+USE_CHUNKED_TRIAL_EMBEDDINGS = os.getenv("USE_CHUNKED_TRIAL_EMBEDDINGS", "true").lower() == "true"
+MAX_TOKENS_PER_CHUNK = int(os.getenv("MAX_TOKENS_PER_CHUNK", "450"))  # Leave buffer below 512
+CHUNK_OVERLAP_TOKENS = int(os.getenv("CHUNK_OVERLAP_TOKENS", "50"))  # Overlap between chunks
+
+# Chunk weights for weighted average aggregation (must sum to 1.0)
+TRIAL_CHUNK_WEIGHTS = {
+    "basic_info_summary": float(os.getenv("CHUNK_WEIGHT_BASIC", "0.15")),
+    "detailed_description": float(os.getenv("CHUNK_WEIGHT_DESCRIPTION", "0.20")),
+    "inclusion_criteria": float(os.getenv("CHUNK_WEIGHT_INCLUSION", "0.25")),
+    "exclusion_criteria": float(os.getenv("CHUNK_WEIGHT_EXCLUSION", "0.25")),
+    "eligibility_criteria": float(os.getenv("CHUNK_WEIGHT_ELIGIBILITY", "0.15"))
+}
+
 # API Configuration
 API_TITLE = "Task Scheduler LLM Service"
 API_DESCRIPTION = "Standalone task scheduler for LLM processing"

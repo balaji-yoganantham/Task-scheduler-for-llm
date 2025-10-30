@@ -114,6 +114,14 @@ class DatabaseUtils:
                         ctd.start_date::TEXT as created_date,
                         0 as patients_matched,
                         'pending'::TEXT as matching_status,
+                        COALESCE(ctd.minimum_age, 'Not specified')::TEXT as minimum_age,
+                        COALESCE(ctd.maximum_age, 'Not specified')::TEXT as maximum_age,
+                        COALESCE(ctd.sex, 'Not specified')::TEXT as sex,
+                        COALESCE(ctd.brief_summary, 'Not available')::TEXT as brief_summary,
+                        COALESCE(ctd.detailed_description, 'Not available')::TEXT as detailed_description,
+                        COALESCE(ctd.inclusion_criteria, 'Not available')::TEXT as inclusion_criteria,
+                        COALESCE(ctd.exclusion_criteria, 'Not available')::TEXT as exclusion_criteria,
+                        COALESCE(ctd.eligibility_criteria, 'Not available')::TEXT as eligibility_criteria,
                         CONCAT(
                             'Trial ID: ', ctd.nct_id, E'\n',
                             'Title: ', ctd.study_title, E'\n',
@@ -149,7 +157,15 @@ class DatabaseUtils:
                         "created_date": str(row[6]),
                         "patients_matched": int(row[7]),
                         "matching_status": str(row[8]),
-                        "combined_trial_text": str(row[9])
+                        "minimum_age": str(row[9]),
+                        "maximum_age": str(row[10]),
+                        "sex": str(row[11]),
+                        "brief_summary": str(row[12]),
+                        "detailed_description": str(row[13]),
+                        "inclusion_criteria": str(row[14]),
+                        "exclusion_criteria": str(row[15]),
+                        "eligibility_criteria": str(row[16]),
+                        "combined_trial_text": str(row[17])
                     })
                 
                 print(f"Successfully retrieved {len(trials)} trials from database")
