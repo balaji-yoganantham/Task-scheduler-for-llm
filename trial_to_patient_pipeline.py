@@ -7,7 +7,7 @@ import json
 import argparse
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 
 from services.patient_to_trial.keyword_generator import PatientKeywordGenerator
 from services.patient_to_trial.patient_embedding import PatientEmbeddingGenerator
@@ -67,7 +67,9 @@ class TrialToPatientOrchestrator:
             return {}
 
     def run_trial_patient_matching(self, trial_id: str, age_range: Tuple[int, int] = None, 
-                                  gender: str = None) -> Dict[str, Any]:
+                                  gender: str = None,
+                                  max_distance_km: Optional[float] = None,
+                                  location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run trial-to-patient matching pipeline (Step 3)"""
         print("=" * 80)
         print("STEP 3: TRIAL-TO-PATIENT MATCHING")
@@ -79,13 +81,19 @@ class TrialToPatientOrchestrator:
             filters_applied["age_range"] = age_range
         if gender is not None:
             filters_applied["gender"] = gender
+        if max_distance_km is not None:
+            filters_applied["max_distance_km"] = max_distance_km
+        if location_weight is not None:
+            filters_applied["location_weight"] = location_weight
             
         print(f"Filters applied: {filters_applied if filters_applied else 'None (processing all patients)'}")
         
         results = self.trial_evaluator.run_trial_matching_pipeline(
             trial_id=trial_id,
             age_range=age_range,
-            gender=gender
+            gender=gender,
+            max_distance_km=max_distance_km,
+            location_weight=location_weight
         )
         
         if results:
@@ -96,7 +104,9 @@ class TrialToPatientOrchestrator:
             return {}
 
     def run_complete_pipeline(self, trial_id: str, patient_limit: int = None, 
-                            age_range: Tuple[int, int] = None, gender: str = None) -> Dict[str, Any]:
+                            age_range: Tuple[int, int] = None, gender: str = None,
+                            max_distance_km: Optional[float] = None,
+                            location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run the complete trial-to-patient matching pipeline"""
         print("STARTING TRIAL-TO-PATIENT MATCHING PIPELINE")
         print(f"Trial ID: {trial_id}")
@@ -116,7 +126,9 @@ class TrialToPatientOrchestrator:
             "patient_limit": patient_limit,
             "filters": {
                 "age_range": age_range,
-                "gender": gender
+                "gender": gender,
+                "max_distance_km": max_distance_km,
+                "location_weight": location_weight
             },
             "steps": {}
         }
@@ -145,7 +157,9 @@ class TrialToPatientOrchestrator:
                 return pipeline_results
             
             # Step 3: Trial-to-Patient Matching
-            matching_results = self.run_trial_patient_matching(trial_id, age_range, gender)
+            matching_results = self.run_trial_patient_matching(
+                trial_id, age_range, gender, max_distance_km, location_weight
+            )
             pipeline_results["steps"]["trial_patient_matching"] = {
                 "status": "completed" if matching_results else "failed",
                 "results": matching_results

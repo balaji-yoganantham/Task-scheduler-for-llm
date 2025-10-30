@@ -6,7 +6,7 @@ Evaluates patient matches for a specific clinical trial using LLM
 import json
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from services.shared.database_utils import DatabaseUtils
 from services.shared.llm_utils import LLMUtils
 from services.trial_to_patient.hybrid_matcher import HybridMatcher
@@ -72,15 +72,29 @@ class TrialEvaluator:
         # Get detailed patient information for all patients
         detailed_patients = []
         for patient in top_patients:
-            mrn = patient.get('mrn')
-            if not mrn:
-                print(f"  ERROR No MRN found for patient")
-                continue
-                
-            detailed_patient_info = self.db_utils.get_patient_by_mrn(mrn)
+            # Try to get patient by ID first (more reliable)
+            patient_id = patient.get('patient_id')
+            detailed_patient_info = None
+            
+            if patient_id:
+                # Convert patient_id to int if it's a string
+                try:
+                    patient_id_int = int(patient_id) if isinstance(patient_id, str) else patient_id
+                    detailed_patient_info = self.db_utils.get_patient_by_id(patient_id_int)
+                except (ValueError, TypeError) as e:
+                    print(f"  WARNING Invalid patient_id {patient_id}: {e}")
+            
+            # Fall back to MRN lookup if patient_id lookup failed
             if not detailed_patient_info:
-                print(f"  ERROR Patient with MRN {mrn} not found in database")
-                continue
+                mrn = patient.get('mrn')
+                if mrn:
+                    detailed_patient_info = self.db_utils.get_patient_by_mrn(mrn)
+                    if not detailed_patient_info:
+                        print(f"  ERROR Patient with ID {patient_id} / MRN {mrn} not found in database")
+                        continue
+                else:
+                    print(f"  ERROR No patient_id or MRN found for patient")
+                    continue
             
             # Merge hybrid score and other metadata from original patient
             detailed_patient_info['hybrid_score'] = patient.get('hybrid_score', 0)
@@ -113,7 +127,8 @@ class TrialEvaluator:
                     "average_confidence": 0
                 },
                 "generated_at": datetime.now().isoformat(),
-                "evaluation_method": "batch_failed"
+                "evaluation_method": "batch",
+                "batch_summary": {"error": batch_result["error"]}
             }
         
         evaluations = batch_result.get("evaluations", [])
@@ -148,7 +163,9 @@ class TrialEvaluator:
             "evaluation_method": "batch"
         }
 
-    def run_complete_trial_matching(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None) -> Dict[str, Any]:
+    def run_complete_trial_matching(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None,
+                                   max_distance_km: Optional[float] = None,
+                                   location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run complete trial-to-patient matching with LLM evaluation"""
         print(f"Starting complete trial-to-patient matching for: {trial_id}")
         
@@ -157,7 +174,9 @@ class TrialEvaluator:
         hybrid_results = self.hybrid_matcher.run_trial_to_patient_matching(
             trial_id=trial_id,
             age_range=age_range,
-            gender=gender
+            gender=gender,
+            max_distance_km=max_distance_km,
+            location_weight=location_weight
         )
         
         if not hybrid_results['matching_patients']:
@@ -216,14 +235,18 @@ class TrialEvaluator:
         print(f"Evaluation results saved to: {filepath}")
         return str(filepath)
 
-    def run_trial_matching_pipeline(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None) -> Dict[str, Any]:
+    def run_trial_matching_pipeline(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None,
+                                   max_distance_km: Optional[float] = None,
+                                   location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run the complete trial-to-patient matching pipeline"""
         print("=" * 80)
         print("TRIAL-TO-PATIENT MATCHING PIPELINE")
         print("=" * 80)
         
         # Run complete matching
-        results = self.run_complete_trial_matching(trial_id, age_range, gender)
+        results = self.run_complete_trial_matching(
+            trial_id, age_range, gender, max_distance_km, location_weight
+        )
         
         # Save results to JSON file (existing functionality)
         filepath = self.save_evaluation_results(results)

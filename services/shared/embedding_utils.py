@@ -118,7 +118,7 @@ class EmbeddingUtils:
             print(f"Error saving individual embeddings: {e}")
             return {}
 
-    def create_faiss_index(self, embeddings: List[np.ndarray], index_type: str = "cosine") -> faiss.Index:
+    def create_faiss_index(self, embeddings: List[np.ndarray], index_type: str = "cosine") -> Any:
         """Create FAISS index for embeddings"""
         try:
             embeddings_matrix = np.vstack(embeddings)
@@ -136,7 +136,7 @@ class EmbeddingUtils:
             print(f"Error creating FAISS index: {e}")
             return None
 
-    def save_faiss_index(self, index: faiss.Index, target_dir: Path, filename: str) -> str:
+    def save_faiss_index(self, index: Any, target_dir: Path, filename: str) -> str:
         """Save FAISS index to file"""
         try:
             index_file = target_dir / filename
@@ -147,7 +147,7 @@ class EmbeddingUtils:
             print(f"Error saving FAISS index: {e}")
             return ""
 
-    def load_faiss_index(self, index_file: Path) -> faiss.Index:
+    def load_faiss_index(self, index_file: Path) -> Any:
         """Load FAISS index from file"""
         try:
             with open(index_file, 'rb') as f:
@@ -167,7 +167,7 @@ class EmbeddingUtils:
             print(f"Error loading metadata: {e}")
             return {}
 
-    def search_similar(self, query_embedding: np.ndarray, index: faiss.Index, 
+    def search_similar(self, query_embedding: np.ndarray, index: Any, 
                       metadata: Dict[str, Any], k: int = 20) -> List[Dict[str, Any]]:
         """Search for similar embeddings using FAISS index"""
         try:

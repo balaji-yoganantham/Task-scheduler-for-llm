@@ -43,7 +43,7 @@ BEGIN
         pmh.oncologist,
         pmh.date_of_visit,
         pmh.created_at
-    FROM insightsedge.patient_medical_history pmh
+    FROM insightsedge.patient_medical_history_temp pmh
     WHERE pmh.age IS NOT NULL 
         AND pmh.gender IS NOT NULL
         AND pmh.gender IN ('Male', 'Female')

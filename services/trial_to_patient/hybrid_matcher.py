@@ -10,13 +10,16 @@ from datetime import datetime
 from typing import List, Dict, Any, Tuple, Optional
 from services.shared.database_utils import DatabaseUtils
 from services.shared.embedding_utils import EmbeddingUtils
+from services.shared.location_utils import LocationUtils
 from rank_bm25 import BM25Okapi
+from config import LOCATION_ENABLED, MAX_DEFAULT_DISTANCE_KM, LOCATION_WEIGHT
 import re
 
 class HybridMatcher:
     def __init__(self):
         self.db_utils = DatabaseUtils()
         self.embedding_utils = EmbeddingUtils()
+        self.location_utils = LocationUtils() if LOCATION_ENABLED else None
         
         # Load existing embeddings and indices
         self.trial_index = None
@@ -211,7 +214,9 @@ class HybridMatcher:
             print(f"Error in hybrid search: {e}")
             return []
 
-    def find_matching_patients_for_trial(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None) -> List[Dict[str, Any]]:
+    def find_matching_patients_for_trial(self, trial_id: str, age_range: Tuple[int, int] = None, 
+                                        gender: str = None, max_distance_km: Optional[float] = None,
+                                        location_weight: Optional[float] = None) -> List[Dict[str, Any]]:
         """Find most eligible patients for a specific trial using hybrid matching"""
         try:
             # Get trial information
@@ -226,6 +231,45 @@ class HybridMatcher:
             print(f"Finding patients for trial: {trial_info['title']}")
             print(f"Condition: {trial_info['condition']}")
             print(f"Phase: {trial_info['phase']}")
+            
+            # Get trial location if location filtering is enabled
+            trial_lat = None
+            trial_lon = None
+            identified_location = False
+            
+            # Handle trial locations (can be multiple locations in JSON array)
+            trial_locations_coords = []  # List of (lat, lon) tuples for all trial locations
+            if LOCATION_ENABLED and self.location_utils:
+                trial_location_data = self.db_utils.get_trial_location(trial_id)
+                if trial_location_data:
+                    # Check if we have multiple locations (new format)
+                    if trial_location_data.get('locations') and isinstance(trial_location_data['locations'], list) and len(trial_location_data['locations']) > 0:
+                        locations_list = trial_location_data['locations']
+                        print(f"Trial has {len(locations_list)} location(s), processing all...")
+                        
+                        # Process each location: geocode to get coordinates
+                        for loc_obj in locations_list:
+                            address_str = self.location_utils.build_address_string(loc_obj)
+                            if address_str:
+                                coords = self.location_utils.geocode_location(address_str)
+                                if coords:
+                                    trial_locations_coords.append(coords)
+                        
+                        if trial_locations_coords:
+                            identified_location = True
+                            print(f"Successfully geocoded {len(trial_locations_coords)} trial location(s)")
+                            # For backward compatibility, use first location as primary
+                            trial_lat, trial_lon = trial_locations_coords[0]
+                        else:
+                            print("Warning: Could not geocode any trial locations")
+                
+                if identified_location:
+                    if len(trial_locations_coords) == 1:
+                        print(f"Trial location identified: ({trial_lat}, {trial_lon})")
+                    else:
+                        print(f"Trial has {len(trial_locations_coords)} locations - will use closest to each patient")
+                else:
+                    print("Trial location not available - location filtering will be skipped")
             
             # Perform hybrid search
             matching_patients = self.hybrid_search(query_text, index_type="patient")
@@ -250,18 +294,98 @@ class HybridMatcher:
             print(f"Found {len(matching_patients)} patients before filtering")
             print(f"Found {len(filtered_patients)} patients after age/gender filtering")
             
+            # Apply location filtering if enabled and trial location(s) are available
+            if LOCATION_ENABLED and self.location_utils and identified_location and trial_locations_coords:
+                # Use default max distance if not specified
+                max_dist = max_distance_km if max_distance_km is not None else MAX_DEFAULT_DISTANCE_KM
+                location_wt = location_weight if location_weight is not None else LOCATION_WEIGHT
+                
+                print(f"Applying location filtering with max distance: {max_dist} km")
+                print(f"Trial has {len(trial_locations_coords)} location(s) - using closest location for each patient")
+                
+                # Get patient locations and calculate distances
+                for patient in filtered_patients:
+                    patient_id = patient.get('patient_id')
+                    if not patient_id:
+                        continue
+                    
+                    # Get patient location
+                    patient_location_data = self.db_utils.get_patient_location(patient_id)
+                    patient_lat = None
+                    patient_lon = None
+                    
+                    if patient_location_data:
+                        if patient_location_data.get('latitude') and patient_location_data.get('longitude'):
+                            patient_lat = float(patient_location_data['latitude'])
+                            patient_lon = float(patient_location_data['longitude'])
+                        elif patient_location_data.get('location'):
+                            coords = self.location_utils.geocode_location(patient_location_data['location'])
+                            if coords:
+                                patient_lat, patient_lon = coords
+                    
+                    # Calculate distance to closest trial location if we have patient coordinates
+                    if patient_lat and patient_lon:
+                        closest_distance = None
+                        
+                        # Find closest trial location to this patient
+                        for trial_coords in trial_locations_coords:
+                            trial_lat, trial_lon = trial_coords
+                            distance = self.location_utils.calculate_distance(
+                                trial_lat, trial_lon, patient_lat, patient_lon
+                            )
+                            if distance is not None:
+                                if closest_distance is None or distance < closest_distance:
+                                    closest_distance = distance
+                        
+                        if closest_distance is not None:
+                            patient['distance_km'] = round(closest_distance, 2)
+                            patient['location_score'] = self.location_utils.calculate_location_score(
+                                closest_distance, max_dist
+                            )
+                            
+                            # Combine location score with hybrid score
+                            hybrid_score = patient.get('hybrid_score', 0.0)
+                            if location_wt > 0:
+                                final_score = (1 - location_wt) * hybrid_score + location_wt * patient['location_score']
+                                patient['final_score'] = round(final_score, 4)
+                            else:
+                                patient['final_score'] = hybrid_score
+                        else:
+                            patient['distance_km'] = None
+                            patient['location_score'] = 0.0
+                            patient['final_score'] = patient.get('hybrid_score', 0.0)
+                    else:
+                        patient['distance_km'] = None
+                        patient['location_score'] = 0.0
+                        patient['final_score'] = patient.get('hybrid_score', 0.0)
+                
+                # Filter by max distance if specified
+                if max_dist is not None:
+                    filtered_patients = [
+                        p for p in filtered_patients
+                        if p.get('distance_km') is None or p.get('distance_km') <= max_dist
+                    ]
+                    print(f"Found {len(filtered_patients)} patients after location filtering")
+                
+                # Sort by final score (or hybrid_score if location not available)
+                filtered_patients.sort(key=lambda x: x.get('final_score', x.get('hybrid_score', 0.0)), reverse=True)
+            
             return filtered_patients[:20]  # Return top 20
             
         except Exception as e:
             print(f"Error finding matching patients: {e}")
             return []
 
-    def run_trial_to_patient_matching(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None) -> Dict[str, Any]:
+    def run_trial_to_patient_matching(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None,
+                                     max_distance_km: Optional[float] = None,
+                                     location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run complete trial-to-patient matching process"""
         print(f"Starting trial-to-patient matching for trial: {trial_id}")
         
         # Find matching patients
-        matching_patients = self.find_matching_patients_for_trial(trial_id, age_range, gender)
+        matching_patients = self.find_matching_patients_for_trial(
+            trial_id, age_range, gender, max_distance_km, location_weight
+        )
         
         # Prepare results
         results = {
@@ -271,7 +395,9 @@ class HybridMatcher:
             "total_matches": len(matching_patients),
             "filters_applied": {
                 "age_range": age_range,
-                "gender": gender
+                "gender": gender,
+                "max_distance_km": max_distance_km if LOCATION_ENABLED else None,
+                "location_weight": location_weight if LOCATION_ENABLED else None
             },
             "generated_at": datetime.now().isoformat()
         }

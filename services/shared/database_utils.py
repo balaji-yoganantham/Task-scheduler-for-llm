@@ -160,12 +160,37 @@ class DatabaseUtils:
             return []
     
     def get_patient_by_id(self, patient_id: int) -> Optional[Dict[str, Any]]:
-        """Get specific patient by ID"""
+        """Get specific patient by ID from patient_medical_history_temp table"""
         try:
             with self.get_connection() as connection:
                 query = text("""
-                    SELECT * FROM insightsedge.get_patient_data_for_keywords(1000)
-                    WHERE patient_id = :patient_id
+                    SELECT 
+                        pmh.id as patient_id,
+                        pmh.mrn,
+                        pmh.age,
+                        pmh.gender,
+                        CONCAT(
+                            'Patient MRN: ', pmh.mrn, E'\n',
+                            'Age: ', COALESCE(pmh.age::TEXT, 'Not specified'), ', Gender: ', COALESCE(pmh.gender, 'Not specified'), E'\n',
+                            'Date of Visit: ', COALESCE(pmh.date_of_visit::TEXT, 'Not specified'), E'\n',
+                            'Oncologist: ', COALESCE(pmh.oncologist, 'Not specified'), E'\n\n',
+                            'Chief Complaint: ', COALESCE(pmh.chief_complaint, 'Not specified'), E'\n\n',
+                            'History of Present Illness: ', COALESCE(pmh.history_of_present_illness, 'Not specified'), E'\n\n',
+                            'Past Medical History: ', COALESCE(pmh.past_medical_history, 'Not specified'), E'\n\n',
+                            'Family History: ', COALESCE(pmh.family_history, 'Not specified'), E'\n\n',
+                            'Social History: ', COALESCE(pmh.social_history, 'Not specified'), E'\n\n',
+                            'Review of Systems: ', COALESCE(pmh.review_of_systems, 'Not specified'), E'\n\n',
+                            'Medications and Allergies: ', COALESCE(pmh.medications_allergies, 'Not specified'), E'\n\n',
+                            'Physical Examination: ', COALESCE(pmh.physical_examination, 'Not specified'), E'\n\n',
+                            'Laboratory and Imaging Results: ', COALESCE(pmh.laboratory_imaging_results, 'Not specified'), E'\n\n',
+                            'Imaging: ', COALESCE(pmh.imaging, 'Not specified'), E'\n\n',
+                            'Assessment: ', COALESCE(pmh.assessment, 'Not specified')
+                        ) as combined_text,
+                        pmh.oncologist,
+                        pmh.date_of_visit,
+                        pmh.created_at
+                    FROM insightsedge.patient_medical_history_temp pmh
+                    WHERE pmh.id = :patient_id
                 """)
                 result = connection.execute(query, {"patient_id": patient_id})
                 row = result.fetchone()
@@ -267,6 +292,99 @@ class DatabaseUtils:
                 return None
         except Exception as e:
             print(f"Error getting trial by ID {trial_id}: {e}")
+            return None
+    
+    def get_patient_location(self, patient_id: int) -> Optional[Dict[str, Any]]:
+        """
+        Get patient location information from database
+        
+        Returns:
+            Dict with 'location' (address string), 'latitude', 'longitude' fields, or None
+        """
+        try:
+            with self.get_connection() as connection:
+                # Try to get location from patient_medical_history_temp table
+                # Only location column exists (latitude, longitude, address, and city columns don't exist)
+                query = text("""
+                    SELECT 
+                        COALESCE(pmh.location, '') as location
+                    FROM insightsedge.patient_medical_history_temp pmh
+                    WHERE pmh.id = :patient_id
+                """)
+                result = connection.execute(query, {"patient_id": patient_id})
+                row = result.fetchone()
+                
+                if row:
+                    location_str = str(row[0]) if row[0] and str(row[0]).strip() else None
+                    if not location_str:
+                        return None
+                    location_data = {
+                        "location": location_str,
+                        "latitude": None,  # Will be geocoded from location string if needed
+                        "longitude": None  # Will be geocoded from location string if needed
+                    }
+                    return location_data
+                return None
+        except Exception as e:
+            # If columns don't exist, silently return None (graceful degradation)
+            print(f"Error getting patient location (may not exist in schema): {e}")
+            return None
+    
+    def get_trial_location(self, trial_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Get trial location information from database
+        The locations column contains a JSON array of location objects with city, state, country
+        
+        Returns:
+            Dict with:
+            - 'locations': List of location objects (parsed from JSON)
+            - Or None if no location data found
+        """
+        try:
+            with self.get_connection() as connection:
+                # Try to get location from clinical_trial_details table
+                # Adjust column names based on actual database schema
+                query = text("""
+                    SELECT 
+                        ctd.locations
+                    FROM insightsedge.clinical_trial_details ctd
+                    WHERE ctd.nct_id = :trial_id
+                """)
+                result = connection.execute(query, {"trial_id": trial_id})
+                row = result.fetchone()
+                
+                if not row or not row[0]:
+                    return None
+                
+                locations_json = row[0]  # This is the JSON array
+                
+                # Parse locations JSON array
+                location_objects = []
+                if locations_json:
+                    try:
+                        # If it's already a list (from psycopg2's JSON handling)
+                        if isinstance(locations_json, list):
+                            location_objects = locations_json
+                        # If it's a string, parse it as JSON
+                        elif isinstance(locations_json, str):
+                            location_objects = json.loads(locations_json)
+                        # If it's already a dict (single location), wrap it in a list
+                        elif isinstance(locations_json, dict):
+                            location_objects = [locations_json]
+                    except (json.JSONDecodeError, TypeError) as e:
+                        print(f"Error parsing locations JSON for trial {trial_id}: {e}")
+                        location_objects = []
+                
+                # Return location objects if we have any
+                if location_objects and len(location_objects) > 0:
+                    return {
+                        "locations": location_objects
+                    }
+                
+                return None
+        except Exception as e:
+            # If columns don't exist, silently return None (graceful degradation)
+            print(f"Error getting trial location (may not exist in schema): {e}")
             return None
     
     def save_patient_keywords(self, keywords_data: Dict[str, Any]) -> bool:

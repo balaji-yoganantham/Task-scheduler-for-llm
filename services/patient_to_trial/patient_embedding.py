@@ -153,23 +153,57 @@ class PatientEmbeddingGenerator:
         return results
 
     def save_patient_embeddings(self, embedding_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Save patient embeddings and create FAISS index"""
+        """Save patient embeddings and create FAISS index with ALL patients (existing + new)"""
         try:
-            embeddings = embedding_data["embeddings"]
-            metadata = embedding_data["metadata"]
+            new_embeddings = embedding_data["embeddings"]
+            new_metadata = embedding_data["metadata"]
             
-            # Save embeddings matrix
+            # Load ALL existing embeddings and metadata
+            existing_metadata = self._load_existing_embeddings()
+            all_embeddings = []
+            all_metadata = {}
+            
+            # First, load all existing embeddings
+            if existing_metadata:
+                print(f"Loading {len(existing_metadata)} existing patient embeddings...")
+                for patient_id_str, existing_meta in existing_metadata.items():
+                    embedding_file = self.patients_dir / f"patient_{patient_id_str}.npy"
+                    if embedding_file.exists():
+                        existing_embedding = np.load(embedding_file)
+                        all_embeddings.append(existing_embedding)
+                        
+                        # Update embedding_index for existing patients
+                        existing_meta['embedding_index'] = len(all_embeddings) - 1
+                        all_metadata[patient_id_str] = existing_meta
+            
+            # Then add new embeddings
+            if new_embeddings:
+                print(f"Adding {len(new_embeddings)} new patient embeddings...")
+                start_index = len(all_embeddings)
+                for i, new_embedding in enumerate(new_embeddings):
+                    all_embeddings.append(new_embedding)
+                    
+                # Update embedding_index for new patients in metadata
+                for patient_id_str, new_meta in new_metadata.items():
+                    new_meta['embedding_index'] = start_index + list(new_metadata.keys()).index(patient_id_str)
+                    all_metadata[patient_id_str] = new_meta
+            
+            if not all_embeddings:
+                print("WARNING No embeddings to save!")
+                return {}
+            
+            # Save embeddings matrix (all patients)
             matrix_file = self.embedding_utils.save_embeddings_matrix(
-                embeddings, self.patients_dir, "patient_embeddings_matrix.npy"
+                all_embeddings, self.patients_dir, "patient_embeddings_matrix.npy"
             )
             
-            # Save individual embeddings and metadata
+            # Save individual embeddings and metadata (overwrites with all data)
             saved_files = self.embedding_utils.save_individual_embeddings(
-                embeddings, metadata, self.patients_dir, "patient"
+                all_embeddings, all_metadata, self.patients_dir, "patient"
             )
             
-            # Create FAISS index
-            patient_index = self.embedding_utils.create_faiss_index(embeddings, "cosine")
+            # Create FAISS index with ALL embeddings
+            patient_index = self.embedding_utils.create_faiss_index(all_embeddings, "cosine")
             
             # Save FAISS index
             index_file = self.embedding_utils.save_faiss_index(
@@ -177,11 +211,12 @@ class PatientEmbeddingGenerator:
             )
             
             print(f"Patient embeddings saved to: {self.patients_dir}")
+            print(f"Total patients in index: {len(all_embeddings)} (existing: {len(existing_metadata)}, new: {len(new_embeddings)})")
             
             return {
-                "total_patients": embedding_data["total_patients"],
+                "total_patients": len(all_embeddings),
                 "embedding_dimension": self.embedding_utils.dimension,
-                "matrix_shape": np.vstack(embeddings).shape,
+                "matrix_shape": np.vstack(all_embeddings).shape,
                 "metadata_file": saved_files.get('metadata', ''),
                 "matrix_file": matrix_file,
                 "faiss_index_file": index_file,

@@ -13,7 +13,7 @@ USE_LLM_PROCESSING = os.getenv("USE_LLM_PROCESSING", "true").lower() == "true"
 USE_DATABASE = os.getenv("USE_DATABASE", "true").lower() == "true"
 
 # Gemini API Configuration
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyAaK5LASwLAzQljsficijwt6--HTPztOx4")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyBLzJauKTJ7MPyEKToXUeM2sWChFITa4ns")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-exp")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", "0.2"))
 GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8000"))
@@ -39,6 +39,13 @@ DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "50"))
 # Logging Configuration
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 LOG_FILE = os.getenv("LOG_FILE", "task_scheduler.log")
+
+# Location-based Filtering Configuration
+LOCATION_ENABLED = os.getenv("LOCATION_ENABLED", "true").lower() == "true"
+MAX_DEFAULT_DISTANCE_KM = float(os.getenv("MAX_DEFAULT_DISTANCE_KM", "600"))
+LOCATION_WEIGHT = float(os.getenv("LOCATION_WEIGHT", "0.1"))  # Weight for location in hybrid score (0-1)
+GEOCODING_CACHE_ENABLED = os.getenv("GEOCODING_CACHE_ENABLED", "true").lower() == "true"
+NOMINATIM_USER_AGENT = os.getenv("NOMINATIM_USER_AGENT", "clinical-trial-matcher")
 
 # API Configuration
 API_TITLE = "Task Scheduler LLM Service"

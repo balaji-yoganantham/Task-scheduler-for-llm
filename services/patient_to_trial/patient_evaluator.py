@@ -6,7 +6,7 @@ Evaluates trial matches for a specific patient using LLM
 import json
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from services.shared.database_utils import DatabaseUtils, safe_json_dump
 from services.shared.llm_utils import LLMUtils
 from services.patient_to_trial.patient_matcher import PatientMatcher
@@ -108,7 +108,8 @@ class PatientEvaluator:
                     "average_confidence": 0
                 },
                 "generated_at": datetime.now().isoformat(),
-                "evaluation_method": "batch_failed"
+                "evaluation_method": "batch",
+                "batch_summary": {"error": batch_result["error"]}
             }
         
         evaluations = batch_result.get("evaluations", [])
@@ -193,7 +194,9 @@ class PatientEvaluator:
         }
 
     def run_complete_patient_trial_matching(self, patient_id: int, age_range: Tuple[int, int] = None, 
-                                          gender: str = None, phase_filter: List[str] = None) -> Dict[str, Any]:
+                                          gender: str = None, phase_filter: List[str] = None,
+                                          max_distance_km: Optional[float] = None,
+                                          location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run complete patient-to-trial matching with LLM evaluation"""
         print(f"Starting complete patient-to-trial matching for patient: {patient_id}")
         
@@ -203,7 +206,9 @@ class PatientEvaluator:
             patient_id=patient_id,
             age_range=age_range,
             gender=gender,
-            phase_filter=phase_filter
+            phase_filter=phase_filter,
+            max_distance_km=max_distance_km,
+            location_weight=location_weight
         )
         
         if not hybrid_results.get('matching_trials'):
@@ -247,14 +252,18 @@ class PatientEvaluator:
         return str(filepath)
 
     def run_patient_trial_pipeline(self, patient_id: int, age_range: Tuple[int, int] = None, 
-                                 gender: str = None, phase_filter: List[str] = None) -> Dict[str, Any]:
+                                 gender: str = None, phase_filter: List[str] = None,
+                                 max_distance_km: Optional[float] = None,
+                                 location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run the complete patient-to-trial matching pipeline"""
         print("=" * 80)
         print("PATIENT-TO-TRIAL MATCHING PIPELINE")
         print("=" * 80)
         
         # Run complete matching
-        results = self.run_complete_patient_trial_matching(patient_id, age_range, gender, phase_filter)
+        results = self.run_complete_patient_trial_matching(
+            patient_id, age_range, gender, phase_filter, max_distance_km, location_weight
+        )
         
         # Save results to JSON file (existing functionality)
         filepath = self.save_evaluation_results(results)

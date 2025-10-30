@@ -7,7 +7,7 @@ import json
 import argparse
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 
 from patient_to_trial_pipeline import PatientToTrialOrchestrator
 from trial_to_patient_pipeline import TrialToPatientOrchestrator
@@ -23,7 +23,9 @@ class ClinicalTrialMatchingOrchestrator:
 
     def run_patient_to_trial_pipeline(self, patient_id: int, patient_limit: int = 50, 
                                     age_range: Tuple[int, int] = None, gender: str = None, 
-                                    phase_filter: list = None) -> Dict[str, Any]:
+                                    phase_filter: list = None,
+                                    max_distance_km: Optional[float] = None,
+                                    location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run patient-to-trial matching pipeline"""
         print("=" * 80)
         print("RUNNING PATIENT-TO-TRIAL PIPELINE")
@@ -34,11 +36,15 @@ class ClinicalTrialMatchingOrchestrator:
             patient_limit=patient_limit,
             age_range=age_range,
             gender=gender,
-            phase_filter=phase_filter
+            phase_filter=phase_filter,
+            max_distance_km=max_distance_km,
+            location_weight=location_weight
         )
 
     def run_trial_to_patient_pipeline(self, trial_id: str, age_range: Tuple[int, int] = None, 
-                                    gender: str = None) -> Dict[str, Any]:
+                                    gender: str = None,
+                                    max_distance_km: Optional[float] = None,
+                                    location_weight: Optional[float] = None) -> Dict[str, Any]:
         """Run trial-to-patient matching pipeline"""
         print("=" * 80)
         print("RUNNING TRIAL-TO-PATIENT PIPELINE")
@@ -47,7 +53,9 @@ class ClinicalTrialMatchingOrchestrator:
         return self.trial_to_patient_orchestrator.run_complete_pipeline(
             trial_id=trial_id,
             age_range=age_range,
-            gender=gender
+            gender=gender,
+            max_distance_km=max_distance_km,
+            location_weight=location_weight
         )
 
     def run_both_pipelines(self, patient_id: int, trial_id: str, patient_limit: int = 50,
