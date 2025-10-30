@@ -44,6 +44,9 @@ FIXED_PATIENT_IDS = [p.strip() for p in FIXED_PATIENT_IDS if p.strip()]
 # Run interval jobs once immediately on scheduler start
 RUN_JOBS_ON_START = os.getenv("RUN_JOBS_ON_START", "true").lower() == "true"
 
+# Run both jobs once and exit (no scheduler loop)
+RUN_ONCE_AND_EXIT = os.getenv("RUN_ONCE_AND_EXIT", "false").lower() == "true"
+
 # Patient Processing Configuration
 DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "50"))
 

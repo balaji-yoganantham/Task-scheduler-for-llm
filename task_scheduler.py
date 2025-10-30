@@ -25,7 +25,8 @@ from config import (
     ENABLE_FIXED_IDS,
     FIXED_TRIAL_IDS,
     FIXED_PATIENT_IDS,
-    RUN_JOBS_ON_START
+    RUN_JOBS_ON_START,
+    RUN_ONCE_AND_EXIT
 )
 
 # Database services will be imported lazily in initialize() to avoid import errors when optional
@@ -94,9 +95,9 @@ class TaskScheduler:
         
         logger.info(f"Task scheduler started with {len(self.scheduler.get_jobs())} jobs")
         
-        # Optionally kick off both jobs once immediately
-        if RUN_JOBS_ON_START:
-            logger.info("Running initial trial and patient jobs immediately on start")
+        # Optionally run both jobs immediately; also used when RUN_ONCE_AND_EXIT
+        if RUN_JOBS_ON_START or RUN_ONCE_AND_EXIT:
+            logger.info("Running trial and patient jobs immediately on start")
             try:
                 await self.process_trial_patient_matches()
             except Exception as e:
@@ -105,6 +106,14 @@ class TaskScheduler:
                 await self.process_patient_trial_matches()
             except Exception as e:
                 logger.error(f"Initial patient job failed: {e}")
+
+        # If configured to run once and exit, shut down immediately after the initial runs
+        if RUN_ONCE_AND_EXIT:
+            logger.info("RUN_ONCE_AND_EXIT enabled; stopping scheduler after initial runs")
+            self.running = False
+            if self.scheduler.running:
+                self.scheduler.shutdown(wait=False)
+            return
         
         # Keep the scheduler running
         try:
