@@ -24,12 +24,13 @@ class EvaluationResultsDB:
     def save_patient_to_trial_evaluation(self, evaluation_data: Dict[str, Any]) -> Optional[int]:
         """
         Save patient-to-trial evaluation results to database
+        Updates existing record if found, otherwise inserts new record
         
         Args:
             evaluation_data: Dictionary containing evaluation results
             
         Returns:
-            int: ID of the inserted record, or None if failed
+            int: ID of the inserted/updated record, or None if failed
         """
         try:
             # Extract data from evaluation results
@@ -38,9 +39,11 @@ class EvaluationResultsDB:
             hybrid_matching = evaluation_data.get('hybrid_matching', {})
             summary = evaluation_data.get('summary', {})
             
-            # Prepare data for insertion
+            patient_id = patient_info.get('patient_id')
+            
+            # Prepare data for insertion/update
             insert_data = {
-                'patient_id': patient_info.get('patient_id'),
+                'patient_id': patient_id,
                 'patient_mrn': patient_info.get('mrn'),
                 'evaluation_timestamp': datetime.now(),
                 'patient_age': patient_info.get('age'),
@@ -57,32 +60,76 @@ class EvaluationResultsDB:
                 'trial_evaluations': json.dumps(llm_evaluation.get('evaluations', []))
             }
             
-            # Insert into database
+            # Check if record exists for this patient_id (get most recent)
             with self.engine.connect() as connection:
-                query = text("""
-                    INSERT INTO insightsedge.patient_to_trial_evaluations (
-                        patient_id, patient_mrn, evaluation_timestamp, patient_age, 
-                        patient_gender, patient_oncologist, total_trials_found, 
-                        total_trials_evaluated, evaluation_method, batch_summary,
-                        eligible_trials_count, not_eligible_trials_count, 
-                        need_more_info_trials_count, average_confidence_score, 
-                        trial_evaluations
-                    ) VALUES (
-                        :patient_id, :patient_mrn, :evaluation_timestamp, :patient_age,
-                        :patient_gender, :patient_oncologist, :total_trials_found,
-                        :total_trials_evaluated, :evaluation_method, :batch_summary,
-                        :eligible_trials_count, :not_eligible_trials_count,
-                        :need_more_info_trials_count, :average_confidence_score,
-                        :trial_evaluations
-                    ) RETURNING id
+                # Check for existing record
+                check_query = text("""
+                    SELECT id FROM insightsedge.patient_to_trial_evaluations
+                    WHERE patient_id = :patient_id
+                    ORDER BY evaluation_timestamp DESC, id DESC
+                    LIMIT 1
                 """)
                 
-                result = connection.execute(query, insert_data)
-                evaluation_id = result.fetchone()[0]
-                connection.commit()
+                result = connection.execute(check_query, {'patient_id': patient_id})
+                existing_record = result.fetchone()
                 
-                print(f"✅ Patient-to-Trial evaluation saved with ID: {evaluation_id}")
-                return evaluation_id
+                if existing_record:
+                    # Update existing record
+                    evaluation_id = existing_record[0]
+                    update_query = text("""
+                        UPDATE insightsedge.patient_to_trial_evaluations SET
+                            patient_mrn = :patient_mrn,
+                            evaluation_timestamp = :evaluation_timestamp,
+                            patient_age = :patient_age,
+                            patient_gender = :patient_gender,
+                            patient_oncologist = :patient_oncologist,
+                            total_trials_found = :total_trials_found,
+                            total_trials_evaluated = :total_trials_evaluated,
+                            evaluation_method = :evaluation_method,
+                            batch_summary = :batch_summary,
+                            eligible_trials_count = :eligible_trials_count,
+                            not_eligible_trials_count = :not_eligible_trials_count,
+                            need_more_info_trials_count = :need_more_info_trials_count,
+                            average_confidence_score = :average_confidence_score,
+                            trial_evaluations = :trial_evaluations,
+                            updated_at = CURRENT_TIMESTAMP
+                        WHERE id = :id
+                        RETURNING id
+                    """)
+                    
+                    insert_data['id'] = evaluation_id
+                    result = connection.execute(update_query, insert_data)
+                    evaluation_id = result.fetchone()[0]
+                    connection.commit()
+                    
+                    print(f"✅ Patient-to-Trial evaluation updated with ID: {evaluation_id}")
+                    return evaluation_id
+                else:
+                    # Insert new record
+                    insert_query = text("""
+                        INSERT INTO insightsedge.patient_to_trial_evaluations (
+                            patient_id, patient_mrn, evaluation_timestamp, patient_age, 
+                            patient_gender, patient_oncologist, total_trials_found, 
+                            total_trials_evaluated, evaluation_method, batch_summary,
+                            eligible_trials_count, not_eligible_trials_count, 
+                            need_more_info_trials_count, average_confidence_score, 
+                            trial_evaluations
+                        ) VALUES (
+                            :patient_id, :patient_mrn, :evaluation_timestamp, :patient_age,
+                            :patient_gender, :patient_oncologist, :total_trials_found,
+                            :total_trials_evaluated, :evaluation_method, :batch_summary,
+                            :eligible_trials_count, :not_eligible_trials_count,
+                            :need_more_info_trials_count, :average_confidence_score,
+                            :trial_evaluations
+                        ) RETURNING id
+                    """)
+                    
+                    result = connection.execute(insert_query, insert_data)
+                    evaluation_id = result.fetchone()[0]
+                    connection.commit()
+                    
+                    print(f"✅ Patient-to-Trial evaluation saved with ID: {evaluation_id}")
+                    return evaluation_id
                 
         except SQLAlchemyError as e:
             print(f"❌ Database error saving patient-to-trial evaluation: {e}")
@@ -94,12 +141,13 @@ class EvaluationResultsDB:
     def save_trial_to_patient_evaluation(self, evaluation_data: Dict[str, Any]) -> Optional[int]:
         """
         Save trial-to-patient evaluation results to database
+        Updates existing record if found, otherwise inserts new record
         
         Args:
             evaluation_data: Dictionary containing evaluation results
             
         Returns:
-            int: ID of the inserted record, or None if failed
+            int: ID of the inserted/updated record, or None if failed
         """
         try:
             # Extract data from evaluation results
@@ -108,9 +156,11 @@ class EvaluationResultsDB:
             hybrid_matching = evaluation_data.get('hybrid_matching', {})
             summary = evaluation_data.get('summary', {})
             
-            # Prepare data for insertion
+            trial_id = evaluation_data.get('trial_id') or trial_info.get('trial_id') or trial_info.get('nct_id', 'Unknown')
+            
+            # Prepare data for insertion/update
             insert_data = {
-                'trial_id': evaluation_data.get('trial_id') or trial_info.get('trial_id') or trial_info.get('nct_id', 'Unknown'),
+                'trial_id': trial_id,
                 'trial_title': trial_info.get('title'),
                 'evaluation_timestamp': datetime.now(),
                 'trial_condition': trial_info.get('condition'),
@@ -128,32 +178,77 @@ class EvaluationResultsDB:
                 'patient_evaluations': json.dumps(llm_evaluation.get('evaluations', []))
             }
             
-            # Insert into database
+            # Check if record exists for this trial_id (get most recent)
             with self.engine.connect() as connection:
-                query = text("""
-                    INSERT INTO insightsedge.trial_to_patient_evaluations (
-                        trial_id, trial_title, evaluation_timestamp, trial_condition,
-                        trial_phase, trial_status, trial_investigator, total_patients_found,
-                        total_patients_evaluated, evaluation_method, batch_summary,
-                        eligible_patients_count, not_eligible_patients_count,
-                        need_more_info_patients_count, average_confidence_score,
-                        patient_evaluations
-                    ) VALUES (
-                        :trial_id, :trial_title, :evaluation_timestamp, :trial_condition,
-                        :trial_phase, :trial_status, :trial_investigator, :total_patients_found,
-                        :total_patients_evaluated, :evaluation_method, :batch_summary,
-                        :eligible_patients_count, :not_eligible_patients_count,
-                        :need_more_info_patients_count, :average_confidence_score,
-                        :patient_evaluations
-                    ) RETURNING id
+                # Check for existing record
+                check_query = text("""
+                    SELECT id FROM insightsedge.trial_to_patient_evaluations
+                    WHERE trial_id = :trial_id
+                    ORDER BY evaluation_timestamp DESC, id DESC
+                    LIMIT 1
                 """)
                 
-                result = connection.execute(query, insert_data)
-                evaluation_id = result.fetchone()[0]
-                connection.commit()
+                result = connection.execute(check_query, {'trial_id': trial_id})
+                existing_record = result.fetchone()
                 
-                print(f"✅ Trial-to-Patient evaluation saved with ID: {evaluation_id}")
-                return evaluation_id
+                if existing_record:
+                    # Update existing record
+                    evaluation_id = existing_record[0]
+                    update_query = text("""
+                        UPDATE insightsedge.trial_to_patient_evaluations SET
+                            trial_title = :trial_title,
+                            evaluation_timestamp = :evaluation_timestamp,
+                            trial_condition = :trial_condition,
+                            trial_phase = :trial_phase,
+                            trial_status = :trial_status,
+                            trial_investigator = :trial_investigator,
+                            total_patients_found = :total_patients_found,
+                            total_patients_evaluated = :total_patients_evaluated,
+                            evaluation_method = :evaluation_method,
+                            batch_summary = :batch_summary,
+                            eligible_patients_count = :eligible_patients_count,
+                            not_eligible_patients_count = :not_eligible_patients_count,
+                            need_more_info_patients_count = :need_more_info_patients_count,
+                            average_confidence_score = :average_confidence_score,
+                            patient_evaluations = :patient_evaluations,
+                            updated_at = CURRENT_TIMESTAMP
+                        WHERE id = :id
+                        RETURNING id
+                    """)
+                    
+                    insert_data['id'] = evaluation_id
+                    result = connection.execute(update_query, insert_data)
+                    evaluation_id = result.fetchone()[0]
+                    connection.commit()
+                    
+                    print(f"✅ Trial-to-Patient evaluation updated with ID: {evaluation_id}")
+                    return evaluation_id
+                else:
+                    # Insert new record
+                    insert_query = text("""
+                        INSERT INTO insightsedge.trial_to_patient_evaluations (
+                            trial_id, trial_title, evaluation_timestamp, trial_condition,
+                            trial_phase, trial_status, trial_investigator, total_patients_found,
+                            total_patients_evaluated, evaluation_method, batch_summary,
+                            eligible_patients_count, not_eligible_patients_count,
+                            need_more_info_patients_count, average_confidence_score,
+                            patient_evaluations
+                        ) VALUES (
+                            :trial_id, :trial_title, :evaluation_timestamp, :trial_condition,
+                            :trial_phase, :trial_status, :trial_investigator, :total_patients_found,
+                            :total_patients_evaluated, :evaluation_method, :batch_summary,
+                            :eligible_patients_count, :not_eligible_patients_count,
+                            :need_more_info_patients_count, :average_confidence_score,
+                            :patient_evaluations
+                        ) RETURNING id
+                    """)
+                    
+                    result = connection.execute(insert_query, insert_data)
+                    evaluation_id = result.fetchone()[0]
+                    connection.commit()
+                    
+                    print(f"✅ Trial-to-Patient evaluation saved with ID: {evaluation_id}")
+                    return evaluation_id
                 
         except SQLAlchemyError as e:
             print(f"❌ Database error saving trial-to-patient evaluation: {e}")

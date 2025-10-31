@@ -11,7 +11,7 @@ RETURNS TABLE (
     gender VARCHAR(20),
     combined_text TEXT,
     oncologist TEXT,
-    date_of_visit DATE,
+    date_of_visit VARCHAR(50),
     created_at TIMESTAMP
 ) 
 LANGUAGE plpgsql
@@ -43,7 +43,7 @@ BEGIN
         pmh.oncologist,
         pmh.date_of_visit,
         pmh.created_at
-    FROM insightsedge.patient_medical_history_temp pmh
+    FROM insightsedge.patient_medical_history pmh
     WHERE pmh.age IS NOT NULL 
         AND pmh.gender IS NOT NULL
         AND pmh.gender IN ('Male', 'Female')

@@ -35,7 +35,7 @@ TASK_TIMEOUT_SECONDS = int(os.getenv("TASK_TIMEOUT_SECONDS", "300"))
 
 # Fixed ID execution (explicit run lists)
 ENABLE_FIXED_IDS = os.getenv("ENABLE_FIXED_IDS", "true").lower() == "true"
-FIXED_TRIAL_IDS = os.getenv("FIXED_TRIAL_IDS", "NCT04929223,NCT01120353").split(",")
+FIXED_TRIAL_IDS = os.getenv("FIXED_TRIAL_IDS", "NCT04929223,NCT03947385").split(",")
 FIXED_TRIAL_IDS = [t.strip() for t in FIXED_TRIAL_IDS if t.strip()]
 
 FIXED_PATIENT_IDS = os.getenv("FIXED_PATIENT_IDS", "1,2").split(",")

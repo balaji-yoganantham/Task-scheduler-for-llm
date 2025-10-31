@@ -56,6 +56,16 @@ class DatabaseUtils:
                 
                 patients = []
                 for row in result:
+                    # date_of_visit is now VARCHAR, so use it directly or convert if needed
+                    date_of_visit = row[6]
+                    if date_of_visit and hasattr(date_of_visit, 'isoformat'):
+                        date_of_visit = date_of_visit.isoformat()
+                    elif date_of_visit is None:
+                        date_of_visit = None
+                    else:
+                        # Already a string, use as is
+                        date_of_visit = str(date_of_visit) if date_of_visit else None
+                    
                     patients.append({
                         "patient_id": row[0],
                         "mrn": row[1],
@@ -63,7 +73,7 @@ class DatabaseUtils:
                         "gender": row[3],
                         "combined_text": row[4],
                         "oncologist": row[5],
-                        "date_of_visit": row[6].isoformat() if row[6] else None,
+                        "date_of_visit": date_of_visit,
                         "created_at": row[7].isoformat() if row[7] else None
                     })
                 
