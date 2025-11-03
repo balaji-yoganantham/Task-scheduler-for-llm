@@ -1,0 +1,31 @@
+{
+  "trial_id": "NCT00100005",
+  "title": "Cetuximab Plus Chemotherapy for EGFR Wild-Type Left-Sided Metastatic Colorectal Cancer",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 3",
+  "status": "Recruiting",
+  "investigator": "Dr. Test Investigator 6",
+  "brief_summary": "Clinical trial 6 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1",
+  "exclusion_criteria": "Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+  "eligibility_criteria": "Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1. Exclusion: Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+  "minimum_age": "18",
+  "maximum_age": "75",
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100005\nTitle: Cetuximab Plus Chemotherapy for EGFR Wild-Type Left-Sided Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 6\n\nInclusion: Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1\nExclusion: Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+  "_metadata": {
+    "condition_key": "EGFR_WILD_LEFT_FIRSTLINE",
+    "molecular_markers": [
+      "RAS Wild-Type",
+      "BRAF Wild-Type"
+    ],
+    "prior_lines": [
+      0
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": []
+  }
+}

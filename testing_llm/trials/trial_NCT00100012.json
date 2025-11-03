@@ -1,0 +1,34 @@
+{
+  "trial_id": "NCT00100012",
+  "title": "Pembrolizumab for MSI-H/dMMR Metastatic Colorectal Cancer",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 2",
+  "status": "Active, not recruiting",
+  "investigator": "Dr. Test Investigator 13",
+  "brief_summary": "Clinical trial 13 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease",
+  "exclusion_criteria": "Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+  "eligibility_criteria": "Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease. Exclusion: Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+  "minimum_age": "18",
+  "maximum_age": null,
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100012\nTitle: Pembrolizumab for MSI-H/dMMR Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 13\n\nInclusion: Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease\nExclusion: Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+  "_metadata": {
+    "condition_key": "MSI_HIGH_MCRC",
+    "molecular_markers": [],
+    "prior_lines": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": [
+      "MSI-H",
+      "dMMR"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "trial_id": "NCT00100018",
+  "title": "Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer",
+  "condition": "Early-Stage Rectal Adenocarcinoma",
+  "phase": "Phase 2",
+  "status": "Recruiting",
+  "investigator": "Dr. Test Investigator 19",
+  "brief_summary": "Clinical trial 19 for Early-Stage Rectal Adenocarcinoma. This is a Phase 2 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Early-Stage Rectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1",
+  "exclusion_criteria": "History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+  "eligibility_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1. Exclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+  "minimum_age": "18",
+  "maximum_age": "80",
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100018\nTitle: Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer\nCondition: Early-Stage Rectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 19\n\nInclusion: Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1\nExclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+  "_metadata": {
+    "condition_key": "EARLY_STAGE_RECTAL",
+    "molecular_markers": [],
+    "prior_lines": [
+      0
+    ],
+    "disease_stage": [
+      "Early/Localized",
+      "cT2N0M0"
+    ],
+    "msi_status": []
+  }
+}

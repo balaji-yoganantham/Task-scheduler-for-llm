@@ -1,0 +1,650 @@
+[
+  {
+    "trial_id": "NCT00100000",
+    "title": "First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 3",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 1",
+    "brief_summary": "Clinical trial 1 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "eligibility_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease. Exclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100000\nTitle: First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 1\n\nInclusion: Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease\nExclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "_metadata": {
+      "condition_key": "BRAF_V600E_FIRSTLINE",
+      "molecular_markers": [
+        "BRAF V600E"
+      ],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "pMMR",
+        "MSS"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100001",
+    "title": "SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 1b/2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 2",
+    "brief_summary": "Clinical trial 2 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1b/2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1",
+    "exclusion_criteria": "Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "eligibility_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1. Exclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100001\nTitle: SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1b/2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 2\n\nInclusion: Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1\nExclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "_metadata": {
+      "condition_key": "RAS_MUTANT_REFRACTORY",
+      "molecular_markers": [
+        "KRAS Mutant",
+        "NRAS Mutant"
+      ],
+      "prior_lines": [
+        2,
+        3,
+        4
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "pMMR",
+        "MSS"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100002",
+    "title": "Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer",
+    "condition": "Early-Stage Rectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 3",
+    "brief_summary": "Clinical trial 3 for Early-Stage Rectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Early-Stage Rectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1",
+    "exclusion_criteria": "History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "eligibility_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1. Exclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "minimum_age": "18",
+    "maximum_age": "80",
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100002\nTitle: Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer\nCondition: Early-Stage Rectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 3\n\nInclusion: Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1\nExclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "_metadata": {
+      "condition_key": "EARLY_STAGE_RECTAL",
+      "molecular_markers": [],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Early/Localized",
+        "cT2N0M0"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100003",
+    "title": "Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 4",
+    "brief_summary": "Clinical trial 4 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "eligibility_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease. Exclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100003\nTitle: Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 4\n\nInclusion: Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease\nExclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "_metadata": {
+      "condition_key": "HER2_POSITIVE_MCRC",
+      "molecular_markers": [
+        "HER2 Positive"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100004",
+    "title": "Pembrolizumab for MSI-H/dMMR Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 5",
+    "brief_summary": "Clinical trial 5 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+    "eligibility_criteria": "Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease. Exclusion: Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100004\nTitle: Pembrolizumab for MSI-H/dMMR Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 5\n\nInclusion: Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease\nExclusion: Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+    "_metadata": {
+      "condition_key": "MSI_HIGH_MCRC",
+      "molecular_markers": [],
+      "prior_lines": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "MSI-H",
+        "dMMR"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100005",
+    "title": "Cetuximab Plus Chemotherapy for EGFR Wild-Type Left-Sided Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 3",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 6",
+    "brief_summary": "Clinical trial 6 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1",
+    "exclusion_criteria": "Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+    "eligibility_criteria": "Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1. Exclusion: Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+    "minimum_age": "18",
+    "maximum_age": "75",
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100005\nTitle: Cetuximab Plus Chemotherapy for EGFR Wild-Type Left-Sided Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 6\n\nInclusion: Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1\nExclusion: Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+    "_metadata": {
+      "condition_key": "EGFR_WILD_LEFT_FIRSTLINE",
+      "molecular_markers": [
+        "RAS Wild-Type",
+        "BRAF Wild-Type"
+      ],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100006",
+    "title": "Autophagy Modulation with Hydroxychloroquine in BRAF-Mutated Refractory Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 7",
+    "brief_summary": "Clinical trial 7 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function",
+    "exclusion_criteria": "Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+    "eligibility_criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function. Exclusion: Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100006\nTitle: Autophagy Modulation with Hydroxychloroquine in BRAF-Mutated Refractory Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 7\n\nInclusion: Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function\nExclusion: Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+    "_metadata": {
+      "condition_key": "BRAF_REFRACTORY",
+      "molecular_markers": [
+        "BRAF V600E"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100007",
+    "title": "RMC-6236 for Patients with RAS G12 Mutations in Advanced Solid Tumors",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 1/1b",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 8",
+    "brief_summary": "Clinical trial 8 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1/1b study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function",
+    "exclusion_criteria": "Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+    "eligibility_criteria": "Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function. Exclusion: Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100007\nTitle: RMC-6236 for Patients with RAS G12 Mutations in Advanced Solid Tumors\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1/1b\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 8\n\nInclusion: Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function\nExclusion: Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+    "_metadata": {
+      "condition_key": "RAS_G12_MUTANT",
+      "molecular_markers": [
+        "KRAS G12"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100008",
+    "title": "First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 3",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 9",
+    "brief_summary": "Clinical trial 9 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "eligibility_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease. Exclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100008\nTitle: First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 9\n\nInclusion: Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease\nExclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "_metadata": {
+      "condition_key": "BRAF_V600E_FIRSTLINE",
+      "molecular_markers": [
+        "BRAF V600E"
+      ],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "pMMR",
+        "MSS"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100009",
+    "title": "SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 1b/2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 10",
+    "brief_summary": "Clinical trial 10 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1b/2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1",
+    "exclusion_criteria": "Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "eligibility_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1. Exclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100009\nTitle: SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1b/2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 10\n\nInclusion: Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1\nExclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "_metadata": {
+      "condition_key": "RAS_MUTANT_REFRACTORY",
+      "molecular_markers": [
+        "KRAS Mutant",
+        "NRAS Mutant"
+      ],
+      "prior_lines": [
+        2,
+        3,
+        4
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "pMMR",
+        "MSS"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100010",
+    "title": "Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer",
+    "condition": "Early-Stage Rectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 11",
+    "brief_summary": "Clinical trial 11 for Early-Stage Rectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Early-Stage Rectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1",
+    "exclusion_criteria": "History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "eligibility_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1. Exclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "minimum_age": "18",
+    "maximum_age": "80",
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100010\nTitle: Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer\nCondition: Early-Stage Rectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 11\n\nInclusion: Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1\nExclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "_metadata": {
+      "condition_key": "EARLY_STAGE_RECTAL",
+      "molecular_markers": [],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Early/Localized",
+        "cT2N0M0"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100011",
+    "title": "Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 12",
+    "brief_summary": "Clinical trial 12 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "eligibility_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease. Exclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100011\nTitle: Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 12\n\nInclusion: Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease\nExclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "_metadata": {
+      "condition_key": "HER2_POSITIVE_MCRC",
+      "molecular_markers": [
+        "HER2 Positive"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100012",
+    "title": "Pembrolizumab for MSI-H/dMMR Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 13",
+    "brief_summary": "Clinical trial 13 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+    "eligibility_criteria": "Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease. Exclusion: Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100012\nTitle: Pembrolizumab for MSI-H/dMMR Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 13\n\nInclusion: Histologically confirmed mCRC with MSI-H or dMMR status; Any number of prior lines; ECOG PS 0-1; Measurable disease\nExclusion: Prior PD-1/PD-L1 inhibitor; Active autoimmune disease; Organ transplant",
+    "_metadata": {
+      "condition_key": "MSI_HIGH_MCRC",
+      "molecular_markers": [],
+      "prior_lines": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "MSI-H",
+        "dMMR"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100013",
+    "title": "Cetuximab Plus Chemotherapy for EGFR Wild-Type Left-Sided Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 3",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 14",
+    "brief_summary": "Clinical trial 14 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1",
+    "exclusion_criteria": "Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+    "eligibility_criteria": "Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1. Exclusion: Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+    "minimum_age": "18",
+    "maximum_age": "75",
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100013\nTitle: Cetuximab Plus Chemotherapy for EGFR Wild-Type Left-Sided Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 14\n\nInclusion: Left-sided mCRC (splenic flexure to rectum); RAS/BRAF wild-type; 0 prior lines for metastatic disease; ECOG PS 0-1\nExclusion: Right-sided colon cancer; Prior anti-EGFR therapy; Symptomatic brain metastases",
+    "_metadata": {
+      "condition_key": "EGFR_WILD_LEFT_FIRSTLINE",
+      "molecular_markers": [
+        "RAS Wild-Type",
+        "BRAF Wild-Type"
+      ],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100014",
+    "title": "Autophagy Modulation with Hydroxychloroquine in BRAF-Mutated Refractory Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 15",
+    "brief_summary": "Clinical trial 15 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function",
+    "exclusion_criteria": "Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+    "eligibility_criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function. Exclusion: Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100014\nTitle: Autophagy Modulation with Hydroxychloroquine in BRAF-Mutated Refractory Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 15\n\nInclusion: Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function\nExclusion: Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+    "_metadata": {
+      "condition_key": "BRAF_REFRACTORY",
+      "molecular_markers": [
+        "BRAF V600E"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100015",
+    "title": "RMC-6236 for Patients with RAS G12 Mutations in Advanced Solid Tumors",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 1/1b",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 16",
+    "brief_summary": "Clinical trial 16 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1/1b study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function",
+    "exclusion_criteria": "Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+    "eligibility_criteria": "Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function. Exclusion: Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100015\nTitle: RMC-6236 for Patients with RAS G12 Mutations in Advanced Solid Tumors\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1/1b\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 16\n\nInclusion: Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function\nExclusion: Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+    "_metadata": {
+      "condition_key": "RAS_G12_MUTANT",
+      "molecular_markers": [
+        "KRAS G12"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100016",
+    "title": "First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 3",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 17",
+    "brief_summary": "Clinical trial 17 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "eligibility_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease. Exclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100016\nTitle: First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 17\n\nInclusion: Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease\nExclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+    "_metadata": {
+      "condition_key": "BRAF_V600E_FIRSTLINE",
+      "molecular_markers": [
+        "BRAF V600E"
+      ],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "pMMR",
+        "MSS"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100017",
+    "title": "SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 1b/2",
+    "status": "Active, not recruiting",
+    "investigator": "Dr. Test Investigator 18",
+    "brief_summary": "Clinical trial 18 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1b/2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1",
+    "exclusion_criteria": "Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "eligibility_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1. Exclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100017\nTitle: SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1b/2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 18\n\nInclusion: Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1\nExclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+    "_metadata": {
+      "condition_key": "RAS_MUTANT_REFRACTORY",
+      "molecular_markers": [
+        "KRAS Mutant",
+        "NRAS Mutant"
+      ],
+      "prior_lines": [
+        2,
+        3,
+        4
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": [
+        "pMMR",
+        "MSS"
+      ]
+    }
+  },
+  {
+    "trial_id": "NCT00100018",
+    "title": "Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer",
+    "condition": "Early-Stage Rectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 19",
+    "brief_summary": "Clinical trial 19 for Early-Stage Rectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Early-Stage Rectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1",
+    "exclusion_criteria": "History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "eligibility_criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1. Exclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "minimum_age": "18",
+    "maximum_age": "80",
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100018\nTitle: Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer\nCondition: Early-Stage Rectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 19\n\nInclusion: Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage); M0 stage (no evidence of metastatic disease); ECOG PS 0-1\nExclusion: History of other malignancy; Synchronous cancer; Prior treatment for rectal cancer",
+    "_metadata": {
+      "condition_key": "EARLY_STAGE_RECTAL",
+      "molecular_markers": [],
+      "prior_lines": [
+        0
+      ],
+      "disease_stage": [
+        "Early/Localized",
+        "cT2N0M0"
+      ],
+      "msi_status": []
+    }
+  },
+  {
+    "trial_id": "NCT00100019",
+    "title": "Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer",
+    "condition": "Metastatic Colorectal Adenocarcinoma",
+    "phase": "Phase 2",
+    "status": "Recruiting",
+    "investigator": "Dr. Test Investigator 20",
+    "brief_summary": "Clinical trial 20 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+    "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+    "inclusion_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease",
+    "exclusion_criteria": "Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "eligibility_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease. Exclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "minimum_age": "18",
+    "maximum_age": null,
+    "sex": "All",
+    "combined_trial_text": "Trial ID: NCT00100019\nTitle: Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 20\n\nInclusion: Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease\nExclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+    "_metadata": {
+      "condition_key": "HER2_POSITIVE_MCRC",
+      "molecular_markers": [
+        "HER2 Positive"
+      ],
+      "prior_lines": [
+        1,
+        2,
+        3
+      ],
+      "disease_stage": [
+        "Stage IV"
+      ],
+      "msi_status": []
+    }
+  }
+]

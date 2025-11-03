@@ -1,0 +1,23 @@
+{
+  "dataset_info": {
+    "total_files": 3,
+    "converted_at": "2025-11-02T11:22:48.043613",
+    "files": [
+      {
+        "filename": "First give me a Excel of those patients. First gi....json",
+        "rows": 3,
+        "file_size_kb": 1.73
+      },
+      {
+        "filename": "matched golden dataset.json",
+        "rows": 3,
+        "file_size_kb": 0.26
+      },
+      {
+        "filename": "NCT04607421 NCT05576896 NCT04599140 NCT05379985 N....json",
+        "rows": 5,
+        "file_size_kb": 5.04
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "trial_id": "NCT00100000",
+  "title": "First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 3",
+  "status": "Active, not recruiting",
+  "investigator": "Dr. Test Investigator 1",
+  "brief_summary": "Clinical trial 1 for Metastatic Colorectal Adenocarcinoma. This is a Phase 3 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease",
+  "exclusion_criteria": "Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+  "eligibility_criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease. Exclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+  "minimum_age": "18",
+  "maximum_age": null,
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100000\nTitle: First-Line Encorafenib Plus Cetuximab for Metastatic BRAF V600E-Mutant Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 3\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 1\n\nInclusion: Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in metastatic setting; ECOG PS 0-1; Measurable disease\nExclusion: Locally confirmed or unknown MSI-H or dMMR; Symptomatic brain metastases; Active bacterial or viral infections",
+  "_metadata": {
+    "condition_key": "BRAF_V600E_FIRSTLINE",
+    "molecular_markers": [
+      "BRAF V600E"
+    ],
+    "prior_lines": [
+      0
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": [
+      "pMMR",
+      "MSS"
+    ]
+  }
+}

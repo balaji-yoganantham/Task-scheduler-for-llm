@@ -1,0 +1,52 @@
+[
+  {
+    "NCT ID": "NCT04607421",
+    "Official Title": "An Open-Label, Multicenter, Randomized Phase 3 Study of First-Line Encorafenib Plus Cetuximab With or Without Chemotherapy Versus Standard of Care Therapy... in Participants With Metastatic BRAF V600E-Mutant Colorectal Cancer",
+    "Overall Status": "Active, not recruiting",
+    "Intervention (Primary Agents)": "Drug: Encorafenib, Drug: Cetuximab, Drug: Chemotherapy (mFOLFOX6 or FOLFIRI)",
+    "Detailed Study Type": "Interventional (Clinical Trial) Phase 3",
+    "Minimum Age": "18 Years",
+    "Summary of Key Inclusion Criteria": "Metastatic Colorectal Cancer (mCRC); Locally confirmed BRAF V600E-mutant; Previously untreated (0 prior regimens) in the metastatic setting (Safety Lead-in allows 0-1); ECOG PS 0-1; Measurable disease.",
+    "Summary of Key Exclusion Criteria": "Locally confirmed or unknown MSI-H or dMMR (unless ineligible for ICIs); Symptomatic brain metastases; Active bacterial or viral infections within 2 weeks prior to dosing."
+  },
+  {
+    "NCT ID": "NCT05576896",
+    "Official Title": "A Single-Arm, Phase II Study of Autophagy Modulation Using Hydroxychloroquine in Combination With Encorafenib and Cetuximab or Panitumumab in Metastatic BRAF-mutated Colorectal Cancer Refractory to Standard Therapies",
+    "Overall Status": "Active, not recruiting",
+    "Intervention (Primary Agents)": "Drug: Hydroxychloroquine, Drug: Encorafenib, Drug: Cetuximab or Panitumumab",
+    "Detailed Study Type": "Interventional (Clinical Trial) Phase 2",
+    "Minimum Age": "18 Years",
+    "Summary of Key Inclusion Criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line of therapy (refractory); ECOG PS 0-1; Adequate organ and bone marrow function.",
+    "Summary of Key Exclusion Criteria": "Prior chemotherapy or radiotherapy ≤14 days prior to study start; Symptomatic or untreated/unstable leptomeningeal disease or spinal cord compression; History of acute MI or coronary syndromes within 6 months; Current risk factors for Retinal Vein Occlusion (RVO) or severe eye disease."
+  },
+  {
+    "NCT ID": "NCT04599140",
+    "Official Title": "SX-682 and Nivolumab for the Treatment of RAS-Mutated, MSS Unresectable or Metastatic Colorectal Cancer, the STOPTRAFFIC-1 Trial",
+    "Overall Status": "Active, not recruiting",
+    "Intervention (Primary Agents)": "Drug: SX-682, Drug: Nivolumab",
+    "Detailed Study Type": "Interventional (Clinical Trial) Phase 1b/2",
+    "Minimum Age": "18 Years",
+    "Summary of Key Inclusion Criteria": "Histologically confirmed adenocarcinoma of the colon or rectum that is metastatic or unresectable; Tumor is RAS-mutated (KRAS or NRAS) and microsatellite stable (MSS) / proficient in mismatch repair (pMMR); Received at least two prior regimens of therapy for unresectable or metastatic CRC; ECOG PS 0-1; Measurable disease (RECIST v1.1).",
+    "Summary of Key Exclusion Criteria": "Major surgery within 4 weeks; Prior treatment with an IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases, or those requiring corticosteroids."
+  },
+  {
+    "NCT ID": "NCT05379985",
+    "Official Title": "Study of RMC-6236 in Patients With Advanced Solid Tumors Harboring Specific Mutations in RAS",
+    "Overall Status": "Recruiting",
+    "Intervention (Primary Agents)": "Drug: RMC-6236 (RAS-MULTI(ON) Inhibitor)",
+    "Detailed Study Type": "Interventional (Clinical Trial) Phase 1/1b",
+    "Minimum Age": "18 Years",
+    "Summary of Key Inclusion Criteria": "Histologically confirmed advanced solid tumor (including Colorectal Cancer) with specific KRAS G12 mutations (dose escalation) or RAS mutations (dose optimization/expansion); Received prior standard therapy appropriate for tumor type and stage; ECOG PS 0-1; Adequate organ function.",
+    "Summary of Key Exclusion Criteria": "Active or untreated brain metastases that are symptomatic or require corticosteroids; History of non-infectious pneumonitis or interstitial lung disease (ILD); Prior treatment with a RAS-MULTI(ON) inhibitor (e.g., RMC-6236)."
+  },
+  {
+    "NCT ID": "NCT03259035",
+    "Official Title": "NEO: Neoadjuvant Chemotherapy, Excision and Observation for Early Rectal Cancer (The NEO Trial)",
+    "Overall Status": "Completed",
+    "Intervention (Primary Agents)": "Drug: Chemotherapy (FOLFOX or CAPOX), Procedure: Transanal Excision Surgery (TES), Other: Observation",
+    "Detailed Study Type": "Interventional (Clinical Trial) Phase 2",
+    "Minimum Age": "18 Years",
+    "Summary of Key Inclusion Criteria": "Histologically confirmed invasive well-moderately differentiated rectal adenocarcinoma; Tumor stage cT1-T3abN0 (early-stage) based on pelvic MRI; M0 stage (no evidence of metastatic disease); Mid- to low-lying tumor eligible for local tumor excision; ECOG PS 0-1.",
+    "Summary of Key Exclusion Criteria": "History of other malignancy (unless adequately treated non-melanoma skin cancer or curatively treated in-situ cancer ≥5 years ago); Synchronous cancer; Prior treatment for rectal cancer; Previous pelvic radiation for any reason."
+  }
+]

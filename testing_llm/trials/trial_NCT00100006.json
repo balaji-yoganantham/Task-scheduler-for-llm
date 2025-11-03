@@ -1,0 +1,32 @@
+{
+  "trial_id": "NCT00100006",
+  "title": "Autophagy Modulation with Hydroxychloroquine in BRAF-Mutated Refractory Colorectal Cancer",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 2",
+  "status": "Active, not recruiting",
+  "investigator": "Dr. Test Investigator 7",
+  "brief_summary": "Clinical trial 7 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function",
+  "exclusion_criteria": "Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+  "eligibility_criteria": "Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function. Exclusion: Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+  "minimum_age": "18",
+  "maximum_age": null,
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100006\nTitle: Autophagy Modulation with Hydroxychloroquine in BRAF-Mutated Refractory Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 7\n\nInclusion: Metastatic BRAF V600E-mutated Colorectal Cancer; Progression on at least 1 prior line (refractory); ECOG PS 0-1; Adequate organ function\nExclusion: Prior chemotherapy ≤14 days; Symptomatic leptomeningeal disease; Recent MI or coronary syndromes",
+  "_metadata": {
+    "condition_key": "BRAF_REFRACTORY",
+    "molecular_markers": [
+      "BRAF V600E"
+    ],
+    "prior_lines": [
+      1,
+      2,
+      3
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": []
+  }
+}

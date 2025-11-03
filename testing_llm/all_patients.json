@@ -1,0 +1,402 @@
+[
+  {
+    "patient_id": 1,
+    "mrn": "1001000",
+    "age": 66,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1001000\nAge: 66, Gender: Female\nDate of Visit: 2025-10-12\nOncologist: Dr. Test Oncologist 1\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: V600E Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with V600E Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 1",
+    "date_of_visit": "2025-10-20",
+    "created_at": "2025-11-02T11:31:32.845256",
+    "_metadata": {
+      "matched_trial_id": "NCT00100000",
+      "disease_stage": "Stage IV",
+      "braf_status": "V600E Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 2,
+    "mrn": "1002000",
+    "age": 57,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1002000\nAge: 57, Gender: Male\nDate of Visit: 2025-10-15\nOncologist: Dr. Test Oncologist 2\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Mutant, NRAS: Mutant. MSI/MMR Status: pMMR/MSS. Previously treated with 4 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Mutant KRAS, Mutant NRAS status. pMMR/MSS molecular profile. 4 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 2",
+    "date_of_visit": "2025-10-17",
+    "created_at": "2025-11-02T11:31:32.846274",
+    "_metadata": {
+      "matched_trial_id": "NCT00100001",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Mutant",
+      "nras_status": "Mutant",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 4,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 3,
+    "mrn": "1003000",
+    "age": 19,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1003000\nAge: 19, Gender: Female\nDate of Visit: 2025-10-06\nOncologist: Dr. Test Oncologist 3\n\nChief Complaint: Early-Stage Rectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Early/Localized early-stage rectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Early/Localized disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Early/Localized Early-Stage Rectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 3",
+    "date_of_visit": "2025-10-09",
+    "created_at": "2025-11-02T11:31:32.846274",
+    "_metadata": {
+      "matched_trial_id": "NCT00100002",
+      "disease_stage": "Early/Localized",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 4,
+    "mrn": "1004000",
+    "age": 63,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1004000\nAge: 63, Gender: Female\nDate of Visit: 2025-10-30\nOncologist: Dr. Test Oncologist 4\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 2 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 2 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 4",
+    "date_of_visit": "2025-10-04",
+    "created_at": "2025-11-02T11:31:32.847268",
+    "_metadata": {
+      "matched_trial_id": "NCT00100003",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 2,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 5,
+    "mrn": "1005000",
+    "age": 25,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1005000\nAge: 25, Gender: Female\nDate of Visit: 2025-10-25\nOncologist: Dr. Test Oncologist 5\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: MSI-H/dMMR. Previously treated with 3 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. MSI-H/dMMR molecular profile. 3 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 5",
+    "date_of_visit": "2025-11-01",
+    "created_at": "2025-11-02T11:31:32.847268",
+    "_metadata": {
+      "matched_trial_id": "NCT00100004",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "MSI-H/dMMR",
+      "prior_lines": 3,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 6,
+    "mrn": "1006000",
+    "age": 20,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1006000\nAge: 20, Gender: Female\nDate of Visit: 2025-10-31\nOncologist: Dr. Test Oncologist 6\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 6",
+    "date_of_visit": "2025-10-18",
+    "created_at": "2025-11-02T11:31:32.847268",
+    "_metadata": {
+      "matched_trial_id": "NCT00100005",
+      "disease_stage": "Stage IV",
+      "braf_status": "Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 7,
+    "mrn": "1007000",
+    "age": 50,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1007000\nAge: 50, Gender: Female\nDate of Visit: 2025-10-11\nOncologist: Dr. Test Oncologist 7\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: V600E Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 1 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with V600E Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 1 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 7",
+    "date_of_visit": "2025-10-10",
+    "created_at": "2025-11-02T11:31:32.847268",
+    "_metadata": {
+      "matched_trial_id": "NCT00100006",
+      "disease_stage": "Stage IV",
+      "braf_status": "V600E Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 1,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 8,
+    "mrn": "1008000",
+    "age": 54,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1008000\nAge: 54, Gender: Male\nDate of Visit: 2025-10-26\nOncologist: Dr. Test Oncologist 8\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Mutant, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 3 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Mutant KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 3 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 8",
+    "date_of_visit": "2025-10-31",
+    "created_at": "2025-11-02T11:31:32.849784",
+    "_metadata": {
+      "matched_trial_id": "NCT00100007",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Mutant",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 3,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 9,
+    "mrn": "1009000",
+    "age": 28,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1009000\nAge: 28, Gender: Male\nDate of Visit: 2025-11-01\nOncologist: Dr. Test Oncologist 9\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: V600E Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with V600E Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 9",
+    "date_of_visit": "2025-10-18",
+    "created_at": "2025-11-02T11:31:32.850791",
+    "_metadata": {
+      "matched_trial_id": "NCT00100008",
+      "disease_stage": "Stage IV",
+      "braf_status": "V600E Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 10,
+    "mrn": "1010000",
+    "age": 52,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1010000\nAge: 52, Gender: Female\nDate of Visit: 2025-10-24\nOncologist: Dr. Test Oncologist 10\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Mutant, NRAS: Mutant. MSI/MMR Status: pMMR/MSS. Previously treated with 3 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Mutant KRAS, Mutant NRAS status. pMMR/MSS molecular profile. 3 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 10",
+    "date_of_visit": "2025-10-05",
+    "created_at": "2025-11-02T11:31:32.850791",
+    "_metadata": {
+      "matched_trial_id": "NCT00100009",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Mutant",
+      "nras_status": "Mutant",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 3,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 11,
+    "mrn": "1011000",
+    "age": 39,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1011000\nAge: 39, Gender: Male\nDate of Visit: 2025-10-06\nOncologist: Dr. Test Oncologist 11\n\nChief Complaint: Early-Stage Rectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with cT2N0M0 early-stage rectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows cT2N0M0 disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: cT2N0M0 Early-Stage Rectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 11",
+    "date_of_visit": "2025-10-26",
+    "created_at": "2025-11-02T11:31:32.851792",
+    "_metadata": {
+      "matched_trial_id": "NCT00100010",
+      "disease_stage": "cT2N0M0",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 12,
+    "mrn": "1012000",
+    "age": 72,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1012000\nAge: 72, Gender: Male\nDate of Visit: 2025-10-11\nOncologist: Dr. Test Oncologist 12\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 2 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 2 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 12",
+    "date_of_visit": "2025-10-14",
+    "created_at": "2025-11-02T11:31:32.851792",
+    "_metadata": {
+      "matched_trial_id": "NCT00100011",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 2,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 13,
+    "mrn": "1013000",
+    "age": 27,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1013000\nAge: 27, Gender: Female\nDate of Visit: 2025-10-23\nOncologist: Dr. Test Oncologist 13\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: MSI-H/dMMR. Previously treated with 1 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. MSI-H/dMMR molecular profile. 1 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 13",
+    "date_of_visit": "2025-10-21",
+    "created_at": "2025-11-02T11:31:32.851792",
+    "_metadata": {
+      "matched_trial_id": "NCT00100012",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "MSI-H/dMMR",
+      "prior_lines": 1,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 14,
+    "mrn": "1014000",
+    "age": 29,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1014000\nAge: 29, Gender: Female\nDate of Visit: 2025-11-01\nOncologist: Dr. Test Oncologist 14\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 14",
+    "date_of_visit": "2025-10-19",
+    "created_at": "2025-11-02T11:31:32.852790",
+    "_metadata": {
+      "matched_trial_id": "NCT00100013",
+      "disease_stage": "Stage IV",
+      "braf_status": "Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 15,
+    "mrn": "1015000",
+    "age": 67,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1015000\nAge: 67, Gender: Male\nDate of Visit: 2025-10-20\nOncologist: Dr. Test Oncologist 15\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: V600E Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 1 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with V600E Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 1 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 15",
+    "date_of_visit": "2025-10-14",
+    "created_at": "2025-11-02T11:31:32.852790",
+    "_metadata": {
+      "matched_trial_id": "NCT00100014",
+      "disease_stage": "Stage IV",
+      "braf_status": "V600E Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 1,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 16,
+    "mrn": "1016000",
+    "age": 48,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1016000\nAge: 48, Gender: Male\nDate of Visit: 2025-10-19\nOncologist: Dr. Test Oncologist 16\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Mutant, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 2 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Mutant KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 2 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 16",
+    "date_of_visit": "2025-10-09",
+    "created_at": "2025-11-02T11:31:32.852790",
+    "_metadata": {
+      "matched_trial_id": "NCT00100015",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Mutant",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 2,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 17,
+    "mrn": "1017000",
+    "age": 56,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1017000\nAge: 56, Gender: Male\nDate of Visit: 2025-10-16\nOncologist: Dr. Test Oncologist 17\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: V600E Mutant, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with V600E Mutant BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 17",
+    "date_of_visit": "2025-10-06",
+    "created_at": "2025-11-02T11:31:32.854299",
+    "_metadata": {
+      "matched_trial_id": "NCT00100016",
+      "disease_stage": "Stage IV",
+      "braf_status": "V600E Mutant",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 18,
+    "mrn": "1018000",
+    "age": 64,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1018000\nAge: 64, Gender: Male\nDate of Visit: 2025-10-24\nOncologist: Dr. Test Oncologist 18\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Mutant, NRAS: Mutant. MSI/MMR Status: pMMR/MSS. Previously treated with 2 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Mutant KRAS, Mutant NRAS status. pMMR/MSS molecular profile. 2 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 18",
+    "date_of_visit": "2025-10-17",
+    "created_at": "2025-11-02T11:31:32.854299",
+    "_metadata": {
+      "matched_trial_id": "NCT00100017",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Mutant",
+      "nras_status": "Mutant",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 2,
+      "ecog": 1
+    }
+  },
+  {
+    "patient_id": 19,
+    "mrn": "1019000",
+    "age": 79,
+    "gender": "Male",
+    "combined_text": "Patient MRN: 1019000\nAge: 79, Gender: Male\nDate of Visit: 2025-10-24\nOncologist: Dr. Test Oncologist 19\n\nChief Complaint: Early-Stage Rectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with cT2N0M0 early-stage rectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows cT2N0M0 disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: cT2N0M0 Early-Stage Rectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 19",
+    "date_of_visit": "2025-10-04",
+    "created_at": "2025-11-02T11:31:32.854299",
+    "_metadata": {
+      "matched_trial_id": "NCT00100018",
+      "disease_stage": "cT2N0M0",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 0,
+      "ecog": 0
+    }
+  },
+  {
+    "patient_id": 20,
+    "mrn": "1020000",
+    "age": 21,
+    "gender": "Female",
+    "combined_text": "Patient MRN: 1020000\nAge: 21, Gender: Female\nDate of Visit: 2025-10-18\nOncologist: Dr. Test Oncologist 20\n\nChief Complaint: Metastatic Colorectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Stage IV metastatic colorectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 2 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 0.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 0. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Stage IV disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Stage IV Metastatic Colorectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 2 prior line(s) of therapy. ECOG 0. Eligible for clinical trial consideration.",
+    "oncologist": "Dr. Test Oncologist 20",
+    "date_of_visit": "2025-10-10",
+    "created_at": "2025-11-02T11:31:32.854299",
+    "_metadata": {
+      "matched_trial_id": "NCT00100019",
+      "disease_stage": "Stage IV",
+      "braf_status": "Wild-Type",
+      "kras_status": "Wild-Type",
+      "nras_status": "Wild-Type",
+      "msi_status": "pMMR/MSS",
+      "prior_lines": 2,
+      "ecog": 0
+    }
+  }
+]

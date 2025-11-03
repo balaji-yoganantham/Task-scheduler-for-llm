@@ -1,0 +1,32 @@
+{
+  "trial_id": "NCT00100007",
+  "title": "RMC-6236 for Patients with RAS G12 Mutations in Advanced Solid Tumors",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 1/1b",
+  "status": "Recruiting",
+  "investigator": "Dr. Test Investigator 8",
+  "brief_summary": "Clinical trial 8 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1/1b study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function",
+  "exclusion_criteria": "Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+  "eligibility_criteria": "Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function. Exclusion: Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+  "minimum_age": "18",
+  "maximum_age": null,
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100007\nTitle: RMC-6236 for Patients with RAS G12 Mutations in Advanced Solid Tumors\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1/1b\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 8\n\nInclusion: Advanced solid tumor with specific KRAS G12 mutations; Received prior standard therapy; ECOG PS 0-1; Adequate organ function\nExclusion: Active or untreated brain metastases; History of pneumonitis or ILD; Prior RAS-MULTI(ON) inhibitor",
+  "_metadata": {
+    "condition_key": "RAS_G12_MUTANT",
+    "molecular_markers": [
+      "KRAS G12"
+    ],
+    "prior_lines": [
+      1,
+      2,
+      3
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": []
+  }
+}

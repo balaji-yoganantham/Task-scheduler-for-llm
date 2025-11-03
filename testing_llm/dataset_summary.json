@@ -1,0 +1,20 @@
+{
+  "dataset_info": {
+    "created_at": "2025-11-02T11:31:32.856844",
+    "total_patients": 20,
+    "total_trials": 20,
+    "total_golden_matches": 20,
+    "match_accuracy_target": "100%",
+    "description": "Test dataset for LLM evaluation. Each patient has a perfect match to one trial."
+  },
+  "directories": {
+    "patients": "testing_llm\\patients",
+    "trials": "testing_llm\\trials",
+    "root": "testing_llm"
+  },
+  "files": {
+    "all_patients": "all_patients.json",
+    "all_trials": "all_trials.json",
+    "golden_matches": "golden_matches.json"
+  }
+}

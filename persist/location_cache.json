@@ -11472,5 +11472,59 @@
     "latitude": 32.753177,
     "longitude": -97.3327459,
     "original_address": "Fort Worth, TX"
+  },
+  "houston, tx": {
+    "success": true,
+    "latitude": 29.7589382,
+    "longitude": -95.3676974,
+    "original_address": "Houston, TX"
+  },
+  "san diego, ca": {
+    "success": true,
+    "latitude": 32.7174202,
+    "longitude": -117.162772,
+    "original_address": "San Diego, CA"
+  },
+  "dallas, tx": {
+    "success": true,
+    "latitude": 32.7762719,
+    "longitude": -96.7968559,
+    "original_address": "Dallas, TX"
+  },
+  "columbus, oh": {
+    "success": true,
+    "latitude": 39.9622601,
+    "longitude": -83.0007065,
+    "original_address": "Columbus, OH"
+  },
+  "indianapolis, in": {
+    "success": true,
+    "latitude": 39.7683331,
+    "longitude": -86.1583502,
+    "original_address": "Indianapolis, IN"
+  },
+  "seattle, wa": {
+    "success": true,
+    "latitude": 47.6038321,
+    "longitude": -122.330062,
+    "original_address": "Seattle, WA"
+  },
+  "denver, co": {
+    "success": true,
+    "latitude": 39.7392364,
+    "longitude": -104.984862,
+    "original_address": "Denver, CO"
+  },
+  "washington, dc": {
+    "success": true,
+    "latitude": 38.8950368,
+    "longitude": -77.0365427,
+    "original_address": "Washington, DC"
+  },
+  "boston, ma": {
+    "success": true,
+    "latitude": 42.3554334,
+    "longitude": -71.060511,
+    "original_address": "Boston, MA"
   }
 }

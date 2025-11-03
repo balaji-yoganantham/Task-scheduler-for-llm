@@ -1,420 +1,102 @@
 {
-  "343": {
-    "mrn": "00063456",
-    "age": 47,
-    "gender": "Female",
-    "oncologist": "Dr. Rachel Turner",
-    "date_of_visit": "2025-01-10",
-    "created_at": "2025-10-29T16:43:39.629219",
-    "keywords_count": 51,
-    "keywords_text_length": 823,
+  "1": {
+    "patient_id": 1,
+    "mrn": "1001000",
     "embedding_index": 0
   },
-  "348": {
-    "mrn": "00057891",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-10-20",
-    "created_at": "2025-10-29T18:03:44.788980",
-    "keywords_count": 37,
-    "keywords_text_length": 655,
+  "2": {
+    "patient_id": 2,
+    "mrn": "1002000",
     "embedding_index": 1
   },
-  "347": {
-    "mrn": "00057891",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-10-20",
-    "created_at": "2025-10-29T18:00:40.100996",
-    "keywords_count": 37,
-    "keywords_text_length": 655,
+  "3": {
+    "patient_id": 3,
+    "mrn": "1003000",
     "embedding_index": 2
   },
-  "346": {
-    "mrn": "00057891",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-10-20",
-    "created_at": "2025-10-29T17:56:19.765136",
-    "keywords_count": 37,
-    "keywords_text_length": 655,
+  "4": {
+    "patient_id": 4,
+    "mrn": "1004000",
     "embedding_index": 3
   },
-  "345": {
-    "mrn": "00057891",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-10-20",
-    "created_at": "2025-10-29T17:36:04.546274",
-    "keywords_count": 65,
-    "keywords_text_length": 1056,
+  "5": {
+    "patient_id": 5,
+    "mrn": "1005000",
     "embedding_index": 4
   },
-  "344": {
-    "mrn": "00057891",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-10-20",
-    "created_at": "2025-10-29T17:26:32.440528",
-    "keywords_count": 55,
-    "keywords_text_length": 792,
+  "6": {
+    "patient_id": 6,
+    "mrn": "1006000",
     "embedding_index": 5
   },
-  "355": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:33:19.324477",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "7": {
+    "patient_id": 7,
+    "mrn": "1007000",
     "embedding_index": 6
   },
-  "354": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:32:47.290726",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "8": {
+    "patient_id": 8,
+    "mrn": "1008000",
     "embedding_index": 7
   },
-  "353": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:32:44.344999",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "9": {
+    "patient_id": 9,
+    "mrn": "1009000",
     "embedding_index": 8
   },
-  "352": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:32:08.973922",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "10": {
+    "patient_id": 10,
+    "mrn": "1010000",
     "embedding_index": 9
   },
-  "351": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:32:06.227904",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "11": {
+    "patient_id": 11,
+    "mrn": "1011000",
     "embedding_index": 10
   },
-  "350": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:30:36.007011",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "12": {
+    "patient_id": 12,
+    "mrn": "1012000",
     "embedding_index": 11
   },
-  "349": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:30:33.104700",
-    "keywords_count": 32,
-    "keywords_text_length": 653,
+  "13": {
+    "patient_id": 13,
+    "mrn": "1013000",
     "embedding_index": 12
   },
-  "365": {
-    "mrn": "64567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": "Dr. Matthew Clark",
-    "date_of_visit": "2025-08-20",
-    "created_at": "2025-10-30T10:41:55.452447",
-    "keywords_count": 34,
-    "keywords_text_length": 613,
+  "14": {
+    "patient_id": 14,
+    "mrn": "1014000",
     "embedding_index": 13
   },
-  "361": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": "Dr. Matthew Clark",
-    "date_of_visit": "2025-08-20",
-    "created_at": "2025-10-30T10:35:04.581842",
-    "keywords_count": 34,
-    "keywords_text_length": 613,
+  "15": {
+    "patient_id": 15,
+    "mrn": "1015000",
     "embedding_index": 14
   },
-  "360": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:34:41.774483",
-    "keywords_count": 33,
-    "keywords_text_length": 691,
+  "16": {
+    "patient_id": 16,
+    "mrn": "1016000",
     "embedding_index": 15
   },
-  "359": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:34:30.015402",
-    "keywords_count": 33,
-    "keywords_text_length": 691,
+  "17": {
+    "patient_id": 17,
+    "mrn": "1017000",
     "embedding_index": 16
   },
-  "357": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:33:49.213432",
-    "keywords_count": 33,
-    "keywords_text_length": 691,
+  "18": {
+    "patient_id": 18,
+    "mrn": "1018000",
     "embedding_index": 17
   },
-  "356": {
-    "mrn": "00064567",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-10-30T10:33:35.977744",
-    "keywords_count": 33,
-    "keywords_text_length": 691,
+  "19": {
+    "patient_id": 19,
+    "mrn": "1019000",
     "embedding_index": 18
   },
-  "364": {
-    "mrn": "345678",
-    "age": 67,
-    "gender": "Male",
-    "oncologist": "Dr. Lisa Chen",
-    "date_of_visit": "2024-10-27",
-    "created_at": "2025-10-30T05:07:09.978974",
-    "keywords_count": 32,
-    "keywords_text_length": 666,
+  "20": {
+    "patient_id": 20,
+    "mrn": "1020000",
     "embedding_index": 19
-  },
-  "363": {
-    "mrn": "789012",
-    "age": 32,
-    "gender": "Female",
-    "oncologist": "Dr. Michael Brown",
-    "date_of_visit": "2024-10-26",
-    "created_at": "2025-10-30T05:07:08.659287",
-    "keywords_count": 33,
-    "keywords_text_length": 613,
-    "embedding_index": 20
-  },
-  "362": {
-    "mrn": "123456",
-    "age": 45,
-    "gender": "Male",
-    "oncologist": "Dr. Sarah Johnson",
-    "date_of_visit": "2024-10-25",
-    "created_at": "2025-10-30T05:07:07.689459",
-    "keywords_count": 32,
-    "keywords_text_length": 639,
-    "embedding_index": 21
-  },
-  "358": {
-    "mrn": "TEST123",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": "Dr. Test",
-    "date_of_visit": "2025-08-20",
-    "created_at": "2025-10-30T05:04:07.862333",
-    "keywords_count": 33,
-    "keywords_text_length": 648,
-    "embedding_index": 22
-  },
-  "366": {
-    "mrn": "TEST999",
-    "age": 45,
-    "gender": "Male",
-    "oncologist": "Dr. Test",
-    "date_of_visit": "2024-10-30",
-    "created_at": "2025-10-30T05:17:43.910191",
-    "keywords_count": 33,
-    "keywords_text_length": 646,
-    "embedding_index": 23
-  },
-  "375": {
-    "mrn": "AUTO001",
-    "age": 40,
-    "gender": "Male",
-    "oncologist": "Dr. Auto Test",
-    "date_of_visit": "2024-01-11",
-    "created_at": "2025-10-30T06:02:21.804938",
-    "keywords_count": 35,
-    "keywords_text_length": 732,
-    "embedding_index": 24
-  },
-  "374": {
-    "mrn": "00063456",
-    "age": 47,
-    "gender": "Female",
-    "oncologist": "Dr. Rachel Turner",
-    "date_of_visit": "2025-01-10",
-    "created_at": "2025-10-30T05:54:34.399485",
-    "keywords_count": 41,
-    "keywords_text_length": 792,
-    "embedding_index": 25
-  },
-  "10": {
-    "mrn": "00072536",
-    "age": 39,
-    "gender": "Female",
-    "oncologist": "Dr. Michael Davis",
-    "date_of_visit": "2025-05-09",
-    "created_at": "2025-10-30T10:12:02.526639",
-    "keywords_count": 37,
-    "keywords_text_length": 638,
-    "embedding_index": 26
-  },
-  "9": {
-    "mrn": "00071492",
-    "age": 43,
-    "gender": "Female",
-    "oncologist": "Dr. Laura Chen",
-    "date_of_visit": "2025-02-10",
-    "created_at": "2025-10-30T10:08:16.509158",
-    "keywords_count": 35,
-    "keywords_text_length": 608,
-    "embedding_index": 27
-  },
-  "8": {
-    "mrn": "00070367",
-    "age": 36,
-    "gender": "Female",
-    "oncologist": "Dr. Angela Kim",
-    "date_of_visit": "2025-08-20",
-    "created_at": "2025-10-30T09:40:23.300518",
-    "keywords_count": 35,
-    "keywords_text_length": 591,
-    "embedding_index": 28
-  },
-  "7": {
-    "mrn": "00069248",
-    "age": 50,
-    "gender": "Female",
-    "oncologist": "Dr. James Porter",
-    "date_of_visit": "2025-09-25",
-    "created_at": "2025-10-30T09:38:41.148681",
-    "keywords_count": 35,
-    "keywords_text_length": 597,
-    "embedding_index": 29
-  },
-  "5": {
-    "mrn": "00057891",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-10-20",
-    "created_at": "2025-10-30T09:07:29.616564",
-    "keywords_count": 39,
-    "keywords_text_length": 716,
-    "embedding_index": 30
-  },
-  "4": {
-    "mrn": "00061234",
-    "age": 42,
-    "gender": "Female",
-    "oncologist": "Dr. Laura Kim",
-    "date_of_visit": "2025-08-25",
-    "created_at": "2025-10-30T09:07:28.462193",
-    "keywords_count": 35,
-    "keywords_text_length": 583,
-    "embedding_index": 31
-  },
-  "3": {
-    "mrn": "00062345",
-    "age": 38,
-    "gender": "Female",
-    "oncologist": "Dr. Kevin Harris",
-    "date_of_visit": "2025-12-09",
-    "created_at": "2025-10-30T09:04:37.889377",
-    "keywords_count": 37,
-    "keywords_text_length": 644,
-    "embedding_index": 32
-  },
-  "2": {
-    "mrn": "AUTO001",
-    "age": 40,
-    "gender": "Male",
-    "oncologist": "Dr. Auto Test",
-    "date_of_visit": "2024-01-11",
-    "created_at": "2025-10-30T06:02:21.804938",
-    "keywords_count": 35,
-    "keywords_text_length": 578,
-    "embedding_index": 33
-  },
-  "1": {
-    "mrn": "00063456",
-    "age": 47,
-    "gender": "Female",
-    "oncologist": "Dr. Rachel Turner",
-    "date_of_visit": "2025-01-10",
-    "created_at": "2025-10-30T05:54:34.399485",
-    "keywords_count": 37,
-    "keywords_text_length": 662,
-    "embedding_index": 34
-  },
-  "12": {
-    "mrn": "00075964",
-    "age": 45,
-    "gender": "Female",
-    "oncologist": "Dr. Emily Rogers",
-    "date_of_visit": "2025-09-28",
-    "created_at": "2025-10-30T10:58:10.890667",
-    "keywords_count": 33,
-    "keywords_text_length": 602,
-    "embedding_index": 35
-  },
-  "11": {
-    "mrn": "00074890",
-    "age": 52,
-    "gender": "Female",
-    "oncologist": "Dr. Karen Patel",
-    "date_of_visit": "2025-08-25",
-    "created_at": "2025-10-30T10:46:09.462758",
-    "keywords_count": 32,
-    "keywords_text_length": 572,
-    "embedding_index": 36
-  },
-  "6": {
-    "mrn": "00072536",
-    "age": 39,
-    "gender": "Female",
-    "oncologist": "Dr. Michael Davis",
-    "date_of_visit": "2025-05-09",
-    "created_at": "2025-10-30T14:09:01.810442",
-    "keywords_count": 42,
-    "keywords_text_length": 959,
-    "embedding_index": 37
   }
 }

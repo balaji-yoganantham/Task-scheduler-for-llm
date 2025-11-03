@@ -1,0 +1,15 @@
+{
+  "patient_count": 3,
+  "golden_match_count": 3,
+  "trial_count": 5,
+  "patient_ids": [
+    18228455,
+    37490902,
+    76415
+  ],
+  "golden_trials": [
+    "NCT04607421",
+    "NCT04599140",
+    "NCT03259035"
+  ]
+}

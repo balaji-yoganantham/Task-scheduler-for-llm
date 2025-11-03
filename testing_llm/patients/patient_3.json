@@ -1,0 +1,20 @@
+{
+  "patient_id": 3,
+  "mrn": "1003000",
+  "age": 19,
+  "gender": "Female",
+  "combined_text": "Patient MRN: 1003000\nAge: 19, Gender: Female\nDate of Visit: 2025-10-06\nOncologist: Dr. Test Oncologist 3\n\nChief Complaint: Early-Stage Rectal Adenocarcinoma, seeking clinical trial participation\n\nHistory of Present Illness: Patient diagnosed with Early/Localized early-stage rectal adenocarcinoma. Molecular testing shows BRAF: Wild-Type, KRAS: Wild-Type, NRAS: Wild-Type. MSI/MMR Status: pMMR/MSS. Previously treated with 0 prior line(s) of therapy for metastatic disease.\n\nPast Medical History: No significant comorbidities. Performance status ECOG 1.\n\nFamily History: Maternal grandmother with colorectal cancer at age 65.\n\nSocial History: Non-smoker, occasional alcohol use.\n\nReview of Systems: Fatigue, occasional abdominal discomfort. No fever, chills, or weight loss.\n\nMedications and Allergies: Current medications include supportive care. No known drug allergies.\n\nPhysical Examination: Vital signs stable. ECOG performance status 1. Abdominal examination reveals mild tenderness. No signs of organ dysfunction.\n\nLaboratory and Imaging Results: Complete blood count within normal limits. Liver and kidney function tests adequate. Recent CT scan shows Early/Localized disease with measurable lesions.\n\nImaging: CT chest/abdomen/pelvis demonstrates metastatic disease. MRI brain shows no evidence of brain metastases.\n\nAssessment: Early/Localized Early-Stage Rectal Adenocarcinoma with Wild-Type BRAF, Wild-Type KRAS, Wild-Type NRAS status. pMMR/MSS molecular profile. 0 prior line(s) of therapy. ECOG 1. Eligible for clinical trial consideration.",
+  "oncologist": "Dr. Test Oncologist 3",
+  "date_of_visit": "2025-10-09",
+  "created_at": "2025-11-02T11:31:32.846274",
+  "_metadata": {
+    "matched_trial_id": "NCT00100002",
+    "disease_stage": "Early/Localized",
+    "braf_status": "Wild-Type",
+    "kras_status": "Wild-Type",
+    "nras_status": "Wild-Type",
+    "msi_status": "pMMR/MSS",
+    "prior_lines": 0,
+    "ecog": 1
+  }
+}

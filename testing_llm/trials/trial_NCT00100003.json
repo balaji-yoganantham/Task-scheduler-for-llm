@@ -1,0 +1,32 @@
+{
+  "trial_id": "NCT00100003",
+  "title": "Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 2",
+  "status": "Recruiting",
+  "investigator": "Dr. Test Investigator 4",
+  "brief_summary": "Clinical trial 4 for Metastatic Colorectal Adenocarcinoma. This is a Phase 2 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease",
+  "exclusion_criteria": "Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+  "eligibility_criteria": "Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease. Exclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+  "minimum_age": "18",
+  "maximum_age": null,
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100003\nTitle: Trastuzumab and Pertuzumab for HER2-Positive Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 2\nStatus: Recruiting\nInvestigator: Dr. Test Investigator 4\n\nInclusion: Histologically confirmed mCRC with HER2 overexpression (IHC 3+ or IHC 2+ with FISH+); At least one prior line of therapy; ECOG PS 0-1; Measurable disease\nExclusion: Prior HER2-targeted therapy; Symptomatic brain metastases; Severe cardiac dysfunction",
+  "_metadata": {
+    "condition_key": "HER2_POSITIVE_MCRC",
+    "molecular_markers": [
+      "HER2 Positive"
+    ],
+    "prior_lines": [
+      1,
+      2,
+      3
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": []
+  }
+}

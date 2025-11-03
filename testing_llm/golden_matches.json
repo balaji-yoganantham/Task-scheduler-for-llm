@@ -1,0 +1,142 @@
+[
+  {
+    "patient_id": 1,
+    "patient_mrn": "1001000",
+    "matched_trial_id": "NCT00100000",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100000 inclusion criteria"
+  },
+  {
+    "patient_id": 2,
+    "patient_mrn": "1002000",
+    "matched_trial_id": "NCT00100001",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100001 inclusion criteria"
+  },
+  {
+    "patient_id": 3,
+    "patient_mrn": "1003000",
+    "matched_trial_id": "NCT00100002",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100002 inclusion criteria"
+  },
+  {
+    "patient_id": 4,
+    "patient_mrn": "1004000",
+    "matched_trial_id": "NCT00100003",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100003 inclusion criteria"
+  },
+  {
+    "patient_id": 5,
+    "patient_mrn": "1005000",
+    "matched_trial_id": "NCT00100004",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100004 inclusion criteria"
+  },
+  {
+    "patient_id": 6,
+    "patient_mrn": "1006000",
+    "matched_trial_id": "NCT00100005",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100005 inclusion criteria"
+  },
+  {
+    "patient_id": 7,
+    "patient_mrn": "1007000",
+    "matched_trial_id": "NCT00100006",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100006 inclusion criteria"
+  },
+  {
+    "patient_id": 8,
+    "patient_mrn": "1008000",
+    "matched_trial_id": "NCT00100007",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100007 inclusion criteria"
+  },
+  {
+    "patient_id": 9,
+    "patient_mrn": "1009000",
+    "matched_trial_id": "NCT00100008",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100008 inclusion criteria"
+  },
+  {
+    "patient_id": 10,
+    "patient_mrn": "1010000",
+    "matched_trial_id": "NCT00100009",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100009 inclusion criteria"
+  },
+  {
+    "patient_id": 11,
+    "patient_mrn": "1011000",
+    "matched_trial_id": "NCT00100010",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100010 inclusion criteria"
+  },
+  {
+    "patient_id": 12,
+    "patient_mrn": "1012000",
+    "matched_trial_id": "NCT00100011",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100011 inclusion criteria"
+  },
+  {
+    "patient_id": 13,
+    "patient_mrn": "1013000",
+    "matched_trial_id": "NCT00100012",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100012 inclusion criteria"
+  },
+  {
+    "patient_id": 14,
+    "patient_mrn": "1014000",
+    "matched_trial_id": "NCT00100013",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100013 inclusion criteria"
+  },
+  {
+    "patient_id": 15,
+    "patient_mrn": "1015000",
+    "matched_trial_id": "NCT00100014",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100014 inclusion criteria"
+  },
+  {
+    "patient_id": 16,
+    "patient_mrn": "1016000",
+    "matched_trial_id": "NCT00100015",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100015 inclusion criteria"
+  },
+  {
+    "patient_id": 17,
+    "patient_mrn": "1017000",
+    "matched_trial_id": "NCT00100016",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100016 inclusion criteria"
+  },
+  {
+    "patient_id": 18,
+    "patient_mrn": "1018000",
+    "matched_trial_id": "NCT00100017",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100017 inclusion criteria"
+  },
+  {
+    "patient_id": 19,
+    "patient_mrn": "1019000",
+    "matched_trial_id": "NCT00100018",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100018 inclusion criteria"
+  },
+  {
+    "patient_id": 20,
+    "patient_mrn": "1020000",
+    "matched_trial_id": "NCT00100019",
+    "match_confidence": 100.0,
+    "match_reason": "Perfect match: Patient characteristics align perfectly with trial NCT00100019 inclusion criteria"
+  }
+]

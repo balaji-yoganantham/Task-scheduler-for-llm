@@ -1,0 +1,70 @@
+{
+  "source_file": "First give me a Excel of those patients. First gi....xlsx",
+  "rows": 3,
+  "columns": [
+    "ID",
+    "MRN",
+    "Age",
+    "Gender",
+    "Diagnosis (Assessment)",
+    "Disease Stage",
+    "KRAS Status",
+    "NRAS Status",
+    "BRAF Status",
+    "MSI/MMR Status",
+    "Prior Lines of Metastatic Therapy",
+    "Performance Status (ECOG)",
+    "Brain Metastasis Status",
+    "Organ Function Adequacy"
+  ],
+  "data_preview": [
+    {
+      "ID": "Robert Williams",
+      "MRN": 18228455,
+      "Age": 21,
+      "Gender": "Male",
+      "Diagnosis (Assessment)": "Metastatic Colorectal Adenocarcinoma (mCRC)",
+      "Disease Stage": "Stage IV",
+      "KRAS Status": "Wild-Type",
+      "NRAS Status": "Wild-Type",
+      "BRAF Status": "V600E Mutant",
+      "MSI/MMR Status": "pMMR/MSS",
+      "Prior Lines of Metastatic Therapy": "0 (Adjuvant > 6 months ago)",
+      "Performance Status (ECOG)": 0,
+      "Brain Metastasis Status": NaN,
+      "Organ Function Adequacy": "Adequate (Meets criteria)"
+    },
+    {
+      "ID": "Patricia Brown",
+      "MRN": 37490902,
+      "Age": 20,
+      "Gender": "Female",
+      "Diagnosis (Assessment)": "Stage IV Rectal Adenocarcinoma (mCRC)",
+      "Disease Stage": "Stage IV",
+      "KRAS Status": "Mutant",
+      "NRAS Status": "Mutant",
+      "BRAF Status": "Wild-Type",
+      "MSI/MMR Status": "pMMR/MSS",
+      "Prior Lines of Metastatic Therapy": 2,
+      "Performance Status (ECOG)": 1,
+      "Brain Metastasis Status": "Treated (SRS, 4 wks ago), Stable, No Steroids",
+      "Organ Function Adequacy": "Adequate (Meets criteria)"
+    },
+    {
+      "ID": "Nancy Thompson",
+      "MRN": 76415,
+      "Age": 40,
+      "Gender": "Female",
+      "Diagnosis (Assessment)": "Early-Stage Rectal Adenocarcinoma",
+      "Disease Stage": "cT2N0M0 (Early/Localized)",
+      "KRAS Status": "Not Applicable (Localized Trial)",
+      "NRAS Status": "Not Applicable (Localized Trial)",
+      "BRAF Status": "Not Applicable (Localized Trial)",
+      "MSI/MMR Status": "pMMR (Assumed)",
+      "Prior Lines of Metastatic Therapy": "0 (Required for Neoadjuvant)",
+      "Performance Status (ECOG)": 0,
+      "Brain Metastasis Status": "None (M0 required)",
+      "Organ Function Adequacy": "Adequate (Meets criteria)"
+    }
+  ]
+}

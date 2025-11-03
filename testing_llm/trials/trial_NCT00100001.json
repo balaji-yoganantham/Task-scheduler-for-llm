@@ -1,0 +1,36 @@
+{
+  "trial_id": "NCT00100001",
+  "title": "SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer",
+  "condition": "Metastatic Colorectal Adenocarcinoma",
+  "phase": "Phase 1b/2",
+  "status": "Active, not recruiting",
+  "investigator": "Dr. Test Investigator 2",
+  "brief_summary": "Clinical trial 2 for Metastatic Colorectal Adenocarcinoma. This is a Phase 1b/2 study.",
+  "detailed_description": "This clinical trial evaluates the efficacy and safety of investigational therapy for Metastatic Colorectal Adenocarcinoma. Participants will be assessed for response, progression-free survival, and overall survival.",
+  "inclusion_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1",
+  "exclusion_criteria": "Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+  "eligibility_criteria": "Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1. Exclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+  "minimum_age": "18",
+  "maximum_age": null,
+  "sex": "All",
+  "combined_trial_text": "Trial ID: NCT00100001\nTitle: SX-682 and Nivolumab for RAS-Mutated MSS Metastatic Colorectal Cancer\nCondition: Metastatic Colorectal Adenocarcinoma\nPhase: Phase 1b/2\nStatus: Active, not recruiting\nInvestigator: Dr. Test Investigator 2\n\nInclusion: Histologically confirmed adenocarcinoma of colon or rectum that is metastatic; Tumor is RAS-mutated (KRAS or NRAS) and MSS/pMMR; Received at least two prior regimens; ECOG PS 0-1\nExclusion: Major surgery within 4 weeks; Prior treatment with IDO inhibitor or PD-1/PD-L1/CTLA-4 inhibitor; Untreated or symptomatic brain metastases",
+  "_metadata": {
+    "condition_key": "RAS_MUTANT_REFRACTORY",
+    "molecular_markers": [
+      "KRAS Mutant",
+      "NRAS Mutant"
+    ],
+    "prior_lines": [
+      2,
+      3,
+      4
+    ],
+    "disease_stage": [
+      "Stage IV"
+    ],
+    "msi_status": [
+      "pMMR",
+      "MSS"
+    ]
+  }
+}
