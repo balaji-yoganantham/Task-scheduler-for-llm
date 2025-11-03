@@ -11,6 +11,7 @@ from typing import List, Dict, Any, Tuple, Optional
 from services.shared.database_utils import DatabaseUtils
 from services.shared.embedding_utils import EmbeddingUtils
 from services.shared.location_utils import LocationUtils
+from services.trial_to_patient.trial_embedding import TrialEmbeddingGenerator
 from rank_bm25 import BM25Okapi
 from config import LOCATION_ENABLED, MAX_DEFAULT_DISTANCE_KM, LOCATION_WEIGHT
 import re
@@ -20,6 +21,7 @@ class PatientMatcher:
         self.db_utils = DatabaseUtils()
         self.embedding_utils = EmbeddingUtils()
         self.location_utils = LocationUtils() if LOCATION_ENABLED else None
+        self.trial_embedding_generator = TrialEmbeddingGenerator()
         
         # Load existing embeddings and indices
         self.trial_index = None
@@ -29,26 +31,56 @@ class PatientMatcher:
         
         self.load_trial_data()
 
+    def _check_trial_embeddings_exist(self) -> bool:
+        """Check if trial embeddings and FAISS index exist"""
+        trial_faiss_file = self.embedding_utils.trials_dir / "faiss_index.pkl"
+        trial_metadata_file = self.embedding_utils.trials_dir / "metadata.json"
+        return trial_faiss_file.exists() and trial_metadata_file.exists()
+
+    def _ensure_trial_embeddings(self):
+        """Ensure trial embeddings exist, create them if missing"""
+        if not self._check_trial_embeddings_exist():
+            print("⚠️  Trial embeddings not found. Generating trial embeddings...")
+            try:
+                # Generate trial embeddings using TrialEmbeddingGenerator
+                result = self.trial_embedding_generator.run_trial_embedding_generation()
+                if result and result.get('status') != 'all_existing':
+                    print("✅ Trial embeddings generated successfully")
+                else:
+                    print("✅ Trial embeddings already exist")
+            except Exception as e:
+                print(f"❌ Error generating trial embeddings: {e}")
+                raise
+
     def load_trial_data(self):
-        """Load trial embeddings and metadata"""
+        """Load trial embeddings and metadata, create if missing"""
         try:
+            # Ensure embeddings exist before loading
+            self._ensure_trial_embeddings()
+            
             # Load trial FAISS index
             trial_faiss_file = self.embedding_utils.trials_dir / "faiss_index.pkl"
             if trial_faiss_file.exists():
                 self.trial_index = self.embedding_utils.load_faiss_index(trial_faiss_file)
-                print(f"Loaded trial FAISS index with {self.trial_index.ntotal} vectors")
+                print(f"✅ Loaded trial FAISS index with {self.trial_index.ntotal} vectors")
+            else:
+                print("⚠️  Warning: FAISS index file not found after generation attempt")
             
             # Load trial metadata
             trial_metadata_file = self.embedding_utils.trials_dir / "metadata.json"
             if trial_metadata_file.exists():
                 self.trial_metadata = self.embedding_utils.load_metadata(trial_metadata_file)
-                print(f"Loaded metadata for {len(self.trial_metadata)} trials")
+                print(f"✅ Loaded metadata for {len(self.trial_metadata)} trials")
+            else:
+                print("⚠️  Warning: Metadata file not found after generation attempt")
             
             # Load trial texts for BM25
             self.load_trial_texts()
             
         except Exception as e:
-            print(f"Error loading trial data: {e}")
+            print(f"❌ Error loading trial data: {e}")
+            import traceback
+            traceback.print_exc()
 
     def load_trial_texts(self):
         """Load trial texts for BM25 indexing"""

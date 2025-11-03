@@ -11472,5 +11472,17 @@
     "latitude": 32.753177,
     "longitude": -97.3327459,
     "original_address": "Fort Worth, TX"
+  },
+  "napa, california, united states": {
+    "success": true,
+    "latitude": 38.4898675,
+    "longitude": -122.3218414,
+    "original_address": "Napa, California, United States"
+  },
+  "salinas, california, united states": {
+    "success": true,
+    "latitude": 36.6744117,
+    "longitude": -121.655037,
+    "original_address": "Salinas, California, United States"
   }
 }
