@@ -50,7 +50,8 @@ class TrialMatcher:
     def load_patient_texts(self):
         """Load patient texts for BM25 indexing"""
         try:
-            patients = self.db_utils.get_patient_data_for_keywords(1000)  # Get more patients for BM25
+            # Only get unevaluated patients (is_evaluated = 0) for BM25
+            patients = self.db_utils.get_patient_data_for_keywords(1000, include_evaluated=False)
             
             self.patient_texts = []
             for patient in patients:

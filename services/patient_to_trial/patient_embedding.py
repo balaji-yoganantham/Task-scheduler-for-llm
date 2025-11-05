@@ -231,8 +231,8 @@ class PatientEmbeddingGenerator:
         """Main method to run patient embedding generation using keywords from database"""
         print("Starting patient embedding generation for trial matching...")
         
-        # Get patient data
-        patients = self.db_utils.get_patient_data_for_keywords(limit)
+        # Get patient data (only unevaluated patients - is_evaluated = 0)
+        patients = self.db_utils.get_patient_data_for_keywords(limit, include_evaluated=False)
         if not patients:
             print("No patient data found!")
             return {}

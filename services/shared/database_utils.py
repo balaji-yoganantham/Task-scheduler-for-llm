@@ -647,3 +647,83 @@ class DatabaseUtils:
         except Exception as e:
             print(f"Error deleting patient keywords: {e}")
             return False
+    
+    def update_patients_evaluated(self, patient_ids: List[int]) -> int:
+        """
+        Update is_evaluated = 1 for a list of patient IDs
+        
+        Args:
+            patient_ids: List of patient IDs to update
+            
+        Returns:
+            Number of patients successfully updated
+        """
+        if not patient_ids:
+            return 0
+            
+        try:
+            with self.get_connection() as connection:
+                # Use IN clause for PostgreSQL compatibility
+                query = text("""
+                    UPDATE insightsedge.patient_medical_history 
+                    SET is_evaluated = 1
+                    WHERE id = ANY(:patient_ids::int[])
+                """)
+                result = connection.execute(query, {"patient_ids": patient_ids})
+                connection.commit()
+                
+                updated_count = result.rowcount
+                if updated_count > 0:
+                    print(f"✅ Updated is_evaluated=1 for {updated_count} patients: {patient_ids}")
+                return updated_count
+        except Exception as e:
+            # Fallback to IN clause if array casting fails
+            try:
+                with self.get_connection() as connection:
+                    placeholders = ','.join([f':id{i}' for i in range(len(patient_ids))])
+                    query = text(f"""
+                        UPDATE insightsedge.patient_medical_history 
+                        SET is_evaluated = 1
+                        WHERE id IN ({placeholders})
+                    """)
+                    params = {f'id{i}': pid for i, pid in enumerate(patient_ids)}
+                    result = connection.execute(query, params)
+                    connection.commit()
+                    
+                    updated_count = result.rowcount
+                    if updated_count > 0:
+                        print(f"✅ Updated is_evaluated=1 for {updated_count} patients: {patient_ids}")
+                    return updated_count
+            except Exception as e2:
+                print(f"Error updating patients evaluated status (fallback also failed): {e2}")
+                return 0
+    
+    def get_unevaluated_patient_ids(self, limit: int = 50) -> List[int]:
+        """
+        Get list of patient IDs where is_evaluated = 0
+        
+        Args:
+            limit: Maximum number of patient IDs to return
+            
+        Returns:
+            List of patient IDs
+        """
+        try:
+            with self.get_connection() as connection:
+                query = text("""
+                    SELECT id 
+                    FROM insightsedge.patient_medical_history 
+                    WHERE is_evaluated = 0 
+                        AND age IS NOT NULL 
+                        AND gender IS NOT NULL
+                        AND gender IN ('Male', 'Female')
+                    ORDER BY created_at DESC
+                    LIMIT :limit
+                """)
+                result = connection.execute(query, {"limit": limit})
+                
+                patient_ids = [row[0] for row in result]
+                return patient_ids
+        except Exception as e:
+            print(f"Error getting unevaluated patient IDs: {e}")
+            return []

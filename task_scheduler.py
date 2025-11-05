@@ -26,7 +26,8 @@ from config import (
     FIXED_TRIAL_IDS,
     FIXED_PATIENT_IDS,
     RUN_JOBS_ON_START,
-    RUN_ONCE_AND_EXIT
+    RUN_ONCE_AND_EXIT,
+    DEFAULT_PATIENT_LIMIT
 )
 
 # Database services will be imported lazily in initialize() to avoid import errors when optional
@@ -43,6 +44,11 @@ class TaskScheduler:
         # Initialize services
         self.patient_db = None
         self.trial_db = None
+        self.db_utils = None  # For database utilities
+        
+        # Track processed patients for is_evaluated update
+        self.processed_patient_ids = set()  # Patients processed in patient-to-trial flow
+        self.evaluated_patient_ids = set()  # Patients evaluated in trial-to-patient flow
         
         # Locks to prevent overlapping job executions
         self._patient_job_lock = asyncio.Lock()
@@ -58,8 +64,10 @@ class TaskScheduler:
                 try:
                     from database.patient_db import PatientDB  # type: ignore
                     from database.trial_database_service import TrialDatabaseService  # type: ignore
+                    from services.shared.database_utils import DatabaseUtils  # type: ignore
                     self.patient_db = PatientDB()
                     self.trial_db = TrialDatabaseService()
+                    self.db_utils = DatabaseUtils()
                     await self.patient_db.initialize()
                     await self.trial_db.initialize()
                     logger.info("Database services initialized")
@@ -67,6 +75,7 @@ class TaskScheduler:
                     logger.warning("Database service modules not found; proceeding without database integration")
                     self.patient_db = None
                     self.trial_db = None
+                    self.db_utils = None
             
             # Initialize LLM services
             if USE_LLM_PROCESSING:
@@ -180,6 +189,9 @@ class TaskScheduler:
         """Process pending patient-to-trial matching tasks"""
         logger.info("Starting patient-trial matching task...")
         
+        # Clear processed patients for this cycle
+        self.processed_patient_ids.clear()
+        
         try:
             async with self._patient_job_lock:
                 # Only check database if not using fixed IDs and database is required
@@ -187,24 +199,32 @@ class TaskScheduler:
                     logger.warning("Required database services not initialized")
                     return
                 
-                # Get pending patient IDs that need trial matching
+                # Get pending patient IDs that need trial matching (only is_evaluated = 0)
                 pending_patients = await self._get_pending_patient_trial_tasks()
             
                 if not pending_patients:
                     logger.info("No pending patient-trial tasks found")
                     return
                 
-                logger.info(f"Processing {len(pending_patients)} patient-trial tasks")
+                logger.info(f"Processing {len(pending_patients)} patient-trial tasks (is_evaluated = 0)")
             
-                # Process each patient sequentially
+                # Process each patient sequentially and track successful ones
                 for patient_id in pending_patients:
                     try:
-                        await self._process_single_patient_trial_match(patient_id)
+                        success = await self._process_single_patient_trial_match(patient_id)
+                        if success:
+                            # Track successfully processed patient
+                            try:
+                                patient_id_int = int(patient_id)
+                                self.processed_patient_ids.add(patient_id_int)
+                                logger.info(f"Tracked patient {patient_id} for is_evaluated update")
+                            except (ValueError, TypeError):
+                                logger.warning(f"Could not convert patient_id {patient_id} to int for tracking")
                     except Exception as e:
                         logger.error(f"Failed to process patient {patient_id}: {e}")
                         continue
                     
-                logger.info("Patient-trial matching task completed")
+                logger.info(f"Patient-trial matching task completed. Processed {len(self.processed_patient_ids)} patients successfully")
             
         except Exception as e:
             logger.error(f"Error in patient-trial matching task: {e}")
@@ -212,6 +232,9 @@ class TaskScheduler:
     async def process_trial_patient_matches(self):
         """Process pending trial-to-patient matching tasks"""
         logger.info("Starting trial-patient matching task...")
+        
+        # Clear evaluated patients for this cycle
+        self.evaluated_patient_ids.clear()
         
         try:
             async with self._trial_job_lock:
@@ -225,6 +248,8 @@ class TaskScheduler:
             
                 if not pending_trials:
                     logger.info("No pending trial-patient tasks found")
+                    # Still update is_evaluated for patients processed in patient-to-trial flow
+                    await self._update_patients_evaluated_status()
                     return
                 
                 logger.info(f"Processing {len(pending_trials)} trial-patient tasks")
@@ -236,11 +261,16 @@ class TaskScheduler:
                     except Exception as e:
                         logger.error(f"Failed to process trial {trial_id}: {e}")
                         continue
-                    
-                logger.info("Trial-patient matching task completed")
+                
+                logger.info(f"Trial-patient matching task completed. Evaluated {len(self.evaluated_patient_ids)} patients")
+                
+                # Update is_evaluated status after trial-to-patient flow completes
+                await self._update_patients_evaluated_status()
             
         except Exception as e:
             logger.error(f"Error in trial-patient matching task: {e}")
+            # Still try to update is_evaluated even if there was an error
+            await self._update_patients_evaluated_status()
             
     async def update_trial_eligibility(self):
         """Update trial eligibility assessments"""
@@ -289,10 +319,21 @@ class TaskScheduler:
             
     # Helper methods for database operations
     async def _get_pending_patient_trial_tasks(self) -> List[str]:
-        """Get list of patient IDs that need trial matching"""
+        """Get list of patient IDs that need trial matching (only is_evaluated = 0)"""
         if ENABLE_FIXED_IDS:
             return list(FIXED_PATIENT_IDS)
-        # Placeholder for database-backed retrieval
+        
+        # Get patients where is_evaluated = 0 from database
+        if USE_DATABASE and self.db_utils:
+            try:
+                patient_ids = self.db_utils.get_unevaluated_patient_ids(limit=DEFAULT_PATIENT_LIMIT)
+                patient_ids_str = [str(pid) for pid in patient_ids]
+                logger.info(f"Retrieved {len(patient_ids_str)} unevaluated patients (is_evaluated = 0) from database")
+                return patient_ids_str
+            except Exception as e:
+                logger.error(f"Error getting unevaluated patient IDs: {e}")
+                return []
+        
         return []
         
     async def _get_pending_trial_patient_tasks(self) -> List[str]:
@@ -308,8 +349,12 @@ class TaskScheduler:
         # For now, return empty list as placeholder
         return []
         
-    async def _process_single_patient_trial_match(self, patient_id: str):
-        """Process a single patient-trial matching task"""
+    async def _process_single_patient_trial_match(self, patient_id: str) -> bool:
+        """Process a single patient-trial matching task
+        
+        Returns:
+            bool: True if processing was successful, False otherwise
+        """
         logger.info(f"Processing patient-trial match for patient {patient_id}")
         
         # Execute: python patient_to_trial_pipeline.py --patient-id <id>
@@ -318,7 +363,13 @@ class TaskScheduler:
             os.path.join(os.path.dirname(__file__), 'patient_to_trial_pipeline.py'),
             '--patient-id', str(patient_id)
         ]
-        await self._run_pipeline_cmd(cmd, context={"patient_id": patient_id})
+        
+        try:
+            await self._run_pipeline_cmd(cmd, context={"patient_id": patient_id})
+            return True
+        except Exception as e:
+            logger.error(f"Error processing patient {patient_id}: {e}")
+            return False
         
     async def _process_single_trial_patient_match(self, trial_id: str):
         """Process a single trial-patient matching task"""
@@ -344,6 +395,35 @@ class TaskScheduler:
         # Implement cleanup logic here
         # This would remove old results, temporary files, etc.
         return 0
+    
+    async def _update_patients_evaluated_status(self):
+        """Update is_evaluated = 1 for all processed patients after both flows complete"""
+        if not self.db_utils:
+            logger.warning("Database utils not initialized, cannot update is_evaluated status")
+            return
+        
+        # Combine patients from both flows
+        all_processed_patients = self.processed_patient_ids.union(self.evaluated_patient_ids)
+        
+        if not all_processed_patients:
+            logger.info("No patients to update is_evaluated status")
+            return
+        
+        try:
+            patient_ids_list = list(all_processed_patients)
+            updated_count = self.db_utils.update_patients_evaluated(patient_ids_list)
+            
+            if updated_count > 0:
+                logger.info(f"✅ Updated is_evaluated=1 for {updated_count} patients: {patient_ids_list}")
+            else:
+                logger.warning(f"No patients were updated (expected {len(patient_ids_list)})")
+            
+            # Clear the tracking sets after update
+            self.processed_patient_ids.clear()
+            self.evaluated_patient_ids.clear()
+            
+        except Exception as e:
+            logger.error(f"Error updating patients evaluated status: {e}")
         
     def get_status(self) -> Dict[str, Any]:
         """Get current scheduler status"""
