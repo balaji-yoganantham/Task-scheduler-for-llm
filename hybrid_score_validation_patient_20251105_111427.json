@@ -1,0 +1,16 @@
+{
+  "patient_id": 1,
+  "patient_mrn": "00069248",
+  "alpha": 0.7,
+  "total_trials": 20,
+  "validated_count": 10,
+  "correct_count": 10,
+  "incorrect_count": 0,
+  "accuracy": 100.0,
+  "avg_difference": 0.0,
+  "validation_results": [
+    {
+      "rank": 1,
+      "trial_id": "NCT05334069",
+      "title": "Blinded Reference Set for Multicancer Early Detection Blood Tests",
+      "embedding_score": 

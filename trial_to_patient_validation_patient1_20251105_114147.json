@@ -1,0 +1,173 @@
+{
+  "patient_id": 1,
+  "patient_mrn": "00069248",
+  "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+  "validation_timestamp": "2025-11-05T11:41:47.933417",
+  "total_trials_matched": 20,
+  "validated_count": 10,
+  "summary": {
+    "strong_matches": 10,
+    "possible_matches": 0,
+    "unlikely_matches": 0,
+    "avg_hybrid_score": 5.120994506442763
+  },
+  "validation_results": [
+    {
+      "rank": 1,
+      "trial_id": "NCT05334069",
+      "trial_title": "Blinded Reference Set for Multicancer Early Detection Blood Tests",
+      "trial_condition": "[\"Acute Lymphoblastic Leukemia\", \"Acute Myeloid Leukemia\", \"Ann Arbor Stage I Lymphoma\", \"Ann Arbor Stage II Lymphoma\", \"Ann Arbor Stage III Lymphoma\", \"Ann Arbor Stage IV Lymphoma\", \"Chronic Lymphocy",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.189992761611938,
+      "embedding_score": 6.985703945159912,
+      "bm25_score": 12.033256016087762,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Gastroesophageal Junction Adenocarcinoma (matched on: cancer)",
+        "Head and Neck Carcinoma (matched on: cancer)",
+        "Hematopoietic and Lymphoid Cell Neoplasm (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 2,
+      "trial_id": "NCT04792684",
+      "trial_title": "Collection of Samples From the United States Population for Optimization and Evaluation of Colorectal Cancer (CRC) Plasma Circulating Free-DNA (cfDNA) Marker Panel Performance (\"USOPTIVAL\")",
+      "trial_condition": "[\"Colorectal Cancer (CRC)\", \"Advanced Adenomas (AA)\"]",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.189900570891895,
+      "embedding_score": 7.043438911437988,
+      "bm25_score": 8.649777762843467,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Colorectal Cancer (CRC) (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 3,
+      "trial_id": "NCT05673148",
+      "trial_title": "A Pragmatic Randomized Phase III Trial Evaluating Total Ablative Therapy for Patients With Limited Metastatic Colorectal Cancer: Evaluating Radiation, Ablation, and Surgery (ERASur)",
+      "trial_condition": "[\"Metastatic Colorectal Adenocarcinoma\", \"Stage IV Colorectal Cancer AJCC v8\"]",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.148548420635133,
+      "embedding_score": 6.943665504455566,
+      "bm25_score": 9.5994189172079,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Metastatic Colorectal Adenocarcinoma (matched on: cancer)",
+        "Stage IV Colorectal Cancer AJCC v8 (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 4,
+      "trial_id": "NCT07114601",
+      "trial_title": "A Phase 1a/b Multicenter, Open-Label Trial to Evaluate Safety, Tolerability, and Dosimetry of LY4257496, a GRPR-Targeted Radioligand Therapy, in Adults With GRPR-Positive Advanced Solid Tumors (OMNIRAY)",
+      "trial_condition": "[\"Breast Neoplasms\", \"Colorectal Neoplasms\", \"Prostate Neoplasm\", \"Endometrial Neoplasms\", \"Neoplasm Metastasis\"]",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.11974549293518,
+      "embedding_score": 6.885350704193115,
+      "bm25_score": 10.172372992910669,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Breast Neoplasms (matched on: cancer)",
+        "Colorectal Neoplasms (matched on: cancer)",
+        "Prostate Neoplasm (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 5,
+      "trial_id": "NCT06051695",
+      "trial_title": "A Seamless Phase 1/2 Study to Evaluate the Safety and Efficacy of A2B694, an Autologous Logic-gated Tmod™ CAR T, in Heterozygous HLA-A*02 Adults With Recurrent Unresectable, Locally Advanced, or Metastatic Solid Tumors That Express MSLN and Have Lost HLA-A*02 Expression",
+      "trial_condition": "[\"Solid Tumor, Adult\", \"Colorectal Cancer\", \"NSCLC\", \"Non Small Cell Lung Cancer\", \"NSCLC, Recurrent\", \"Non-Small Cell Squamous Lung Cancer\", \"Pancreas Cancer\", \"Pancreatic Neoplasm\", \"Colorectal Aden",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.109364748001098,
+      "embedding_score": 6.870521068572998,
+      "bm25_score": 10.583952306262475,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Solid Tumor, Adult (matched on: cancer)",
+        "Colorectal Cancer (matched on: cancer)",
+        "Non Small Cell Lung Cancer (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 6,
+      "trial_id": "NCT05461430",
+      "trial_title": "Mass Response of Tumor Cells as a Biomarker for Rapid Therapy Guidance",
+      "trial_condition": "[\"Pleural Effusion, Malignant\", \"Ascites, Malignant\", \"Carcinoma\", \"Carcinoma, Hepatocellular\", \"Carcinoma, Renal Cell\", \"Carcinoma, Renal\", \"Carcinoma, Small Cell\", \"Carcinoma, Non-Small-Cell Lung\", ",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.099382209777832,
+      "embedding_score": 6.856260299682617,
+      "bm25_score": 12.350412918346393,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Carcinoma (matched on: cancer)",
+        "Carcinoma, Hepatocellular (matched on: cancer)",
+        "Carcinoma, Renal Cell (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 7,
+      "trial_id": "NCT05592626",
+      "trial_title": "A Phase 1/2, First-in-Human, Open-Label, Dose Escalation and Expansion Study of STAR0602, a Selective T Cell Receptor (TCR) Targeting, Bifunctional Antibody-fusion Molecule, in Subjects With Unresectable, Locally Advanced, or Metastatic Solid Tumors That Are Antigen-rich (START-001)",
+      "trial_condition": "[\"Advanced Solid Tumors\", \"Genital Neoplasm, Female\", \"Urogenital Neoplasms\", \"Lung Neoplasm\", \"Neoplasms by Site\", \"Papillomavirus Infection\", \"Epstein-Barr Virus Infections\", \"Carcinoma\", \"Neoplasms",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.0985898017883295,
+      "embedding_score": 6.855128288269043,
+      "bm25_score": 16.935220712078554,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Advanced Solid Tumors (matched on: cancer)",
+        "Genital Neoplasm, Female (matched on: cancer)",
+        "Urogenital Neoplasms (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 8,
+      "trial_id": "NCT04282044",
+      "trial_title": "A Phase 1 Study of the Safety and Efficacy of CRX100 as Monotherapy and in Combination With Pembrolizumab in Advanced Solid Malignancies",
+      "trial_condition": "[\"Solid Tumor, Adult\", \"Triple Negative Breast Cancer\", \"Colorectal Cancer\", \"Hepatocellular Carcinoma\", \"Osteosarcoma\", \"Epithelial Ovarian Cancer\", \"Gastric Cancer\", \"Non-small Cell Lung Cancer\", \"M",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.091095638275146,
+      "embedding_score": 6.844422340393066,
+      "bm25_score": 10.368410362945177,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Solid Tumor, Adult (matched on: cancer)",
+        "Triple Negative Breast Cancer (matched on: cancer)",
+        "Colorectal Cancer (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 9,
+      "trial_id": "NCT06298916",
+      "trial_title": "A Phase 1/2a Study Utilizing 64Cu-LNTH-1363S (64Cu Radiolabeled FAPi PET/CT Imaging Agent) in Patients With Sarcoma or Gastrointestinal Tract Cancer (PHANTOM Trial)",
+      "trial_condition": "[\"Metastatic Sarcoma\", \"Esophageal Cancer\", \"Gastric Cancer\", \"Pancreatic Cancer\", \"Colorectal Cancer\", \"Sarcoma\"]",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.087863588333129,
+      "embedding_score": 6.8398051261901855,
+      "bm25_score": 15.580545054556943,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Esophageal Cancer (matched on: cancer)",
+        "Gastric Cancer (matched on: cancer)",
+        "Pancreatic Cancer (matched on: cancer)"
+      ]
+    },
+    {
+      "rank": 10,
+      "trial_id": "NCT04657068",
+      "trial_title": "A Phase I/IIa, Open-label, Multi-center Study to Assess the Safety, Tolerability, Pharmacokinetics and Preliminary Efficacy of the ATR Kinase Inhibitor ART0380 Administered Orally as Monotherapy and in Combination to Patients With Advanced or Metastatic Solid Tumors",
+      "trial_condition": "[\"Advanced Cancer\", \"Metastatic Cancer\", \"Ovarian Cancer\", \"Primary Peritoneal Cancer\", \"Fallopian Tube Cancer\", \"Endometrial Cancer\", \"Metastatic Colorectal Cancer\", \"Pancreatic Ductal Adenocarcinoma",
+      "patient_diagnosis": "Ovarian neoplasm suspected — biopsy planned",
+      "hybrid_score": 5.0754618321779414,
+      "embedding_score": 6.852630615234375,
+      "bm25_score": 9.287346717129289,
+      "match_quality": "STRONG_MATCH",
+      "matching_conditions": [
+        "Advanced Cancer (matched on: cancer)",
+        "Metastatic Cancer (matched on: cancer)",
+        "Ovarian Cancer (matched on: ovarian)"
+      ]
+    }
+  ]
+}

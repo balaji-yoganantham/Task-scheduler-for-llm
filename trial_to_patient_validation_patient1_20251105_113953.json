@@ -1,0 +1,76 @@
+{
+  "patient_id": 1,
+  "patient_mrn": "00069248",
+  "patient_diagnosis": "",
+  "validation_timestamp": "2025-11-05T11:39:53.324481",
+  "total_trials_matched": 20,
+  "validated_count": 5,
+  "summary": {
+    "strong_matches": 0,
+    "possible_matches": 0,
+    "unlikely_matches": 0,
+    "avg_hybrid_score": 5.1515103988150495
+  },
+  "validation_results": [
+    {
+      "rank": 1,
+      "trial_id": "NCT05334069",
+      "trial_title": "Blinded Reference Set for Multicancer Early Detection Blood Tests",
+      "trial_condition": "[\"Acute Lymphoblastic Leukemia\", \"Acute Myeloid Leukemia\", \"Ann Arbor Stage I Lymphoma\", \"Ann Arbor Stage II Lymphoma\", \"Ann Arbor Stage III Lymphoma\", \"Ann Arbor Stage IV Lymphoma\", \"Chronic Lymphocy",
+      "patient_diagnosis": "",
+      "hybrid_score": 5.189992761611938,
+      "embedding_score": 6.985703945159912,
+      "bm25_score": 12.033256016087762,
+      "match_quality": "UNKNOWN",
+      "matching_conditions": []
+    },
+    {
+      "rank": 2,
+      "trial_id": "NCT04792684",
+      "trial_title": "Collection of Samples From the United States Population for Optimization and Evaluation of Colorectal Cancer (CRC) Plasma Circulating Free-DNA (cfDNA) Marker Panel Performance (\"USOPTIVAL\")",
+      "trial_condition": "[\"Colorectal Cancer (CRC)\", \"Advanced Adenomas (AA)\"]",
+      "patient_diagnosis": "",
+      "hybrid_score": 5.189900570891895,
+      "embedding_score": 7.043438911437988,
+      "bm25_score": 8.649777762843467,
+      "match_quality": "UNKNOWN",
+      "matching_conditions": []
+    },
+    {
+      "rank": 3,
+      "trial_id": "NCT05673148",
+      "trial_title": "A Pragmatic Randomized Phase III Trial Evaluating Total Ablative Therapy for Patients With Limited Metastatic Colorectal Cancer: Evaluating Radiation, Ablation, and Surgery (ERASur)",
+      "trial_condition": "[\"Metastatic Colorectal Adenocarcinoma\", \"Stage IV Colorectal Cancer AJCC v8\"]",
+      "patient_diagnosis": "",
+      "hybrid_score": 5.148548420635133,
+      "embedding_score": 6.943665504455566,
+      "bm25_score": 9.5994189172079,
+      "match_quality": "UNKNOWN",
+      "matching_conditions": []
+    },
+    {
+      "rank": 4,
+      "trial_id": "NCT07114601",
+      "trial_title": "A Phase 1a/b Multicenter, Open-Label Trial to Evaluate Safety, Tolerability, and Dosimetry of LY4257496, a GRPR-Targeted Radioligand Therapy, in Adults With GRPR-Positive Advanced Solid Tumors (OMNIRAY)",
+      "trial_condition": "[\"Breast Neoplasms\", \"Colorectal Neoplasms\", \"Prostate Neoplasm\", \"Endometrial Neoplasms\", \"Neoplasm Metastasis\"]",
+      "patient_diagnosis": "",
+      "hybrid_score": 5.11974549293518,
+      "embedding_score": 6.885350704193115,
+      "bm25_score": 10.172372992910669,
+      "match_quality": "UNKNOWN",
+      "matching_conditions": []
+    },
+    {
+      "rank": 5,
+      "trial_id": "NCT06051695",
+      "trial_title": "A Seamless Phase 1/2 Study to Evaluate the Safety and Efficacy of A2B694, an Autologous Logic-gated Tmod™ CAR T, in Heterozygous HLA-A*02 Adults With Recurrent Unresectable, Locally Advanced, or Metastatic Solid Tumors That Express MSLN and Have Lost HLA-A*02 Expression",
+      "trial_condition": "[\"Solid Tumor, Adult\", \"Colorectal Cancer\", \"NSCLC\", \"Non Small Cell Lung Cancer\", \"NSCLC, Recurrent\", \"Non-Small Cell Squamous Lung Cancer\", \"Pancreas Cancer\", \"Pancreatic Neoplasm\", \"Colorectal Aden",
+      "patient_diagnosis": "",
+      "hybrid_score": 5.109364748001098,
+      "embedding_score": 6.870521068572998,
+      "bm25_score": 10.583952306262475,
+      "match_quality": "UNKNOWN",
+      "matching_conditions": []
+    }
+  ]
+}

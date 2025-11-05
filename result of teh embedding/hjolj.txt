@@ -1,0 +1,144 @@
+
+M:\Nexturn\1\insightsedgeui-1\insightsedgeui\New folder\Task-scheduler-for-llm\Task-scheduler-for-llm\venv\Lib\site-packages\huggingface_hub\file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.                                                  
+  warnings.warn(
+Task Scheduler Configuration loaded:
+  - USE_DUMMY_DATA: False
+  - USE_LLM_PROCESSING: True
+  - SCHEDULER_INTERVAL_MINUTES: 30
+  - MAX_CONCURRENT_TASKS: 5
+  - LOG_LEVEL: INFO
+================================================================================
+CLINICAL MATCH VALIDATION
+================================================================================
+Trial ID: NCT05334069
+Using device: cpu
+Loaded patient FAISS index with 50 vectors
+Loaded metadata for 50 patients
+Created BM25 index for 69 patients
+
+Trial: Blinded Reference Set for Multicancer Early Detection Blood Tests
+Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor Stage II Lymphoma", "Ann Arbor Stage III Lymphoma", "Ann Arbor Stage IV Lymphoma", "Chronic Lymphocytic Leukemia", "Chronic Myeloid Leukemia", "Gastroesophageal Junction Adenocarcinoma", "Head and Neck Carcinoma", "Hematopoietic and Lymphoid Cell Neoplasm", "Invasive Breast Carcinoma", "Kidney Carcinoma", "Malignant Hepatobiliary Neoplasm", "Malignant Solid Neoplasm", "Melanoma", "Muscle-Invasive Bladder Carcinoma", "RISS Stage I Plasma Cell Myeloma", "RISS Stage II Plasma Cell Myeloma", "RISS Stage III Plasma Cell Myeloma", "Sarcoma", "Stage I Bladder Cancer AJCC v6 and v7", "Stage I Breast Cancer AJCC v7", "Stage I Colorectal Cancer AJCC v6 and v7", "Stage I Esophageal Cancer AJCC V7", "Stage I Gastric Cancer AJCC V7", "Stage I Lung Cancer AJCC v7", "Stage I Ovarian Cancer AJCC v6 and v7", "Stage I Pancreatic Cancer AJCC v6 and v7", "Stage I Prostate Cancer AJCC v7", "Stage I Uterine Corpus Cancer AJCC v7", "Stage II Bladder Cancer AJCC v6 and v7", "Stage II Breast Cancer AJCC v6 and v7", "Stage II Colorectal Cancer AJCC v7", "Stage II Esophageal Cancer AJCC v7", "Stage II Gastric Cancer AJCC v7", "Stage II Lung Cancer AJCC v7", "Stage II Ovarian Cancer AJCC v6 and v7", "Stage II Pancreatic Cancer AJCC v6 and v7", "Stage II Prostate Cancer AJCC v7", "Stage II Uterine Corpus Cancer AJCC v7", "Stage III Bladder Cancer AJCC v6 and v7", "Stage III Breast Cancer AJCC v7", "Stage III Colorectal Cancer AJCC v7", "Stage III Esophageal Cancer AJCC v7", "Stage III Gastric Cancer AJCC v7", "Stage III Lung Cancer AJCC v7", "Stage III Ovarian Cancer AJCC v6 and v7", "Stage III Pancreatic Cancer AJCC v6 and v7", "Stage III Prostate Cancer AJCC v7", "Stage III Uterine Corpus Cancer AJCC v7", "Stage IV Bladder Cancer AJCC v7", "Stage IV Breast Cancer AJCC v6 and v7", "Stage IV Colorectal Cancer AJCC v7", "Stage IV Esophageal Cancer AJCC v7", "Stage IV Gastric Cancer AJCC v7", "Stage IV Lung Cancer AJCC v7", "Stage IV Ovarian Cancer AJCC v6 and v7", "Stage IV Pancreatic Cancer AJCC v6 and v7", "Stage IV Prostate Cancer AJCC v7", "Stage IV Uterine Corpus Cancer AJCC v7", "Thyroid Gland Carcinoma"]                                                                       
+Finding patients for trial: Blinded Reference Set for Multicancer Early Detection Blood Tests
+Loading MedCPT Query Encoder...
+OK MedCPT Query Encoder loaded successfully
+
+Found 3 matched patients
+
+================================================================================
+MATCHED PATIENTS ANALYSIS
+================================================================================
+
+1. Patient Match #1
+   Hybrid Score: 4.5466
+   Embedding Score: 6.0665
+   BM25 Score: 306.3759
+
+   Patient Data Structure:
+     mrn: 39000018
+     age: 40
+     gender: Male
+     oncologist: Dr. Kavita Desai, MD
+     date_of_visit: May 16, 2025
+     created_at: 2025-11-05T03:40:20.994848+00:00
+     keywords_count: 30
+     keywords_text_length: 490
+     index: 42
+     hybrid_score: 4.546562814712524
+     embedding_score: 6.066518306732178
+     bm25_score: 306.37593245121667
+
+   Patient Medical Information:
+     Chief Complaint: - Early satiety, Abdominal pain, Constipation
+     Assessment: - Diagnosis: Metastatic colorectal cancer (liver, peritoneum)
+- Disease status: Prior adjuvant chemotherapy completed; no prior metastatic systemic therapy
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+     Diagnosis: Metastatic Colorectal Cancer
+
+   Condition Match Analysis:
+     Trial Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor                                                                               
+     Patient Diagnosis: Metastatic Colorectal Cancer
+     ✓ Common medical terms: ['cancer', 'colorectal']
+     ✓ MATCH - Found common medical terms
+
+2. Patient Match #2
+   Hybrid Score: 4.5322
+   Embedding Score: 6.0460
+   BM25 Score: 298.8792
+
+   Patient Data Structure:
+     mrn: 39000010
+     age: 31
+     gender: Female
+     oncologist: Dr. Sarah Mehta, MD
+     date_of_visit: August 29, 2025
+     created_at: 2025-11-05T03:40:09.113109+00:00
+     keywords_count: 30
+     keywords_text_length: 501
+     index: 34
+     hybrid_score: 4.532202672958373
+     embedding_score: 6.046003818511963
+     bm25_score: 298.87916276472055
+
+   Patient Medical Information:
+     Chief Complaint: - Early satiety, Abdominal pain, Constipation
+     Assessment: - Diagnosis: Metastatic colorectal cancer (peritoneum)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+     Diagnosis: Metastatic Colorectal Adenocarcinoma
+
+   Condition Match Analysis:
+     Trial Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor                                                                               
+     Patient Diagnosis: Metastatic Colorectal Adenocarcinoma
+     ✓ Common medical terms: ['carcinoma', 'colorectal']
+     ✓ MATCH - Found common medical terms
+
+3. Patient Match #3
+   Hybrid Score: 4.4960
+   Embedding Score: 5.9943
+   BM25 Score: 305.1507
+
+   Patient Data Structure:
+     mrn: 39000001
+     age: 36
+     gender: Female
+     oncologist: Dr. Sarah Mehta, MD
+     date_of_visit: April 09, 2025
+     created_at: 2025-11-05T03:39:55.946269+00:00
+     keywords_count: 30
+     keywords_text_length: 527
+     index: 25
+     hybrid_score: 4.496035289764404
+     embedding_score: 5.994336128234863
+     bm25_score: 305.1506582222149
+
+   Patient Medical Information:
+     Chief Complaint: - Early satiety, Abdominal pain, Constipation
+     Assessment: - Diagnosis: Metastatic colorectal cancer (lung, peritoneum)
+- Disease status: Received FOLFOX; currently off therapy for 3 months
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+     Diagnosis: Metastatic Colorectal Adenocarcinoma
+
+   Condition Match Analysis:
+     Trial Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor                                                                               
+     Patient Diagnosis: Metastatic Colorectal Adenocarcinoma
+     ✓ Common medical terms: ['carcinoma', 'colorectal']
+     ✓ MATCH - Found common medical terms
+
+================================================================================
+VALIDATION SUMMARY
+================================================================================
+This validation shows:
+1. The actual patient data returned by the matching system
+2. Whether patient conditions match trial conditions
+3. Whether the matches are clinically relevant
+
+To improve validation:
+- Check if patient diagnosis matches trial condition
+- Verify age/gender eligibility
+- Review medical history compatibility
