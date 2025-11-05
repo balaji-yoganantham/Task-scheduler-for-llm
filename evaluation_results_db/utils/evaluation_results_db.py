@@ -142,6 +142,14 @@ class EvaluationResultsDB:
                     """)
                     connection.execute(create_table_query)
                     
+                    # Create unique index on (mrn, trial_id) for conflict resolution when mrn is provided
+                    unique_index_query = text("""
+                        CREATE UNIQUE INDEX IF NOT EXISTS idx_p2t_mrn_trial_unique 
+                        ON insightsedge.patient_to_trial (mrn, trial_id) 
+                        WHERE mrn IS NOT NULL
+                    """)
+                    connection.execute(unique_index_query)
+                    
                     # Create indexes
                     indexes = [
                         "CREATE INDEX IF NOT EXISTS idx_p2t_patient_id ON insightsedge.patient_to_trial(patient_id)",
@@ -500,109 +508,202 @@ class EvaluationResultsDB:
                             'isevaluated': 1
                         }
                         
-                        # Build query based on which JSON values are NULL
-                        # Use COALESCE to handle NULL values in SQL
-                        if key_criteria_met_json is None and key_criteria_missed_json is None:
-                            # Both are NULL
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.patient_to_trial (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, NULL::jsonb, NULL::jsonb, :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (patient_id, trial_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
+                        # Check if record exists by MRN and trial_id (if MRN is provided)
+                        # If MRN is not provided, fall back to patient_id and trial_id
+                        existing_record_id = None
+                        if mrn:
+                            # Check by MRN and trial_id first (as requested)
+                            check_query = text("""
+                                SELECT id FROM insightsedge.patient_to_trial 
+                                WHERE mrn = :mrn AND trial_id = :trial_id
+                                LIMIT 1
                             """)
-                        elif key_criteria_met_json is None:
-                            # key_criteria_met is NULL
-                            insert_data['key_criteria_missed'] = key_criteria_missed_json
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.patient_to_trial (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, NULL::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (patient_id, trial_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
-                            """)
-                        elif key_criteria_missed_json is None:
-                            # key_criteria_missed is NULL
-                            insert_data['key_criteria_met'] = key_criteria_met_json
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.patient_to_trial (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, NULL::jsonb, :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (patient_id, trial_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
-                            """)
-                        else:
-                            # Both have values
-                            insert_data['key_criteria_met'] = key_criteria_met_json
-                            insert_data['key_criteria_missed'] = key_criteria_missed_json
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.patient_to_trial (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, 
-                                    :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (patient_id, trial_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
-                            """)
+                            existing = connection.execute(check_query, {'mrn': mrn, 'trial_id': trial_id}).fetchone()
+                            if existing:
+                                existing_record_id = existing[0]
                         
-                        result = connection.execute(upsert_query, insert_data)
-                        record_id = result.fetchone()[0]
-                        saved_count += 1
+                        # If record exists by MRN and trial_id, update it
+                        if existing_record_id:
+                            # Update existing record identified by MRN and trial_id
+                            update_data = insert_data.copy()
+                            update_data['record_id'] = existing_record_id
+                            
+                            if key_criteria_met_json is None and key_criteria_missed_json is None:
+                                update_query = text("""
+                                    UPDATE insightsedge.patient_to_trial SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = NULL::jsonb,
+                                        key_criteria_missed = NULL::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            elif key_criteria_met_json is None:
+                                update_data['key_criteria_missed'] = key_criteria_missed_json
+                                update_query = text("""
+                                    UPDATE insightsedge.patient_to_trial SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = NULL::jsonb,
+                                        key_criteria_missed = CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            elif key_criteria_missed_json is None:
+                                update_data['key_criteria_met'] = key_criteria_met_json
+                                update_query = text("""
+                                    UPDATE insightsedge.patient_to_trial SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = CAST(:key_criteria_met AS TEXT)::jsonb,
+                                        key_criteria_missed = NULL::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            else:
+                                update_data['key_criteria_met'] = key_criteria_met_json
+                                update_data['key_criteria_missed'] = key_criteria_missed_json
+                                update_query = text("""
+                                    UPDATE insightsedge.patient_to_trial SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = CAST(:key_criteria_met AS TEXT)::jsonb,
+                                        key_criteria_missed = CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            
+                            result = connection.execute(update_query, update_data)
+                            record_id = result.fetchone()[0]
+                            saved_count += 1
+                        else:
+                            # No existing record found by MRN and trial_id, insert new (with ON CONFLICT fallback)
+                            # Build query based on which JSON values are NULL
+                            if key_criteria_met_json is None and key_criteria_missed_json is None:
+                                # Both are NULL
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.patient_to_trial (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, NULL::jsonb, NULL::jsonb, :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (patient_id, trial_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            elif key_criteria_met_json is None:
+                                # key_criteria_met is NULL
+                                insert_data['key_criteria_missed'] = key_criteria_missed_json
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.patient_to_trial (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, NULL::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (patient_id, trial_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            elif key_criteria_missed_json is None:
+                                # key_criteria_missed is NULL
+                                insert_data['key_criteria_met'] = key_criteria_met_json
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.patient_to_trial (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, NULL::jsonb, :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (patient_id, trial_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            else:
+                                # Both have values
+                                insert_data['key_criteria_met'] = key_criteria_met_json
+                                insert_data['key_criteria_missed'] = key_criteria_missed_json
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.patient_to_trial (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, 
+                                        :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (patient_id, trial_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            
+                            result = connection.execute(upsert_query, insert_data)
+                            record_id = result.fetchone()[0]
+                            saved_count += 1
                         
                     except Exception as e:
                         print(f"⚠️ Error saving individual evaluation for trial {trial_id}: {e}")
@@ -745,6 +846,14 @@ class EvaluationResultsDB:
                     """)
                     connection.execute(create_table_query)
                     
+                    # Create unique index on (mrn, trial_id) for conflict resolution when mrn is provided
+                    unique_index_query = text("""
+                        CREATE UNIQUE INDEX IF NOT EXISTS idx_t2p_mrn_trial_unique 
+                        ON insightsedge.trial_to_patient (mrn, trial_id) 
+                        WHERE mrn IS NOT NULL
+                    """)
+                    connection.execute(unique_index_query)
+                    
                     # Create indexes
                     indexes = [
                         "CREATE INDEX IF NOT EXISTS idx_t2p_patient_id ON insightsedge.trial_to_patient(patient_id)",
@@ -866,110 +975,206 @@ class EvaluationResultsDB:
                             'isevaluated': 1
                         }
                         
-                        # Build query based on which JSON values are NULL
-                        if key_criteria_met_json is None and key_criteria_missed_json is None:
-                            # Both are NULL
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.trial_to_patient (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, NULL::jsonb, NULL::jsonb, :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (trial_id, patient_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
+                        # Check if record exists by MRN and trial_id (if MRN is provided)
+                        # If MRN is not provided, fall back to trial_id and patient_id
+                        existing_record_id = None
+                        if mrn:
+                            # Check by MRN and trial_id first (as requested)
+                            check_query = text("""
+                                SELECT id FROM insightsedge.trial_to_patient 
+                                WHERE mrn = :mrn AND trial_id = :trial_id
+                                LIMIT 1
                             """)
-                        elif key_criteria_met_json is None:
-                            # Only key_criteria_met is NULL
-                            insert_data['key_criteria_missed'] = key_criteria_missed_json
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.trial_to_patient (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, NULL::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (trial_id, patient_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
-                            """)
-                        elif key_criteria_missed_json is None:
-                            # Only key_criteria_missed is NULL
-                            insert_data['key_criteria_met'] = key_criteria_met_json
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.trial_to_patient (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, NULL::jsonb, :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (trial_id, patient_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
-                            """)
-                        else:
-                            # Both are non-NULL
-                            insert_data['key_criteria_met'] = key_criteria_met_json
-                            insert_data['key_criteria_missed'] = key_criteria_missed_json
-                            upsert_query = text("""
-                                INSERT INTO insightsedge.trial_to_patient (
-                                    patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                    reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
-                                ) VALUES (
-                                    :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                    :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, 
-                                    :recommendations, :isevaluated
-                                )
-                                ON CONFLICT (trial_id, patient_id) 
-                                DO UPDATE SET
-                                    mrn = EXCLUDED.mrn,
-                                    eligibility_status = EXCLUDED.eligibility_status,
-                                    confidence_score = EXCLUDED.confidence_score,
-                                    reasoning = EXCLUDED.reasoning,
-                                    key_criteria_met = EXCLUDED.key_criteria_met,
-                                    key_criteria_missed = EXCLUDED.key_criteria_missed,
-                                    recommendations = EXCLUDED.recommendations,
-                                    isevaluated = EXCLUDED.isevaluated,
-                                    updated_at = CURRENT_TIMESTAMP
-                                RETURNING id
-                            """)
+                            existing = connection.execute(check_query, {'mrn': mrn, 'trial_id': trial_id}).fetchone()
+                            if existing:
+                                existing_record_id = existing[0]
                         
-                        result = connection.execute(upsert_query, insert_data)
-                        row_id = result.fetchone()
-                        if row_id:
-                            saved_count += 1
-                        connection.commit()
+                        # If record exists by MRN and trial_id, update it
+                        if existing_record_id:
+                            # Update existing record identified by MRN and trial_id
+                            update_data = insert_data.copy()
+                            update_data['record_id'] = existing_record_id
+                            
+                            if key_criteria_met_json is None and key_criteria_missed_json is None:
+                                update_query = text("""
+                                    UPDATE insightsedge.trial_to_patient SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = NULL::jsonb,
+                                        key_criteria_missed = NULL::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            elif key_criteria_met_json is None:
+                                update_data['key_criteria_missed'] = key_criteria_missed_json
+                                update_query = text("""
+                                    UPDATE insightsedge.trial_to_patient SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = NULL::jsonb,
+                                        key_criteria_missed = CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            elif key_criteria_missed_json is None:
+                                update_data['key_criteria_met'] = key_criteria_met_json
+                                update_query = text("""
+                                    UPDATE insightsedge.trial_to_patient SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = CAST(:key_criteria_met AS TEXT)::jsonb,
+                                        key_criteria_missed = NULL::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            else:
+                                update_data['key_criteria_met'] = key_criteria_met_json
+                                update_data['key_criteria_missed'] = key_criteria_missed_json
+                                update_query = text("""
+                                    UPDATE insightsedge.trial_to_patient SET
+                                        patient_id = :patient_id,
+                                        mrn = :mrn,
+                                        eligibility_status = :eligibility_status,
+                                        confidence_score = :confidence_score,
+                                        reasoning = :reasoning,
+                                        key_criteria_met = CAST(:key_criteria_met AS TEXT)::jsonb,
+                                        key_criteria_missed = CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        recommendations = :recommendations,
+                                        isevaluated = :isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    WHERE id = :record_id
+                                    RETURNING id
+                                """)
+                            
+                            result = connection.execute(update_query, update_data)
+                            row_id = result.fetchone()
+                            if row_id:
+                                saved_count += 1
+                            connection.commit()
+                        else:
+                            # No existing record found by MRN and trial_id, insert new (with ON CONFLICT fallback)
+                            # Build query based on which JSON values are NULL
+                            if key_criteria_met_json is None and key_criteria_missed_json is None:
+                                # Both are NULL
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.trial_to_patient (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, NULL::jsonb, NULL::jsonb, :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (trial_id, patient_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            elif key_criteria_met_json is None:
+                                # Only key_criteria_met is NULL
+                                insert_data['key_criteria_missed'] = key_criteria_missed_json
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.trial_to_patient (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, NULL::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (trial_id, patient_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            elif key_criteria_missed_json is None:
+                                # Only key_criteria_missed is NULL
+                                insert_data['key_criteria_met'] = key_criteria_met_json
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.trial_to_patient (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, NULL::jsonb, :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (trial_id, patient_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            else:
+                                # Both are non-NULL
+                                insert_data['key_criteria_met'] = key_criteria_met_json
+                                insert_data['key_criteria_missed'] = key_criteria_missed_json
+                                upsert_query = text("""
+                                    INSERT INTO insightsedge.trial_to_patient (
+                                        patient_id, mrn, trial_id, eligibility_status, confidence_score,
+                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                    ) VALUES (
+                                        :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
+                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, 
+                                        :recommendations, :isevaluated
+                                    )
+                                    ON CONFLICT (trial_id, patient_id) 
+                                    DO UPDATE SET
+                                        mrn = EXCLUDED.mrn,
+                                        eligibility_status = EXCLUDED.eligibility_status,
+                                        confidence_score = EXCLUDED.confidence_score,
+                                        reasoning = EXCLUDED.reasoning,
+                                        key_criteria_met = EXCLUDED.key_criteria_met,
+                                        key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        recommendations = EXCLUDED.recommendations,
+                                        isevaluated = EXCLUDED.isevaluated,
+                                        updated_at = CURRENT_TIMESTAMP
+                                    RETURNING id
+                                """)
+                            
+                            result = connection.execute(upsert_query, insert_data)
+                            row_id = result.fetchone()
+                            if row_id:
+                                saved_count += 1
+                            connection.commit()
                         
                     except Exception as e:
                         print(f"⚠️ Error saving individual evaluation for patient {patient_id}: {e}")

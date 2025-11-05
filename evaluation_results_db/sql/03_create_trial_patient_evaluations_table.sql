@@ -47,6 +47,12 @@ CREATE TABLE IF NOT EXISTS insightsedge.trial_to_patient (
     CONSTRAINT uq_trial_patient UNIQUE (trial_id, patient_id)
 );
 
+-- Unique constraint on (mrn, trial_id) for conflict resolution when mrn is provided
+-- This allows checking by MRN and trial_id as requested
+CREATE UNIQUE INDEX IF NOT EXISTS idx_t2p_mrn_trial_unique 
+    ON insightsedge.trial_to_patient (mrn, trial_id) 
+    WHERE mrn IS NOT NULL;
+
 -- =====================================================
 -- Indexes for Performance
 -- =====================================================

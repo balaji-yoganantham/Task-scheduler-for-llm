@@ -178,19 +178,25 @@ class TrialToPatientOrchestrator:
             # Save evaluation results to database
             print(f"\n💾 Saving evaluation results to database...")
             pipeline_results["database_save_status"] = "failed"
-            pipeline_results["database_id"] = None
             pipeline_results["database_save_error"] = None
             
             try:
                 if matching_results and matching_results.get('trial_info'):
-                    db_id = self.eval_db.save_trial_to_patient_evaluation(matching_results)
-                    if db_id:
-                        pipeline_results["database_save_status"] = "success"
-                        pipeline_results["database_id"] = db_id
-                        print(f"✅ Evaluation results saved to database with ID: {db_id}")
-                    else:
-                        pipeline_results["database_save_error"] = "Database save returned None"
-                        print("⚠️ Failed to save evaluation results to database")
+                    # Save individual trial-patient evaluations to normalized table
+                    print(f"💾 Saving individual trial-patient evaluations...")
+                    try:
+                        saved_count = self.eval_db.save_trial_patient_evaluations(matching_results)
+                        if saved_count > 0:
+                            pipeline_results["database_save_status"] = "success"
+                            pipeline_results["individual_evaluations_saved"] = saved_count
+                            print(f"✅ Saved {saved_count} individual trial-patient evaluations to insightsedge.trial_to_patient")
+                        else:
+                            pipeline_results["database_save_error"] = "No evaluations were saved"
+                            print("⚠️ No individual evaluations were saved")
+                    except Exception as e:
+                        print(f"⚠️ Error saving individual evaluations: {e}")
+                        pipeline_results["database_save_error"] = str(e)
+                        pipeline_results["individual_evaluations_error"] = str(e)
                 else:
                     pipeline_results["database_save_error"] = "No matching results to save"
                     print("⚠️ No matching results available to save to database")
@@ -198,23 +204,10 @@ class TrialToPatientOrchestrator:
                 pipeline_results["database_save_error"] = str(e)
                 print(f"⚠️ Database save error (continuing with JSON): {e}")
             
-            # Save individual trial-patient evaluations to normalized table
-            print(f"\n💾 Saving individual trial-patient evaluations...")
-            try:
-                saved_count = self.eval_db.save_trial_patient_evaluations(matching_results)
-                if saved_count > 0:
-                    pipeline_results["individual_evaluations_saved"] = saved_count
-                    print(f"✅ Saved {saved_count} individual trial-patient evaluations")
-                else:
-                    print("⚠️ No individual evaluations were saved")
-            except Exception as e:
-                print(f"⚠️ Error saving individual evaluations: {e}")
-                pipeline_results["individual_evaluations_error"] = str(e)
-            
             print(f"\nPIPELINE COMPLETED SUCCESSFULLY!")
             print(f"Pipeline results saved to: {pipeline_file}")
             if pipeline_results["database_save_status"] == "success":
-                print(f"Database ID: {pipeline_results['database_id']}")
+                print(f"✅ Saved {pipeline_results.get('individual_evaluations_saved', 0)} evaluations to insightsedge.trial_to_patient")
             else:
                 print(f"Database save failed: {pipeline_results.get('database_save_error', 'Unknown error')}")
             

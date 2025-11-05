@@ -5,11 +5,13 @@ Common LLM API calls and prompt templates for both patient-to-trial and trial-to
 
 import json
 import re
+import time
 from datetime import datetime
 from typing import Dict, Any, List
 from pathlib import Path
 import google.generativeai as genai
-from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE
+from google.api_core import exceptions as google_exceptions
+from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE, GEMINI_MAX_RETRIES, GEMINI_TIMEOUT
 
 class LLMUtils:
     def __init__(self):
@@ -18,6 +20,9 @@ class LLMUtils:
         # Create folder for saving LLM prompts
         self.llm_sent_dir = Path("llm_sent")
         self.llm_sent_dir.mkdir(exist_ok=True)
+        # Rate limiting - track last request time
+        self._last_request_time = 0
+        self._min_request_interval = 0.5  # Minimum 0.5 seconds between requests
 
     def generate_keywords_prompt(self, patient_data: Dict[str, Any]) -> str:
         """Generate prompt for patient keyword extraction"""
@@ -200,90 +205,162 @@ class LLMUtils:
             print(f"Warning: Could not save prompt to file: {e}")
             return None
     
+    def _rate_limit(self):
+        """Enforce rate limiting between requests"""
+        current_time = time.time()
+        time_since_last_request = current_time - self._last_request_time
+        if time_since_last_request < self._min_request_interval:
+            sleep_time = self._min_request_interval - time_since_last_request
+            time.sleep(sleep_time)
+        self._last_request_time = time.time()
+    
     def call_llm(self, prompt: str, call_type: str = "llm_call", metadata: Dict[str, Any] = None) -> Dict[str, Any]:
-        """Make LLM API call and parse response"""
+        """Make LLM API call with retry logic and exponential backoff for 429 errors"""
         # Save prompt before sending
         prompt_file = self._save_prompt_to_file(prompt, call_type, metadata)
         if prompt_file:
             print(f"💾 Prompt saved to: {prompt_file}")
         
-        try:
-            response = self.model.generate_content(prompt)
+        # Retry logic with exponential backoff for 429 errors
+        max_retries = GEMINI_MAX_RETRIES
+        base_delay = 2  # Start with 2 seconds
+        max_delay = 60  # Maximum delay of 60 seconds
+        
+        for attempt in range(max_retries + 1):
+            try:
+                # Enforce rate limiting
+                self._rate_limit()
+                
+                # Make the API call
+                response = self.model.generate_content(prompt)
+                
+                # If we get here, the request succeeded
+                break
+                
+            except google_exceptions.ResourceExhausted as e:
+                # Handle 429 Resource Exhausted errors with exponential backoff
+                if attempt < max_retries:
+                    # Calculate exponential backoff delay
+                    delay = min(base_delay * (2 ** attempt), max_delay)
+                    # Add jitter to prevent thundering herd
+                    jitter = delay * 0.1 * (0.5 - time.time() % 1)
+                    total_delay = delay + jitter
+                    
+                    print(f"⚠️ Rate limit hit (429 Resource Exhausted). Retrying in {total_delay:.1f} seconds... (attempt {attempt + 1}/{max_retries + 1})")
+                    time.sleep(total_delay)
+                    continue
+                else:
+                    # Max retries exceeded
+                    print(f"❌ Max retries ({max_retries}) exceeded for 429 error. Falling back to individual processing.")
+                    return {
+                        "error": f"429 Resource exhausted after {max_retries} retries. Please try again later.",
+                        "error_type": "ResourceExhausted",
+                        "retries_attempted": max_retries
+                    }
             
+            except Exception as e:
+                # For other exceptions, check if it's a rate limit related error
+                error_str = str(e).lower()
+                if "429" in error_str or "resource exhausted" in error_str or "rate limit" in error_str:
+                    if attempt < max_retries:
+                        delay = min(base_delay * (2 ** attempt), max_delay)
+                        jitter = delay * 0.1 * (0.5 - time.time() % 1)
+                        total_delay = delay + jitter
+                        
+                        print(f"⚠️ Rate limit error detected. Retrying in {total_delay:.1f} seconds... (attempt {attempt + 1}/{max_retries + 1})")
+                        time.sleep(total_delay)
+                        continue
+                    else:
+                        print(f"❌ Max retries ({max_retries}) exceeded. Error: {e}")
+                        return {
+                            "error": str(e),
+                            "error_type": type(e).__name__,
+                            "retries_attempted": max_retries
+                        }
+                else:
+                    # For non-rate-limit errors, don't retry
+                    print(f"Error calling LLM: {e}")
+                    import traceback
+                    traceback.print_exc()
+                    return {
+                        "error": str(e)
+                    }
+        
+        # If we get here, check if we have a valid response
+        try:
             if not response or not response.text:
                 return {
                     "error": "Empty response from LLM",
                     "raw_response": ""
                 }
-            
-            try:
-                # Clean the response - remove code block markers (more thorough)
-                response_text = response.text.strip()
-                
-                # Remove markdown code blocks (handle various formats)
-                if response_text.startswith("```json"):
-                    response_text = response_text[7:]
-                elif response_text.startswith("```"):
-                    response_text = response_text[3:]
-                
-                # Remove trailing code block markers
-                if response_text.endswith("```"):
-                    response_text = response_text[:-3]
-                elif response_text.rstrip().endswith("```"):
-                    response_text = response_text.rstrip()[:-3]
-                
-                response_text = response_text.strip()
-                
-                # Try to extract JSON if there's extra text before/after
-                # Look for the first '{' and last '}'
-                first_brace = response_text.find('{')
-                last_brace = response_text.rfind('}')
-                
-                if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
-                    response_text = response_text[first_brace:last_brace+1]
-                
-                # Parse JSON
-                result = json.loads(response_text)
-                return {"response": response.text, **result}
-            except json.JSONDecodeError as e:
-                print(f"Failed to parse JSON response: {str(e)}")
-                print(f"JSON Error at line {e.lineno}, column {e.colno}")
-                print(f"Error message: {e.msg}")
-                print(f"Response text (first 1000 chars): {response.text[:1000]}")
-                print(f"Response text length: {len(response.text)}")
-                # Save full response to file for debugging
-                try:
-                    import os
-                    debug_dir = Path("results/debug")
-                    debug_dir.mkdir(parents=True, exist_ok=True)
-                    debug_file = debug_dir / f"llm_response_error_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-                    with open(debug_file, 'w', encoding='utf-8') as f:
-                        f.write("=== PROMPT ===\n")
-                        f.write(prompt)
-                        f.write("\n\n=== RESPONSE ===\n")
-                        f.write(response.text)
-                        f.write("\n\n=== ERROR ===\n")
-                        f.write(str(e))
-                    print(f"💾 Full response saved to: {debug_file}")
-                except Exception as save_error:
-                    print(f"Could not save debug file: {save_error}")
-                
-                return {
-                    "error": f"Failed to parse JSON response: {str(e)}",
-                    "raw_response": response.text,
-                    "error_details": {
-                        "line": e.lineno,
-                        "column": e.colno,
-                        "message": e.msg
-                    }
-                }
-                
-        except Exception as e:
-            print(f"Error calling LLM: {e}")
-            import traceback
-            traceback.print_exc()
+        except NameError:
+            # Response was never set (all retries failed)
             return {
-                "error": str(e)
+                "error": "Failed to get response after all retries",
+                "retries_attempted": max_retries
+            }
+        
+        # Process successful response
+        try:
+            # Clean the response - remove code block markers (more thorough)
+            response_text = response.text.strip()
+            
+            # Remove markdown code blocks (handle various formats)
+            if response_text.startswith("```json"):
+                response_text = response_text[7:]
+            elif response_text.startswith("```"):
+                response_text = response_text[3:]
+            
+            # Remove trailing code block markers
+            if response_text.endswith("```"):
+                response_text = response_text[:-3]
+            elif response_text.rstrip().endswith("```"):
+                response_text = response_text.rstrip()[:-3]
+            
+            response_text = response_text.strip()
+            
+            # Try to extract JSON if there's extra text before/after
+            # Look for the first '{' and last '}'
+            first_brace = response_text.find('{')
+            last_brace = response_text.rfind('}')
+            
+            if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
+                response_text = response_text[first_brace:last_brace+1]
+            
+            # Parse JSON
+            result = json.loads(response_text)
+            return {"response": response.text, **result}
+        except json.JSONDecodeError as e:
+            print(f"Failed to parse JSON response: {str(e)}")
+            print(f"JSON Error at line {e.lineno}, column {e.colno}")
+            print(f"Error message: {e.msg}")
+            print(f"Response text (first 1000 chars): {response.text[:1000]}")
+            print(f"Response text length: {len(response.text)}")
+            # Save full response to file for debugging
+            try:
+                import os
+                debug_dir = Path("results/debug")
+                debug_dir.mkdir(parents=True, exist_ok=True)
+                debug_file = debug_dir / f"llm_response_error_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                with open(debug_file, 'w', encoding='utf-8') as f:
+                    f.write("=== PROMPT ===\n")
+                    f.write(prompt)
+                    f.write("\n\n=== RESPONSE ===\n")
+                    f.write(response.text)
+                    f.write("\n\n=== ERROR ===\n")
+                    f.write(str(e))
+                print(f"💾 Full response saved to: {debug_file}")
+            except Exception as save_error:
+                print(f"Could not save debug file: {save_error}")
+            
+            return {
+                "error": f"Failed to parse JSON response: {str(e)}",
+                "raw_response": response.text,
+                "error_details": {
+                    "line": e.lineno,
+                    "column": e.colno,
+                    "message": e.msg
+                }
             }
 
     def generate_keywords_for_patient(self, patient_data: Dict[str, Any]) -> Dict[str, Any]:
