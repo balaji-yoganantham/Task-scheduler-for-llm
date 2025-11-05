@@ -1,17 +1,21 @@
 -- Stored Procedure to get patient medical history data for keyword generation
 -- This procedure retrieves patient data and formats it for LLM processing
+-- Updated to include all columns: patient_name, vital, and is_evaluated filter
 
 CREATE OR REPLACE FUNCTION insightsedge.get_patient_data_for_keywords(
-    limit_count INTEGER DEFAULT 50
+    limit_count INTEGER DEFAULT 50,
+    include_evaluated BOOLEAN DEFAULT TRUE
 )
 RETURNS TABLE (
     patient_id INTEGER,
     mrn VARCHAR,
+    patient_name VARCHAR(255),
     age INTEGER,
     gender VARCHAR(20),
     combined_text TEXT,
     oncologist TEXT,
     date_of_visit VARCHAR(50),
+    vital TEXT,
     created_at TIMESTAMP
 ) 
 LANGUAGE plpgsql
@@ -21,9 +25,11 @@ BEGIN
     SELECT 
         pmh.id as patient_id,
         pmh.mrn,
+        pmh.patient_name,
         pmh.age,
         pmh.gender,
         CONCAT(
+            'Patient Name: ', COALESCE(pmh.patient_name, 'Not specified'), E'\n',
             'Patient MRN: ', pmh.mrn, E'\n',
             'Age: ', COALESCE(pmh.age::TEXT, 'Not specified'), ', Gender: ', COALESCE(pmh.gender, 'Not specified'), E'\n',
             'Date of Visit: ', COALESCE(pmh.date_of_visit::TEXT, 'Not specified'), E'\n',
@@ -38,15 +44,18 @@ BEGIN
             'Physical Examination: ', COALESCE(pmh.physical_examination, 'Not specified'), E'\n\n',
             'Laboratory and Imaging Results: ', COALESCE(pmh.laboratory_imaging_results, 'Not specified'), E'\n\n',
             'Imaging: ', COALESCE(pmh.imaging, 'Not specified'), E'\n\n',
+            'Vital Signs: ', COALESCE(pmh.vital, 'Not specified'), E'\n\n',
             'Assessment: ', COALESCE(pmh.assessment, 'Not specified')
         ) as combined_text,
         pmh.oncologist,
-        pmh.date_of_visit,
+        pmh.date_of_visit::VARCHAR(50) as date_of_visit,
+        pmh.vital,
         pmh.created_at
     FROM insightsedge.patient_medical_history pmh
     WHERE pmh.age IS NOT NULL 
         AND pmh.gender IS NOT NULL
         AND pmh.gender IN ('Male', 'Female')
+        AND (include_evaluated = TRUE OR pmh.is_evaluated = 0)
     ORDER BY pmh.created_at DESC
     LIMIT limit_count;
 END;

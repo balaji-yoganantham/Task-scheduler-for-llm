@@ -190,6 +190,7 @@ class PatientToTrialOrchestrator:
             
             try:
                 if matching_results and matching_results.get('patient_info'):
+                    # Save summary evaluation results
                     db_id = self.eval_db.save_patient_to_trial_evaluation(matching_results)
                     if db_id:
                         pipeline_results["database_save_status"] = "success"
@@ -198,6 +199,19 @@ class PatientToTrialOrchestrator:
                     else:
                         pipeline_results["database_save_error"] = "Database save returned None"
                         print("⚠️ Failed to save evaluation results to database")
+                    
+                    # Save individual patient-trial evaluations to normalized table
+                    print(f"\n💾 Saving individual patient-trial evaluations...")
+                    try:
+                        saved_count = self.eval_db.save_patient_trial_evaluations(matching_results)
+                        if saved_count > 0:
+                            pipeline_results["individual_evaluations_saved"] = saved_count
+                            print(f"✅ Saved {saved_count} individual patient-trial evaluations")
+                        else:
+                            print("⚠️ No individual evaluations were saved")
+                    except Exception as e:
+                        print(f"⚠️ Error saving individual evaluations: {e}")
+                        pipeline_results["individual_evaluations_error"] = str(e)
                 else:
                     pipeline_results["database_save_error"] = "No matching results to save"
                     print("⚠️ No matching results available to save to database")

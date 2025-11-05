@@ -198,6 +198,19 @@ class TrialToPatientOrchestrator:
                 pipeline_results["database_save_error"] = str(e)
                 print(f"⚠️ Database save error (continuing with JSON): {e}")
             
+            # Save individual trial-patient evaluations to normalized table
+            print(f"\n💾 Saving individual trial-patient evaluations...")
+            try:
+                saved_count = self.eval_db.save_trial_patient_evaluations(matching_results)
+                if saved_count > 0:
+                    pipeline_results["individual_evaluations_saved"] = saved_count
+                    print(f"✅ Saved {saved_count} individual trial-patient evaluations")
+                else:
+                    print("⚠️ No individual evaluations were saved")
+            except Exception as e:
+                print(f"⚠️ Error saving individual evaluations: {e}")
+                pipeline_results["individual_evaluations_error"] = str(e)
+            
             print(f"\nPIPELINE COMPLETED SUCCESSFULLY!")
             print(f"Pipeline results saved to: {pipeline_file}")
             if pipeline_results["database_save_status"] == "success":

@@ -4,6 +4,7 @@ Common LLM API calls and prompt templates for both patient-to-trial and trial-to
 """
 
 import json
+import re
 from datetime import datetime
 from typing import Dict, Any, List
 from pathlib import Path
@@ -937,13 +938,22 @@ class LLMUtils:
     def parse_batch_trial_patient_evaluation_result(self, response: str, patients: List[Dict[str, Any]], trial_info: Dict[str, Any]) -> Dict[str, Any]:
         """Parse batch trial-patient evaluation result from LLM response"""
         try:
-            # Clean the response
+            # Clean the response - handle markdown code blocks more robustly
             response = response.strip()
-            if response.startswith("```json"):
-                response = response[7:]
-            if response.endswith("```"):
-                response = response[:-3]
+            
+            # Remove markdown code block markers (```json or ```)
+            # Remove opening markdown code block (```json or ```)
+            response = re.sub(r'^```(?:json)?\s*\n?', '', response, flags=re.MULTILINE)
+            # Remove closing markdown code block (```)
+            response = re.sub(r'\n?```\s*$', '', response, flags=re.MULTILINE)
             response = response.strip()
+            
+            # Try to extract JSON if there's any text before/after
+            # Look for the first { and last } to extract just the JSON object
+            json_start = response.find('{')
+            json_end = response.rfind('}')
+            if json_start != -1 and json_end != -1 and json_end > json_start:
+                response = response[json_start:json_end+1]
             
             # Parse JSON
             result = json.loads(response)
@@ -993,6 +1003,29 @@ class LLMUtils:
             }
             
         except json.JSONDecodeError as e:
-            return {"error": f"Failed to parse JSON response: {str(e)}"}
+            error_msg = f"Failed to parse JSON response: {str(e)}"
+            print(f"❌ {error_msg}")
+            print(f"   JSON Error at line {e.lineno}, column {e.colno}")
+            print(f"   Error message: {e.msg}")
+            print(f"   Response length: {len(response)} characters")
+            print(f"   First 1000 chars: {response[:1000]}")
+            # Save debug file
+            try:
+                debug_dir = Path("results/debug")
+                debug_dir.mkdir(parents=True, exist_ok=True)
+                debug_file = debug_dir / f"llm_response_error_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                with open(debug_file, 'w', encoding='utf-8') as f:
+                    f.write("=== PARSED RESPONSE (cleaned) ===\n")
+                    f.write(response)
+                    f.write("\n\n=== ERROR DETAILS ===\n")
+                    f.write(f"Line: {e.lineno}, Column: {e.colno}\n")
+                    f.write(f"Message: {e.msg}\n")
+                    f.write(f"Error: {str(e)}\n")
+                print(f"💾 Full response saved to: {debug_file}")
+            except Exception as save_error:
+                print(f"Could not save debug file: {save_error}")
+            return {"error": error_msg}
         except Exception as e:
-            return {"error": f"Failed to parse batch evaluation result: {str(e)}"}
+            error_msg = f"Failed to parse batch evaluation result: {str(e)}"
+            print(f"❌ {error_msg}")
+            return {"error": error_msg}

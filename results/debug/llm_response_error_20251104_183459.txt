@@ -1,0 +1,371 @@
+=== PROMPT ===
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 4 patients for the given clinical trial and determine eligibility.
+
+        
+        CLINICAL TRIAL INFORMATION:
+        Trial ID: NCT04282044
+        Title: A Phase 1 Study of the Safety and Efficacy of CRX100 as Monotherapy and in Combination With Pembrolizumab in Advanced Solid Malignancies
+        Condition: ["Solid Tumor, Adult", "Triple Negative Breast Cancer", "Colorectal Cancer", "Hepatocellular Carcinoma", "Osteosarcoma", "Epithelial Ovarian Cancer", "Gastric Cancer", "Non-small Cell Lung Cancer", "Malignant Melanoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: Not specified - Not specified
+        Gender: Not specified
+        
+        Brief Summary: Not available
+        
+        Detailed Description: Not available
+        
+        Inclusion Criteria: Not available
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: Not available
+        
+
+        PATIENTS TO EVALUATE:
+        
+        ============================================================
+        PATIENT 1:
+        ============================================================
+        Patient ID: 343
+        MRN: 34982
+        Age: 37
+        Gender: Male
+        Oncologist: Dr. Priya Nair, MD
+        Hybrid Score: 4.626
+        
+        Combined Medical Record: Patient MRN: 34982
+Age: 37, Gender: Male
+Date of Visit: 2025-08-01
+Oncologist: Dr. Priya Nair, MD
+
+Chief Complaint: – Abdominal pain, bloating
+
+History of Present Illness: –
+
+Past Medical History: – Asthma, Migraine
+
+Family History: x – Brother with colorectal cancer at 50
+
+Social History: – Smoker 5 pack-years, drinks socially, lives alone
+
+Review of Systems: – GI positive, constitutional weight loss, rest negative
+
+Medications and Allergies: Not specified
+
+Physical Examination: tite
+
+Laboratory and Imaging Results: s – Hgb 11.0, CEA 80 ng/mL
+
+Imaging: – CT: 5.8 cm transverse colon mass + 2 hepatic lesions
+
+Assessment: – Stage IV colon adenocarcinoma with liver mets
+        
+        ============================================================
+        PATIENT 2:
+        ============================================================
+        Patient ID: 9
+        MRN: 90280004
+        Age: 56
+        Gender: Female
+        Oncologist: Dr. David Thompson, MD
+        Hybrid Score: 4.590
+        
+        Combined Medical Record: Patient MRN: 90280004
+Age: 56, Gender: Female
+Date of Visit: 2025-06-03
+Oncologist: Dr. David Thompson, MD
+
+Chief Complaint: - Fatigue, Vomiting, Weight loss
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 27, 2025
+- Site of primary tumor: Splenic flexure (left colon)
+- Date of initial diagnosis and TNM stage: May 27, 2025; T4aN0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 03, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Fatigue, Vomiting, Weight loss
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Depression
+- Thyroid disorder
+- Asthma
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Maternal grandmother with ovarian cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Nurse
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: NKDA (No Known Drug Allergies)
+
+Physical Examination: - Vitals: BP 117/70, HR 80, RR 19, Temp 99.1°F, SpO2 96% on room air, Weight 129 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 7.6 × 10³/µL, ANC: 2.2 × 10³/µL
+- Hgb: 12.4 g/dL, Platelets: 382 × 10³/µL
+- Chemistry:
+- Creatinine: 0.9 mg/dL, eGFR: 85 mL/min/1.73m²
+- LFTs:
+- AST: 32 U/L, ALT: 23 U/L
+- Alkaline phosphatase: 130 U/L, Total bilirubin: 1.0 mg/dL
+- CEA: 10.1 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G13D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 03, 2025):
+Primary splenic flexure mass (3.9 cm), polypoid mass
+3 pulmonary nodules (largest 3.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: Results
+- Most recent CBC:
+- WBC: 7.6 × 10³/µL, ANC: 2.2 × 10³/µL
+- Hgb: 12.4 g/dL, Platelets: 382 × 10³/µL
+- Chemistry:
+- Creatinine: 0.9 mg/dL, eGFR: 85 mL/min/1.73m²
+- LFTs:
+- AST: 32 U/L, ALT: 23 U/L
+- Alkaline phosphatase: 130 U/L, Total bilirubin: 1.0 mg/dL
+- CEA: 10.1 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G13D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 03, 2025):
+Primary splenic flexure mass (3.9 cm), polypoid mass
+3 pulmonary nodules (largest 3.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 3:
+        ============================================================
+        Patient ID: 361
+        MRN: 101
+        Age: None
+        Gender: Male
+        Oncologist: Dr. Ananya Sharma
+        Hybrid Score: 4.620
+        
+        Combined Medical Record: Patient MRN: 101
+Age: Not specified, Gender: Male
+Date of Visit: 2025-02-06
+Oncologist: Dr. Ananya Sharma
+
+Chief Complaint: Persistent cough and fatigue
+
+History of Present Illness: (HPI): Patient reports a 3-month history of dry cough and general
+
+Past Medical History: (PMH): Hypertension (diagnosed 2015)
+
+Family History: Father had lung cancer at age 68
+
+Social History: Non-smoker, occasional alcohol
+
+Review of Systems: (ROS): Positive for cough and fatigue; negative for fever and chest pain
+
+Medications and Allergies: Amlodipine 5 mg daily
+
+Physical Examination: rsistent cough and fatigue
+
+Laboratory and Imaging Results: Not specified
+
+Imaging: Chest X-ray shows right lower lobe opacity
+
+Assessment: Suspected right lower lobe pneumonia vs malignancy
+        
+        ============================================================
+        PATIENT 4:
+        ============================================================
+        Patient ID: 354
+        MRN: 59103
+        Age: None
+        Gender: Female
+        Oncologist: Dr. Rebecca Green, MD
+        Hybrid Score: 4.557
+        
+        Combined Medical Record: Patient MRN: 59103
+Age: Not specified, Gender: Female
+Date of Visit: 2025-04-18
+Oncologist: Dr. Rebecca Green, MD
+
+Chief Complaint: – Fatigue, occult GI bleeding
+
+History of Present Illness: –
+
+Past Medical History: – Hypertension, Osteoarthritis
+
+Family History: x – Negative for cancer
+
+Social History: Not specified
+
+Review of Systems: – Constitutional +, GI occult bleeding
+
+Medications and Allergies: Not specified
+
+Physical Examination: rtension, Osteoarthritis
+
+Laboratory and Imaging Results: – Colonoscopy confirmed cecal mass
+
+Imaging: – Colonoscopy confirmed cecal mass
+
+Assessment: – Resectable stage IIA colon adenocarcinoma with iron-deficiency anemia
+        
+
+        Instructions:
+        1. For EACH patient, evaluate their eligibility for the trial based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider each patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "patient_id": 343,
+                    "mrn": "34982",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this patient"
+                },
+                {
+                    "patient_id": 9,
+                    "mrn": "90280004",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this patient"
+                }
+                // ... continue for all 4 patients
+            ],
+            "batch_summary": {
+                "total_patients_evaluated": 4,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Patient 1 - Best match due to...",
+                    "Patient 2 - Good alternative because...",
+                    "Patient 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-04T18:34:49.124801"
+            }
+        }
+        
+
+=== RESPONSE ===
+```json
+{
+    "batch_evaluations": [
+        {
+            "patient_id": 343,
+            "mrn": "34982",
+            "eligibility_status": "ELIGIBLE",
+            "confidence_score": 90,
+            "priority_score": 85,
+            "reasoning": "Patient 343 has Stage IV colon adenocarcinoma with liver mets, which is a solid tumor and colorectal cancer, both listed conditions for the trial. The trial has no specified age or gender restrictions, so the patient's age (37) and gender (Male) are compatible. Without specific inclusion or exclusion criteria, the patient appears eligible based on available information.",
+            "key_criteria_met": ["Solid Tumor", "Colorectal Cancer"],
+            "key_criteria_missed": [],
+            "recommendations": "Confirm no specific exclusion criteria apply based on full trial protocol. Prioritize for further evaluation."
+        },
+        {
+            "patient_id": 9,
+            "mrn": "90280004",
+            "eligibility_status": "ELIGIBLE",
+            "confidence_score": 85,
+            "priority_score": 90,
+            "reasoning": "Patient 9 has metastatic colorectal cancer (lung), a solid tumor and colorectal cancer which are listed conditions for the trial. The trial has no specified age or gender restrictions, so the patient's age (56) and gender (Female) are compatible. Without specific inclusion or exclusion criteria, the patient appears eligible based on available information.",
+            "key_criteria_met": ["Solid Tumor", "Colorectal Cancer"],
+            "key_criteria_missed": [],
+            "recommendations": "Confirm no specific exclusion criteria apply based on full trial protocol. Prioritize for further evaluation.",
+        },
+        {
+            "patient_id": 361,
+            "mrn": "101",
+            "eligibility_status": "NEED_MORE_INFO",
+            "confidence_score": 50,
+            "priority_score": 40,
+            "reasoning": "Patient 361 has a suspected right lower lobe pneumonia vs malignancy. While lung cancer is a listed condition, the diagnosis is not confirmed. The patient's age is not specified. More information is needed to determine if the patient has a solid tumor malignancy and to assess eligibility.",
+            "key_criteria_met": [],
+            "key_criteria_missed": ["Solid Tumor Diagnosis"],
+            "recommendations": "Obtain definitive diagnosis regarding suspected malignancy. Determine patient age. Assess for eligibility once diagnosis is confirmed.",
+        },
+        {
+            "patient_id": 354,
+            "mrn": "59103",
+            "eligibility_status": "NEED_MORE_INFO",
+            "confidence_score": 55,
+            "priority_score": 60,
+            "reasoning": "Patient 354 has resectable stage IIA colon adenocarcinoma. Although colorectal cancer is a listed condition, the patient is stage IIA and the term 'advanced' is used in the title of the trial. Stage IIA may not qualify. Also, the age of the patient is not available. Therefore, more information is needed.",
+            "key_criteria_met": ["Colorectal Cancer"],
+            "key_criteria_missed": ["Advanced Solid Malignancy", "Age"],
+            "recommendations": "Determine if resectable Stage IIA colorectal cancer meets the definition of 'advanced solid malignancy' for this trial. Determine patient age.",
+        }
+    ],
+    "batch_summary": {
+        "total_patients_evaluated": 4,
+        "eligible_count": 2,
+        "not_eligible_count": 0,
+        "need_more_info_count": 2,
+        "average_confidence": 70.0,
+        "top_recommendations": [
+            "Patient 343 - Strong candidate due to Stage IV colon adenocarcinoma.",
+            "Patient 9 - Another likely candidate due to metastatic colorectal cancer.",
+            "Patients 361 and 354 - Require additional diagnostic and staging information."
+        ],
+        "generated_at": "2025-11-04T18:34:49.124801"
+    }
+}
+```
+
+=== ERROR ===
+Expecting property name enclosed in double quotes: line 24 column 9 (char 1711)

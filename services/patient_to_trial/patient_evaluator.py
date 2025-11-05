@@ -272,12 +272,25 @@ class PatientEvaluator:
         # Save results to database (new functionality)
         print(f"\n💾 Saving results to database...")
         try:
+            # Save summary evaluation results
             db_id = self.eval_db.save_patient_to_trial_evaluation(results)
             if db_id:
                 results['database_id'] = db_id
                 print(f"✅ Results saved to database with ID: {db_id}")
             else:
                 print("⚠️ Failed to save results to database")
+            
+            # Save individual patient-trial evaluations to normalized table
+            print(f"\n💾 Saving individual patient-trial evaluations...")
+            try:
+                saved_count = self.eval_db.save_patient_trial_evaluations(results)
+                if saved_count > 0:
+                    results['individual_evaluations_saved'] = saved_count
+                    print(f"✅ Saved {saved_count} individual patient-trial evaluations")
+                else:
+                    print("⚠️ No individual evaluations were saved")
+            except Exception as e:
+                print(f"⚠️ Error saving individual evaluations: {e}")
         except Exception as e:
             print(f"⚠️ Database save error (continuing with JSON): {e}")
         

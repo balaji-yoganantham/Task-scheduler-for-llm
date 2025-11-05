@@ -416,5 +416,126 @@
     "keywords_count": 42,
     "keywords_text_length": 959,
     "embedding_index": 37
+  },
+  "63": {
+    "mrn": "PAT_20251104_003",
+    "age": 45,
+    "gender": "Male",
+    "oncologist": null,
+    "date_of_visit": null,
+    "created_at": "2025-11-04T10:16:46.980371",
+    "keywords_count": 38,
+    "keywords_text_length": 839,
+    "embedding_index": 38
+  },
+  "62": {
+    "mrn": "001",
+    "age": 33,
+    "gender": "Male",
+    "oncologist": "Mr.Martin",
+    "date_of_visit": "2025-11-04",
+    "created_at": "2025-11-04T08:08:00.707168",
+    "keywords_count": 36,
+    "keywords_text_length": 601,
+    "embedding_index": 39
+  },
+  "49": {
+    "mrn": "TEST008",
+    "age": 52,
+    "gender": "Female",
+    "oncologist": null,
+    "date_of_visit": "2024-01-22",
+    "created_at": "2025-11-03T14:40:49.529787",
+    "keywords_count": 37,
+    "keywords_text_length": 701,
+    "embedding_index": 40
+  },
+  "48": {
+    "mrn": "TEST007",
+    "age": 35,
+    "gender": "Male",
+    "oncologist": null,
+    "date_of_visit": "2024-01-21",
+    "created_at": "2025-11-03T14:40:48.501252",
+    "keywords_count": 35,
+    "keywords_text_length": 654,
+    "embedding_index": 41
+  },
+  "47": {
+    "mrn": "TEST006",
+    "age": 48,
+    "gender": "Female",
+    "oncologist": null,
+    "date_of_visit": "2024-01-20",
+    "created_at": "2025-11-03T14:40:47.403037",
+    "keywords_count": 35,
+    "keywords_text_length": 614,
+    "embedding_index": 42
+  },
+  "46": {
+    "mrn": "TEST005",
+    "age": 41,
+    "gender": "Male",
+    "oncologist": null,
+    "date_of_visit": "2024-01-19",
+    "created_at": "2025-11-03T14:40:25.610488",
+    "keywords_count": 38,
+    "keywords_text_length": 833,
+    "embedding_index": 43
+  },
+  "45": {
+    "mrn": "TEST004",
+    "age": 55,
+    "gender": "Female",
+    "oncologist": null,
+    "date_of_visit": "2024-01-18",
+    "created_at": "2025-11-03T14:40:24.563933",
+    "keywords_count": 32,
+    "keywords_text_length": 588,
+    "embedding_index": 44
+  },
+  "44": {
+    "mrn": "TEST003",
+    "age": 62,
+    "gender": "Male",
+    "oncologist": null,
+    "date_of_visit": "2024-01-17",
+    "created_at": "2025-11-03T14:40:23.525099",
+    "keywords_count": 36,
+    "keywords_text_length": 736,
+    "embedding_index": 45
+  },
+  "43": {
+    "mrn": "TEST002",
+    "age": 38,
+    "gender": "Female",
+    "oncologist": null,
+    "date_of_visit": "2024-01-16",
+    "created_at": "2025-11-03T14:40:22.527122",
+    "keywords_count": 32,
+    "keywords_text_length": 596,
+    "embedding_index": 46
+  },
+  "42": {
+    "mrn": "TEST001",
+    "age": 45,
+    "gender": "Male",
+    "oncologist": null,
+    "date_of_visit": "2024-01-15",
+    "created_at": "2025-11-03T14:40:21.187068",
+    "keywords_count": 38,
+    "keywords_text_length": 822,
+    "embedding_index": 47
+  },
+  "58": {
+    "mrn": "22334455",
+    "age": 44,
+    "gender": "Female",
+    "oncologist": "efdf",
+    "date_of_visit": "2025-11-13",
+    "created_at": "2025-11-03T13:55:13.444348",
+    "keywords_count": 36,
+    "keywords_text_length": 757,
+    "embedding_index": 48
   }
 }

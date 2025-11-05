@@ -62,7 +62,7 @@ def update_stored_procedure():
                 'Assessment: ', COALESCE(pmh.assessment, 'Not specified')
             ) as combined_text,
             pmh.oncologist,
-            pmh.date_of_visit,
+            pmh.date_of_visit::VARCHAR(50) as date_of_visit,
             pmh.created_at
         FROM insightsedge.patient_medical_history pmh
         WHERE pmh.age IS NOT NULL 
@@ -82,12 +82,12 @@ def update_stored_procedure():
             print("Dropping old function definition...")
             connection.execute(text(drop_sql))
             connection.commit()
-            print("✅ Old function dropped")
+            print("[OK] Old function dropped")
             
             print("Creating new function with corrected return type...")
             connection.execute(text(create_sql))
             connection.commit()
-            print("✅ Stored procedure updated successfully!")
+            print("[OK] Stored procedure updated successfully!")
             
             # Verify the update
             verify_sql = text("""
@@ -102,11 +102,11 @@ def update_stored_procedure():
             result = connection.execute(verify_sql)
             row = result.fetchone()
             if row:
-                print(f"\n✅ Verification: Function '{row[0]}' exists with return type:")
+                print(f"\n[OK] Verification: Function '{row[0]}' exists with return type:")
                 print(f"   {row[1]}")
             
     except Exception as e:
-        print(f"❌ Error updating stored procedure: {e}")
+        print(f"[ERROR] Error updating stored procedure: {e}")
         return False
     
     return True
@@ -119,10 +119,10 @@ if __name__ == "__main__":
     success = update_stored_procedure()
     
     if success:
-        print("\n✅ SUCCESS: Stored procedure has been updated!")
+        print("\n[SUCCESS] Stored procedure has been updated!")
         print("You can now run your pipeline again.")
     else:
-        print("\n❌ FAILED: Could not update stored procedure.")
+        print("\n[FAILED] Could not update stored procedure.")
         print("Please check the error message above and try again.")
         sys.exit(1)
 

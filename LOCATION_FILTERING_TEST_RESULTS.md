@@ -166,7 +166,7 @@ results = orchestrator.run_complete_pipeline(
 
 For location filtering to work, your database tables should have location columns:
 
-**patient_medical_history_temp table:**
+**patient_medical_history table:**
 - `location` (TEXT) - Address string, OR
 - `latitude` (DECIMAL/FLOAT) - Latitude coordinate, OR
 - `longitude` (DECIMAL/FLOAT) - Longitude coordinate

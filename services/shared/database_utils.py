@@ -47,17 +47,17 @@ class DatabaseUtils:
         """Get database connection"""
         return self.engine.connect()
     
-    def get_patient_data_for_keywords(self, limit: int = 50) -> List[Dict[str, Any]]:
+    def get_patient_data_for_keywords(self, limit: int = 50, include_evaluated: bool = True) -> List[Dict[str, Any]]:
         """Get patient data from database using stored procedure"""
         try:
             with self.get_connection() as connection:
-                query = text("SELECT * FROM insightsedge.get_patient_data_for_keywords(:limit)")
-                result = connection.execute(query, {"limit": limit})
+                query = text("SELECT * FROM insightsedge.get_patient_data_for_keywords(:limit, :include_evaluated)")
+                result = connection.execute(query, {"limit": limit, "include_evaluated": include_evaluated})
                 
                 patients = []
                 for row in result:
                     # date_of_visit is now VARCHAR, so use it directly or convert if needed
-                    date_of_visit = row[6]
+                    date_of_visit = row[7]
                     if date_of_visit and hasattr(date_of_visit, 'isoformat'):
                         date_of_visit = date_of_visit.isoformat()
                     elif date_of_visit is None:
@@ -69,12 +69,14 @@ class DatabaseUtils:
                     patients.append({
                         "patient_id": row[0],
                         "mrn": row[1],
-                        "age": row[2],
-                        "gender": row[3],
-                        "combined_text": row[4],
-                        "oncologist": row[5],
+                        "patient_name": row[2],
+                        "age": row[3],
+                        "gender": row[4],
+                        "combined_text": row[5],
+                        "oncologist": row[6],
                         "date_of_visit": date_of_visit,
-                        "created_at": row[7].isoformat() if row[7] else None
+                        "vital": row[8],
+                        "created_at": row[9].isoformat() if row[9] else None
                     })
                 
                 return patients
@@ -186,16 +188,18 @@ class DatabaseUtils:
             return []
     
     def get_patient_by_id(self, patient_id: int) -> Optional[Dict[str, Any]]:
-        """Get specific patient by ID from patient_medical_history_temp table"""
+        """Get specific patient by ID from patient_medical_history table"""
         try:
             with self.get_connection() as connection:
                 query = text("""
                     SELECT 
                         pmh.id as patient_id,
                         pmh.mrn,
+                        pmh.patient_name,
                         pmh.age,
                         pmh.gender,
                         CONCAT(
+                            'Patient Name: ', COALESCE(pmh.patient_name, 'Not specified'), E'\n',
                             'Patient MRN: ', pmh.mrn, E'\n',
                             'Age: ', COALESCE(pmh.age::TEXT, 'Not specified'), ', Gender: ', COALESCE(pmh.gender, 'Not specified'), E'\n',
                             'Date of Visit: ', COALESCE(pmh.date_of_visit::TEXT, 'Not specified'), E'\n',
@@ -210,12 +214,14 @@ class DatabaseUtils:
                             'Physical Examination: ', COALESCE(pmh.physical_examination, 'Not specified'), E'\n\n',
                             'Laboratory and Imaging Results: ', COALESCE(pmh.laboratory_imaging_results, 'Not specified'), E'\n\n',
                             'Imaging: ', COALESCE(pmh.imaging, 'Not specified'), E'\n\n',
+                            'Vital Signs: ', COALESCE(pmh.vital, 'Not specified'), E'\n\n',
                             'Assessment: ', COALESCE(pmh.assessment, 'Not specified')
                         ) as combined_text,
                         pmh.oncologist,
                         pmh.date_of_visit,
+                        pmh.vital,
                         pmh.created_at
-                    FROM insightsedge.patient_medical_history_temp pmh
+                    FROM insightsedge.patient_medical_history pmh
                     WHERE pmh.id = :patient_id
                 """)
                 result = connection.execute(query, {"patient_id": patient_id})
@@ -225,12 +231,14 @@ class DatabaseUtils:
                     return {
                         "patient_id": row[0],
                         "mrn": row[1],
-                        "age": row[2],
-                        "gender": row[3],
-                        "combined_text": row[4],
-                        "oncologist": row[5],
-                        "date_of_visit": row[6].isoformat() if row[6] else None,
-                        "created_at": row[7].isoformat() if row[7] else None
+                        "patient_name": row[2],
+                        "age": row[3],
+                        "gender": row[4],
+                        "combined_text": row[5],
+                        "oncologist": row[6],
+                        "date_of_visit": row[7].isoformat() if row[7] and hasattr(row[7], 'isoformat') else str(row[7]) if row[7] else None,
+                        "vital": row[8],
+                        "created_at": row[9].isoformat() if row[9] else None
                     }
                 return None
         except Exception as e:
@@ -242,22 +250,32 @@ class DatabaseUtils:
         try:
             with self.get_connection() as connection:
                 query = text("""
-                    SELECT * FROM insightsedge.get_patient_data_for_keywords(1000)
+                    SELECT * FROM insightsedge.get_patient_data_for_keywords(1000, TRUE)
                     WHERE mrn = :mrn
                 """)
                 result = connection.execute(query, {"mrn": mrn})
                 row = result.fetchone()
                 
                 if row:
+                    date_of_visit = row[7]
+                    if date_of_visit and hasattr(date_of_visit, 'isoformat'):
+                        date_of_visit = date_of_visit.isoformat()
+                    elif date_of_visit is None:
+                        date_of_visit = None
+                    else:
+                        date_of_visit = str(date_of_visit) if date_of_visit else None
+                    
                     return {
                         "patient_id": row[0],
                         "mrn": row[1],
-                        "age": row[2],
-                        "gender": row[3],
-                        "combined_text": row[4],
-                        "oncologist": row[5],
-                        "date_of_visit": row[6].isoformat() if row[6] else None,
-                        "created_at": row[7].isoformat() if row[7] else None
+                        "patient_name": row[2],
+                        "age": row[3],
+                        "gender": row[4],
+                        "combined_text": row[5],
+                        "oncologist": row[6],
+                        "date_of_visit": date_of_visit,
+                        "vital": row[8],
+                        "created_at": row[9].isoformat() if row[9] else None
                     }
                 return None
         except Exception as e:
@@ -329,12 +347,12 @@ class DatabaseUtils:
         """
         try:
             with self.get_connection() as connection:
-                # Try to get location from patient_medical_history_temp table
+                # Try to get location from patient_medical_history table
                 # Only location column exists (latitude, longitude, address, and city columns don't exist)
                 query = text("""
                     SELECT 
                         COALESCE(pmh.location, '') as location
-                    FROM insightsedge.patient_medical_history_temp pmh
+                    FROM insightsedge.patient_medical_history pmh
                     WHERE pmh.id = :patient_id
                 """)
                 result = connection.execute(query, {"patient_id": patient_id})
