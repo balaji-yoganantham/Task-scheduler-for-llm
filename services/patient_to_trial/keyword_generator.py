@@ -134,36 +134,62 @@ class PatientKeywordGenerator:
         
         print(f"NEW Generating keywords for {len(new_patients)} NEW patients...")
         
-        # Process only new patients
+        # Process only new patients in batches
         try:
-            batch_keywords_data = self.llm_utils.generate_keywords_for_patient_batch(new_patients)
+            from config import MAX_KEYWORD_BATCH_SIZE
             
-            if "error" in batch_keywords_data:
-                print(f"ERROR Batch processing failed: {batch_keywords_data['error']}")
-                print("FALLBACK Falling back to individual patient processing...")
-                
-                # Fallback to individual processing
-                individual_results = self._process_patients_individually(new_patients)
-                results["successful"] = individual_results.get("successful", {})
-                results["failed"] = individual_results.get("failed", {})
-                results["metadata"]["batch_status"] = "fallback_individual"
-                results["metadata"]["fallback_reason"] = batch_keywords_data["error"]
-            else:
-                # Process successful results
-                for patient_id, keywords_data in batch_keywords_data.get("successful", {}).items():
-                    results["successful"][patient_id] = keywords_data
-                    # Save the keywords
-                    self.save_keywords(keywords_data)
-                
-                # Process failed results
-                for patient_id, error_data in batch_keywords_data.get("failed", {}).items():
-                    results["failed"][patient_id] = error_data
-                
-                results["metadata"]["batch_status"] = "success"
+            # Process patients in batches
+            total_processed = 0
+            total_successful = 0
+            total_failed = 0
             
-            print(f"OK Processing completed:")
-            print(f"   Successful: {len(results['successful'])}")
-            print(f"   Failed: {len(results['failed'])}")
+            for batch_start in range(0, len(new_patients), MAX_KEYWORD_BATCH_SIZE):
+                batch_end = min(batch_start + MAX_KEYWORD_BATCH_SIZE, len(new_patients))
+                batch_patients = new_patients[batch_start:batch_end]
+                batch_num = (batch_start // MAX_KEYWORD_BATCH_SIZE) + 1
+                total_batches = (len(new_patients) + MAX_KEYWORD_BATCH_SIZE - 1) // MAX_KEYWORD_BATCH_SIZE
+                
+                print(f"Processing batch {batch_num}/{total_batches} ({len(batch_patients)} patients)...")
+                
+                batch_keywords_data = self.llm_utils.generate_keywords_for_patient_batch(batch_patients)
+                
+                if "error" in batch_keywords_data:
+                    print(f"ERROR Batch {batch_num} processing failed: {batch_keywords_data['error']}")
+                    print(f"FALLBACK Falling back to individual patient processing for batch {batch_num}...")
+                    
+                    # Fallback to individual processing for this batch
+                    individual_results = self._process_patients_individually(batch_patients)
+                    for patient_id, keywords_data in individual_results.get("successful", {}).items():
+                        results["successful"][patient_id] = keywords_data
+                        self.save_keywords(keywords_data)
+                        total_successful += 1
+                    
+                    for patient_id, error_data in individual_results.get("failed", {}).items():
+                        results["failed"][patient_id] = error_data
+                        total_failed += 1
+                else:
+                    # Process successful results from batch
+                    for patient_id, keywords_data in batch_keywords_data.get("successful", {}).items():
+                        results["successful"][patient_id] = keywords_data
+                        self.save_keywords(keywords_data)
+                        total_successful += 1
+                    
+                    # Process failed results from batch
+                    for patient_id, error_data in batch_keywords_data.get("failed", {}).items():
+                        results["failed"][patient_id] = error_data
+                        total_failed += 1
+                
+                total_processed += len(batch_patients)
+            
+            results["metadata"]["batch_status"] = "success"
+            results["metadata"]["batches_processed"] = total_batches
+            results["metadata"]["total_processed"] = total_processed
+            
+            print(f"OK All batches completed:")
+            print(f"   Total batches: {total_batches}")
+            print(f"   Total processed: {total_processed}")
+            print(f"   Successful: {total_successful}")
+            print(f"   Failed: {total_failed}")
             print(f"   Skipped: {len(results['skipped'])}")
                 
         except Exception as e:

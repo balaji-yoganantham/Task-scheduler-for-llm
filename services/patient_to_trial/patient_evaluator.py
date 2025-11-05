@@ -213,7 +213,21 @@ class PatientEvaluator:
         
         if not hybrid_results.get('matching_trials'):
             print("No matching trials found in hybrid matching")
-            return hybrid_results
+            # Return consistent structure with summary even when no trials found
+            return {
+                "patient_id": patient_id,
+                "patient_info": hybrid_results.get('patient_info', {}),
+                "hybrid_matching": hybrid_results,
+                "llm_evaluation": {},
+                "final_ranking": [],
+                "summary": {
+                    "total_trials_found": hybrid_results.get('total_matches', 0),
+                    "trials_evaluated": 0,
+                    "eligible_trials": 0,
+                    "average_confidence": 0
+                },
+                "generated_at": datetime.now().isoformat()
+            }
         
         # Step 2: LLM evaluation of top trials
         print("Step 2: Running LLM evaluation...")
@@ -296,11 +310,12 @@ class PatientEvaluator:
         
         # Print summary
         print(f"\nPipeline Summary:")
-        print(f"Patient: {results['patient_info'].get('mrn', 'Unknown')}")
-        print(f"Total trials found: {results['summary']['total_trials_found']}")
-        print(f"Trials evaluated: {results['summary']['trials_evaluated']}")
-        print(f"Eligible trials: {results['summary']['eligible_trials']}")
-        print(f"Average confidence: {results['summary']['average_confidence']:.1f}%")
+        print(f"Patient: {results.get('patient_info', {}).get('mrn', 'Unknown')}")
+        summary = results.get('summary', {})
+        print(f"Total trials found: {summary.get('total_trials_found', 0)}")
+        print(f"Trials evaluated: {summary.get('trials_evaluated', 0)}")
+        print(f"Eligible trials: {summary.get('eligible_trials', 0)}")
+        print(f"Average confidence: {summary.get('average_confidence', 0):.1f}%")
         print(f"Results saved to: {filepath}")
         if results.get('database_id'):
             print(f"Database ID: {results['database_id']}")

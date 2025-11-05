@@ -16,7 +16,7 @@ RETURNS TABLE (
     oncologist TEXT,
     date_of_visit VARCHAR(50),
     vital TEXT,
-    created_at TIMESTAMP
+    created_at TIMESTAMPTZ
 ) 
 LANGUAGE plpgsql
 AS $$
@@ -47,10 +47,10 @@ BEGIN
             'Vital Signs: ', COALESCE(pmh.vital, 'Not specified'), E'\n\n',
             'Assessment: ', COALESCE(pmh.assessment, 'Not specified')
         ) as combined_text,
-        pmh.oncologist,
+        pmh.oncologist::TEXT as oncologist,
         pmh.date_of_visit::VARCHAR(50) as date_of_visit,
-        pmh.vital,
-        pmh.created_at
+        pmh.vital::TEXT as vital,
+        pmh.created_at::TIMESTAMPTZ as created_at
     FROM insightsedge.patient_medical_history pmh
     WHERE pmh.age IS NOT NULL 
         AND pmh.gender IS NOT NULL

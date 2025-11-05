@@ -9,12 +9,15 @@ from datetime import datetime
 from typing import Dict, Any, List
 from pathlib import Path
 import google.generativeai as genai
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE
 
 class LLMUtils:
     def __init__(self):
         genai.configure(api_key=GEMINI_API_KEY)
         self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        # Create folder for saving LLM prompts
+        self.llm_sent_dir = Path("llm_sent")
+        self.llm_sent_dir.mkdir(exist_ok=True)
 
     def generate_keywords_prompt(self, patient_data: Dict[str, Any]) -> str:
         """Generate prompt for patient keyword extraction"""
@@ -173,8 +176,37 @@ class LLMUtils:
         }}
         """
 
-    def call_llm(self, prompt: str) -> Dict[str, Any]:
+    def _save_prompt_to_file(self, prompt: str, call_type: str = "llm_call", metadata: Dict[str, Any] = None) -> Path:
+        """Save prompt to file with timestamp and metadata"""
+        try:
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S_%f')[:-3]  # Include milliseconds
+            
+            # Create filename with type and timestamp
+            filename = f"{call_type}_{timestamp}.txt"
+            filepath = self.llm_sent_dir / filename
+            
+            # Write prompt with header
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write("=== PROMPT ===\n\n")
+                if metadata:
+                    f.write("=== METADATA ===\n")
+                    for key, value in metadata.items():
+                        f.write(f"{key}: {value}\n")
+                    f.write("\n")
+                f.write(prompt)
+            
+            return filepath
+        except Exception as e:
+            print(f"Warning: Could not save prompt to file: {e}")
+            return None
+    
+    def call_llm(self, prompt: str, call_type: str = "llm_call", metadata: Dict[str, Any] = None) -> Dict[str, Any]:
         """Make LLM API call and parse response"""
+        # Save prompt before sending
+        prompt_file = self._save_prompt_to_file(prompt, call_type, metadata)
+        if prompt_file:
+            print(f"💾 Prompt saved to: {prompt_file}")
+        
         try:
             response = self.model.generate_content(prompt)
             
@@ -257,7 +289,14 @@ class LLMUtils:
     def generate_keywords_for_patient(self, patient_data: Dict[str, Any]) -> Dict[str, Any]:
         """Generate keywords for a single patient"""
         prompt = self.generate_keywords_prompt(patient_data)
-        result = self.call_llm(prompt)
+        metadata = {
+            "call_type": "keyword_generation_single",
+            "patient_id": patient_data.get('patient_id'),
+            "mrn": patient_data.get('mrn'),
+            "age": patient_data.get('age'),
+            "gender": patient_data.get('gender')
+        }
+        result = self.call_llm(prompt, call_type="keyword_generation_single", metadata=metadata)
         
         if "error" not in result:
             result["patient_id"] = patient_data['patient_id']
@@ -284,17 +323,24 @@ class LLMUtils:
                     }
                 }
             
-            # Limit batch size to prevent JSON truncation
-            MAX_BATCH_SIZE = 10
-            if len(patients) > MAX_BATCH_SIZE:
-                print(f"⚠️ Batch size {len(patients)} exceeds limit of {MAX_BATCH_SIZE}. Processing first {MAX_BATCH_SIZE} patients.")
-                patients = patients[:MAX_BATCH_SIZE]
+            # Limit batch size to prevent JSON truncation (use config value)
+            if len(patients) > MAX_KEYWORD_BATCH_SIZE:
+                print(f"⚠️ Batch size {len(patients)} exceeds limit of {MAX_KEYWORD_BATCH_SIZE}. Processing first {MAX_KEYWORD_BATCH_SIZE} patients.")
+                patients = patients[:MAX_KEYWORD_BATCH_SIZE]
             
             # Create batch prompt
             batch_prompt = self.generate_batch_keywords_prompt(patients)
             
             # Call LLM with batch prompt
-            result = self.call_llm(batch_prompt)
+            patient_ids = [p.get('patient_id') for p in patients]
+            mrns = [p.get('mrn') for p in patients]
+            metadata = {
+                "call_type": "keyword_generation_batch",
+                "batch_size": len(patients),
+                "patient_ids": patient_ids,
+                "mrns": mrns
+            }
+            result = self.call_llm(batch_prompt, call_type="keyword_generation_batch", metadata=metadata)
             
             if "error" in result:
                 return {"error": result["error"]}
@@ -493,7 +539,14 @@ class LLMUtils:
     def evaluate_patient_trial_match(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> Dict[str, Any]:
         """Evaluate patient-trial match"""
         prompt = self.patient_trial_evaluation_prompt(trial_info, patient_info)
-        result = self.call_llm(prompt)
+        metadata = {
+            "call_type": "trial_evaluation_single",
+            "patient_id": patient_info.get('patient_id'),
+            "mrn": patient_info.get('mrn'),
+            "trial_id": trial_info.get('trial_id'),
+            "trial_title": trial_info.get('title', '')[:50] + "..." if trial_info.get('title') else None
+        }
+        result = self.call_llm(prompt, call_type="trial_evaluation_single", metadata=metadata)
         
         if "error" not in result:
             result["patient_info"] = {
@@ -515,7 +568,14 @@ class LLMUtils:
     def evaluate_trial_patient_match(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> Dict[str, Any]:
         """Evaluate trial-patient match"""
         prompt = self.trial_patient_evaluation_prompt(trial_info, patient_info)
-        result = self.call_llm(prompt)
+        metadata = {
+            "call_type": "patient_evaluation_single",
+            "patient_id": patient_info.get('patient_id'),
+            "mrn": patient_info.get('mrn'),
+            "trial_id": trial_info.get('trial_id'),
+            "trial_title": trial_info.get('title', '')[:50] + "..." if trial_info.get('title') else None
+        }
+        result = self.call_llm(prompt, call_type="patient_evaluation_single", metadata=metadata)
         
         if "error" not in result:
             result["patient_info"] = {
@@ -538,7 +598,15 @@ class LLMUtils:
         """Evaluate multiple trials for a patient in one batch"""
         try:
             prompt = self.batch_patient_trial_evaluation_prompt(trials, patient_info)
-            result = self.call_llm(prompt)
+            trial_ids = [t.get('trial_id') for t in trials]
+            metadata = {
+                "call_type": "trial_evaluation_batch",
+                "patient_id": patient_info.get('patient_id'),
+                "mrn": patient_info.get('mrn'),
+                "batch_size": len(trials),
+                "trial_ids": trial_ids
+            }
+            result = self.call_llm(prompt, call_type="trial_evaluation_batch", metadata=metadata)
             
             if "error" not in result:
                 # Parse the batch results
@@ -813,7 +881,17 @@ class LLMUtils:
         """Evaluate multiple patients for a trial in one batch"""
         try:
             prompt = self.batch_trial_patient_evaluation_prompt(patients, trial_info)
-            result = self.call_llm(prompt)
+            patient_ids = [p.get('patient_id') for p in patients]
+            mrns = [p.get('mrn') for p in patients]
+            metadata = {
+                "call_type": "patient_evaluation_batch",
+                "trial_id": trial_info.get('trial_id'),
+                "trial_title": trial_info.get('title', '')[:50] + "..." if trial_info.get('title') else None,
+                "batch_size": len(patients),
+                "patient_ids": patient_ids,
+                "mrns": mrns
+            }
+            result = self.call_llm(prompt, call_type="patient_evaluation_batch", metadata=metadata)
             
             if "error" not in result:
                 # Parse the batch results

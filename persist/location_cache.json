@@ -11484,5 +11484,71 @@
     "latitude": 36.6744117,
     "longitude": -121.655037,
     "original_address": "Salinas, California, United States"
+  },
+  "phoenix, ar": {
+    "success": true,
+    "latitude": -33.8748031,
+    "longitude": 18.5063443,
+    "original_address": "Phoenix, Ar"
+  },
+  "san diego, ca": {
+    "success": true,
+    "latitude": 32.7174202,
+    "longitude": -117.162772,
+    "original_address": "San Diego, Ca"
+  },
+  "santa rosa, ca": {
+    "success": true,
+    "latitude": 38.4404925,
+    "longitude": -122.7141049,
+    "original_address": "Santa Rosa, CA"
+  },
+  "santa clara, ca": {
+    "success": true,
+    "latitude": 37.3541132,
+    "longitude": -121.955174,
+    "original_address": "Santa Clara, CA"
+  },
+  "burlingame, ca": {
+    "success": true,
+    "latitude": 37.5780965,
+    "longitude": -122.3473099,
+    "original_address": "Burlingame, CA"
+  },
+  "south san francisco, ca": {
+    "success": true,
+    "latitude": 37.6535403,
+    "longitude": -122.4168664,
+    "original_address": "South San Francisco, CA"
+  },
+  "gilroy, ca": {
+    "success": true,
+    "latitude": 37.0065078,
+    "longitude": -121.5631723,
+    "original_address": "Gilroy, CA"
+  },
+  "palo alto, ca": {
+    "success": true,
+    "latitude": 37.4443293,
+    "longitude": -122.1598465,
+    "original_address": "Palo Alto, CA"
+  },
+  "saratoga, ca": {
+    "success": true,
+    "latitude": 37.2638324,
+    "longitude": -122.0230146,
+    "original_address": "Saratoga, CA"
+  },
+  "novato, ca": {
+    "success": true,
+    "latitude": 38.1061979,
+    "longitude": -122.5681191,
+    "original_address": "Novato, CA"
+  },
+  "sunnyvale, ca": {
+    "success": true,
+    "latitude": 37.3688301,
+    "longitude": -122.036349,
+    "original_address": "Sunnyvale, CA"
   }
 }

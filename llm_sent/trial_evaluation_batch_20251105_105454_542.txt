@@ -1,0 +1,273 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 2
+mrn: 00070367
+batch_size: 2
+trial_ids: ['NCT05334069', 'NCT05080673']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 2
+        MRN: 00070367
+        Age: 36
+        Gender: Female
+        Oncologist: Dr. Angela Kim
+        Combined Medical Record: Patient Name: Isabella Martinez
+Patient MRN: 00070367
+Age: 36, Gender: Female
+Date of Visit: 2025-08-20
+Oncologist: Dr. Angela Kim
+
+Chief Complaint: Abdominal bloating and irregular menstrual cycles
+
+History of Present Illness: 4-month history of bloating, mild cramping, and delayed periods.
+
+Past Medical History: Hypothyroidism
+
+Family History: No cancer history
+
+Social History: Non-smoker
+
+Review of Systems: Positive for irregular menses
+
+Medications and Allergies: None
+
+Physical Examination: inations: Mild abdominal tenderness
+
+Laboratory and Imaging Results: Imaging Results: CA-125 slightly raised, MRI shows complex cystic lesion
+
+Imaging: Results: CA-125 slightly raised, MRI shows complex cystic lesion
+
+Vital Signs: [{"bmi": 22.8, "date": "2025-08-20", "heart_rate": 74, "temperature_c": 37.1, 
+"blood_pressure": "119/72"}]
+
+Assessment: Suspected endometrioma
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05334069
+        Title: Blinded Reference Set for Multicancer Early Detection Blood Tests
+        Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor Stage II Lymphoma", "Ann Arbor Stage III Lymphoma", "Ann Arbor Stage IV Lymphoma", "Chronic Lymphocytic Leukemia", "Chronic Myeloid Leukemia", "Gastroesophageal Junction Adenocarcinoma", "Head and Neck Carcinoma", "Hematopoietic and Lymphoid Cell Neoplasm", "Invasive Breast Carcinoma", "Kidney Carcinoma", "Malignant Hepatobiliary Neoplasm", "Malignant Solid Neoplasm", "Melanoma", "Muscle-Invasive Bladder Carcinoma", "RISS Stage I Plasma Cell Myeloma", "RISS Stage II Plasma Cell Myeloma", "RISS Stage III Plasma Cell Myeloma", "Sarcoma", "Stage I Bladder Cancer AJCC v6 and v7", "Stage I Breast Cancer AJCC v7", "Stage I Colorectal Cancer AJCC v6 and v7", "Stage I Esophageal Cancer AJCC V7", "Stage I Gastric Cancer AJCC V7", "Stage I Lung Cancer AJCC v7", "Stage I Ovarian Cancer AJCC v6 and v7", "Stage I Pancreatic Cancer AJCC v6 and v7", "Stage I Prostate Cancer AJCC v7", "Stage I Uterine Corpus Cancer AJCC v7", "Stage II Bladder Cancer AJCC v6 and v7", "Stage II Breast Cancer AJCC v6 and v7", "Stage II Colorectal Cancer AJCC v7", "Stage II Esophageal Cancer AJCC v7", "Stage II Gastric Cancer AJCC v7", "Stage II Lung Cancer AJCC v7", "Stage II Ovarian Cancer AJCC v6 and v7", "Stage II Pancreatic Cancer AJCC v6 and v7", "Stage II Prostate Cancer AJCC v7", "Stage II Uterine Corpus Cancer AJCC v7", "Stage III Bladder Cancer AJCC v6 and v7", "Stage III Breast Cancer AJCC v7", "Stage III Colorectal Cancer AJCC v7", "Stage III Esophageal Cancer AJCC v7", "Stage III Gastric Cancer AJCC v7", "Stage III Lung Cancer AJCC v7", "Stage III Ovarian Cancer AJCC v6 and v7", "Stage III Pancreatic Cancer AJCC v6 and v7", "Stage III Prostate Cancer AJCC v7", "Stage III Uterine Corpus Cancer AJCC v7", "Stage IV Bladder Cancer AJCC v7", "Stage IV Breast Cancer AJCC v6 and v7", "Stage IV Colorectal Cancer AJCC v7", "Stage IV Esophageal Cancer AJCC v7", "Stage IV Gastric Cancer AJCC v7", "Stage IV Lung Cancer AJCC v7", "Stage IV Ovarian Cancer AJCC v6 and v7", "Stage IV Pancreatic Cancer AJCC v6 and v7", "Stage IV Prostate Cancer AJCC v7", "Stage IV Uterine Corpus Cancer AJCC v7", "Thyroid Gland Carcinoma"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 40 Years - 75 Years
+        Gender: ALL
+        Hybrid Score: 5.082
+        
+        Brief Summary: This study collects blood and tissue samples from patients with cancer and without cancer to evaluate tests for early cancer detection. Collecting and storing samples of blood and tissue from patients with and without cancer to study in the laboratory may help researchers develop tests for the early detection of cancers.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To provide a blinded reference set of cancer versus (vs.) non-cancer blood samples that will be used to validate assays for inclusion in a prospective clinical trial focused on utility of blood-based multi-cancer early detection.
+
+SECONDARY OBJECTIVES:
+
+I. Evaluate test performance at the time of initial cancer diagnosis by tumor type.
+
+II. Evaluate test performance at the time of initial cancer diagnosis by clinical stage.
+
+OUTLINE:
+
+Participants complete a questionnaire at baseline. Participants undergo collection of blood samples at registration and at 12 months after registration. Patients with a cancer diagnosis may undergo collection of tissue samples at registration and 12 months after registration.
+
+After completion of study, participants are followed up at 1 year.
+        
+        Inclusion Criteria: ["* Participants with a cancer diagnosis: Documentation of disease:", "* Histologic documentation: Histologically confirmed diagnosis of invasive cancer", "* Stage: Stage I-IV per American Joint Committee on Cancer (AJCC) 7th edition, with the exception of patients with leukemia, lymphoma, and multiple myeloma", "* For leukemia: Type (chronic lymphocytic leukemia \\[CLL\\], chronic myeloid leukemia \\[CML\\], acute lymphoblastic lymphoma \\[ALL\\], acute myeloid leukemia \\[AML\\])", "* For lymphoma: Stage I-IV based on Ann Arbor staging", "* For multiple myeloma: Stage I, II, III based on Revised International Staging System (RISS)", "* One of the following tumor types:", "* Colorectal", "* Bladder", "* Head and neck", "* Hepatobiliary", "* Lung", "* Lymphoma", "* Leukemia", "* Ovary \\*\\*\\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Pancreas \\*\\*\\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Multiple myeloma", "* Gastric, esophageal or gastroesophageal", "* Breast", "* Thyroid", "* Kidney", "* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Endometrium", "* Prostate", "* Melanoma", "\\*\\*\\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Sarcoma", "* Participants with a cancer diagnosis: No prior definitive systemic or local anti-cancer intervention", "* Participants with a cancer diagnosis: Age \\>= 40 and =\\< 75", "* Participants with a cancer diagnosis: No known current pregnancy by self-report", "* Participants with a cancer diagnosis: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis", "* Participants with a cancer diagnosis: Willingness to provide blood samples for research use", "* Participants with a cancer diagnosis: Absence of medical contraindications to a research blood draw volume of 60 mL", "* Participants with a cancer diagnosis: No history of organ transplantation", "* Participants with a cancer diagnosis: Ability to read and comprehend English or Spanish", "\\* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages", "* Participants without a cancer diagnosis and without suspicion of cancer: Age \\>= 40 and =\\< 75", "* Participants without a cancer diagnosis and without suspicion of cancer: No known current pregnancy by self-report", "* Participants without a cancer diagnosis and without suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers)", "* Participants without a cancer diagnosis and without suspicion of cancer: Willingness to provide blood samples for research use", "* Participants without a cancer diagnosis and without suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL", "* Participants without a cancer diagnosis and without suspicion of cancer: No history of organ transplantation", "* Participants without a cancer diagnosis and without suspicion of cancer: Ability to read and comprehend English or Spanish", "\\* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages", "* Participants with a high suspicion of cancer: High suspicion of ovarian cancer, pancreatic cancer, kidney cancer, or melanoma by clinical and/or radiological assessment, with plans for histologic or cytologic confirmation within 28 days after study blood draw", "\\* Examples of highly suspicious cases include: elevated CA125 and abnormal transvaginal ultrasound, suspicious renal or pancreatic mass on imaging, suspicious cutaneous lesion concerning for melanoma", "* Participants with a high suspicion of cancer: Central review of radiology reports and/or clinical documentation conducted by study chairs", "* Participants with a high suspicion of cancer: Age \\>= 40 and =\\< 75", "* Participants with a high suspicion of cancer: No known current pregnancy by self-report", "* Participants with a high suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis", "* Participants with a high suspicion of cancer: Willingness to provide blood samples for research use", "* Participants with a high suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL", "* Participants with a high suspicion of cancer: No history or organ transplantation", "* Participants with a high suspicion of cancer: Ability to read and comprehend English or Spanish \\* Eligibility is restricted to individuals who can comprehend and read English and Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages"]
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Participants with a cancer diagnosis: Documentation of disease:
+
+  * Histologic documentation: Histologically confirmed diagnosis of invasive cancer
+  * Stage: Stage I-IV per American Joint Committee on Cancer (AJCC) 7th edition, with the exception of patients with leukemia, lymphoma, and multiple myeloma
+
+    * For leukemia: Type (chronic lymphocytic leukemia \[CLL\], chronic myeloid leukemia \[CML\], acute lymphoblastic lymphoma \[ALL\], acute myeloid leukemia \[AML\])
+    * For lymphoma: Stage I-IV based on Ann Arbor staging
+    * For multiple myeloma: Stage I, II, III based on Revised International Staging System (RISS)
+  * One of the following tumor types:
+
+    * Colorectal
+    * Bladder
+    * Head and neck
+    * Hepatobiliary
+    * Lung
+    * Lymphoma
+    * Leukemia
+    * Ovary \*\*\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Pancreas \*\*\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Multiple myeloma
+    * Gastric, esophageal or gastroesophageal
+    * Breast
+    * Thyroid
+    * Kidney
+
+      * For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Endometrium
+    * Prostate
+    * Melanoma
+
+      \*\*\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Sarcoma
+* Participants with a cancer diagnosis: No prior definitive systemic or local anti-cancer intervention
+* Participants with a cancer diagnosis: Age \>= 40 and =\< 75
+* Participants with a cancer diagnosis: No known current pregnancy by self-report
+* Participants with a cancer diagnosis: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis
+* Participants with a cancer diagnosis: Willingness to provide blood samples for research use
+* Participants with a cancer diagnosis: Absence of medical contraindications to a research blood draw volume of 60 mL
+* Participants with a cancer diagnosis: No history of organ transplantation
+* Participants with a cancer diagnosis: Ability to read and comprehend English or Spanish
+
+  \* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages
+* Participants without a cancer diagnosis and without suspicion of cancer: Age \>= 40 and =\< 75
+* Participants without a cancer diagnosis and without suspicion of cancer: No known current pregnancy by self-report
+* Participants without a cancer diagnosis and without suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers)
+* Participants without a cancer diagnosis and without suspicion of cancer: Willingness to provide blood samples for research use
+* Participants without a cancer diagnosis and without suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL
+* Participants without a cancer diagnosis and without suspicion of cancer: No history of organ transplantation
+* Participants without a cancer diagnosis and without suspicion of cancer: Ability to read and comprehend English or Spanish
+
+  \* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages
+* Participants with a high suspicion of cancer: High suspicion of ovarian cancer, pancreatic cancer, kidney cancer, or melanoma by clinical and/or radiological assessment, with plans for histologic or cytologic confirmation within 28 days after study blood draw
+
+  \* Examples of highly suspicious cases include: elevated CA125 and abnormal transvaginal ultrasound, suspicious renal or pancreatic mass on imaging, suspicious cutaneous lesion concerning for melanoma
+* Participants with a high suspicion of cancer: Central review of radiology reports and/or clinical documentation conducted by study chairs
+* Participants with a high suspicion of cancer: Age \>= 40 and =\< 75
+* Participants with a high suspicion of cancer: No known current pregnancy by self-report
+* Participants with a high suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis
+* Participants with a high suspicion of cancer: Willingness to provide blood samples for research use
+* Participants with a high suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL
+* Participants with a high suspicion of cancer: No history or organ transplantation
+* Participants with a high suspicion of cancer: Ability to read and comprehend English or Spanish \* Eligibility is restricted to individuals who can comprehend and read English and Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT05080673
+        Title: Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps
+        Condition: ["Adenocarcinoma of the Colon", "Adenocarcinoma of the Rectum"]
+        Phase: NA
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 45 Years - 70 Years
+        Gender: ALL
+        Hybrid Score: 4.878
+        
+        Brief Summary: This trial examines colorectal cancer incidence in participants with 1 to 2 non-advanced adenomas randomized to surveillance colonoscopy at 10 years compared to participants randomized to surveillance colonoscopy at 5 and 10 years.
+        
+        Detailed Description: Colorectal cancer (CRC) is the fourth most common cancer and the second leading cause of cancer death among men and women in the United States (US). The lifetime risk of colorectal cancer in both men and women in the US is approximately 6%. About 93% of colorectal cancer (CRC) diagnoses are in patients older than 50 years (Siegel 2014). Randomized controlled trials show that screening for CRC significantly decreases CRC incidence and mortality (Schoen 2012, Atkin 2010, Mandel 1999, Mandel 2000). CRC screening has received a Grade A recommendation from the US Preventive Services Task Force.
+
+In the U.S., colonoscopy is the most utilized screening modality for CRC. On a population basis, screening rates, which were around 40-50%, have now increased to 65%, and a goal to increase to 80% compliance is being promoted (CDC 2011, CDC 2013, Meester 2015).
+
+Adenomatous polyps are the acknowledged precursors of colorectal cancer. Identification and removal of adenomas is the mechanism by which screening is effective in reducing CRC incidence and subsequent mortality. "Advanced" adenomas are adenomas which are greater than or equal to 1 cm, or have a "villous" component (tubulovillous or villous), or have foci of high grade dysplasia. Advanced adenomas are associated with increased long-term risk of cancer, even years after colonoscopy (Click 2018). The prevalence of advanced adenomas at screening colonoscopy is 5-10% (Ferlitsch 2011, Imperiale 2014). Non-advanced adenomas are adenomas greater than 1 cm with neither villous components nor high grade dysplasia. Non-advanced adenomas are much more common than advanced adenomas, present in around 30% of colonoscopy exams (Ferlitsch 2011, Imperiale 2014).
+
+After detection of adenomas, patients are advised to return periodically for surveillance colonoscopy. Patients with 1-2 non-advanced adenomas are recommended by guidelines to return in 5 - 10 years for follow-up surveillance colonoscopy (Lieberman 2012). However, there are no guidelines on how to triage individuals to 5 as opposed to 10 years. Furthermore, there is limited evidence supporting the effectiveness of surveillance colonoscopy in reducing CRC incidence. A retrospective study in patients with advanced adenomas demonstrated benefit (Atkin 2017), but the study was not randomized and did not include patients with 1-2 non-advanced adenomas. The only randomized trial of surveillance colonoscopy was reported in the early 1990's, when participants were randomized to 3 vs. 1- and 3- year surveillance (Winawer 1993). No difference in advanced adenoma detection was observed when comparing participants examined at the two screening intervals, and as a result, guidelines were modified with participants advised to return every 3 years after adenomatous polyp detection. The recommended interval for non-advanced adenomas was gradually lengthened to the current standard, but there is no randomized, controlled data to support that interval. Furthermore, observational data of surveillance colonoscopy practice in the U.S. demonstrate that recommended intervals are often not adhered to, and individuals return for repeat testing well ahead of guideline recommendations (Schoen 2010, Lieberman 2014).
+
+Furthermore, if anything, retrospective, natural history studies of non-advanced adenomas do not support the association of non-advanced adenoma with a higher risk of subsequent colorectal cancer (Atkin 1992, Spencer 1984, Loberg 2014). For example, in a classic study from the United Kingdom, patients with small rectosigmoid adenomas, even if multiple, did not have an increased risk of CRC compared to the general population, over a 14-year mean follow-up time (Atkin 1992). In a recent observational study from Norway, participants with a low-risk adenoma followed over a median of 7.7 years (maximum 19 years) without subsequent surveillance colonoscopy, had a lower CRC mortality than the general population (Loberg 2014), implying that although the initial colonoscopy may be protective, subsequent follow-up colonoscopy was not required. More recently, several studies have reported that individuals with non-advanced adenomas do not have an increased risk of colorectal cancer compared to those with no adenomas (Click 2018, Lieberman 2019, Lee 2019).
+
+Another recent major development affecting screening is that practitioners of colonoscopy are now recommended to monitor and insure their adenoma detection rates are high. Data from Poland (Kaminski 2010) and Kaiser Permanente in California (Corley 2014) have demonstrated that a higher adenoma detection rate (ADR) is associated with a lower long-term risk of interval CRC, or cancer occurring after colonoscopy. Our understanding of these observations is premised on the notion that leaving pre-neoplastic tissue (adenomas) in situ, (such as what occurs with a lower ADR), increases the chance that an adenoma left behind will subsequently transform into cancer. The concern over interval cancers has stimulated quality concerns about the practice of colonoscopy. Guidelines for a recommended ADR at screening colonoscopy are rising, from the initial targets of 15% in women and 25% in men (Lieberman 2012) to 20% in women and 30% in men or 25% overall. ADRs in clinical studies are now commonly over 30% and some practitioners report rates exceeding 50%. However, adenomas that are detected when the ADR is high or as it increases over time are generally small, non-advanced adenomas.
+
+Current clinical practice favoring colonoscopy-based screening with increased emphasis on detection of adenomas, most of which will turn out to be small, non-advanced adenomas, will greatly increase demand for utilization of surveillance colonoscopy exams in the coming decades. Yet, the evidence for determining the benefit, optimal timing, and recommended frequency of surveillance colonoscopy is unknown. A randomized, clinical trial to demonstrate the difference in yield between 5- or 10-year surveillance for participants with non-advanced adenoma is needed to guide clinical practice. Only a randomized trial will be authoritative enough to define good clinical practice and directly influence clinical care.
+        
+        Inclusion Criteria: ["* The participant must have signed and dated an IRB-approved consent form that conforms to federal and institutional guidelines.", "* Participants greater than or equal to 45 and less than 70 years of age at the time of colonoscopy.", "* Participants with a first-time diagnosis of 1-2 non-advanced tubular adenomas (less than 10 mm without tubulovillous or villous changes or high grade or severe dysplasia) from the qualifying colonoscopy within 4 years prior to randomization.", "* Sessile serrated polyps/adenomas, as long as they do not meet the criteria for advanced adenomas, will be considered as non-advanced adenomas.", "* Qualifying colonoscopy must be a complete colonoscopy with visualization of the cecum and with adequate cleansing within 4 years prior to randomization.", "* Complete excision of all observed polyps in qualifying colonoscopy", "* Participants must be able to read or understand English or Spanish."]
+        
+        Exclusion Criteria: ["* \u2022 Prior history of colorectal cancer or colorectal adenomas including sessile serrated polyps/adenomas excluding those found on the qualifying colonoscopy.", "* Prior history of a hyperplastic polyp measuring greater than or equal to 1 cm in size.", "* Traditional serrated adenomas found on the qualifying colonoscopy.", "* Hyperplastic polyp measuring greater than or equal to 1 cm in size found on the qualifying colonoscopy.", "* Previous malignancies unless the patient has been disease-free for 5 or more years prior to randomization and is deemed by the physician to be at low risk for recurrence. Patients with the following cancers are eligible if diagnosed and treated within the past 5 years: all in situ cancers and basal cell and squamous cell carcinoma of the skin.", "* Colonoscopy performed after the qualifying colonoscopy but prior to randomization.", "* Incomplete qualifying colonoscopy (e.g., cecum not visualized).", "* Incomplete endoscopic excision of adenomatous polyps based on colonoscopist impression at qualifying colonoscopy. (Excision of all hyperplastic rectosigmoid polyps is not required.)", "* Sub-total colectomy or total proctocolectomy. (Segmental resections are allowed.)", "* Family history of CRC diagnosed at less than or equal to 60 years of age in a first degree relative (mother, father, child, sibling) or in two first degree relatives with CRC at any age.", "* Participants with a clinical diagnosis of a significant heritable risk for colorectal cancer (Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \\[Lynch Syndrome\\]).", "* Participants tested positive for a Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \\[Lynch Syndrome\\] genetic mutation that increases risk of colorectal cancer.", "* Inflammatory bowel disease (e.g., Crohn's Disease, ulcerative colitis).", "* Life expectancy less than 10 years due to comorbid conditions in the opinion of the investigator.", "* Other comorbid conditions that would prevent the participant from having colonoscopies or would prevent required follow-up."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* The participant must have signed and dated an IRB-approved consent form that conforms to federal and institutional guidelines.
+* Participants greater than or equal to 45 and less than 70 years of age at the time of colonoscopy.
+* Participants with a first-time diagnosis of 1-2 non-advanced tubular adenomas (less than 10 mm without tubulovillous or villous changes or high grade or severe dysplasia) from the qualifying colonoscopy within 4 years prior to randomization.
+* Sessile serrated polyps/adenomas, as long as they do not meet the criteria for advanced adenomas, will be considered as non-advanced adenomas.
+* Qualifying colonoscopy must be a complete colonoscopy with visualization of the cecum and with adequate cleansing within 4 years prior to randomization.
+* Complete excision of all observed polyps in qualifying colonoscopy
+* Participants must be able to read or understand English or Spanish.
+
+Exclusion Criteria:
+
+* • Prior history of colorectal cancer or colorectal adenomas including sessile serrated polyps/adenomas excluding those found on the qualifying colonoscopy.
+
+  * Prior history of a hyperplastic polyp measuring greater than or equal to 1 cm in size.
+  * Traditional serrated adenomas found on the qualifying colonoscopy.
+  * Hyperplastic polyp measuring greater than or equal to 1 cm in size found on the qualifying colonoscopy.
+  * Previous malignancies unless the patient has been disease-free for 5 or more years prior to randomization and is deemed by the physician to be at low risk for recurrence. Patients with the following cancers are eligible if diagnosed and treated within the past 5 years: all in situ cancers and basal cell and squamous cell carcinoma of the skin.
+  * Colonoscopy performed after the qualifying colonoscopy but prior to randomization.
+  * Incomplete qualifying colonoscopy (e.g., cecum not visualized).
+  * Incomplete endoscopic excision of adenomatous polyps based on colonoscopist impression at qualifying colonoscopy. (Excision of all hyperplastic rectosigmoid polyps is not required.)
+  * Sub-total colectomy or total proctocolectomy. (Segmental resections are allowed.)
+  * Family history of CRC diagnosed at less than or equal to 60 years of age in a first degree relative (mother, father, child, sibling) or in two first degree relatives with CRC at any age.
+  * Participants with a clinical diagnosis of a significant heritable risk for colorectal cancer (Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \[Lynch Syndrome\]).
+  * Participants tested positive for a Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \[Lynch Syndrome\] genetic mutation that increases risk of colorectal cancer.
+  * Inflammatory bowel disease (e.g., Crohn's Disease, ulcerative colitis).
+  * Life expectancy less than 10 years due to comorbid conditions in the opinion of the investigator.
+  * Other comorbid conditions that would prevent the participant from having colonoscopies or would prevent required follow-up.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05334069",
+                    "trial_title": "Blinded Reference Set for Multicancer Early Detection Blood Tests",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT05080673",
+                    "trial_title": "Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-05T10:54:54.542718"
+            }
+        }
+        

@@ -283,7 +283,7 @@ class DatabaseUtils:
             return None
     
     def get_trial_by_id(self, trial_id: str) -> Optional[Dict[str, Any]]:
-        """Get specific trial by ID"""
+        """Get specific trial by ID with all detailed fields"""
         try:
             with self.get_connection() as connection:
                 query = text("""
@@ -297,6 +297,14 @@ class DatabaseUtils:
                         ctd.start_date::TEXT as created_date,
                         0 as patients_matched,
                         'pending'::TEXT as matching_status,
+                        COALESCE(ctd.minimum_age, 'Not specified')::TEXT as minimum_age,
+                        COALESCE(ctd.maximum_age, 'Not specified')::TEXT as maximum_age,
+                        COALESCE(ctd.sex, 'Not specified')::TEXT as sex,
+                        COALESCE(ctd.brief_summary, 'Not available')::TEXT as brief_summary,
+                        COALESCE(ctd.detailed_description, 'Not available')::TEXT as detailed_description,
+                        COALESCE(ctd.inclusion_criteria, 'Not available')::TEXT as inclusion_criteria,
+                        COALESCE(ctd.exclusion_criteria, 'Not available')::TEXT as exclusion_criteria,
+                        COALESCE(ctd.eligibility_criteria, 'Not available')::TEXT as eligibility_criteria,
                         CONCAT(
                             'Trial ID: ', ctd.nct_id, E'\n',
                             'Title: ', ctd.study_title, E'\n',
@@ -331,7 +339,15 @@ class DatabaseUtils:
                         "created_date": str(row[6]),
                         "patients_matched": int(row[7]),
                         "matching_status": str(row[8]),
-                        "combined_trial_text": str(row[9])
+                        "minimum_age": str(row[9]),
+                        "maximum_age": str(row[10]),
+                        "sex": str(row[11]),
+                        "brief_summary": str(row[12]),
+                        "detailed_description": str(row[13]),
+                        "inclusion_criteria": str(row[14]),
+                        "exclusion_criteria": str(row[15]),
+                        "eligibility_criteria": str(row[16]),
+                        "combined_trial_text": str(row[17])
                     }
                 return None
         except Exception as e:
@@ -562,7 +578,11 @@ class DatabaseUtils:
                     }
                 return None
         except Exception as e:
-            print(f"Error getting patient keywords: {e}")
+            # Check if it's a table not found error
+            if "does not exist" in str(e) or "UndefinedTable" in str(type(e).__name__):
+                print(f"WARNING: patient_keywords table does not exist. Run create_patient_keywords_table.py to create it.")
+            else:
+                print(f"Error getting patient keywords: {e}")
             return None
     
     def get_all_patient_keywords(self, limit: int = 100) -> List[Dict[str, Any]]:

@@ -1,0 +1,157 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 2
+mrn: 00070367
+batch_size: 2
+trial_ids: ['NCT05334069', 'NCT05080673']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 2
+        MRN: 00070367
+        Age: 36
+        Gender: Female
+        Oncologist: Dr. Angela Kim
+        Combined Medical Record: Patient Name: Isabella Martinez
+Patient MRN: 00070367
+Age: 36, Gender: Female
+Date of Visit: 2025-08-20
+Oncologist: Dr. Angela Kim
+
+Chief Complaint: Abdominal bloating and irregular menstrual cycles
+
+History of Present Illness: 4-month history of bloating, mild cramping, and delayed periods.
+
+Past Medical History: Hypothyroidism
+
+Family History: No cancer history
+
+Social History: Non-smoker
+
+Review of Systems: Positive for irregular menses
+
+Medications and Allergies: None
+
+Physical Examination: inations: Mild abdominal tenderness
+
+Laboratory and Imaging Results: Imaging Results: CA-125 slightly raised, MRI shows complex cystic lesion
+
+Imaging: Results: CA-125 slightly raised, MRI shows complex cystic lesion
+
+Vital Signs: [{"bmi": 22.8, "date": "2025-08-20", "heart_rate": 74, "temperature_c": 37.1, 
+"blood_pressure": "119/72"}]
+
+Assessment: Suspected endometrioma
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05334069
+        Title: Blinded Reference Set for Multicancer Early Detection Blood Tests
+        Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor Stage II Lymphoma", "Ann Arbor Stage III Lymphoma", "Ann Arbor Stage IV Lymphoma", "Chronic Lymphocytic Leukemia", "Chronic Myeloid Leukemia", "Gastroesophageal Junction Adenocarcinoma", "Head and Neck Carcinoma", "Hematopoietic and Lymphoid Cell Neoplasm", "Invasive Breast Carcinoma", "Kidney Carcinoma", "Malignant Hepatobiliary Neoplasm", "Malignant Solid Neoplasm", "Melanoma", "Muscle-Invasive Bladder Carcinoma", "RISS Stage I Plasma Cell Myeloma", "RISS Stage II Plasma Cell Myeloma", "RISS Stage III Plasma Cell Myeloma", "Sarcoma", "Stage I Bladder Cancer AJCC v6 and v7", "Stage I Breast Cancer AJCC v7", "Stage I Colorectal Cancer AJCC v6 and v7", "Stage I Esophageal Cancer AJCC V7", "Stage I Gastric Cancer AJCC V7", "Stage I Lung Cancer AJCC v7", "Stage I Ovarian Cancer AJCC v6 and v7", "Stage I Pancreatic Cancer AJCC v6 and v7", "Stage I Prostate Cancer AJCC v7", "Stage I Uterine Corpus Cancer AJCC v7", "Stage II Bladder Cancer AJCC v6 and v7", "Stage II Breast Cancer AJCC v6 and v7", "Stage II Colorectal Cancer AJCC v7", "Stage II Esophageal Cancer AJCC v7", "Stage II Gastric Cancer AJCC v7", "Stage II Lung Cancer AJCC v7", "Stage II Ovarian Cancer AJCC v6 and v7", "Stage II Pancreatic Cancer AJCC v6 and v7", "Stage II Prostate Cancer AJCC v7", "Stage II Uterine Corpus Cancer AJCC v7", "Stage III Bladder Cancer AJCC v6 and v7", "Stage III Breast Cancer AJCC v7", "Stage III Colorectal Cancer AJCC v7", "Stage III Esophageal Cancer AJCC v7", "Stage III Gastric Cancer AJCC v7", "Stage III Lung Cancer AJCC v7", "Stage III Ovarian Cancer AJCC v6 and v7", "Stage III Pancreatic Cancer AJCC v6 and v7", "Stage III Prostate Cancer AJCC v7", "Stage III Uterine Corpus Cancer AJCC v7", "Stage IV Bladder Cancer AJCC v7", "Stage IV Breast Cancer AJCC v6 and v7", "Stage IV Colorectal Cancer AJCC v7", "Stage IV Esophageal Cancer AJCC v7", "Stage IV Gastric Cancer AJCC v7", "Stage IV Lung Cancer AJCC v7", "Stage IV Ovarian Cancer AJCC v6 and v7", "Stage IV Pancreatic Cancer AJCC v6 and v7", "Stage IV Prostate Cancer AJCC v7", "Stage IV Uterine Corpus Cancer AJCC v7", "Thyroid Gland Carcinoma"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: Not specified - Not specified
+        Gender: Not specified
+        Hybrid Score: 5.082
+        
+        Brief Summary: Not available
+        
+        Detailed Description: Not available
+        
+        Inclusion Criteria: Not available
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: Not available
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT05080673
+        Title: Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps
+        Condition: ["Adenocarcinoma of the Colon", "Adenocarcinoma of the Rectum"]
+        Phase: NA
+        Status: RECRUITING
+        Investigator: 
+        Age Range: Not specified - Not specified
+        Gender: Not specified
+        Hybrid Score: 4.878
+        
+        Brief Summary: Not available
+        
+        Detailed Description: Not available
+        
+        Inclusion Criteria: Not available
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: Not available
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05334069",
+                    "trial_title": "Blinded Reference Set for Multicancer Early Detection Blood Tests",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT05080673",
+                    "trial_title": "Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-05T10:51:31.318944"
+            }
+        }
+        
