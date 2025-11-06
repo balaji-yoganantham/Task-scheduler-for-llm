@@ -11,6 +11,7 @@ from typing import List, Dict, Any, Tuple, Optional
 from services.shared.database_utils import DatabaseUtils
 from services.shared.embedding_utils import EmbeddingUtils
 from rank_bm25 import BM25Okapi
+from config import TOP_K_PATIENTS
 import re
 
 class TrialMatcher:
@@ -189,8 +190,8 @@ class TrialMatcher:
                 result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
                 results.append(result)
                 
-                # Stop after getting top 20 unevaluated patients
-                if len(results) >= 20:
+                # Stop after getting top K unevaluated patients
+                if len(results) >= TOP_K_PATIENTS:
                     break
             
             print(f"Filtered to {len(results)} patients with is_evaluated = 0")
@@ -240,7 +241,7 @@ class TrialMatcher:
             return {
                 "trial_id": trial_id,
                 "trial_info": trial_data,
-                "matching_patients": filtered_patients[:20],  # Top 20 patients
+                "matching_patients": filtered_patients[:TOP_K_PATIENTS],  # Top K patients (configurable)
                 "total_matches": len(filtered_patients),
                 "filters_applied": {
                     "age_range": age_range,

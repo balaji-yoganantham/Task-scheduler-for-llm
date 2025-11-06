@@ -51,12 +51,24 @@ RUN_ONCE_AND_EXIT = os.getenv("RUN_ONCE_AND_EXIT", "false").lower() == "true"
 DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "50"))
 MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "10"))  # Max patients per LLM batch call
 
+# Trial-to-Patient Matching Configuration
+TOP_K_PATIENTS = int(os.getenv("TOP_K_PATIENTS", "100"))  # Number of top patients to retrieve from hybrid matching
+TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "30"))  # Patients per LLM batch evaluation
+
 # Logging Configuration
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 LOG_FILE = os.getenv("LOG_FILE", "task_scheduler.log")
 
 # Location-based Filtering Configuration
-LOCATION_ENABLED = os.getenv("LOCATION_ENABLED", "true").lower() == "true"
+# Set to True to enable location filtering, False to disable
+# You can also override via environment variable: LOCATION_ENABLED=true or LOCATION_ENABLED=false
+LOCATION_ENABLED_ENV = os.getenv("LOCATION_ENABLED", "").lower()
+if LOCATION_ENABLED_ENV:
+    # If environment variable is set, use it
+    LOCATION_ENABLED = LOCATION_ENABLED_ENV == "true"
+else:
+    # Otherwise, set directly here: True = ON, False = OFF
+    LOCATION_ENABLED = False  # Change to True to enable location filtering
 MAX_DEFAULT_DISTANCE_KM = float(os.getenv("MAX_DEFAULT_DISTANCE_KM", "600"))
 LOCATION_WEIGHT = float(os.getenv("LOCATION_WEIGHT", "0.1"))  # Weight for location in hybrid score (0-1)
 GEOCODING_CACHE_ENABLED = os.getenv("GEOCODING_CACHE_ENABLED", "true").lower() == "true"
@@ -96,3 +108,6 @@ print(f"  - USE_LLM_PROCESSING: {USE_LLM_PROCESSING}")
 print(f"  - SCHEDULER_INTERVAL_MINUTES: {SCHEDULER_INTERVAL_MINUTES}")
 print(f"  - MAX_CONCURRENT_TASKS: {MAX_CONCURRENT_TASKS}")
 print(f"  - LOG_LEVEL: {LOG_LEVEL}")
+print(f"  - LOCATION_ENABLED: {LOCATION_ENABLED} (Location-based filtering: {'ON' if LOCATION_ENABLED else 'OFF'})")
+print(f"  - TOP_K_PATIENTS: {TOP_K_PATIENTS} (Top K patients from hybrid matching)")
+print(f"  - TRIAL_PATIENT_LLM_BATCH_SIZE: {TRIAL_PATIENT_LLM_BATCH_SIZE} (Patients per LLM batch)")

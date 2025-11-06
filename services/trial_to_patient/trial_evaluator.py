@@ -11,6 +11,7 @@ from services.shared.database_utils import DatabaseUtils
 from services.shared.llm_utils import LLMUtils
 from services.trial_to_patient.hybrid_matcher import HybridMatcher
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
+from config import TRIAL_PATIENT_LLM_BATCH_SIZE
 
 class TrialEvaluator:
     def __init__(self):
@@ -60,8 +61,9 @@ class TrialEvaluator:
             }
 
     def evaluate_top_patients_for_trial(self, trial_id: str, top_patients: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Evaluate top patients for a specific trial using LLM batch processing"""
+        """Evaluate top patients for a specific trial using LLM batch processing in chunks of 30"""
         print(f"EVALUATING Evaluating {len(top_patients)} patients for trial {trial_id}")
+        print(f"BATCH_SIZE Processing in batches of {TRIAL_PATIENT_LLM_BATCH_SIZE} patients per LLM call")
         
         # Get detailed trial information
         trial_info = self.db_utils.get_trial_by_id(trial_id)
@@ -106,20 +108,53 @@ class TrialEvaluator:
             print("ERROR No detailed patient information found")
             return {}
         
-        print(f"BATCH Running BATCH evaluation for {len(detailed_patients)} patients...")
         print(f"TRIAL Trial: {trial_info['title']} (Phase: {trial_info['phase']}, Status: {trial_info['status']})")
+        print(f"BATCH Processing {len(detailed_patients)} patients in batches of {TRIAL_PATIENT_LLM_BATCH_SIZE}...")
         
-        # Use batch evaluation - this sends ALL patients to Gemini in one API call
-        batch_result = self.llm_utils.evaluate_trial_patient_matches_batch(detailed_patients, trial_info)
+        # Split patients into batches of TRIAL_PATIENT_LLM_BATCH_SIZE
+        all_evaluations = []
+        all_batch_summaries = []
+        total_batches = (len(detailed_patients) + TRIAL_PATIENT_LLM_BATCH_SIZE - 1) // TRIAL_PATIENT_LLM_BATCH_SIZE
         
-        if "error" in batch_result:
-            print(f"ERROR Batch evaluation failed: {batch_result['error']}")
+        for batch_idx in range(0, len(detailed_patients), TRIAL_PATIENT_LLM_BATCH_SIZE):
+            batch_patients = detailed_patients[batch_idx:batch_idx + TRIAL_PATIENT_LLM_BATCH_SIZE]
+            batch_num = (batch_idx // TRIAL_PATIENT_LLM_BATCH_SIZE) + 1
+            
+            print(f"\n{'='*60}")
+            print(f"BATCH {batch_num}/{total_batches}: Processing {len(batch_patients)} patients (indices {batch_idx} to {batch_idx + len(batch_patients) - 1})")
+            print(f"{'='*60}")
+            
+            # Process this batch
+            batch_result = self.llm_utils.evaluate_trial_patient_matches_batch(batch_patients, trial_info)
+            
+            if "error" in batch_result:
+                print(f"ERROR Batch {batch_num} evaluation failed: {batch_result['error']}")
+                # Continue with other batches even if one fails
+                continue
+            
+            batch_evaluations = batch_result.get("evaluations", [])
+            batch_summary = batch_result.get("batch_summary", {})
+            
+            all_evaluations.extend(batch_evaluations)
+            all_batch_summaries.append({
+                "batch_number": batch_num,
+                "batch_size": len(batch_patients),
+                "summary": batch_summary
+            })
+            
+            print(f"✓ Batch {batch_num} completed: {len(batch_evaluations)} patients evaluated")
+            print(f"  - Eligible: {batch_summary.get('eligible_count', 0)}")
+            print(f"  - Not Eligible: {batch_summary.get('not_eligible_count', 0)}")
+            print(f"  - Need More Info: {batch_summary.get('need_more_info_count', 0)}")
+        
+        if not all_evaluations:
+            print(f"ERROR All batch evaluations failed")
             return {
                 "trial_id": trial_id,
                 "trial_info": trial_info,
                 "total_evaluations": 0,
                 "evaluations": [],
-                "error": batch_result["error"],
+                "error": "All batch evaluations failed",
                 "summary": {
                     "eligible_count": 0,
                     "not_eligible_count": 0,
@@ -127,22 +162,27 @@ class TrialEvaluator:
                     "average_confidence": 0
                 },
                 "generated_at": datetime.now().isoformat(),
-                "evaluation_method": "batch",
-                "batch_summary": {"error": batch_result["error"]}
+                "evaluation_method": "batched",
+                "batch_summaries": all_batch_summaries
             }
         
-        evaluations = batch_result.get("evaluations", [])
-        batch_summary = batch_result.get("batch_summary", {})
+        # Calculate overall summary
+        eligible_count = len([e for e in all_evaluations if e.get('eligibility_status') == 'ELIGIBLE'])
+        not_eligible_count = len([e for e in all_evaluations if e.get('eligibility_status') == 'NOT_ELIGIBLE'])
+        need_more_info_count = len([e for e in all_evaluations if e.get('eligibility_status') == 'NEED_MORE_INFO'])
+        average_confidence = sum(e.get('confidence_score', 0) for e in all_evaluations) / len(all_evaluations) if all_evaluations else 0
         
-        print(f"OK Batch evaluation completed successfully!")
-        print(f"RESULTS Results: {len(evaluations)} patients evaluated")
-        print(f"   - Eligible: {batch_summary.get('eligible_count', 0)}")
-        print(f"   - Not Eligible: {batch_summary.get('not_eligible_count', 0)}")
-        print(f"   - Need More Info: {batch_summary.get('need_more_info_count', 0)}")
-        print(f"   - Average Confidence: {batch_summary.get('average_confidence', 0):.1f}%")
+        print(f"\n{'='*60}")
+        print(f"ALL BATCHES COMPLETED")
+        print(f"{'='*60}")
+        print(f"RESULTS Total: {len(all_evaluations)} patients evaluated across {total_batches} batches")
+        print(f"   - Eligible: {eligible_count}")
+        print(f"   - Not Eligible: {not_eligible_count}")
+        print(f"   - Need More Info: {need_more_info_count}")
+        print(f"   - Average Confidence: {average_confidence:.1f}%")
         
         # Sort evaluations by priority score and confidence
-        evaluations.sort(key=lambda x: (
+        all_evaluations.sort(key=lambda x: (
             x.get('priority_score', 0) * 0.7 + 
             x.get('confidence_score', 0) * 0.3
         ), reverse=True)
@@ -150,17 +190,19 @@ class TrialEvaluator:
         return {
             "trial_id": trial_id,
             "trial_info": trial_info,
-            "total_evaluations": len(evaluations),
-            "evaluations": evaluations,
-            "batch_summary": batch_summary,
+            "total_evaluations": len(all_evaluations),
+            "evaluations": all_evaluations,
+            "batch_summaries": all_batch_summaries,
             "summary": {
-                "eligible_count": len([e for e in evaluations if e.get('eligibility_status') == 'ELIGIBLE']),
-                "not_eligible_count": len([e for e in evaluations if e.get('eligibility_status') == 'NOT_ELIGIBLE']),
-                "need_more_info_count": len([e for e in evaluations if e.get('eligibility_status') == 'NEED_MORE_INFO']),
-                "average_confidence": sum(e.get('confidence_score', 0) for e in evaluations) / len(evaluations) if evaluations else 0
+                "eligible_count": eligible_count,
+                "not_eligible_count": not_eligible_count,
+                "need_more_info_count": need_more_info_count,
+                "average_confidence": average_confidence
             },
             "generated_at": datetime.now().isoformat(),
-            "evaluation_method": "batch"
+            "evaluation_method": "batched",
+            "batch_size": TRIAL_PATIENT_LLM_BATCH_SIZE,
+            "total_batches": total_batches
         }
 
     def run_complete_trial_matching(self, trial_id: str, age_range: Tuple[int, int] = None, gender: str = None,
@@ -169,7 +211,7 @@ class TrialEvaluator:
         """Run complete trial-to-patient matching with LLM evaluation"""
         print(f"Starting complete trial-to-patient matching for: {trial_id}")
         
-        # Step 1: Hybrid matching to get top 20 patients
+        # Step 1: Hybrid matching to get top K patients
         print("Step 1: Running hybrid matching...")
         hybrid_results = self.hybrid_matcher.run_trial_to_patient_matching(
             trial_id=trial_id,

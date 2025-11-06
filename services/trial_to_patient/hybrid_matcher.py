@@ -12,7 +12,7 @@ from services.shared.database_utils import DatabaseUtils
 from services.shared.embedding_utils import EmbeddingUtils
 from services.shared.location_utils import LocationUtils
 from rank_bm25 import BM25Okapi
-from config import LOCATION_ENABLED, MAX_DEFAULT_DISTANCE_KM, LOCATION_WEIGHT
+from config import LOCATION_ENABLED, MAX_DEFAULT_DISTANCE_KM, LOCATION_WEIGHT, TOP_K_PATIENTS
 import re
 
 class HybridMatcher:
@@ -233,8 +233,8 @@ class HybridMatcher:
                 result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
                 results.append(result)
                 
-                # Stop after getting top 20 results (for patients, this means 20 unevaluated)
-                if len(results) >= 20:
+                # Stop after getting top K results (for patients, this means TOP_K_PATIENTS unevaluated)
+                if len(results) >= TOP_K_PATIENTS:
                     break
             
             if index_type == "patient":
@@ -271,7 +271,9 @@ class HybridMatcher:
             
             # Handle trial locations (can be multiple locations in JSON array)
             trial_locations_coords = []  # List of (lat, lon) tuples for all trial locations
-            if LOCATION_ENABLED and self.location_utils:
+            if not LOCATION_ENABLED:
+                print("Location filtering is DISABLED (LOCATION_ENABLED=false) - location-based filtering will be skipped")
+            elif LOCATION_ENABLED and self.location_utils:
                 trial_location_data = self.db_utils.get_trial_location(trial_id)
                 if trial_location_data:
                     # Check if we have multiple locations (new format)
@@ -325,6 +327,10 @@ class HybridMatcher:
             
             print(f"Found {len(matching_patients)} patients before filtering")
             print(f"Found {len(filtered_patients)} patients after age/gender filtering")
+            
+            # Set final_score to hybrid_score for all patients (will be updated if location filtering is enabled)
+            for patient in filtered_patients:
+                patient['final_score'] = patient.get('hybrid_score', 0.0)
             
             # Apply location filtering if enabled and trial location(s) are available
             if LOCATION_ENABLED and self.location_utils and identified_location and trial_locations_coords:
@@ -401,8 +407,13 @@ class HybridMatcher:
                 
                 # Sort by final score (or hybrid_score if location not available)
                 filtered_patients.sort(key=lambda x: x.get('final_score', x.get('hybrid_score', 0.0)), reverse=True)
+            else:
+                # Location filtering is disabled - sort by hybrid_score only
+                if not LOCATION_ENABLED:
+                    print("Location filtering is DISABLED (LOCATION_ENABLED=false) - skipping location-based filtering and ranking")
+                filtered_patients.sort(key=lambda x: x.get('hybrid_score', 0.0), reverse=True)
             
-            return filtered_patients[:20]  # Return top 20
+            return filtered_patients[:TOP_K_PATIENTS]  # Return top K patients (configurable)
             
         except Exception as e:
             print(f"Error finding matching patients: {e}")
