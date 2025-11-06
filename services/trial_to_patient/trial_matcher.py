@@ -163,8 +163,13 @@ class TrialMatcher:
             
             # Get metadata for top results, filtering to only include patients with is_evaluated = 0
             # FAISS returns index positions, need to find corresponding patient_id by matching embedding_index
+            # Iterate through ALL sorted results (not just top 50) to find TOP_K_PATIENTS unevaluated patients
             results = []
-            for idx, score in sorted_results[:50]:  # Check top 50, then filter
+            for idx, score in sorted_results:  # Check all results, then filter
+                # Stop after getting top K unevaluated patients
+                if len(results) >= TOP_K_PATIENTS:
+                    break
+                
                 # Find patient with matching embedding_index
                 patient_id = None
                 patient_meta = None
@@ -189,10 +194,6 @@ class TrialMatcher:
                 result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
                 result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
                 results.append(result)
-                
-                # Stop after getting top K unevaluated patients
-                if len(results) >= TOP_K_PATIENTS:
-                    break
             
             print(f"Filtered to {len(results)} patients with is_evaluated = 0")
             return results

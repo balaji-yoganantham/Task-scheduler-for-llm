@@ -7,11 +7,11 @@ import json
 import re
 import time
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from pathlib import Path
 import google.generativeai as genai
 from google.api_core import exceptions as google_exceptions
-from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE, GEMINI_MAX_RETRIES, GEMINI_TIMEOUT
+from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE, GEMINI_MAX_RETRIES, GEMINI_TIMEOUT, GEMINI_MAX_TOKENS, GEMINI_TEMPERATURE
 
 class LLMUtils:
     def __init__(self):
@@ -231,8 +231,19 @@ class LLMUtils:
                 # Enforce rate limiting
                 self._rate_limit()
                 
-                # Make the API call
-                response = self.model.generate_content(prompt)
+                # Configure generation settings with max_output_tokens
+                # For batch evaluations, we need more tokens (up to 8192 for Gemini models)
+                # Use higher limit for batch calls to prevent truncation
+                generation_config = {
+                    "temperature": GEMINI_TEMPERATURE,
+                    "max_output_tokens": GEMINI_MAX_TOKENS,  # Use config value (default 8000, can be increased to 8192)
+                }
+                
+                # Make the API call with generation config
+                response = self.model.generate_content(
+                    prompt,
+                    generation_config=generation_config
+                )
                 
                 # If we get here, the request succeeded
                 break
@@ -1110,8 +1121,27 @@ class LLMUtils:
             if json_start != -1 and json_end != -1 and json_end > json_start:
                 response = response[json_start:json_end+1]
             
-            # Parse JSON
-            result = json.loads(response)
+            # Try to parse JSON - if it fails, try to repair common issues
+            try:
+                result = json.loads(response)
+            except json.JSONDecodeError as json_error:
+                # Try to repair common JSON issues
+                print(f"⚠️ Initial JSON parse failed, attempting to repair...")
+                repaired_response = self._repair_json(response, json_error)
+                if repaired_response:
+                    try:
+                        result = json.loads(repaired_response)
+                        print(f"✅ Successfully repaired JSON")
+                    except json.JSONDecodeError as repair_error:
+                        # If repair also fails, try to extract partial JSON
+                        print(f"⚠️ JSON repair failed, attempting to extract partial results...")
+                        partial_result = self._extract_partial_json(response, json_error)
+                        if partial_result:
+                            result = partial_result
+                        else:
+                            raise json_error  # Re-raise original error if all repairs fail
+                else:
+                    raise json_error  # Re-raise original error if repair failed
             
             # Validate structure
             if "batch_evaluations" not in result:
@@ -1184,3 +1214,208 @@ class LLMUtils:
             error_msg = f"Failed to parse batch evaluation result: {str(e)}"
             print(f"❌ {error_msg}")
             return {"error": error_msg}
+    
+    def _repair_json(self, json_str: str, error: json.JSONDecodeError) -> Optional[str]:
+        """Attempt to repair common JSON issues including truncated responses"""
+        try:
+            repaired = json_str
+            error_pos = error.pos if hasattr(error, 'pos') else len(json_str)
+            
+            # First, try to handle truncated strings (most common issue)
+            # Check if we're in the middle of an unclosed string by looking backwards from error
+            # Count quotes from start to error position
+            text_before_error = repaired[:error_pos]
+            quote_count = text_before_error.count('"')
+            
+            # Check if we're inside a string (odd number of quotes means we're in a string)
+            in_string = (quote_count % 2 == 1)
+            
+            if in_string:
+                # We're in an unclosed string - close it at the error position
+                repaired = repaired[:error_pos] + '"' + repaired[error_pos:]
+                # Update error_pos since we added a character
+                error_pos += 1
+                
+                # Now try to close arrays and objects properly
+                # Count braces and brackets
+                open_braces = repaired.count('{')
+                close_braces = repaired.count('}')
+                open_brackets = repaired.count('[')
+                close_brackets = repaired.count(']')
+                
+                # Close arrays first (inner structures)
+                if open_brackets > close_brackets:
+                    repaired = repaired + ']' * (open_brackets - close_brackets)
+                
+                # Close objects
+                if open_braces > close_braces:
+                    repaired = repaired + '}' * (open_braces - close_braces)
+                
+                return repaired
+            
+            # If error is about missing delimiter, try to add it
+            if "Expecting ',' delimiter" in str(error.msg) or "Expecting ','" in str(error.msg):
+                # Look backwards from error position
+                pos = error_pos - 1
+                while pos >= 0 and repaired[pos] in ' \n\r\t':
+                    pos -= 1
+                
+                if pos >= 0:
+                    # Check if we have a closing brace or bracket
+                    if repaired[pos] == '}' or repaired[pos] == ']':
+                        # Look forward to see what comes next
+                        next_pos = error_pos
+                        while next_pos < len(repaired) and repaired[next_pos] in ' \n\r\t':
+                            next_pos += 1
+                        
+                        if next_pos < len(repaired):
+                            next_char = repaired[next_pos]
+                            if next_char in ['"', '{', '[']:
+                                # Insert comma
+                                repaired = repaired[:error_pos] + ',' + repaired[error_pos:]
+                                return repaired
+            
+            # Try to fix unclosed arrays/objects (for truncated responses)
+            open_braces = repaired.count('{')
+            close_braces = repaired.count('}')
+            open_brackets = repaired.count('[')
+            close_brackets = repaired.count(']')
+            
+            # If response appears truncated, try to close it properly
+            if open_braces > close_braces or open_brackets > close_brackets:
+                # First, try to close any unclosed strings
+                # Find the last quote and see if it's balanced
+                last_quote = repaired.rfind('"')
+                if last_quote != -1:
+                    # Count quotes before last quote
+                    quotes_before = repaired[:last_quote].count('"')
+                    if quotes_before % 2 == 0:
+                        # Last quote is unclosed - close it
+                        repaired = repaired + '"'
+                
+                # Close arrays first
+                if open_brackets > close_brackets:
+                    repaired = repaired + ']' * (open_brackets - close_brackets)
+                
+                # Close objects
+                if open_braces > close_braces:
+                    repaired = repaired + '}' * (open_braces - close_braces)
+                
+                return repaired
+            
+            return None
+        except Exception as e:
+            print(f"⚠️ JSON repair attempt failed: {e}")
+            return None
+    
+    def _extract_partial_json(self, json_str: str, error: json.JSONDecodeError) -> Optional[Dict[str, Any]]:
+        """Extract partial JSON results if the response is truncated"""
+        try:
+            # Try to extract valid JSON up to the error point
+            error_pos = error.pos if hasattr(error, 'pos') else len(json_str)
+            
+            # First, try to find the last complete evaluation object
+            # Look for pattern: }, (complete object followed by comma)
+            partial_json = json_str[:error_pos]
+            
+            # Try to find the last complete object in batch_evaluations array
+            # Look for pattern: }, followed by potential closing of array
+            last_complete_eval = partial_json.rfind('},')
+            if last_complete_eval != -1:
+                # Extract up to the last complete evaluation
+                # Find the start of batch_evaluations
+                batch_start = partial_json.find('"batch_evaluations"')
+                if batch_start != -1:
+                    # Extract the opening of batch_evaluations array
+                    array_start = partial_json.find('[', batch_start)
+                    if array_start != -1:
+                        # Extract up to last complete evaluation + closing bracket
+                        extracted = partial_json[:last_complete_eval + 1] + ']'
+                        
+                        # Close any unclosed strings first
+                        quote_count = extracted.count('"')
+                        if quote_count % 2 == 1:
+                            # Unclosed string - find where it starts and close it
+                            # Find the last quote
+                            last_quote = extracted.rfind('"')
+                            if last_quote != -1:
+                                # Check if it's the start of an unclosed string
+                                # Look backwards for : or , or [ before it
+                                check_pos = last_quote - 1
+                                while check_pos >= 0 and extracted[check_pos] in ' \n\r\t':
+                                    check_pos -= 1
+                                if check_pos >= 0 and extracted[check_pos] in [':', ',', '[']:
+                                    # This is likely an unclosed string - close it before the ]
+                                    extracted = extracted[:last_quote+1] + '"' + extracted[last_quote+1:]
+                        
+                        # Try to close the main object
+                        if extracted.count('{') > extracted.count('}'):
+                            extracted = extracted + '}'
+                        
+                        # Try to parse the extracted JSON
+                        try:
+                            result = json.loads(extracted)
+                            if "batch_evaluations" in result:
+                                print(f"⚠️ Extracted {len(result['batch_evaluations'])} partial evaluations from truncated response")
+                                return result
+                        except json.JSONDecodeError as parse_error:
+                            # If parsing still fails, try one more time with simpler repair
+                            try:
+                                # Just close everything
+                                if extracted.count('[') > extracted.count(']'):
+                                    extracted = extracted + ']' * (extracted.count('[') - extracted.count(']'))
+                                if extracted.count('{') > extracted.count('}'):
+                                    extracted = extracted + '}' * (extracted.count('{') - extracted.count('}'))
+                                result = json.loads(extracted)
+                                if "batch_evaluations" in result:
+                                    print(f"⚠️ Extracted {len(result['batch_evaluations'])} partial evaluations from truncated response (after additional repair)")
+                                    return result
+                            except json.JSONDecodeError:
+                                pass
+            
+            # If that didn't work, try a simpler approach - just extract what we can
+            # Find all complete evaluation objects
+            evaluations = []
+            current_pos = 0
+            while True:
+                # Find next patient evaluation object
+                obj_start = json_str.find('{', current_pos)
+                if obj_start == -1 or obj_start >= error_pos:
+                    break
+                
+                # Try to find the matching closing brace
+                brace_count = 0
+                obj_end = obj_start
+                for i in range(obj_start, min(error_pos, len(json_str))):
+                    if json_str[i] == '{':
+                        brace_count += 1
+                    elif json_str[i] == '}':
+                        brace_count -= 1
+                        if brace_count == 0:
+                            obj_end = i + 1
+                            break
+                
+                if obj_end > obj_start:
+                    try:
+                        eval_obj = json.loads(json_str[obj_start:obj_end])
+                        if 'patient_id' in eval_obj or 'mrn' in eval_obj:
+                            evaluations.append(eval_obj)
+                    except json.JSONDecodeError:
+                        pass
+                
+                current_pos = obj_end
+            
+            if evaluations:
+                print(f"⚠️ Extracted {len(evaluations)} complete evaluations from truncated response")
+                return {
+                    "batch_evaluations": evaluations,
+                    "batch_summary": {
+                        "total_patients_evaluated": len(evaluations),
+                        "note": "Partial results extracted from truncated response"
+                    }
+                }
+            
+            return None
+        except Exception as e:
+            print(f"⚠️ Partial JSON extraction failed: {e}")
+            return None

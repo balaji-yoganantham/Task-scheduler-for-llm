@@ -16,7 +16,7 @@ USE_DATABASE = os.getenv("USE_DATABASE", "true").lower() == "true"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyAaK5LASwLAzQljsficijwt6--HTPztOx4")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-exp")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", "0.2"))
-GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8000"))
+GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))  # Standard limit for Gemini models (8192 tokens)
 GEMINI_TIMEOUT = int(os.getenv("GEMINI_TIMEOUT", "60"))
 GEMINI_MAX_RETRIES = int(os.getenv("GEMINI_MAX_RETRIES", "3"))
 
@@ -48,12 +48,12 @@ RUN_JOBS_ON_START = os.getenv("RUN_JOBS_ON_START", "true").lower() == "true"
 RUN_ONCE_AND_EXIT = os.getenv("RUN_ONCE_AND_EXIT", "false").lower() == "true"
 
 # Patient Processing Configuration
-DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "50"))
-MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "10"))  # Max patients per LLM batch call
+DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "100"))
+MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "30"))  # Max patients per LLM batch call
 
 # Trial-to-Patient Matching Configuration
 TOP_K_PATIENTS = int(os.getenv("TOP_K_PATIENTS", "100"))  # Number of top patients to retrieve from hybrid matching
-TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "30"))  # Patients per LLM batch evaluation
+TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "20"))  # Patients per LLM batch evaluation
 
 # Logging Configuration
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")

@@ -202,10 +202,16 @@ class HybridMatcher:
             sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
             
             # Get metadata for top results
+            # For patient searches, iterate through ALL sorted results (not just top 50) 
+            # to find TOP_K_PATIENTS unevaluated patients
             results = []
             metadata = self.trial_metadata if index_type == "trial" else self.patient_metadata
             
-            for idx, score in sorted_results[:50]:  # Check top 50, then filter
+            for idx, score in sorted_results:  # Check all results, then filter
+                # For patient searches, stop after getting top K unevaluated patients
+                if index_type == "patient" and len(results) >= TOP_K_PATIENTS:
+                    break
+                
                 # Find patient ID that corresponds to this FAISS index
                 patient_id = None
                 patient_data = None
@@ -232,10 +238,6 @@ class HybridMatcher:
                 result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
                 result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
                 results.append(result)
-                
-                # Stop after getting top K results (for patients, this means TOP_K_PATIENTS unevaluated)
-                if len(results) >= TOP_K_PATIENTS:
-                    break
             
             if index_type == "patient":
                 print(f"Filtered to {len(results)} patients with is_evaluated = 0")

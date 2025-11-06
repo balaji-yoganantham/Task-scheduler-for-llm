@@ -1,0 +1,1367 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: keyword_generation_batch
+batch_size: 19
+patient_ids: [24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+mrns: ['37000010', '37000009', '37000008', '37000007', '37000006', '37000005', '37000004', '37000003', '37000002', '37000001', '00078259', '00077142', '00075964', '00074890', '00073688', '00072536', '00071492', '00070367', '00069248']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Analyze the following 19 patient medical records and generate comprehensive keywords for clinical trial matching.
+
+        PATIENTS DATA:
+        
+==================================================
+PATIENT 1:
+==================================================
+Patient ID: 24
+MRN: 37000010
+Age: 22
+Gender: Female
+Combined Medical Record:
+Patient Name: Helen Martinez
+Patient MRN: 37000010
+Age: 22, Gender: Female
+Date of Visit: August 08, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 15, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+--- Page 14 ---
+- Date of initial diagnosis and TNM stage: June 15, 2025; T3N1M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: July 20, 2025 - liver, lung, peritoneum metastases identified
+- Summary of prior treatments: Prior adjuvant chemotherapy completed; no prior metastatic systemic therapy
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Hypertension, COPD
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 5.5 ×10³/µL, Hgb 9.3 g/dL, Platelets 247 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 87 mL/min/1.73m²
+- LFTs: AST 27 U/L, ALT 30 U/L, ALP 235 U/L, Total bilirubin 1.2 mg/dL
+--- Page 15 ---
+- CEA: 19.3 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+- Imaging: CT shows sigmoid colon (left colon) mass (7.5 cm), 3 hepatic metastases (largest 4.5 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 5.5 ×10³/µL, Hgb 9.3 g/dL, Platelets 247 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 87 mL/min/1.73m²
+- LFTs: AST 27 U/L, ALT 30 U/L, ALP 235 U/L, Total bilirubin 1.2 mg/dL
+--- Page 15 ---
+- CEA: 19.3 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+
+Imaging: - Imaging: CT shows sigmoid colon (left colon) mass (7.5 cm), 3 hepatic metastases (largest 4.5 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 118/71, HR 70, RR 18, Temp 98.7°F, SpO2 97%, Weight 161 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver, lung, peritoneum)
+- Disease status: Prior adjuvant chemotherapy completed; no prior metastatic systemic therapy
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+
+==================================================
+PATIENT 2:
+==================================================
+Patient ID: 23
+MRN: 37000009
+Age: 25
+Gender: Female
+Combined Medical Record:
+Patient Name: Sharon Sullivan
+Patient MRN: 37000009
+Age: 25, Gender: Female
+Date of Visit: August 08, 2025
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 04, 2025
+- Site of primary tumor: Ascending colon (right colon)
+- Date of initial diagnosis and TNM stage: June 04, 2025; T2N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 25, 2025 - liver metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Type 2 diabetes, COPD
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+--- Page 13 ---
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+--- Page 13 ---
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 7.2 ×10³/µL, Hgb 10.1 g/dL, Platelets 193 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 81 mL/min/1.73m²
+- LFTs: AST 48 U/L, ALT 53 U/L, ALP 147 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 113.3 ng/mL (elevated)
+- Molecular markers: ALK fusion (rare)
+- Imaging: CT shows ascending colon (right colon) mass (7.2 cm), 3 hepatic metastases (largest 2.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 7.2 ×10³/µL, Hgb 10.1 g/dL, Platelets 193 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 81 mL/min/1.73m²
+- LFTs: AST 48 U/L, ALT 53 U/L, ALP 147 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 113.3 ng/mL (elevated)
+- Molecular markers: ALK fusion (rare)
+
+Imaging: - Imaging: CT shows ascending colon (right colon) mass (7.2 cm), 3 hepatic metastases (largest 2.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 126/83, HR 85, RR 18, Temp 98.6°F, SpO2 97%, Weight 186 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 3:
+==================================================
+Patient ID: 22
+MRN: 37000008
+Age: 54
+Gender: Female
+Combined Medical Record:
+Patient Name: Carol Murphy
+Patient MRN: 37000008
+Age: 54, Gender: Female
+Date of Visit: March 28, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: March 07, 2025
+- Site of primary tumor: Rectosigmoid junction (left colon)
+- Date of initial diagnosis and TNM stage: March 07, 2025; T2N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: April 08, 2025 - peritoneum metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Autoimmune disease, Type 2 diabetes
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+--- Page 12 ---
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 9.6 ×10³/µL, Hgb 10.8 g/dL, Platelets 183 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 108 mL/min/1.73m²
+- LFTs: AST 59 U/L, ALT 49 U/L, ALP 281 U/L, Total bilirubin 2.0 mg/dL
+- CEA: 54.8 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+- Imaging: CT shows rectosigmoid junction (left colon) mass (4.2 cm), 3 hepatic metastases (largest 6.4 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 9.6 ×10³/µL, Hgb 10.8 g/dL, Platelets 183 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 108 mL/min/1.73m²
+- LFTs: AST 59 U/L, ALT 49 U/L, ALP 281 U/L, Total bilirubin 2.0 mg/dL
+- CEA: 54.8 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+
+Imaging: - Imaging: CT shows rectosigmoid junction (left colon) mass (4.2 cm), 3 hepatic metastases (largest 6.4 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 116/78, HR 84, RR 18, Temp 98.7°F, SpO2 97%, Weight 179 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (peritoneum)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 4:
+==================================================
+Patient ID: 21
+MRN: 37000007
+Age: 56
+Gender: Female
+Combined Medical Record:
+Patient Name: Sandra Barnes
+Patient MRN: 37000007
+Age: 56, Gender: Female
+Date of Visit: March 12, 2025
+Oncologist: Dr. Rahul Singh, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: January 25, 2025
+- Site of primary tumor: Descending colon (left colon)
+- Date of initial diagnosis and TNM stage: January 25, 2025; T4N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: March 22, 2025 - liver, lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 2
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Hypothyroidism, Chronic back pain
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+--- Page 10 ---
+- Genetic counseling pending
+
+Social History: - Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: --- Page 10 ---
+- Genetic counseling pending
+Social History
+- Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 6.7 ×10³/µL, Hgb 9.3 g/dL, Platelets 185 ×10³/µL
+- Chemistry: Creatinine 1.2 mg/dL, eGFR 60 mL/min/1.73m²
+- LFTs: AST 32 U/L, ALT 41 U/L, ALP 216 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 18.1 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+- Imaging: CT shows descending colon (left colon) mass (4.5 cm), 3 hepatic metastases (largest 2.9 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 6.7 ×10³/µL, Hgb 9.3 g/dL, Platelets 185 ×10³/µL
+- Chemistry: Creatinine 1.2 mg/dL, eGFR 60 mL/min/1.73m²
+- LFTs: AST 32 U/L, ALT 41 U/L, ALP 216 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 18.1 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+
+Imaging: - Imaging: CT shows descending colon (left colon) mass (4.5 cm), 3 hepatic metastases (largest 2.9 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 126/72, HR 73, RR 18, Temp 98.3°F, SpO2 97%, Weight 144 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver, lung)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 5:
+==================================================
+Patient ID: 20
+MRN: 37000006
+Age: 49
+Gender: Female
+Combined Medical Record:
+Patient Name: Kimberly Phillips
+Patient MRN: 37000006
+Age: 49, Gender: Female
+Date of Visit: May 01, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: February 22, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: February 22, 2025; T2N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: March 31, 2025 - brain metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: COPD, Hypothyroidism
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches controlled
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+--- Page 9 ---
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 10.0 ×10³/µL, Hgb 10.8 g/dL, Platelets 208 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 92 mL/min/1.73m²
+- LFTs: AST 54 U/L, ALT 47 U/L, ALP 298 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 6.1 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows transverse colon (right colon) mass (6.3 cm), 3 hepatic metastases (largest 3.3 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 10.0 ×10³/µL, Hgb 10.8 g/dL, Platelets 208 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 92 mL/min/1.73m²
+- LFTs: AST 54 U/L, ALT 47 U/L, ALP 298 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 6.1 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows transverse colon (right colon) mass (6.3 cm), 3 hepatic metastases (largest 3.3 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 125/80, HR 78, RR 18, Temp 98.2°F, SpO2 97%, Weight 178 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (brain)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 6:
+==================================================
+Patient ID: 19
+MRN: 37000005
+Age: 40
+Gender: Female
+Combined Medical Record:
+Patient Name: Rachel Davis
+Patient MRN: 37000005
+Age: 40, Gender: Female
+Date of Visit: June 28, 2025
+Oncologist: Dr. Sarah Mehta, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 25, 2025
+- Site of primary tumor: Descending colon (left colon)
+- Date of initial diagnosis and TNM stage: May 25, 2025; T4N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: July 22, 2025 - liver, brain metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 1
+--- Page 7 ---
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: COPD, Hypothyroidism
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches controlled
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 8.3 ×10³/µL, Hgb 8.1 g/dL, Platelets 263 ×10³/µL
+- Chemistry: Creatinine 0.8 mg/dL, eGFR 120 mL/min/1.73m²
+- LFTs: AST 39 U/L, ALT 48 U/L, ALP 187 U/L, Total bilirubin 1.6 mg/dL
+- CEA: 72.0 ng/mL (elevated)
+- Molecular markers: BRAF V600E mutant
+- Imaging: CT shows descending colon (left colon) mass (3.8 cm), 3 hepatic metastases (largest 4.3 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 8.3 ×10³/µL, Hgb 8.1 g/dL, Platelets 263 ×10³/µL
+- Chemistry: Creatinine 0.8 mg/dL, eGFR 120 mL/min/1.73m²
+- LFTs: AST 39 U/L, ALT 48 U/L, ALP 187 U/L, Total bilirubin 1.6 mg/dL
+- CEA: 72.0 ng/mL (elevated)
+- Molecular markers: BRAF V600E mutant
+
+Imaging: - Imaging: CT shows descending colon (left colon) mass (3.8 cm), 3 hepatic metastases (largest 4.3 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 120/78, HR 74, RR 18, Temp 98.7°F, SpO2 97%, Weight 142 lbs
+
+Assessment: --- Page 8 ---
+- Diagnosis: Metastatic colorectal cancer (liver, brain)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 7:
+==================================================
+Patient ID: 18
+MRN: 37000004
+Age: 35
+Gender: Female
+Combined Medical Record:
+Patient Name: Sandra Bell
+Patient MRN: 37000004
+Age: 35, Gender: Female
+Date of Visit: May 07, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: March 18, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: March 18, 2025; T4N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: April 26, 2025 - liver, lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Hypothyroidism, Chronic back pain
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+--- Page 6 ---
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 5.6 ×10³/µL, Hgb 8.0 g/dL, Platelets 274 ×10³/µL
+- Chemistry: Creatinine 1.1 mg/dL, eGFR 73 mL/min/1.73m²
+- LFTs: AST 38 U/L, ALT 33 U/L, ALP 194 U/L, Total bilirubin 1.1 mg/dL
+- CEA: 109.2 ng/mL (elevated)
+- Molecular markers: HER2 amplified, MSS
+- Imaging: CT shows sigmoid colon (left colon) mass (4.1 cm), 3 hepatic metastases (largest 3.9 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 5.6 ×10³/µL, Hgb 8.0 g/dL, Platelets 274 ×10³/µL
+- Chemistry: Creatinine 1.1 mg/dL, eGFR 73 mL/min/1.73m²
+- LFTs: AST 38 U/L, ALT 33 U/L, ALP 194 U/L, Total bilirubin 1.1 mg/dL
+- CEA: 109.2 ng/mL (elevated)
+- Molecular markers: HER2 amplified, MSS
+
+Imaging: - Imaging: CT shows sigmoid colon (left colon) mass (4.1 cm), 3 hepatic metastases (largest 3.9 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 126/77, HR 79, RR 18, Temp 98.6°F, SpO2 97%, Weight 169 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver, lung)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 8:
+==================================================
+Patient ID: 17
+MRN: 37000003
+Age: 54
+Gender: Female
+Combined Medical Record:
+Patient Name: Helen Jenkins
+Patient MRN: 37000003
+Age: 54, Gender: Female
+Date of Visit: August 06, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: --- Page 4 ---
+- Date of initial colorectal cancer diagnosis: May 15, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: May 15, 2025; T3N2M1c (Stage IV)
+- Date and nature of metastatic disease diagnosis: May 31, 2025 - liver metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Type 2 diabetes, Autoimmune disease
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 7.9 ×10³/µL, Hgb 11.5 g/dL, Platelets 249 ×10³/µL
+--- Page 5 ---
+- Chemistry: Creatinine 0.8 mg/dL, eGFR 77 mL/min/1.73m²
+- LFTs: AST 46 U/L, ALT 38 U/L, ALP 232 U/L, Total bilirubin 0.9 mg/dL
+- CEA: 92.1 ng/mL (elevated)
+- Molecular markers: MSI-H/dMMR
+- Imaging: CT shows sigmoid colon (left colon) mass (3.8 cm), 3 hepatic metastases (largest 2.3 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 7.9 ×10³/µL, Hgb 11.5 g/dL, Platelets 249 ×10³/µL
+--- Page 5 ---
+- Chemistry: Creatinine 0.8 mg/dL, eGFR 77 mL/min/1.73m²
+- LFTs: AST 46 U/L, ALT 38 U/L, ALP 232 U/L, Total bilirubin 0.9 mg/dL
+- CEA: 92.1 ng/mL (elevated)
+- Molecular markers: MSI-H/dMMR
+
+Imaging: - Imaging: CT shows sigmoid colon (left colon) mass (3.8 cm), 3 hepatic metastases (largest 2.3 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 129/77, HR 81, RR 18, Temp 98.3°F, SpO2 97%, Weight 166 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 9:
+==================================================
+Patient ID: 16
+MRN: 37000002
+Age: 25
+Gender: Female
+Combined Medical Record:
+Patient Name: Barbara Flores
+Patient MRN: 37000002
+Age: 25, Gender: Female
+Date of Visit: May 02, 2025
+Oncologist: Dr. Sarah Mehta, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: February 26, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: February 26, 2025; T4N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: March 20, 2025 - liver metastases identified
+- Summary of prior treatments: Prior adjuvant chemotherapy completed; no prior metastatic systemic therapy
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Type 2 diabetes, COPD
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+--- Page 3 ---
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Former smoker (quit 10 years ago)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+--- Page 3 ---
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 9.9 ×10³/µL, Hgb 10.6 g/dL, Platelets 192 ×10³/µL
+- Chemistry: Creatinine 1.3 mg/dL, eGFR 89 mL/min/1.73m²
+- LFTs: AST 42 U/L, ALT 48 U/L, ALP 287 U/L, Total bilirubin 1.2 mg/dL
+- CEA: 8.5 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows sigmoid colon (left colon) mass (4.3 cm), 3 hepatic metastases (largest 5.5 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 9.9 ×10³/µL, Hgb 10.6 g/dL, Platelets 192 ×10³/µL
+- Chemistry: Creatinine 1.3 mg/dL, eGFR 89 mL/min/1.73m²
+- LFTs: AST 42 U/L, ALT 48 U/L, ALP 287 U/L, Total bilirubin 1.2 mg/dL
+- CEA: 8.5 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows sigmoid colon (left colon) mass (4.3 cm), 3 hepatic metastases (largest 5.5 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 111/73, HR 74, RR 18, Temp 98.6°F, SpO2 97%, Weight 137 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver)
+- Disease status: Prior adjuvant chemotherapy completed; no prior metastatic systemic therapy
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 10:
+==================================================
+Patient ID: 15
+MRN: 37000001
+Age: 21
+Gender: Female
+Combined Medical Record:
+Patient Name: Barbara Robinson
+Patient MRN: 37000001
+Age: 21, Gender: Female
+Date of Visit: July 18, 2025
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 03, 2025
+- Site of primary tumor: Descending colon (left colon)
+- Date of initial diagnosis and TNM stage: May 03, 2025; T4N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 11, 2025 - liver metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Chronic back pain, Hypothyroidism
+- Surgical history: Appendectomy (2011)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Genetic counseling pending
+Social History
+- Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+Review of Systems
+- Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satity
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: --- Page 2 ---
+- General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 5.9 ×10³/µL, Hgb 8.0 g/dL, Platelets 182 ×10³/µL
+- Chemistry: Creatinine 1.1 mg/dL, eGFR 95 mL/min/1.73m²
+- LFTs: AST 57 U/L, ALT 24 U/L, ALP 189 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 116.9 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+- Imaging: CT shows descending colon (left colon) mass (7.0 cm), 3 hepatic metastases (largest 1.6 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 5.9 ×10³/µL, Hgb 8.0 g/dL, Platelets 182 ×10³/µL
+- Chemistry: Creatinine 1.1 mg/dL, eGFR 95 mL/min/1.73m²
+- LFTs: AST 57 U/L, ALT 24 U/L, ALP 189 U/L, Total bilirubin 1.0 mg/dL
+- CEA: 116.9 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+
+Imaging: - Imaging: CT shows descending colon (left colon) mass (7.0 cm), 3 hepatic metastases (largest 1.6 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 111/73, HR 76, RR 18, Temp 98.5°F, SpO2 97%, Weight 166 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+
+==================================================
+PATIENT 11:
+==================================================
+Patient ID: 9
+MRN: 00078259
+Age: 42
+Gender: Female
+Combined Medical Record:
+Patient Name: Sofia Adams
+Patient MRN: 00078259
+Age: 42, Gender: Female
+Date of Visit: 2025-09-18
+Oncologist: Dr. Olivia Bennett
+
+Chief Complaint: Pelvic pain and abdominal fullness
+
+History of Present Illness: 2-month history of pelvic discomfort, bloating, and feeling of fullness after
+
+Past Medical History: None
+
+Family History: Cousin with ovarian cancer
+
+Social History: Non-smoker
+
+Review of Systems: Positive for abdominal fullness
+
+Medications and Allergies: None
+
+Physical Examination: inations: Abdomen mildly distended
+
+Laboratory and Imaging Results: Imaging Results: Elevated CA-125, CT scan reveals ovarian cyst
+
+Imaging: Results: Elevated CA-125, CT scan reveals ovarian cyst
+
+Vital Signs: [{"bmi": 23.5, "date": "2025-09-18", "heart_rate": 76, "temperature_c": 37.1, 
+"blood_pressure": "118/76"}]
+
+Assessment: Possible benign ovarian cyst
+
+==================================================
+PATIENT 12:
+==================================================
+Patient ID: 8
+MRN: 00077142
+Age: 49
+Gender: Female
+Combined Medical Record:
+Patient Name: Abigail Scott
+Patient MRN: 00077142
+Age: 49, Gender: Female
+Date of Visit: 2025-05-10
+Oncologist: Dr. Katherine Moore
+
+Chief Complaint: Abdominal pain and fatigue
+
+History of Present Illness: Patient presents with 2-month history of fatigue and lower abdominal
+
+Past Medical History: None
+
+Family History: Mother had uterine cancer
+
+Social History: Non-smoker
+
+Review of Systems: Positive for fatigue
+
+Medications and Allergies: Latex
+
+Physical Examination: inations: Lower abdominal tenderness
+
+Laboratory and Imaging Results: Imaging Results: CA-125 elevated, MRI shows adnexal mass
+
+Imaging: Results: CA-125 elevated, MRI shows adnexal mass
+
+Vital Signs: [{"bmi": 29.3, "date": "2025-10-05", "heart_rate": 83, "temperature_c": 37.3, 
+"blood_pressure": "140/84"}]
+
+Assessment: Ovarian neoplasm suspected
+
+==================================================
+PATIENT 13:
+==================================================
+Patient ID: 7
+MRN: 00075964
+Age: 45
+Gender: Female
+Combined Medical Record:
+Patient Name: Charlotte Hall
+Patient MRN: 00075964
+Age: 45, Gender: Female
+Date of Visit: 2025-09-28
+Oncologist: Dr. Emily Rogers
+
+Chief Complaint: Lower abdominal discomfort
+
+History of Present Illness: 3-week history of mild but persistent abdominal pain and bloating.
+
+Past Medical History: None
+
+Family History: Aunt with ovarian cancer
+
+Social History: Non-smoker
+
+Review of Systems: Positive for bloating
+
+Medications and Allergies: None
+
+Physical Examination: inations: Mild tenderness in pelvic area
+
+Laboratory and Imaging Results: Imaging Results: CA-125 elevated, ultrasound reveals left adnexal lesion
+
+Imaging: Results: CA-125 elevated, ultrasound reveals left adnexal lesion
+
+Vital Signs: [{"bmi": 24.1, "date": "2025-09-28", "heart_rate": 81, "temperature_c": 37.2, 
+"blood_pressure": "126/80"}]
+
+Assessment: Ovarian tumor suspected
+
+==================================================
+PATIENT 14:
+==================================================
+Patient ID: 6
+MRN: 00074890
+Age: 52
+Gender: Female
+Combined Medical Record:
+Patient Name: Amelia Clark
+Patient MRN: 00074890
+Age: 52, Gender: Female
+Date of Visit: 2025-08-25
+Oncologist: Dr. Karen Patel
+
+Chief Complaint: Abdominal pain and appetite loss
+
+History of Present Illness: 1-month history of abdominal discomfort and early satiety.
+
+Past Medical History: Gastroesophageal reflux disease (GERD)
+
+Family History: Father with colon cancer
+
+Social History: Non-smoker
+
+Review of Systems: Positive for early satiety
+
+Medications and Allergies: None
+
+Physical Examination: inations: Abdomen soft, mild tenderness
+
+Laboratory and Imaging Results: Imaging Results: Elevated CA-125, CT shows pelvic mass
+
+Imaging: Results: Elevated CA-125, CT shows pelvic mass
+
+Vital Signs: [{"bmi": 31.8, "date": "2025-08-25", "heart_rate": 77, "temperature_c": 37.4, 
+"blood_pressure": "146/89"}]
+
+Assessment: Possible ovarian carcinoma — biopsy scheduled
+
+==================================================
+PATIENT 15:
+==================================================
+Patient ID: 5
+MRN: 00073688
+Age: 47
+Gender: Female
+Combined Medical Record:
+Patient Name: Evelyn White
+Patient MRN: 00073688
+Age: 47, Gender: Female
+Date of Visit: 2025-10-09
+Oncologist: Dr. Sarah Mitchell
+
+Chief Complaint: Abdominal bloating and discomfort
+
+History of Present Illness: Reports 2-month history of progressive abdominal bloating.
+
+Past Medical History: None
+
+Family History: Sister with breast cancer
+
+Social History: Non-smoker
+
+Review of Systems: Positive for bloating
+
+Medications and Allergies: Sulfa drugs
+
+Physical Examination: inations: Mild distension, tenderness on palpation
+
+Laboratory and Imaging Results: Imaging Results: CA-125 elevated, MRI shows right ovarian mass
+
+Imaging: Results: CA-125 elevated, MRI shows right ovarian mass
+
+Vital Signs: [{"bmi": 27.5, "date": "2025-09-10", "heart_rate": 84, "temperature_c": 37.5, 
+"blood_pressure": "136/82"}]
+
+Assessment: Possible ovarian malignancy — referred for oncology evaluation
+
+==================================================
+PATIENT 16:
+==================================================
+Patient ID: 4
+MRN: 00072536
+Age: 39
+Gender: Female
+Combined Medical Record:
+Patient Name: Harper Lewis
+Patient MRN: 00072536
+Age: 39, Gender: Female
+Date of Visit: 2025-05-09
+Oncologist: Dr. Michael Davis
+
+Chief Complaint: Lower abdominal swelling
+
+History of Present Illness: 6-week history of increasing lower abdominal swelling and mild
+
+Past Medical History: Hypertension
+
+Family History: No known malignancies
+
+Social History: Non-smoker
+
+Review of Systems: Positive for abdominal swelling
+
+Medications and Allergies: None
+
+Physical Examination: inations: Abdomen slightly distended
+
+Laboratory and Imaging Results: Imaging Results: CA-125 raised, CT shows ovarian cystic mass
+
+Imaging: Results: CA-125 raised, CT shows ovarian cystic mass
+
+Vital Signs: [{"bmi": 30.2, "date": "2025-09-05", "heart_rate": 79, "temperature_c": 37.2, 
+"blood_pressure": "142/88"}]
+
+Assessment: Possible ovarian cyst — observation advised
+
+==================================================
+PATIENT 17:
+==================================================
+Patient ID: 3
+MRN: 00071492
+Age: 43
+Gender: Female
+Combined Medical Record:
+Patient Name: Mia Walker
+Patient MRN: 00071492
+Age: 43, Gender: Female
+Date of Visit: 2025-02-10
+Oncologist: Dr. Laura Chen
+
+Chief Complaint: Pelvic discomfort and fatigue
+
+History of Present Illness: Patient reports 2-month history of lower abdominal pain and loss of
+
+Past Medical History: None
+
+Family History: Grandmother had ovarian cancer
+
+Social History: Non-smoker
+
+Review of Systems: Positive for fatigue
+
+Medications and Allergies: None
+
+Physical Examination: inations: Mild pelvic tenderness
+
+Laboratory and Imaging Results: Imaging Results: CA-125 elevated, ultrasound shows adnexal mass
+
+Imaging: Results: CA-125 elevated, ultrasound shows adnexal mass
+
+Vital Signs: [{"bmi": 26.5, "date": "2025-10-02", "heart_rate": 86, "temperature_c": 37.3, 
+"blood_pressure": "128/83"}]
+
+Assessment: Ovarian tumor suspected — referred for biopsy
+
+==================================================
+PATIENT 18:
+==================================================
+Patient ID: 2
+MRN: 00070367
+Age: 36
+Gender: Female
+Combined Medical Record:
+Patient Name: Isabella Martinez
+Patient MRN: 00070367
+Age: 36, Gender: Female
+Date of Visit: 2025-08-20
+Oncologist: Dr. Angela Kim
+
+Chief Complaint: Abdominal bloating and irregular menstrual cycles
+
+History of Present Illness: 4-month history of bloating, mild cramping, and delayed periods.
+
+Past Medical History: Hypothyroidism
+
+Family History: No cancer history
+
+Social History: Non-smoker
+
+Review of Systems: Positive for irregular menses
+
+Medications and Allergies: None
+
+Physical Examination: inations: Mild abdominal tenderness
+
+Laboratory and Imaging Results: Imaging Results: CA-125 slightly raised, MRI shows complex cystic lesion
+
+Imaging: Results: CA-125 slightly raised, MRI shows complex cystic lesion
+
+Vital Signs: [{"bmi": 22.8, "date": "2025-08-20", "heart_rate": 74, "temperature_c": 37.1, 
+"blood_pressure": "119/72"}]
+
+Assessment: Suspected endometrioma
+
+==================================================
+PATIENT 19:
+==================================================
+Patient ID: 1
+MRN: 00069248
+Age: 50
+Gender: Female
+Combined Medical Record:
+Patient Name: Ava Thompson
+Patient MRN: 00069248
+Age: 50, Gender: Female
+Date of Visit: 2025-09-25
+Oncologist: Dr. James Porter
+
+Chief Complaint: Lower abdominal pain and bloating
+
+History of Present Illness: Reports 3-month history of dull lower abdominal pain and bloating,
+
+Past Medical History: Type 2 Diabetes
+
+Family History: Aunt with ovarian cancer
+
+Social History: Non-smoker, occasional wine
+
+Review of Systems: Positive for bloating and fatigue
+
+Medications and Allergies: Allergic to penicillin
+
+Physical Examination: inations: Mild tenderness over lower abdomen
+
+Laboratory and Imaging Results: Imaging Results: CA-125 elevated, CT scan shows left adnexal mass
+
+Imaging: Results: CA-125 elevated, CT scan shows left adnexal mass
+
+Vital Signs: [{"bmi": 31.2, "date": "2025-09-25", "heart_rate": 78, "temperature_c": 37.4, 
+"blood_pressure": "138/84"}]
+
+Assessment: Ovarian neoplasm suspected — biopsy planned
+
+
+        Instructions:
+        1. Extract ALL relevant medical conditions, symptoms, treatments, and characteristics for EACH patient
+        2. Generate at least 30-40 keywords per patient covering:
+           - Primary diagnosis and staging
+           - Metastatic sites
+           - Molecular markers
+           - Comorbidities
+           - Medications
+           - Allergies
+           - Performance status
+           - Family history
+           - Demographics
+        3. Use standardized medical terminology
+        4. Include both specific and general terms for better matching
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_results": [
+                {
+                    "patient_id": 24,
+                    "mrn": "37000010",
+                    "age": 22,
+                    "gender": "Female",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-06T14:45:04.653836"
+                },
+                {
+                    "patient_id": 23,
+                    "mrn": "37000009",
+                    "age": 25,
+                    "gender": "Female",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-06T14:45:04.653836"
+                }
+                // ... continue for all 19 patients
+            ],
+            "batch_metadata": {
+                "total_patients": 19,
+                "generated_at": "2025-11-06T14:45:04.653836",
+                "model": "gemini-2.0-flash-exp",
+                "batch_processing": true
+            }
+        }
+        
