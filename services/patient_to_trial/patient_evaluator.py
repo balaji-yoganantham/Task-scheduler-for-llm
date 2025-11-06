@@ -286,13 +286,21 @@ class PatientEvaluator:
         # Save results to database (new functionality)
         print(f"\n💾 Saving results to database...")
         try:
+            # Save summary evaluation results
+            db_id = self.eval_db.save_patient_to_trial_evaluation(results)
+            if db_id:
+                results['database_id'] = db_id
+                print(f"✅ Results saved to database with ID: {db_id}")
+            else:
+                print("⚠️ Failed to save results to database")
+            
             # Save individual patient-trial evaluations to normalized table
-            print(f"💾 Saving individual patient-trial evaluations...")
+            print(f"\n💾 Saving individual patient-trial evaluations...")
             try:
                 saved_count = self.eval_db.save_patient_trial_evaluations(results)
                 if saved_count > 0:
                     results['individual_evaluations_saved'] = saved_count
-                    print(f"✅ Saved {saved_count} individual patient-trial evaluations to insightsedge.patient_to_trial")
+                    print(f"✅ Saved {saved_count} individual patient-trial evaluations")
                 else:
                     print("⚠️ No individual evaluations were saved")
             except Exception as e:
@@ -309,8 +317,8 @@ class PatientEvaluator:
         print(f"Eligible trials: {summary.get('eligible_trials', 0)}")
         print(f"Average confidence: {summary.get('average_confidence', 0):.1f}%")
         print(f"Results saved to: {filepath}")
-        if results.get('individual_evaluations_saved'):
-            print(f"✅ Saved {results['individual_evaluations_saved']} evaluations to insightsedge.patient_to_trial")
+        if results.get('database_id'):
+            print(f"Database ID: {results['database_id']}")
         
         return results
 

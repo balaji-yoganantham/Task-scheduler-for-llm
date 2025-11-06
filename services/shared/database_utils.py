@@ -727,3 +727,47 @@ class DatabaseUtils:
         except Exception as e:
             print(f"Error getting unevaluated patient IDs: {e}")
             return []
+    
+    def get_patients_evaluated_status(self, patient_ids: List[int]) -> Dict[int, int]:
+        """
+        Get is_evaluated status for multiple patient IDs
+        
+        Args:
+            patient_ids: List of patient IDs to check
+            
+        Returns:
+            Dictionary mapping patient_id to is_evaluated status (0 or 1)
+        """
+        if not patient_ids:
+            return {}
+        
+        try:
+            with self.get_connection() as connection:
+                # Use ANY for PostgreSQL array compatibility
+                query = text("""
+                    SELECT id, is_evaluated
+                    FROM insightsedge.patient_medical_history 
+                    WHERE id = ANY(:patient_ids::int[])
+                """)
+                result = connection.execute(query, {"patient_ids": patient_ids})
+                
+                status_dict = {row[0]: row[1] for row in result}
+                return status_dict
+        except Exception as e:
+            # Fallback to IN clause if array casting fails
+            try:
+                with self.get_connection() as connection:
+                    placeholders = ','.join([f':id{i}' for i in range(len(patient_ids))])
+                    query = text(f"""
+                        SELECT id, is_evaluated
+                        FROM insightsedge.patient_medical_history 
+                        WHERE id IN ({placeholders})
+                    """)
+                    params = {f'id{i}': pid for i, pid in enumerate(patient_ids)}
+                    result = connection.execute(query, params)
+                    
+                    status_dict = {row[0]: row[1] for row in result}
+                    return status_dict
+            except Exception as e2:
+                print(f"Error getting patients evaluated status (fallback also failed): {e2}")
+                return {}

@@ -59,6 +59,19 @@ class HybridMatcher:
             if patient_metadata_file.exists():
                 self.patient_metadata = self.embedding_utils.load_metadata(patient_metadata_file)
                 print(f"Loaded metadata for {len(self.patient_metadata)} patients")
+                
+                # Fetch is_evaluated status from database and add to metadata
+                patient_ids = [int(pid) for pid in self.patient_metadata.keys() if pid.isdigit()]
+                if patient_ids:
+                    evaluated_status = self.db_utils.get_patients_evaluated_status(patient_ids)
+                    for patient_id_str, metadata in self.patient_metadata.items():
+                        patient_id = int(patient_id_str) if patient_id_str.isdigit() else None
+                        if patient_id and patient_id in evaluated_status:
+                            metadata['is_evaluated'] = evaluated_status[patient_id]
+                        else:
+                            # Default to 0 if not found (shouldn't happen, but safe fallback)
+                            metadata['is_evaluated'] = 0
+                    print(f"Added is_evaluated status to metadata for {len(evaluated_status)} patients")
             
             # Load trial texts for BM25
             self.load_trial_texts()
@@ -192,22 +205,40 @@ class HybridMatcher:
             results = []
             metadata = self.trial_metadata if index_type == "trial" else self.patient_metadata
             
-            for idx, score in sorted_results[:20]:  # Top 20 results
+            for idx, score in sorted_results[:50]:  # Check top 50, then filter
                 # Find patient ID that corresponds to this FAISS index
                 patient_id = None
-                for pid, patient_data in metadata.items():
-                    if patient_data.get('embedding_index') == idx:
+                patient_data = None
+                for pid, data in metadata.items():
+                    if data.get('embedding_index') == idx:
                         patient_id = pid
+                        patient_data = data
                         break
                 
-                if patient_id:
-                    result = metadata[patient_id].copy()
+                if not patient_data:
+                    continue  # Skip if no matching patient found
+                
+                # For patient searches, filter to only include patients with is_evaluated = 0
+                if index_type == "patient":
+                    is_evaluated = patient_data.get('is_evaluated', 0)
+                    if is_evaluated != 0:
+                        continue  # Skip evaluated patients
+                
+                result = patient_data.copy()
+                if index_type == "patient":
                     result['patient_id'] = patient_id
-                    result['index'] = idx
-                    result['hybrid_score'] = score
-                    result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
-                    result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
-                    results.append(result)
+                result['index'] = idx
+                result['hybrid_score'] = score
+                result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
+                result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
+                results.append(result)
+                
+                # Stop after getting top 20 results (for patients, this means 20 unevaluated)
+                if len(results) >= 20:
+                    break
+            
+            if index_type == "patient":
+                print(f"Filtered to {len(results)} patients with is_evaluated = 0")
             
             return results
             

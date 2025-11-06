@@ -27,7 +27,7 @@ class TrialMatcher:
         self.load_patient_data()
 
     def load_patient_data(self):
-        """Load patient embeddings and metadata"""
+        """Load patient embeddings and metadata, including is_evaluated status"""
         try:
             # Load patient FAISS index
             patient_faiss_file = self.embedding_utils.patients_dir / "faiss_index.pkl"
@@ -40,6 +40,19 @@ class TrialMatcher:
             if patient_metadata_file.exists():
                 self.patient_metadata = self.embedding_utils.load_metadata(patient_metadata_file)
                 print(f"Loaded metadata for {len(self.patient_metadata)} patients")
+                
+                # Fetch is_evaluated status from database and add to metadata
+                patient_ids = [int(pid) for pid in self.patient_metadata.keys() if pid.isdigit()]
+                if patient_ids:
+                    evaluated_status = self.db_utils.get_patients_evaluated_status(patient_ids)
+                    for patient_id_str, metadata in self.patient_metadata.items():
+                        patient_id = int(patient_id_str) if patient_id_str.isdigit() else None
+                        if patient_id and patient_id in evaluated_status:
+                            metadata['is_evaluated'] = evaluated_status[patient_id]
+                        else:
+                            # Default to 0 if not found (shouldn't happen, but safe fallback)
+                            metadata['is_evaluated'] = 0
+                    print(f"Added is_evaluated status to metadata for {len(evaluated_status)} patients")
             
             # Load patient texts for BM25
             self.load_patient_texts()
@@ -109,7 +122,7 @@ class TrialMatcher:
             return []
 
     def hybrid_search_patients_for_trial(self, trial_data: Dict[str, Any], alpha: float = 0.7) -> List[Dict[str, Any]]:
-        """Find suitable patients for a trial using hybrid matching"""
+        """Find suitable patients for a trial using hybrid matching (only patients with is_evaluated = 0)"""
         try:
             print(f"Finding patients for trial: {trial_data['title']}")
             
@@ -147,17 +160,40 @@ class TrialMatcher:
             # Sort by combined score
             sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
             
-            # Get metadata for top results
+            # Get metadata for top results, filtering to only include patients with is_evaluated = 0
+            # FAISS returns index positions, need to find corresponding patient_id by matching embedding_index
             results = []
-            for idx, score in sorted_results[:20]:  # Top 20 patients
-                if str(idx) in self.patient_metadata:
-                    result = self.patient_metadata[str(idx)].copy()
-                    result['index'] = idx
-                    result['hybrid_score'] = score
-                    result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
-                    result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
-                    results.append(result)
+            for idx, score in sorted_results[:50]:  # Check top 50, then filter
+                # Find patient with matching embedding_index
+                patient_id = None
+                patient_meta = None
+                for pid, metadata in self.patient_metadata.items():
+                    if metadata.get('embedding_index') == idx:
+                        patient_id = pid
+                        patient_meta = metadata
+                        break
+                
+                if not patient_meta:
+                    continue  # Skip if no matching patient found
+                
+                # Filter: Only include patients with is_evaluated = 0
+                is_evaluated = patient_meta.get('is_evaluated', 0)
+                if is_evaluated != 0:
+                    continue  # Skip evaluated patients
+                
+                result = patient_meta.copy()
+                result['patient_id'] = patient_id
+                result['index'] = idx
+                result['hybrid_score'] = score
+                result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
+                result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
+                results.append(result)
+                
+                # Stop after getting top 20 unevaluated patients
+                if len(results) >= 20:
+                    break
             
+            print(f"Filtered to {len(results)} patients with is_evaluated = 0")
             return results
             
         except Exception as e:

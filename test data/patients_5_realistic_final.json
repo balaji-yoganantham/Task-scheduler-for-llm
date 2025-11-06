@@ -1,0 +1,154 @@
+{
+  "patients": [
+    {
+      "Patient Information": {
+        "MRN": 96010001,
+        "Date of Visit": "April 14, 2025",
+        "Oncologist": "Dr. Michael Chen, MD"
+      },
+      "History of Present Illness": {
+        "Date of initial colorectal cancer diagnosis": "March 15, 2025",
+        "Site of primary tumor": "Descending colon (left colon)",
+        "Date and initial TNM stage": "March 15, 2025; T3N1M1 (Stage IV)",
+        "Date and nature of metastatic disease diagnosis": "April 04, 2025 - liver, lung metastases identified",
+        "Summary of prior treatments": "None - newly diagnosed, treatment-na\u00efve",
+        "Performance status": "ECOG 1"
+      },
+      "Past Medical History": {
+        "Significant comorbidities": "Hypertension"
+      },
+      "Family History": "- No significant family cancer history",
+      "Social History": {
+        "Smoking": "Former smoker"
+      },
+      "Laboratory & Imaging Results": {
+        "Total_bilirubin": 1.3,
+        "Molecular_markers": "RAS/BRAF wild-type, MSS"
+      },
+      "Assessment": {
+        "Diagnosis": "Metastatic colorectal cancer (liver, lung)",
+        "Disease_status": "Newly diagnosed, treatment-na\u00efve"
+      }
+    },
+    {
+      "Patient Information": {
+        "MRN": 96010002,
+        "Date of Visit": "April 14, 2025",
+        "Oncologist": "Dr. Michael Chen, MD"
+      },
+      "History of Present Illness": {
+        "Date of initial colorectal cancer diagnosis": "March 15, 2025",
+        "Site of primary tumor": "Sigmoid colon (left colon)",
+        "Date and initial TNM stage": "March 15, 2025; T3N1M1 (Stage IV)",
+        "Date and nature of metastatic disease diagnosis": "April 04, 2025 - liver metastases identified",
+        "Summary of prior treatments": "None - newly diagnosed, treatment-na\u00efve",
+        "Performance status": "ECOG 1"
+      },
+      "Past Medical History": {
+        "Significant comorbidities": "Type 2 diabetes"
+      },
+      "Family History": "- Mother with breast cancer",
+      "Social History": {
+        "Smoking": "Never smoked"
+      },
+      "Laboratory & Imaging Results": {
+        "Total_bilirubin": 1.2,
+        "Molecular_markers": "MSI-H/dMMR"
+      },
+      "Assessment": {
+        "Diagnosis": "Metastatic colorectal cancer (liver)",
+        "Disease_status": "Newly diagnosed, treatment-na\u00efve"
+      }
+    },
+    {
+      "Patient Information": {
+        "MRN": 96010003,
+        "Date of Visit": "April 14, 2025",
+        "Oncologist": "Dr. Michael Chen, MD"
+      },
+      "History of Present Illness": {
+        "Date of initial colorectal cancer diagnosis": "March 15, 2025",
+        "Site of primary tumor": "Sigmoid colon (left colon)",
+        "Date and initial TNM stage": "March 15, 2025; T3N1M1 (Stage IV)",
+        "Date and nature of metastatic disease diagnosis": "April 04, 2025 - liver, peritoneum metastases identified",
+        "Summary of prior treatments": "Previously treated",
+        "Performance status": "ECOG 1"
+      },
+      "Past Medical History": {
+        "Significant comorbidities": "COPD"
+      },
+      "Family History": "- Father with colon polyps",
+      "Social History": {
+        "Smoking": "Former smoker"
+      },
+      "Laboratory & Imaging Results": {
+        "Total_bilirubin": 1.4,
+        "Molecular_markers": "KRAS G12D mutant, MSS"
+      },
+      "Assessment": {
+        "Diagnosis": "Metastatic colorectal cancer (liver, peritoneum)",
+        "Disease_status": "Previously treated"
+      }
+    },
+    {
+      "Patient Information": {
+        "MRN": 96010004,
+        "Date of Visit": "April 14, 2025",
+        "Oncologist": "Dr. Michael Chen, MD"
+      },
+      "History of Present Illness": {
+        "Date of initial colorectal cancer diagnosis": "March 15, 2025",
+        "Site of primary tumor": "Rectosigmoid junction (left colon)",
+        "Date and initial TNM stage": "March 15, 2025; T3N1M1 (Stage IV)",
+        "Date and nature of metastatic disease diagnosis": "April 04, 2025 - liver metastases identified",
+        "Summary of prior treatments": "None - newly diagnosed, treatment-na\u00efve",
+        "Performance status": "ECOG 1"
+      },
+      "Past Medical History": {
+        "Significant comorbidities": "Hypothyroidism"
+      },
+      "Family History": "- Sister with ovarian cancer",
+      "Social History": {
+        "Smoking": "Never smoked"
+      },
+      "Laboratory & Imaging Results": {
+        "Total_bilirubin": 1.6,
+        "Molecular_markers": "HER2 amplified, MSS"
+      },
+      "Assessment": {
+        "Diagnosis": "Metastatic colorectal cancer (liver)",
+        "Disease_status": "Newly diagnosed, treatment-na\u00efve"
+      }
+    },
+    {
+      "Patient Information": {
+        "MRN": 96010005,
+        "Date of Visit": "April 14, 2025",
+        "Oncologist": "Dr. Michael Chen, MD"
+      },
+      "History of Present Illness": {
+        "Date of initial colorectal cancer diagnosis": "March 15, 2025",
+        "Site of primary tumor": "Ascending colon (right colon)",
+        "Date and initial TNM stage": "March 15, 2025; T3N1M1 (Stage IV)",
+        "Date and nature of metastatic disease diagnosis": "April 04, 2025 - liver, lung metastases identified",
+        "Summary of prior treatments": "Previously treated",
+        "Performance status": "ECOG 0"
+      },
+      "Past Medical History": {
+        "Significant comorbidities": "Chronic back pain"
+      },
+      "Family History": "- No significant family cancer history",
+      "Social History": {
+        "Smoking": "Current smoker"
+      },
+      "Laboratory & Imaging Results": {
+        "Total_bilirubin": 1.1,
+        "Molecular_markers": "BRAF V600E mutant"
+      },
+      "Assessment": {
+        "Diagnosis": "Metastatic colorectal cancer (liver, lung)",
+        "Disease_status": "Previously treated"
+      }
+    }
+  ]
+}

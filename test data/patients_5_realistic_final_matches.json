@@ -1,0 +1,1976 @@
+{
+  "matches": [
+    {
+      "MRN": 96010001,
+      "results": [
+        {
+          "trial_id": "NCT03093116",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires fusion",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT03452774",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT03715933",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT03947385",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04221893",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04282044",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04314401",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04429542",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04566393",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04585750",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04657068",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04704661",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04792684",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04929223",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Molecular: RAS/BRAF wild-type met",
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04960579",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04970901",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05080673",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05086692",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05107674",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05277051",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05334069",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05410977",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05461430",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05489211",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05514717",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05520099",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05581004",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT05592626",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05673148",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: RAS/BRAF wild-type met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05783622",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05787587",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT05838768",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires MSI-H/dMMR",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05919264",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05967533",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06040541",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06051695",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06128551",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06147037",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06179160",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06244771",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06281678",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06298916",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06599502",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06662786",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: RAS/BRAF wild-type met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06699836",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06723236",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06750094",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Molecular: RAS/BRAF wild-type met",
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06778863",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT07114601",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        }
+      ],
+      "eligible_count": 18
+    },
+    {
+      "MRN": 96010002,
+      "results": [
+        {
+          "trial_id": "NCT03093116",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires fusion",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT03452774",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT03715933",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT03947385",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04221893",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04282044",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04314401",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04429542",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04566393",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04585750",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04657068",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04704661",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04792684",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04929223",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04960579",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04970901",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05080673",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05086692",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05107674",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05277051",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05334069",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05410977",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05461430",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05489211",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05514717",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05520099",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05581004",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05592626",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05673148",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05783622",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05787587",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05838768",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Molecular: MSI-H/dMMR met",
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05919264",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05967533",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06040541",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06051695",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06128551",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06147037",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06179160",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06244771",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06281678",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06298916",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06599502",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06662786",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06699836",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06723236",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06750094",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06778863",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT07114601",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        }
+      ],
+      "eligible_count": 18
+    },
+    {
+      "MRN": 96010003,
+      "results": [
+        {
+          "trial_id": "NCT03093116",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires fusion",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT03452774",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT03715933",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT03947385",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04221893",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04282044",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04314401",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04429542",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04566393",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04585750",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04657068",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04704661",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04792684",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04929223",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04960579",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04970901",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05080673",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05086692",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05107674",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05277051",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05334069",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05410977",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05461430",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05489211",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05514717",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05520099",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05581004",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05592626",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05673148",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05783622",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05787587",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT05838768",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires MSI-H/dMMR",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05919264",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05967533",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06040541",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: KRAS G12D met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06051695",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT06128551",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06147037",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06179160",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06244771",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: KRAS G12D met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06281678",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06298916",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06599502",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: KRAS G12D met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06662786",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06699836",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06723236",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06750094",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06778863",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT07114601",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        }
+      ],
+      "eligible_count": 18
+    },
+    {
+      "MRN": 96010004,
+      "results": [
+        {
+          "trial_id": "NCT03093116",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires fusion",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT03452774",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT03715933",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT03947385",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04221893",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04282044",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04314401",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04429542",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04566393",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04585750",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04657068",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04704661",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04792684",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04929223",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04960579",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04970901",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05080673",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05086692",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05107674",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05277051",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05334069",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05410977",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05461430",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: HER2 amplification met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05489211",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Molecular: HER2 amplification met",
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05514717",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Molecular: HER2 amplification met",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05520099",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05581004",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05592626",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05673148",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05783622",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05787587",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05838768",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires MSI-H/dMMR",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05919264",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05967533",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06040541",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06051695",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT06128551",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06147037",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06179160",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06244771",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06281678",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06298916",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06599502",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Exclusion: trial requires prior systemic therapy",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06662786",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06699836",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06723236",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06750094",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 1 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06778863",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT07114601",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 1 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        }
+      ],
+      "eligible_count": 18
+    },
+    {
+      "MRN": 96010005,
+      "results": [
+        {
+          "trial_id": "NCT03093116",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires fusion",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT03452774",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT03715933",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT03947385",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04221893",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04282044",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04314401",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04429542",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04566393",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04585750",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04657068",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04704661",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04792684",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT04929223",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04960579",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT04970901",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05080673",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05086692",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05107674",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05277051",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05334069",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05410977",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05461430",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05489211",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05514717",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires HER2 amplification",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05520099",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05581004",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT05592626",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05673148",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05783622",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05787587",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT05838768",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires MSI-H/dMMR",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05919264",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT05967533",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06040541",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06051695",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06128551",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible"
+          ]
+        },
+        {
+          "trial_id": "NCT06147037",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06179160",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06244771",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06281678",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06298916",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06599502",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires KRAS G12D",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06662786",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06699836",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06723236",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT06750094",
+          "decision": "NOT_ELIGIBLE",
+          "reasons": [
+            "Exclusion: trial requires RAS/BRAF wild-type",
+            "Performance: ECOG 0 acceptable"
+          ]
+        },
+        {
+          "trial_id": "NCT06778863",
+          "decision": "NEED_MORE_INFO",
+          "reasons": [
+            "Performance: ECOG 0 acceptable",
+            "Broad early-phase solid tumor trial \u2014 biomarker-flexible",
+            "Synthetic dataset: requires confirmation (e.g., imaging/labs)"
+          ]
+        },
+        {
+          "trial_id": "NCT07114601",
+          "decision": "ELIGIBLE",
+          "reasons": [
+            "Performance: ECOG 0 acceptable"
+          ]
+        }
+      ],
+      "eligible_count": 18
+    }
+  ],
+  "summary": [
+    [
+      96010001,
+      18
+    ],
+    [
+      96010002,
+      18
+    ],
+    [
+      96010003,
+      18
+    ],
+    [
+      96010004,
+      18
+    ],
+    [
+      96010005,
+      18
+    ]
+  ]
+}
