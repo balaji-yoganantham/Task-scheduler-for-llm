@@ -42,7 +42,7 @@ class TrialEmbeddingGenerator:
             trial_id = trial['trial_id']
             if self._check_trial_embedding_exists(trial_id):
                 existing_trials.append(trial)
-                print(f"✅ Trial {trial_id} already has embeddings - skipping")
+                print(f"[OK] Trial {trial_id} already has embeddings - skipping")
             else:
                 new_trials.append(trial)
         
@@ -50,7 +50,7 @@ class TrialEmbeddingGenerator:
         print(f"   New trials (to process): {len(new_trials)}")
         
         if not new_trials:
-            print("🎉 All trials already have embeddings - no new generation needed!")
+            print("[SUCCESS] All trials already have embeddings - no new generation needed!")
             return {
                 "embeddings": [],
                 "metadata": {},

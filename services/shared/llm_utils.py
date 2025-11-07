@@ -219,7 +219,7 @@ class LLMUtils:
         # Save prompt before sending
         prompt_file = self._save_prompt_to_file(prompt, call_type, metadata)
         if prompt_file:
-            print(f"💾 Prompt saved to: {prompt_file}")
+            print(f"[SAVE] Prompt saved to: {prompt_file}")
         
         # Retry logic with exponential backoff for 429 errors
         max_retries = GEMINI_MAX_RETRIES
@@ -360,7 +360,7 @@ class LLMUtils:
                     f.write(response.text)
                     f.write("\n\n=== ERROR ===\n")
                     f.write(str(e))
-                print(f"💾 Full response saved to: {debug_file}")
+                print(f"[SAVE] Full response saved to: {debug_file}")
             except Exception as save_error:
                 print(f"Could not save debug file: {save_error}")
             
@@ -946,7 +946,7 @@ class LLMUtils:
                     f.write(f"Line: {e.lineno}, Column: {e.colno}\n")
                     f.write(f"Message: {e.msg}\n")
                     f.write(f"Error: {str(e)}\n")
-                print(f"💾 Debug file saved to: {debug_file}")
+                print(f"[SAVE] Debug file saved to: {debug_file}")
             except Exception as save_error:
                 print(f"Could not save debug file: {save_error}")
             return {
@@ -1206,7 +1206,7 @@ class LLMUtils:
                     f.write(f"Line: {e.lineno}, Column: {e.colno}\n")
                     f.write(f"Message: {e.msg}\n")
                     f.write(f"Error: {str(e)}\n")
-                print(f"💾 Full response saved to: {debug_file}")
+                print(f"[SAVE] Full response saved to: {debug_file}")
             except Exception as save_error:
                 print(f"Could not save debug file: {save_error}")
             return {"error": error_msg}

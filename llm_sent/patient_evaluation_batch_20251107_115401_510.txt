@@ -1,0 +1,491 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: patient_evaluation_batch
+trial_id: NCT06298916
+trial_title: A Phase 1/2a Study Utilizing 64Cu-LNTH-1363S (64Cu...
+batch_size: 4
+patient_ids: [34, 48, 25, 51]
+mrns: ['39000010', '39000024', '39000001', '39000027']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 4 patients for the given clinical trial and determine eligibility.
+
+        
+        CLINICAL TRIAL INFORMATION:
+        Trial ID: NCT06298916
+        Title: A Phase 1/2a Study Utilizing 64Cu-LNTH-1363S (64Cu Radiolabeled FAPi PET/CT Imaging Agent) in Patients With Sarcoma or Gastrointestinal Tract Cancer (PHANTOM Trial)
+        Condition: ["Metastatic Sarcoma", "Esophageal Cancer", "Gastric Cancer", "Pancreatic Cancer", "Colorectal Cancer", "Sarcoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 15 Years - 
+        Gender: ALL
+        
+        Brief Summary: This is a multicenter, open-label, prospective Phase 1/2a study to assess safety and tolerability, establish dosimetry and to identify an optimal imaging dose (radioactivity) and imaging time window of 64Cu-LNTH-1363S, and to compare its imaging biodistribution with FAP expression by IHC in patients with sarcomas or GIT cancers. The study will be conducted in 2 parts (Part 1 and Part 2).
+        
+        Detailed Description: Part 1 will determine the biodistribution, dosimetry, optimal dose (radioactivity) and imaging time window of 64Cu-LNTH-1363S in 6 evaluable patients with supposed FAP-expressing solid tumors (metastatic sarcomas). All six patients will receive 8 ± 1 mCi (\~90 μg mass dose) in this study. All images will undergo analysis by blinded central readers. Optimal radioactivity and timing window will be determined based on image quality scores and measured tumor-to-background ratio. Part 1 of the study will last approximately 3 weeks for each patient and includes a Screening Period (up to 14 days), a 1-day Intervention Period and a Safety Follow-up Period (7 days post dose).
+
+Part 2 will evaluate 64Cu-LNTH-1363S correlation with FAP expression measured by IHC (SUVmax and SUVmean vs IHC score) in 20 evaluable patients with non-metastatic, operable, supposed FAP-expressing solid tumors (sarcomas, esophageal, gastric, pancreatic, colorectal) planned for surgery within 60 days (from study imaging). If the optimal radioactivity determined from Part 1 is less than 8 ± 1 mCi, the first 6 patients in Part 2 will be used to validate this optimal radioactivity.
+
+Part 2 of the study will last approximately 10 to 11 weeks and includes: a Screening Period (up to 14 days), a 1-day Intervention Period, a 1 day Safety Followup Period (Day 2) and a Scheduled Surgery IHC Sample Collection Period (from Day 2 to Day 60).
+
+Both Part 1 and Part 2 of the study will also monitor cardiac safety by detecting changes in HR, T wave, ST segment and other ECG parameters and characterizing the concentration-response relationship of 64Cu-LNTH-1363S for QT and corrected QT interval (QTc) prolongation.
+        
+        Inclusion Criteria: ["Part 1", "Patients are eligible to be included in the study only if all of the following criteria apply:", "1. Patient must be \u2265 15 years of age and must have provided written informed consent and assent, where applicable (by patient or legal guardian). Those aged \u226515 to \\<18 years must weigh at least 55 kg.", "2. Patients with suspected FAP-expressing metastatic sarcoma.", "3. Patients must have histological, pathological, and/or cytological confirmation of a metastatic sarcoma (e.g., undifferentiated pleomorphic sarcoma, liposarcoma, Leiomyosarcoma, myxofibrosarcoma, solitary fibrous tumor, Ewing's sarcoma, synovial sarcoma, sarcoma not otherwise specified, osteosarcoma).", "4. Patients must be willing to consent to provide sufficient and adequate archived tumor tissue samples (formalin fixed, paraffin embedded sample), preferably from a biopsy of a tumor lesion obtained either at the time of or after the diagnosis of disease; if archival tissue sample is unavailable, a new biopsy should be performed on the most accessible lesion(s) to obtain the tumor tissue sample.", "5. Adequate renal function as determined by a calculated creatinine clearance \u2265 60 mL/min (Cockcroft Gault equation).", "6. Women of childbearing potential (WOCBP) must have a negative beta-human chorionic gonadotropin (\u03b2-hCG) test and must not be breastfeeding. WOCBP must agree to use a highly effective method of contraception during the study and for 28 days after the last injection of the study drug.", "7. Male subjects who are able to father a child must agree to avoid impregnating a partner, to adhere to a highly effective method of contraception and to not donate sperm during the study and for 28 days after the last injection of the study drug."]
+        
+        Exclusion Criteria: ["Part 1", "Patients are excluded from the study if any of the following criteria apply:", "1. Unlikely to comply with protocol procedures, restrictions and requirements as judged by the Investigator.", "2. Known pregnancy or breastfeeding.", "3. Any PET scan done within 10 physical half-lives of the PET agent prior to receiving study intervention.", "4. Patients participating in another clinical trial at the time of screening for this study.", "5. Patients who have had systemic anti-cancer therapy administered in the 14 days prior to IP administration.", "6. Has undergone or plans to undergo PET or single-photon emission computerized tomography (SPECT) imaging with any other FAPi imaging agent within 6 months prior to or after participating in this trial.", "7. History of QT/QTc interval prolongation, a marked baseline QT/QTc interval prolongation (e.g., repeated demonstration of a QTc interval, calculated with Fridericia's correction, \\> 450 milliseconds) or taking medication known to cause QT/QTc prolongation.", "8. A history of additional risk factors for Torsades de Pointes (e.g., heart failure, hypokalemia, family history of long QT syndrome)."]
+        
+        Eligibility Criteria: Inclusion Criteria: Part 1
+
+Patients are eligible to be included in the study only if all of the following criteria apply:
+
+1. Patient must be ≥ 15 years of age and must have provided written informed consent and assent, where applicable (by patient or legal guardian). Those aged ≥15 to \<18 years must weigh at least 55 kg.
+2. Patients with suspected FAP-expressing metastatic sarcoma.
+3. Patients must have histological, pathological, and/or cytological confirmation of a metastatic sarcoma (e.g., undifferentiated pleomorphic sarcoma, liposarcoma, Leiomyosarcoma, myxofibrosarcoma, solitary fibrous tumor, Ewing's sarcoma, synovial sarcoma, sarcoma not otherwise specified, osteosarcoma).
+4. Patients must be willing to consent to provide sufficient and adequate archived tumor tissue samples (formalin fixed, paraffin embedded sample), preferably from a biopsy of a tumor lesion obtained either at the time of or after the diagnosis of disease; if archival tissue sample is unavailable, a new biopsy should be performed on the most accessible lesion(s) to obtain the tumor tissue sample.
+5. Adequate renal function as determined by a calculated creatinine clearance ≥ 60 mL/min (Cockcroft Gault equation).
+6. Women of childbearing potential (WOCBP) must have a negative beta-human chorionic gonadotropin (β-hCG) test and must not be breastfeeding. WOCBP must agree to use a highly effective method of contraception during the study and for 28 days after the last injection of the study drug.
+7. Male subjects who are able to father a child must agree to avoid impregnating a partner, to adhere to a highly effective method of contraception and to not donate sperm during the study and for 28 days after the last injection of the study drug.
+
+Inclusion Criteria: Part 2
+
+1. Patient must be ≥ 15 years of age and must have provided written informed consent and assent, where applicable (by patient or legal guardian). Those aged ≥15 to \<18 years must weigh at least 55 kg.
+2. Patients must have histological, pathological, and/or cytological confirmation of a sarcoma or GIT cancers e.g., esophageal, gastric, pancreatic, colorectal cancer.
+3. Patients must have suspected FAP expressing sarcoma or GIT cancers and planned for surgery within 60 days (from study imaging).
+4. Patients must be willing to consent to provide sufficient and adequate tumor tissue samples (formalin fixed, paraffin embedded sample), from their planned surgery after participating in study imaging.
+5. Adequate renal function as determined by a calculated creatinine clearance ≥ 60 mL/min (Cockcroft Gault equation).
+6. Women of childbearing potential (WOCBP) must have a negative beta-human chorionic gonadotropin (β-hCG) test and must not be breastfeeding. WOCBP must agree to use a highly effective method of contraception during the study and for 28 days after the last injection of the study drug.
+7. Male subjects who are able to father a child must agree to avoid impregnating a partner, to adhere to a highly effective method of contraception and to not donate sperm during the study and for 28 days after the last injection of the study drug.
+
+Exclusion Criteria: Part 1
+
+Patients are excluded from the study if any of the following criteria apply:
+
+1. Unlikely to comply with protocol procedures, restrictions and requirements as judged by the Investigator.
+2. Known pregnancy or breastfeeding.
+3. Any PET scan done within 10 physical half-lives of the PET agent prior to receiving study intervention.
+4. Patients participating in another clinical trial at the time of screening for this study.
+5. Patients who have had systemic anti-cancer therapy administered in the 14 days prior to IP administration.
+6. Has undergone or plans to undergo PET or single-photon emission computerized tomography (SPECT) imaging with any other FAPi imaging agent within 6 months prior to or after participating in this trial.
+7. History of QT/QTc interval prolongation, a marked baseline QT/QTc interval prolongation (e.g., repeated demonstration of a QTc interval, calculated with Fridericia's correction, \> 450 milliseconds) or taking medication known to cause QT/QTc prolongation.
+8. A history of additional risk factors for Torsades de Pointes (e.g., heart failure, hypokalemia, family history of long QT syndrome).
+
+Exclusion Criteria: Part 2
+
+1. Patients who have had neoadjuvant anti-cancer therapy administered in the 14 days prior to IP administration.
+2. Evidence of metastatic or advanced, inoperable disease.
+3. Unlikely to comply with protocol procedures, restrictions and requirements and judged by the investigator to be unsuitable for participation.
+4. Known pregnancy or breastfeeding.
+5. Any PET scan done within 10 physical half-lives of the PET agent prior to receiving study intervention.
+6. Patients participating in another clinical trial at the time of screening for this study.
+7. Has undergone or plans to undergo PET or SPECT imaging with any other FAPi imaging agent within 6 months prior to or after participating in this trial.
+8. History of QT/QTc interval prolongation, a marked baseline QT/QTc interval prolongation (e.g., repeated demonstration of a QTc interval, calculated with Fridericia's correction, \> 450 milliseconds) or taking drugs known to cause QT/QTc prolongation.
+9. A history of additional risk factors for Torsades de Pointes (e.g., heart failure, hypokalemia, family history of long QT syndrome
+        
+
+        PATIENTS TO EVALUATE:
+        
+        ============================================================
+        PATIENT 1:
+        ============================================================
+        Patient ID: 34
+        MRN: 39000010
+        Age: 31
+        Gender: Female
+        Oncologist: Dr. Sarah Mehta, MD
+        Hybrid Score: 0.171
+        
+        Combined Medical Record: Patient Name: Emma Miller
+Patient MRN: 39000010
+Age: 31, Gender: Female
+Date of Visit: August 29, 2025
+Oncologist: Dr. Sarah Mehta, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 17, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: June 17, 2025; T4N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: July 27, 2025 - peritoneum metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: COPD, Obesity
+- Surgical history: Appendectomy (2011)
+
+Family History: - Maternal aunt with uterine cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (20 pack-years)
+- Alcohol use: None
+- Living situation: Resides in assisted care facility
+- Occupation: Nurse
+- Functional status: Fully independent
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+--- Page 15 ---
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 7.8 ×10³/µL, Hgb 10.1 g/dL, Platelets 296 ×10³/µL
+- Chemistry: Creatinine 1.2 mg/dL, eGFR 98 mL/min/1.73m²
+- LFTs: AST 37 U/L, ALT 55 U/L, ALP 147 U/L, Total bilirubin 2.2 mg/dL
+- CEA: 53.6 ng/mL (elevated)
+- Molecular markers: MSI-H/dMMR
+- Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 1 hepatic metastases (largest 6.1 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 7.8 ×10³/µL, Hgb 10.1 g/dL, Platelets 296 ×10³/µL
+- Chemistry: Creatinine 1.2 mg/dL, eGFR 98 mL/min/1.73m²
+- LFTs: AST 37 U/L, ALT 55 U/L, ALP 147 U/L, Total bilirubin 2.2 mg/dL
+- CEA: 53.6 ng/mL (elevated)
+- Molecular markers: MSI-H/dMMR
+
+Imaging: - Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 1 hepatic metastases (largest 6.1 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 125/82, HR 73, RR 18, Temp 98.6°F, SpO2 99%, Weight 157 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (peritoneum)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+        ============================================================
+        PATIENT 2:
+        ============================================================
+        Patient ID: 48
+        MRN: 39000024
+        Age: 53
+        Gender: Female
+        Oncologist: Dr. Kavita Desai, MD
+        Hybrid Score: 0.169
+        
+        Combined Medical Record: Patient Name: Amy Wood
+Patient MRN: 39000024
+Age: 53, Gender: Female
+Date of Visit: May 03, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: February 14, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: February 14, 2025; T3N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: April 10, 2025 - brain, peritoneum metastases identified
+- Summary of prior treatments: Received FOLFOX; currently off therapy for 3 months
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: COPD, Asthma
+- Surgical history: Appendectomy (2011)
+
+Family History: - No significant family cancer history
+
+Social History: - Smoking: Current smoker (20 pack-years)
+- Alcohol use: Moderate
+- Living situation: Lives with spouse
+- Occupation: Software professional
+--- Page 35 ---
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches improving
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 8.2 ×10³/µL, Hgb 10.4 g/dL, Platelets 178 ×10³/µL
+- Chemistry: Creatinine 1.0 mg/dL, eGFR 85 mL/min/1.73m²
+- LFTs: AST 52 U/L, ALT 34 U/L, ALP 303 U/L, Total bilirubin 2.3 mg/dL
+- CEA: 110.5 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows sigmoid colon (left colon) mass (4.1 cm), 2 hepatic metastases (largest 2.8 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 8.2 ×10³/µL, Hgb 10.4 g/dL, Platelets 178 ×10³/µL
+- Chemistry: Creatinine 1.0 mg/dL, eGFR 85 mL/min/1.73m²
+- LFTs: AST 52 U/L, ALT 34 U/L, ALP 303 U/L, Total bilirubin 2.3 mg/dL
+- CEA: 110.5 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows sigmoid colon (left colon) mass (4.1 cm), 2 hepatic metastases (largest 2.8 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 123/72, HR 76, RR 18, Temp 98.6°F, SpO2 95%, Weight 152 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (brain, peritoneum)
+- Disease status: Received FOLFOX; currently off therapy for 3 months
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+        ============================================================
+        PATIENT 3:
+        ============================================================
+        Patient ID: 25
+        MRN: 39000001
+        Age: 36
+        Gender: Female
+        Oncologist: Dr. Sarah Mehta, MD
+        Hybrid Score: 0.169
+        
+        Combined Medical Record: Patient Name: Michelle White
+Patient MRN: 39000001
+Age: 36, Gender: Female
+Date of Visit: April 09, 2025
+Oncologist: Dr. Sarah Mehta, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: January 01, 2025
+- Site of primary tumor: Rectosigmoid junction (left colon)
+- Date of initial diagnosis and TNM stage: January 01, 2025; T2N2M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: February 06, 2025 - lung, peritoneum metastases identified
+- Summary of prior treatments: Received FOLFOX; currently off therapy for 3 months
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Hypothyroidism, Chronic back pain, Obesity
+- Surgical history: Appendectomy (2011)
+
+Family History: - No significant family cancer history
+
+Social History: - Smoking: Former smoker (quit 5 years ago)
+- Alcohol use: Moderate
+- Living situation: Lives alone
+- Occupation: Software professional
+- Functional status: Needs some assistance with daily activities
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: --- Page 2 ---
+- General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 8.0 ×10³/µL, Hgb 9.6 g/dL, Platelets 201 ×10³/µL
+- Chemistry: Creatinine 1.2 mg/dL, eGFR 116 mL/min/1.73m²
+- LFTs: AST 37 U/L, ALT 23 U/L, ALP 223 U/L, Total bilirubin 1.1 mg/dL
+- CEA: 93.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows rectosigmoid junction (left colon) mass (5.6 cm), 2 hepatic metastases (largest 4.1 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 8.0 ×10³/µL, Hgb 9.6 g/dL, Platelets 201 ×10³/µL
+- Chemistry: Creatinine 1.2 mg/dL, eGFR 116 mL/min/1.73m²
+- LFTs: AST 37 U/L, ALT 23 U/L, ALP 223 U/L, Total bilirubin 1.1 mg/dL
+- CEA: 93.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows rectosigmoid junction (left colon) mass (5.6 cm), 2 hepatic metastases (largest 4.1 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 122/75, HR 84, RR 18, Temp 98.4°F, SpO2 97%, Weight 194 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung, peritoneum)
+- Disease status: Received FOLFOX; currently off therapy for 3 months
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+        ============================================================
+        PATIENT 4:
+        ============================================================
+        Patient ID: 51
+        MRN: 39000027
+        Age: 65
+        Gender: Male
+        Oncologist: Dr. Joseph Patel, MD
+        Hybrid Score: 0.168
+        
+        Combined Medical Record: Patient Name: Alexander Ross
+Patient MRN: 39000027
+Age: 65, Gender: Male
+Date of Visit: August 26, 2025
+Oncologist: Dr. Joseph Patel, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 24, 2025
+- Site of primary tumor: Ascending colon (right colon)
+- Date of initial diagnosis and TNM stage: May 24, 2025; T4N1M1 (Stage IV)
+--- Page 39 ---
+- Date and nature of metastatic disease diagnosis: July 23, 2025 - brain, lung metastases identified
+- Summary of prior treatments: Received FOLFOX; currently off therapy for 3 months
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Coronary artery disease, Asthma, Type 2 diabetes
+- Surgical history: Appendectomy (2011)
+
+Family History: - Mother with breast cancer
+- No known hereditary syndromes
+
+Social History: - Smoking: Occasional smoker (social use)
+- Alcohol use: None
+- Living situation: Resides in assisted care facility
+- Occupation: Farmer
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches improving
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 7.7 ×10³/µL, Hgb 12.7 g/dL, Platelets 226 ×10³/µL
+- Chemistry: Creatinine 1.0 mg/dL, eGFR 93 mL/min/1.73m²
+- LFTs: AST 51 U/L, ALT 38 U/L, ALP 273 U/L, Total bilirubin 2.2 mg/dL
+- CEA: 104.3 ng/mL (elevated)
+- Molecular markers: HER2 amplified, MSS
+--- Page 40 ---
+- Imaging: CT shows ascending colon (right colon) mass (7.7 cm), 2 hepatic metastases (largest 2.6 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 7.7 ×10³/µL, Hgb 12.7 g/dL, Platelets 226 ×10³/µL
+- Chemistry: Creatinine 1.0 mg/dL, eGFR 93 mL/min/1.73m²
+- LFTs: AST 51 U/L, ALT 38 U/L, ALP 273 U/L, Total bilirubin 2.2 mg/dL
+- CEA: 104.3 ng/mL (elevated)
+- Molecular markers: HER2 amplified, MSS
+--- Page 40 ---
+
+Imaging: - Imaging: CT shows ascending colon (right colon) mass (7.7 cm), 2 hepatic metastases (largest 2.6 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 112/70, HR 84, RR 18, Temp 98.3°F, SpO2 95%, Weight 194 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (brain, lung)
+- Disease status: Received FOLFOX; currently off therapy for 3 months
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+
+        Instructions:
+        1. For EACH patient, evaluate their eligibility for the trial based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider each patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "patient_id": 34,
+                    "mrn": "39000010",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this patient"
+                },
+                {
+                    "patient_id": 48,
+                    "mrn": "39000024",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this patient"
+                }
+                // ... continue for all 4 patients
+            ],
+            "batch_summary": {
+                "total_patients_evaluated": 4,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Patient 1 - Best match due to...",
+                    "Patient 2 - Good alternative because...",
+                    "Patient 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-07T11:54:01.510090"
+            }
+        }
+        

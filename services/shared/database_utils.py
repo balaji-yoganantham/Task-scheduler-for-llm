@@ -873,3 +873,100 @@ class DatabaseUtils:
         except Exception as e:
             print(f"Error updating trial evaluated status for {trial_id}: {e}")
             return False
+    
+    def update_scheduler_timestamp(self, scheduler_id: int = 2) -> bool:
+        """
+        Update the last run timestamp for a scheduler in trial_scheduler_details table
+        
+        Args:
+            scheduler_id: ID of the scheduler to update (default: 2 for "LLM Scheduler")
+            
+        Returns:
+            True if update was successful, False otherwise
+        """
+        try:
+            with self.get_connection() as connection:
+                # Try common column names for timestamp
+                # The table might have: timestamp, last_run, last_run_timestamp, updated_at, etc.
+                # Try to get the actual column name first
+                column_query = text("""
+                    SELECT column_name 
+                    FROM information_schema.columns 
+                    WHERE table_schema = 'insightsedge' 
+                      AND table_name = 'trial_scheduler_details'
+                      AND column_name IN ('timestamp', 'last_run', 'last_run_timestamp', 'updated_at', 'last_updated')
+                    ORDER BY column_name
+                    LIMIT 1
+                """)
+                result = connection.execute(column_query)
+                row = result.fetchone()
+                
+                if row:
+                    column_name = row[0]
+                else:
+                    # If no matching column found, try to get any timestamp-like column
+                    fallback_query = text("""
+                        SELECT column_name 
+                        FROM information_schema.columns 
+                        WHERE table_schema = 'insightsedge' 
+                          AND table_name = 'trial_scheduler_details'
+                          AND data_type IN ('timestamp without time zone', 'timestamp with time zone', 'timestamp')
+                        LIMIT 1
+                    """)
+                    result = connection.execute(fallback_query)
+                    row = result.fetchone()
+                    if row:
+                        column_name = row[0]
+                    else:
+                        print(f"⚠️ No timestamp column found in trial_scheduler_details table")
+                        return False
+                
+                # Update using the found column name
+                query = text(f"""
+                    UPDATE insightsedge.trial_scheduler_details 
+                    SET {column_name} = CURRENT_TIMESTAMP
+                    WHERE id = :scheduler_id
+                """)
+                result = connection.execute(query, {"scheduler_id": scheduler_id})
+                connection.commit()
+                
+                updated_count = result.rowcount
+                if updated_count > 0:
+                    print(f"✅ Updated scheduler timestamp ({column_name}) for scheduler ID {scheduler_id}")
+                    return True
+                else:
+                    print(f"⚠️ No scheduler found with ID {scheduler_id} to update")
+                    return False
+        except Exception as e:
+            print(f"Error updating scheduler timestamp for scheduler ID {scheduler_id}: {e}")
+            return False
+    
+    def get_evaluated_patient_ids_for_trial(self, trial_id: str) -> List[int]:
+        """
+        Get list of patient IDs that were evaluated for a specific trial.
+        These patient IDs come from patient_medical_history table and were evaluated for the trial.
+        The trial_to_patient table stores the evaluation results linking trial_id to patient_id.
+        
+        Args:
+            trial_id: Trial ID (NCT ID) to get evaluated patients for
+            
+        Returns:
+            List of patient IDs from patient_medical_history that were evaluated for this trial
+        """
+        try:
+            with self.get_connection() as connection:
+                # Get patient IDs from trial_to_patient table
+                # These patient_ids reference patient_medical_history.id
+                query = text("""
+                    SELECT DISTINCT ttp.patient_id 
+                    FROM insightsedge.trial_to_patient ttp
+                    WHERE ttp.trial_id = :trial_id
+                      AND ttp.patient_id IS NOT NULL
+                """)
+                result = connection.execute(query, {"trial_id": trial_id})
+                
+                patient_ids = [int(row[0]) for row in result if row[0] is not None]
+                return patient_ids
+        except Exception as e:
+            print(f"Error getting evaluated patient IDs from patient_medical_history for trial {trial_id}: {e}")
+            return []

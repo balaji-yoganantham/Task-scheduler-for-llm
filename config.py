@@ -35,7 +35,7 @@ TASK_TIMEOUT_SECONDS = int(os.getenv("TASK_TIMEOUT_SECONDS", "300"))
 
 # Fixed ID execution (explicit run lists)
 ENABLE_FIXED_IDS = os.getenv("ENABLE_FIXED_IDS", "true").lower() == "true"
-FIXED_TRIAL_IDS = os.getenv("FIXED_TRIAL_IDS", "NCT04929223,NCT03947385").split(",")
+FIXED_TRIAL_IDS = os.getenv("FIXED_TRIAL_IDS", "NCT06298916").split(",")
 FIXED_TRIAL_IDS = [t.strip() for t in FIXED_TRIAL_IDS if t.strip()]
 
 FIXED_PATIENT_IDS = os.getenv("FIXED_PATIENT_IDS", "1,2").split(",")
@@ -46,6 +46,10 @@ RUN_JOBS_ON_START = os.getenv("RUN_JOBS_ON_START", "true").lower() == "true"
 
 # Run both jobs once and exit (no scheduler loop)
 RUN_ONCE_AND_EXIT = os.getenv("RUN_ONCE_AND_EXIT", "false").lower() == "true"
+
+# Enable/Disable specific flows
+ENABLE_PATIENT_TO_TRIAL_FLOW = os.getenv("ENABLE_PATIENT_TO_TRIAL_FLOW", "false").lower() == "true"  # Set to "true" to enable patient-to-trial matching
+ENABLE_TRIAL_TO_PATIENT_FLOW = os.getenv("ENABLE_TRIAL_TO_PATIENT_FLOW", "true").lower() == "true"  # Set to "true" to enable trial-to-patient matching
 
 # Patient Processing Configuration
 DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "100"))
@@ -108,6 +112,8 @@ print(f"  - USE_LLM_PROCESSING: {USE_LLM_PROCESSING}")
 print(f"  - SCHEDULER_INTERVAL_MINUTES: {SCHEDULER_INTERVAL_MINUTES}")
 print(f"  - MAX_CONCURRENT_TASKS: {MAX_CONCURRENT_TASKS}")
 print(f"  - LOG_LEVEL: {LOG_LEVEL}")
+print(f"  - ENABLE_PATIENT_TO_TRIAL_FLOW: {ENABLE_PATIENT_TO_TRIAL_FLOW} (Patient-to-Trial matching: {'ON' if ENABLE_PATIENT_TO_TRIAL_FLOW else 'OFF'})")
+print(f"  - ENABLE_TRIAL_TO_PATIENT_FLOW: {ENABLE_TRIAL_TO_PATIENT_FLOW} (Trial-to-Patient matching: {'ON' if ENABLE_TRIAL_TO_PATIENT_FLOW else 'OFF'})")
 print(f"  - LOCATION_ENABLED: {LOCATION_ENABLED} (Location-based filtering: {'ON' if LOCATION_ENABLED else 'OFF'})")
 print(f"  - TOP_K_PATIENTS: {TOP_K_PATIENTS} (Top K patients from hybrid matching)")
 print(f"  - TRIAL_PATIENT_LLM_BATCH_SIZE: {TRIAL_PATIENT_LLM_BATCH_SIZE} (Patients per LLM batch)")

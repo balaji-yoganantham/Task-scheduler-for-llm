@@ -1,0 +1,155 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: keyword_generation_batch
+batch_size: 2
+patient_ids: [83, 82]
+mrns: ['sg', 's;DJvn']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Analyze the following 2 patient medical records and generate comprehensive keywords for clinical trial matching.
+
+        PATIENTS DATA:
+        
+==================================================
+PATIENT 1:
+==================================================
+Patient ID: 83
+MRN: sg
+Age: 22
+Gender: Male
+Combined Medical Record:
+Patient Name: lshfbc
+Patient MRN: sg
+Age: 22, Gender: Male
+Date of Visit: 2025-11-07
+Oncologist: Not specified
+
+Chief Complaint: Not specified
+
+History of Present Illness: Not specified
+
+Past Medical History: Not specified
+
+Family History: Not specified
+
+Social History: Not specified
+
+Review of Systems: Not specified
+
+Medications and Allergies: Not specified
+
+Physical Examination: Not specified
+
+Laboratory and Imaging Results: Not specified
+
+Imaging: Not specified
+
+Vital Signs: BP 120/80, HR 76, Temp 113°F, BMI 33
+
+Assessment: Not specified
+
+==================================================
+PATIENT 2:
+==================================================
+Patient ID: 82
+MRN: s;DJvn
+Age: 33
+Gender: Male
+Combined Medical Record:
+Patient Name: :AOJFv
+Patient MRN: s;DJvn
+Age: 33, Gender: Male
+Date of Visit: 2025-11-07
+Oncologist: Not specified
+
+Chief Complaint: Not specified
+
+History of Present Illness: Not specified
+
+Past Medical History: Not specified
+
+Family History: Not specified
+
+Social History: Not specified
+
+Review of Systems: Not specified
+
+Medications and Allergies: Not specified
+
+Physical Examination: BMI: 33; HR: 54; BP: 120/67; Temp: 91.4°F
+
+Laboratory and Imaging Results: Not specified
+
+Imaging: Not specified
+
+Vital Signs: [{"bmi":33,"date":"2025-11-07","heart_rate":54,"temperature_c":33,"blood_pressure":"120/67"}]
+
+Assessment: Not specified
+
+
+        Instructions:
+        1. Extract ALL relevant medical conditions, symptoms, treatments, and characteristics for EACH patient
+        2. Generate at least 30-40 keywords per patient covering:
+           - Primary diagnosis and staging
+           - Metastatic sites
+           - Molecular markers
+           - Comorbidities
+           - Medications
+           - Allergies
+           - Performance status
+           - Family history
+           - Demographics
+        3. Use standardized medical terminology
+        4. Include both specific and general terms for better matching
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_results": [
+                {
+                    "patient_id": 83,
+                    "mrn": "sg",
+                    "age": 22,
+                    "gender": "Male",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-07T12:29:25.282690"
+                },
+                {
+                    "patient_id": 82,
+                    "mrn": "s;DJvn",
+                    "age": 33,
+                    "gender": "Male",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-07T12:29:25.282690"
+                }
+                // ... continue for all 2 patients
+            ],
+            "batch_metadata": {
+                "total_patients": 2,
+                "generated_at": "2025-11-07T12:29:25.282690",
+                "model": "gemini-2.0-flash-exp",
+                "batch_processing": true
+            }
+        }
+        

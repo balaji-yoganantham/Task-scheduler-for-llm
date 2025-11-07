@@ -142,7 +142,7 @@ class TrialEvaluator:
                 "summary": batch_summary
             })
             
-            print(f"✓ Batch {batch_num} completed: {len(batch_evaluations)} patients evaluated")
+            print(f"[OK] Batch {batch_num} completed: {len(batch_evaluations)} patients evaluated")
             print(f"  - Eligible: {batch_summary.get('eligible_count', 0)}")
             print(f"  - Not Eligible: {batch_summary.get('not_eligible_count', 0)}")
             print(f"  - Need More Info: {batch_summary.get('need_more_info_count', 0)}")

@@ -284,7 +284,7 @@ class PatientEvaluator:
         results['results_file'] = filepath
         
         # Save results to database (new functionality)
-        print(f"\n💾 Saving results to database...")
+        print(f"\n[SAVE] Saving results to database...")
         try:
             # Save summary evaluation results
             db_id = self.eval_db.save_patient_to_trial_evaluation(results)
@@ -295,7 +295,7 @@ class PatientEvaluator:
                 print("⚠️ Failed to save results to database")
             
             # Save individual patient-trial evaluations to normalized table
-            print(f"\n💾 Saving individual patient-trial evaluations...")
+            print(f"\n[SAVE] Saving individual patient-trial evaluations...")
             try:
                 saved_count = self.eval_db.save_patient_trial_evaluations(results)
                 if saved_count > 0:

@@ -27,7 +27,9 @@ from config import (
     FIXED_PATIENT_IDS,
     RUN_JOBS_ON_START,
     RUN_ONCE_AND_EXIT,
-    DEFAULT_PATIENT_LIMIT
+    DEFAULT_PATIENT_LIMIT,
+    ENABLE_PATIENT_TO_TRIAL_FLOW,
+    ENABLE_TRIAL_TO_PATIENT_FLOW
 )
 
 # Database services will be imported lazily in initialize() to avoid import errors when optional
@@ -59,23 +61,35 @@ class TaskScheduler:
         logger.info("Initializing Task Scheduler services...")
         
         try:
-            # Initialize database services
+            # Always try to initialize DatabaseUtils (it's required for is_evaluated updates)
+            # This is independent of USE_DATABASE flag since we need it for status updates
+            try:
+                from services.shared.database_utils import DatabaseUtils  # type: ignore
+                self.db_utils = DatabaseUtils()
+                logger.info("DatabaseUtils initialized successfully")
+            except Exception as e:
+                logger.error(f"Failed to initialize DatabaseUtils: {e}")
+                self.db_utils = None
+            
+            # Initialize database services (if enabled)
             if USE_DATABASE:
+                # Try to initialize optional database services
                 try:
                     from database.patient_db import PatientDB  # type: ignore
                     from database.trial_database_service import TrialDatabaseService  # type: ignore
-                    from services.shared.database_utils import DatabaseUtils  # type: ignore
                     self.patient_db = PatientDB()
                     self.trial_db = TrialDatabaseService()
-                    self.db_utils = DatabaseUtils()
                     await self.patient_db.initialize()
                     await self.trial_db.initialize()
-                    logger.info("Database services initialized")
+                    logger.info("PatientDB and TrialDatabaseService initialized successfully")
                 except ModuleNotFoundError:
-                    logger.warning("Database service modules not found; proceeding without database integration")
+                    logger.warning("PatientDB or TrialDatabaseService modules not found; proceeding without them")
                     self.patient_db = None
                     self.trial_db = None
-                    self.db_utils = None
+                except Exception as e:
+                    logger.warning(f"Failed to initialize PatientDB or TrialDatabaseService: {e}; proceeding without them")
+                    self.patient_db = None
+                    self.trial_db = None
             
             # Initialize LLM services
             if USE_LLM_PROCESSING:
@@ -106,15 +120,17 @@ class TaskScheduler:
         
         # Optionally run both jobs immediately; also used when RUN_ONCE_AND_EXIT
         if RUN_JOBS_ON_START or RUN_ONCE_AND_EXIT:
-            logger.info("Running trial and patient jobs immediately on start")
-            try:
-                await self.process_trial_patient_matches()
-            except Exception as e:
-                logger.error(f"Initial trial job failed: {e}")
-            try:
-                await self.process_patient_trial_matches()
-            except Exception as e:
-                logger.error(f"Initial patient job failed: {e}")
+            logger.info("Running enabled jobs immediately on start")
+            if ENABLE_TRIAL_TO_PATIENT_FLOW:
+                try:
+                    await self.process_trial_patient_matches()
+                except Exception as e:
+                    logger.error(f"Initial trial-to-patient job failed: {e}")
+            if ENABLE_PATIENT_TO_TRIAL_FLOW:
+                try:
+                    await self.process_patient_trial_matches()
+                except Exception as e:
+                    logger.error(f"Initial patient-to-trial job failed: {e}")
 
         # If configured to run once and exit, shut down immediately after the initial runs
         if RUN_ONCE_AND_EXIT:
@@ -147,23 +163,31 @@ class TaskScheduler:
     def _add_scheduled_jobs(self):
         """Add all scheduled jobs to the scheduler"""
         
-        # Process pending patient-trial matches every 30 minutes
-        self.scheduler.add_job(
-            self.process_patient_trial_matches,
-            trigger=IntervalTrigger(minutes=SCHEDULER_INTERVAL_MINUTES),
-            id='process_patient_trial_matches',
-            name='Process Patient-Trial Matches',
-            replace_existing=True
-        )
+        # Process pending patient-trial matches every 30 minutes (if enabled)
+        if ENABLE_PATIENT_TO_TRIAL_FLOW:
+            self.scheduler.add_job(
+                self.process_patient_trial_matches,
+                trigger=IntervalTrigger(minutes=SCHEDULER_INTERVAL_MINUTES),
+                id='process_patient_trial_matches',
+                name='Process Patient-Trial Matches',
+                replace_existing=True
+            )
+            logger.info("Patient-to-Trial flow enabled")
+        else:
+            logger.info("Patient-to-Trial flow disabled")
         
-        # Process pending trial-patient matches every 30 minutes
-        self.scheduler.add_job(
-            self.process_trial_patient_matches,
-            trigger=IntervalTrigger(minutes=SCHEDULER_INTERVAL_MINUTES),
-            id='process_trial_patient_matches',
-            name='Process Trial-Patient Matches',
-            replace_existing=True
-        )
+        # Process pending trial-patient matches every 30 minutes (if enabled)
+        if ENABLE_TRIAL_TO_PATIENT_FLOW:
+            self.scheduler.add_job(
+                self.process_trial_patient_matches,
+                trigger=IntervalTrigger(minutes=SCHEDULER_INTERVAL_MINUTES),
+                id='process_trial_patient_matches',
+                name='Process Trial-Patient Matches',
+                replace_existing=True
+            )
+            logger.info("Trial-to-Patient flow enabled")
+        else:
+            logger.info("Trial-to-Patient flow disabled")
         
         # Update trial eligibility assessments every hour
         self.scheduler.add_job(
@@ -225,6 +249,25 @@ class TaskScheduler:
                         continue
                     
                 logger.info(f"Patient-trial matching task completed. Processed {len(self.processed_patient_ids)} patients successfully")
+                
+                # Update is_evaluated status immediately after patient-to-trial flow completes
+                if self.processed_patient_ids and self.db_utils:
+                    try:
+                        patient_ids_list = list(self.processed_patient_ids)
+                        updated_count = self.db_utils.update_patients_evaluated(patient_ids_list)
+                        if updated_count > 0:
+                            logger.info(f"✅ Updated is_evaluated=1 for {updated_count} patients from patient-to-trial flow: {patient_ids_list}")
+                        # Clear the tracking set after update
+                        self.processed_patient_ids.clear()
+                    except Exception as e:
+                        logger.warning(f"Failed to update is_evaluated status for patient-to-trial flow: {e}")
+                
+                # Update scheduler timestamp in database
+                if self.db_utils:
+                    try:
+                        self.db_utils.update_scheduler_timestamp(scheduler_id=2)
+                    except Exception as e:
+                        logger.warning(f"Failed to update scheduler timestamp: {e}")
             
         except Exception as e:
             logger.error(f"Error in patient-trial matching task: {e}")
@@ -266,6 +309,13 @@ class TaskScheduler:
                 
                 # Update is_evaluated status after trial-to-patient flow completes
                 await self._update_patients_evaluated_status()
+                
+                # Update scheduler timestamp in database
+                if self.db_utils:
+                    try:
+                        self.db_utils.update_scheduler_timestamp(scheduler_id=2)
+                    except Exception as e:
+                        logger.warning(f"Failed to update scheduler timestamp: {e}")
             
         except Exception as e:
             logger.error(f"Error in trial-patient matching task: {e}")
@@ -383,6 +433,21 @@ class TaskScheduler:
         ]
         await self._run_pipeline_cmd(cmd, context={"trial_id": trial_id})
         
+        # After pipeline completes, get the patient IDs that were evaluated from patient_medical_history
+        # Query the trial_to_patient table to get patient IDs that were evaluated for this trial
+        # These patients come from patient_medical_history and were evaluated
+        if self.db_utils:
+            try:
+                evaluated_patients = self.db_utils.get_evaluated_patient_ids_for_trial(trial_id)
+                if evaluated_patients:
+                    for patient_id in evaluated_patients:
+                        self.evaluated_patient_ids.add(patient_id)
+                    logger.info(f"Tracked {len(evaluated_patients)} evaluated patients from patient_medical_history for trial {trial_id}: {evaluated_patients}")
+                else:
+                    logger.warning(f"No evaluated patients found in trial_to_patient table for trial {trial_id}")
+            except Exception as e:
+                logger.warning(f"Failed to get evaluated patient IDs for trial {trial_id}: {e}")
+        
     async def _update_single_trial_eligibility(self, trial_id: str):
         """Update eligibility for a single trial"""
         logger.info(f"Updating eligibility for trial {trial_id}")
@@ -493,9 +558,9 @@ class TaskScheduler:
             
             duration = time.time() - start_time
             if returncode == 0:
-                logger.info(f"✓ Command succeeded in {duration:.2f}s | context={context}")
+                logger.info(f"[SUCCESS] Command succeeded in {duration:.2f}s | context={context}")
             else:
-                logger.error(f"✗ Command failed (exit {returncode}) in {duration:.2f}s | context={context}")
+                logger.error(f"[FAILED] Command failed (exit {returncode}) in {duration:.2f}s | context={context}")
                 
         except Exception as e:
             logger.error(f"Failed to execute command: {cmd_str} | context={context} | error={e}")

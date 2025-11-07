@@ -183,38 +183,38 @@ class PatientToTrialOrchestrator:
             safe_json_dump(pipeline_results, pipeline_file, indent=2, ensure_ascii=False)
             
             # Save evaluation results to database
-            print(f"\n💾 Saving evaluation results to database...")
+            print(f"\n[SAVE] Saving evaluation results to database...")
             pipeline_results["database_save_status"] = "failed"
             pipeline_results["database_save_error"] = None
             
             try:
                 if matching_results and matching_results.get('patient_info'):
                     # Save individual patient-trial evaluations to normalized table
-                    print(f"💾 Saving individual patient-trial evaluations...")
+                    print(f"[SAVE] Saving individual patient-trial evaluations...")
                     try:
                         saved_count = self.eval_db.save_patient_trial_evaluations(matching_results)
                         if saved_count > 0:
                             pipeline_results["database_save_status"] = "success"
                             pipeline_results["individual_evaluations_saved"] = saved_count
-                            print(f"✅ Saved {saved_count} individual patient-trial evaluations to insightsedge.patient_to_trial")
+                            print(f"[OK] Saved {saved_count} individual patient-trial evaluations to insightsedge.patient_to_trial")
                         else:
                             pipeline_results["database_save_error"] = "No evaluations were saved"
-                            print("⚠️ No individual evaluations were saved")
+                            print("[WARNING] No individual evaluations were saved")
                     except Exception as e:
-                        print(f"⚠️ Error saving individual evaluations: {e}")
+                        print(f"[WARNING] Error saving individual evaluations: {e}")
                         pipeline_results["database_save_error"] = str(e)
                         pipeline_results["individual_evaluations_error"] = str(e)
                 else:
                     pipeline_results["database_save_error"] = "No matching results to save"
-                    print("⚠️ No matching results available to save to database")
+                    print("[WARNING] No matching results available to save to database")
             except Exception as e:
                 pipeline_results["database_save_error"] = str(e)
-                print(f"⚠️ Database save error (continuing with JSON): {e}")
+                print(f"[WARNING] Database save error (continuing with JSON): {e}")
             
-            print(f"\n🎉 PIPELINE COMPLETED SUCCESSFULLY!")
+            print(f"\n[SUCCESS] PIPELINE COMPLETED SUCCESSFULLY!")
             print(f"Pipeline results saved to: {pipeline_file}")
             if pipeline_results["database_save_status"] == "success":
-                print(f"✅ Saved {pipeline_results.get('individual_evaluations_saved', 0)} evaluations to insightsedge.patient_to_trial")
+                print(f"[OK] Saved {pipeline_results.get('individual_evaluations_saved', 0)} evaluations to insightsedge.patient_to_trial")
             else:
                 print(f"Database save failed: {pipeline_results.get('database_save_error', 'Unknown error')}")
             
@@ -251,7 +251,7 @@ class PatientToTrialOrchestrator:
                         priority = evaluation.get('priority_score', 0)
                         
                         # Color coding for status
-                        status_emoji = "✅" if status == "ELIGIBLE" else "❌" if status == "NOT_ELIGIBLE" else "❓"
+                        status_emoji = "[OK]" if status == "ELIGIBLE" else "[NO]" if status == "NOT_ELIGIBLE" else "[?]"
                         
                         print(f"{i:2d}. {status_emoji} {trial_info.get('title', 'Unknown')[:65]}...")
                         print(f"    Trial ID: {trial_info.get('trial_id', 'Unknown')}")
