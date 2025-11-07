@@ -42,18 +42,20 @@ class TrialMatcher:
                 self.patient_metadata = self.embedding_utils.load_metadata(patient_metadata_file)
                 print(f"Loaded metadata for {len(self.patient_metadata)} patients")
                 
-                # Fetch is_evaluated status from database and add to metadata
+                # Fetch is_evaluated and is_shortlisted status from database and add to metadata
                 patient_ids = [int(pid) for pid in self.patient_metadata.keys() if pid.isdigit()]
                 if patient_ids:
-                    evaluated_status = self.db_utils.get_patients_evaluated_status(patient_ids)
+                    status_dict = self.db_utils.get_patients_evaluated_and_shortlisted_status(patient_ids)
                     for patient_id_str, metadata in self.patient_metadata.items():
                         patient_id = int(patient_id_str) if patient_id_str.isdigit() else None
-                        if patient_id and patient_id in evaluated_status:
-                            metadata['is_evaluated'] = evaluated_status[patient_id]
+                        if patient_id and patient_id in status_dict:
+                            metadata['is_evaluated'] = status_dict[patient_id]['is_evaluated']
+                            metadata['is_shortlisted'] = status_dict[patient_id]['is_shortlisted']
                         else:
                             # Default to 0 if not found (shouldn't happen, but safe fallback)
                             metadata['is_evaluated'] = 0
-                    print(f"Added is_evaluated status to metadata for {len(evaluated_status)} patients")
+                            metadata['is_shortlisted'] = 0
+                    print(f"Added is_evaluated and is_shortlisted status to metadata for {len(status_dict)} patients")
             
             # Load patient texts for BM25
             self.load_patient_texts()
@@ -123,9 +125,13 @@ class TrialMatcher:
             return []
 
     def hybrid_search_patients_for_trial(self, trial_data: Dict[str, Any], alpha: float = 0.7) -> List[Dict[str, Any]]:
-        """Find suitable patients for a trial using hybrid matching (only patients with is_evaluated = 0)"""
+        """Find suitable patients for a trial using hybrid matching with trial is_evaluated and patient is_shortlisted filtering"""
         try:
             print(f"Finding patients for trial: {trial_data['title']}")
+            
+            # Get trial's is_evaluated status (default to 0 if not present)
+            trial_is_evaluated = trial_data.get('is_evaluated', 0)
+            print(f"Trial is_evaluated status: {trial_is_evaluated}")
             
             # Generate embedding for trial
             trial_embedding = self.embedding_utils.generate_embedding(
@@ -161,12 +167,12 @@ class TrialMatcher:
             # Sort by combined score
             sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
             
-            # Get metadata for top results, filtering to only include patients with is_evaluated = 0
+            # Get metadata for top results, filtering based on trial is_evaluated and patient is_shortlisted
             # FAISS returns index positions, need to find corresponding patient_id by matching embedding_index
-            # Iterate through ALL sorted results (not just top 50) to find TOP_K_PATIENTS unevaluated patients
+            # Iterate through ALL sorted results (not just top 50) to find TOP_K_PATIENTS matching patients
             results = []
             for idx, score in sorted_results:  # Check all results, then filter
-                # Stop after getting top K unevaluated patients
+                # Stop after getting top K matching patients
                 if len(results) >= TOP_K_PATIENTS:
                     break
                 
@@ -182,10 +188,25 @@ class TrialMatcher:
                 if not patient_meta:
                     continue  # Skip if no matching patient found
                 
-                # Filter: Only include patients with is_evaluated = 0
-                is_evaluated = patient_meta.get('is_evaluated', 0)
-                if is_evaluated != 0:
-                    continue  # Skip evaluated patients
+                # Get patient status
+                patient_is_evaluated = patient_meta.get('is_evaluated', 0)
+                patient_is_shortlisted = patient_meta.get('is_shortlisted', 0)
+                
+                # Filter based on trial is_evaluated status:
+                # - If trial is_evaluated = 0: Include patients with is_evaluated IN (0, 1) AND is_shortlisted = 0
+                # - If trial is_evaluated = 1: Include patients with is_evaluated = 0 AND is_shortlisted = 0
+                if trial_is_evaluated == 0:
+                    # Trial not evaluated: take patients with is_evaluated = 0 or 1, but not shortlisted
+                    if patient_is_shortlisted != 0:
+                        continue  # Skip shortlisted patients
+                    if patient_is_evaluated not in [0, 1]:
+                        continue  # Skip patients with is_evaluated not 0 or 1
+                else:  # trial_is_evaluated == 1
+                    # Trial evaluated: only take patients with is_evaluated = 0, and not shortlisted
+                    if patient_is_evaluated != 0:
+                        continue  # Skip evaluated patients
+                    if patient_is_shortlisted != 0:
+                        continue  # Skip shortlisted patients
                 
                 result = patient_meta.copy()
                 result['patient_id'] = patient_id
@@ -195,7 +216,7 @@ class TrialMatcher:
                 result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
                 results.append(result)
             
-            print(f"Filtered to {len(results)} patients with is_evaluated = 0")
+            print(f"Filtered to {len(results)} patients (trial is_evaluated={trial_is_evaluated}, excluded shortlisted)")
             return results
             
         except Exception as e:

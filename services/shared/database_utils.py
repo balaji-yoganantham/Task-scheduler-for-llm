@@ -788,3 +788,88 @@ class DatabaseUtils:
             except Exception as e2:
                 print(f"Error getting patients evaluated status (fallback also failed): {e2}")
                 return {}
+    
+    def get_patients_evaluated_and_shortlisted_status(self, patient_ids: List[int]) -> Dict[int, Dict[str, int]]:
+        """
+        Get is_evaluated and is_shortlisted status for multiple patient IDs
+        
+        Args:
+            patient_ids: List of patient IDs to check
+            
+        Returns:
+            Dictionary mapping patient_id to {'is_evaluated': int, 'is_shortlisted': int}
+        """
+        if not patient_ids:
+            return {}
+        
+        try:
+            with self.get_connection() as connection:
+                # Use ANY for PostgreSQL array compatibility
+                query = text("""
+                    SELECT id, COALESCE(is_evaluated, 0) as is_evaluated, COALESCE(is_shortlisted, 0) as is_shortlisted
+                    FROM insightsedge.patient_medical_history 
+                    WHERE id = ANY(:patient_ids::int[])
+                """)
+                result = connection.execute(query, {"patient_ids": patient_ids})
+                
+                status_dict = {
+                    row[0]: {
+                        'is_evaluated': row[1],
+                        'is_shortlisted': row[2]
+                    } for row in result
+                }
+                return status_dict
+        except Exception as e:
+            # Fallback to IN clause if array casting fails
+            try:
+                with self.get_connection() as connection:
+                    placeholders = ','.join([f':id{i}' for i in range(len(patient_ids))])
+                    query = text(f"""
+                        SELECT id, COALESCE(is_evaluated, 0) as is_evaluated, COALESCE(is_shortlisted, 0) as is_shortlisted
+                        FROM insightsedge.patient_medical_history 
+                        WHERE id IN ({placeholders})
+                    """)
+                    params = {f'id{i}': pid for i, pid in enumerate(patient_ids)}
+                    result = connection.execute(query, params)
+                    
+                    status_dict = {
+                        row[0]: {
+                            'is_evaluated': row[1],
+                            'is_shortlisted': row[2]
+                        } for row in result
+                    }
+                    return status_dict
+            except Exception as e2:
+                print(f"Error getting patients evaluated and shortlisted status (fallback also failed): {e2}")
+                return {}
+    
+    def update_trial_evaluated(self, trial_id: str) -> bool:
+        """
+        Update is_evaluated = 1 for a specific trial
+        
+        Args:
+            trial_id: Trial ID (NCT ID) to update
+            
+        Returns:
+            True if update was successful, False otherwise
+        """
+        try:
+            with self.get_connection() as connection:
+                query = text("""
+                    UPDATE insightsedge.clinical_trial_details 
+                    SET is_evaluated = 1
+                    WHERE nct_id = :trial_id
+                """)
+                result = connection.execute(query, {"trial_id": trial_id})
+                connection.commit()
+                
+                updated_count = result.rowcount
+                if updated_count > 0:
+                    print(f"✅ Updated is_evaluated=1 for trial {trial_id}")
+                    return True
+                else:
+                    print(f"⚠️ No trial found with ID {trial_id} to update")
+                    return False
+        except Exception as e:
+            print(f"Error updating trial evaluated status for {trial_id}: {e}")
+            return False

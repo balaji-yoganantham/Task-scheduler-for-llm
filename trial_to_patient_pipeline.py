@@ -12,7 +12,7 @@ from typing import Dict, Any, Tuple, Optional
 from services.patient_to_trial.keyword_generator import PatientKeywordGenerator
 from services.patient_to_trial.patient_embedding import PatientEmbeddingGenerator
 from services.trial_to_patient.trial_evaluator import TrialEvaluator
-from services.shared.database_utils import safe_json_dump
+from services.shared.database_utils import safe_json_dump, DatabaseUtils
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
 from config import DEFAULT_PATIENT_LIMIT
 
@@ -23,6 +23,7 @@ class TrialToPatientOrchestrator:
         self.embedding_generator = PatientEmbeddingGenerator()
         self.trial_evaluator = TrialEvaluator()
         self.eval_db = EvaluationResultsDB()
+        self.db_utils = DatabaseUtils()
         
         # Results directory
         self.results_dir = Path("results")
@@ -190,6 +191,21 @@ class TrialToPatientOrchestrator:
                             pipeline_results["database_save_status"] = "success"
                             pipeline_results["individual_evaluations_saved"] = saved_count
                             print(f"✅ Saved {saved_count} individual trial-patient evaluations to insightsedge.trial_to_patient")
+                            
+                            # Update trial's is_evaluated status to 1 after successful save
+                            print(f"💾 Updating trial {trial_id} is_evaluated status to 1...")
+                            try:
+                                trial_updated = self.db_utils.update_trial_evaluated(trial_id)
+                                if trial_updated:
+                                    pipeline_results["trial_is_evaluated_updated"] = True
+                                    print(f"✅ Successfully updated trial {trial_id} is_evaluated to 1")
+                                else:
+                                    pipeline_results["trial_is_evaluated_updated"] = False
+                                    print(f"⚠️ Failed to update trial {trial_id} is_evaluated status")
+                            except Exception as e:
+                                pipeline_results["trial_is_evaluated_updated"] = False
+                                pipeline_results["trial_is_evaluated_error"] = str(e)
+                                print(f"⚠️ Error updating trial is_evaluated status: {e}")
                         else:
                             pipeline_results["database_save_error"] = "No evaluations were saved"
                             print("⚠️ No individual evaluations were saved")
