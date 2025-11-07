@@ -16,7 +16,8 @@ RETURNS TABLE (
     oncologist TEXT,
     date_of_visit VARCHAR(50),
     vital TEXT,
-    created_at TIMESTAMPTZ
+    created_at TIMESTAMPTZ,
+    is_shortlisted INTEGER
 ) 
 LANGUAGE plpgsql
 AS $$
@@ -50,7 +51,8 @@ BEGIN
         pmh.oncologist::TEXT as oncologist,
         pmh.date_of_visit::VARCHAR(50) as date_of_visit,
         pmh.vital::TEXT as vital,
-        pmh.created_at::TIMESTAMPTZ as created_at
+        pmh.created_at::TIMESTAMPTZ as created_at,
+        pmh.is_shortlisted as is_shortlisted
     FROM insightsedge.patient_medical_history pmh
     WHERE pmh.age IS NOT NULL 
         AND pmh.gender IS NOT NULL
@@ -80,7 +82,8 @@ RETURNS TABLE (
     detailed_description TEXT,
     minimum_age VARCHAR,
     maximum_age VARCHAR,
-    sex VARCHAR
+    sex VARCHAR,
+    is_evaluated INTEGER
 )
 LANGUAGE plpgsql
 AS $$
@@ -103,7 +106,8 @@ BEGIN
         ctd.detailed_description,
         ctd.minimum_age,
         ctd.maximum_age,
-        ctd.sex
+        ctd.sex,
+        ctd.is_evaluated as is_evaluated
     FROM insightsedge.clinical_trial_details ctd
     WHERE ctd.overall_status IN ('Recruiting', 'Active, not recruiting', 'Enrolling by invitation')
     ORDER BY ctd.created_at DESC;
@@ -130,7 +134,8 @@ RETURNS TABLE (
     minimum_age TEXT,
     maximum_age TEXT,
     sex TEXT,
-    combined_trial_text TEXT
+    combined_trial_text TEXT,
+    is_evaluated INTEGER
 )
 LANGUAGE plpgsql
 AS $$
@@ -169,7 +174,8 @@ BEGIN
             'Inclusion Criteria: ', COALESCE(ctd.inclusion_criteria, 'Not available'), E'\n\n',
             'Exclusion Criteria: ', COALESCE(ctd.exclusion_criteria, 'Not available'), E'\n\n',
             'Eligibility Criteria: ', COALESCE(ctd.eligibility_criteria, 'Not available')
-        ) as combined_trial_text
+        ) as combined_trial_text,
+        ctd.is_evaluated as is_evaluated
     FROM insightsedge.clinical_trial_details ctd
     WHERE ctd.overall_status IN ('Recruiting', 'Active, not recruiting', 'Enrolling by invitation')
     ORDER BY ctd.created_at DESC;
@@ -198,7 +204,8 @@ RETURNS TABLE (
     minimum_age TEXT,
     maximum_age TEXT,
     sex TEXT,
-    combined_trial_text TEXT
+    combined_trial_text TEXT,
+    is_evaluated INTEGER
 )
 LANGUAGE plpgsql
 AS $$
@@ -237,7 +244,8 @@ BEGIN
             'Inclusion Criteria: ', COALESCE(ctd.inclusion_criteria, 'Not available'), E'\n\n',
             'Exclusion Criteria: ', COALESCE(ctd.exclusion_criteria, 'Not available'), E'\n\n',
             'Eligibility Criteria: ', COALESCE(ctd.eligibility_criteria, 'Not available')
-        ) as combined_trial_text
+        ) as combined_trial_text,
+        ctd.is_evaluated as is_evaluated
     FROM insightsedge.clinical_trial_details ctd
     WHERE ctd.nct_id = p_trial_id
         AND ctd.overall_status IN ('Recruiting', 'Active, not recruiting', 'Enrolling by invitation');

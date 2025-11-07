@@ -76,7 +76,8 @@ class DatabaseUtils:
                         "oncologist": row[6],
                         "date_of_visit": date_of_visit,
                         "vital": row[8],
-                        "created_at": row[9].isoformat() if row[9] else None
+                        "created_at": row[9].isoformat() if row[9] else None,
+                        "is_shortlisted": row[10] if len(row) > 10 else 0
                     })
                 
                 return patients
@@ -102,7 +103,16 @@ class DatabaseUtils:
                         "investigator": row[5],
                         "created_date": row[6],
                         "patients_matched": row[7],
-                        "matching_status": row[8]
+                        "matching_status": row[8],
+                        "inclusion_criteria": row[9] if len(row) > 9 else None,
+                        "exclusion_criteria": row[10] if len(row) > 10 else None,
+                        "eligibility_criteria": row[11] if len(row) > 11 else None,
+                        "brief_summary": row[12] if len(row) > 12 else None,
+                        "detailed_description": row[13] if len(row) > 13 else None,
+                        "minimum_age": row[14] if len(row) > 14 else None,
+                        "maximum_age": row[15] if len(row) > 15 else None,
+                        "sex": row[16] if len(row) > 16 else None,
+                        "is_evaluated": row[17] if len(row) > 17 else 0
                     })
                 
                 return trials
@@ -149,7 +159,8 @@ class DatabaseUtils:
                             'Inclusion Criteria: ', COALESCE(ctd.inclusion_criteria, 'Not available'), E'\n\n',
                             'Exclusion Criteria: ', COALESCE(ctd.exclusion_criteria, 'Not available'), E'\n\n',
                             'Eligibility Criteria: ', COALESCE(ctd.eligibility_criteria, 'Not available')
-                        ) as combined_trial_text
+                        ) as combined_trial_text,
+                        COALESCE(ctd.is_evaluated, 0) as is_evaluated
                     FROM insightsedge.clinical_trial_details ctd
                     WHERE ctd.overall_status IN ('RECRUITING', 'ENROLLING_BY_INVITATION', 'AVAILABLE')
                     ORDER BY ctd.created_at DESC
@@ -177,7 +188,8 @@ class DatabaseUtils:
                         "inclusion_criteria": str(row[14]),
                         "exclusion_criteria": str(row[15]),
                         "eligibility_criteria": str(row[16]),
-                        "combined_trial_text": str(row[17])
+                        "combined_trial_text": str(row[17]),
+                        "is_evaluated": int(row[18]) if len(row) > 18 else 0
                     })
                 
                 print(f"Successfully retrieved {len(trials)} trials from database")
@@ -220,7 +232,8 @@ class DatabaseUtils:
                         pmh.oncologist,
                         pmh.date_of_visit,
                         pmh.vital,
-                        pmh.created_at
+                        pmh.created_at,
+                        COALESCE(pmh.is_shortlisted, 0) as is_shortlisted
                     FROM insightsedge.patient_medical_history pmh
                     WHERE pmh.id = :patient_id
                 """)
@@ -238,7 +251,8 @@ class DatabaseUtils:
                         "oncologist": row[6],
                         "date_of_visit": row[7].isoformat() if row[7] and hasattr(row[7], 'isoformat') else str(row[7]) if row[7] else None,
                         "vital": row[8],
-                        "created_at": row[9].isoformat() if row[9] else None
+                        "created_at": row[9].isoformat() if row[9] else None,
+                        "is_shortlisted": int(row[10]) if len(row) > 10 else 0
                     }
                 return None
         except Exception as e:
@@ -275,7 +289,8 @@ class DatabaseUtils:
                         "oncologist": row[6],
                         "date_of_visit": date_of_visit,
                         "vital": row[8],
-                        "created_at": row[9].isoformat() if row[9] else None
+                        "created_at": row[9].isoformat() if row[9] else None,
+                        "is_shortlisted": row[10] if len(row) > 10 else 0
                     }
                 return None
         except Exception as e:
@@ -320,7 +335,8 @@ class DatabaseUtils:
                             'Inclusion Criteria: ', COALESCE(ctd.inclusion_criteria, 'Not available'), E'\n\n',
                             'Exclusion Criteria: ', COALESCE(ctd.exclusion_criteria, 'Not available'), E'\n\n',
                             'Eligibility Criteria: ', COALESCE(ctd.eligibility_criteria, 'Not available')
-                        ) as combined_trial_text
+                        ) as combined_trial_text,
+                        COALESCE(ctd.is_evaluated, 0) as is_evaluated
                     FROM insightsedge.clinical_trial_details ctd
                     WHERE ctd.nct_id = :trial_id
                         AND ctd.overall_status IN ('RECRUITING', 'ENROLLING_BY_INVITATION', 'AVAILABLE')
@@ -347,7 +363,8 @@ class DatabaseUtils:
                         "inclusion_criteria": str(row[14]),
                         "exclusion_criteria": str(row[15]),
                         "eligibility_criteria": str(row[16]),
-                        "combined_trial_text": str(row[17])
+                        "combined_trial_text": str(row[17]),
+                        "is_evaluated": int(row[18]) if len(row) > 18 else 0
                     }
                 return None
         except Exception as e:
