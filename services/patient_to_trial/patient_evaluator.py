@@ -11,6 +11,7 @@ from services.shared.database_utils import DatabaseUtils, safe_json_dump
 from services.shared.llm_utils import LLMUtils
 from services.patient_to_trial.patient_matcher import PatientMatcher
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
+from config import PATIENT_TRIAL_LLM_BATCH_SIZE
 
 class PatientEvaluator:
     def __init__(self):
@@ -61,13 +62,14 @@ class PatientEvaluator:
             }
 
     def evaluate_top_trials_for_patient(self, patient_id: int, top_trials: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Evaluate top trials for a specific patient using LLM batch processing"""
-        print(f"🚀 Evaluating {len(top_trials)} trials for patient {patient_id}")
+        """Evaluate top trials for a specific patient using LLM batch processing in chunks of 20"""
+        print(f"Evaluating {len(top_trials)} trials for patient {patient_id}")
+        print(f"Processing in batches of {PATIENT_TRIAL_LLM_BATCH_SIZE} trials per LLM call")
         
         # Get detailed patient information
         patient_info = self.db_utils.get_patient_by_id(patient_id)
         if not patient_info:
-            print(f"❌ Patient {patient_id} not found")
+            print(f"Patient {patient_id} not found")
             return {}
         
         # Get detailed trial information for all trials
@@ -84,23 +86,56 @@ class PatientEvaluator:
                     detailed_trials.append(detailed_trial_info)
         
         if not detailed_trials:
-            print("❌ No detailed trial information found")
+            print("No detailed trial information found")
             return {}
         
-        print(f"📊 Running BATCH evaluation for {len(detailed_trials)} trials...")
-        print(f"📋 Patient: MRN {patient_info['mrn']} (Age: {patient_info['age']}, Gender: {patient_info['gender']})")
+        print(f"Patient: MRN {patient_info['mrn']} (Age: {patient_info['age']}, Gender: {patient_info['gender']})")
+        print(f"Processing {len(detailed_trials)} trials in batches of {PATIENT_TRIAL_LLM_BATCH_SIZE}...")
         
-        # Use batch evaluation - this sends ALL trials to Gemini in one API call
-        batch_result = self.llm_utils.evaluate_patient_trial_matches_batch(detailed_trials, patient_info)
+        # Split trials into batches of PATIENT_TRIAL_LLM_BATCH_SIZE
+        all_evaluations = []
+        all_batch_summaries = []
+        total_batches = (len(detailed_trials) + PATIENT_TRIAL_LLM_BATCH_SIZE - 1) // PATIENT_TRIAL_LLM_BATCH_SIZE
         
-        if "error" in batch_result:
-            print(f"❌ Batch evaluation failed: {batch_result['error']}")
+        for batch_idx in range(0, len(detailed_trials), PATIENT_TRIAL_LLM_BATCH_SIZE):
+            batch_trials = detailed_trials[batch_idx:batch_idx + PATIENT_TRIAL_LLM_BATCH_SIZE]
+            batch_num = (batch_idx // PATIENT_TRIAL_LLM_BATCH_SIZE) + 1
+            
+            print(f"\n{'='*60}")
+            print(f"BATCH {batch_num}/{total_batches}: Processing {len(batch_trials)} trials (indices {batch_idx} to {batch_idx + len(batch_trials) - 1})")
+            print(f"{'='*60}")
+            
+            # Process this batch
+            batch_result = self.llm_utils.evaluate_patient_trial_matches_batch(batch_trials, patient_info)
+            
+            if "error" in batch_result:
+                print(f"Batch {batch_num} evaluation failed: {batch_result['error']}")
+                # Continue with other batches even if one fails
+                continue
+            
+            batch_evaluations = batch_result.get("evaluations", [])
+            batch_summary = batch_result.get("batch_summary", {})
+            
+            all_evaluations.extend(batch_evaluations)
+            all_batch_summaries.append({
+                "batch_number": batch_num,
+                "batch_size": len(batch_trials),
+                "summary": batch_summary
+            })
+            
+            print(f"Batch {batch_num} completed: {len(batch_evaluations)} trials evaluated")
+            print(f"   - Eligible: {batch_summary.get('eligible_count', 0)}")
+            print(f"   - Not Eligible: {batch_summary.get('not_eligible_count', 0)}")
+            print(f"   - Need More Info: {batch_summary.get('need_more_info_count', 0)}")
+        
+        if not all_evaluations:
+            print(f"All batch evaluations failed")
             return {
                 "patient_id": patient_id,
                 "patient_info": patient_info,
                 "total_evaluations": 0,
                 "evaluations": [],
-                "error": batch_result["error"],
+                "error": "All batch evaluations failed",
                 "summary": {
                     "eligible_count": 0,
                     "not_eligible_count": 0,
@@ -109,36 +144,48 @@ class PatientEvaluator:
                 },
                 "generated_at": datetime.now().isoformat(),
                 "evaluation_method": "batch",
-                "batch_summary": {"error": batch_result["error"]}
+                "batch_summary": {"error": "All batch evaluations failed"}
             }
         
-        evaluations = batch_result.get("evaluations", [])
-        batch_summary = batch_result.get("batch_summary", {})
-        
-        print(f"✅ Batch evaluation completed successfully!")
-        print(f"📊 Results: {len(evaluations)} trials evaluated")
-        print(f"   - Eligible: {batch_summary.get('eligible_count', 0)}")
-        print(f"   - Not Eligible: {batch_summary.get('not_eligible_count', 0)}")
-        print(f"   - Need More Info: {batch_summary.get('need_more_info_count', 0)}")
-        print(f"   - Average Confidence: {batch_summary.get('average_confidence', 0):.1f}%")
-        
         # Sort evaluations by priority score and confidence
-        evaluations.sort(key=lambda x: (
+        all_evaluations.sort(key=lambda x: (
             x.get('priority_score', 0) * 0.7 + 
             x.get('confidence_score', 0) * 0.3
         ), reverse=True)
         
+        # Calculate overall summary from all batches
+        total_eligible = len([e for e in all_evaluations if e.get('eligibility_status') == 'ELIGIBLE'])
+        total_not_eligible = len([e for e in all_evaluations if e.get('eligibility_status') == 'NOT_ELIGIBLE'])
+        total_need_more_info = len([e for e in all_evaluations if e.get('eligibility_status') == 'NEED_MORE_INFO'])
+        avg_confidence = sum(e.get('confidence_score', 0) for e in all_evaluations) / len(all_evaluations) if all_evaluations else 0
+        
+        print(f"\nAll batches completed successfully!")
+        print(f"Overall Results: {len(all_evaluations)} trials evaluated")
+        print(f"   - Eligible: {total_eligible}")
+        print(f"   - Not Eligible: {total_not_eligible}")
+        print(f"   - Need More Info: {total_need_more_info}")
+        print(f"   - Average Confidence: {avg_confidence:.1f}%")
+        
         return {
             "patient_id": patient_id,
             "patient_info": patient_info,
-            "total_evaluations": len(evaluations),
-            "evaluations": evaluations,
-            "batch_summary": batch_summary,
+            "total_evaluations": len(all_evaluations),
+            "evaluations": all_evaluations,
+            "batch_summary": {
+                "total_batches": total_batches,
+                "batch_summaries": all_batch_summaries,
+                "overall_summary": {
+                    "eligible_count": total_eligible,
+                    "not_eligible_count": total_not_eligible,
+                    "need_more_info_count": total_need_more_info,
+                    "average_confidence": avg_confidence
+                }
+            },
             "summary": {
-                "eligible_count": len([e for e in evaluations if e.get('eligibility_status') == 'ELIGIBLE']),
-                "not_eligible_count": len([e for e in evaluations if e.get('eligibility_status') == 'NOT_ELIGIBLE']),
-                "need_more_info_count": len([e for e in evaluations if e.get('eligibility_status') == 'NEED_MORE_INFO']),
-                "average_confidence": sum(e.get('confidence_score', 0) for e in evaluations) / len(evaluations) if evaluations else 0
+                "eligible_count": total_eligible,
+                "not_eligible_count": total_not_eligible,
+                "need_more_info_count": total_need_more_info,
+                "average_confidence": avg_confidence
             },
             "generated_at": datetime.now().isoformat(),
             "evaluation_method": "batch"
@@ -211,17 +258,21 @@ class PatientEvaluator:
             location_weight=location_weight
         )
         
-        if not hybrid_results.get('matching_trials'):
+        if not hybrid_results or not hybrid_results.get('matching_trials'):
             print("No matching trials found in hybrid matching")
+            # Ensure patient_info has at least patient_id
+            patient_info = hybrid_results.get('patient_info', {}) if hybrid_results else {}
+            if 'patient_id' not in patient_info:
+                patient_info['patient_id'] = patient_id
             # Return consistent structure with summary even when no trials found
             return {
                 "patient_id": patient_id,
-                "patient_info": hybrid_results.get('patient_info', {}),
-                "hybrid_matching": hybrid_results,
+                "patient_info": patient_info,
+                "hybrid_matching": hybrid_results if hybrid_results else {},
                 "llm_evaluation": {},
                 "final_ranking": [],
                 "summary": {
-                    "total_trials_found": hybrid_results.get('total_matches', 0),
+                    "total_trials_found": hybrid_results.get('total_matches', 0) if hybrid_results else 0,
                     "trials_evaluated": 0,
                     "eligible_trials": 0,
                     "average_confidence": 0
@@ -283,30 +334,18 @@ class PatientEvaluator:
         filepath = self.save_evaluation_results(results)
         results['results_file'] = filepath
         
-        # Save results to database (new functionality)
-        print(f"\n[SAVE] Saving results to database...")
+        # Save results to database (only individual evaluations to trial_to_patient table)
+        print(f"\n[SAVE] Saving individual patient-trial evaluations to database...")
         try:
-            # Save summary evaluation results
-            db_id = self.eval_db.save_patient_to_trial_evaluation(results)
-            if db_id:
-                results['database_id'] = db_id
-                print(f"✅ Results saved to database with ID: {db_id}")
+            # Save individual patient-trial evaluations to normalized table (using trial_to_patient table)
+            saved_count = self.eval_db.save_trial_patient_evaluations(results)
+            if saved_count > 0:
+                results['individual_evaluations_saved'] = saved_count
+                print(f"Saved {saved_count} individual patient-trial evaluations to insightsedge.trial_to_patient")
             else:
-                print("⚠️ Failed to save results to database")
-            
-            # Save individual patient-trial evaluations to normalized table
-            print(f"\n[SAVE] Saving individual patient-trial evaluations...")
-            try:
-                saved_count = self.eval_db.save_patient_trial_evaluations(results)
-                if saved_count > 0:
-                    results['individual_evaluations_saved'] = saved_count
-                    print(f"✅ Saved {saved_count} individual patient-trial evaluations")
-                else:
-                    print("⚠️ No individual evaluations were saved")
-            except Exception as e:
-                print(f"⚠️ Error saving individual evaluations: {e}")
+                print("No individual evaluations were saved")
         except Exception as e:
-            print(f"⚠️ Database save error (continuing with JSON): {e}")
+            print(f"Error saving individual evaluations: {e}")
         
         # Print summary
         print(f"\nPipeline Summary:")
@@ -317,8 +356,6 @@ class PatientEvaluator:
         print(f"Eligible trials: {summary.get('eligible_trials', 0)}")
         print(f"Average confidence: {summary.get('average_confidence', 0):.1f}%")
         print(f"Results saved to: {filepath}")
-        if results.get('database_id'):
-            print(f"Database ID: {results['database_id']}")
         
         return results
 
@@ -333,12 +370,12 @@ def main():
         phase_filter=["Phase I", "Phase II", "Phase III"]
     )
     
-    print(f"\n🏆 ALL EVALUATED TRIALS:")
+    print(f"\nALL EVALUATED TRIALS:")
     print("=" * 100)
     
     # Show summary first
     summary = results.get('summary', {})
-    print(f"📊 EVALUATION SUMMARY:")
+    print(f"EVALUATION SUMMARY:")
     print(f"  Total trials evaluated: {results.get('total_evaluations', 0)}")
     print(f"  Eligible trials: {summary.get('eligible_count', 0)}")
     print(f"  Not eligible trials: {summary.get('not_eligible_count', 0)}")
@@ -350,7 +387,7 @@ def main():
     batch_summary = results.get('batch_summary', {})
     top_recommendations = batch_summary.get('top_recommendations', [])
     if top_recommendations:
-        print("🎯 TOP RECOMMENDATIONS FROM GEMINI:")
+        print("TOP RECOMMENDATIONS FROM GEMINI:")
         for i, rec in enumerate(top_recommendations[:3], 1):
             print(f"  {i}. {rec}")
         print()
@@ -363,7 +400,7 @@ def main():
         priority = evaluation.get('priority_score', 0)
         
         # Color coding for status
-        status_emoji = "✅" if status == "ELIGIBLE" else "❌" if status == "NOT_ELIGIBLE" else "❓"
+        status_emoji = "[OK]" if status == "ELIGIBLE" else "[NO]" if status == "NOT_ELIGIBLE" else "[?]"
         
         print(f"{i:2d}. {status_emoji} {trial['title'][:65]}...")
         print(f"    Trial ID: {trial['trial_id']}")

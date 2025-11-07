@@ -13,7 +13,7 @@ from services.shared.embedding_utils import EmbeddingUtils
 from services.shared.location_utils import LocationUtils
 from services.trial_to_patient.trial_embedding import TrialEmbeddingGenerator
 from rank_bm25 import BM25Okapi
-from config import LOCATION_ENABLED, MAX_DEFAULT_DISTANCE_KM, LOCATION_WEIGHT
+from config import LOCATION_ENABLED, MAX_DEFAULT_DISTANCE_KM, LOCATION_WEIGHT, TOP_K_TRIALS
 import re
 
 class PatientMatcher:
@@ -40,16 +40,16 @@ class PatientMatcher:
     def _ensure_trial_embeddings(self):
         """Ensure trial embeddings exist, create them if missing"""
         if not self._check_trial_embeddings_exist():
-            print("⚠️  Trial embeddings not found. Generating trial embeddings...")
+            print("Trial embeddings not found. Generating trial embeddings...")
             try:
                 # Generate trial embeddings using TrialEmbeddingGenerator
                 result = self.trial_embedding_generator.run_trial_embedding_generation()
                 if result and result.get('status') != 'all_existing':
-                    print("✅ Trial embeddings generated successfully")
+                    print("Trial embeddings generated successfully")
                 else:
-                    print("✅ Trial embeddings already exist")
+                    print("Trial embeddings already exist")
             except Exception as e:
-                print(f"❌ Error generating trial embeddings: {e}")
+                print(f"Error generating trial embeddings: {e}")
                 raise
 
     def load_trial_data(self):
@@ -62,23 +62,38 @@ class PatientMatcher:
             trial_faiss_file = self.embedding_utils.trials_dir / "faiss_index.pkl"
             if trial_faiss_file.exists():
                 self.trial_index = self.embedding_utils.load_faiss_index(trial_faiss_file)
-                print(f"✅ Loaded trial FAISS index with {self.trial_index.ntotal} vectors")
+                print(f"Loaded trial FAISS index with {self.trial_index.ntotal} vectors")
             else:
-                print("⚠️  Warning: FAISS index file not found after generation attempt")
+                print("Warning: FAISS index file not found after generation attempt")
             
             # Load trial metadata
             trial_metadata_file = self.embedding_utils.trials_dir / "metadata.json"
             if trial_metadata_file.exists():
                 self.trial_metadata = self.embedding_utils.load_metadata(trial_metadata_file)
-                print(f"✅ Loaded metadata for {len(self.trial_metadata)} trials")
+                print(f"Loaded metadata for {len(self.trial_metadata)} trials")
+                
+                # Fetch is_evaluated status from database and add to metadata
+                trial_ids = list(self.trial_metadata.keys())
+                if trial_ids:
+                    # Get trial is_evaluated status from database
+                    trials_data = self.db_utils.get_detailed_trial_data()
+                    trial_status_dict = {str(trial['trial_id']): trial.get('is_evaluated', 0) for trial in trials_data}
+                    
+                    for trial_id_str, metadata in self.trial_metadata.items():
+                        if trial_id_str in trial_status_dict:
+                            metadata['is_evaluated'] = trial_status_dict[trial_id_str]
+                        else:
+                            # Default to 0 if not found (shouldn't happen, but safe fallback)
+                            metadata['is_evaluated'] = metadata.get('is_evaluated', 0)
+                    print(f"Added is_evaluated status to metadata for {len(trial_status_dict)} trials")
             else:
-                print("⚠️  Warning: Metadata file not found after generation attempt")
+                print("Warning: Metadata file not found after generation attempt")
             
             # Load trial texts for BM25
             self.load_trial_texts()
             
         except Exception as e:
-            print(f"❌ Error loading trial data: {e}")
+            print(f"Error loading trial data: {e}")
             import traceback
             traceback.print_exc()
 
@@ -143,9 +158,13 @@ class PatientMatcher:
             return []
 
     def hybrid_search_trials_for_patient(self, patient_data: Dict[str, Any], alpha: float = 0.7) -> List[Dict[str, Any]]:
-        """Find suitable trials for a patient using hybrid matching"""
+        """Find suitable trials for a patient using hybrid matching with patient is_evaluated filtering"""
         try:
             print(f"Finding trials for patient MRN: {patient_data['mrn']}")
+            
+            # Get patient's is_evaluated status (default to 0 if not present)
+            patient_is_evaluated = patient_data.get('is_evaluated', 0)
+            print(f"Patient is_evaluated status: {patient_is_evaluated}")
             
             # Generate embedding for patient
             patient_embedding = self.embedding_utils.generate_embedding(
@@ -181,25 +200,49 @@ class PatientMatcher:
             # Sort by combined score
             sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
             
-            # Get metadata for top results
+            # Get metadata for top results, filtering based on patient is_evaluated status
             results = []
-            for idx, score in sorted_results[:20]:  # Top 20 trials
+            for idx, score in sorted_results:  # Check all results, then filter
+                # Stop after getting top K matching trials (configurable)
+                if len(results) >= TOP_K_TRIALS:
+                    break
+                
                 # Find trial with matching embedding_index
                 trial_id = None
+                trial_meta = None
                 for tid, metadata in self.trial_metadata.items():
                     if metadata.get('embedding_index') == idx:
                         trial_id = tid
+                        trial_meta = metadata
                         break
                 
-                if trial_id:
-                    result = self.trial_metadata[trial_id].copy()
-                    result['trial_id'] = trial_id
-                    result['index'] = idx
-                    result['hybrid_score'] = score
-                    result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
-                    result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
-                    results.append(result)
+                if not trial_meta:
+                    continue  # Skip if no matching trial found
+                
+                # Get trial status
+                trial_is_evaluated = trial_meta.get('is_evaluated', 0)
+                
+                # Filter based on patient is_evaluated status:
+                # - If patient is_evaluated = 0: Include trials with is_evaluated IN (0, 1)
+                # - If patient is_evaluated = 1: Include only trials with is_evaluated = 0
+                if patient_is_evaluated == 0:
+                    # Patient not evaluated: take trials with is_evaluated = 0 or 1
+                    if trial_is_evaluated not in [0, 1]:
+                        continue  # Skip trials with is_evaluated not 0 or 1
+                else:  # patient_is_evaluated == 1
+                    # Patient evaluated: only take trials with is_evaluated = 0
+                    if trial_is_evaluated != 0:
+                        continue  # Skip evaluated trials
+                
+                result = trial_meta.copy()
+                result['trial_id'] = trial_id
+                result['index'] = idx
+                result['hybrid_score'] = score
+                result['embedding_score'] = embedding_scores_dict.get(idx, 0.0)
+                result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
+                results.append(result)
             
+            print(f"Filtered to {len(results)} trials (patient is_evaluated={patient_is_evaluated})")
             return results
             
         except Exception as e:
@@ -216,10 +259,39 @@ class PatientMatcher:
             patient_data = self.db_utils.get_patient_by_id(patient_id)
             if not patient_data:
                 print(f"Patient {patient_id} not found")
-                return {}
+                # Return structure with patient_id even if patient not found
+                return {
+                    "patient_id": patient_id,
+                    "patient_info": {
+                        "patient_id": patient_id,
+                        "mrn": None,
+                        "age": None,
+                        "gender": None,
+                        "is_evaluated": 0
+                    },
+                    "matching_trials": [],
+                    "total_matches": 0,
+                    "filters_applied": {
+                        "age_range": age_range,
+                        "gender": gender,
+                        "phase_filter": phase_filter,
+                        "max_distance_km": max_distance_km if LOCATION_ENABLED else None,
+                        "location_weight": location_weight if LOCATION_ENABLED else None
+                    },
+                    "generated_at": datetime.now().isoformat(),
+                    "error": f"Patient {patient_id} not found in database"
+                }
+            
+            # Get patient's is_evaluated status from database
+            patient_status = self.db_utils.get_patients_evaluated_status([patient_id])
+            if patient_id in patient_status:
+                patient_data['is_evaluated'] = patient_status[patient_id]
+            else:
+                patient_data['is_evaluated'] = 0
             
             print(f"Finding trials for patient: MRN {patient_data['mrn']}")
             print(f"Age: {patient_data['age']}, Gender: {patient_data['gender']}")
+            print(f"Patient is_evaluated status: {patient_data['is_evaluated']}")
             
             # Get patient location if location filtering is enabled
             patient_lat = None
@@ -269,7 +341,7 @@ class PatientMatcher:
                 max_dist = max_distance_km if max_distance_km is not None else MAX_DEFAULT_DISTANCE_KM
                 location_wt = location_weight if location_weight is not None else LOCATION_WEIGHT
                 
-                print(f"\n📍 Applying location filtering with max distance: {max_dist} km")
+                print(f"\nApplying location filtering with max distance: {max_dist} km")
                 print(f"   Patient location: ({patient_lat}, {patient_lon})")
                 print(f"   Processing {len(filtered_trials)} trials for location filtering...")
                 
@@ -383,7 +455,7 @@ class PatientMatcher:
                 
                 filtered_trials = location_filtered_trials
                 
-                print(f"\n📊 Location Filtering Results:")
+                print(f"\nLocation Filtering Results:")
                 print(f"   Total trials from hybrid search: {len(matching_trials)}")
                 print(f"   Trials after phase filtering: {trials_before_location_filter}")
                 print(f"   ────────────────────────────────────────────")
@@ -393,8 +465,8 @@ class PatientMatcher:
                 print(f"   Trials within {max_dist} km: {trials_within_distance}")
                 print(f"   Trials outside {max_dist} km (filtered out): {trials_outside_distance}")
                 print(f"   ────────────────────────────────────────────")
-                print(f"   ✅ Final trials after location filter: {len(filtered_trials)}")
-                print(f"   📍 Distance threshold: {max_dist} km")
+                print(f"   Final trials after location filter: {len(filtered_trials)}")
+                print(f"   Distance threshold: {max_dist} km")
                 
                 # Sort by final score (or hybrid_score if location not available)
                 filtered_trials.sort(key=lambda x: x.get('final_score', x.get('hybrid_score', 0.0)), reverse=True)
@@ -402,7 +474,7 @@ class PatientMatcher:
             return {
                 "patient_id": patient_id,
                 "patient_info": patient_data,
-                "matching_trials": filtered_trials[:20],  # Top 20 trials
+                "matching_trials": filtered_trials[:TOP_K_TRIALS],  # Top K trials (configurable)
                 "total_matches": len(filtered_trials),
                 "filters_applied": {
                     "age_range": age_range,

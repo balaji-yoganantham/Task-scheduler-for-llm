@@ -204,7 +204,13 @@ class EvaluationResultsDB:
             hybrid_matching = evaluation_data.get('hybrid_matching', {})
             summary = evaluation_data.get('summary', {})
             
-            patient_id = patient_info.get('patient_id')
+            # Get patient_id from patient_info or evaluation_data
+            patient_id = patient_info.get('patient_id') or evaluation_data.get('patient_id')
+            
+            # Skip saving if patient_id is still None
+            if not patient_id:
+                print("⚠️ Skipping database save: patient_id is missing from evaluation data")
+                return None
             
             # Prepare data for insertion/update
             insert_data = {
@@ -443,7 +449,8 @@ class EvaluationResultsDB:
             patient_info = evaluation_data.get('patient_info', {})
             llm_evaluation = evaluation_data.get('llm_evaluation', {})
             
-            patient_id = patient_info.get('patient_id')
+            # Get patient_id from patient_info or evaluation_data
+            patient_id = patient_info.get('patient_id') or evaluation_data.get('patient_id')
             if not patient_id:
                 print("❌ No patient_id found in evaluation data")
                 return 0
@@ -909,16 +916,26 @@ class EvaluationResultsDB:
         try:
             # Extract data from evaluation results
             trial_info = evaluation_data.get('trial_info', {})
+            patient_info = evaluation_data.get('patient_info', {})
             llm_evaluation = evaluation_data.get('llm_evaluation', {})
             
+            # Determine if this is trial-to-patient or patient-to-trial flow
+            # Trial-to-patient: has trial_id at top level, evaluations contain patient_info
+            # Patient-to-trial: has patient_id at top level, evaluations contain trial_info
             trial_id = evaluation_data.get('trial_id') or trial_info.get('trial_id') or trial_info.get('nct_id')
-            if not trial_id:
-                print("❌ No trial_id found in evaluation data")
-                return 0
+            patient_id = evaluation_data.get('patient_id') or patient_info.get('patient_id')
+            
+            is_patient_to_trial = bool(patient_id and not trial_id)
+            is_trial_to_patient = bool(trial_id and not patient_id)
             
             evaluations = llm_evaluation.get('evaluations', [])
             if not evaluations:
-                print(f"⚠️ No individual evaluations found for trial {trial_id}")
+                if is_trial_to_patient:
+                    print(f"⚠️ No individual evaluations found for trial {trial_id}")
+                elif is_patient_to_trial:
+                    print(f"⚠️ No individual evaluations found for patient {patient_id}")
+                else:
+                    print("⚠️ No individual evaluations found and cannot determine flow type")
                 return 0
             
             saved_count = 0
@@ -927,16 +944,29 @@ class EvaluationResultsDB:
             with self.engine.connect() as connection:
                 for eval_item in evaluations:
                     try:
-                        # Extract patient_id - try multiple possible fields
-                        patient_info = eval_item.get('patient_info', {})
-                        patient_id = (
-                            patient_info.get('patient_id') or
-                            eval_item.get('patient_id') or
-                            None
-                        )
+                        if is_patient_to_trial:
+                            # Patient-to-trial flow: patient_id is at top level, trial_id is in each evaluation
+                            eval_patient_id = patient_id
+                            eval_trial_info = eval_item.get('trial_info', {})
+                            eval_trial_id = (
+                                eval_trial_info.get('trial_id') or
+                                eval_trial_info.get('nct_id') or
+                                eval_item.get('trial_id') or
+                                None
+                            )
+                            eval_patient_info = patient_info  # Use top-level patient_info
+                        else:
+                            # Trial-to-patient flow: trial_id is at top level, patient_id is in each evaluation
+                            eval_trial_id = trial_id
+                            eval_patient_info = eval_item.get('patient_info', {})
+                            eval_patient_id = (
+                                eval_patient_info.get('patient_id') or
+                                eval_item.get('patient_id') or
+                                None
+                            )
                         
-                        if not patient_id:
-                            print(f"⚠️ Skipping evaluation: missing patient_id")
+                        if not eval_patient_id or not eval_trial_id:
+                            print(f"⚠️ Skipping evaluation: missing patient_id or trial_id (patient_id={eval_patient_id}, trial_id={eval_trial_id})")
                             failed_count += 1
                             continue
                         
@@ -949,7 +979,7 @@ class EvaluationResultsDB:
                         recommendations = eval_item.get('recommendations', '')
                         
                         # Extract MRN from patient_info
-                        mrn = patient_info.get('mrn') or patient_info.get('patient_mrn')
+                        mrn = eval_patient_info.get('mrn') or eval_patient_info.get('patient_mrn')
                         
                         # Convert arrays to JSON strings for JSONB storage
                         # Handle empty arrays - store as NULL instead of empty JSON array
@@ -965,9 +995,9 @@ class EvaluationResultsDB:
                         
                         # Prepare insert data - build query based on NULL values
                         insert_data = {
-                            'patient_id': patient_id,
+                            'patient_id': eval_patient_id,
                             'mrn': mrn,
-                            'trial_id': trial_id,
+                            'trial_id': eval_trial_id,
                             'eligibility_status': eligibility_status,
                             'confidence_score': float(confidence_score) if confidence_score else 0.0,
                             'reasoning': reasoning,
@@ -985,7 +1015,7 @@ class EvaluationResultsDB:
                                 WHERE mrn = :mrn AND trial_id = :trial_id
                                 LIMIT 1
                             """)
-                            existing = connection.execute(check_query, {'mrn': mrn, 'trial_id': trial_id}).fetchone()
+                            existing = connection.execute(check_query, {'mrn': mrn, 'trial_id': eval_trial_id}).fetchone()
                             if existing:
                                 existing_record_id = existing[0]
                         

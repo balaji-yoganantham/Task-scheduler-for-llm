@@ -96,7 +96,8 @@ class TrialEmbeddingGenerator:
                 "matching_status": trial['matching_status'],
                 "embedding_index": i,
                 "embedding_method": "chunked" if USE_CHUNKED_TRIAL_EMBEDDINGS else "single",
-                "chunk_metadata": chunk_metadata
+                "chunk_metadata": chunk_metadata,
+                "is_evaluated": trial.get('is_evaluated', 0)
             }
             
             # Save individual trial embedding

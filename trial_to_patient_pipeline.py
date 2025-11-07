@@ -138,24 +138,24 @@ class TrialToPatientOrchestrator:
             # Step 1: Patient Keyword Generation
             keyword_results = self.run_patient_keyword_generation(patient_limit)
             pipeline_results["steps"]["patient_keyword_generation"] = {
-                "status": "completed" if keyword_results else "failed",
+                "status": "completed" if keyword_results else "skipped",
                 "results": keyword_results
             }
             
             if not keyword_results:
-                print("ERROR: Pipeline stopped due to patient keyword generation failure")
-                return pipeline_results
+                print("WARNING: No patient data found for keyword generation - continuing with pipeline")
+                print("NOTE: Pipeline will continue using existing keywords/embeddings if available")
             
             # Step 2: Patient Embedding Generation
             embedding_results = self.run_patient_embedding_generation(patient_limit)
             pipeline_results["steps"]["patient_embedding_generation"] = {
-                "status": "completed" if embedding_results else "failed",
+                "status": "completed" if embedding_results else "skipped",
                 "results": embedding_results
             }
             
             if not embedding_results:
-                print("ERROR: Pipeline stopped due to patient embedding generation failure")
-                return pipeline_results
+                print("WARNING: No patient data found for embedding generation - continuing with pipeline")
+                print("NOTE: Pipeline will continue using existing embeddings if available")
             
             # Step 3: Trial-to-Patient Matching
             matching_results = self.run_trial_patient_matching(

@@ -59,6 +59,10 @@ MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "30"))  # Max p
 TOP_K_PATIENTS = int(os.getenv("TOP_K_PATIENTS", "100"))  # Number of top patients to retrieve from hybrid matching
 TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "20"))  # Patients per LLM batch evaluation
 
+# Patient-to-Trial Matching Configuration
+TOP_K_TRIALS = int(os.getenv("TOP_K_TRIALS", "100"))  # Number of top trials to retrieve from hybrid matching (same as TOP_K_PATIENTS)
+PATIENT_TRIAL_LLM_BATCH_SIZE = int(os.getenv("PATIENT_TRIAL_LLM_BATCH_SIZE", "20"))  # Trials per LLM batch evaluation
+
 # Logging Configuration
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 LOG_FILE = os.getenv("LOG_FILE", "task_scheduler.log")
@@ -116,4 +120,6 @@ print(f"  - ENABLE_PATIENT_TO_TRIAL_FLOW: {ENABLE_PATIENT_TO_TRIAL_FLOW} (Patien
 print(f"  - ENABLE_TRIAL_TO_PATIENT_FLOW: {ENABLE_TRIAL_TO_PATIENT_FLOW} (Trial-to-Patient matching: {'ON' if ENABLE_TRIAL_TO_PATIENT_FLOW else 'OFF'})")
 print(f"  - LOCATION_ENABLED: {LOCATION_ENABLED} (Location-based filtering: {'ON' if LOCATION_ENABLED else 'OFF'})")
 print(f"  - TOP_K_PATIENTS: {TOP_K_PATIENTS} (Top K patients from hybrid matching)")
+print(f"  - TOP_K_TRIALS: {TOP_K_TRIALS} (Top K trials from hybrid matching)")
+print(f"  - PATIENT_TRIAL_LLM_BATCH_SIZE: {PATIENT_TRIAL_LLM_BATCH_SIZE} (Trials per LLM batch)")
 print(f"  - TRIAL_PATIENT_LLM_BATCH_SIZE: {TRIAL_PATIENT_LLM_BATCH_SIZE} (Patients per LLM batch)")

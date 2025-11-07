@@ -144,24 +144,24 @@ class PatientToTrialOrchestrator:
             # Step 1: Keyword Generation
             keyword_results = self.run_keyword_generation(patient_limit)
             pipeline_results["steps"]["keyword_generation"] = {
-                "status": "completed" if keyword_results else "failed",
+                "status": "completed" if keyword_results else "skipped",
                 "results": keyword_results
             }
             
             if not keyword_results:
-                print("ERROR: Pipeline stopped due to keyword generation failure")
-                return pipeline_results
+                print("WARNING: No patient data found for keyword generation - continuing with pipeline")
+                print("NOTE: Pipeline will continue using existing keywords/embeddings if available")
             
             # Step 2: Embedding Generation
             embedding_results = self.run_embedding_generation(patient_limit)
             pipeline_results["steps"]["embedding_generation"] = {
-                "status": "completed" if embedding_results else "failed",
+                "status": "completed" if embedding_results else "skipped",
                 "results": embedding_results
             }
             
             if not embedding_results:
-                print("ERROR: Pipeline stopped due to embedding generation failure")
-                return pipeline_results
+                print("WARNING: No patient data found for embedding generation - continuing with pipeline")
+                print("NOTE: Pipeline will continue using existing embeddings if available")
             
             # Step 3: Patient-to-Trial Matching
             matching_results = self.run_patient_trial_matching(
@@ -192,11 +192,28 @@ class PatientToTrialOrchestrator:
                     # Save individual patient-trial evaluations to normalized table
                     print(f"[SAVE] Saving individual patient-trial evaluations...")
                     try:
-                        saved_count = self.eval_db.save_patient_trial_evaluations(matching_results)
+                        saved_count = self.eval_db.save_trial_patient_evaluations(matching_results)
                         if saved_count > 0:
                             pipeline_results["database_save_status"] = "success"
                             pipeline_results["individual_evaluations_saved"] = saved_count
-                            print(f"[OK] Saved {saved_count} individual patient-trial evaluations to insightsedge.patient_to_trial")
+                            print(f"[OK] Saved {saved_count} individual patient-trial evaluations to insightsedge.trial_to_patient")
+                            
+                            # Update patient's is_evaluated status to 1 after successful save
+                            print(f"[SAVE] Updating patient {patient_id} is_evaluated status to 1...")
+                            try:
+                                from services.shared.database_utils import DatabaseUtils
+                                db_utils = DatabaseUtils()
+                                updated_count = db_utils.update_patients_evaluated([patient_id])
+                                if updated_count > 0:
+                                    pipeline_results["patient_is_evaluated_updated"] = True
+                                    print(f"[OK] Successfully updated patient {patient_id} is_evaluated to 1")
+                                else:
+                                    pipeline_results["patient_is_evaluated_updated"] = False
+                                    print(f"[WARNING] Failed to update patient {patient_id} is_evaluated status")
+                            except Exception as e:
+                                pipeline_results["patient_is_evaluated_updated"] = False
+                                pipeline_results["patient_is_evaluated_error"] = str(e)
+                                print(f"[WARNING] Error updating patient is_evaluated status: {e}")
                         else:
                             pipeline_results["database_save_error"] = "No evaluations were saved"
                             print("[WARNING] No individual evaluations were saved")
@@ -214,7 +231,7 @@ class PatientToTrialOrchestrator:
             print(f"\n[SUCCESS] PIPELINE COMPLETED SUCCESSFULLY!")
             print(f"Pipeline results saved to: {pipeline_file}")
             if pipeline_results["database_save_status"] == "success":
-                print(f"[OK] Saved {pipeline_results.get('individual_evaluations_saved', 0)} evaluations to insightsedge.patient_to_trial")
+                print(f"[OK] Saved {pipeline_results.get('individual_evaluations_saved', 0)} evaluations to insightsedge.trial_to_patient")
             else:
                 print(f"Database save failed: {pipeline_results.get('database_save_error', 'Unknown error')}")
             
@@ -231,14 +248,14 @@ class PatientToTrialOrchestrator:
                 # Show all evaluated trials with detailed results
                 final_ranking = matching_results.get('final_ranking', [])
                 if final_ranking:
-                    print(f"\n🏆 ALL {len(final_ranking)} TRIALS EVALUATED BY GEMINI:")
+                    print(f"\nALL {len(final_ranking)} TRIALS EVALUATED BY GEMINI:")
                     print("=" * 100)
                     
                     # Show top recommendations first
                     batch_summary = matching_results.get('batch_summary', {})
                     top_recommendations = batch_summary.get('top_recommendations', [])
                     if top_recommendations:
-                        print("🎯 TOP RECOMMENDATIONS FROM GEMINI:")
+                        print("TOP RECOMMENDATIONS FROM GEMINI:")
                         for i, rec in enumerate(top_recommendations[:3], 1):
                             print(f"  {i}. {rec}")
                         print()
