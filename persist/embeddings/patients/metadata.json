@@ -768,5 +768,16 @@
     "keywords_count": 29,
     "keywords_text_length": 485,
     "embedding_index": 69
+  },
+  "14": {
+    "mrn": "35294426",
+    "age": 33,
+    "gender": "Female",
+    "oncologist": "Dr. Michael Chen, MD",
+    "date_of_visit": "2025-05-23",
+    "created_at": "2025-11-05T01:02:50.916644+00:00",
+    "keywords_count": 43,
+    "keywords_text_length": 729,
+    "embedding_index": 70
   }
 }

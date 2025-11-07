@@ -1,0 +1,156 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: keyword_generation_batch
+batch_size: 1
+patient_ids: [14]
+mrns: ['35294426']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Analyze the following 1 patient medical records and generate comprehensive keywords for clinical trial matching.
+
+        PATIENTS DATA:
+        
+==================================================
+PATIENT 1:
+==================================================
+Patient ID: 14
+MRN: 35294426
+Age: 33
+Gender: Female
+Combined Medical Record:
+Patient Name: sherli sethia
+Patient MRN: 35294426
+Age: 33, Gender: Female
+Date of Visit: 2025-05-23
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 23, 2025
+- Site of primary tumor: Descending colon (left colon)
+- Date of initial diagnosis and TNM stage: April 23, 2025; T2N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 06, 2025 - liver, brain metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Hypertension, Chronic back pain, COPD
+- Surgical history: Joint replacement (2009)
+
+Family History: - Paternal uncle with prostate cancer
+- Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Rare alcohol use
+- Living situation: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+- Shellfish (hives)
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+- Shellfish (hives)
+
+Physical Examination: - Vitals: BP 115/77, HR 83, RR 20, Temp 98.8°F, SpO2 97%, Weight 157 lbs
+- General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 9.0 ×10³/µL, Hgb 8.5 g/dL, Platelets 190 ×10³/µL
+- Chemistry: Creatinine 1.0 mg/dL, eGFR 100 mL/min/1.73m²
+- LFTs: AST 34 U/L, ALT 29 U/L, ALP 224 U/L, Total bilirubin 2.5 mg/dL
+- CEA: 59.6 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+- Imaging: CT shows descending colon mass (6.9 cm), 3 hepatic metastases (largest 6.0 cm), 2
+brain metastases
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 9.0 ×10³/µL, Hgb 8.5 g/dL, Platelets 190 ×10³/µL
+- Chemistry: Creatinine 1.0 mg/dL, eGFR 100 mL/min/1.73m²
+- LFTs: AST 34 U/L, ALT 29 U/L, ALP 224 U/L, Total bilirubin 2.5 mg/dL
+- CEA: 59.6 ng/mL (elevated)
+- Molecular markers: RAS/BRAF wild-type, MSS
+- Imaging: CT shows descending colon mass (6.9 cm), 3 hepatic metastases (largest 6.0 cm), 2
+brain metastases
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Imaging: Not specified
+
+Vital Signs: BP 115/77, HR 83, RR 20, Temp 98.8°F, SpO2 97%, Weight 157 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver, brain)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptom
+
+
+        Instructions:
+        1. Extract ALL relevant medical conditions, symptoms, treatments, and characteristics for EACH patient
+        2. Generate at least 30-40 keywords per patient covering:
+           - Primary diagnosis and staging
+           - Metastatic sites
+           - Molecular markers
+           - Comorbidities
+           - Medications
+           - Allergies
+           - Performance status
+           - Family history
+           - Demographics
+        3. Use standardized medical terminology
+        4. Include both specific and general terms for better matching
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_results": [
+                {
+                    "patient_id": 14,
+                    "mrn": "35294426",
+                    "age": 33,
+                    "gender": "Female",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-06T18:27:11.092705"
+                }
+                // ... continue for all 1 patients
+            ],
+            "batch_metadata": {
+                "total_patients": 1,
+                "generated_at": "2025-11-06T18:27:11.092705",
+                "model": "gemini-2.0-flash-exp",
+                "batch_processing": true
+            }
+        }
+        
