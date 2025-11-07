@@ -142,7 +142,10 @@ class HybridMatcher:
                 scores, indices = self.trial_index.search(query_embedding.reshape(1, -1), k=min(50, self.trial_index.ntotal))
                 return list(zip(indices[0], scores[0]))
             elif index_type == "patient" and self.patient_index:
-                scores, indices = self.patient_index.search(query_embedding.reshape(1, -1), k=min(50, self.patient_index.ntotal))
+                # For patient searches, search ALL patients to ensure we don't miss patients with is_evaluated=0
+                # The filtering will happen later based on is_evaluated status
+                k = self.patient_index.ntotal  # Search all patients, not just top 50
+                scores, indices = self.patient_index.search(query_embedding.reshape(1, -1), k=k)
                 return list(zip(indices[0], scores[0]))
             else:
                 return []
@@ -243,9 +246,16 @@ class HybridMatcher:
                             continue  # Skip patients with is_evaluated not 0 or 1
                     else:  # trial_is_evaluated == 1
                         # Trial evaluated: only take patients with is_evaluated = 0, and not shortlisted
+                        # Debug: Log why patients are being filtered out
                         if patient_is_evaluated != 0:
+                            # Only log first few to avoid spam
+                            if len(results) < 3:
+                                print(f"DEBUG Filtering out patient {patient_id}: is_evaluated={patient_is_evaluated} (expected 0)")
                             continue  # Skip evaluated patients
                         if patient_is_shortlisted != 0:
+                            # Only log first few to avoid spam
+                            if len(results) < 3:
+                                print(f"DEBUG Filtering out patient {patient_id}: is_shortlisted={patient_is_shortlisted} (expected 0)")
                             continue  # Skip shortlisted patients
                 
                 result = patient_data.copy()
@@ -258,7 +268,17 @@ class HybridMatcher:
                 results.append(result)
             
             if index_type == "patient":
+                # Debug: Count patients by is_evaluated status
+                evaluated_0_count = sum(1 for r in results if r.get('is_evaluated', 0) == 0)
+                evaluated_1_count = sum(1 for r in results if r.get('is_evaluated', 0) == 1)
+                shortlisted_count = sum(1 for r in results if r.get('is_shortlisted', 0) != 0)
                 print(f"Filtered to {len(results)} patients (trial is_evaluated={trial_is_evaluated}, excluded shortlisted)")
+                print(f"DEBUG Breakdown: is_evaluated=0: {evaluated_0_count}, is_evaluated=1: {evaluated_1_count}, shortlisted: {shortlisted_count}")
+                if len(results) == 0 and trial_is_evaluated == 1:
+                    # Check how many patients in metadata have is_evaluated = 0
+                    patients_with_0 = sum(1 for pid, data in self.patient_metadata.items() 
+                                         if data.get('is_evaluated', 0) == 0)
+                    print(f"DEBUG WARNING: No patients found! Total patients in metadata with is_evaluated=0: {patients_with_0}")
             
             return results
             
