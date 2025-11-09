@@ -1,0 +1,316 @@
+{
+  "test_started_at": "2025-11-09T19:20:20.387207",
+  "patients_tested": [
+    {
+      "patient_id": 1,
+      "mrn": "MRN0001",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 1,\n  \"mrn\": \"MRN0001\",\n  \"age\": 62,\n  \"gender\": \"Male\",\n  \"summary\": \"62-year-old male with metastatic colorectal cancer, progressing after first-line chemotherapy. Patient presents with weakness, mild abdominal pain, and weight loss, along with controlled hypertension, mild hyperlipidemia, and hepatic metastases.\",\n  \"primary_diagnosis\": \"Metastatic Colorectal Adenocarcinoma\",\n  \"stage\": \"Metastatic\",\n  \"metastatic_sites\": [\n    \"Liver\",\n    \"Hepatic\"\n  ],\n  \"molecular_markers\": [],\n  \"comorbidities\": [\n    \"Hypertension\",\n    \"Hyperlipidemia\",\n    \"Anemia\",\n    \"Transaminitis\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": \"Unknown\",\n  \"family_history\": [],\n  \"keywords\": [\n    \"Metastatic Colorectal Cancer\",\n    \"Colorectal Adenocarcinoma\",\n    \"Metastatic Cancer\",\n    \"Liver Metastasis\",\n    \"Hepatic Metastasis\",\n    \"Adenocarcinoma\",\n    \"Colorectal Neoplasms\",\n    \"Advanced Cancer\",\n    \"Refractory Cancer\",\n    \"Treatment Failure\",\n    \"Chemotherapy Failure\",\n    \"First-Line Chemotherapy Failure\",\n    \"Hypertension\",\n    \"Hyperlipidemia\",\n    \"Anemia\",\n    \"Transaminitis\",\n    \"Elevated CEA\",\n    \"CEA 40.2 ng/mL\",\n    \"Weakness\",\n    \"Abdominal Pain\",\n    \"Weight Loss\",\n    \"62-year-old\",\n    \"Male\",\n    \"Adult\",\n    \"Progressive Disease\",\n    \"Hepatic Lesions\",\n    \"Controlled Hypertension\",\n    \"Mild Hyperlipidemia\",\n    \"Mild Anemia\",\n    \"Mild Transaminitis\",\n    \"Colorectal Cancer\",\n    \"Metastatic Colorectal Adenocarcinoma\",\n    \"Stage IV Colorectal Cancer\",\n    \"Hepatic Involvement\",\n    \"Adenocarcinoma of the Colon\",\n    \"Adenocarcinoma of the Rectum\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:20.394127\"\n}\n```",
+            "patient_id": 1,
+            "mrn": "MRN0001",
+            "age": 62,
+            "gender": "Male",
+            "summary": "62-year-old male with metastatic colorectal cancer, progressing after first-line chemotherapy. Patient presents with weakness, mild abdominal pain, and weight loss, along with controlled hypertension, mild hyperlipidemia, and hepatic metastases.",
+            "primary_diagnosis": "Metastatic Colorectal Adenocarcinoma",
+            "stage": "Metastatic",
+            "metastatic_sites": [
+              "Liver",
+              "Hepatic"
+            ],
+            "molecular_markers": [],
+            "comorbidities": [
+              "Hypertension",
+              "Hyperlipidemia",
+              "Anemia",
+              "Transaminitis"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": "Unknown",
+            "family_history": [],
+            "keywords": [
+              "Metastatic Colorectal Cancer",
+              "Colorectal Adenocarcinoma",
+              "Metastatic Cancer",
+              "Liver Metastasis",
+              "Hepatic Metastasis",
+              "Adenocarcinoma",
+              "Colorectal Neoplasms",
+              "Advanced Cancer",
+              "Refractory Cancer",
+              "Treatment Failure",
+              "Chemotherapy Failure",
+              "First-Line Chemotherapy Failure",
+              "Hypertension",
+              "Hyperlipidemia",
+              "Anemia",
+              "Transaminitis",
+              "Elevated CEA",
+              "CEA 40.2 ng/mL",
+              "Weakness",
+              "Abdominal Pain",
+              "Weight Loss",
+              "62-year-old",
+              "Male",
+              "Adult",
+              "Progressive Disease",
+              "Hepatic Lesions",
+              "Controlled Hypertension",
+              "Mild Hyperlipidemia",
+              "Mild Anemia",
+              "Mild Transaminitis",
+              "Colorectal Cancer",
+              "Metastatic Colorectal Adenocarcinoma",
+              "Stage IV Colorectal Cancer",
+              "Hepatic Involvement",
+              "Adenocarcinoma of the Colon",
+              "Adenocarcinoma of the Rectum"
+            ],
+            "generated_at": "2025-11-09T19:20:20.394127"
+          }
+        }
+      },
+      "comparison": {},
+      "error": "'created_at'"
+    },
+    {
+      "patient_id": 2,
+      "mrn": "MRN0002",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 2,\n  \"mrn\": \"MRN0002\",\n  \"age\": 55,\n  \"gender\": \"Female\",\n  \"summary\": \"55-year-old female diagnosed with stage IV colon cancer with KRAS G12C mutation, progressing after first-line FOLFOX treatment. She also has type 2 diabetes and hypothyroidism, and presents with mild microcytic anemia.\",\n  \"primary_diagnosis\": \"Colon Cancer\",\n  \"stage\": \"Stage IV\",\n  \"metastatic_sites\": [\n    \"Liver\",\n    \"Lung\"\n  ],\n  \"molecular_markers\": [\n    \"KRAS G12C mutation\"\n  ],\n  \"comorbidities\": [\n    \"Type 2 Diabetes Mellitus\",\n    \"Hypothyroidism\",\n    \"Microcytic Anemia\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": null,\n  \"family_history\": [],\n  \"keywords\": [\n    \"Colon Cancer\",\n    \"Colorectal Cancer\",\n    \"Stage IV Colon Cancer\",\n    \"Metastatic Colon Cancer\",\n    \"mCRC\",\n    \"KRAS G12C\",\n    \"KRAS mutation\",\n    \"G12C mutation\",\n    \"KRAS G12C mutant mCRC\",\n    \"Liver Metastasis\",\n    \"Lung Metastasis\",\n    \"Liver Nodules\",\n    \"Lung Nodules\",\n    \"FOLFOX\",\n    \"Post-FOLFOX Progression\",\n    \"Treatment-Refractory\",\n    \"Refractory Colon Cancer\",\n    \"Type 2 Diabetes\",\n    \"Diabetes Mellitus, Type 2\",\n    \"Hypothyroidism\",\n    \"Thyroid Disease\",\n    \"Microcytic Anemia\",\n    \"Anemia\",\n    \"Iron Deficiency Anemia (Possible)\",\n    \"Change in Bowel Habits\",\n    \"Rectal Bleeding\",\n    \"Occult Blood Negative\",\n    \"Female\",\n    \"Adult\",\n    \"55 years old\",\n    \"Advanced Cancer\",\n    \"Progressive Disease\",\n    \"PET Scan Positive\",\n    \"Chemotherapy Failure\",\n    \"First-line therapy failure\",\n    \"Metastatic Disease\",\n    \"Advanced Stage\",\n    \"Adenocarcinoma\",\n    \"Colorectal Neoplasms\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:26.421267\"\n}\n```",
+            "patient_id": 2,
+            "mrn": "MRN0002",
+            "age": 55,
+            "gender": "Female",
+            "summary": "55-year-old female diagnosed with stage IV colon cancer with KRAS G12C mutation, progressing after first-line FOLFOX treatment. She also has type 2 diabetes and hypothyroidism, and presents with mild microcytic anemia.",
+            "primary_diagnosis": "Colon Cancer",
+            "stage": "Stage IV",
+            "metastatic_sites": [
+              "Liver",
+              "Lung"
+            ],
+            "molecular_markers": [
+              "KRAS G12C mutation"
+            ],
+            "comorbidities": [
+              "Type 2 Diabetes Mellitus",
+              "Hypothyroidism",
+              "Microcytic Anemia"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": null,
+            "family_history": [],
+            "keywords": [
+              "Colon Cancer",
+              "Colorectal Cancer",
+              "Stage IV Colon Cancer",
+              "Metastatic Colon Cancer",
+              "mCRC",
+              "KRAS G12C",
+              "KRAS mutation",
+              "G12C mutation",
+              "KRAS G12C mutant mCRC",
+              "Liver Metastasis",
+              "Lung Metastasis",
+              "Liver Nodules",
+              "Lung Nodules",
+              "FOLFOX",
+              "Post-FOLFOX Progression",
+              "Treatment-Refractory",
+              "Refractory Colon Cancer",
+              "Type 2 Diabetes",
+              "Diabetes Mellitus, Type 2",
+              "Hypothyroidism",
+              "Thyroid Disease",
+              "Microcytic Anemia",
+              "Anemia",
+              "Iron Deficiency Anemia (Possible)",
+              "Change in Bowel Habits",
+              "Rectal Bleeding",
+              "Occult Blood Negative",
+              "Female",
+              "Adult",
+              "55 years old",
+              "Advanced Cancer",
+              "Progressive Disease",
+              "PET Scan Positive",
+              "Chemotherapy Failure",
+              "First-line therapy failure",
+              "Metastatic Disease",
+              "Advanced Stage",
+              "Adenocarcinoma",
+              "Colorectal Neoplasms"
+            ],
+            "generated_at": "2025-11-09T19:20:26.421267"
+          }
+        }
+      },
+      "comparison": {},
+      "error": "'created_at'"
+    },
+    {
+      "patient_id": 3,
+      "mrn": "MRN0003",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 3,\n  \"mrn\": \"MRN0003\",\n  \"age\": 70,\n  \"gender\": \"Male\",\n  \"summary\": \"70-year-old male with heavily pretreated metastatic rectal adenocarcinoma, experiencing progressive fatigue and mild jaundice. Patient has failed prior regimens and is seeking clinical trial options. Comorbidities include CAD (s/p stent) and chronic kidney disease stage 2.\",\n  \"primary_diagnosis\": \"Metastatic Rectal Adenocarcinoma\",\n  \"stage\": \"Metastatic\",\n  \"metastatic_sites\": [],\n  \"molecular_markers\": [],\n  \"comorbidities\": [\n    \"Coronary Artery Disease\",\n    \"Chronic Kidney Disease Stage 2\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": null,\n  \"family_history\": [],\n  \"keywords\": [\n    \"Metastatic Rectal Cancer\",\n    \"Rectal Adenocarcinoma\",\n    \"Adenocarcinoma\",\n    \"Colorectal Cancer\",\n    \"Metastatic Cancer\",\n    \"Advanced Cancer\",\n    \"Progressive Fatigue\",\n    \"Fatigue\",\n    \"Mild Jaundice\",\n    \"Jaundice\",\n    \"Elevated Bilirubin\",\n    \"Elevated Alkaline Phosphatase\",\n    \"Bilirubin 2.1 mg/dL\",\n    \"Alkaline Phosphatase\",\n    \"Cytopenias\",\n    \"Anemia\",\n    \"Thrombocytopenia\",\n    \"Leukopenia\",\n    \"Heavily Pretreated\",\n    \"Refractory Cancer\",\n    \"Failed Prior Regimens\",\n    \"Clinical Trial\",\n    \"Phase 1 Trial\",\n    \"Phase 2 Trial\",\n    \"Phase 3 Trial\",\n    \"Coronary Artery Disease\",\n    \"CAD\",\n    \"Stent\",\n    \"Post Stent Placement\",\n    \"Chronic Kidney Disease\",\n    \"CKD Stage 2\",\n    \"Renal Insufficiency\",\n    \"Male\",\n    \"Elderly\",\n    \"Geriatric\",\n    \"70 years old\",\n    \"Adenocarcinoma of the Rectum\",\n    \"Metastatic Colorectal Cancer\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:31.601464\"\n}\n```",
+            "patient_id": 3,
+            "mrn": "MRN0003",
+            "age": 70,
+            "gender": "Male",
+            "summary": "70-year-old male with heavily pretreated metastatic rectal adenocarcinoma, experiencing progressive fatigue and mild jaundice. Patient has failed prior regimens and is seeking clinical trial options. Comorbidities include CAD (s/p stent) and chronic kidney disease stage 2.",
+            "primary_diagnosis": "Metastatic Rectal Adenocarcinoma",
+            "stage": "Metastatic",
+            "metastatic_sites": [],
+            "molecular_markers": [],
+            "comorbidities": [
+              "Coronary Artery Disease",
+              "Chronic Kidney Disease Stage 2"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": null,
+            "family_history": [],
+            "keywords": [
+              "Metastatic Rectal Cancer",
+              "Rectal Adenocarcinoma",
+              "Adenocarcinoma",
+              "Colorectal Cancer",
+              "Metastatic Cancer",
+              "Advanced Cancer",
+              "Progressive Fatigue",
+              "Fatigue",
+              "Mild Jaundice",
+              "Jaundice",
+              "Elevated Bilirubin",
+              "Elevated Alkaline Phosphatase",
+              "Bilirubin 2.1 mg/dL",
+              "Alkaline Phosphatase",
+              "Cytopenias",
+              "Anemia",
+              "Thrombocytopenia",
+              "Leukopenia",
+              "Heavily Pretreated",
+              "Refractory Cancer",
+              "Failed Prior Regimens",
+              "Clinical Trial",
+              "Phase 1 Trial",
+              "Phase 2 Trial",
+              "Phase 3 Trial",
+              "Coronary Artery Disease",
+              "CAD",
+              "Stent",
+              "Post Stent Placement",
+              "Chronic Kidney Disease",
+              "CKD Stage 2",
+              "Renal Insufficiency",
+              "Male",
+              "Elderly",
+              "Geriatric",
+              "70 years old",
+              "Adenocarcinoma of the Rectum",
+              "Metastatic Colorectal Cancer"
+            ],
+            "generated_at": "2025-11-09T19:20:31.601464"
+          }
+        }
+      },
+      "comparison": {},
+      "error": "'created_at'"
+    },
+    {
+      "patient_id": 4,
+      "mrn": "MRN0004",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 4,\n  \"mrn\": \"MRN0004\",\n  \"age\": 48,\n  \"gender\": \"Female\",\n  \"summary\": \"48-year-old female with a history of stage III colon cancer, now experiencing molecular recurrence detected via ctDNA after completing adjuvant chemotherapy. Patient also has a history of asthma and mild GERD.\",\n  \"primary_diagnosis\": \"Colon Cancer\",\n  \"stage\": \"III\",\n  \"metastatic_sites\": [],\n  \"molecular_markers\": [\"ctDNA positive\"],\n  \"comorbidities\": [\"Asthma\", \"Gastroesophageal Reflux Disease (GERD)\"],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": null,\n  \"family_history\": [],\n  \"keywords\": [\n    \"Colon Cancer\",\n    \"Colorectal Cancer\",\n    \"Stage III Colon Cancer\",\n    \"Adjuvant Chemotherapy\",\n    \"ctDNA\",\n    \"Circulating Tumor DNA\",\n    \"Molecular Recurrence\",\n    \"Recurrent Colon Cancer\",\n    \"Minimal Residual Disease\",\n    \"Abdominal Pain\",\n    \"Abdominal Bloating\",\n    \"Gastrointestinal Cancer\",\n    \"Neoplasm\",\n    \"Tumor\",\n    \"Cancer\",\n    \"Asthma\",\n    \"Gastroesophageal Reflux Disease\",\n    \"GERD\",\n    \"Female\",\n    \"Adult\",\n    \"40-49 years\",\n    \"Chemotherapy\",\n    \"Resected Colon Cancer\",\n    \"CEA\",\n    \"Carcinoembryonic Antigen\",\n    \"Normal CBC\",\n    \"Complete Blood Count\",\n    \"Positive ctDNA\",\n    \"Mild GERD\",\n    \"Non-Metastatic Colon Cancer\",\n    \"Localized Colon Cancer\",\n    \"Stage 3 Colon Cancer\",\n    \"Post-Chemotherapy\",\n    \"Treatment Experienced\",\n    \"Recurrent Disease\",\n    \"Molecular Monitoring\",\n    \"Liquid Biopsy\",\n    \"Early Detection\",\n    \"Cancer Biomarker\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:36.857258\"\n}\n```",
+            "patient_id": 4,
+            "mrn": "MRN0004",
+            "age": 48,
+            "gender": "Female",
+            "summary": "48-year-old female with a history of stage III colon cancer, now experiencing molecular recurrence detected via ctDNA after completing adjuvant chemotherapy. Patient also has a history of asthma and mild GERD.",
+            "primary_diagnosis": "Colon Cancer",
+            "stage": "III",
+            "metastatic_sites": [],
+            "molecular_markers": [
+              "ctDNA positive"
+            ],
+            "comorbidities": [
+              "Asthma",
+              "Gastroesophageal Reflux Disease (GERD)"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": null,
+            "family_history": [],
+            "keywords": [
+              "Colon Cancer",
+              "Colorectal Cancer",
+              "Stage III Colon Cancer",
+              "Adjuvant Chemotherapy",
+              "ctDNA",
+              "Circulating Tumor DNA",
+              "Molecular Recurrence",
+              "Recurrent Colon Cancer",
+              "Minimal Residual Disease",
+              "Abdominal Pain",
+              "Abdominal Bloating",
+              "Gastrointestinal Cancer",
+              "Neoplasm",
+              "Tumor",
+              "Cancer",
+              "Asthma",
+              "Gastroesophageal Reflux Disease",
+              "GERD",
+              "Female",
+              "Adult",
+              "40-49 years",
+              "Chemotherapy",
+              "Resected Colon Cancer",
+              "CEA",
+              "Carcinoembryonic Antigen",
+              "Normal CBC",
+              "Complete Blood Count",
+              "Positive ctDNA",
+              "Mild GERD",
+              "Non-Metastatic Colon Cancer",
+              "Localized Colon Cancer",
+              "Stage 3 Colon Cancer",
+              "Post-Chemotherapy",
+              "Treatment Experienced",
+              "Recurrent Disease",
+              "Molecular Monitoring",
+              "Liquid Biopsy",
+              "Early Detection",
+              "Cancer Biomarker"
+            ],
+            "generated_at": "2025-11-09T19:20:36.857258"
+          }
+        }
+      },
+      "comparison": {},
+      "error": "'created_at'"
+    }
+  ],
+  "overall_accuracy": {
+    "overall_accuracy": 0,
+    "total_correct": 0,
+    "total_incorrect": 0,
+    "total_not_evaluated": 0,
+    "total_matches": 0,
+    "patient_accuracies": []
+  },
+  "summary": {},
+  "test_completed_at": "2025-11-09T19:20:41.502292"
+}

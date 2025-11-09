@@ -1,0 +1,51 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: keyword_generation_single
+patient_id: 3
+mrn: MRN0003
+age: 70
+gender: Male
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Analyze the following patient medical record and generate comprehensive keywords for clinical trial matching.
+
+        Patient Data:
+        Progressive fatigue, mild jaundice Known metastatic rectal adenocarcinoma, failed prior regimens, seeking trial options. CAD (s/p stent), chronic kidney disease stage 2. Metastatic rectal adenocarcinoma, heavily pretreated. Elevated bilirubin (2.1), alk phos; mild cytopenias.
+
+        Instructions:
+        1. Extract ALL relevant medical conditions, symptoms, treatments, and characteristics
+        2. Generate at least 30-40 keywords covering:
+           - Primary diagnosis and staging
+           - Metastatic sites
+           - Molecular markers
+           - Comorbidities
+           - Medications
+           - Allergies
+           - Performance status
+           - Family history
+           - Demographics
+        3. Use standardized medical terminology
+        4. Include both specific and general terms for better matching
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "patient_id": 3,
+            "mrn": "MRN0003",
+            "age": 70,
+            "gender": "Male",
+            "summary": "Brief 2-3 sentence summary of patient's condition",
+            "primary_diagnosis": "Main diagnosis",
+            "stage": "Cancer stage if applicable",
+            "metastatic_sites": ["site1", "site2", ...],
+            "molecular_markers": ["marker1", "marker2", ...],
+            "comorbidities": ["condition1", "condition2", ...],
+            "medications": ["med1", "med2", ...],
+            "allergies": ["allergy1", "allergy2", ...],
+            "performance_status": "ECOG status",
+            "family_history": ["condition1", "condition2", ...],
+            "keywords": ["keyword1", "keyword2", "keyword3", ...],
+            "generated_at": "2025-11-09T19:20:31.601464"
+        }
+        

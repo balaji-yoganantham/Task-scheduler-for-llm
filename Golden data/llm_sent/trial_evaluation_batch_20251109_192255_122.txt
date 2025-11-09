@@ -1,0 +1,128 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 1
+mrn: MRN0001
+batch_size: 2
+trial_ids: ['NCT00719797', 'NCT02015923']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 1
+        MRN: MRN0001
+        Age: 62
+        Gender: Male
+        Oncologist: Dr. Laura Smith
+        Combined Medical Record: Weakness, mild abdominal pain, weight loss 62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy. Hypertension, controlled; mild hyperlipidemia; no prior cancer. Metastatic colorectal adenocarcinoma with progression on prior therapy. CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases.
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT00719797
+        Title: Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)
+        Condition: Metastatic Colorectal Cancer, Stage IV Colorectal Cancer
+        Phase: Phase 3
+        Status: Completed
+        Investigator: Gruppo Oncologico del Nord-Ovest
+        Age Range: 18 Years - 75 Years
+        Gender: All
+        Hybrid Score: 5.364
+        
+        Brief Summary: This randomized phase III trial compared two combination chemotherapy regimens (FOLFOXIRI + bevacizumab vs FOLFIRI + bevacizumab) as first-line therapy for unresectable, metastatic colorectal cancer.
+        
+        Detailed Description: Patients received either FOLFOXIRI (irinotecan, oxaliplatin, leucovorin, fluorouracil, bevacizumab) or FOLFIRI (irinotecan, leucovorin, fluorouracil, bevacizumab) every 2 weeks. Primary outcome measured was progression-free survival; secondary outcomes included safety, overall response rate, secondary R0 surgeries, and overall survival.
+        
+        Inclusion Criteria: Histologically confirmed colorectal cancer; unresectable metastatic disease; measurable disease; no prior chemotherapy for metastatic disease; ECOG 0-2 (≤70 years) or 0 (71-75 years); adequate organ function.
+        
+        Exclusion Criteria: Untreated brain metastases; CNS disease by physical exam; significant cardiac or bleeding disorders; pregnancy or nursing; other active malignancies.
+        
+        Eligibility Criteria: Eligibility based on histology, prior therapies, organ function, and absence of major comorbidity.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT02015923
+        Title: Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases
+        Condition: Colonic Cancer, Unresectable Metastasis Originating in Colonic Cancer
+        Phase: Phase 4
+        Status: Terminated
+        Investigator: Hospital Universitari de Bellvitge
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.300
+        
+        Brief Summary: Assesses cancer-related survival at 2 years in patients with unresectable metastatic colorectal cancer treated with chemotherapy alone vs primary tumor resection + chemotherapy.
+        
+        Detailed Description: Multicenter randomized clinical trial comparing two therapeutic strategies: chemotherapy alone vs. surgical resection (R0) followed by chemotherapy.
+        
+        Inclusion Criteria: Colorectal cancer ≥12cm from anal verge, unresectable synchronous metastases, ECOG ≤2, no contraindications for chemo.
+        
+        Exclusion Criteria: Rectal tumours <12cm, CNS or bone metastasis, other neoplastic disease in previous 5 years.
+        
+        Eligibility Criteria: Eligibility defined by tumor location, metastatic status, and performance status.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT00719797",
+                    "trial_title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT02015923",
+                    "trial_title": "Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-09T19:22:55.122705"
+            }
+        }
+        

@@ -1,0 +1,128 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 1
+mrn: MRN0001
+batch_size: 2
+trial_ids: ['NCT01767857', 'NCT02675946']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 1
+        MRN: MRN0001
+        Age: 62
+        Gender: Male
+        Oncologist: Dr. Laura Smith
+        Combined Medical Record: Weakness, mild abdominal pain, weight loss 62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy. Hypertension, controlled; mild hyperlipidemia; no prior cancer. Metastatic colorectal adenocarcinoma with progression on prior therapy. CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases.
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT01767857
+        Title: A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)
+        Condition: Metastatic Colorectal Cancer, Refractory Colorectal Cancer, Incurable Colorectal Cancer
+        Phase: Phase 3
+        Status: Terminated
+        Investigator: Janssen Research & Development, LLC
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.198
+        
+        Brief Summary: Evaluates Xilonix™ (MABp1), a true human monoclonal antibody, for improving survival in refractory metastatic colorectal carcinoma patients.
+        
+        Detailed Description: Randomized, placebo-controlled study in patients refractory to all standard therapies. Focuses on improvement in survival and quality of life by blocking chronic inflammation.
+        
+        Inclusion Criteria: Confirmed metastatic or unresectable colorectal carcinoma, refractory to standard regimens, ECOG 0-2, adequate renal/hepatic/bone marrow function.
+        
+        Exclusion Criteria: Mechanical obstruction, major uncontrolled disorders, infection or cardiovascular disease, significant weight loss, immunodeficiency.
+        
+        Eligibility Criteria: Eligibility based on cancer refractoriness, organ function, and performance status.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT02675946
+        Title: CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)
+        Condition: Solid Tumors, Advanced GI Tumors, Advanced Colorectal Cancer
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Curegenix Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.167
+        
+        Brief Summary: Phase 1/1b study of CGX1321 dose escalation, alone or with pembrolizumab, or with encorafenib/cetuximab (for BRAF V600E mutant CRC).
+        
+        Detailed Description: Design includes monotherapy escalation, combinations for advanced GI cancers, including mCRC; safety and preliminary efficacy endpoints.
+        
+        Inclusion Criteria: Advanced, relapsed, or refractory solid/colorectal/GI tumors, ECOG 0–2, adequate organ function, informed consent.
+        
+        Exclusion Criteria: WNT inhibitor use; prior certain therapies; uncontrolled CNS mets; major recent surgery; serious medical risk.
+        
+        Eligibility Criteria: As per inclusion for particular arms—mCRC with/without BRAF mutations.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT01767857",
+                    "trial_title": "A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT02675946",
+                    "trial_title": "CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-09T19:23:08.688495"
+            }
+        }
+        

@@ -1,0 +1,90 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_single
+patient_id: 96010001
+mrn: 96010001
+trial_id: NCT04704661
+trial_title: Testing the Combination of DS-8201a and Nivolumab ...
+
+
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
+        
+        Evaluate the eligibility of this patient for the given clinical trial.
+        
+        CLINICAL TRIAL INFORMATION:
+        Title: Testing the Combination of DS-8201a and Nivolumab in Subjects With HER2-Expressing Solid Tumors
+        Condition: HER2-Expressing Solid Tumors
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: National Cancer Institute (NCI)
+        
+        PATIENT INFORMATION:
+        MRN: 96010001
+        Age: None
+        Gender: None
+        Oncologist: Dr. Michael Chen, MD
+        Date of Visit: April 14, 2025
+        
+        PATIENT MEDICAL RECORD:
+        Patient Name: Not specified
+Patient MRN: 96010001
+Age: Not specified, Gender: Not specified
+Date of Visit: April 14, 2025
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: Not specified
+
+History of Present Illness: March 15, 2025 - Descending colon (left colon) - March 15, 2025; T3N1M1 (Stage IV) - April 04, 2025 - liver, lung metastases identified - None - newly diagnosed, treatment-naïve - ECOG 1
+
+Past Medical History: Hypertension
+
+Family History: - No significant family cancer history
+
+Social History: Former smoker
+
+Review of Systems: Not specified
+
+Medications and Allergies: Not specified
+
+Physical Examination: Not specified
+
+Laboratory and Imaging Results: Total bilirubin: 1.3, Molecular markers: RAS/BRAF wild-type, MSS
+
+Imaging: Not specified
+
+Vital Signs: Not specified
+
+Assessment: Metastatic colorectal cancer (liver, lung) - Newly diagnosed, treatment-naïve
+        
+        EVALUATION CRITERIA:
+        1. Primary diagnosis match
+        2. Disease stage compatibility
+        3. Age eligibility
+        4. Gender eligibility
+        5. Performance status
+        6. Prior treatments
+        7. Comorbidities
+        8. Laboratory values
+        9. Exclusion criteria
+        10. Overall eligibility assessment
+        
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        
+        Return ONLY a valid JSON object with this structure:
+        {
+            "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+            "confidence_score": 85,
+            "reasoning": "Detailed explanation of eligibility assessment",
+            "inclusion_criteria_met": ["criteria1", "criteria2", ...],
+            "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "recommendations": "Specific recommendations for next steps",
+            "priority_score": 75,
+            "evaluation_timestamp": "2025-11-08T16:17:52.594870"
+        }
+        

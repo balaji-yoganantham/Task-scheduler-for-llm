@@ -1,0 +1,231 @@
+{
+  "test_started_at": "2025-11-09T19:14:54.790432",
+  "trials_tested": [
+    {
+      "trial_id": "NCT01103323",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT04607421",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT04793958",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT05197322",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT00719797",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT02997228",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT02015923",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT03983993",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT02675946",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT03312374",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT04457297",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    },
+    {
+      "trial_id": "NCT03803553",
+      "steps": {
+        "hybrid_matching": {
+          "status": "completed",
+          "patients_found": 0,
+          "top_patients": []
+        },
+        "llm_evaluation": {
+          "status": "skipped",
+          "reason": "No patients found from hybrid matching"
+        }
+      },
+      "comparison": {
+        "status": "skipped",
+        "reason": "No patients to compare"
+      }
+    }
+  ],
+  "overall_accuracy": {
+    "overall_accuracy": 0,
+    "total_correct": 0,
+    "total_incorrect": 0,
+    "total_not_evaluated": 0,
+    "total_matches": 0,
+    "trial_accuracies": []
+  },
+  "summary": {},
+  "test_completed_at": "2025-11-09T19:15:25.419956"
+}

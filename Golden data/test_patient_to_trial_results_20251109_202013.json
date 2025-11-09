@@ -1,0 +1,4113 @@
+{
+  "test_started_at": "2025-11-09T20:17:34.526413",
+  "patients_tested": [
+    {
+      "patient_id": 1,
+      "mrn": "MRN0001",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 1,\n  \"mrn\": \"MRN0001\",\n  \"age\": 62,\n  \"gender\": \"Male\",\n  \"summary\": \"62-year-old male with metastatic colorectal cancer, progressing after first-line chemotherapy. Patient presents with weakness, mild abdominal pain, and weight loss, along with controlled hypertension, mild hyperlipidemia, and hepatic metastases.\",\n  \"primary_diagnosis\": \"Metastatic Colorectal Adenocarcinoma\",\n  \"stage\": \"Metastatic\",\n  \"metastatic_sites\": [\n    \"Liver\",\n    \"Hepatic\"\n  ],\n  \"molecular_markers\": [],\n  \"comorbidities\": [\n    \"Hypertension\",\n    \"Hyperlipidemia\",\n    \"Anemia\",\n    \"Transaminitis\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": \"Unknown\",\n  \"family_history\": [],\n  \"keywords\": [\n    \"Metastatic Colorectal Cancer\",\n    \"Colorectal Adenocarcinoma\",\n    \"Metastatic Cancer\",\n    \"Liver Metastasis\",\n    \"Hepatic Metastasis\",\n    \"Adenocarcinoma\",\n    \"Colorectal Neoplasms\",\n    \"Advanced Cancer\",\n    \"Refractory Cancer\",\n    \"Treatment Failure\",\n    \"Chemotherapy Failure\",\n    \"First-Line Chemotherapy Failure\",\n    \"Hypertension\",\n    \"Hyperlipidemia\",\n    \"Anemia\",\n    \"Transaminitis\",\n    \"Elevated CEA\",\n    \"CEA 40.2 ng/mL\",\n    \"Weakness\",\n    \"Abdominal Pain\",\n    \"Weight Loss\",\n    \"62-year-old\",\n    \"Male\",\n    \"Adult\",\n    \"Progressive Disease\",\n    \"Hepatic Lesions\",\n    \"Controlled Hypertension\",\n    \"Mild Hyperlipidemia\",\n    \"Mild Anemia\",\n    \"Mild Transaminitis\",\n    \"Colorectal Cancer\",\n    \"Metastatic Colorectal Adenocarcinoma\",\n    \"Stage IV Colorectal Cancer\",\n    \"Hepatic Involvement\",\n    \"Adenocarcinoma of the Colon\",\n    \"Adenocarcinoma of the Rectum\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:20.394127\"\n}\n```",
+            "patient_id": 1,
+            "mrn": "MRN0001",
+            "age": 62,
+            "gender": "Male",
+            "summary": "62-year-old male with metastatic colorectal cancer, progressing after first-line chemotherapy. Patient presents with weakness, mild abdominal pain, and weight loss, along with controlled hypertension, mild hyperlipidemia, and hepatic metastases.",
+            "primary_diagnosis": "Metastatic Colorectal Adenocarcinoma",
+            "stage": "Metastatic",
+            "metastatic_sites": [
+              "Liver",
+              "Hepatic"
+            ],
+            "molecular_markers": [],
+            "comorbidities": [
+              "Hypertension",
+              "Hyperlipidemia",
+              "Anemia",
+              "Transaminitis"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": "Unknown",
+            "family_history": [],
+            "keywords": [
+              "Metastatic Colorectal Cancer",
+              "Colorectal Adenocarcinoma",
+              "Metastatic Cancer",
+              "Liver Metastasis",
+              "Hepatic Metastasis",
+              "Adenocarcinoma",
+              "Colorectal Neoplasms",
+              "Advanced Cancer",
+              "Refractory Cancer",
+              "Treatment Failure",
+              "Chemotherapy Failure",
+              "First-Line Chemotherapy Failure",
+              "Hypertension",
+              "Hyperlipidemia",
+              "Anemia",
+              "Transaminitis",
+              "Elevated CEA",
+              "CEA 40.2 ng/mL",
+              "Weakness",
+              "Abdominal Pain",
+              "Weight Loss",
+              "62-year-old",
+              "Male",
+              "Adult",
+              "Progressive Disease",
+              "Hepatic Lesions",
+              "Controlled Hypertension",
+              "Mild Hyperlipidemia",
+              "Mild Anemia",
+              "Mild Transaminitis",
+              "Colorectal Cancer",
+              "Metastatic Colorectal Adenocarcinoma",
+              "Stage IV Colorectal Cancer",
+              "Hepatic Involvement",
+              "Adenocarcinoma of the Colon",
+              "Adenocarcinoma of the Rectum"
+            ],
+            "generated_at": "2025-11-09T19:20:20.394127"
+          }
+        },
+        "embedding_generation": {
+          "status": "completed",
+          "result": {
+            "total_patients": 4,
+            "new_patients": 0,
+            "existing_patients": 4,
+            "embedding_dimension": 768,
+            "note": "All patients already had embeddings or no keywords"
+          }
+        },
+        "hybrid_matching": {
+          "status": "completed",
+          "trials_found": 15,
+          "top_trials": [
+            {
+              "title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+              "condition": "Metastatic Colorectal Cancer, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Gruppo Oncologico del Nord-Ovest",
+              "created_date": "2008-07-22T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 4,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 109
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 69
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 46
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 29
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 22
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT00719797",
+              "index": 4,
+              "hybrid_score": 5.363881587982177,
+              "embedding_score": 7.234116554260254,
+              "bm25_score": 12.280975756697243
+            },
+            {
+              "title": "Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases",
+              "condition": "Colonic Cancer, Unresectable Metastasis Originating in Colonic Cancer",
+              "phase": "Phase 4",
+              "status": "Terminated",
+              "investigator": "Hospital Universitari de Bellvitge",
+              "created_date": "2013-12-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 7,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 92
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02015923",
+              "index": 7,
+              "hybrid_score": 5.299506703632764,
+              "embedding_score": 7.3064117431640625,
+              "bm25_score": 6.167282780597345
+            },
+            {
+              "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy for BRAF V600E Mutant Metastatic Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer, BRAF V600E Mutant Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Pfizer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 1,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 90
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 10
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04607421",
+              "index": 1,
+              "hybrid_score": 5.231229603019788,
+              "embedding_score": 7.199892997741699,
+              "bm25_score": 6.376816820019929
+            },
+            {
+              "title": "Efficacy and Tolerance of Maintenance Therapy in Patients With Incurable Advanced Colorectal Cancer (Confirm Study)",
+              "condition": "Incurable Colorectal Cancer, RAS Wild-type",
+              "phase": "Phase 2",
+              "status": "Unknown",
+              "investigator": "Tianshu Liu, Shanghai Zhongshan Hospital",
+              "created_date": "2013-07-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 14,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02071069",
+              "index": 14,
+              "hybrid_score": 5.219694401999183,
+              "embedding_score": 7.22976016998291,
+              "bm25_score": 5.295409433704874
+            },
+            {
+              "title": "A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)",
+              "condition": "Metastatic Colorectal Cancer, Refractory Colorectal Cancer, Incurable Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Terminated",
+              "investigator": "Janssen Research & Development, LLC",
+              "created_date": "2013-03-31T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 12,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01767857",
+              "index": 12,
+              "hybrid_score": 5.198160613594363,
+              "embedding_score": 7.194302082061768,
+              "bm25_score": 5.404971871704198
+            },
+            {
+              "title": "CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)",
+              "condition": "Solid Tumors, Advanced GI Tumors, Advanced Colorectal Cancer",
+              "phase": "Phase I",
+              "status": "Recruiting",
+              "investigator": "Curegenix Inc.",
+              "created_date": "2016-02-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 9,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 131
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02675946",
+              "index": 9,
+              "hybrid_score": 5.167447880792867,
+              "embedding_score": 7.239645481109619,
+              "bm25_score": 3.3232014672044867
+            },
+            {
+              "title": "Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Completed",
+              "investigator": "Bayer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 0,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 87
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 17
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01103323",
+              "index": 0,
+              "hybrid_score": 5.158540414044751,
+              "embedding_score": 7.117005348205566,
+              "bm25_score": 5.887889010028515
+            },
+            {
+              "title": "Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study",
+              "condition": "Metastatic Colorectal Adenocarcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Active, not recruiting",
+              "investigator": "National Cancer Institute (NCI)",
+              "created_date": "2018-01-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 6,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 111
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 15
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02997228",
+              "index": 6,
+              "hybrid_score": 5.102294121660993,
+              "embedding_score": 7.010700225830078,
+              "bm25_score": 6.493465452664633
+            },
+            {
+              "title": "Phase 3 Study of MRTX849 With Cetuximab vs Standard Chemotherapy in Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Mirati Therapeutics",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 2,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 85
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 12
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 15
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04793958",
+              "index": 2,
+              "hybrid_score": 5.086403010328212,
+              "embedding_score": 6.992542266845703,
+              "bm25_score": 6.387447451207351
+            },
+            {
+              "title": "Initial Attack on Latent Metastasis Using TAS-102 for ct DNA Identified Colorectal Cancer Patients After Curative Resection (ALTAIR)",
+              "condition": "Colorectal Neoplasms, Circulating Tumor DNA-positive Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "National Cancer Center Hospital East",
+              "created_date": "2020-07-08T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 11,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 103
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 11
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04457297",
+              "index": 11,
+              "hybrid_score": 5.084086609244218,
+              "embedding_score": 7.051514148712158,
+              "bm25_score": 4.934223504856915
+            },
+            {
+              "title": "Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)",
+              "condition": "Colorectal Cancer, RAS Wild-type, Incurable/Unresectable Advanced/Recurrent Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Takeda",
+              "created_date": "2015-05-29T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 13,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 113
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 19
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02394795",
+              "index": 13,
+              "hybrid_score": 5.068986153834962,
+              "embedding_score": 7.1224775314331055,
+              "bm25_score": 2.7750627277262976
+            },
+            {
+              "title": "Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer",
+              "condition": "Metastatic Colon Cancer, Stage III Colon Cancer",
+              "phase": "Phase 3",
+              "status": "Recruiting",
+              "investigator": "Massachusetts General Hospital",
+              "created_date": "2020-04-16T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 5,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 82
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 66
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03803553",
+              "index": 5,
+              "hybrid_score": 5.018278938930222,
+              "embedding_score": 7.053332805633545,
+              "bm25_score": 2.6981991662247014
+            },
+            {
+              "title": "Niraparib and Panitumumab in Patients With Advanced or Metastatic Colorectal Cancer (NIPAVect)",
+              "condition": "Advanced Microsatellite Stable Colorectal Carcinoma, Metastatic Microsatellite Stable Colorectal Carcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase II",
+              "status": "Active, not recruiting",
+              "investigator": "Emory University",
+              "created_date": "2019-10-15T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 8,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 106
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03983993",
+              "index": 8,
+              "hybrid_score": 4.9781361198570435,
+              "embedding_score": 6.8893327713012695,
+              "bm25_score": 5.186772664871825
+            },
+            {
+              "title": "NEOadjuvant PembRolizumab In Stratified Medicine - ColoRectal Cancer (NEOPRISM-CRC)",
+              "condition": "Adenocarcinoma of the Colon, Incurable Colorectal Cancer, MSI-H, High-risk Stage 2/3",
+              "phase": "Phase 2",
+              "status": "Recruiting",
+              "investigator": "University College, London",
+              "created_date": "2022-07-20T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 3,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 118
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT05197322",
+              "index": 3,
+              "hybrid_score": 4.946216507736479,
+              "embedding_score": 6.870799541473389,
+              "bm25_score": 4.55522762350357
+            },
+            {
+              "title": "ctDNA as a Prognostic Marker for Postoperative Relapse in Early and Intermediate Stage Colorectal Cancer",
+              "condition": "Colorectal Cancer, Stage II/III Colorectal Cancer",
+              "phase": "Not Applicable (Observational)",
+              "status": "Recruiting",
+              "investigator": "Sun Yat-sen University",
+              "created_date": "2017-08-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 10,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 95
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 12
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03312374",
+              "index": 10,
+              "hybrid_score": 4.850402207057055,
+              "embedding_score": 6.793472766876221,
+              "bm25_score": 3.1657090081233594
+            }
+          ]
+        },
+        "llm_evaluation": {
+          "status": "completed",
+          "result": {
+            "patient_id": 1,
+            "patient_info": {
+              "id": 1,
+              "mrn": "MRN0001",
+              "patient_name": "John Carter",
+              "location": "Phoenix, AZ",
+              "age": 62,
+              "gender": "Male",
+              "date_of_visit": "2025-11-09",
+              "oncologist": "Dr. Laura Smith",
+              "chief_complaint": "Weakness, mild abdominal pain, weight loss",
+              "history_of_present_illness": "62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy.",
+              "past_medical_history": "Hypertension, controlled; mild hyperlipidemia; no prior cancer.",
+              "family_history": "Father died of colon cancer at 75; no genetic syndromes.",
+              "social_history": "Retired engineer, non-smoker, drinks socially, married.",
+              "review_of_systems": "Negative for fever, positive for fatigue and mild GI upset.",
+              "medications_allergies": "Amlodipine, atorvastatin; no known drug allergies.",
+              "physical_examination": "General: tired but alert. Abdomen: mild tenderness RLQ, no palpable mass.",
+              "laboratory_imaging_results": "CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases.",
+              "imaging": "CT 2025-11-02: Multiple liver lesions, no lung mets.",
+              "assessment": "Metastatic colorectal adenocarcinoma with progression on prior therapy.",
+              "vital": {
+                "bp": "128/82",
+                "hr": 82,
+                "temp": 98.6,
+                "rr": 16,
+                "spo2": 97
+              },
+              "patient_id": 1,
+              "combined_text": "Weakness, mild abdominal pain, weight loss 62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy. Hypertension, controlled; mild hyperlipidemia; no prior cancer. Metastatic colorectal adenocarcinoma with progression on prior therapy. CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases."
+            },
+            "total_evaluations": 0,
+            "evaluations": [],
+            "error": "All batch evaluations failed",
+            "summary": {
+              "eligible_count": 0,
+              "not_eligible_count": 0,
+              "need_more_info_count": 0,
+              "average_confidence": 0
+            },
+            "generated_at": "2025-11-09T20:18:13.506611",
+            "evaluation_method": "batch",
+            "batch_summary": {
+              "error": "All batch evaluations failed"
+            }
+          }
+        }
+      },
+      "comparison": {
+        "status": "compared",
+        "total_golden_matches": 4,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "accuracy": 0.0,
+        "comparison_details": [
+          {
+            "trial_id": "NCT01103323",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Diagnosis: Metastatic colorectal cancer (MCRC)",
+              "Prior standard therapies failed",
+              "Age >18, organ function, no exclusion violations",
+              "No infection, controlled hypertension"
+            ]
+          },
+          {
+            "trial_id": "NCT04607421",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Diagnosis: Metastatic colorectal cancer",
+              "Assumed to have BRAF V600E status or eligible for testing",
+              "Age >18, no prior BRAF inhibitor exposure",
+              "No major comorbidities"
+            ]
+          },
+          {
+            "trial_id": "NCT04793958",
+            "golden_decision": "NOT ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "KRAS G12C mutation status not reported/likely negative"
+            ]
+          },
+          {
+            "trial_id": "NCT05197322",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Stage IV colorectal cancer (likely metastatic, non-resectable)",
+              "Age and organ function criteria met",
+              "No surgical exclusion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": 2,
+      "mrn": "MRN0002",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 2,\n  \"mrn\": \"MRN0002\",\n  \"age\": 55,\n  \"gender\": \"Female\",\n  \"summary\": \"55-year-old female diagnosed with stage IV colon cancer with KRAS G12C mutation, progressing after first-line FOLFOX treatment. She also has type 2 diabetes and hypothyroidism, and presents with mild microcytic anemia.\",\n  \"primary_diagnosis\": \"Colon Cancer\",\n  \"stage\": \"Stage IV\",\n  \"metastatic_sites\": [\n    \"Liver\",\n    \"Lung\"\n  ],\n  \"molecular_markers\": [\n    \"KRAS G12C mutation\"\n  ],\n  \"comorbidities\": [\n    \"Type 2 Diabetes Mellitus\",\n    \"Hypothyroidism\",\n    \"Microcytic Anemia\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": null,\n  \"family_history\": [],\n  \"keywords\": [\n    \"Colon Cancer\",\n    \"Colorectal Cancer\",\n    \"Stage IV Colon Cancer\",\n    \"Metastatic Colon Cancer\",\n    \"mCRC\",\n    \"KRAS G12C\",\n    \"KRAS mutation\",\n    \"G12C mutation\",\n    \"KRAS G12C mutant mCRC\",\n    \"Liver Metastasis\",\n    \"Lung Metastasis\",\n    \"Liver Nodules\",\n    \"Lung Nodules\",\n    \"FOLFOX\",\n    \"Post-FOLFOX Progression\",\n    \"Treatment-Refractory\",\n    \"Refractory Colon Cancer\",\n    \"Type 2 Diabetes\",\n    \"Diabetes Mellitus, Type 2\",\n    \"Hypothyroidism\",\n    \"Thyroid Disease\",\n    \"Microcytic Anemia\",\n    \"Anemia\",\n    \"Iron Deficiency Anemia (Possible)\",\n    \"Change in Bowel Habits\",\n    \"Rectal Bleeding\",\n    \"Occult Blood Negative\",\n    \"Female\",\n    \"Adult\",\n    \"55 years old\",\n    \"Advanced Cancer\",\n    \"Progressive Disease\",\n    \"PET Scan Positive\",\n    \"Chemotherapy Failure\",\n    \"First-line therapy failure\",\n    \"Metastatic Disease\",\n    \"Advanced Stage\",\n    \"Adenocarcinoma\",\n    \"Colorectal Neoplasms\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:26.421267\"\n}\n```",
+            "patient_id": 2,
+            "mrn": "MRN0002",
+            "age": 55,
+            "gender": "Female",
+            "summary": "55-year-old female diagnosed with stage IV colon cancer with KRAS G12C mutation, progressing after first-line FOLFOX treatment. She also has type 2 diabetes and hypothyroidism, and presents with mild microcytic anemia.",
+            "primary_diagnosis": "Colon Cancer",
+            "stage": "Stage IV",
+            "metastatic_sites": [
+              "Liver",
+              "Lung"
+            ],
+            "molecular_markers": [
+              "KRAS G12C mutation"
+            ],
+            "comorbidities": [
+              "Type 2 Diabetes Mellitus",
+              "Hypothyroidism",
+              "Microcytic Anemia"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": null,
+            "family_history": [],
+            "keywords": [
+              "Colon Cancer",
+              "Colorectal Cancer",
+              "Stage IV Colon Cancer",
+              "Metastatic Colon Cancer",
+              "mCRC",
+              "KRAS G12C",
+              "KRAS mutation",
+              "G12C mutation",
+              "KRAS G12C mutant mCRC",
+              "Liver Metastasis",
+              "Lung Metastasis",
+              "Liver Nodules",
+              "Lung Nodules",
+              "FOLFOX",
+              "Post-FOLFOX Progression",
+              "Treatment-Refractory",
+              "Refractory Colon Cancer",
+              "Type 2 Diabetes",
+              "Diabetes Mellitus, Type 2",
+              "Hypothyroidism",
+              "Thyroid Disease",
+              "Microcytic Anemia",
+              "Anemia",
+              "Iron Deficiency Anemia (Possible)",
+              "Change in Bowel Habits",
+              "Rectal Bleeding",
+              "Occult Blood Negative",
+              "Female",
+              "Adult",
+              "55 years old",
+              "Advanced Cancer",
+              "Progressive Disease",
+              "PET Scan Positive",
+              "Chemotherapy Failure",
+              "First-line therapy failure",
+              "Metastatic Disease",
+              "Advanced Stage",
+              "Adenocarcinoma",
+              "Colorectal Neoplasms"
+            ],
+            "generated_at": "2025-11-09T19:20:26.421267"
+          }
+        },
+        "embedding_generation": {
+          "status": "completed",
+          "result": {
+            "total_patients": 4,
+            "new_patients": 0,
+            "existing_patients": 4,
+            "embedding_dimension": 768,
+            "note": "All patients already had embeddings or no keywords"
+          }
+        },
+        "hybrid_matching": {
+          "status": "completed",
+          "trials_found": 15,
+          "top_trials": [
+            {
+              "title": "Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)",
+              "condition": "Colorectal Cancer, RAS Wild-type, Incurable/Unresectable Advanced/Recurrent Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Takeda",
+              "created_date": "2015-05-29T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 13,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 113
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 19
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02394795",
+              "index": 13,
+              "hybrid_score": 5.24923494994839,
+              "embedding_score": 7.143153190612793,
+              "bm25_score": 8.300923883981172
+            },
+            {
+              "title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+              "condition": "Metastatic Colorectal Cancer, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Gruppo Oncologico del Nord-Ovest",
+              "created_date": "2008-07-22T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 4,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 109
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 69
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 46
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 29
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 22
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT00719797",
+              "index": 4,
+              "hybrid_score": 5.151581640219953,
+              "embedding_score": 7.050917148590088,
+              "bm25_score": 7.197987873563032
+            },
+            {
+              "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy for BRAF V600E Mutant Metastatic Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer, BRAF V600E Mutant Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Pfizer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 1,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 90
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 10
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04607421",
+              "index": 1,
+              "hybrid_score": 5.0948252061782275,
+              "embedding_score": 7.087473392486572,
+              "bm25_score": 4.45312771458757
+            },
+            {
+              "title": "Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer",
+              "condition": "Metastatic Colon Cancer, Stage III Colon Cancer",
+              "phase": "Phase 3",
+              "status": "Recruiting",
+              "investigator": "Massachusetts General Hospital",
+              "created_date": "2020-04-16T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 5,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 82
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 66
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03803553",
+              "index": 5,
+              "hybrid_score": 5.0568850103020395,
+              "embedding_score": 7.069439888000488,
+              "bm25_score": 3.6092362900565913
+            },
+            {
+              "title": "Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases",
+              "condition": "Colonic Cancer, Unresectable Metastasis Originating in Colonic Cancer",
+              "phase": "Phase 4",
+              "status": "Terminated",
+              "investigator": "Hospital Universitari de Bellvitge",
+              "created_date": "2013-12-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 7,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 92
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02015923",
+              "index": 7,
+              "hybrid_score": 5.043055442174767,
+              "embedding_score": 7.146546363830566,
+              "bm25_score": 1.3490995831123507
+            },
+            {
+              "title": "Phase 3 Study of MRTX849 With Cetuximab vs Standard Chemotherapy in Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Mirati Therapeutics",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 2,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 85
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 12
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 15
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04793958",
+              "index": 2,
+              "hybrid_score": 5.031505160462789,
+              "embedding_score": 7.131137847900391,
+              "bm25_score": 1.3236222310838404
+            },
+            {
+              "title": "CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)",
+              "condition": "Solid Tumors, Advanced GI Tumors, Advanced Colorectal Cancer",
+              "phase": "Phase I",
+              "status": "Recruiting",
+              "investigator": "Curegenix Inc.",
+              "created_date": "2016-02-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 9,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 131
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02675946",
+              "index": 9,
+              "hybrid_score": 5.0296640695549835,
+              "embedding_score": 7.133161544799805,
+              "bm25_score": 1.215032939837371
+            },
+            {
+              "title": "Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study",
+              "condition": "Metastatic Colorectal Adenocarcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Active, not recruiting",
+              "investigator": "National Cancer Institute (NCI)",
+              "created_date": "2018-01-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 6,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 111
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 15
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02997228",
+              "index": 6,
+              "hybrid_score": 5.011015404598396,
+              "embedding_score": 6.972414970397949,
+              "bm25_score": 4.344164177327725
+            },
+            {
+              "title": "Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Completed",
+              "investigator": "Bayer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 0,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 87
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 17
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01103323",
+              "index": 0,
+              "hybrid_score": 5.0079869528902865,
+              "embedding_score": 7.029154300689697,
+              "bm25_score": 2.9192980802499333
+            },
+            {
+              "title": "Efficacy and Tolerance of Maintenance Therapy in Patients With Incurable Advanced Colorectal Cancer (Confirm Study)",
+              "condition": "Incurable Colorectal Cancer, RAS Wild-type",
+              "phase": "Phase 2",
+              "status": "Unknown",
+              "investigator": "Tianshu Liu, Shanghai Zhongshan Hospital",
+              "created_date": "2013-07-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 14,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02071069",
+              "index": 14,
+              "hybrid_score": 4.989466211197411,
+              "embedding_score": 7.0079426765441895,
+              "bm25_score": 2.796877920549284
+            },
+            {
+              "title": "Initial Attack on Latent Metastasis Using TAS-102 for ct DNA Identified Colorectal Cancer Patients After Curative Resection (ALTAIR)",
+              "condition": "Colorectal Neoplasms, Circulating Tumor DNA-positive Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "National Cancer Center Hospital East",
+              "created_date": "2020-07-08T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 11,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 103
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 11
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04457297",
+              "index": 11,
+              "hybrid_score": 4.960356754929377,
+              "embedding_score": 7.054516315460205,
+              "bm25_score": 0.7398444702411203
+            },
+            {
+              "title": "ctDNA as a Prognostic Marker for Postoperative Relapse in Early and Intermediate Stage Colorectal Cancer",
+              "condition": "Colorectal Cancer, Stage II/III Colorectal Cancer",
+              "phase": "Not Applicable (Observational)",
+              "status": "Recruiting",
+              "investigator": "Sun Yat-sen University",
+              "created_date": "2017-08-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 10,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 95
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 12
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03312374",
+              "index": 10,
+              "hybrid_score": 4.898063035204097,
+              "embedding_score": 6.940436363220215,
+              "bm25_score": 1.3252526983315556
+            },
+            {
+              "title": "NEOadjuvant PembRolizumab In Stratified Medicine - ColoRectal Cancer (NEOPRISM-CRC)",
+              "condition": "Adenocarcinoma of the Colon, Incurable Colorectal Cancer, MSI-H, High-risk Stage 2/3",
+              "phase": "Phase 2",
+              "status": "Recruiting",
+              "investigator": "University College, London",
+              "created_date": "2022-07-20T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 3,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 118
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT05197322",
+              "index": 3,
+              "hybrid_score": 4.8952807989634115,
+              "embedding_score": 6.889920234680176,
+              "bm25_score": 2.4112211562429544
+            },
+            {
+              "title": "Niraparib and Panitumumab in Patients With Advanced or Metastatic Colorectal Cancer (NIPAVect)",
+              "condition": "Advanced Microsatellite Stable Colorectal Carcinoma, Metastatic Microsatellite Stable Colorectal Carcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase II",
+              "status": "Active, not recruiting",
+              "investigator": "Emory University",
+              "created_date": "2019-10-15T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 8,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 106
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03983993",
+              "index": 8,
+              "hybrid_score": 4.884615167033864,
+              "embedding_score": 6.915865421295166,
+              "bm25_score": 1.4503124042416191
+            },
+            {
+              "title": "A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)",
+              "condition": "Metastatic Colorectal Cancer, Refractory Colorectal Cancer, Incurable Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Terminated",
+              "investigator": "Janssen Research & Development, LLC",
+              "created_date": "2013-03-31T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 12,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01767857",
+              "index": 12,
+              "hybrid_score": 4.864126327886658,
+              "embedding_score": 6.890841484069824,
+              "bm25_score": 1.3512429679260496
+            }
+          ]
+        },
+        "llm_evaluation": {
+          "status": "completed",
+          "result": {
+            "patient_id": 2,
+            "patient_info": {
+              "id": 2,
+              "mrn": "MRN0002",
+              "patient_name": "Susan Lee",
+              "location": "San Jose, CA",
+              "age": 55,
+              "gender": "Female",
+              "date_of_visit": "2025-10-22",
+              "oncologist": "Dr. Anil Kapoor",
+              "chief_complaint": "Change in bowel habits, mild rectal bleeding",
+              "history_of_present_illness": "55-year-old woman, recently diagnosed stage IV colon cancer with KRAS G12C mutation, completed first-line FOLFOX.",
+              "past_medical_history": "Type 2 diabetes, managed. Hypothyroidism.",
+              "family_history": "No cancers reported, non-contributory.",
+              "social_history": "Teacher, never smoked, rarely drinks, lives with partner.",
+              "review_of_systems": "Fatigue, 5-lb weight loss, intermittent constipation.",
+              "medications_allergies": "Metformin, levothyroxine; allergic to penicillin.",
+              "physical_examination": "Normal exam except mild pallor.",
+              "laboratory_imaging_results": "Mild microcytic anemia, negative stool occult blood, PET: liver & lung nodules.",
+              "imaging": "PET-CT 2025-10-14: Hepatic and left lower lobe lung metastases.",
+              "assessment": "KRAS G12C mutant mCRC, post-FOLFOX progression.",
+              "vital": {
+                "bp": "120/76",
+                "hr": 77,
+                "temp": 98.4,
+                "rr": 18,
+                "spo2": 99
+              },
+              "patient_id": 2,
+              "combined_text": "Change in bowel habits, mild rectal bleeding 55-year-old woman, recently diagnosed stage IV colon cancer with KRAS G12C mutation, completed first-line FOLFOX. Type 2 diabetes, managed. Hypothyroidism. KRAS G12C mutant mCRC, post-FOLFOX progression. Mild microcytic anemia, negative stool occult blood, PET: liver & lung nodules."
+            },
+            "total_evaluations": 0,
+            "evaluations": [],
+            "error": "All batch evaluations failed",
+            "summary": {
+              "eligible_count": 0,
+              "not_eligible_count": 0,
+              "need_more_info_count": 0,
+              "average_confidence": 0
+            },
+            "generated_at": "2025-11-09T20:18:53.507959",
+            "evaluation_method": "batch",
+            "batch_summary": {
+              "error": "All batch evaluations failed"
+            }
+          }
+        }
+      },
+      "comparison": {
+        "status": "compared",
+        "total_golden_matches": 4,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "accuracy": 0.0,
+        "comparison_details": [
+          {
+            "trial_id": "NCT04793958",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "KRAS G12C+ metastatic colorectal cancer",
+              "Failed first-line therapy",
+              "Meets age, organ and performance criteria"
+            ]
+          },
+          {
+            "trial_id": "NCT00719797",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Stage IV, chemonaïve for metastatic setting (if first-line FOLFOX completed for adjuvant, not metastatic)",
+              "KRAS status compatible with standard-of-care arms",
+              "No exclusion by age or comorbidity"
+            ]
+          },
+          {
+            "trial_id": "NCT02997228",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Metastatic colorectal cancer",
+              "Likely MSI status not known, but accepted as general mCRC if otherwise fits",
+              "No exclusion listed"
+            ]
+          },
+          {
+            "trial_id": "NCT02015923",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Unresectable synchronous metastases",
+              "Colorectal cancer >12cm from anal verge based on colon cancer diagnosis",
+              "No contraindication to chemo"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": 3,
+      "mrn": "MRN0003",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 3,\n  \"mrn\": \"MRN0003\",\n  \"age\": 70,\n  \"gender\": \"Male\",\n  \"summary\": \"70-year-old male with heavily pretreated metastatic rectal adenocarcinoma, experiencing progressive fatigue and mild jaundice. Patient has failed prior regimens and is seeking clinical trial options. Comorbidities include CAD (s/p stent) and chronic kidney disease stage 2.\",\n  \"primary_diagnosis\": \"Metastatic Rectal Adenocarcinoma\",\n  \"stage\": \"Metastatic\",\n  \"metastatic_sites\": [],\n  \"molecular_markers\": [],\n  \"comorbidities\": [\n    \"Coronary Artery Disease\",\n    \"Chronic Kidney Disease Stage 2\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": null,\n  \"family_history\": [],\n  \"keywords\": [\n    \"Metastatic Rectal Cancer\",\n    \"Rectal Adenocarcinoma\",\n    \"Adenocarcinoma\",\n    \"Colorectal Cancer\",\n    \"Metastatic Cancer\",\n    \"Advanced Cancer\",\n    \"Progressive Fatigue\",\n    \"Fatigue\",\n    \"Mild Jaundice\",\n    \"Jaundice\",\n    \"Elevated Bilirubin\",\n    \"Elevated Alkaline Phosphatase\",\n    \"Bilirubin 2.1 mg/dL\",\n    \"Alkaline Phosphatase\",\n    \"Cytopenias\",\n    \"Anemia\",\n    \"Thrombocytopenia\",\n    \"Leukopenia\",\n    \"Heavily Pretreated\",\n    \"Refractory Cancer\",\n    \"Failed Prior Regimens\",\n    \"Clinical Trial\",\n    \"Phase 1 Trial\",\n    \"Phase 2 Trial\",\n    \"Phase 3 Trial\",\n    \"Coronary Artery Disease\",\n    \"CAD\",\n    \"Stent\",\n    \"Post Stent Placement\",\n    \"Chronic Kidney Disease\",\n    \"CKD Stage 2\",\n    \"Renal Insufficiency\",\n    \"Male\",\n    \"Elderly\",\n    \"Geriatric\",\n    \"70 years old\",\n    \"Adenocarcinoma of the Rectum\",\n    \"Metastatic Colorectal Cancer\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:31.601464\"\n}\n```",
+            "patient_id": 3,
+            "mrn": "MRN0003",
+            "age": 70,
+            "gender": "Male",
+            "summary": "70-year-old male with heavily pretreated metastatic rectal adenocarcinoma, experiencing progressive fatigue and mild jaundice. Patient has failed prior regimens and is seeking clinical trial options. Comorbidities include CAD (s/p stent) and chronic kidney disease stage 2.",
+            "primary_diagnosis": "Metastatic Rectal Adenocarcinoma",
+            "stage": "Metastatic",
+            "metastatic_sites": [],
+            "molecular_markers": [],
+            "comorbidities": [
+              "Coronary Artery Disease",
+              "Chronic Kidney Disease Stage 2"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": null,
+            "family_history": [],
+            "keywords": [
+              "Metastatic Rectal Cancer",
+              "Rectal Adenocarcinoma",
+              "Adenocarcinoma",
+              "Colorectal Cancer",
+              "Metastatic Cancer",
+              "Advanced Cancer",
+              "Progressive Fatigue",
+              "Fatigue",
+              "Mild Jaundice",
+              "Jaundice",
+              "Elevated Bilirubin",
+              "Elevated Alkaline Phosphatase",
+              "Bilirubin 2.1 mg/dL",
+              "Alkaline Phosphatase",
+              "Cytopenias",
+              "Anemia",
+              "Thrombocytopenia",
+              "Leukopenia",
+              "Heavily Pretreated",
+              "Refractory Cancer",
+              "Failed Prior Regimens",
+              "Clinical Trial",
+              "Phase 1 Trial",
+              "Phase 2 Trial",
+              "Phase 3 Trial",
+              "Coronary Artery Disease",
+              "CAD",
+              "Stent",
+              "Post Stent Placement",
+              "Chronic Kidney Disease",
+              "CKD Stage 2",
+              "Renal Insufficiency",
+              "Male",
+              "Elderly",
+              "Geriatric",
+              "70 years old",
+              "Adenocarcinoma of the Rectum",
+              "Metastatic Colorectal Cancer"
+            ],
+            "generated_at": "2025-11-09T19:20:31.601464"
+          }
+        },
+        "embedding_generation": {
+          "status": "completed",
+          "result": {
+            "total_patients": 4,
+            "new_patients": 0,
+            "existing_patients": 4,
+            "embedding_dimension": 768,
+            "note": "All patients already had embeddings or no keywords"
+          }
+        },
+        "hybrid_matching": {
+          "status": "completed",
+          "trials_found": 15,
+          "top_trials": [
+            {
+              "title": "Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study",
+              "condition": "Metastatic Colorectal Adenocarcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Active, not recruiting",
+              "investigator": "National Cancer Institute (NCI)",
+              "created_date": "2018-01-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 6,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 111
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 15
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02997228",
+              "index": 6,
+              "hybrid_score": 5.159302806377353,
+              "embedding_score": 6.990659713745117,
+              "bm25_score": 8.861366891859026
+            },
+            {
+              "title": "Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Completed",
+              "investigator": "Bayer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 0,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 87
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 17
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01103323",
+              "index": 0,
+              "hybrid_score": 5.036196681421479,
+              "embedding_score": 7.127155303955078,
+              "bm25_score": 1.5729322884308081
+            },
+            {
+              "title": "A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)",
+              "condition": "Metastatic Colorectal Cancer, Refractory Colorectal Cancer, Incurable Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Terminated",
+              "investigator": "Janssen Research & Development, LLC",
+              "created_date": "2013-03-31T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 12,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01767857",
+              "index": 12,
+              "hybrid_score": 5.033112993862714,
+              "embedding_score": 7.149116039276123,
+              "bm25_score": 0.9577255456476054
+            },
+            {
+              "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy for BRAF V600E Mutant Metastatic Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer, BRAF V600E Mutant Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Pfizer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 1,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 90
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 10
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04607421",
+              "index": 1,
+              "hybrid_score": 5.02342749844706,
+              "embedding_score": 7.118377208709717,
+              "bm25_score": 1.3521150783419682
+            },
+            {
+              "title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+              "condition": "Metastatic Colorectal Cancer, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Gruppo Oncologico del Nord-Ovest",
+              "created_date": "2008-07-22T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 4,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 109
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 69
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 46
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 29
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 22
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT00719797",
+              "index": 4,
+              "hybrid_score": 5.013725357366173,
+              "embedding_score": 7.0896077156066895,
+              "bm25_score": 1.699998548049682
+            },
+            {
+              "title": "Efficacy and Tolerance of Maintenance Therapy in Patients With Incurable Advanced Colorectal Cancer (Confirm Study)",
+              "condition": "Incurable Colorectal Cancer, RAS Wild-type",
+              "phase": "Phase 2",
+              "status": "Unknown",
+              "investigator": "Tianshu Liu, Shanghai Zhongshan Hospital",
+              "created_date": "2013-07-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 14,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02071069",
+              "index": 14,
+              "hybrid_score": 5.003475666046143,
+              "embedding_score": 7.147822380065918,
+              "bm25_score": 0.0
+            },
+            {
+              "title": "Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer",
+              "condition": "Metastatic Colon Cancer, Stage III Colon Cancer",
+              "phase": "Phase 3",
+              "status": "Recruiting",
+              "investigator": "Massachusetts General Hospital",
+              "created_date": "2020-04-16T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 5,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 82
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 66
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03803553",
+              "index": 5,
+              "hybrid_score": 4.975384417406715,
+              "embedding_score": 6.934579372406006,
+              "bm25_score": 4.039295224083737
+            },
+            {
+              "title": "CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)",
+              "condition": "Solid Tumors, Advanced GI Tumors, Advanced Colorectal Cancer",
+              "phase": "Phase I",
+              "status": "Recruiting",
+              "investigator": "Curegenix Inc.",
+              "created_date": "2016-02-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 9,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 131
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02675946",
+              "index": 9,
+              "hybrid_score": 4.962725400924683,
+              "embedding_score": 7.0896077156066895,
+              "bm25_score": 0.0
+            },
+            {
+              "title": "Niraparib and Panitumumab in Patients With Advanced or Metastatic Colorectal Cancer (NIPAVect)",
+              "condition": "Advanced Microsatellite Stable Colorectal Carcinoma, Metastatic Microsatellite Stable Colorectal Carcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase II",
+              "status": "Active, not recruiting",
+              "investigator": "Emory University",
+              "created_date": "2019-10-15T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 8,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 106
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03983993",
+              "index": 8,
+              "hybrid_score": 4.925980744212639,
+              "embedding_score": 6.966192245483398,
+              "bm25_score": 1.6548724124753504
+            },
+            {
+              "title": "Phase 3 Study of MRTX849 With Cetuximab vs Standard Chemotherapy in Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Mirati Therapeutics",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 2,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 85
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 12
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 15
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04793958",
+              "index": 2,
+              "hybrid_score": 4.91441444794492,
+              "embedding_score": 6.972606182098389,
+              "bm25_score": 1.1196706825349412
+            },
+            {
+              "title": "Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases",
+              "condition": "Colonic Cancer, Unresectable Metastasis Originating in Colonic Cancer",
+              "phase": "Phase 4",
+              "status": "Terminated",
+              "investigator": "Hospital Universitari de Bellvitge",
+              "created_date": "2013-12-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 7,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 92
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02015923",
+              "index": 7,
+              "hybrid_score": 4.905521488189697,
+              "embedding_score": 7.007887840270996,
+              "bm25_score": 0.0
+            },
+            {
+              "title": "NEOadjuvant PembRolizumab In Stratified Medicine - ColoRectal Cancer (NEOPRISM-CRC)",
+              "condition": "Adenocarcinoma of the Colon, Incurable Colorectal Cancer, MSI-H, High-risk Stage 2/3",
+              "phase": "Phase 2",
+              "status": "Recruiting",
+              "investigator": "University College, London",
+              "created_date": "2022-07-20T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 3,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 118
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT05197322",
+              "index": 3,
+              "hybrid_score": 4.882326613092594,
+              "embedding_score": 6.8085103034973145,
+              "bm25_score": 3.8789800214824908
+            },
+            {
+              "title": "Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)",
+              "condition": "Colorectal Cancer, RAS Wild-type, Incurable/Unresectable Advanced/Recurrent Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Takeda",
+              "created_date": "2015-05-29T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 13,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 113
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 19
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02394795",
+              "index": 13,
+              "hybrid_score": 4.841108131408691,
+              "embedding_score": 6.915868759155273,
+              "bm25_score": 0.0
+            },
+            {
+              "title": "ctDNA as a Prognostic Marker for Postoperative Relapse in Early and Intermediate Stage Colorectal Cancer",
+              "condition": "Colorectal Cancer, Stage II/III Colorectal Cancer",
+              "phase": "Not Applicable (Observational)",
+              "status": "Recruiting",
+              "investigator": "Sun Yat-sen University",
+              "created_date": "2017-08-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 10,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 95
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 12
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03312374",
+              "index": 10,
+              "hybrid_score": 4.790845676932722,
+              "embedding_score": 6.8211870193481445,
+              "bm25_score": 0.5338254463007157
+            },
+            {
+              "title": "Initial Attack on Latent Metastasis Using TAS-102 for ct DNA Identified Colorectal Cancer Patients After Curative Resection (ALTAIR)",
+              "condition": "Colorectal Neoplasms, Circulating Tumor DNA-positive Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "National Cancer Center Hospital East",
+              "created_date": "2020-07-08T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 11,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 103
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 11
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04457297",
+              "index": 11,
+              "hybrid_score": 4.774977445602417,
+              "embedding_score": 6.821396350860596,
+              "bm25_score": 0.0
+            }
+          ]
+        },
+        "llm_evaluation": {
+          "status": "completed",
+          "result": {
+            "patient_id": 3,
+            "patient_info": {
+              "id": 3,
+              "mrn": "MRN0003",
+              "patient_name": "Miguel Salazar",
+              "location": "Dallas, TX",
+              "age": 70,
+              "gender": "Male",
+              "date_of_visit": "2025-11-03",
+              "oncologist": "Dr. Emily Rivera",
+              "chief_complaint": "Progressive fatigue, mild jaundice",
+              "history_of_present_illness": "Known metastatic rectal adenocarcinoma, failed prior regimens, seeking trial options.",
+              "past_medical_history": "CAD (s/p stent), chronic kidney disease stage 2.",
+              "family_history": "Brother had colorectal cancer at 65, alive and well.",
+              "social_history": "Retired mechanic, ex-smoker; quit 20 years ago.",
+              "review_of_systems": "Mild fatigue, pruritus, no fevers.",
+              "medications_allergies": "Aspirin, lisinopril, metoprolol; NKDA.",
+              "physical_examination": "Mild jaundice, no ascites, hepatomegaly.",
+              "laboratory_imaging_results": "Elevated bilirubin (2.1), alk phos; mild cytopenias.",
+              "imaging": "MRI Abdomen 2025-11-01: Extensive liver mets, periportal lymphadenopathy.",
+              "assessment": "Metastatic rectal adenocarcinoma, heavily pretreated.",
+              "vital": {
+                "bp": "135/80",
+                "hr": 84,
+                "temp": 97.9,
+                "rr": 17,
+                "spo2": 95
+              },
+              "patient_id": 3,
+              "combined_text": "Progressive fatigue, mild jaundice Known metastatic rectal adenocarcinoma, failed prior regimens, seeking trial options. CAD (s/p stent), chronic kidney disease stage 2. Metastatic rectal adenocarcinoma, heavily pretreated. Elevated bilirubin (2.1), alk phos; mild cytopenias."
+            },
+            "total_evaluations": 0,
+            "evaluations": [],
+            "error": "All batch evaluations failed",
+            "summary": {
+              "eligible_count": 0,
+              "not_eligible_count": 0,
+              "need_more_info_count": 0,
+              "average_confidence": 0
+            },
+            "generated_at": "2025-11-09T20:19:33.522713",
+            "evaluation_method": "batch",
+            "batch_summary": {
+              "error": "All batch evaluations failed"
+            }
+          }
+        }
+      },
+      "comparison": {
+        "status": "compared",
+        "total_golden_matches": 4,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "accuracy": 0.0,
+        "comparison_details": [
+          {
+            "trial_id": "NCT03983993",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "RAS wildtype not stated, but as heavily pretreated eligible for exploratory phase 2 eligibility",
+              "Advanced metastatic colorectal carcinoma"
+            ]
+          },
+          {
+            "trial_id": "NCT02675946",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Advanced GI/colorectal cancer, heavily pretreated",
+              "Appropriate age and performance",
+              "No prior specified therapy exclusion stated"
+            ]
+          },
+          {
+            "trial_id": "NCT03312374",
+            "golden_decision": "NOT ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Trial limited to early/intermediate post-operative CRC (Stage II/III)",
+              "Patient is metastatic (not early-stage, not post-surgery surveillance)"
+            ]
+          },
+          {
+            "trial_id": "NCT04457297",
+            "golden_decision": "NOT ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Trial requires ctDNA+ post-curative resection, Stage III",
+              "Patient is metastatic, not resected or ctDNA+ post-surgery"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": 4,
+      "mrn": "MRN0004",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 4,\n  \"mrn\": \"MRN0004\",\n  \"age\": 48,\n  \"gender\": \"Female\",\n  \"summary\": \"48-year-old female with a history of stage III colon cancer, now experiencing molecular recurrence detected via ctDNA after completing adjuvant chemotherapy. Patient also has a history of asthma and mild GERD.\",\n  \"primary_diagnosis\": \"Colon Cancer\",\n  \"stage\": \"III\",\n  \"metastatic_sites\": [],\n  \"molecular_markers\": [\"ctDNA positive\"],\n  \"comorbidities\": [\"Asthma\", \"Gastroesophageal Reflux Disease (GERD)\"],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": null,\n  \"family_history\": [],\n  \"keywords\": [\n    \"Colon Cancer\",\n    \"Colorectal Cancer\",\n    \"Stage III Colon Cancer\",\n    \"Adjuvant Chemotherapy\",\n    \"ctDNA\",\n    \"Circulating Tumor DNA\",\n    \"Molecular Recurrence\",\n    \"Recurrent Colon Cancer\",\n    \"Minimal Residual Disease\",\n    \"Abdominal Pain\",\n    \"Abdominal Bloating\",\n    \"Gastrointestinal Cancer\",\n    \"Neoplasm\",\n    \"Tumor\",\n    \"Cancer\",\n    \"Asthma\",\n    \"Gastroesophageal Reflux Disease\",\n    \"GERD\",\n    \"Female\",\n    \"Adult\",\n    \"40-49 years\",\n    \"Chemotherapy\",\n    \"Resected Colon Cancer\",\n    \"CEA\",\n    \"Carcinoembryonic Antigen\",\n    \"Normal CBC\",\n    \"Complete Blood Count\",\n    \"Positive ctDNA\",\n    \"Mild GERD\",\n    \"Non-Metastatic Colon Cancer\",\n    \"Localized Colon Cancer\",\n    \"Stage 3 Colon Cancer\",\n    \"Post-Chemotherapy\",\n    \"Treatment Experienced\",\n    \"Recurrent Disease\",\n    \"Molecular Monitoring\",\n    \"Liquid Biopsy\",\n    \"Early Detection\",\n    \"Cancer Biomarker\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:36.857258\"\n}\n```",
+            "patient_id": 4,
+            "mrn": "MRN0004",
+            "age": 48,
+            "gender": "Female",
+            "summary": "48-year-old female with a history of stage III colon cancer, now experiencing molecular recurrence detected via ctDNA after completing adjuvant chemotherapy. Patient also has a history of asthma and mild GERD.",
+            "primary_diagnosis": "Colon Cancer",
+            "stage": "III",
+            "metastatic_sites": [],
+            "molecular_markers": [
+              "ctDNA positive"
+            ],
+            "comorbidities": [
+              "Asthma",
+              "Gastroesophageal Reflux Disease (GERD)"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": null,
+            "family_history": [],
+            "keywords": [
+              "Colon Cancer",
+              "Colorectal Cancer",
+              "Stage III Colon Cancer",
+              "Adjuvant Chemotherapy",
+              "ctDNA",
+              "Circulating Tumor DNA",
+              "Molecular Recurrence",
+              "Recurrent Colon Cancer",
+              "Minimal Residual Disease",
+              "Abdominal Pain",
+              "Abdominal Bloating",
+              "Gastrointestinal Cancer",
+              "Neoplasm",
+              "Tumor",
+              "Cancer",
+              "Asthma",
+              "Gastroesophageal Reflux Disease",
+              "GERD",
+              "Female",
+              "Adult",
+              "40-49 years",
+              "Chemotherapy",
+              "Resected Colon Cancer",
+              "CEA",
+              "Carcinoembryonic Antigen",
+              "Normal CBC",
+              "Complete Blood Count",
+              "Positive ctDNA",
+              "Mild GERD",
+              "Non-Metastatic Colon Cancer",
+              "Localized Colon Cancer",
+              "Stage 3 Colon Cancer",
+              "Post-Chemotherapy",
+              "Treatment Experienced",
+              "Recurrent Disease",
+              "Molecular Monitoring",
+              "Liquid Biopsy",
+              "Early Detection",
+              "Cancer Biomarker"
+            ],
+            "generated_at": "2025-11-09T19:20:36.857258"
+          }
+        },
+        "embedding_generation": {
+          "status": "completed",
+          "result": {
+            "total_patients": 4,
+            "new_patients": 0,
+            "existing_patients": 4,
+            "embedding_dimension": 768,
+            "note": "All patients already had embeddings or no keywords"
+          }
+        },
+        "hybrid_matching": {
+          "status": "completed",
+          "trials_found": 15,
+          "top_trials": [
+            {
+              "title": "Initial Attack on Latent Metastasis Using TAS-102 for ct DNA Identified Colorectal Cancer Patients After Curative Resection (ALTAIR)",
+              "condition": "Colorectal Neoplasms, Circulating Tumor DNA-positive Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "National Cancer Center Hospital East",
+              "created_date": "2020-07-08T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 11,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 103
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 11
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04457297",
+              "index": 11,
+              "hybrid_score": 5.323889728022121,
+              "embedding_score": 7.254770755767822,
+              "bm25_score": 8.185006632821528
+            },
+            {
+              "title": "Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer",
+              "condition": "Metastatic Colon Cancer, Stage III Colon Cancer",
+              "phase": "Phase 3",
+              "status": "Recruiting",
+              "investigator": "Massachusetts General Hospital",
+              "created_date": "2020-04-16T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 5,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 82
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 66
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03803553",
+              "index": 5,
+              "hybrid_score": 5.312054201355712,
+              "embedding_score": 7.257404327392578,
+              "bm25_score": 7.729039072696916
+            },
+            {
+              "title": "ctDNA as a Prognostic Marker for Postoperative Relapse in Early and Intermediate Stage Colorectal Cancer",
+              "condition": "Colorectal Cancer, Stage II/III Colorectal Cancer",
+              "phase": "Not Applicable (Observational)",
+              "status": "Recruiting",
+              "investigator": "Sun Yat-sen University",
+              "created_date": "2017-08-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 10,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 95
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 12
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03312374",
+              "index": 10,
+              "hybrid_score": 5.206061887741089,
+              "embedding_score": 7.008659839630127,
+              "bm25_score": 10.31185294993879
+            },
+            {
+              "title": "Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases",
+              "condition": "Colonic Cancer, Unresectable Metastasis Originating in Colonic Cancer",
+              "phase": "Phase 4",
+              "status": "Terminated",
+              "investigator": "Hospital Universitari de Bellvitge",
+              "created_date": "2013-12-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 7,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 92
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 27
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02015923",
+              "index": 7,
+              "hybrid_score": 4.977208453746135,
+              "embedding_score": 7.016783237457275,
+              "bm25_score": 2.1820062508680773
+            },
+            {
+              "title": "NEOadjuvant PembRolizumab In Stratified Medicine - ColoRectal Cancer (NEOPRISM-CRC)",
+              "condition": "Adenocarcinoma of the Colon, Incurable Colorectal Cancer, MSI-H, High-risk Stage 2/3",
+              "phase": "Phase 2",
+              "status": "Recruiting",
+              "investigator": "University College, London",
+              "created_date": "2022-07-20T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 3,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 118
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT05197322",
+              "index": 3,
+              "hybrid_score": 4.95372993288776,
+              "embedding_score": 6.870080947875977,
+              "bm25_score": 4.822442312485909
+            },
+            {
+              "title": "Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study",
+              "condition": "Metastatic Colorectal Adenocarcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Active, not recruiting",
+              "investigator": "National Cancer Institute (NCI)",
+              "created_date": "2018-01-19T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 6,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 111
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 15
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 16
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02997228",
+              "index": 6,
+              "hybrid_score": 4.936688976776302,
+              "embedding_score": 6.832425117492676,
+              "bm25_score": 5.133046484380963
+            },
+            {
+              "title": "Phase 3 Study of MRTX849 With Cetuximab vs Standard Chemotherapy in Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Mirati Therapeutics",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 2,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 85
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 28
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 21
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 12
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 15
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04793958",
+              "index": 2,
+              "hybrid_score": 4.913255691044362,
+              "embedding_score": 6.9169793128967285,
+              "bm25_score": 2.3790057338884063
+            },
+            {
+              "title": "Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)",
+              "condition": "Metastatic Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Completed",
+              "investigator": "Bayer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 0,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 87
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 37
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 17
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01103323",
+              "index": 0,
+              "hybrid_score": 4.909459704988176,
+              "embedding_score": 6.908001899719238,
+              "bm25_score": 2.4619458394903053
+            },
+            {
+              "title": "CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)",
+              "condition": "Solid Tumors, Advanced GI Tumors, Advanced Colorectal Cancer",
+              "phase": "Phase I",
+              "status": "Recruiting",
+              "investigator": "Curegenix Inc.",
+              "created_date": "2016-02-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 9,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 131
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 26
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 30
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02675946",
+              "index": 9,
+              "hybrid_score": 4.898036689706799,
+              "embedding_score": 6.920999526977539,
+              "bm25_score": 1.7779006940840474
+            },
+            {
+              "title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+              "condition": "Metastatic Colorectal Cancer, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Gruppo Oncologico del Nord-Ovest",
+              "created_date": "2008-07-22T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 4,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 109
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 69
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 46
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 29
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 22
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT00719797",
+              "index": 4,
+              "hybrid_score": 4.846246915543634,
+              "embedding_score": 6.799798488616943,
+              "bm25_score": 2.879599117059135
+            },
+            {
+              "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy for BRAF V600E Mutant Metastatic Colorectal Cancer",
+              "condition": "Metastatic Colorectal Cancer, BRAF V600E Mutant Colorectal Cancer",
+              "phase": "Phase III",
+              "status": "Recruiting",
+              "investigator": "Pfizer",
+              "created_date": null,
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 1,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 90
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 25
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 16
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 10
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT04607421",
+              "index": 1,
+              "hybrid_score": 4.83271407378891,
+              "embedding_score": 6.778260707855225,
+              "bm25_score": 2.931052609675115
+            },
+            {
+              "title": "Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)",
+              "condition": "Colorectal Cancer, RAS Wild-type, Incurable/Unresectable Advanced/Recurrent Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Takeda",
+              "created_date": "2015-05-29T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 13,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 113
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 35
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 22
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 19
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02394795",
+              "index": 13,
+              "hybrid_score": 4.82017012255555,
+              "embedding_score": 6.7929277420043945,
+              "bm25_score": 2.170690105082488
+            },
+            {
+              "title": "A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)",
+              "condition": "Metastatic Colorectal Cancer, Refractory Colorectal Cancer, Incurable Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Terminated",
+              "investigator": "Janssen Research & Development, LLC",
+              "created_date": "2013-03-31T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 12,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 20
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT01767857",
+              "index": 12,
+              "hybrid_score": 4.816676375135163,
+              "embedding_score": 6.7749786376953125,
+              "bm25_score": 2.4730442916148254
+            },
+            {
+              "title": "Efficacy and Tolerance of Maintenance Therapy in Patients With Incurable Advanced Colorectal Cancer (Confirm Study)",
+              "condition": "Incurable Colorectal Cancer, RAS Wild-type",
+              "phase": "Phase 2",
+              "status": "Unknown",
+              "investigator": "Tianshu Liu, Shanghai Zhongshan Hospital",
+              "created_date": "2013-07-01T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 14,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 99
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 36
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 33
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 17
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT02071069",
+              "index": 14,
+              "hybrid_score": 4.804417669027284,
+              "embedding_score": 6.780097961425781,
+              "bm25_score": 1.94496986764125
+            },
+            {
+              "title": "Niraparib and Panitumumab in Patients With Advanced or Metastatic Colorectal Cancer (NIPAVect)",
+              "condition": "Advanced Microsatellite Stable Colorectal Carcinoma, Metastatic Microsatellite Stable Colorectal Carcinoma, Stage IV Colorectal Cancer",
+              "phase": "Phase II",
+              "status": "Active, not recruiting",
+              "investigator": "Emory University",
+              "created_date": "2019-10-15T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 8,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 106
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 31
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 24
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 23
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 18
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT03983993",
+              "index": 8,
+              "hybrid_score": 4.7065057173431635,
+              "embedding_score": 6.613421440124512,
+              "bm25_score": 2.5703569752001694
+            }
+          ]
+        },
+        "llm_evaluation": {
+          "status": "completed",
+          "result": {
+            "patient_id": 4,
+            "patient_info": {
+              "id": 4,
+              "mrn": "MRN0004",
+              "patient_name": "Fatima Noor",
+              "location": "New York, NY",
+              "age": 48,
+              "gender": "Female",
+              "date_of_visit": "2025-11-07",
+              "oncologist": "Dr. Mark Chen",
+              "chief_complaint": "Abdominal bloating and pain",
+              "history_of_present_illness": "48-year-old with resected stage III colon cancer, now positive for ctDNA after adjuvant chemo completion.",
+              "past_medical_history": "Asthma, mild GERD.",
+              "family_history": "Mother had breast cancer; no GI cancers.",
+              "social_history": "Non-smoker, yoga instructor, vegetarian.",
+              "review_of_systems": "Reports occasional bloating and mild dyspnea.",
+              "medications_allergies": "Albuterol inhaler; allergic to sulfa drugs.",
+              "physical_examination": "Unremarkable, except mild abdominal distension.",
+              "laboratory_imaging_results": "Normal CBC, CEA slightly raised, ctDNA positive.",
+              "imaging": "Colonoscopy 2025-10-20: no lesion. CT scan 2025-11-05: no obvious mets.",
+              "assessment": "Stage III colon cancer, now molecular recurrence on ctDNA.",
+              "vital": {
+                "bp": "112/70",
+                "hr": 74,
+                "temp": 98.2,
+                "rr": 15,
+                "spo2": 98
+              },
+              "patient_id": 4,
+              "combined_text": "Abdominal bloating and pain 48-year-old with resected stage III colon cancer, now positive for ctDNA after adjuvant chemo completion. Asthma, mild GERD. Stage III colon cancer, now molecular recurrence on ctDNA. Normal CBC, CEA slightly raised, ctDNA positive."
+            },
+            "total_evaluations": 0,
+            "evaluations": [],
+            "error": "All batch evaluations failed",
+            "summary": {
+              "eligible_count": 0,
+              "not_eligible_count": 0,
+              "need_more_info_count": 0,
+              "average_confidence": 0
+            },
+            "generated_at": "2025-11-09T20:20:13.555983",
+            "evaluation_method": "batch",
+            "batch_summary": {
+              "error": "All batch evaluations failed"
+            }
+          }
+        }
+      },
+      "comparison": {
+        "status": "compared",
+        "total_golden_matches": 4,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "accuracy": 0.0,
+        "comparison_details": [
+          {
+            "trial_id": "NCT03803553",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Resected Stage III adenocarcinoma, completed standard adjuvant chemo",
+              "ctDNA+ molecular relapse, meets age and organ criteria"
+            ]
+          },
+          {
+            "trial_id": "NCT03312374",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Stage III CRC post-surgery, ECOG ≤1, ctDNA monitoring possible"
+            ]
+          },
+          {
+            "trial_id": "NCT04457297",
+            "golden_decision": "ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Stage III colon cancer, post-surgery, ctDNA+",
+              "Organ function and age criteria met"
+            ]
+          },
+          {
+            "trial_id": "NCT05197322",
+            "golden_decision": "NOT ELIGIBLE",
+            "llm_decision": "NOT_EVALUATED",
+            "is_correct": null,
+            "golden_reasons": [
+              "Trial is for unresectable or inoperable with MSI-H/MMR-D",
+              "Patient is post-surgery and MSI status not reported"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "overall_accuracy": {
+    "overall_accuracy": 0.0,
+    "total_correct": 0,
+    "total_incorrect": 0,
+    "total_not_evaluated": 16,
+    "total_matches": 16,
+    "patient_accuracies": [
+      {
+        "mrn": "MRN0001",
+        "accuracy": 0.0,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "total": 4
+      },
+      {
+        "mrn": "MRN0002",
+        "accuracy": 0.0,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "total": 4
+      },
+      {
+        "mrn": "MRN0003",
+        "accuracy": 0.0,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "total": 4
+      },
+      {
+        "mrn": "MRN0004",
+        "accuracy": 0.0,
+        "correct": 0,
+        "incorrect": 0,
+        "not_evaluated": 4,
+        "total": 4
+      }
+    ]
+  },
+  "summary": {},
+  "test_completed_at": "2025-11-09T20:20:13.555983"
+}

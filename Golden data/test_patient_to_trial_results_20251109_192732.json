@@ -1,0 +1,139 @@
+{
+  "test_started_at": "2025-11-09T19:25:54.800777",
+  "patients_tested": [
+    {
+      "patient_id": 1,
+      "mrn": "MRN0001",
+      "steps": {
+        "keyword_generation": {
+          "status": "completed",
+          "result": {
+            "response": "```json\n{\n  \"patient_id\": 1,\n  \"mrn\": \"MRN0001\",\n  \"age\": 62,\n  \"gender\": \"Male\",\n  \"summary\": \"62-year-old male with metastatic colorectal cancer, progressing after first-line chemotherapy. Patient presents with weakness, mild abdominal pain, and weight loss, along with controlled hypertension, mild hyperlipidemia, and hepatic metastases.\",\n  \"primary_diagnosis\": \"Metastatic Colorectal Adenocarcinoma\",\n  \"stage\": \"Metastatic\",\n  \"metastatic_sites\": [\n    \"Liver\",\n    \"Hepatic\"\n  ],\n  \"molecular_markers\": [],\n  \"comorbidities\": [\n    \"Hypertension\",\n    \"Hyperlipidemia\",\n    \"Anemia\",\n    \"Transaminitis\"\n  ],\n  \"medications\": [],\n  \"allergies\": [],\n  \"performance_status\": \"Unknown\",\n  \"family_history\": [],\n  \"keywords\": [\n    \"Metastatic Colorectal Cancer\",\n    \"Colorectal Adenocarcinoma\",\n    \"Metastatic Cancer\",\n    \"Liver Metastasis\",\n    \"Hepatic Metastasis\",\n    \"Adenocarcinoma\",\n    \"Colorectal Neoplasms\",\n    \"Advanced Cancer\",\n    \"Refractory Cancer\",\n    \"Treatment Failure\",\n    \"Chemotherapy Failure\",\n    \"First-Line Chemotherapy Failure\",\n    \"Hypertension\",\n    \"Hyperlipidemia\",\n    \"Anemia\",\n    \"Transaminitis\",\n    \"Elevated CEA\",\n    \"CEA 40.2 ng/mL\",\n    \"Weakness\",\n    \"Abdominal Pain\",\n    \"Weight Loss\",\n    \"62-year-old\",\n    \"Male\",\n    \"Adult\",\n    \"Progressive Disease\",\n    \"Hepatic Lesions\",\n    \"Controlled Hypertension\",\n    \"Mild Hyperlipidemia\",\n    \"Mild Anemia\",\n    \"Mild Transaminitis\",\n    \"Colorectal Cancer\",\n    \"Metastatic Colorectal Adenocarcinoma\",\n    \"Stage IV Colorectal Cancer\",\n    \"Hepatic Involvement\",\n    \"Adenocarcinoma of the Colon\",\n    \"Adenocarcinoma of the Rectum\"\n  ],\n  \"generated_at\": \"2025-11-09T19:20:20.394127\"\n}\n```",
+            "patient_id": 1,
+            "mrn": "MRN0001",
+            "age": 62,
+            "gender": "Male",
+            "summary": "62-year-old male with metastatic colorectal cancer, progressing after first-line chemotherapy. Patient presents with weakness, mild abdominal pain, and weight loss, along with controlled hypertension, mild hyperlipidemia, and hepatic metastases.",
+            "primary_diagnosis": "Metastatic Colorectal Adenocarcinoma",
+            "stage": "Metastatic",
+            "metastatic_sites": [
+              "Liver",
+              "Hepatic"
+            ],
+            "molecular_markers": [],
+            "comorbidities": [
+              "Hypertension",
+              "Hyperlipidemia",
+              "Anemia",
+              "Transaminitis"
+            ],
+            "medications": [],
+            "allergies": [],
+            "performance_status": "Unknown",
+            "family_history": [],
+            "keywords": [
+              "Metastatic Colorectal Cancer",
+              "Colorectal Adenocarcinoma",
+              "Metastatic Cancer",
+              "Liver Metastasis",
+              "Hepatic Metastasis",
+              "Adenocarcinoma",
+              "Colorectal Neoplasms",
+              "Advanced Cancer",
+              "Refractory Cancer",
+              "Treatment Failure",
+              "Chemotherapy Failure",
+              "First-Line Chemotherapy Failure",
+              "Hypertension",
+              "Hyperlipidemia",
+              "Anemia",
+              "Transaminitis",
+              "Elevated CEA",
+              "CEA 40.2 ng/mL",
+              "Weakness",
+              "Abdominal Pain",
+              "Weight Loss",
+              "62-year-old",
+              "Male",
+              "Adult",
+              "Progressive Disease",
+              "Hepatic Lesions",
+              "Controlled Hypertension",
+              "Mild Hyperlipidemia",
+              "Mild Anemia",
+              "Mild Transaminitis",
+              "Colorectal Cancer",
+              "Metastatic Colorectal Adenocarcinoma",
+              "Stage IV Colorectal Cancer",
+              "Hepatic Involvement",
+              "Adenocarcinoma of the Colon",
+              "Adenocarcinoma of the Rectum"
+            ],
+            "generated_at": "2025-11-09T19:20:20.394127"
+          }
+        },
+        "embedding_generation": {
+          "status": "completed",
+          "result": {
+            "total_patients": 4,
+            "new_patients": 0,
+            "existing_patients": 4,
+            "embedding_dimension": 768,
+            "note": "All patients already had embeddings or no keywords"
+          }
+        },
+        "hybrid_matching": {
+          "status": "completed",
+          "trials_found": 15,
+          "top_trials": [
+            {
+              "title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+              "condition": "Metastatic Colorectal Cancer, Stage IV Colorectal Cancer",
+              "phase": "Phase 3",
+              "status": "Completed",
+              "investigator": "Gruppo Oncologico del Nord-Ovest",
+              "created_date": "2008-07-22T00:00:00Z",
+              "patients_matched": 0,
+              "matching_status": "pending",
+              "embedding_index": 4,
+              "embedding_method": "chunked",
+              "chunk_metadata": {
+                "total_chunks": 5,
+                "chunks": [
+                  {
+                    "index": 0,
+                    "chunk_type": "basic_info_summary",
+                    "weight": 0.15,
+                    "token_count": 109
+                  },
+                  {
+                    "index": 1,
+                    "chunk_type": "detailed_description",
+                    "weight": 0.2,
+                    "token_count": 69
+                  },
+                  {
+                    "index": 2,
+                    "chunk_type": "inclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 46
+                  },
+                  {
+                    "index": 3,
+                    "chunk_type": "exclusion_criteria",
+                    "weight": 0.25,
+                    "token_count": 29
+                  },
+                  {
+                    "index": 4,
+                    "chunk_type": "eligibility_criteria",
+                    "weight": 0.15,
+                    "token_count": 22
+                  }
+                ],
+                "aggregation_method": "weighted_average",
+                "normalized": true
+              },
+              "is_evaluated": 1,
+              "trial_id": "NCT00719797",
+              "index": 

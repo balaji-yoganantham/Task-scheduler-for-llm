@@ -1,0 +1,90 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_single
+patient_id: 96010003
+mrn: 96010003
+trial_id: NCT03715933
+trial_title: Phase 1 Study of INBRX-109 in Subjects with Locall...
+
+
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
+        
+        Evaluate the eligibility of this patient for the given clinical trial.
+        
+        CLINICAL TRIAL INFORMATION:
+        Title: Phase 1 Study of INBRX-109 in Subjects with Locally Advanced or Metastatic Solid Tumors
+        Condition: Colon Cancer, Ewing Sarcoma, Rectal Cancer
+        Phase: Phase 1
+        Status: Recruiting
+        Investigator: Inhibrx, Inc.
+        
+        PATIENT INFORMATION:
+        MRN: 96010003
+        Age: None
+        Gender: None
+        Oncologist: Dr. Michael Chen, MD
+        Date of Visit: April 14, 2025
+        
+        PATIENT MEDICAL RECORD:
+        Patient Name: Not specified
+Patient MRN: 96010003
+Age: Not specified, Gender: Not specified
+Date of Visit: April 14, 2025
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: Not specified
+
+History of Present Illness: March 15, 2025 - Sigmoid colon (left colon) - March 15, 2025; T3N1M1 (Stage IV) - April 04, 2025 - liver, peritoneum metastases identified - Previously treated - ECOG 1
+
+Past Medical History: COPD
+
+Family History: - Father with colon polyps
+
+Social History: Former smoker
+
+Review of Systems: Not specified
+
+Medications and Allergies: Not specified
+
+Physical Examination: Not specified
+
+Laboratory and Imaging Results: Total bilirubin: 1.4, Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: Not specified
+
+Vital Signs: Not specified
+
+Assessment: Metastatic colorectal cancer (liver, peritoneum) - Previously treated
+        
+        EVALUATION CRITERIA:
+        1. Primary diagnosis match
+        2. Disease stage compatibility
+        3. Age eligibility
+        4. Gender eligibility
+        5. Performance status
+        6. Prior treatments
+        7. Comorbidities
+        8. Laboratory values
+        9. Exclusion criteria
+        10. Overall eligibility assessment
+        
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        
+        Return ONLY a valid JSON object with this structure:
+        {
+            "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+            "confidence_score": 85,
+            "reasoning": "Detailed explanation of eligibility assessment",
+            "inclusion_criteria_met": ["criteria1", "criteria2", ...],
+            "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "recommendations": "Specific recommendations for next steps",
+            "priority_score": 75,
+            "evaluation_timestamp": "2025-11-08T13:46:53.455888"
+        }
+        

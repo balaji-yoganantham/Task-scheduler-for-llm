@@ -1,0 +1,128 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 1
+mrn: MRN0001
+batch_size: 2
+trial_ids: ['NCT01103323', 'NCT02997228']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 1
+        MRN: MRN0001
+        Age: 62
+        Gender: Male
+        Oncologist: Dr. Laura Smith
+        Combined Medical Record: Weakness, mild abdominal pain, weight loss 62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy. Hypertension, controlled; mild hyperlipidemia; no prior cancer. Metastatic colorectal adenocarcinoma with progression on prior therapy. CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases.
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT01103323
+        Title: Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)
+        Condition: Metastatic Colorectal Cancer
+        Phase: Phase III
+        Status: Completed
+        Investigator: Bayer
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.159
+        
+        Brief Summary: Randomized, double-blind, placebo-controlled, multi-center phase III study to evaluate efficacy and safety of regorafenib in patients with metastatic colorectal cancer.
+        
+        Detailed Description: Regorafenib or placebo plus best supportive care (BSC) was administered to patients; endpoints included overall survival, progression-free survival, and safety.
+        
+        Inclusion Criteria: Histologically or cytologically confirmed adenocarcinoma of the colon or rectum, metastatic disease, prior standard therapies failed.
+        
+        Exclusion Criteria: Uncontrolled hypertension, recent major surgery, active serious infection.
+        
+        Eligibility Criteria: Eligibility based on histology, prior therapies, and organ function.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT02997228
+        Title: Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study
+        Condition: Metastatic Colorectal Adenocarcinoma, Stage IV Colorectal Cancer
+        Phase: Phase 3
+        Status: Active, not recruiting
+        Investigator: National Cancer Institute (NCI)
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.102
+        
+        Brief Summary: Phase III trial tests whether adding atezolizumab to combination chemotherapy improves outcomes in dMMR/MSI-H metastatic colorectal cancer.
+        
+        Detailed Description: Arms include chemotherapy plus bevacizumab, atezolizumab alone, or combination therapy. Outcomes: PFS, overall survival, response rates, and safety profiles.
+        
+        Inclusion Criteria: dMMR/MSI-H metastatic colorectal adenocarcinoma, no prior therapy for metastatic disease, measurable disease.
+        
+        Exclusion Criteria: Other active malignancy, significant comorbid illness, pregnancy.
+        
+        Eligibility Criteria: Eligibility set by molecular tumor status and standard protocol criteria.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT01103323",
+                    "trial_title": "Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT02997228",
+                    "trial_title": "Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-09T19:23:15.485673"
+            }
+        }
+        

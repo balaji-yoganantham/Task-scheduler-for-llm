@@ -1,0 +1,128 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 1
+mrn: MRN0001
+batch_size: 2
+trial_ids: ['NCT02394795', 'NCT03803553']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 1
+        MRN: MRN0001
+        Age: 62
+        Gender: Male
+        Oncologist: Dr. Laura Smith
+        Combined Medical Record: Weakness, mild abdominal pain, weight loss 62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy. Hypertension, controlled; mild hyperlipidemia; no prior cancer. Metastatic colorectal adenocarcinoma with progression on prior therapy. CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases.
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT02394795
+        Title: Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)
+        Condition: Colorectal Cancer, RAS Wild-type, Incurable/Unresectable Advanced/Recurrent Colorectal Cancer
+        Phase: Phase 3
+        Status: Completed
+        Investigator: Takeda
+        Age Range: 20 Years - 79 Years
+        Gender: All
+        Hybrid Score: 5.069
+        
+        Brief Summary: Compares mFOLFOX6 plus panitumumab versus mFOLFOX6 plus bevacizumab as first-line treatment in KRAS/NRAS wild-type, incurable/unresectable, advanced/recurrent colorectal cancer.
+        
+        Detailed Description: Randomized study in chemo-naive patients, focusing on RAS wild-type and advanced/unresectable disease. Endpoints: overall survival, progression-free survival.
+        
+        Inclusion Criteria: Aged 20-79, histologically confirmed unresectable adenocarcinoma of colon, KRAS/NRAS wildtype, no prior chemotherapy, measurable disease, adequate organ function.
+        
+        Exclusion Criteria: Radiotherapy within 4 weeks, brain mets, serious comorbidities, active infection, recent surgery.
+        
+        Eligibility Criteria: Eligibility primarily based on RAS status, organ function, and prior therapy.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT03803553
+        Title: Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer
+        Condition: Metastatic Colon Cancer, Stage III Colon Cancer
+        Phase: Phase 3
+        Status: Recruiting
+        Investigator: Massachusetts General Hospital
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.018
+        
+        Brief Summary: This study compares two standard of care treatment options based on blood test results for participants who have metastatic colon cancer.
+        
+        Detailed Description: Participants with resected stage III adenocarcinoma are assigned to surveillance or additional therapies, depending on ctDNA status and molecular markers (e.g., MSI-H, BRAF). Treatments may include FOLFIRI, Nivolumab, Encorafenib/Binimetinib/Cetuximab, or Trastuzumab + Pertuzumab.
+        
+        Inclusion Criteria: Resected stage III colon adenocarcinoma, completion of standard adjuvant chemo, ≥18 years, ECOG 0-1, normal organ/marrow function, required molecular testing.
+        
+        Exclusion Criteria: Prior neoadjuvant chemo, metastatic disease, inability to get standard adjuvant therapy, some molecular exclusion for certain arms.
+        
+        Eligibility Criteria: Eligibility for each treatment arm determined by ctDNA and molecular status.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT02394795",
+                    "trial_title": "Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT03803553",
+                    "trial_title": "Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-09T19:23:27.645284"
+            }
+        }
+        

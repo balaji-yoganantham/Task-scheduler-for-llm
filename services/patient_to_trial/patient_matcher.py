@@ -158,13 +158,9 @@ class PatientMatcher:
             return []
 
     def hybrid_search_trials_for_patient(self, patient_data: Dict[str, Any], alpha: float = 0.7) -> List[Dict[str, Any]]:
-        """Find suitable trials for a patient using hybrid matching with patient is_evaluated filtering"""
+        """Find suitable trials for a patient using hybrid matching"""
         try:
             print(f"Finding trials for patient MRN: {patient_data['mrn']}")
-            
-            # Get patient's is_evaluated status (default to 0 if not present)
-            patient_is_evaluated = patient_data.get('is_evaluated', 0)
-            print(f"Patient is_evaluated status: {patient_is_evaluated}")
             
             # Generate embedding for patient
             patient_embedding = self.embedding_utils.generate_embedding(
@@ -200,9 +196,9 @@ class PatientMatcher:
             # Sort by combined score
             sorted_results = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
             
-            # Get metadata for top results, filtering based on patient is_evaluated status
+            # Get metadata for top results (no filtering)
             results = []
-            for idx, score in sorted_results:  # Check all results, then filter
+            for idx, score in sorted_results:
                 # Stop after getting top K matching trials (configurable)
                 if len(results) >= TOP_K_TRIALS:
                     break
@@ -219,20 +215,7 @@ class PatientMatcher:
                 if not trial_meta:
                     continue  # Skip if no matching trial found
                 
-                # Get trial status
-                trial_is_evaluated = trial_meta.get('is_evaluated', 0)
-                
-                # Filter based on patient is_evaluated status:
-                # - If patient is_evaluated = 0: Include trials with is_evaluated IN (0, 1)
-                # - If patient is_evaluated = 1: Include only trials with is_evaluated = 0
-                if patient_is_evaluated == 0:
-                    # Patient not evaluated: take trials with is_evaluated = 0 or 1
-                    if trial_is_evaluated not in [0, 1]:
-                        continue  # Skip trials with is_evaluated not 0 or 1
-                else:  # patient_is_evaluated == 1
-                    # Patient evaluated: only take trials with is_evaluated = 0
-                    if trial_is_evaluated != 0:
-                        continue  # Skip evaluated trials
+                # No filtering - return all matching trials
                 
                 result = trial_meta.copy()
                 result['trial_id'] = trial_id
@@ -242,7 +225,7 @@ class PatientMatcher:
                 result['bm25_score'] = bm25_scores_dict.get(idx, 0.0)
                 results.append(result)
             
-            print(f"Filtered to {len(results)} trials (patient is_evaluated={patient_is_evaluated})")
+            print(f"Found {len(results)} trials from hybrid search")
             return results
             
         except Exception as e:
@@ -282,16 +265,8 @@ class PatientMatcher:
                     "error": f"Patient {patient_id} not found in database"
                 }
             
-            # Get patient's is_evaluated status from database
-            patient_status = self.db_utils.get_patients_evaluated_status([patient_id])
-            if patient_id in patient_status:
-                patient_data['is_evaluated'] = patient_status[patient_id]
-            else:
-                patient_data['is_evaluated'] = 0
-            
             print(f"Finding trials for patient: MRN {patient_data['mrn']}")
             print(f"Age: {patient_data['age']}, Gender: {patient_data['gender']}")
-            print(f"Patient is_evaluated status: {patient_data['is_evaluated']}")
             
             # Get patient location if location filtering is enabled
             patient_lat = None

@@ -1,0 +1,46 @@
+{
+  "1": {
+    "mrn": "MRN0001",
+    "age": 62,
+    "gender": "Male",
+    "oncologist": "Dr. Laura Smith",
+    "date_of_visit": "2025-11-09",
+    "created_at": null,
+    "keywords_count": 36,
+    "keywords_text_length": 690,
+    "embedding_index": 0
+  },
+  "2": {
+    "mrn": "MRN0002",
+    "age": 55,
+    "gender": "Female",
+    "oncologist": "Dr. Anil Kapoor",
+    "date_of_visit": "2025-10-22",
+    "created_at": null,
+    "keywords_count": 39,
+    "keywords_text_length": 706,
+    "embedding_index": 1
+  },
+  "3": {
+    "mrn": "MRN0003",
+    "age": 70,
+    "gender": "Male",
+    "oncologist": "Dr. Emily Rivera",
+    "date_of_visit": "2025-11-03",
+    "created_at": null,
+    "keywords_count": 38,
+    "keywords_text_length": 657,
+    "embedding_index": 2
+  },
+  "4": {
+    "mrn": "MRN0004",
+    "age": 48,
+    "gender": "Female",
+    "oncologist": "Dr. Mark Chen",
+    "date_of_visit": "2025-11-07",
+    "created_at": null,
+    "keywords_count": 39,
+    "keywords_text_length": 678,
+    "embedding_index": 3
+  }
+}

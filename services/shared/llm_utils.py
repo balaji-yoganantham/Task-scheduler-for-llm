@@ -11,21 +11,23 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 import google.generativeai as genai
 from google.api_core import exceptions as google_exceptions
-from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE, GEMINI_MAX_RETRIES, GEMINI_TIMEOUT, GEMINI_MAX_TOKENS, GEMINI_TEMPERATURE
+from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE, GEMINI_MAX_RETRIES, GEMINI_TIMEOUT, GEMINI_MAX_TOKENS, GEMINI_TEMPERATURE, GEMINI_MODEL
 
 class LLMUtils:
     def __init__(self):
         genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        self.model = genai.GenerativeModel(GEMINI_MODEL)
         # Create folder for saving LLM prompts
         self.llm_sent_dir = Path("llm_sent")
         self.llm_sent_dir.mkdir(exist_ok=True)
         # Rate limiting - track last request time
         self._last_request_time = 0
-        self._min_request_interval = 0.5  # Minimum 0.5 seconds between requests
+        # Free tier: 15 RPM for gemini-2.0-flash = 1 request every 4 seconds minimum
+        # Using 5 seconds to be safe and avoid hitting limits
+        self._min_request_interval = 5.0  # Increased to 5 seconds between requests to avoid rate limits
 
     def generate_keywords_prompt(self, patient_data: Dict[str, Any]) -> str:
-        """Generate prompt for patient keyword extraction"""
+        """Generate prompt for patient keyword extraction with enhanced molecular marker extraction and few-shot examples"""
         return f"""
         You are a medical research assistant specializing in clinical trial matching. 
         Analyze the following patient medical record and generate comprehensive keywords for clinical trial matching.
@@ -38,15 +40,61 @@ class LLMUtils:
         2. Generate at least 30-40 keywords covering:
            - Primary diagnosis and staging
            - Metastatic sites
-           - Molecular markers
+           - Molecular markers (CRITICAL - see below)
            - Comorbidities
            - Medications
            - Allergies
            - Performance status
            - Family history
            - Demographics
-        3. Use standardized medical terminology
-        4. Include both specific and general terms for better matching
+        
+        3. MOLECULAR MARKERS - Extract ALL molecular markers mentioned or implied:
+           - BRAF mutations (BRAF V600E, BRAF V600K, BRAF wild-type, BRAF mutant, BRAF positive/negative)
+           - KRAS mutations (KRAS G12C, KRAS G12D, KRAS G12V, KRAS G13D, KRAS wild-type, KRAS mutant, KRAS positive/negative)
+           - MSI status (MSI-H, MSI-high, microsatellite instability high, MSI-L, MSI-low, MSS, microsatellite stable)
+           - PD-L1 expression (PD-L1 positive, PD-L1 negative, PD-L1 high, PD-L1 low, TPS, CPS)
+           - HER2 status (HER2 positive, HER2 negative, HER2+, HER2-)
+           - EGFR mutations (EGFR mutant, EGFR wild-type, EGFR positive/negative)
+           - ALK rearrangements (ALK positive, ALK negative, ALK rearrangement)
+           - ROS1 rearrangements (ROS1 positive, ROS1 negative)
+           - NTRK fusions (NTRK positive, NTRK negative)
+           - TMB (tumor mutational burden, high TMB, low TMB)
+           - Any other genetic mutations or biomarkers mentioned
+        
+        4. For molecular markers, extract:
+           - Explicitly stated status (e.g., "BRAF V600E positive", "KRAS wild-type")
+           - Implied status from context (e.g., "patient with BRAF mutation" → BRAF mutant)
+           - Negative statements (e.g., "no BRAF mutation" → BRAF wild-type)
+           - Test results (e.g., "BRAF test negative" → BRAF wild-type)
+           - Treatment-based inference (e.g., "on BRAF inhibitor" → BRAF mutant)
+        
+        5. FEW-SHOT EXAMPLES - Learn from these examples:
+        
+        Example 1 - Explicit Marker:
+        Input: "55-year-old woman with stage IV colon cancer with KRAS G12C mutation, completed first-line FOLFOX."
+        Output: {{"molecular_markers": ["KRAS G12C positive", "KRAS mutant"], ...}}
+        
+        Example 2 - Implied Marker from Treatment:
+        Input: "Patient on encorafenib and cetuximab for metastatic colorectal cancer."
+        Output: {{"molecular_markers": ["BRAF mutant", "BRAF V600E positive (inferred from treatment)"], ...}}
+        
+        Example 3 - Negative Statement:
+        Input: "No BRAF mutation detected. KRAS wild-type confirmed."
+        Output: {{"molecular_markers": ["BRAF wild-type", "KRAS wild-type"], ...}}
+        
+        Example 4 - Ambiguous Case (No Explicit Marker):
+        Input: "62-year-old male with metastatic colorectal cancer, failed first-line chemotherapy."
+        Output: {{"molecular_markers": ["BRAF status unknown", "KRAS status unknown", "MSI status unknown"], ...}}
+        Note: Include "unknown" status for markers that are not mentioned, as this helps identify trials that require testing.
+        
+        Example 5 - Family History Inference:
+        Input: "Patient with Lynch syndrome, family history of colorectal cancer."
+        Output: {{"molecular_markers": ["MSI-H (inferred from Lynch syndrome)"], ...}}
+        
+        6. Use standardized medical terminology
+        7. Include both specific and general terms for better matching
+        8. If molecular marker status is not explicitly stated, include "unknown" or "not tested" in keywords
+        9. Make reasonable inferences from context (treatment history, family history, etc.)
 
         Return ONLY a valid JSON object with this structure:
         {{
@@ -58,7 +106,7 @@ class LLMUtils:
             "primary_diagnosis": "Main diagnosis",
             "stage": "Cancer stage if applicable",
             "metastatic_sites": ["site1", "site2", ...],
-            "molecular_markers": ["marker1", "marker2", ...],
+            "molecular_markers": ["BRAF V600E positive", "KRAS wild-type", "MSI-H", "PD-L1 positive", ...],
             "comorbidities": ["condition1", "condition2", ...],
             "medications": ["med1", "med2", ...],
             "allergies": ["allergy1", "allergy2", ...],
@@ -70,7 +118,7 @@ class LLMUtils:
         """
 
     def patient_trial_evaluation_prompt(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> str:
-        """Generate prompt for patient-trial eligibility evaluation"""
+        """Generate prompt for patient-trial eligibility evaluation with enhanced decision guidelines and few-shot examples"""
         return f"""
         You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
         
@@ -93,22 +141,107 @@ class LLMUtils:
         PATIENT MEDICAL RECORD:
         {patient_info['combined_text']}
         
+        DECISION GUIDELINES:
+        Use these guidelines to make your decision:
+        
+        1. ELIGIBLE - Use when:
+           - Patient clearly meets ALL inclusion criteria
+           - Patient has NO exclusion criteria violations
+           - All required information is available and confirms eligibility
+           - Confidence should be ≥ 70%
+        
+        2. NOT_ELIGIBLE - Use when:
+           - Patient clearly violates one or more exclusion criteria
+           - Patient does not meet critical inclusion criteria (e.g., wrong diagnosis, age out of range, gender mismatch)
+           - Available information clearly indicates ineligibility
+           - Confidence should be ≥ 70%
+        
+        3. NEED_MORE_INFO - Use ONLY when:
+           - Critical information is MISSING (e.g., specific mutation status like BRAF V600E, KRAS, MSI status)
+           - This missing information is REQUIRED for eligibility determination
+           - Cannot make a clear decision with available information
+           - DO NOT use if you can make a reasonable inference from available data
+        
+        REASONING PROCESS (Follow these steps systematically):
+        Step 1: Check primary diagnosis match - Does patient's diagnosis align with trial condition?
+        Step 2: Verify age eligibility - Is patient within the required age range?
+        Step 3: Check gender eligibility - Does patient's gender match trial requirements?
+        Step 4: Assess disease stage - Does patient's stage match trial requirements?
+        Step 5: Check molecular markers - Does patient have required mutations/markers (BRAF, KRAS, MSI, etc.)?
+        Step 6: Review prior treatments - Does patient meet prior treatment requirements/restrictions?
+        Step 7: Check performance status - Does patient meet ECOG/performance status requirements?
+        Step 8: Review comorbidities - Are there any exclusionary comorbidities?
+        Step 9: Check laboratory values - Do lab values meet inclusion/exclusion criteria?
+        Step 10: Review exclusion criteria - Does patient violate any exclusion criteria?
+        Step 11: Make final decision based on all available information
+        
         EVALUATION CRITERIA:
         1. Primary diagnosis match
         2. Disease stage compatibility
         3. Age eligibility
         4. Gender eligibility
-        5. Performance status
-        6. Prior treatments
-        7. Comorbidities
-        8. Laboratory values
-        9. Exclusion criteria
-        10. Overall eligibility assessment
+        5. Molecular markers (BRAF, KRAS, MSI, PD-L1, etc.)
+        6. Performance status
+        7. Prior treatments
+        8. Comorbidities
+        9. Laboratory values
+        10. Exclusion criteria
+        11. Overall eligibility assessment
+        
+        IMPORTANT NOTES:
+        - If molecular marker status is not explicitly stated but can be reasonably inferred from context, make a decision
+        - If age/gender/diagnosis clearly don't match, use NOT_ELIGIBLE with high confidence
+        - Prefer making a decision (ELIGIBLE or NOT_ELIGIBLE) over NEED_MORE_INFO when possible
+        - Only use NEED_MORE_INFO when truly critical information is missing
+        
+        FEW-SHOT EXAMPLES - Learn from these examples:
+        
+        Example 1 - Clear ELIGIBLE Case:
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "62-year-old male with metastatic colorectal cancer. BRAF V600E positive confirmed."
+        Decision: ELIGIBLE (confidence: 90%)
+        Reasoning: Patient has exact diagnosis and required mutation explicitly stated.
+        
+        Example 2 - Implied Marker (Make Decision):
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "Patient on encorafenib and cetuximab for metastatic colorectal cancer."
+        Decision: ELIGIBLE (confidence: 75%)
+        Reasoning: Encorafenib is a BRAF inhibitor, strongly implying BRAF V600E mutation. Can make reasonable inference.
+        
+        Example 3 - Missing Critical Marker (NEED_MORE_INFO):
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "62-year-old male with metastatic colorectal cancer, failed first-line chemotherapy. No molecular testing performed."
+        Decision: NEED_MORE_INFO (confidence: 50%)
+        Reasoning: BRAF V600E status is required but not available. Cannot infer from available information.
+        
+        Example 4 - Clear NOT_ELIGIBLE:
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "62-year-old male with metastatic colorectal cancer. BRAF wild-type, KRAS G12C positive."
+        Decision: NOT_ELIGIBLE (confidence: 95%)
+        Reasoning: Patient has BRAF wild-type, which excludes them from BRAF V600E trial.
+        
+        Example 5 - Ambiguous Case (Make Reasonable Inference):
+        Trial: Requires metastatic colorectal cancer, MSI-H or dMMR
+        Patient: "Patient with Lynch syndrome, family history of colorectal cancer. Metastatic colorectal cancer."
+        Decision: ELIGIBLE (confidence: 80%)
+        Reasoning: Lynch syndrome is strongly associated with MSI-H/dMMR. Can make reasonable inference even if not explicitly tested.
+        
+        Example 6 - Age Mismatch (NOT_ELIGIBLE):
+        Trial: Requires age 18-65 years
+        Patient: "70-year-old male with metastatic colorectal cancer."
+        Decision: NOT_ELIGIBLE (confidence: 100%)
+        Reasoning: Patient age (70) exceeds maximum age requirement (65).
+        
+        Example 7 - Diagnosis Mismatch (NOT_ELIGIBLE):
+        Trial: Requires metastatic colorectal cancer
+        Patient: "55-year-old female with metastatic breast cancer."
+        Decision: NOT_ELIGIBLE (confidence: 100%)
+        Reasoning: Patient has breast cancer, not colorectal cancer.
         
         Provide a comprehensive evaluation with:
         - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
-        - Confidence score (0-100)
-        - Detailed reasoning
+        - Confidence score (0-100) - Higher for clear decisions, lower for uncertain cases
+        - Detailed reasoning following the 11-step process above
         - Specific inclusion/exclusion criteria met or not met
         - Recommendations for next steps
         
@@ -116,7 +249,7 @@ class LLMUtils:
         {{
             "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
             "confidence_score": 85,
-            "reasoning": "Detailed explanation of eligibility assessment",
+            "reasoning": "Detailed explanation following the 11-step reasoning process",
             "inclusion_criteria_met": ["criteria1", "criteria2", ...],
             "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
             "recommendations": "Specific recommendations for next steps",
@@ -126,7 +259,7 @@ class LLMUtils:
         """
 
     def trial_patient_evaluation_prompt(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> str:
-        """Generate prompt for trial-patient eligibility evaluation"""
+        """Generate prompt for trial-patient eligibility evaluation with enhanced decision guidelines"""
         return f"""
         You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
         
@@ -149,22 +282,63 @@ class LLMUtils:
         PATIENT MEDICAL RECORD:
         {patient_info['combined_text']}
         
+        DECISION GUIDELINES:
+        Use these guidelines to make your decision:
+        
+        1. ELIGIBLE - Use when:
+           - Patient clearly meets ALL inclusion criteria
+           - Patient has NO exclusion criteria violations
+           - All required information is available and confirms eligibility
+           - Confidence should be ≥ 70%
+        
+        2. NOT_ELIGIBLE - Use when:
+           - Patient clearly violates one or more exclusion criteria
+           - Patient does not meet critical inclusion criteria (e.g., wrong diagnosis, age out of range, gender mismatch)
+           - Available information clearly indicates ineligibility
+           - Confidence should be ≥ 70%
+        
+        3. NEED_MORE_INFO - Use ONLY when:
+           - Critical information is MISSING (e.g., specific mutation status like BRAF V600E, KRAS, MSI status)
+           - This missing information is REQUIRED for eligibility determination
+           - Cannot make a clear decision with available information
+           - DO NOT use if you can make a reasonable inference from available data
+        
+        REASONING PROCESS (Follow these steps systematically):
+        Step 1: Check primary diagnosis match - Does patient's diagnosis align with trial condition?
+        Step 2: Verify age eligibility - Is patient within the required age range?
+        Step 3: Check gender eligibility - Does patient's gender match trial requirements?
+        Step 4: Assess disease stage - Does patient's stage match trial requirements?
+        Step 5: Check molecular markers - Does patient have required mutations/markers (BRAF, KRAS, MSI, etc.)?
+        Step 6: Review prior treatments - Does patient meet prior treatment requirements/restrictions?
+        Step 7: Check performance status - Does patient meet ECOG/performance status requirements?
+        Step 8: Review comorbidities - Are there any exclusionary comorbidities?
+        Step 9: Check laboratory values - Do lab values meet inclusion/exclusion criteria?
+        Step 10: Review exclusion criteria - Does patient violate any exclusion criteria?
+        Step 11: Make final decision based on all available information
+        
         EVALUATION CRITERIA:
         1. Primary diagnosis match
         2. Disease stage compatibility
         3. Age eligibility
         4. Gender eligibility
-        5. Performance status
-        6. Prior treatments
-        7. Comorbidities
-        8. Laboratory values
-        9. Exclusion criteria
-        10. Overall eligibility assessment
+        5. Molecular markers (BRAF, KRAS, MSI, PD-L1, etc.)
+        6. Performance status
+        7. Prior treatments
+        8. Comorbidities
+        9. Laboratory values
+        10. Exclusion criteria
+        11. Overall eligibility assessment
+        
+        IMPORTANT NOTES:
+        - If molecular marker status is not explicitly stated but can be reasonably inferred from context, make a decision
+        - If age/gender/diagnosis clearly don't match, use NOT_ELIGIBLE with high confidence
+        - Prefer making a decision (ELIGIBLE or NOT_ELIGIBLE) over NEED_MORE_INFO when possible
+        - Only use NEED_MORE_INFO when truly critical information is missing
         
         Provide a comprehensive evaluation with:
         - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
-        - Confidence score (0-100)
-        - Detailed reasoning
+        - Confidence score (0-100) - Higher for clear decisions, lower for uncertain cases
+        - Detailed reasoning following the 11-step process above
         - Specific inclusion/exclusion criteria met or not met
         - Recommendations for next steps
         
@@ -222,9 +396,10 @@ class LLMUtils:
             print(f"[SAVE] Prompt saved to: {prompt_file}")
         
         # Retry logic with exponential backoff for 429 errors
+        # Improved backoff: start with longer delays to avoid hitting limits
         max_retries = GEMINI_MAX_RETRIES
-        base_delay = 2  # Start with 2 seconds
-        max_delay = 60  # Maximum delay of 60 seconds
+        base_delay = 5  # Start with 5 seconds (increased from 2)
+        max_delay = 120  # Maximum delay of 120 seconds (increased from 60)
         
         for attempt in range(max_retries + 1):
             try:
@@ -753,7 +928,7 @@ class LLMUtils:
         """
         
         return f"""
-        You are a medical research assistant specializing in clinical trial matching. 
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
         Evaluate the following {len(trials)} clinical trials for the given patient and determine eligibility.
 
         {patient_text}
@@ -761,19 +936,100 @@ class LLMUtils:
         CLINICAL TRIALS TO EVALUATE:
         {trials_text}
 
+        DECISION GUIDELINES:
+        Use these guidelines to make your decision for EACH trial:
+        
+        1. ELIGIBLE - Use when:
+           - Patient clearly meets ALL inclusion criteria
+           - Patient has NO exclusion criteria violations
+           - All required information is available and confirms eligibility
+           - Confidence should be ≥ 70%
+        
+        2. NOT_ELIGIBLE - Use when:
+           - Patient clearly violates one or more exclusion criteria
+           - Patient does not meet critical inclusion criteria (e.g., wrong diagnosis, age out of range, gender mismatch)
+           - Available information clearly indicates ineligibility
+           - Confidence should be ≥ 70%
+        
+        3. NEED_MORE_INFO - Use ONLY when:
+           - Critical information is MISSING (e.g., specific mutation status like BRAF V600E, KRAS, MSI status)
+           - This missing information is REQUIRED for eligibility determination
+           - Cannot make a clear decision with available information
+           - DO NOT use if you can make a reasonable inference from available data
+        
+        REASONING PROCESS (Follow these steps systematically for EACH trial):
+        Step 1: Check primary diagnosis match - Does patient's diagnosis align with trial condition?
+        Step 2: Verify age eligibility - Is patient within the required age range?
+        Step 3: Check gender eligibility - Does patient's gender match trial requirements?
+        Step 4: Assess disease stage - Does patient's stage match trial requirements?
+        Step 5: Check molecular markers - Does patient have required mutations/markers (BRAF, KRAS, MSI, etc.)?
+        Step 6: Review prior treatments - Does patient meet prior treatment requirements/restrictions?
+        Step 7: Check performance status - Does patient meet ECOG/performance status requirements?
+        Step 8: Review comorbidities - Are there any exclusionary comorbidities?
+        Step 9: Check laboratory values - Do lab values meet inclusion/exclusion criteria?
+        Step 10: Review exclusion criteria - Does patient violate any exclusion criteria?
+        Step 11: Make final decision based on all available information
+        
+        IMPORTANT NOTES:
+        - If molecular marker status is not explicitly stated but can be reasonably inferred from context, make a decision
+        - If age/gender/diagnosis clearly don't match, use NOT_ELIGIBLE with high confidence
+        - Prefer making a decision (ELIGIBLE or NOT_ELIGIBLE) over NEED_MORE_INFO when possible
+        - Only use NEED_MORE_INFO when truly critical information is missing
+        
+        FEW-SHOT EXAMPLES - Learn from these examples:
+        
+        Example 1 - Clear ELIGIBLE Case:
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "62-year-old male with metastatic colorectal cancer. BRAF V600E positive confirmed."
+        Decision: ELIGIBLE (confidence: 90%)
+        Reasoning: Patient has exact diagnosis and required mutation explicitly stated.
+        
+        Example 2 - Implied Marker (Make Decision):
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "Patient on encorafenib and cetuximab for metastatic colorectal cancer."
+        Decision: ELIGIBLE (confidence: 75%)
+        Reasoning: Encorafenib is a BRAF inhibitor, strongly implying BRAF V600E mutation. Can make reasonable inference.
+        
+        Example 3 - Missing Critical Marker (NEED_MORE_INFO):
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "62-year-old male with metastatic colorectal cancer, failed first-line chemotherapy. No molecular testing performed."
+        Decision: NEED_MORE_INFO (confidence: 50%)
+        Reasoning: BRAF V600E status is required but not available. Cannot infer from available information.
+        
+        Example 4 - Clear NOT_ELIGIBLE:
+        Trial: Requires metastatic colorectal cancer, BRAF V600E mutation
+        Patient: "62-year-old male with metastatic colorectal cancer. BRAF wild-type, KRAS G12C positive."
+        Decision: NOT_ELIGIBLE (confidence: 95%)
+        Reasoning: Patient has BRAF wild-type, which excludes them from BRAF V600E trial.
+        
+        Example 5 - Ambiguous Case (Make Reasonable Inference):
+        Trial: Requires metastatic colorectal cancer, MSI-H or dMMR
+        Patient: "Patient with Lynch syndrome, family history of colorectal cancer. Metastatic colorectal cancer."
+        Decision: ELIGIBLE (confidence: 80%)
+        Reasoning: Lynch syndrome is strongly associated with MSI-H/dMMR. Can make reasonable inference even if not explicitly tested.
+        
+        Example 6 - Age Mismatch (NOT_ELIGIBLE):
+        Trial: Requires age 18-65 years
+        Patient: "70-year-old male with metastatic colorectal cancer."
+        Decision: NOT_ELIGIBLE (confidence: 100%)
+        Reasoning: Patient age (70) exceeds maximum age requirement (65).
+        
+        Example 7 - Diagnosis Mismatch (NOT_ELIGIBLE):
+        Trial: Requires metastatic colorectal cancer
+        Patient: "55-year-old female with metastatic breast cancer."
+        Decision: NOT_ELIGIBLE (confidence: 100%)
+        Reasoning: Patient has breast cancer, not colorectal cancer.
+
         Instructions:
-        1. For EACH trial, evaluate the patient's eligibility based on:
-           - Medical condition match
-           - Age requirements
-           - Gender requirements
-           - Inclusion/exclusion criteria
-           - Overall medical compatibility
-        2. Provide detailed reasoning for each evaluation
-        3. Consider the patient's medical history, current condition, and trial requirements
-        4. Be thorough but concise in your analysis
-        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
-        6. Ensure all strings use double quotes and escape special characters properly
-        7. Make sure all brackets and braces are properly closed
+        1. For EACH trial, evaluate the patient's eligibility following the 11-step reasoning process above
+        2. Apply the decision guidelines (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO) consistently
+        3. Provide detailed reasoning for each evaluation following the examples
+        4. Consider the patient's medical history, current condition, and trial requirements
+        5. Make reasonable inferences when possible (see examples 2 and 5)
+        6. Be thorough but concise in your analysis
+        7. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        8. Ensure all strings use double quotes and escape special characters properly
+        9. Make sure all brackets and braces are properly closed
 
         Return ONLY a valid JSON object (no markdown formatting) with this structure:
         {{

@@ -115,12 +115,12 @@ class PatientEmbeddingGenerator:
             
             # Store metadata
             patient_metadata[patient['patient_id']] = {
-                "mrn": patient['mrn'],
-                "age": patient['age'],
-                "gender": patient['gender'],
-                "oncologist": patient['oncologist'],
-                "date_of_visit": patient['date_of_visit'],
-                "created_at": patient['created_at'],
+                "mrn": patient.get('mrn', ''),
+                "age": patient.get('age', None),
+                "gender": patient.get('gender', ''),
+                "oncologist": patient.get('oncologist', ''),
+                "date_of_visit": patient.get('date_of_visit', ''),
+                "created_at": patient.get('created_at', None),  # Optional field
                 "keywords_count": len(keywords_data.get('keywords', [])),
                 "keywords_text_length": len(keywords_text),
                 "embedding_index": i

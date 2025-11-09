@@ -1,0 +1,87 @@
+{
+  "test_started_at": "2025-11-09T19:03:17.910008",
+  "trials_tested": [
+    {
+      "trial_id": "NCT01103323",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT01103323 not found"
+    },
+    {
+      "trial_id": "NCT04607421",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT04607421 not found"
+    },
+    {
+      "trial_id": "NCT04793958",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT04793958 not found"
+    },
+    {
+      "trial_id": "NCT05197322",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT05197322 not found"
+    },
+    {
+      "trial_id": "NCT00719797",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT00719797 not found"
+    },
+    {
+      "trial_id": "NCT02997228",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT02997228 not found"
+    },
+    {
+      "trial_id": "NCT02015923",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT02015923 not found"
+    },
+    {
+      "trial_id": "NCT03983993",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT03983993 not found"
+    },
+    {
+      "trial_id": "NCT02675946",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT02675946 not found"
+    },
+    {
+      "trial_id": "NCT03312374",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT03312374 not found"
+    },
+    {
+      "trial_id": "NCT04457297",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT04457297 not found"
+    },
+    {
+      "trial_id": "NCT03803553",
+      "steps": {},
+      "comparison": {},
+      "error": "Trial NCT03803553 not found"
+    }
+  ],
+  "overall_accuracy": {
+    "overall_accuracy": 0,
+    "total_correct": 0,
+    "total_incorrect": 0,
+    "total_not_evaluated": 0,
+    "total_matches": 0,
+    "trial_accuracies": []
+  },
+  "summary": {},
+  "test_completed_at": "2025-11-09T19:03:40.842536"
+}

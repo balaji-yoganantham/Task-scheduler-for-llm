@@ -1,0 +1,427 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 2
+mrn: MRN0002
+batch_size: 15
+trial_ids: ['NCT02394795', 'NCT00719797', 'NCT04607421', 'NCT03803553', 'NCT02015923', 'NCT04793958', 'NCT02675946', 'NCT02997228', 'NCT01103323', 'NCT02071069', 'NCT04457297', 'NCT03312374', 'NCT05197322', 'NCT03983993', 'NCT01767857']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 15 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 2
+        MRN: MRN0002
+        Age: 55
+        Gender: Female
+        Oncologist: Dr. Anil Kapoor
+        Combined Medical Record: Change in bowel habits, mild rectal bleeding 55-year-old woman, recently diagnosed stage IV colon cancer with KRAS G12C mutation, completed first-line FOLFOX. Type 2 diabetes, managed. Hypothyroidism. KRAS G12C mutant mCRC, post-FOLFOX progression. Mild microcytic anemia, negative stool occult blood, PET: liver & lung nodules.
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT02394795
+        Title: Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)
+        Condition: Colorectal Cancer, RAS Wild-type, Incurable/Unresectable Advanced/Recurrent Colorectal Cancer
+        Phase: Phase 3
+        Status: Completed
+        Investigator: Takeda
+        Age Range: 20 Years - 79 Years
+        Gender: All
+        Hybrid Score: 5.249
+        
+        Brief Summary: Compares mFOLFOX6 plus panitumumab versus mFOLFOX6 plus bevacizumab as first-line treatment in KRAS/NRAS wild-type, incurable/unresectable, advanced/recurrent colorectal cancer.
+        
+        Detailed Description: Randomized study in chemo-naive patients, focusing on RAS wild-type and advanced/unresectable disease. Endpoints: overall survival, progression-free survival.
+        
+        Inclusion Criteria: Aged 20-79, histologically confirmed unresectable adenocarcinoma of colon, KRAS/NRAS wildtype, no prior chemotherapy, measurable disease, adequate organ function.
+        
+        Exclusion Criteria: Radiotherapy within 4 weeks, brain mets, serious comorbidities, active infection, recent surgery.
+        
+        Eligibility Criteria: Eligibility primarily based on RAS status, organ function, and prior therapy.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT00719797
+        Title: Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)
+        Condition: Metastatic Colorectal Cancer, Stage IV Colorectal Cancer
+        Phase: Phase 3
+        Status: Completed
+        Investigator: Gruppo Oncologico del Nord-Ovest
+        Age Range: 18 Years - 75 Years
+        Gender: All
+        Hybrid Score: 5.152
+        
+        Brief Summary: This randomized phase III trial compared two combination chemotherapy regimens (FOLFOXIRI + bevacizumab vs FOLFIRI + bevacizumab) as first-line therapy for unresectable, metastatic colorectal cancer.
+        
+        Detailed Description: Patients received either FOLFOXIRI (irinotecan, oxaliplatin, leucovorin, fluorouracil, bevacizumab) or FOLFIRI (irinotecan, leucovorin, fluorouracil, bevacizumab) every 2 weeks. Primary outcome measured was progression-free survival; secondary outcomes included safety, overall response rate, secondary R0 surgeries, and overall survival.
+        
+        Inclusion Criteria: Histologically confirmed colorectal cancer; unresectable metastatic disease; measurable disease; no prior chemotherapy for metastatic disease; ECOG 0-2 (≤70 years) or 0 (71-75 years); adequate organ function.
+        
+        Exclusion Criteria: Untreated brain metastases; CNS disease by physical exam; significant cardiac or bleeding disorders; pregnancy or nursing; other active malignancies.
+        
+        Eligibility Criteria: Eligibility based on histology, prior therapies, organ function, and absence of major comorbidity.
+        
+        ============================================================
+        TRIAL 3:
+        ============================================================
+        Trial ID: NCT04607421
+        Title: A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy for BRAF V600E Mutant Metastatic Colorectal Cancer
+        Condition: Metastatic Colorectal Cancer, BRAF V600E Mutant Colorectal Cancer
+        Phase: Phase III
+        Status: Recruiting
+        Investigator: Pfizer
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.095
+        
+        Brief Summary: Evaluates encorafenib plus cetuximab with or without standard chemotherapy in patients with unresectable or metastatic BRAF V600E mutant colorectal cancer.
+        
+        Detailed Description: Randomized, multicenter, open-label study comparing progression-free survival and response rates across several arms.
+        
+        Inclusion Criteria: Adults with confirmed unresectable/metastatic BRAF V600E mutant colorectal cancer.
+        
+        Exclusion Criteria: Prior treatment with BRAF or MEK inhibitors, significant comorbidities.
+        
+        Eligibility Criteria: Full eligibility per protocol.
+        
+        ============================================================
+        TRIAL 4:
+        ============================================================
+        Trial ID: NCT03803553
+        Title: Identification and Treatment Of Micrometastatic Disease in Stage III Colon Cancer
+        Condition: Metastatic Colon Cancer, Stage III Colon Cancer
+        Phase: Phase 3
+        Status: Recruiting
+        Investigator: Massachusetts General Hospital
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.057
+        
+        Brief Summary: This study compares two standard of care treatment options based on blood test results for participants who have metastatic colon cancer.
+        
+        Detailed Description: Participants with resected stage III adenocarcinoma are assigned to surveillance or additional therapies, depending on ctDNA status and molecular markers (e.g., MSI-H, BRAF). Treatments may include FOLFIRI, Nivolumab, Encorafenib/Binimetinib/Cetuximab, or Trastuzumab + Pertuzumab.
+        
+        Inclusion Criteria: Resected stage III colon adenocarcinoma, completion of standard adjuvant chemo, ≥18 years, ECOG 0-1, normal organ/marrow function, required molecular testing.
+        
+        Exclusion Criteria: Prior neoadjuvant chemo, metastatic disease, inability to get standard adjuvant therapy, some molecular exclusion for certain arms.
+        
+        Eligibility Criteria: Eligibility for each treatment arm determined by ctDNA and molecular status.
+        
+        ============================================================
+        TRIAL 5:
+        ============================================================
+        Trial ID: NCT02015923
+        Title: Resection vs no Resection of the Primary in Colorectal Cancer With Unresectable Metastases
+        Condition: Colonic Cancer, Unresectable Metastasis Originating in Colonic Cancer
+        Phase: Phase 4
+        Status: Terminated
+        Investigator: Hospital Universitari de Bellvitge
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.043
+        
+        Brief Summary: Assesses cancer-related survival at 2 years in patients with unresectable metastatic colorectal cancer treated with chemotherapy alone vs primary tumor resection + chemotherapy.
+        
+        Detailed Description: Multicenter randomized clinical trial comparing two therapeutic strategies: chemotherapy alone vs. surgical resection (R0) followed by chemotherapy.
+        
+        Inclusion Criteria: Colorectal cancer ≥12cm from anal verge, unresectable synchronous metastases, ECOG ≤2, no contraindications for chemo.
+        
+        Exclusion Criteria: Rectal tumours <12cm, CNS or bone metastasis, other neoplastic disease in previous 5 years.
+        
+        Eligibility Criteria: Eligibility defined by tumor location, metastatic status, and performance status.
+        
+        ============================================================
+        TRIAL 6:
+        ============================================================
+        Trial ID: NCT04793958
+        Title: Phase 3 Study of MRTX849 With Cetuximab vs Standard Chemotherapy in Colorectal Cancer
+        Condition: Metastatic Colorectal Cancer
+        Phase: Phase III
+        Status: Recruiting
+        Investigator: Mirati Therapeutics
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.032
+        
+        Brief Summary: Open-label, randomized phase 3 clinical trial comparing efficacy of MRTX849 and cetuximab versus chemotherapy in second-line mCRC.
+        
+        Detailed Description: Patients receive either targeted therapy (MRTX849/cetuximab) or standard chemo; endpoints include survival and response.
+        
+        Inclusion Criteria: KRAS G12C mutation-positive metastatic colorectal cancer; prior first-line therapy.
+        
+        Exclusion Criteria: History of prior KRAS inhibitor therapy.
+        
+        Eligibility Criteria: Eligibility as determined by molecular testing and protocol criteria.
+        
+        ============================================================
+        TRIAL 7:
+        ============================================================
+        Trial ID: NCT02675946
+        Title: CGX1321 in Subjects With Advanced Solid Tumors and CGX1321 With Pembrolizumab or Encorafenib + Cetuximab in Subjects With Advanced GI Tumors (Keynote 596)
+        Condition: Solid Tumors, Advanced GI Tumors, Advanced Colorectal Cancer
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Curegenix Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.030
+        
+        Brief Summary: Phase 1/1b study of CGX1321 dose escalation, alone or with pembrolizumab, or with encorafenib/cetuximab (for BRAF V600E mutant CRC).
+        
+        Detailed Description: Design includes monotherapy escalation, combinations for advanced GI cancers, including mCRC; safety and preliminary efficacy endpoints.
+        
+        Inclusion Criteria: Advanced, relapsed, or refractory solid/colorectal/GI tumors, ECOG 0–2, adequate organ function, informed consent.
+        
+        Exclusion Criteria: WNT inhibitor use; prior certain therapies; uncontrolled CNS mets; major recent surgery; serious medical risk.
+        
+        Eligibility Criteria: As per inclusion for particular arms—mCRC with/without BRAF mutations.
+        
+        ============================================================
+        TRIAL 8:
+        ============================================================
+        Trial ID: NCT02997228
+        Title: Testing the Addition of Atezolizumab to Combination Chemotherapy or Atezolizumab Alone for Metastatic Colon or Rectal Cancer, the COMMIT Study
+        Condition: Metastatic Colorectal Adenocarcinoma, Stage IV Colorectal Cancer
+        Phase: Phase 3
+        Status: Active, not recruiting
+        Investigator: National Cancer Institute (NCI)
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.011
+        
+        Brief Summary: Phase III trial tests whether adding atezolizumab to combination chemotherapy improves outcomes in dMMR/MSI-H metastatic colorectal cancer.
+        
+        Detailed Description: Arms include chemotherapy plus bevacizumab, atezolizumab alone, or combination therapy. Outcomes: PFS, overall survival, response rates, and safety profiles.
+        
+        Inclusion Criteria: dMMR/MSI-H metastatic colorectal adenocarcinoma, no prior therapy for metastatic disease, measurable disease.
+        
+        Exclusion Criteria: Other active malignancy, significant comorbid illness, pregnancy.
+        
+        Eligibility Criteria: Eligibility set by molecular tumor status and standard protocol criteria.
+        
+        ============================================================
+        TRIAL 9:
+        ============================================================
+        Trial ID: NCT01103323
+        Title: Regorafenib in Patients With Metastatic Colorectal Cancer (CONCUR Study)
+        Condition: Metastatic Colorectal Cancer
+        Phase: Phase III
+        Status: Completed
+        Investigator: Bayer
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 5.008
+        
+        Brief Summary: Randomized, double-blind, placebo-controlled, multi-center phase III study to evaluate efficacy and safety of regorafenib in patients with metastatic colorectal cancer.
+        
+        Detailed Description: Regorafenib or placebo plus best supportive care (BSC) was administered to patients; endpoints included overall survival, progression-free survival, and safety.
+        
+        Inclusion Criteria: Histologically or cytologically confirmed adenocarcinoma of the colon or rectum, metastatic disease, prior standard therapies failed.
+        
+        Exclusion Criteria: Uncontrolled hypertension, recent major surgery, active serious infection.
+        
+        Eligibility Criteria: Eligibility based on histology, prior therapies, and organ function.
+        
+        ============================================================
+        TRIAL 10:
+        ============================================================
+        Trial ID: NCT02071069
+        Title: Efficacy and Tolerance of Maintenance Therapy in Patients With Incurable Advanced Colorectal Cancer (Confirm Study)
+        Condition: Incurable Colorectal Cancer, RAS Wild-type
+        Phase: Phase 2
+        Status: Unknown
+        Investigator: Tianshu Liu, Shanghai Zhongshan Hospital
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 4.989
+        
+        Brief Summary: Evaluates cetuximab plus irinotecan or fluorouracil as maintenance therapy after FOLFIRI + cetuximab for RAS wild-type, incurable advanced colorectal cancer.
+        
+        Detailed Description: Initial FOLFIRI + cetuximab induction, followed by maintenance with cetuximab/irinotecan or cetuximab/fluorouracil; endpoints include progression-free survival and quality of life.
+        
+        Inclusion Criteria: Confirmed metastatic CRC, measurable disease, RAS wild-type, prior therapy, ECOG ≤2, life expectancy >3 months, organ function.
+        
+        Exclusion Criteria: Pregnancy, CNS disease, other malignancies, major organ dysfunction.
+        
+        Eligibility Criteria: Defined by histology, prior therapy, performance, and organ status.
+        
+        ============================================================
+        TRIAL 11:
+        ============================================================
+        Trial ID: NCT04457297
+        Title: Initial Attack on Latent Metastasis Using TAS-102 for ct DNA Identified Colorectal Cancer Patients After Curative Resection (ALTAIR)
+        Condition: Colorectal Neoplasms, Circulating Tumor DNA-positive Colorectal Cancer
+        Phase: Phase III
+        Status: Recruiting
+        Investigator: National Cancer Center Hospital East
+        Age Range: 20 Years - None
+        Gender: All
+        Hybrid Score: 4.960
+        
+        Brief Summary: Randomized, double-blind, multinational Phase III study: tests TAS-102 vs. placebo for patients with positive ctDNA after CRC resection.
+        
+        Detailed Description: Assesses whether preemptive treatment in ctDNA-positive, post-resection CRC prolongs disease-free survival.
+        
+        Inclusion Criteria: Colorectal adenocarcinoma, curative surgery, stage III, positive Signatera ctDNA test, ECOG 0–1, organ function.
+        
+        Exclusion Criteria: Prior TAS-102, more than 1 adjuvant chemo, other active cancer, ongoing serious comorbidity.
+        
+        Eligibility Criteria: Full protocol in trial details.
+        
+        ============================================================
+        TRIAL 12:
+        ============================================================
+        Trial ID: NCT03312374
+        Title: ctDNA as a Prognostic Marker for Postoperative Relapse in Early and Intermediate Stage Colorectal Cancer
+        Condition: Colorectal Cancer, Stage II/III Colorectal Cancer
+        Phase: Not Applicable (Observational)
+        Status: Recruiting
+        Investigator: Sun Yat-sen University
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 4.898
+        
+        Brief Summary: Observational, multicenter prospective trial; investigates circulating tumor DNA (ctDNA) as a marker for relapse of colorectal cancer post-surgery.
+        
+        Detailed Description: Utilizes serial ctDNA monitoring and NGS to guide prediction of disease recurrence; aims for improved surveillance beyond standard markers.
+        
+        Inclusion Criteria: Histologically confirmed stage II/III CRC, post-surgery, ECOG ≤1, survival >12 months.
+        
+        Exclusion Criteria: Adjuvant treatment before surgery; recent transfusion; HIV/HBV/HCV positive; pregnancy.
+        
+        Eligibility Criteria: Defined by pathological and performance status.
+        
+        ============================================================
+        TRIAL 13:
+        ============================================================
+        Trial ID: NCT05197322
+        Title: NEOadjuvant PembRolizumab In Stratified Medicine - ColoRectal Cancer (NEOPRISM-CRC)
+        Condition: Adenocarcinoma of the Colon, Incurable Colorectal Cancer, MSI-H, High-risk Stage 2/3
+        Phase: Phase 2
+        Status: Recruiting
+        Investigator: University College, London
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 4.895
+        
+        Brief Summary: Phase II study: uses pembrolizumab as neoadjuvant in MSI-H/MMR-d and high-risk stage 2/3 unresectable/inoperable colorectal cancer.
+        
+        Detailed Description: Patients stratified by TMB/MSI status; therapy pre-surgery; assesses safety and relapse-free survival for immunotherapy.
+        
+        Inclusion Criteria: Histological adenocarcinoma, MSI-H or MMR-d, high-risk staging, suitable for trial colonoscopy, ECOG 0-1, age ≥18.
+        
+        Exclusion Criteria: Radiotherapy needed, evidence of metastases, prior checkpoint inhibitor or systemic therapy, immunodeficiency.
+        
+        Eligibility Criteria: Defined by molecular status, staging, fitness for treatment.
+        
+        ============================================================
+        TRIAL 14:
+        ============================================================
+        Trial ID: NCT03983993
+        Title: Niraparib and Panitumumab in Patients With Advanced or Metastatic Colorectal Cancer (NIPAVect)
+        Condition: Advanced Microsatellite Stable Colorectal Carcinoma, Metastatic Microsatellite Stable Colorectal Carcinoma, Stage IV Colorectal Cancer
+        Phase: Phase II
+        Status: Active, not recruiting
+        Investigator: Emory University
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 4.885
+        
+        Brief Summary: Phase II trial studies the side effects and efficacy of niraparib and panitumumab in treating patients with RAS wildtype advanced colorectal cancer.
+        
+        Detailed Description: Niraparib is a PARP inhibitor; panitumumab is an EGFR antibody. Trial enrolls previously treated advanced mCRC.
+        
+        Inclusion Criteria: RAS wildtype mCRC, ≥1 prior therapy, ECOG ≤1, organ function, informed consent.
+        
+        Exclusion Criteria: Prior PARP/EGFR inhibitor therapy; uncontrolled medical illness; active infection; untreated brain metastasis.
+        
+        Eligibility Criteria: See protocol—primarily prior therapies, molecular status, and fitness.
+        
+        ============================================================
+        TRIAL 15:
+        ============================================================
+        Trial ID: NCT01767857
+        Title: A Phase III Study of Xilonix in Patients With Advanced Colorectal Cancer (XCITE)
+        Condition: Metastatic Colorectal Cancer, Refractory Colorectal Cancer, Incurable Colorectal Cancer
+        Phase: Phase 3
+        Status: Terminated
+        Investigator: Janssen Research & Development, LLC
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 4.864
+        
+        Brief Summary: Evaluates Xilonix™ (MABp1), a true human monoclonal antibody, for improving survival in refractory metastatic colorectal carcinoma patients.
+        
+        Detailed Description: Randomized, placebo-controlled study in patients refractory to all standard therapies. Focuses on improvement in survival and quality of life by blocking chronic inflammation.
+        
+        Inclusion Criteria: Confirmed metastatic or unresectable colorectal carcinoma, refractory to standard regimens, ECOG 0-2, adequate renal/hepatic/bone marrow function.
+        
+        Exclusion Criteria: Mechanical obstruction, major uncontrolled disorders, infection or cardiovascular disease, significant weight loss, immunodeficiency.
+        
+        Eligibility Criteria: Eligibility based on cancer refractoriness, organ function, and performance status.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT02394795",
+                    "trial_title": "Panitumumab and RAS, Diagnostically-useful Gene Mutation for mCRC (PARADIGM)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT00719797",
+                    "trial_title": "Combination Chemotherapy and Bevacizumab as First-Line Therapy in Treating Patients With Metastatic Colorectal Cancer (TRIBE)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 15 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 15,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-09T19:31:14.541815"
+            }
+        }
+        

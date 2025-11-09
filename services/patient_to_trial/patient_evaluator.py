@@ -1,6 +1,6 @@
 """
 Patient-to-Trial Evaluator
-Evaluates trial matches for a specific patient using LLM
+Evaluates trial matches for a specific patient using LLM with rule-based pre-filtering and confidence thresholds
 """
 
 import json
@@ -10,6 +10,7 @@ from typing import List, Dict, Any, Tuple, Optional
 from services.shared.database_utils import DatabaseUtils, safe_json_dump
 from services.shared.llm_utils import LLMUtils
 from services.patient_to_trial.patient_matcher import PatientMatcher
+from services.patient_to_trial.rule_based_filter import RuleBasedFilter
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
 from config import PATIENT_TRIAL_LLM_BATCH_SIZE
 
@@ -18,18 +19,91 @@ class PatientEvaluator:
         self.db_utils = DatabaseUtils()
         self.llm_utils = LLMUtils()
         self.patient_matcher = PatientMatcher()
+        self.rule_filter = RuleBasedFilter()
         self.eval_db = EvaluationResultsDB()  # Database for evaluation results
+        
+        # Confidence thresholds
+        self.confidence_threshold_eligible = 70  # Minimum confidence for ELIGIBLE
+        self.confidence_threshold_not_eligible = 70  # Minimum confidence for NOT_ELIGIBLE
+        self.confidence_threshold_need_more_info = 50  # Below this, use NEED_MORE_INFO
         
         # Results directory
         self.results_dir = Path("results")
         self.results_dir.mkdir(exist_ok=True)
 
+    def apply_confidence_threshold(self, evaluation: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Apply confidence threshold logic to evaluation results
+        Reduces NEED_MORE_INFO responses when confidence is high enough
+        """
+        eligibility_status = evaluation.get('eligibility_status', 'NEED_MORE_INFO')
+        confidence_score = evaluation.get('confidence_score', 0)
+        
+        # If confidence is high enough, make a clear decision
+        if eligibility_status == 'NEED_MORE_INFO':
+            if confidence_score >= self.confidence_threshold_eligible:
+                # High confidence but marked as NEED_MORE_INFO - change to ELIGIBLE
+                evaluation['eligibility_status'] = 'ELIGIBLE'
+                evaluation['reasoning'] = f"High confidence ({confidence_score}%) - Changed from NEED_MORE_INFO to ELIGIBLE. " + evaluation.get('reasoning', '')
+            elif confidence_score >= self.confidence_threshold_not_eligible:
+                # Medium-high confidence - could be NOT_ELIGIBLE
+                # Keep as NEED_MORE_INFO but note the confidence
+                evaluation['reasoning'] = f"Medium confidence ({confidence_score}%) - Requires additional information. " + evaluation.get('reasoning', '')
+        
+        # If ELIGIBLE but confidence is too low, change to NEED_MORE_INFO
+        elif eligibility_status == 'ELIGIBLE':
+            if confidence_score < self.confidence_threshold_eligible:
+                evaluation['eligibility_status'] = 'NEED_MORE_INFO'
+                evaluation['reasoning'] = f"Low confidence ({confidence_score}%) for ELIGIBLE decision - Changed to NEED_MORE_INFO. " + evaluation.get('reasoning', '')
+        
+        # If NOT_ELIGIBLE but confidence is too low, change to NEED_MORE_INFO
+        elif eligibility_status == 'NOT_ELIGIBLE':
+            if confidence_score < self.confidence_threshold_not_eligible:
+                evaluation['eligibility_status'] = 'NEED_MORE_INFO'
+                evaluation['reasoning'] = f"Low confidence ({confidence_score}%) for NOT_ELIGIBLE decision - Changed to NEED_MORE_INFO. " + evaluation.get('reasoning', '')
+        
+        return evaluation
+    
     def evaluate_trial_for_patient(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> Dict[str, Any]:
-        """Evaluate a single trial for a specific patient using LLM"""
+        """Evaluate a single trial for a specific patient using LLM with rule-based pre-filtering"""
         try:
             print(f"Evaluating trial {trial_info.get('title', 'Unknown')} for patient MRN {patient_info['mrn']}")
             
+            # Step 1: Apply rule-based pre-filtering
+            is_eligible, filter_reason, filter_results = self.rule_filter.apply_rule_based_filter(
+                patient_info, trial_info
+            )
+            
+            if not is_eligible:
+                # Rule-based filter determined ineligibility
+                print(f"Rule-based filter: NOT_ELIGIBLE - {filter_reason}")
+                return {
+                    "eligibility_status": "NOT_ELIGIBLE",
+                    "confidence_score": 95,  # High confidence for rule-based decisions
+                    "reasoning": f"Rule-based pre-filtering: {filter_reason}",
+                    "rule_based_filter": filter_results,
+                    "trial_info": {
+                        "trial_id": trial_info.get('trial_id', 'Unknown'),
+                        "title": trial_info.get('title', 'Unknown'),
+                        "condition": trial_info.get('condition', 'Unknown'),
+                        "phase": trial_info.get('phase', 'Unknown'),
+                        "status": trial_info.get('status', 'Unknown')
+                    },
+                    "patient_info": {
+                        "patient_id": patient_info['patient_id'],
+                        "mrn": patient_info['mrn'],
+                        "age": patient_info['age'],
+                        "gender": patient_info['gender'],
+                        "oncologist": patient_info['oncologist']
+                    },
+                    "hybrid_score": trial_info.get('hybrid_score', 0)
+                }
+            
+            # Step 2: Pass rule-based filter, proceed with LLM evaluation
             evaluation = self.llm_utils.evaluate_patient_trial_match(trial_info, patient_info)
+            
+            # Step 3: Apply confidence threshold logic
+            evaluation = self.apply_confidence_threshold(evaluation)
             
             # Add trial and patient info to evaluation
             evaluation['trial_info'] = {
@@ -49,6 +123,7 @@ class PatientEvaluator:
             }
             
             evaluation['hybrid_score'] = trial_info.get('hybrid_score', 0)
+            evaluation['rule_based_filter'] = filter_results  # Include filter results even if passed
             
             return evaluation
             
@@ -115,6 +190,10 @@ class PatientEvaluator:
             
             batch_evaluations = batch_result.get("evaluations", [])
             batch_summary = batch_result.get("batch_summary", {})
+            
+            # Apply confidence threshold logic to each evaluation in the batch
+            for evaluation in batch_evaluations:
+                evaluation = self.apply_confidence_threshold(evaluation)
             
             all_evaluations.extend(batch_evaluations)
             all_batch_summaries.append({

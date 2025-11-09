@@ -1,0 +1,478 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 96010001
+mrn: 96010001
+batch_size: 16
+trial_ids: ['NCT04566393', 'NCT04704661', 'NCT04970901', 'NCT05520099', 'NCT05581004', 'NCT05673148', 'NCT05783622', 'NCT05787587', 'NCT05967533', 'NCT06147037', 'NCT06179160', 'NCT06281678', 'NCT06662786', 'NCT06699836', 'NCT06723236', 'NCT07114601']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 16 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 96010001
+        MRN: 96010001
+        Age: None
+        Gender: None
+        Oncologist: Dr. Michael Chen, MD
+        Combined Medical Record: Patient Name: Not specified
+Patient MRN: 96010001
+Age: Not specified, Gender: Not specified
+Date of Visit: April 14, 2025
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: Not specified
+
+History of Present Illness: March 15, 2025 - Descending colon (left colon) - March 15, 2025; T3N1M1 (Stage IV) - April 04, 2025 - liver, lung metastases identified - None - newly diagnosed, treatment-naïve - ECOG 1
+
+Past Medical History: Hypertension
+
+Family History: - No significant family cancer history
+
+Social History: Former smoker
+
+Review of Systems: Not specified
+
+Medications and Allergies: Not specified
+
+Physical Examination: Not specified
+
+Laboratory and Imaging Results: Total bilirubin: 1.3, Molecular markers: RAS/BRAF wild-type, MSS
+
+Imaging: Not specified
+
+Vital Signs: Not specified
+
+Assessment: Metastatic colorectal cancer (liver, lung) - Newly diagnosed, treatment-naïve
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04566393
+        Title: Expanded Access to Ulixertinib (BVD-523) in Subjects With Advanced or Metastatic Solid Tumors
+        Condition: Advanced Solid Tumors, Metastatic Solid Tumors
+        Phase: Expanded Access
+        Status: Available
+        Investigator: BioMed Valley Discoveries, Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Expanded access program for patients with no alternative treatment options.
+        
+        Detailed Description: Enables eligible participants access to Ulixertinib outside clinical trial setting.
+        
+        Inclusion Criteria: Advanced/metastatic solid tumors not amenable to curative therapies.
+        
+        Exclusion Criteria: Not specified.
+        
+        Eligibility Criteria: No curative or other treatment options available.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT04704661
+        Title: Testing the Combination of DS-8201a and Nivolumab in Subjects With HER2-Expressing Solid Tumors
+        Condition: HER2-Expressing Solid Tumors
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: National Cancer Institute (NCI)
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Phase I study testing DS-8201a with nivolumab in patients with HER2-positive cancers.
+        
+        Detailed Description: Participants receive combination therapy; safety, pharmacokinetics, and preliminary efficacy assessed.
+        
+        Inclusion Criteria: HER2-positive cancer, measurable disease.
+        
+        Exclusion Criteria: None
+        
+        Eligibility Criteria: None
+        
+        ============================================================
+        TRIAL 3:
+        ============================================================
+        Trial ID: NCT04970901
+        Title: Study to Evaluate the Safety and Anti-cancer Activity of A2B694, a Logic-Gated CAR T Cell Therapy, in Subjects With Relapsed/Refractory Multiple Myeloma
+        Condition: Relapsed/Refractory Multiple Myeloma
+        Phase: Phase I/II
+        Status: Recruiting
+        Investigator: A2 Biotherapeutics, Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: A2B694 is a logic-gated CAR T cell therapy for multiple myeloma patients who have relapsed or are refractory.
+        
+        Detailed Description: Designed to assess safety, pharmacokinetics and preliminary efficacy in adult patients.
+        
+        Inclusion Criteria: Documented relapsed/refractory multiple myeloma after at least one prior therapy.
+        
+        Exclusion Criteria: Known central nervous system involvement, prior gene therapy.
+        
+        Eligibility Criteria: None
+        
+        ============================================================
+        TRIAL 4:
+        ============================================================
+        Trial ID: NCT05520099
+        Title: Observational Basket Trial to Collect Tissue to Train and Evaluate Molecular Artificial Intelligence Algorithms
+        Condition: Solid Tumors
+        Phase: Observational
+        Status: Recruiting
+        Investigator: TriNetX, Inc.
+        Age Range: None - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Collection of tissue samples to train & evaluate AI algorithms for cancer diagnosis and treatment.
+        
+        Detailed Description: Basket trial includes molecular testing and AI-based evaluation.
+        
+        Inclusion Criteria: Solid tumor diagnosis, consent to provide tissue sample.
+        
+        Exclusion Criteria: None
+        
+        Eligibility Criteria: None
+        
+        ============================================================
+        TRIAL 5:
+        ============================================================
+        Trial ID: NCT05581004
+        Title: A Phase 1, First in Human, Dose Escalation and Expansion Study of SRF114
+        Condition: Advanced Solid Tumors, Lymphomas
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Surface Oncology
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: A first-in-human study to evaluate SRF114 in adults with advanced solid tumors or lymphomas.
+        
+        Detailed Description: The study assesses safety, tolerability, and sets the recommended phase II dose for future studies.
+        
+        Inclusion Criteria: Advanced solid tumors or lymphomas, refractory to standard therapies.
+        
+        Exclusion Criteria: Prior anti-CCR8 therapy, active CNS disease.
+        
+        Eligibility Criteria: None
+        
+        ============================================================
+        TRIAL 6:
+        ============================================================
+        Trial ID: NCT05673148
+        Title: Testing the Addition of Total Ablative Therapy to Usual Treatment for Oligometastatic Colorectal Cancer
+        Condition: Oligometastatic Colorectal Cancer
+        Phase: Phase III
+        Status: Recruiting
+        Investigator: Alliance for Clinical Trials in Oncology
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Comparing usual treatment with or without total ablative therapy in colorectal cancer.
+        
+        Detailed Description: Study evaluates progression-free survival, overall survival, and outcomes of aggressive local therapy.
+        
+        Inclusion Criteria: Diagnosis of oligometastatic colorectal cancer, suitable for ablative therapy.
+        
+        Exclusion Criteria: Uncontrolled comorbid illness, extensive extrahepatic disease.
+        
+        Eligibility Criteria: Eligibility detailed in trial protocol.
+        
+        ============================================================
+        TRIAL 7:
+        ============================================================
+        Trial ID: NCT05783622
+        Title: Study of JANX008 in Subjects With Advanced or Metastatic Solid Tumors
+        Condition: Advanced Solid Tumors, Metastatic Solid Tumors
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Janux Therapeutics, Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: A Phase 1, open-label study of JANX008 in patients with solid tumors.
+        
+        Detailed Description: Assesses safety, tolerability, and pharmacokinetics to determine the recommended phase II dose.
+        
+        Inclusion Criteria: Advanced/metastatic tumor, progression following standard therapy.
+        
+        Exclusion Criteria: Active CNS metastasis, recent anticancer treatment.
+        
+        Eligibility Criteria: See full protocol for details.
+        
+        ============================================================
+        TRIAL 8:
+        ============================================================
+        Trial ID: NCT05787587
+        Title: A Study of PARG Inhibitor IDE161 in Participants With Advanced Solid Tumors
+        Condition: Advanced Solid Tumors
+        Phase: Phase I/II
+        Status: Recruiting
+        Investigator: Ideaya Biosciences, Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: IDE161 PARG inhibitor dose escalation/expansion in adults with advanced solid tumors.
+        
+        Detailed Description: Study seeks recommended phase II dose, assesses safety, PK, and initial efficacy.
+        
+        Inclusion Criteria: Advanced solid tumor with disease progression after standard therapy.
+        
+        Exclusion Criteria: Recent anticancer therapy, active brain metastasis.
+        
+        Eligibility Criteria: Full eligibility in protocol.
+        
+        ============================================================
+        TRIAL 9:
+        ============================================================
+        Trial ID: NCT05967533
+        Title: The Immune Effects of Fermented Wheat Germ Nutritional Supplement With Standard Treatment in Cancer
+        Condition: Cancer
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Biomar Microbial Technologies (now part of PharmaMar)
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Investigates effects of fermented wheat germ supplement in patients receiving standard cancer therapy.
+        
+        Detailed Description: Randomized, open-label trial evaluating immunomodulatory and antitumor effects.
+        
+        Inclusion Criteria: Cancer diagnosis eligible for standard therapy.
+        
+        Exclusion Criteria: Severe concurrent disease, recent immunotherapy.
+        
+        Eligibility Criteria: None
+        
+        ============================================================
+        TRIAL 10:
+        ============================================================
+        Trial ID: NCT06147037
+        Title: A Phase 1, Dose-escalation Study of [225Ac]-FPI-2068 in Participants With Advanced or Metastatic Solid Tumors Expressing B7-H3
+        Condition: Advanced Solid Tumors, Metastatic Solid Tumors, B7-H3 expressing Tumors
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Fusion Pharmaceuticals Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: [225Ac]-FPI-2068 is evaluated in adults for advanced/metastatic solid tumors with B7-H3 expression.
+        
+        Detailed Description: Dose escalation will determine safety, tolerability, pharmacokinetics, and preliminary efficacy for targeted radiotherapy.
+        
+        Inclusion Criteria: Advanced/metastatic solid tumor, B7-H3 positive, progression after standard treatment.
+        
+        Exclusion Criteria: Prior treatment with radioimmunoconjugates, untreated CNS metastases.
+        
+        Eligibility Criteria: See full protocol for details.
+        
+        ============================================================
+        TRIAL 11:
+        ============================================================
+        Trial ID: NCT06179160
+        Title: A Study to Evaluate INCB161734 in Participants With Select Advanced Solid Tumors
+        Condition: Advanced Solid Tumors
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Incyte Corporation
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: First-in-human, open-label trial to evaluate safety, tolerability, and pharmacokinetics of INCB161734 in solid tumors.
+        
+        Detailed Description: Participants undergo dose escalation and cohort expansion; endpoints include safety, PK, and antitumor activity.
+        
+        Inclusion Criteria: Histologically confirmed advanced solid tumor, measurable disease, progression following standard therapy.
+        
+        Exclusion Criteria: Active CNS disease or any condition interfering with trial participation.
+        
+        Eligibility Criteria: Eligibility defined by key protocol criteria.
+        
+        ============================================================
+        TRIAL 12:
+        ============================================================
+        Trial ID: NCT06281678
+        Title: A Study of IBI363 in Subjects with Advanced Solid Tumors
+        Condition: Advanced Solid Tumors
+        Phase: Phase I/IIa
+        Status: Recruiting
+        Investigator: Innovent Biologics (Suzhou) Co. Ltd.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: IBI363 is evaluated in dose escalation and expansion cohorts for advanced solid tumors.
+        
+        Detailed Description: Primary goal is to determine safety, tolerability, pharmacokinetics, and recommend phase II dose.
+        
+        Inclusion Criteria: Adult with unresectable, locally advanced or metastatic solid tumor unresponsive to standard therapies.
+        
+        Exclusion Criteria: Concurrent anticancer therapy, severe comorbidities.
+        
+        Eligibility Criteria: Eligibility as in protocol.
+        
+        ============================================================
+        TRIAL 13:
+        ============================================================
+        Trial ID: NCT06662786
+        Title: A Study of Amivantamab and mFOLFOX6 or FOLFIRI in Participants With Advanced or Metastatic Colorectal Cancer With EGFR Exon 20 Insertions
+        Condition: Colorectal Cancer, EGFR Exon 20 insertions
+        Phase: Phase II
+        Status: Recruiting
+        Investigator: Janssen Research & Development, LLC
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Study investigates amivantamab in combination with chemotherapy for EGFR exon 20 mutated colorectal cancer.
+        
+        Detailed Description: Key outcomes: efficacy, safety, and tolerability of combination therapies.
+        
+        Inclusion Criteria: Colorectal cancer with confirmed EGFR exon 20 insertion, progressed after ≥1 prior systemic therapy.
+        
+        Exclusion Criteria: Current/previous other anti-EGFR therapy, active CNS metastases.
+        
+        Eligibility Criteria: Eligibility criteria per protocol.
+        
+        ============================================================
+        TRIAL 14:
+        ============================================================
+        Trial ID: NCT06699836
+        Title: A Phase 2 Study of Leronlimab in Combination With TAS-102 + Bevacizumab in Metastatic Colorectal Cancer
+        Condition: Metastatic Colorectal Cancer
+        Phase: Phase II
+        Status: Recruiting
+        Investigator: CytoDyn, Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Study assessing safety and efficacy of leronlimab combined with TAS-102 and bevacizumab in metastatic colorectal cancer.
+        
+        Detailed Description: Open-label, multicenter study with endpoints of progression-free survival and overall survival.
+        
+        Inclusion Criteria: Histologically confirmed metastatic colorectal cancer after failure of prior standard therapies.
+        
+        Exclusion Criteria: Recent investigational agents, uncontrolled comorbid conditions.
+        
+        Eligibility Criteria: Eligibility according to inclusion/exclusion criteria in protocol.
+        
+        ============================================================
+        TRIAL 15:
+        ============================================================
+        Trial ID: NCT06723236
+        Title: A Study of MGC028 in Participants With Advanced Solid Tumors
+        Condition: Advanced Solid Tumors
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: MacroGenics, Inc.
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: Assessing MGC028 in patients with advanced solid tumors not responding to standard therapy.
+        
+        Detailed Description: Dose escalation and expansion; safety, pharmacokinetics, and efficacy are primary endpoints.
+        
+        Inclusion Criteria: Adults with advanced/metastatic solid tumors with progression after standard therapy.
+        
+        Exclusion Criteria: Active CNS metastases, uncontrolled medical conditions.
+        
+        Eligibility Criteria: Eligibility per full clinical protocol.
+        
+        ============================================================
+        TRIAL 16:
+        ============================================================
+        Trial ID: NCT07114601
+        Title: A Study of LY4257496 in Participants With Cancer (OMNIRAY)
+        Condition: Solid Tumors, Hematologic Malignancies
+        Phase: Phase I
+        Status: Recruiting
+        Investigator: Eli Lilly and Company
+        Age Range: 18 Years - None
+        Gender: All
+        Hybrid Score: 0.000
+        
+        Brief Summary: First-in-human evaluation of LY4257496 in adults with solid or hematologic cancer.
+        
+        Detailed Description: Evaluates safety, tolerability, pharmacokinetics, and preliminary efficacy across multiple tumor types.
+        
+        Inclusion Criteria: Confirmed solid or hematologic malignancy; measurable disease progression after treatment.
+        
+        Exclusion Criteria: CNS involvement, recent major surgery or therapy.
+        
+        Eligibility Criteria: Eligibility defined by protocol details.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04566393",
+                    "trial_title": "Expanded Access to Ulixertinib (BVD-523) in Subjects With Advanced or Metastatic Solid Tumors",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "priority_score": 90,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT04704661",
+                    "trial_title": "Testing the Combination of DS-8201a and Nivolumab in Subjects With HER2-Expressing Solid Tumors",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "priority_score": 80,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "key_criteria_met": ["criteria1", "criteria2"],
+                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 16 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 16,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-08T13:58:54.337443"
+            }
+        }
+        

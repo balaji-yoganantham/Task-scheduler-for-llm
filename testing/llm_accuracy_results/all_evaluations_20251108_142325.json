@@ -1,0 +1,37 @@
+{
+  "evaluations": [
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT03715933",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04314401",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "20251108_142325",
+    "total_evaluations": 2,
+    "model": "gemini-2.0-flash-exp"
+  }
+}

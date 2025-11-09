@@ -1,0 +1,119 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: keyword_generation_batch
+batch_size: 4
+patient_ids: [1, 2, 3, 4]
+mrns: ['MRN0001', 'MRN0002', 'MRN0003', 'MRN0004']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Analyze the following 4 patient medical records and generate comprehensive keywords for clinical trial matching.
+
+        PATIENTS DATA:
+        
+==================================================
+PATIENT 1:
+==================================================
+Patient ID: 1
+MRN: MRN0001
+Age: 62
+Gender: Male
+Combined Medical Record:
+Weakness, mild abdominal pain, weight loss 62-year-old male with diagnosed metastatic colorectal cancer, presenting after failure of first-line chemotherapy. Hypertension, controlled; mild hyperlipidemia; no prior cancer. Metastatic colorectal adenocarcinoma with progression on prior therapy. CEA elevated at 40.2 ng/mL, mild anemia, mild transaminitis; CT shows hepatic metastases.
+
+==================================================
+PATIENT 2:
+==================================================
+Patient ID: 2
+MRN: MRN0002
+Age: 55
+Gender: Female
+Combined Medical Record:
+Change in bowel habits, mild rectal bleeding 55-year-old woman, recently diagnosed stage IV colon cancer with KRAS G12C mutation, completed first-line FOLFOX. Type 2 diabetes, managed. Hypothyroidism. KRAS G12C mutant mCRC, post-FOLFOX progression. Mild microcytic anemia, negative stool occult blood, PET: liver & lung nodules.
+
+==================================================
+PATIENT 3:
+==================================================
+Patient ID: 3
+MRN: MRN0003
+Age: 70
+Gender: Male
+Combined Medical Record:
+Progressive fatigue, mild jaundice Known metastatic rectal adenocarcinoma, failed prior regimens, seeking trial options. CAD (s/p stent), chronic kidney disease stage 2. Metastatic rectal adenocarcinoma, heavily pretreated. Elevated bilirubin (2.1), alk phos; mild cytopenias.
+
+==================================================
+PATIENT 4:
+==================================================
+Patient ID: 4
+MRN: MRN0004
+Age: 48
+Gender: Female
+Combined Medical Record:
+Abdominal bloating and pain 48-year-old with resected stage III colon cancer, now positive for ctDNA after adjuvant chemo completion. Asthma, mild GERD. Stage III colon cancer, now molecular recurrence on ctDNA. Normal CBC, CEA slightly raised, ctDNA positive.
+
+
+        Instructions:
+        1. Extract ALL relevant medical conditions, symptoms, treatments, and characteristics for EACH patient
+        2. Generate at least 30-40 keywords per patient covering:
+           - Primary diagnosis and staging
+           - Metastatic sites
+           - Molecular markers
+           - Comorbidities
+           - Medications
+           - Allergies
+           - Performance status
+           - Family history
+           - Demographics
+        3. Use standardized medical terminology
+        4. Include both specific and general terms for better matching
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_results": [
+                {
+                    "patient_id": 1,
+                    "mrn": "MRN0001",
+                    "age": 62,
+                    "gender": "Male",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-09T19:10:46.392794"
+                },
+                {
+                    "patient_id": 2,
+                    "mrn": "MRN0002",
+                    "age": 55,
+                    "gender": "Female",
+                    "summary": "Brief 2-3 sentence summary of patient's condition",
+                    "primary_diagnosis": "Main diagnosis",
+                    "stage": "Cancer stage if applicable",
+                    "metastatic_sites": ["site1", "site2", ...],
+                    "molecular_markers": ["marker1", "marker2", ...],
+                    "comorbidities": ["condition1", "condition2", ...],
+                    "medications": ["med1", "med2", ...],
+                    "allergies": ["allergy1", "allergy2", ...],
+                    "performance_status": "ECOG status",
+                    "family_history": ["condition1", "condition2", ...],
+                    "keywords": ["keyword1", "keyword2", "keyword3", ...],
+                    "generated_at": "2025-11-09T19:10:46.392794"
+                }
+                // ... continue for all 4 patients
+            ],
+            "batch_metadata": {
+                "total_patients": 4,
+                "generated_at": "2025-11-09T19:10:46.392794",
+                "model": "gemini-2.0-flash-exp",
+                "batch_processing": true
+            }
+        }
+        

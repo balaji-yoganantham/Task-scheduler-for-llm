@@ -1,0 +1,161 @@
+{
+    "matches": [
+      {
+        "MRN": "MRN0001",
+        "results": [
+          {
+            "trial_id": "NCT01103323",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Diagnosis: Metastatic colorectal cancer (MCRC)",
+              "Prior standard therapies failed",
+              "Age >18, organ function, no exclusion violations",
+              "No infection, controlled hypertension"
+            ]
+          },
+          {
+            "trial_id": "NCT04607421",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Diagnosis: Metastatic colorectal cancer",
+              "Assumed to have BRAF V600E status or eligible for testing",
+              "Age >18, no prior BRAF inhibitor exposure",
+              "No major comorbidities"
+            ]
+          },
+          {
+            "trial_id": "NCT04793958",
+            "decision": "NOT ELIGIBLE",
+            "reasons": [
+              "KRAS G12C mutation status not reported/likely negative"
+            ]
+          },
+          {
+            "trial_id": "NCT05197322",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Stage IV colorectal cancer (likely metastatic, non-resectable)",
+              "Age and organ function criteria met",
+              "No surgical exclusion"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "MRN0002",
+        "results": [
+          {
+            "trial_id": "NCT04793958",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "KRAS G12C+ metastatic colorectal cancer",
+              "Failed first-line therapy",
+              "Meets age, organ and performance criteria"
+            ]
+          },
+          {
+            "trial_id": "NCT00719797",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Stage IV, chemonaïve for metastatic setting (if first-line FOLFOX completed for adjuvant, not metastatic)",
+              "KRAS status compatible with standard-of-care arms",
+              "No exclusion by age or comorbidity"
+            ]
+          },
+          {
+            "trial_id": "NCT02997228",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Metastatic colorectal cancer",
+              "Likely MSI status not known, but accepted as general mCRC if otherwise fits",
+              "No exclusion listed"
+            ]
+          },
+          {
+            "trial_id": "NCT02015923",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Unresectable synchronous metastases",
+              "Colorectal cancer >12cm from anal verge based on colon cancer diagnosis",
+              "No contraindication to chemo"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "MRN0003",
+        "results": [
+          {
+            "trial_id": "NCT03983993",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "RAS wildtype not stated, but as heavily pretreated eligible for exploratory phase 2 eligibility",
+              "Advanced metastatic colorectal carcinoma"
+            ]
+          },
+          {
+            "trial_id": "NCT02675946",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Advanced GI/colorectal cancer, heavily pretreated",
+              "Appropriate age and performance",
+              "No prior specified therapy exclusion stated"
+            ]
+          },
+          {
+            "trial_id": "NCT03312374",
+            "decision": "NOT ELIGIBLE",
+            "reasons": [
+              "Trial limited to early/intermediate post-operative CRC (Stage II/III)",
+              "Patient is metastatic (not early-stage, not post-surgery surveillance)"
+            ]
+          },
+          {
+            "trial_id": "NCT04457297",
+            "decision": "NOT ELIGIBLE",
+            "reasons": [
+              "Trial requires ctDNA+ post-curative resection, Stage III",
+              "Patient is metastatic, not resected or ctDNA+ post-surgery"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "MRN0004",
+        "results": [
+          {
+            "trial_id": "NCT03803553",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Resected Stage III adenocarcinoma, completed standard adjuvant chemo",
+              "ctDNA+ molecular relapse, meets age and organ criteria"
+            ]
+          },
+          {
+            "trial_id": "NCT03312374",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Stage III CRC post-surgery, ECOG ≤1, ctDNA monitoring possible"
+            ]
+          },
+          {
+            "trial_id": "NCT04457297",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Stage III colon cancer, post-surgery, ctDNA+",
+              "Organ function and age criteria met"
+            ]
+          },
+          {
+            "trial_id": "NCT05197322",
+            "decision": "NOT ELIGIBLE",
+            "reasons": [
+              "Trial is for unresectable or inoperable with MSI-H/MMR-D",
+              "Patient is post-surgery and MSI status not reported"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

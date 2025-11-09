@@ -1,0 +1,1067 @@
+{
+  "evaluations": [
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT03715933",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04314401",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04566393",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04704661",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04970901",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05520099",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05581004",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05673148",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "EXCEPTION",
+      "match": false,
+      "error": "'LLMAccuracyEvaluator' object has no attribute '_process_trials_individually'"
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT03715933",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "match": true,
+      "confidence_score": 95,
+      "reasoning": "The patient has metastatic colorectal cancer, which is a solid tumor. The trial includes patients with colon cancer. The patient's age and gender are not specified, but the trial includes all ages and genders. The patient meets the inclusion criteria of having a histologically confirmed advanced/metastatic solid tumor. There are no exclusion criteria listed.",
+      "llm_evaluation": {
+        "trial_id": "NCT03715933",
+        "trial_title": "Phase 1 Study of INBRX-109 in Subjects with Locally Advanced or Metastatic Solid Tumors",
+        "eligibility_status": "ELIGIBLE",
+        "confidence_score": 95,
+        "priority_score": 90,
+        "reasoning": "The patient has metastatic colorectal cancer, which is a solid tumor. The trial includes patients with colon cancer. The patient's age and gender are not specified, but the trial includes all ages and genders. The patient meets the inclusion criteria of having a histologically confirmed advanced/metastatic solid tumor. There are no exclusion criteria listed.",
+        "key_criteria_met": [
+          "Metastatic solid tumor",
+          "Colon cancer diagnosis",
+          "No age or gender restrictions"
+        ],
+        "key_criteria_missed": [],
+        "recommendations": "This trial appears to be a good match for the patient. Confirm histological confirmation of metastatic colorectal cancer and ECOG performance status.",
+        "trial_info": {
+          "trial_id": "NCT03715933",
+          "title": "Phase 1 Study of INBRX-109 in Subjects with Locally Advanced or Metastatic Solid Tumors",
+          "condition": "Colon Cancer, Ewing Sarcoma, Rectal Cancer",
+          "phase": "Phase 1",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010001,
+          "mrn": "96010001",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04314401",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "match": true,
+      "confidence_score": 90,
+      "reasoning": "The patient has a diagnosis of cancer (metastatic colorectal cancer). The trial includes adults with any cancer diagnosis. The patient meets the inclusion criteria of having a diagnosis of cancer and willingness to consent. There are no exclusion criteria specified.",
+      "llm_evaluation": {
+        "trial_id": "NCT04314401",
+        "trial_title": "National Cancer Institute “Cancer Moonshot Biobank”",
+        "eligibility_status": "ELIGIBLE",
+        "confidence_score": 90,
+        "priority_score": 80,
+        "reasoning": "The patient has a diagnosis of cancer (metastatic colorectal cancer). The trial includes adults with any cancer diagnosis. The patient meets the inclusion criteria of having a diagnosis of cancer and willingness to consent. There are no exclusion criteria specified.",
+        "key_criteria_met": [
+          "Cancer diagnosis",
+          "Adult patient"
+        ],
+        "key_criteria_missed": [],
+        "recommendations": "This trial is a good match for the patient. Ensure the patient is willing to consent to providing biospecimens and health information.",
+        "trial_info": {
+          "trial_id": "NCT04314401",
+          "title": "National Cancer Institute “Cancer Moonshot Biobank”",
+          "condition": "Cancer",
+          "phase": "Not applicable",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010001,
+          "mrn": "96010001",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04566393",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04704661",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04566393",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04704661",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04970901",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05520099",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05581004",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05673148",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05783622",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05787587",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05967533",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT06147037",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT06179160",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT06281678",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT06662786",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT06699836",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT06723236",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT07114601",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT03452774",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT03715933",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT03947385",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04221893",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04314401",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04429542",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04585750",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04657068",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04704661",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT04960579",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT05086692",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT05107674",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT05334069",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT05410977",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT05592626",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT05919264",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT06281678",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010002,
+      "nct_id": "NCT06298916",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT03715933",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT03947385",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT04282044",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT04792684",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT04960579",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT05080673",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT05086692",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT05277051",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ERROR",
+      "match": false,
+      "error": "429 Resource exhausted after 3 retries. Please try again later.",
+      "error_type": "ResourceExhausted",
+      "llm_evaluation": {
+        "error": "429 Resource exhausted after 3 retries. Please try again later.",
+        "error_type": "ResourceExhausted",
+        "retries_attempted": 3
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT05334069",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "match": true,
+      "confidence_score": 95,
+      "reasoning": "The patient has a confirmed diagnosis of colorectal cancer, which satisfies the primary inclusion criterion. The trial has no age or gender restrictions. The patient's willingness to provide blood samples is assumed, making them eligible.",
+      "llm_evaluation": {
+        "trial_id": "NCT05334069",
+        "trial_title": "Collecting Blood Samples from Patients With and Without Cancer to Detect Colorectal Cancer Earlier",
+        "eligibility_status": "ELIGIBLE",
+        "confidence_score": 95,
+        "priority_score": 90,
+        "reasoning": "The patient has a confirmed diagnosis of colorectal cancer, which satisfies the primary inclusion criterion. The trial has no age or gender restrictions. The patient's willingness to provide blood samples is assumed, making them eligible.",
+        "key_criteria_met": [
+          "Diagnosis of colorectal cancer",
+          "No age restrictions",
+          "No gender restrictions"
+        ],
+        "key_criteria_missed": [],
+        "recommendations": "Enroll the patient in the trial. Confirm patient's willingness to provide blood samples.",
+        "trial_info": {
+          "trial_id": "NCT05334069",
+          "title": "Collecting Blood Samples from Patients With and Without Cancer to Detect Colorectal Cancer Earlier",
+          "condition": "Colorectal Cancer, Healthy Volunteers",
+          "phase": "Observational",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010003,
+          "mrn": "96010003",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010003,
+      "nct_id": "NCT05410977",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "match": true,
+      "confidence_score": 85,
+      "reasoning": "The patient has a cancer diagnosis (metastatic colorectal cancer), which satisfies the primary inclusion criterion. The trial has no age or gender restrictions. The patient is assumed to be planning treatment, as they have previously been treated and are under the care of an oncologist. The patient's consent is assumed, making them eligible.",
+      "llm_evaluation": {
+        "trial_id": "NCT05410977",
+        "trial_title": "Mass Response of Tumor Cells as a Biomarker for Rapid Therapy Response",
+        "eligibility_status": "ELIGIBLE",
+        "confidence_score": 85,
+        "priority_score": 80,
+        "reasoning": "The patient has a cancer diagnosis (metastatic colorectal cancer), which satisfies the primary inclusion criterion. The trial has no age or gender restrictions. The patient is assumed to be planning treatment, as they have previously been treated and are under the care of an oncologist. The patient's consent is assumed, making them eligible.",
+        "key_criteria_met": [
+          "Cancer diagnosis",
+          "No age restrictions",
+          "No gender restrictions",
+          "Planned treatment (assumed)"
+        ],
+        "key_criteria_missed": [],
+        "recommendations": "Enroll the patient in the trial. Confirm planned treatment and obtain patient consent.",
+        "trial_info": {
+          "trial_id": "NCT05410977",
+          "title": "Mass Response of Tumor Cells as a Biomarker for Rapid Therapy Response",
+          "condition": "Cancer",
+          "phase": "Observational",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010003,
+          "mrn": "96010003",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04566393",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "match": true,
+      "confidence_score": 85,
+      "reasoning": "The patient has metastatic colorectal cancer (Stage IV) and is treatment-naive, indicating advanced/metastatic solid tumors. The trial is for advanced/metastatic solid tumors not amenable to curative therapies, and the patient is newly diagnosed, suggesting they may have no other curative options available. The patient's ECOG score of 1 suggests they are well enough to participate. Age and gender are not exclusionary factors.",
+      "llm_evaluation": {
+        "trial_id": "NCT04566393",
+        "trial_title": "Expanded Access to Ulixertinib (BVD-523) in Subjects With Advanced or Metastatic Solid Tumors",
+        "eligibility_status": "ELIGIBLE",
+        "confidence_score": 85,
+        "priority_score": 90,
+        "reasoning": "The patient has metastatic colorectal cancer (Stage IV) and is treatment-naive, indicating advanced/metastatic solid tumors. The trial is for advanced/metastatic solid tumors not amenable to curative therapies, and the patient is newly diagnosed, suggesting they may have no other curative options available. The patient's ECOG score of 1 suggests they are well enough to participate. Age and gender are not exclusionary factors.",
+        "key_criteria_met": [
+          "Advanced/metastatic solid tumors",
+          "No curative or other treatment options available",
+          "Age within range (assumed)",
+          "Gender (all)"
+        ],
+        "key_criteria_missed": [],
+        "recommendations": "Confirm with the oncologist that there are no standard curative treatment options available for this patient before enrolling in this expanded access program. Verify the patient's age is within the trial's inclusion criteria.",
+        "trial_info": {
+          "trial_id": "NCT04566393",
+          "title": "Expanded Access to Ulixertinib (BVD-523) in Subjects With Advanced or Metastatic Solid Tumors",
+          "condition": "Advanced Solid Tumors, Metastatic Solid Tumors",
+          "phase": "Expanded Access",
+          "status": "Available"
+        },
+        "patient_info": {
+          "patient_id": 96010001,
+          "mrn": "96010001",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04704661",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "NEED_MORE_INFO",
+      "match": false,
+      "confidence_score": 75,
+      "reasoning": "The trial requires HER2-positive cancer. The patient has metastatic colorectal cancer, but the HER2 status is not provided in the patient information. Further testing is needed to determine HER2 expression. Age and gender are not exclusionary factors. The patient has measurable disease (liver and lung metastases).",
+      "llm_evaluation": {
+        "trial_id": "NCT04704661",
+        "trial_title": "Testing the Combination of DS-8201a and Nivolumab in Subjects With HER2-Expressing Solid Tumors",
+        "eligibility_status": "NEED_MORE_INFO",
+        "confidence_score": 75,
+        "priority_score": 80,
+        "reasoning": "The trial requires HER2-positive cancer. The patient has metastatic colorectal cancer, but the HER2 status is not provided in the patient information. Further testing is needed to determine HER2 expression. Age and gender are not exclusionary factors. The patient has measurable disease (liver and lung metastases).",
+        "key_criteria_met": [
+          "Age within range (assumed)",
+          "Gender (all)",
+          "Measurable disease"
+        ],
+        "key_criteria_missed": [
+          "HER2-positive cancer"
+        ],
+        "recommendations": "Order HER2 testing on the patient's tumor sample. If HER2-positive, the patient may be eligible. Verify the patient's age is within the trial's inclusion criteria.",
+        "trial_info": {
+          "trial_id": "NCT04704661",
+          "title": "Testing the Combination of DS-8201a and Nivolumab in Subjects With HER2-Expressing Solid Tumors",
+          "condition": "HER2-Expressing Solid Tumors",
+          "phase": "Phase I",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010001,
+          "mrn": "96010001",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT04970901",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "NOT_ELIGIBLE",
+      "match": false,
+      "confidence_score": 95,
+      "reasoning": "The patient has metastatic colorectal cancer, while this trial is specifically for relapsed/refractory multiple myeloma. The patient does not meet the primary inclusion criterion related to the medical condition.",
+      "llm_evaluation": {
+        "trial_id": "NCT04970901",
+        "trial_title": "Study to Evaluate the Safety and Anti-cancer Activity of A2B694, a Logic-Gated CAR T Cell Therapy, in Subjects With Relapsed/Refractory Multiple Myeloma",
+        "eligibility_status": "NOT_ELIGIBLE",
+        "confidence_score": 95,
+        "priority_score": 10,
+        "reasoning": "The patient has metastatic colorectal cancer, while this trial is specifically for relapsed/refractory multiple myeloma. The patient does not meet the primary inclusion criterion related to the medical condition.",
+        "key_criteria_met": [],
+        "key_criteria_missed": [
+          "relapsed/refractory multiple myeloma"
+        ],
+        "recommendations": "This trial is not relevant for this patient due to the differing cancer types. No further action is recommended.",
+        "trial_info": {
+          "trial_id": "NCT04970901",
+          "title": "Study to Evaluate the Safety and Anti-cancer Activity of A2B694, a Logic-Gated CAR T Cell Therapy, in Subjects With Relapsed/Refractory Multiple Myeloma",
+          "condition": "Relapsed/Refractory Multiple Myeloma",
+          "phase": "Phase I/II",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010001,
+          "mrn": "96010001",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    },
+    {
+      "mrn": 96010001,
+      "nct_id": "NCT05520099",
+      "original_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "match": true,
+      "confidence_score": 85,
+      "reasoning": "The patient has a solid tumor diagnosis (metastatic colorectal cancer) and the trial is an observational basket trial for solid tumors. The inclusion criteria require a solid tumor diagnosis and consent to provide a tissue sample, which the patient could potentially fulfill. There are no exclusion criteria listed.",
+      "llm_evaluation": {
+        "trial_id": "NCT05520099",
+        "trial_title": "Observational Basket Trial to Collect Tissue to Train and Evaluate Molecular Artificial Intelligence Algorithms",
+        "eligibility_status": "ELIGIBLE",
+        "confidence_score": 85,
+        "priority_score": 70,
+        "reasoning": "The patient has a solid tumor diagnosis (metastatic colorectal cancer) and the trial is an observational basket trial for solid tumors. The inclusion criteria require a solid tumor diagnosis and consent to provide a tissue sample, which the patient could potentially fulfill. There are no exclusion criteria listed.",
+        "key_criteria_met": [
+          "Solid tumor diagnosis"
+        ],
+        "key_criteria_missed": [],
+        "recommendations": "Confirm the patient is willing to provide a tissue sample. If so, this trial is a potentially good fit. Contact the trial investigator to confirm eligibility and enrollment procedures.",
+        "trial_info": {
+          "trial_id": "NCT05520099",
+          "title": "Observational Basket Trial to Collect Tissue to Train and Evaluate Molecular Artificial Intelligence Algorithms",
+          "condition": "Solid Tumors",
+          "phase": "Observational",
+          "status": "Recruiting"
+        },
+        "patient_info": {
+          "patient_id": 96010001,
+          "mrn": "96010001",
+          "age": null,
+          "gender": null,
+          "oncologist": "Dr. Michael Chen, MD"
+        },
+        "hybrid_score": 0
+      }
+    }
+  ],
+  "accuracy_stats": {
+    "total": 8,
+    "correct": 6,
+    "incorrect": 2,
+    "need_more_info": 1,
+    "errors": 52,
+    "by_patient": {
+      "96010001": {
+        "mrn": 96010001,
+        "total": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "need_more_info": 0,
+        "errors": 16
+      },
+      "96010002": {
+        "mrn": 96010002,
+        "total": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "need_more_info": 0,
+        "errors": 18
+      }
+    },
+    "by_trial": {
+      "NCT03715933": {
+        "total": 1,
+        "correct": 1,
+        "incorrect": 0
+      },
+      "NCT04314401": {
+        "total": 1,
+        "correct": 1,
+        "incorrect": 0
+      },
+      "NCT05334069": {
+        "total": 1,
+        "correct": 1,
+        "incorrect": 0
+      },
+      "NCT05410977": {
+        "total": 1,
+        "correct": 1,
+        "incorrect": 0
+      },
+      "NCT04566393": {
+        "total": 1,
+        "correct": 1,
+        "incorrect": 0
+      },
+      "NCT04704661": {
+        "total": 1,
+        "correct": 0,
+        "incorrect": 1
+      },
+      "NCT04970901": {
+        "total": 1,
+        "correct": 0,
+        "incorrect": 1
+      },
+      "NCT05520099": {
+        "total": 1,
+        "correct": 1,
+        "incorrect": 0
+      }
+    }
+  },
+  "progress": {
+    "current": 8,
+    "total": 90,
+    "timestamp": "2025-11-09T18:18:34.946314"
+  }
+}

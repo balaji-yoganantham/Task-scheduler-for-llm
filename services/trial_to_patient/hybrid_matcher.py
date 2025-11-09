@@ -105,8 +105,8 @@ class HybridMatcher:
     def load_patient_texts(self):
         """Load patient texts for BM25 indexing"""
         try:
-            # Only get unevaluated patients (is_evaluated = 0)
-            patients = self.db_utils.get_patient_data_for_keywords(1000, include_evaluated=False)
+            # Get all patients (no filtering)
+            patients = self.db_utils.get_patient_data_for_keywords(1000, include_evaluated=True)
             
             self.patient_texts = []
             for patient in patients:
@@ -174,9 +174,8 @@ class HybridMatcher:
             print(f"Error getting BM25 similarity: {e}")
             return []
 
-    def hybrid_search(self, query_text: str, index_type: str = "trial", alpha: float = 0.7, 
-                     trial_is_evaluated: int = 0) -> List[Dict[str, Any]]:
-        """Combine embedding and BM25 scores for hybrid search with trial is_evaluated and patient is_shortlisted filtering"""
+    def hybrid_search(self, query_text: str, index_type: str = "trial", alpha: float = 0.7) -> List[Dict[str, Any]]:
+        """Combine embedding and BM25 scores for hybrid search"""
         try:
             # Get embedding similarity
             query_embedding = self.generate_embedding(query_text)
@@ -230,33 +229,7 @@ class HybridMatcher:
                 if not patient_data:
                     continue  # Skip if no matching patient found
                 
-                # For patient searches, filter based on trial is_evaluated and patient is_shortlisted
-                if index_type == "patient":
-                    patient_is_evaluated = patient_data.get('is_evaluated', 0)
-                    patient_is_shortlisted = patient_data.get('is_shortlisted', 0)
-                    
-                    # Filter based on trial is_evaluated status:
-                    # - If trial is_evaluated = 0: Include patients with is_evaluated IN (0, 1) AND is_shortlisted = 0
-                    # - If trial is_evaluated = 1: Include patients with is_evaluated = 0 AND is_shortlisted = 0
-                    if trial_is_evaluated == 0:
-                        # Trial not evaluated: take patients with is_evaluated = 0 or 1, but not shortlisted
-                        if patient_is_shortlisted != 0:
-                            continue  # Skip shortlisted patients
-                        if patient_is_evaluated not in [0, 1]:
-                            continue  # Skip patients with is_evaluated not 0 or 1
-                    else:  # trial_is_evaluated == 1
-                        # Trial evaluated: only take patients with is_evaluated = 0, and not shortlisted
-                        # Debug: Log why patients are being filtered out
-                        if patient_is_evaluated != 0:
-                            # Only log first few to avoid spam
-                            if len(results) < 3:
-                                print(f"DEBUG Filtering out patient {patient_id}: is_evaluated={patient_is_evaluated} (expected 0)")
-                            continue  # Skip evaluated patients
-                        if patient_is_shortlisted != 0:
-                            # Only log first few to avoid spam
-                            if len(results) < 3:
-                                print(f"DEBUG Filtering out patient {patient_id}: is_shortlisted={patient_is_shortlisted} (expected 0)")
-                            continue  # Skip shortlisted patients
+                # No filtering - return all matching patients
                 
                 result = patient_data.copy()
                 if index_type == "patient":
@@ -268,17 +241,7 @@ class HybridMatcher:
                 results.append(result)
             
             if index_type == "patient":
-                # Debug: Count patients by is_evaluated status
-                evaluated_0_count = sum(1 for r in results if r.get('is_evaluated', 0) == 0)
-                evaluated_1_count = sum(1 for r in results if r.get('is_evaluated', 0) == 1)
-                shortlisted_count = sum(1 for r in results if r.get('is_shortlisted', 0) != 0)
-                print(f"Filtered to {len(results)} patients (trial is_evaluated={trial_is_evaluated}, excluded shortlisted)")
-                print(f"DEBUG Breakdown: is_evaluated=0: {evaluated_0_count}, is_evaluated=1: {evaluated_1_count}, shortlisted: {shortlisted_count}")
-                if len(results) == 0 and trial_is_evaluated == 1:
-                    # Check how many patients in metadata have is_evaluated = 0
-                    patients_with_0 = sum(1 for pid, data in self.patient_metadata.items() 
-                                         if data.get('is_evaluated', 0) == 0)
-                    print(f"DEBUG WARNING: No patients found! Total patients in metadata with is_evaluated=0: {patients_with_0}")
+                print(f"Found {len(results)} patients from hybrid search")
             
             return results
             
@@ -291,7 +254,7 @@ class HybridMatcher:
                                         location_weight: Optional[float] = None) -> List[Dict[str, Any]]:
         """Find most eligible patients for a specific trial using hybrid matching"""
         try:
-            # Get trial information from database to get is_evaluated status
+            # Get trial information from database
             trial_data = self.db_utils.get_trial_by_id(trial_id)
             if not trial_data:
                 # Fallback to metadata if not in database
@@ -299,19 +262,16 @@ class HybridMatcher:
                 if not trial_info:
                     print(f"Trial {trial_id} not found in database or metadata")
                     return []
-                trial_is_evaluated = trial_info.get('is_evaluated', 0)
                 query_text = f"{trial_info['title']} {trial_info['condition']} {trial_info['phase']}"
                 print(f"Finding patients for trial: {trial_info['title']}")
                 print(f"Condition: {trial_info['condition']}")
                 print(f"Phase: {trial_info['phase']}")
             else:
                 # Use database trial data
-                trial_is_evaluated = trial_data.get('is_evaluated', 0)
                 query_text = f"{trial_data['title']} {trial_data['condition']} {trial_data['phase']}"
                 print(f"Finding patients for trial: {trial_data['title']}")
                 print(f"Condition: {trial_data['condition']}")
                 print(f"Phase: {trial_data['phase']}")
-                print(f"Trial is_evaluated status: {trial_is_evaluated}")
             
             # Get trial location if location filtering is enabled
             trial_lat = None
@@ -354,8 +314,8 @@ class HybridMatcher:
                 else:
                     print("Trial location not available - location filtering will be skipped")
             
-            # Perform hybrid search with trial is_evaluated status
-            matching_patients = self.hybrid_search(query_text, index_type="patient", trial_is_evaluated=trial_is_evaluated)
+            # Perform hybrid search
+            matching_patients = self.hybrid_search(query_text, index_type="patient")
             
             # Apply age and gender filters
             filtered_patients = []

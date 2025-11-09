@@ -1,0 +1,246 @@
+{
+  "overall_metrics": {
+    "total_matches": 16,
+    "correct": 11,
+    "incorrect": 5,
+    "not_evaluated": 0,
+    "evaluated_matches": 16,
+    "overall_accuracy": 68.75
+  },
+  "patient_metrics": {
+    "MRN0001": {
+      "total": 8,
+      "correct": 1,
+      "incorrect": 3,
+      "not_evaluated": 0,
+      "accuracy": 12.5
+    },
+    "MRN0002": {
+      "total": 8,
+      "correct": 2,
+      "incorrect": 2,
+      "not_evaluated": 0,
+      "accuracy": 25.0
+    },
+    "MRN0003": {
+      "total": 8,
+      "correct": 4,
+      "incorrect": 0,
+      "not_evaluated": 0,
+      "accuracy": 50.0
+    },
+    "MRN0004": {
+      "total": 8,
+      "correct": 4,
+      "incorrect": 0,
+      "not_evaluated": 0,
+      "accuracy": 50.0
+    }
+  },
+  "decision_type_metrics": {
+    "ELIGIBLE": {
+      "correct": 8,
+      "incorrect": 4,
+      "total": 12
+    },
+    "NOT ELIGIBLE": {
+      "correct": 3,
+      "incorrect": 1,
+      "total": 4
+    }
+  },
+  "eligible_metrics": {
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 4,
+    "precision": 100.0,
+    "recall": 66.66666666666666,
+    "f1_score": 80.0
+  },
+  "detailed_comparisons": [
+    {
+      "mrn": "MRN0001",
+      "trial_id": "NCT01103323",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Diagnosis: Metastatic colorectal cancer (MCRC)",
+        "Prior standard therapies failed",
+        "Age >18, organ function, no exclusion violations",
+        "No infection, controlled hypertension"
+      ]
+    },
+    {
+      "mrn": "MRN0001",
+      "trial_id": "NCT04607421",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "NEED_MORE_INFO",
+      "is_correct": false,
+      "golden_reasons": [
+        "Diagnosis: Metastatic colorectal cancer",
+        "Assumed to have BRAF V600E status or eligible for testing",
+        "Age >18, no prior BRAF inhibitor exposure",
+        "No major comorbidities"
+      ]
+    },
+    {
+      "mrn": "MRN0001",
+      "trial_id": "NCT04793958",
+      "golden_decision": "NOT ELIGIBLE",
+      "llm_decision": "NEED_MORE_INFO",
+      "is_correct": false,
+      "golden_reasons": [
+        "KRAS G12C mutation status not reported/likely negative"
+      ]
+    },
+    {
+      "mrn": "MRN0001",
+      "trial_id": "NCT05197322",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "NOT ELIGIBLE",
+      "is_correct": false,
+      "golden_reasons": [
+        "Stage IV colorectal cancer (likely metastatic, non-resectable)",
+        "Age and organ function criteria met",
+        "No surgical exclusion"
+      ]
+    },
+    {
+      "mrn": "MRN0002",
+      "trial_id": "NCT04793958",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "KRAS G12C+ metastatic colorectal cancer",
+        "Failed first-line therapy",
+        "Meets age, organ and performance criteria"
+      ]
+    },
+    {
+      "mrn": "MRN0002",
+      "trial_id": "NCT00719797",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "NOT ELIGIBLE",
+      "is_correct": false,
+      "golden_reasons": [
+        "Stage IV, chemonaïve for metastatic setting (if first-line FOLFOX completed for adjuvant, not metastatic)",
+        "KRAS status compatible with standard-of-care arms",
+        "No exclusion by age or comorbidity"
+      ]
+    },
+    {
+      "mrn": "MRN0002",
+      "trial_id": "NCT02997228",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Metastatic colorectal cancer",
+        "Likely MSI status not known, but accepted as general mCRC if otherwise fits",
+        "No exclusion listed"
+      ]
+    },
+    {
+      "mrn": "MRN0002",
+      "trial_id": "NCT02015923",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "NEED_MORE_INFO",
+      "is_correct": false,
+      "golden_reasons": [
+        "Unresectable synchronous metastases",
+        "Colorectal cancer >12cm from anal verge based on colon cancer diagnosis",
+        "No contraindication to chemo"
+      ]
+    },
+    {
+      "mrn": "MRN0003",
+      "trial_id": "NCT03983993",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "RAS wildtype not stated, but as heavily pretreated eligible for exploratory phase 2 eligibility",
+        "Advanced metastatic colorectal carcinoma"
+      ]
+    },
+    {
+      "mrn": "MRN0003",
+      "trial_id": "NCT02675946",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Advanced GI/colorectal cancer, heavily pretreated",
+        "Appropriate age and performance",
+        "No prior specified therapy exclusion stated"
+      ]
+    },
+    {
+      "mrn": "MRN0003",
+      "trial_id": "NCT03312374",
+      "golden_decision": "NOT ELIGIBLE",
+      "llm_decision": "NOT ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Trial limited to early/intermediate post-operative CRC (Stage II/III)",
+        "Patient is metastatic (not early-stage, not post-surgery surveillance)"
+      ]
+    },
+    {
+      "mrn": "MRN0003",
+      "trial_id": "NCT04457297",
+      "golden_decision": "NOT ELIGIBLE",
+      "llm_decision": "NOT ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Trial requires ctDNA+ post-curative resection, Stage III",
+        "Patient is metastatic, not resected or ctDNA+ post-surgery"
+      ]
+    },
+    {
+      "mrn": "MRN0004",
+      "trial_id": "NCT03803553",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Resected Stage III adenocarcinoma, completed standard adjuvant chemo",
+        "ctDNA+ molecular relapse, meets age and organ criteria"
+      ]
+    },
+    {
+      "mrn": "MRN0004",
+      "trial_id": "NCT03312374",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Stage III CRC post-surgery, ECOG ≤1, ctDNA monitoring possible"
+      ]
+    },
+    {
+      "mrn": "MRN0004",
+      "trial_id": "NCT04457297",
+      "golden_decision": "ELIGIBLE",
+      "llm_decision": "ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Stage III colon cancer, post-surgery, ctDNA+",
+        "Organ function and age criteria met"
+      ]
+    },
+    {
+      "mrn": "MRN0004",
+      "trial_id": "NCT05197322",
+      "golden_decision": "NOT ELIGIBLE",
+      "llm_decision": "NOT ELIGIBLE",
+      "is_correct": true,
+      "golden_reasons": [
+        "Trial is for unresectable or inoperable with MSI-H/MMR-D",
+        "Patient is post-surgery and MSI status not reported"
+      ]
+    }
+  ]
+}
