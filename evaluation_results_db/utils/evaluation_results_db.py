@@ -806,6 +806,18 @@ class EvaluationResultsDB:
                     reasoning_result = connection.execute(reasoning_check)
                     reasoning_exists = reasoning_result.fetchone()[0]
                     
+                    # Check if new criteria count columns exist
+                    inclusion_met_count_check = text("""
+                        SELECT EXISTS (
+                            SELECT FROM information_schema.columns 
+                            WHERE table_schema = 'insightsedge' 
+                            AND table_name = 'trial_to_patient'
+                            AND column_name = 'inclusion_criteria_met_count'
+                        )
+                    """)
+                    inclusion_met_count_result = connection.execute(inclusion_met_count_check)
+                    inclusion_met_count_exists = inclusion_met_count_result.fetchone()[0]
+                    
                     # Add missing columns
                     if not mrn_exists:
                         print("📊 Adding mrn column to existing table...")
@@ -822,7 +834,19 @@ class EvaluationResultsDB:
                         connection.execute(alter_reasoning)
                         print("✅ reasoning column added successfully!")
                     
-                    if not mrn_exists or not reasoning_exists:
+                    if not inclusion_met_count_exists:
+                        print("📊 Adding criteria count columns to existing table...")
+                        alter_inclusion_met = text("ALTER TABLE insightsedge.trial_to_patient ADD COLUMN IF NOT EXISTS inclusion_criteria_met_count INTEGER DEFAULT 0")
+                        connection.execute(alter_inclusion_met)
+                        alter_exclusion_violated = text("ALTER TABLE insightsedge.trial_to_patient ADD COLUMN IF NOT EXISTS exclusion_criteria_violated_count INTEGER DEFAULT 0")
+                        connection.execute(alter_exclusion_violated)
+                        alter_total_inclusion = text("ALTER TABLE insightsedge.trial_to_patient ADD COLUMN IF NOT EXISTS total_inclusion_criteria INTEGER DEFAULT 0")
+                        connection.execute(alter_total_inclusion)
+                        alter_total_exclusion = text("ALTER TABLE insightsedge.trial_to_patient ADD COLUMN IF NOT EXISTS total_exclusion_criteria INTEGER DEFAULT 0")
+                        connection.execute(alter_total_exclusion)
+                        print("✅ Criteria count columns added successfully!")
+                    
+                    if not mrn_exists or not reasoning_exists or not inclusion_met_count_exists:
                         connection.commit()
                     
                     self._t2p_table_created = True
@@ -841,6 +865,10 @@ class EvaluationResultsDB:
                             reasoning TEXT,
                             key_criteria_met JSONB,
                             key_criteria_missed JSONB,
+                            inclusion_criteria_met_count INTEGER DEFAULT 0,
+                            exclusion_criteria_violated_count INTEGER DEFAULT 0,
+                            total_inclusion_criteria INTEGER DEFAULT 0,
+                            total_exclusion_criteria INTEGER DEFAULT 0,
                             recommendations TEXT,
                             isevaluated INTEGER DEFAULT 1,
                             created_at TIMESTAMP DEFAULT NOW(),
@@ -974,9 +1002,36 @@ class EvaluationResultsDB:
                         eligibility_status = eval_item.get('eligibility_status', 'NEED_MORE_INFO')
                         confidence_score = eval_item.get('confidence_score', 0.0)
                         reasoning = eval_item.get('reasoning', '')
-                        key_criteria_met = eval_item.get('key_criteria_met', [])
-                        key_criteria_missed = eval_item.get('key_criteria_missed', [])
+                        key_criteria_met = eval_item.get('key_criteria_met', []) or eval_item.get('inclusion_criteria_met', [])
+                        key_criteria_missed = eval_item.get('key_criteria_missed', []) or eval_item.get('exclusion_criteria_violated', [])
                         recommendations = eval_item.get('recommendations', '')
+                        
+                        # Extract criteria counts from LLM response
+                        inclusion_criteria_met_count = eval_item.get('inclusion_criteria_met_count', 0)
+                        exclusion_criteria_violated_count = eval_item.get('exclusion_criteria_violated_count', 0)
+                        total_inclusion_criteria = eval_item.get('total_inclusion_criteria', 0)
+                        total_exclusion_criteria = eval_item.get('total_exclusion_criteria', 0)
+                        
+                        # Convert to integers, defaulting to 0 if None or invalid
+                        try:
+                            inclusion_criteria_met_count = int(inclusion_criteria_met_count) if inclusion_criteria_met_count is not None else 0
+                        except (ValueError, TypeError):
+                            inclusion_criteria_met_count = 0
+                        
+                        try:
+                            exclusion_criteria_violated_count = int(exclusion_criteria_violated_count) if exclusion_criteria_violated_count is not None else 0
+                        except (ValueError, TypeError):
+                            exclusion_criteria_violated_count = 0
+                        
+                        try:
+                            total_inclusion_criteria = int(total_inclusion_criteria) if total_inclusion_criteria is not None else 0
+                        except (ValueError, TypeError):
+                            total_inclusion_criteria = 0
+                        
+                        try:
+                            total_exclusion_criteria = int(total_exclusion_criteria) if total_exclusion_criteria is not None else 0
+                        except (ValueError, TypeError):
+                            total_exclusion_criteria = 0
                         
                         # Extract MRN from patient_info
                         mrn = eval_patient_info.get('mrn') or eval_patient_info.get('patient_mrn')
@@ -1002,6 +1057,10 @@ class EvaluationResultsDB:
                             'confidence_score': float(confidence_score) if confidence_score else 0.0,
                             'reasoning': reasoning,
                             'recommendations': recommendations,
+                            'inclusion_criteria_met_count': inclusion_criteria_met_count,
+                            'exclusion_criteria_violated_count': exclusion_criteria_violated_count,
+                            'total_inclusion_criteria': total_inclusion_criteria,
+                            'total_exclusion_criteria': total_exclusion_criteria,
                             'isevaluated': 1
                         }
                         
@@ -1035,6 +1094,10 @@ class EvaluationResultsDB:
                                         reasoning = :reasoning,
                                         key_criteria_met = NULL::jsonb,
                                         key_criteria_missed = NULL::jsonb,
+                                        inclusion_criteria_met_count = :inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = :exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = :total_inclusion_criteria,
+                                        total_exclusion_criteria = :total_exclusion_criteria,
                                         recommendations = :recommendations,
                                         isevaluated = :isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1052,6 +1115,10 @@ class EvaluationResultsDB:
                                         reasoning = :reasoning,
                                         key_criteria_met = NULL::jsonb,
                                         key_criteria_missed = CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        inclusion_criteria_met_count = :inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = :exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = :total_inclusion_criteria,
+                                        total_exclusion_criteria = :total_exclusion_criteria,
                                         recommendations = :recommendations,
                                         isevaluated = :isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1069,6 +1136,10 @@ class EvaluationResultsDB:
                                         reasoning = :reasoning,
                                         key_criteria_met = CAST(:key_criteria_met AS TEXT)::jsonb,
                                         key_criteria_missed = NULL::jsonb,
+                                        inclusion_criteria_met_count = :inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = :exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = :total_inclusion_criteria,
+                                        total_exclusion_criteria = :total_exclusion_criteria,
                                         recommendations = :recommendations,
                                         isevaluated = :isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1087,6 +1158,10 @@ class EvaluationResultsDB:
                                         reasoning = :reasoning,
                                         key_criteria_met = CAST(:key_criteria_met AS TEXT)::jsonb,
                                         key_criteria_missed = CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        inclusion_criteria_met_count = :inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = :exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = :total_inclusion_criteria,
+                                        total_exclusion_criteria = :total_exclusion_criteria,
                                         recommendations = :recommendations,
                                         isevaluated = :isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1107,10 +1182,16 @@ class EvaluationResultsDB:
                                 upsert_query = text("""
                                     INSERT INTO insightsedge.trial_to_patient (
                                         patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                        reasoning, key_criteria_met, key_criteria_missed, 
+                                        inclusion_criteria_met_count, exclusion_criteria_violated_count,
+                                        total_inclusion_criteria, total_exclusion_criteria,
+                                        recommendations, isevaluated
                                     ) VALUES (
                                         :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                        :reasoning, NULL::jsonb, NULL::jsonb, :recommendations, :isevaluated
+                                        :reasoning, NULL::jsonb, NULL::jsonb, 
+                                        :inclusion_criteria_met_count, :exclusion_criteria_violated_count,
+                                        :total_inclusion_criteria, :total_exclusion_criteria,
+                                        :recommendations, :isevaluated
                                     )
                                     ON CONFLICT (trial_id, patient_id) 
                                     DO UPDATE SET
@@ -1120,6 +1201,10 @@ class EvaluationResultsDB:
                                         reasoning = EXCLUDED.reasoning,
                                         key_criteria_met = EXCLUDED.key_criteria_met,
                                         key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        inclusion_criteria_met_count = EXCLUDED.inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = EXCLUDED.exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = EXCLUDED.total_inclusion_criteria,
+                                        total_exclusion_criteria = EXCLUDED.total_exclusion_criteria,
                                         recommendations = EXCLUDED.recommendations,
                                         isevaluated = EXCLUDED.isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1131,10 +1216,16 @@ class EvaluationResultsDB:
                                 upsert_query = text("""
                                     INSERT INTO insightsedge.trial_to_patient (
                                         patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                        reasoning, key_criteria_met, key_criteria_missed,
+                                        inclusion_criteria_met_count, exclusion_criteria_violated_count,
+                                        total_inclusion_criteria, total_exclusion_criteria,
+                                        recommendations, isevaluated
                                     ) VALUES (
                                         :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                        :reasoning, NULL::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, :recommendations, :isevaluated
+                                        :reasoning, NULL::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        :inclusion_criteria_met_count, :exclusion_criteria_violated_count,
+                                        :total_inclusion_criteria, :total_exclusion_criteria,
+                                        :recommendations, :isevaluated
                                     )
                                     ON CONFLICT (trial_id, patient_id) 
                                     DO UPDATE SET
@@ -1144,6 +1235,10 @@ class EvaluationResultsDB:
                                         reasoning = EXCLUDED.reasoning,
                                         key_criteria_met = EXCLUDED.key_criteria_met,
                                         key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        inclusion_criteria_met_count = EXCLUDED.inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = EXCLUDED.exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = EXCLUDED.total_inclusion_criteria,
+                                        total_exclusion_criteria = EXCLUDED.total_exclusion_criteria,
                                         recommendations = EXCLUDED.recommendations,
                                         isevaluated = EXCLUDED.isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1155,10 +1250,16 @@ class EvaluationResultsDB:
                                 upsert_query = text("""
                                     INSERT INTO insightsedge.trial_to_patient (
                                         patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                        reasoning, key_criteria_met, key_criteria_missed,
+                                        inclusion_criteria_met_count, exclusion_criteria_violated_count,
+                                        total_inclusion_criteria, total_exclusion_criteria,
+                                        recommendations, isevaluated
                                     ) VALUES (
                                         :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, NULL::jsonb, :recommendations, :isevaluated
+                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, NULL::jsonb,
+                                        :inclusion_criteria_met_count, :exclusion_criteria_violated_count,
+                                        :total_inclusion_criteria, :total_exclusion_criteria,
+                                        :recommendations, :isevaluated
                                     )
                                     ON CONFLICT (trial_id, patient_id) 
                                     DO UPDATE SET
@@ -1168,6 +1269,10 @@ class EvaluationResultsDB:
                                         reasoning = EXCLUDED.reasoning,
                                         key_criteria_met = EXCLUDED.key_criteria_met,
                                         key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        inclusion_criteria_met_count = EXCLUDED.inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = EXCLUDED.exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = EXCLUDED.total_inclusion_criteria,
+                                        total_exclusion_criteria = EXCLUDED.total_exclusion_criteria,
                                         recommendations = EXCLUDED.recommendations,
                                         isevaluated = EXCLUDED.isevaluated,
                                         updated_at = CURRENT_TIMESTAMP
@@ -1180,10 +1285,15 @@ class EvaluationResultsDB:
                                 upsert_query = text("""
                                     INSERT INTO insightsedge.trial_to_patient (
                                         patient_id, mrn, trial_id, eligibility_status, confidence_score,
-                                        reasoning, key_criteria_met, key_criteria_missed, recommendations, isevaluated
+                                        reasoning, key_criteria_met, key_criteria_missed,
+                                        inclusion_criteria_met_count, exclusion_criteria_violated_count,
+                                        total_inclusion_criteria, total_exclusion_criteria,
+                                        recommendations, isevaluated
                                     ) VALUES (
                                         :patient_id, :mrn, :trial_id, :eligibility_status, :confidence_score,
-                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb, 
+                                        :reasoning, CAST(:key_criteria_met AS TEXT)::jsonb, CAST(:key_criteria_missed AS TEXT)::jsonb,
+                                        :inclusion_criteria_met_count, :exclusion_criteria_violated_count,
+                                        :total_inclusion_criteria, :total_exclusion_criteria,
                                         :recommendations, :isevaluated
                                     )
                                     ON CONFLICT (trial_id, patient_id) 
@@ -1194,6 +1304,10 @@ class EvaluationResultsDB:
                                         reasoning = EXCLUDED.reasoning,
                                         key_criteria_met = EXCLUDED.key_criteria_met,
                                         key_criteria_missed = EXCLUDED.key_criteria_missed,
+                                        inclusion_criteria_met_count = EXCLUDED.inclusion_criteria_met_count,
+                                        exclusion_criteria_violated_count = EXCLUDED.exclusion_criteria_violated_count,
+                                        total_inclusion_criteria = EXCLUDED.total_inclusion_criteria,
+                                        total_exclusion_criteria = EXCLUDED.total_exclusion_criteria,
                                         recommendations = EXCLUDED.recommendations,
                                         isevaluated = EXCLUDED.isevaluated,
                                         updated_at = CURRENT_TIMESTAMP

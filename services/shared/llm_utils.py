@@ -119,8 +119,11 @@ class LLMUtils:
             "reasoning": "Detailed explanation of eligibility assessment",
             "inclusion_criteria_met": ["criteria1", "criteria2", ...],
             "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "total_inclusion_criteria": 8,
+            "total_exclusion_criteria": 12,
             "recommendations": "Specific recommendations for next steps",
-            "priority_score": 75,
             "evaluation_timestamp": "{datetime.now().isoformat()}"
         }}
         """
@@ -175,8 +178,11 @@ class LLMUtils:
             "reasoning": "Detailed explanation of eligibility assessment",
             "inclusion_criteria_met": ["criteria1", "criteria2", ...],
             "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "total_inclusion_criteria": 8,
+            "total_exclusion_criteria": 12,
             "recommendations": "Specific recommendations for next steps",
-            "priority_score": 75,
             "evaluation_timestamp": "{datetime.now().isoformat()}"
         }}
         """
@@ -783,10 +789,13 @@ class LLMUtils:
                     "trial_title": "{trials[0].get('title', 'Unknown')}",
                     "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
                     "confidence_score": 85,
-                    "priority_score": 90,
                     "reasoning": "Detailed explanation of eligibility decision",
-                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
-                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
                     "recommendations": "Specific recommendations for this trial"
                 }},
                 {{
@@ -794,10 +803,13 @@ class LLMUtils:
                     "trial_title": "{trials[1].get('title', 'Unknown') if len(trials) > 1 else 'N/A'}",
                     "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
                     "confidence_score": 75,
-                    "priority_score": 80,
                     "reasoning": "Detailed explanation of eligibility decision",
-                    "key_criteria_met": ["criteria1", "criteria2"],
-                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
                     "recommendations": "Specific recommendations for this trial"
                 }}
                 // ... continue for all {len(trials)} trials
@@ -1066,10 +1078,13 @@ class LLMUtils:
                     "mrn": "{patients[0].get('mrn', 'Unknown')}",
                     "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
                     "confidence_score": 85,
-                    "priority_score": 90,
                     "reasoning": "Detailed explanation of eligibility decision",
-                    "key_criteria_met": ["criteria1", "criteria2", "criteria3"],
-                    "key_criteria_missed": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
                     "recommendations": "Specific recommendations for this patient"
                 }},
                 {{
@@ -1077,10 +1092,13 @@ class LLMUtils:
                     "mrn": "{patients[1].get('mrn', 'Unknown') if len(patients) > 1 else 'N/A'}",
                     "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
                     "confidence_score": 75,
-                    "priority_score": 80,
                     "reasoning": "Detailed explanation of eligibility decision",
-                    "key_criteria_met": ["criteria1", "criteria2"],
-                    "key_criteria_missed": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
                     "recommendations": "Specific recommendations for this patient"
                 }}
                 // ... continue for all {len(patients)} patients

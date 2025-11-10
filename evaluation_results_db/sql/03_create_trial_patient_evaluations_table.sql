@@ -28,6 +28,12 @@ CREATE TABLE IF NOT EXISTS insightsedge.trial_to_patient (
     key_criteria_met JSONB, -- Array of criteria that were met
     key_criteria_missed JSONB, -- Array of criteria that were missed
     
+    -- Criteria Counts
+    inclusion_criteria_met_count INTEGER DEFAULT 0, -- Number of inclusion criteria met
+    exclusion_criteria_violated_count INTEGER DEFAULT 0, -- Number of exclusion criteria violated
+    total_inclusion_criteria INTEGER DEFAULT 0, -- Total number of inclusion criteria
+    total_exclusion_criteria INTEGER DEFAULT 0, -- Total number of exclusion criteria
+    
     -- Recommendations
     recommendations TEXT,
     
@@ -110,6 +116,10 @@ COMMENT ON COLUMN insightsedge.trial_to_patient.confidence_score IS 'Confidence 
 COMMENT ON COLUMN insightsedge.trial_to_patient.reasoning IS 'Detailed reasoning for the eligibility assessment';
 COMMENT ON COLUMN insightsedge.trial_to_patient.key_criteria_met IS 'JSONB array of key criteria that were met';
 COMMENT ON COLUMN insightsedge.trial_to_patient.key_criteria_missed IS 'JSONB array of key criteria that were missed';
+COMMENT ON COLUMN insightsedge.trial_to_patient.inclusion_criteria_met_count IS 'Number of inclusion criteria met';
+COMMENT ON COLUMN insightsedge.trial_to_patient.exclusion_criteria_violated_count IS 'Number of exclusion criteria violated';
+COMMENT ON COLUMN insightsedge.trial_to_patient.total_inclusion_criteria IS 'Total number of inclusion criteria';
+COMMENT ON COLUMN insightsedge.trial_to_patient.total_exclusion_criteria IS 'Total number of exclusion criteria';
 COMMENT ON COLUMN insightsedge.trial_to_patient.recommendations IS 'Recommendations for next steps';
 COMMENT ON COLUMN insightsedge.trial_to_patient.isevaluated IS 'Flag indicating if evaluation has been completed (1 = evaluated, 0 = not evaluated)';
 
