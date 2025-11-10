@@ -57,7 +57,7 @@ MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "30"))  # Max p
 
 # Trial-to-Patient Matching Configuration
 TOP_K_PATIENTS = int(os.getenv("TOP_K_PATIENTS", "100"))  # Number of top patients to retrieve from hybrid matching
-TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "20"))  # Patients per LLM batch evaluation
+TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "1"))  # Patients per LLM batch evaluation
 
 # Patient-to-Trial Matching Configuration
 TOP_K_TRIALS = int(os.getenv("TOP_K_TRIALS", "100"))  # Number of top trials to retrieve from hybrid matching (same as TOP_K_PATIENTS)

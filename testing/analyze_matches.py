@@ -76,3 +76,4 @@ for nct_id in sorted(all_eligible_nct_ids):
 
 print(f"\nTotal unique eligible NCT IDs: {len(all_eligible_nct_ids)}")
 
+

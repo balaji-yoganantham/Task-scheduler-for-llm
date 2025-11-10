@@ -155,3 +155,4 @@ print(f"Matching NCT IDs: {len(trial_nct_ids & match_nct_ids)}")
 print(f"Missing in trial.json: {len(missing_in_trials)}")
 print(f"Extra in trial.json: {len(missing_in_matches)}")
 
+
