@@ -9,17 +9,15 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, Tuple, Optional
 
-from services.patient_to_trial.keyword_generator import PatientKeywordGenerator
 from services.patient_to_trial.patient_embedding import PatientEmbeddingGenerator
 from services.trial_to_patient.trial_evaluator import TrialEvaluator
 from services.shared.database_utils import safe_json_dump, DatabaseUtils
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
-from config import DEFAULT_PATIENT_LIMIT, KEYWORD_GENERATION_PATIENT_LIMIT
+from config import DEFAULT_PATIENT_LIMIT
 
 class TrialToPatientOrchestrator:
     def __init__(self):
-        # Reuse patient components for keyword and embedding generation
-        self.keyword_generator = PatientKeywordGenerator()
+        # Reuse patient components for embedding generation
         self.embedding_generator = PatientEmbeddingGenerator()
         self.trial_evaluator = TrialEvaluator()
         self.eval_db = EvaluationResultsDB()
@@ -29,29 +27,10 @@ class TrialToPatientOrchestrator:
         self.results_dir = Path("results")
         self.results_dir.mkdir(exist_ok=True)
 
-    def run_patient_keyword_generation(self, patient_limit: int = None) -> Dict[str, Any]:
-        """Run keyword generation for patients (Step 1)"""
-        print("=" * 80)
-        print("STEP 1: PATIENT KEYWORD GENERATION")
-        print("=" * 80)
-        
-        # Use keyword generation limit if not specified - Only 50 patients for keyword generation
-        if patient_limit is None:
-            patient_limit = KEYWORD_GENERATION_PATIENT_LIMIT
-            
-        results = self.keyword_generator.run_keyword_generation(limit=patient_limit)
-        
-        if results:
-            print("SUCCESS: Patient keyword generation completed successfully!")
-            return results
-        else:
-            print("ERROR: Patient keyword generation failed!")
-            return {}
-
     def run_patient_embedding_generation(self, patient_limit: int = None) -> Dict[str, Any]:
-        """Run embedding generation for patients (Step 2)"""
+        """Run embedding generation for patients (Step 1)"""
         print("=" * 80)
-        print("STEP 2: PATIENT EMBEDDING GENERATION")
+        print("STEP 1: PATIENT EMBEDDING GENERATION")
         print("=" * 80)
         
         # Use config default if not specified
@@ -71,9 +50,9 @@ class TrialToPatientOrchestrator:
                                   gender: str = None,
                                   max_distance_km: Optional[float] = None,
                                   location_weight: Optional[float] = None) -> Dict[str, Any]:
-        """Run trial-to-patient matching pipeline (Step 3)"""
+        """Run trial-to-patient matching pipeline (Step 2)"""
         print("=" * 80)
-        print("STEP 3: TRIAL-TO-PATIENT MATCHING")
+        print("STEP 2: TRIAL-TO-PATIENT MATCHING")
         print("=" * 80)
         
         # Only apply filters if explicitly provided
@@ -135,18 +114,7 @@ class TrialToPatientOrchestrator:
         }
         
         try:
-            # Step 1: Patient Keyword Generation
-            keyword_results = self.run_patient_keyword_generation(patient_limit)
-            pipeline_results["steps"]["patient_keyword_generation"] = {
-                "status": "completed" if keyword_results else "skipped",
-                "results": keyword_results
-            }
-            
-            if not keyword_results:
-                print("WARNING: No patient data found for keyword generation - continuing with pipeline")
-                print("NOTE: Pipeline will continue using existing keywords/embeddings if available")
-            
-            # Step 2: Patient Embedding Generation
+            # Step 1: Patient Embedding Generation
             embedding_results = self.run_patient_embedding_generation(patient_limit)
             pipeline_results["steps"]["patient_embedding_generation"] = {
                 "status": "completed" if embedding_results else "skipped",
@@ -157,7 +125,7 @@ class TrialToPatientOrchestrator:
                 print("WARNING: No patient data found for embedding generation - continuing with pipeline")
                 print("NOTE: Pipeline will continue using existing embeddings if available")
             
-            # Step 3: Trial-to-Patient Matching
+            # Step 2: Trial-to-Patient Matching
             matching_results = self.run_trial_patient_matching(
                 trial_id, age_range, gender, max_distance_km, location_weight
             )
@@ -270,9 +238,7 @@ class TrialToPatientOrchestrator:
 
     def run_individual_step(self, step: str, **kwargs) -> Dict[str, Any]:
         """Run individual pipeline steps"""
-        if step == "keywords":
-            return self.run_patient_keyword_generation(kwargs.get('patient_limit'))
-        elif step == "embeddings":
+        if step == "embeddings":
             return self.run_patient_embedding_generation(kwargs.get('patient_limit'))
         elif step == "matching":
             return self.run_trial_patient_matching(
@@ -296,7 +262,7 @@ def main():
     parser.add_argument("--gender", choices=['Male', 'Female'], help="Gender filter (optional - if not specified, processes all patients)")
     
     # Individual step options
-    parser.add_argument("--step", choices=['keywords', 'embeddings', 'matching'], 
+    parser.add_argument("--step", choices=['embeddings', 'matching'], 
                        help="Run only a specific step")
     
     args = parser.parse_args()
