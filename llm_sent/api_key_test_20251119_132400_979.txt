@@ -1,0 +1,6 @@
+=== PROMPT ===
+
+=== METADATA ===
+test: True
+
+Say 'API key is working' if you can read this. Respond with only those words.

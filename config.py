@@ -12,11 +12,19 @@ USE_DUMMY_DATA = False
 USE_LLM_PROCESSING = os.getenv("USE_LLM_PROCESSING", "true").lower() == "true"
 USE_DATABASE = os.getenv("USE_DATABASE", "true").lower() == "true"
 
-# Gemini API Configuration
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyAaK5LASwLAzQljsficijwt6--HTPztOx4")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-exp")
+# OpenAI API Configuration
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")  # GPT-4o Mini model
+OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.2"))
+OPENAI_MAX_TOKENS = int(os.getenv("OPENAI_MAX_TOKENS", "8192"))  # Max output tokens
+OPENAI_TIMEOUT = int(os.getenv("OPENAI_TIMEOUT", "300"))  # Increased to 5 minutes for batch operations
+OPENAI_MAX_RETRIES = int(os.getenv("OPENAI_MAX_RETRIES", "3"))
+
+# Legacy Gemini Configuration (kept for backward compatibility, but not used)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", "0.2"))
-GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))  # Standard limit for Gemini models (8192 tokens)
+GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "8192"))
 GEMINI_TIMEOUT = int(os.getenv("GEMINI_TIMEOUT", "60"))
 GEMINI_MAX_RETRIES = int(os.getenv("GEMINI_MAX_RETRIES", "3"))
 
@@ -52,15 +60,17 @@ ENABLE_PATIENT_TO_TRIAL_FLOW = os.getenv("ENABLE_PATIENT_TO_TRIAL_FLOW", "false"
 ENABLE_TRIAL_TO_PATIENT_FLOW = os.getenv("ENABLE_TRIAL_TO_PATIENT_FLOW", "true").lower() == "true"  # Set to "true" to enable trial-to-patient matching
 
 # Patient Processing Configuration
-DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "100"))
-MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "30"))  # Max patients per LLM batch call
+DEFAULT_PATIENT_LIMIT = int(os.getenv("DEFAULT_PATIENT_LIMIT", "50"))
+# Keyword Generation Configuration - Only 50 patients for keyword generation
+KEYWORD_GENERATION_PATIENT_LIMIT = int(os.getenv("KEYWORD_GENERATION_PATIENT_LIMIT", "50"))  # Only 50 patients for keyword generation
+MAX_KEYWORD_BATCH_SIZE = int(os.getenv("MAX_KEYWORD_BATCH_SIZE", "20"))  # Max patients per LLM batch call (default: 20)
 
 # Trial-to-Patient Matching Configuration
-TOP_K_PATIENTS = int(os.getenv("TOP_K_PATIENTS", "100"))  # Number of top patients to retrieve from hybrid matching
+TOP_K_PATIENTS = int(os.getenv("TOP_K_PATIENTS", "50"))  # Number of top patients to retrieve from hybrid matching
 TRIAL_PATIENT_LLM_BATCH_SIZE = int(os.getenv("TRIAL_PATIENT_LLM_BATCH_SIZE", "1"))  # Patients per LLM batch evaluation
 
 # Patient-to-Trial Matching Configuration
-TOP_K_TRIALS = int(os.getenv("TOP_K_TRIALS", "100"))  # Number of top trials to retrieve from hybrid matching (same as TOP_K_PATIENTS)
+TOP_K_TRIALS = int(os.getenv("TOP_K_TRIALS", "50"))  # Number of top trials to retrieve from hybrid matching (same as TOP_K_PATIENTS)
 PATIENT_TRIAL_LLM_BATCH_SIZE = int(os.getenv("PATIENT_TRIAL_LLM_BATCH_SIZE", "20"))  # Trials per LLM batch evaluation
 
 # Logging Configuration
@@ -96,6 +106,22 @@ TRIAL_CHUNK_WEIGHTS = {
     "eligibility_criteria": float(os.getenv("CHUNK_WEIGHT_ELIGIBILITY", "0.15"))
 }
 
+# Auto Evaluation Monitor Configuration
+# Polling interval in seconds - how often to check for new unevaluated items
+AUTO_EVAL_POLL_INTERVAL = int(os.getenv("AUTO_EVAL_POLL_INTERVAL", "5"))  # Check every 5 seconds
+
+# Batch size limits - how many items to process per polling cycle
+AUTO_EVAL_PATIENT_BATCH_SIZE = int(os.getenv("AUTO_EVAL_PATIENT_BATCH_SIZE", "10"))  # Max patients per cycle
+AUTO_EVAL_TRIAL_BATCH_SIZE = int(os.getenv("AUTO_EVAL_TRIAL_BATCH_SIZE", "5"))  # Max trials per cycle
+
+# Enable/disable flows
+AUTO_EVAL_ENABLE_PATIENTS = os.getenv("AUTO_EVAL_ENABLE_PATIENTS", "true").lower() == "true"  # Process patients
+AUTO_EVAL_ENABLE_TRIALS = os.getenv("AUTO_EVAL_ENABLE_TRIALS", "true").lower() == "true"  # Process trials
+
+# Timeout settings (seconds) - max time per pipeline run
+AUTO_EVAL_PATIENT_TIMEOUT = int(os.getenv("AUTO_EVAL_PATIENT_TIMEOUT", "300"))  # 5 minutes per patient
+AUTO_EVAL_TRIAL_TIMEOUT = int(os.getenv("AUTO_EVAL_TRIAL_TIMEOUT", "600"))  # 10 minutes per trial
+
 # API Configuration
 API_TITLE = "Task Scheduler LLM Service"
 API_DESCRIPTION = "Standalone task scheduler for LLM processing"
@@ -123,3 +149,11 @@ print(f"  - TOP_K_PATIENTS: {TOP_K_PATIENTS} (Top K patients from hybrid matchin
 print(f"  - TOP_K_TRIALS: {TOP_K_TRIALS} (Top K trials from hybrid matching)")
 print(f"  - PATIENT_TRIAL_LLM_BATCH_SIZE: {PATIENT_TRIAL_LLM_BATCH_SIZE} (Trials per LLM batch)")
 print(f"  - TRIAL_PATIENT_LLM_BATCH_SIZE: {TRIAL_PATIENT_LLM_BATCH_SIZE} (Patients per LLM batch)")
+print(f"\nAuto Evaluation Monitor Configuration:")
+print(f"  - AUTO_EVAL_POLL_INTERVAL: {AUTO_EVAL_POLL_INTERVAL} seconds")
+print(f"  - AUTO_EVAL_ENABLE_PATIENTS: {AUTO_EVAL_ENABLE_PATIENTS} (Patient processing: {'ON' if AUTO_EVAL_ENABLE_PATIENTS else 'OFF'})")
+print(f"  - AUTO_EVAL_ENABLE_TRIALS: {AUTO_EVAL_ENABLE_TRIALS} (Trial processing: {'ON' if AUTO_EVAL_ENABLE_TRIALS else 'OFF'})")
+print(f"  - AUTO_EVAL_PATIENT_BATCH_SIZE: {AUTO_EVAL_PATIENT_BATCH_SIZE}")
+print(f"  - AUTO_EVAL_TRIAL_BATCH_SIZE: {AUTO_EVAL_TRIAL_BATCH_SIZE}")
+print(f"  - AUTO_EVAL_PATIENT_TIMEOUT: {AUTO_EVAL_PATIENT_TIMEOUT}s")
+print(f"  - AUTO_EVAL_TRIAL_TIMEOUT: {AUTO_EVAL_TRIAL_TIMEOUT}s")

@@ -14,7 +14,7 @@ from services.patient_to_trial.patient_embedding import PatientEmbeddingGenerato
 from services.trial_to_patient.trial_evaluator import TrialEvaluator
 from services.shared.database_utils import safe_json_dump, DatabaseUtils
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
-from config import DEFAULT_PATIENT_LIMIT
+from config import DEFAULT_PATIENT_LIMIT, KEYWORD_GENERATION_PATIENT_LIMIT
 
 class TrialToPatientOrchestrator:
     def __init__(self):
@@ -35,9 +35,9 @@ class TrialToPatientOrchestrator:
         print("STEP 1: PATIENT KEYWORD GENERATION")
         print("=" * 80)
         
-        # Use config default if not specified
+        # Use keyword generation limit if not specified - Only 50 patients for keyword generation
         if patient_limit is None:
-            patient_limit = DEFAULT_PATIENT_LIMIT
+            patient_limit = KEYWORD_GENERATION_PATIENT_LIMIT
             
         results = self.keyword_generator.run_keyword_generation(limit=patient_limit)
         

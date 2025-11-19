@@ -8,6 +8,7 @@ from datetime import datetime
 from typing import List, Dict, Any
 from services.shared.database_utils import DatabaseUtils
 from services.shared.llm_utils import LLMUtils
+from config import KEYWORD_GENERATION_PATIENT_LIMIT
 
 class PatientKeywordGenerator:
     def __init__(self):
@@ -239,9 +240,13 @@ class PatientKeywordGenerator:
         
         return results
 
-    def run_keyword_generation(self, limit: int = 50) -> Dict[str, Any]:
+    def run_keyword_generation(self, limit: int = None) -> Dict[str, Any]:
         """Main method to run keyword generation process - OPTIMIZED for existing patients"""
         print("Starting patient keyword generation for trial matching...")
+        
+        # Use config default if not specified - Only 50 patients for keyword generation
+        if limit is None:
+            limit = KEYWORD_GENERATION_PATIENT_LIMIT
         
         # Get patient data (only unevaluated patients - is_evaluated = 0)
         patients = self.db_utils.get_patient_data_for_keywords(limit, include_evaluated=False)
@@ -305,7 +310,7 @@ class PatientKeywordGenerator:
 def main():
     """Main function to run patient keyword generation"""
     generator = PatientKeywordGenerator()
-    results = generator.run_keyword_generation(limit=50)
+    results = generator.run_keyword_generation(limit=None)  # Will use DEFAULT_PATIENT_LIMIT from config
     
     if results:
         print("\nPatient keyword generation completed successfully!")

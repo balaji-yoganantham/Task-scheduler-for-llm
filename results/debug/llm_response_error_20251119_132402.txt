@@ -1,0 +1,8 @@
+=== PROMPT ===
+Say 'API key is working' if you can read this. Respond with only those words.
+
+=== RESPONSE ===
+API key is working
+
+=== ERROR ===
+Expecting value: line 1 column 1 (char 0)

@@ -874,6 +874,35 @@ class DatabaseUtils:
             print(f"Error updating trial evaluated status for {trial_id}: {e}")
             return False
     
+    def get_unevaluated_trial_ids(self, limit: int = 50) -> List[str]:
+        """
+        Get list of trial IDs where is_evaluated = 0
+        
+        Args:
+            limit: Maximum number of trial IDs to return
+            
+        Returns:
+            List of trial IDs (NCT IDs)
+        """
+        try:
+            with self.get_connection() as connection:
+                query = text("""
+                    SELECT nct_id 
+                    FROM insightsedge.clinical_trial_details 
+                    WHERE COALESCE(is_evaluated, 0) = 0
+                        AND overall_status IN ('RECRUITING', 'ENROLLING_BY_INVITATION', 'AVAILABLE', 
+                                               'Recruiting', 'Active, not recruiting', 'Enrolling by invitation')
+                    ORDER BY created_at DESC
+                    LIMIT :limit
+                """)
+                result = connection.execute(query, {"limit": limit})
+                
+                trial_ids = [row[0] for row in result]
+                return trial_ids
+        except Exception as e:
+            print(f"Error getting unevaluated trial IDs: {e}")
+            return []
+    
     def update_scheduler_timestamp(self, scheduler_id: int = 2) -> bool:
         """
         Update the last run timestamp for a scheduler in trial_scheduler_details table

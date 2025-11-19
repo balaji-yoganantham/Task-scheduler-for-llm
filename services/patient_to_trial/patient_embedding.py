@@ -10,6 +10,7 @@ from datetime import datetime
 from typing import List, Dict, Any
 from services.shared.database_utils import DatabaseUtils, safe_json_dump
 from services.shared.embedding_utils import EmbeddingUtils
+from config import DEFAULT_PATIENT_LIMIT
 
 class PatientEmbeddingGenerator:
     def __init__(self):
@@ -227,9 +228,13 @@ class PatientEmbeddingGenerator:
             print(f"Error saving patient embeddings: {e}")
             return {}
 
-    def run_patient_embedding_generation(self, limit: int = 50) -> Dict[str, Any]:
+    def run_patient_embedding_generation(self, limit: int = None) -> Dict[str, Any]:
         """Main method to run patient embedding generation using keywords from database"""
         print("Starting patient embedding generation for trial matching...")
+        
+        # Use config default if not specified
+        if limit is None:
+            limit = DEFAULT_PATIENT_LIMIT
         
         # Get patient data (only unevaluated patients - is_evaluated = 0)
         patients = self.db_utils.get_patient_data_for_keywords(limit, include_evaluated=False)

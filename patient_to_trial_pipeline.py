@@ -15,7 +15,7 @@ from services.patient_to_trial.patient_matcher import PatientMatcher
 from services.patient_to_trial.patient_evaluator import PatientEvaluator
 from services.shared.database_utils import safe_json_dump
 from evaluation_results_db.utils.evaluation_results_db import EvaluationResultsDB
-from config import DEFAULT_PATIENT_LIMIT
+from config import DEFAULT_PATIENT_LIMIT, KEYWORD_GENERATION_PATIENT_LIMIT
 
 class PatientToTrialOrchestrator:
     def __init__(self):
@@ -35,9 +35,9 @@ class PatientToTrialOrchestrator:
         print("STEP 1: PATIENT KEYWORD GENERATION")
         print("=" * 80)
         
-        # Use config default if not specified
+        # Use keyword generation limit if not specified - Only 50 patients for keyword generation
         if patient_limit is None:
-            patient_limit = DEFAULT_PATIENT_LIMIT
+            patient_limit = KEYWORD_GENERATION_PATIENT_LIMIT
             
         results = self.keyword_generator.run_keyword_generation(limit=patient_limit)
         
@@ -67,6 +67,15 @@ class PatientToTrialOrchestrator:
             print("ERROR: Embedding generation failed!")
             return {}
 
+    def _get_patient_id_from_mrn(self, mrn: str) -> Optional[int]:
+        """Get patient_id from MRN"""
+        from services.shared.database_utils import DatabaseUtils
+        db_utils = DatabaseUtils()
+        patient_data = db_utils.get_patient_by_mrn(mrn)
+        if patient_data:
+            return patient_data.get('patient_id')
+        return None
+    
     def run_patient_trial_matching(self, patient_id: int, age_range: Tuple[int, int] = None, 
                                  gender: str = None, phase_filter: list = None,
                                  max_distance_km: Optional[float] = None,
@@ -115,6 +124,13 @@ class PatientToTrialOrchestrator:
         """Run the complete patient-to-trial matching pipeline"""
         print("STARTING PATIENT-TO-TRIAL MATCHING PIPELINE")
         print(f"Patient ID: {patient_id}")
+        
+        # Get patient info to show MRN
+        from services.shared.database_utils import DatabaseUtils
+        db_utils = DatabaseUtils()
+        patient_data = db_utils.get_patient_by_id(patient_id)
+        if patient_data:
+            print(f"Patient MRN: {patient_data.get('mrn', 'Unknown')}")
         
         # Use config default if not specified
         if patient_limit is None:
@@ -309,7 +325,7 @@ def main():
     parser = argparse.ArgumentParser(description="Patient-to-Trial Matching Pipeline")
     
     # Pipeline options
-    parser.add_argument("--patient-id", type=int, required=True, help="Patient ID to find trials for")
+    parser.add_argument("--patient-id", type=str, required=True, help="Patient MRN (Medical Record Number) to find trials for")
     parser.add_argument("--patient-limit", type=int, help=f"Number of patients to process for embeddings (default: {DEFAULT_PATIENT_LIMIT})")
     parser.add_argument("--age-min", type=int, help="Minimum age filter (optional - if not specified, processes all trials)")
     parser.add_argument("--age-max", type=int, help="Maximum age filter (optional - if not specified, processes all trials)")
@@ -325,6 +341,18 @@ def main():
     # Initialize orchestrator
     orchestrator = PatientToTrialOrchestrator()
     
+    # Convert MRN to patient_id
+    mrn = args.patient_id  # Now it's a string (MRN)
+    print(f"Looking up patient with MRN: {mrn}")
+    
+    patient_id = orchestrator._get_patient_id_from_mrn(mrn)
+    if not patient_id:
+        print(f"ERROR: Patient with MRN '{mrn}' not found in database")
+        print("Please check the MRN and try again.")
+        return
+    
+    print(f"Found patient: MRN {mrn} -> Patient ID {patient_id}")
+    
     # Prepare age range
     age_range = None
     if args.age_min and args.age_max:
@@ -335,7 +363,7 @@ def main():
         print(f"Running individual step: {args.step}")
         results = orchestrator.run_individual_step(
             args.step,
-            patient_id=args.patient_id,
+            patient_id=patient_id,
             patient_limit=args.patient_limit,
             age_range=age_range,
             gender=args.gender,
@@ -344,7 +372,7 @@ def main():
     else:
         print("Running complete patient-to-trial pipeline")
         results = orchestrator.run_complete_pipeline(
-            patient_id=args.patient_id,
+            patient_id=patient_id,
             patient_limit=args.patient_limit,
             age_range=age_range,
             gender=args.gender,
