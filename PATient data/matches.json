@@ -1,0 +1,330 @@
+{
+    "matches": [
+      {
+        "MRN": "35294426",
+        "results": [
+          {
+            "trial_id": "NCT04835142",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient RAS = Wild-type; trial requires RAS wild-type. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}",
+              "Patient BRAF = Wild-type; trial requires BRAF-V600E negative. :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7}",
+              "ECOG = 0 in patient; trial requires ECOG 0-1. :contentReference[oaicite:8]{index=8} :contentReference[oaicite:9]{index=9}",
+              "Patient disease status = Newly diagnosed, treatment-naïve; trial requires no prior systemic chemo for metastatic CRC. :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}"
+            ]
+          },
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13}",
+              "ECOG = 0 and trial allows ECOG ≤2. :contentReference[oaicite:14]{index=14} :contentReference[oaicite:15]{index=15}",
+              "Patient is treatment-naïve (no prior chemo listed) and trial excludes prior chemotherapy/antiangiogenic agents; patient therefore meets this trial's baseline eligibility. :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "59779266",
+        "results": [
+          {
+            "trial_id": "NCT04835142",
+            "decision": "NOT_ELIGIBLE",
+            "reason_detail": "This trial evaluates first-line treatment in metastatic RAS wild-type, BRAF V600E-negative, MSS colorectal cancer. While patient is RAS/BRAF WT, they are MSI-H, and protocol specifies MSS only. Therefore patient is excluded based on mismatch repair status."
+          },
+          {
+            "trial_id": "NCT04607421",
+            "decision": "NOT_ELIGIBLE",
+            "reason_detail": "This trial requires a confirmed BRAF V600E mutation because it studies encorafenib + cetuximab ± nivolumab for BRAF-mutant CRC. Patient is BRAF WT, so does not meet mandatory biomarker criteria."
+          }
+        ]
+      },
+      {
+        "MRN": "30913714",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:18]{index=18} :contentReference[oaicite:19]{index=19}",
+              "ECOG = 2 and trial allows ECOG ≤2. :contentReference[oaicite:20]{index=20} :contentReference[oaicite:21]{index=21}",
+              "Patient is newly diagnosed / treatment-naïve and trial excludes prior chemotherapy/antiangiogenic agents. Patient meets baseline requirements. :contentReference[oaicite:22]{index=22} :contentReference[oaicite:23]{index=23}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "98938054",
+        "results": [
+          {
+            "trial_id": "NCT04607421",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient BRAF = V600E; trial requires BRAF V600E-mutant mCRC. :contentReference[oaicite:24]{index=24} :contentReference[oaicite:25]{index=25}",
+              "ECOG = 0 which meets trial ECOG 0-1 requirement. :contentReference[oaicite:26]{index=26} :contentReference[oaicite:27]{index=27}",
+              "Patient has measurable metastatic disease consistent with inclusion. :contentReference[oaicite:28]{index=28} :contentReference[oaicite:29]{index=29}"
+            ]
+          },
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:30]{index=30} :contentReference[oaicite:31]{index=31}",
+              "ECOG = 0 and trial allows ECOG ≤2. :contentReference[oaicite:32]{index=32} :contentReference[oaicite:33]{index=33}",
+              "Patient is newly diagnosed / treatment-naïve and meets baseline organ-function/lab thresholds as available in record. :contentReference[oaicite:34]{index=34} :contentReference[oaicite:35]{index=35}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "21080851",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:36]{index=36} :contentReference[oaicite:37]{index=37}",
+              "ECOG = 2 which meets trial ECOG ≤2 requirement. :contentReference[oaicite:38]{index=38} :contentReference[oaicite:39]{index=39}",
+              "Patient is treatment-naïve (no prior systemic therapy listed), consistent with trial baseline requirements. :contentReference[oaicite:40]{index=40} :contentReference[oaicite:41]{index=41}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "29936192",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:42]{index=42} :contentReference[oaicite:43]{index=43}",
+              "ECOG = 2 which meets trial ECOG ≤2 requirement. :contentReference[oaicite:44]{index=44} :contentReference[oaicite:45]{index=45}",
+              "Patient is newly diagnosed and treatment-naïve (no prior chemo listed). :contentReference[oaicite:46]{index=46} :contentReference[oaicite:47]{index=47}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "28543394",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:48]{index=48} :contentReference[oaicite:49]{index=49}",
+              "ECOG = 1 which meets trial ECOG ≤2 requirement. :contentReference[oaicite:50]{index=50} :contentReference[oaicite:51]{index=51}",
+              "Patient is treatment-naïve (no prior systemic therapies listed). :contentReference[oaicite:52]{index=52} :contentReference[oaicite:53]{index=53}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "34694074",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:54]{index=54} :contentReference[oaicite:55]{index=55}",
+              "ECOG = 1 which meets the trial ECOG ≤2 requirement. :contentReference[oaicite:56]{index=56} :contentReference[oaicite:57]{index=57}",
+              "Patient is newly diagnosed / treatment-naïve and has measurable metastatic disease (brain, liver, lung) consistent with inclusion. :contentReference[oaicite:58]{index=58} :contentReference[oaicite:59]{index=59}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "76190966",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:60]{index=60} :contentReference[oaicite:61]{index=61}",
+              "ECOG = 2 which is permitted by the trial (≤2). :contentReference[oaicite:62]{index=62} :contentReference[oaicite:63]{index=63}",
+              "Patient is treatment-naïve and has measurable metastatic disease (lung, bone). :contentReference[oaicite:64]{index=64} :contentReference[oaicite:65]{index=65}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "46385580",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:66]{index=66} :contentReference[oaicite:67]{index=67}",
+              "ECOG = 1 which meets trial ECOG ≤2 requirement. :contentReference[oaicite:68]{index=68} :contentReference[oaicite:69]{index=69}",
+              "Patient is newly diagnosed and treatment-naïve with measurable pulmonary disease. :contentReference[oaicite:70]{index=70} :contentReference[oaicite:71]{index=71}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "48727925",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:72]{index=72} :contentReference[oaicite:73]{index=73}",
+              "ECOG = 0 and trial allows ECOG ≤2. :contentReference[oaicite:74]{index=74} :contentReference[oaicite:75]{index=75}",
+              "Patient is treatment-naïve and has measurable lung metastases (meets measurable disease requirement). :contentReference[oaicite:76]{index=76} :contentReference[oaicite:77]{index=77}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "18228455",
+        "results": [
+          {
+            "trial_id": "NCT04835142",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient RAS = Wild-type; trial requires RAS wild-type. :contentReference[oaicite:78]{index=78} :contentReference[oaicite:79]{index=79}",
+              "Patient BRAF = Wild-type; trial requires BRAF-V600E negative. :contentReference[oaicite:80]{index=80} :contentReference[oaicite:81]{index=81}",
+              "ECOG = 1 which fits trial ECOG 0-1 requirement. :contentReference[oaicite:82]{index=82} :contentReference[oaicite:83]{index=83}",
+              "Patient is treatment-naïve / no prior systemic chemo for metastatic disease. :contentReference[oaicite:84]{index=84} :contentReference[oaicite:85]{index=85}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "52965770",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient RAS = KRAS G13D (i.e., RAS-mutant) so not eligible for RAS-WT trial, but MSI_MMR = MSS and ECOG = 2 which fits NCT06696768 inclusion (ECOG ≤2). :contentReference[oaicite:86]{index=86} :contentReference[oaicite:87]{index=87}",
+              "Patient is newly diagnosed/treatment-naïve and trial excludes prior chemo/antiangiogenic agents — patient meets this baseline. :contentReference[oaicite:88]{index=88} :contentReference[oaicite:89]{index=89}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "66328674",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "ELIGIBLE",
+            "reasons": [
+              "Patient MSI_MMR = MSS; trial excludes MSI-H/dMMR. :contentReference[oaicite:90]{index=90} :contentReference[oaicite:91]{index=91}",
+              "ECOG = 2 which meets trial ECOG ≤2 requirement. :contentReference[oaicite:92]{index=92} :contentReference[oaicite:93]{index=93}",
+              "Patient is newly diagnosed and treatment-naïve (no prior chemo listed). :contentReference[oaicite:94]{index=94} :contentReference[oaicite:95]{index=95}"
+            ]
+          }
+        ]
+      },
+      {
+        "MRN": "88044380",
+        "results": [
+          {
+            "trial_id": "NCT05513742",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["prior_treatment"],
+            "reason_detail": "This is a later-line metastatic CRC trial and typically requires prior exposure to standard chemotherapy (e.g., FOLFOX/FOLFIRI ± biologics). Patient file does not document any previous systemic therapy. If the patient previously received systemic treatment and progressed, they may be eligible."
+          },
+          {
+            "trial_id": "NCT06696768",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["ECOG", "prior_treatment"],
+            "reason_detail": "This Phase I/II regimen (CA-4948 + FOLFOX + bevacizumab) is open to MSS tumors. Patient is MSS, and has metastatic disease to the brain. ECOG performance status and prior chemotherapy exposure are missing — both are required to determine eligibility."
+          },
+          {
+            "trial_id": "NCT05672316",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["prior_treatment"],
+            "reason_detail": "Trial requires prior progression on standard chemotherapy. Patient file does not confirm prior lines. Without treatment history, eligibility cannot be confirmed."
+          }
+        ]
+      },
+      {
+        "MRN": "11800359",
+        "results": [
+          {
+            "trial_id": "NCT06696768",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["ECOG", "prior_treatment"],
+            "reason_detail": "NRAS Q61H + MSS is allowed; trial includes MSS CRC. However, ECOG and whether previous systemic therapy has been given are unknown. Both are necessary to determine full eligibility."
+          },
+          {
+            "trial_id": "NCT05672316",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["prior_treatment"],
+            "reason_detail": "This trial is for patients who have progressed after multiple chemotherapy lines. Since prior-therapy history is not provided, cannot determine if requirements are met."
+          }
+        ]
+      },
+      {
+        "MRN": "88760810",
+        "results": [
+          {
+            "trial_id": "NCT04607421",
+            "decision": "NOT_ELIGIBLE",
+            "reason_detail": "This trial specifically requires the patient to have a confirmed BRAF V600E mutation, because it evaluates encorafenib + cetuximab for BRAF-V600E CRC. Patient profile indicates MSI-H but BRAF is wild-type, therefore they do not meet the mandatory biomarker inclusion criterion."
+          },
+          {
+            "trial_id": "PD-1/CTLA-4",
+            "decision": "ELIGIBLE",
+            "reason_detail": "MSI-H / dMMR CRC is strongly responsive to immune checkpoint inhibitors (PD-1 inhibitors such as pembrolizumab or nivolumab ± CTLA-4 blockade). Therefore, patient is biologically appropriate for immune checkpoint therapy regardless of RAS/BRAF mutation."
+          }
+        ]
+      },
+      {
+        "MRN": "92533443",
+        "results": [
+          {
+            "trial_id": "NCT05513742",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["prior_treatment"],
+            "reason_detail": "KRAS mutation is generally permitted. However, trial requires prior standard-of-care systemic therapy. Patient's previous therapy status is not provided, and brain involvement may disqualify depending on trial protocol."
+          },
+          {
+            "trial_id": "NCT06696768",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["ECOG", "prior_treatment"],
+            "reason_detail": "MSS + metastatic disease supports biological suitability. ECOG and prior therapy history must be confirmed to finalize eligibility. Brain mets may need stability documentation."
+          },
+          {
+            "trial_id": "NCT05672316",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["prior_treatment"],
+            "reason_detail": "This trial requires progression after standard chemotherapy. Prior-line info missing → eligibility cannot be confirmed. Additional exclusion related to CNS involvement may apply."
+          }
+        ]
+      },
+      {
+        "MRN": "44631066",
+        "results": [
+          {
+            "trial_id": "NCT04607421",
+            "decision": "NOT_ELIGIBLE",
+            "reason_detail": "Encorafenib + cetuximab requires confirmed BRAF V600E mutation. Patient is RAS/BRAF WT (i.e., BRAF negative), so they do not qualify for the trial arm focused on BRAF V600E–mutant CRC."
+          },
+          {
+            "trial_id": "PD-1/CTLA-4",
+            "decision": "ELIGIBLE",
+            "reason_detail": "MSI-H strongly predicts response to immune checkpoint inhibition. Regardless of RAS/BRAF WT status, patient qualifies biologically for immunotherapy-based trials."
+          }
+        ]
+      },
+      {
+        "MRN": "28786181",
+        "results": [
+          {
+            "trial_id": "NCT05672316",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["prior_treatment"],
+            "reason_detail": "This trial is intended for patients with metastatic CRC who have progressed after multiple prior chemotherapy regimens. Patient appears treatment-naïve; without proof of progression following therapy, eligibility cannot be confirmed."
+          },
+          {
+            "trial_id": "NCT04835142",
+            "decision": "NEED_MORE_INFORMATION",
+            "missing_fields": ["ECOG"],
+            "reason_detail": "RAS/BRAF WT + MSS matches biomarker requirements. Trial requires ECOG 0–1; value not provided. If ECOG confirmed 0–1, patient likely eligible."
+          }
+        ]
+      }
+    ]
+  }

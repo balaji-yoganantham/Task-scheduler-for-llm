@@ -25,7 +25,10 @@ sentencepiece==0.2.1
 # Vector search and similarity
 faiss-cpu==1.12.0
 
-# Google AI
+# OpenAI
+openai>=1.0.0
+
+# Google AI (kept for backward compatibility, but not used)
 google-generativeai>=0.3.2
 google-api-core>=2.14.0
 
@@ -66,3 +69,7 @@ pathlib2==2.3.7
 
 # Location and geocoding
 geopy==2.4.1
+
+# PDF extraction
+pdfplumber==0.10.3
+PyPDF2==3.0.1

@@ -101,3 +101,5 @@ Returns all above columns plus a computed `combined_trial_text` field that conca
 - Only trials with status 'Recruiting', 'Active, not recruiting', or 'Enrolling by invitation' are typically included in matching
 - The `combined_trial_text` field is computed, not stored in the table
 
+
+

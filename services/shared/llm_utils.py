@@ -9,22 +9,24 @@ import time
 from datetime import datetime
 from typing import Dict, Any, List, Optional
 from pathlib import Path
-import google.generativeai as genai
-from google.api_core import exceptions as google_exceptions
-from config import GEMINI_API_KEY, MAX_KEYWORD_BATCH_SIZE, GEMINI_MAX_RETRIES, GEMINI_TIMEOUT, GEMINI_MAX_TOKENS, GEMINI_TEMPERATURE, GEMINI_MODEL
+from openai import OpenAI
+from openai import APIError, RateLimitError, APIConnectionError, APITimeoutError
+from config import OPENAI_API_KEY, MAX_KEYWORD_BATCH_SIZE, OPENAI_MAX_RETRIES, OPENAI_TIMEOUT, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE, OPENAI_MODEL
 
 class LLMUtils:
     def __init__(self):
-        genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel(GEMINI_MODEL)
+        if not OPENAI_API_KEY:
+            raise ValueError("OPENAI_API_KEY is not set. Please set it in your .env file or environment variables.")
+        self.client = OpenAI(api_key=OPENAI_API_KEY, timeout=OPENAI_TIMEOUT)
+        self.model = OPENAI_MODEL
         # Create folder for saving LLM prompts
         self.llm_sent_dir = Path("llm_sent")
         self.llm_sent_dir.mkdir(exist_ok=True)
         # Rate limiting - track last request time
         self._last_request_time = 0
-        # Free tier: 15 RPM for gemini-2.0-flash = 1 request every 4 seconds minimum
-        # Using 5 seconds to be safe and avoid hitting limits
-        self._min_request_interval = 5.0  # Increased to 5 seconds between requests to avoid rate limits
+        # OpenAI GPT-4o Mini: 500 RPM (requests per minute) for tier 1
+        # Using 0.15 seconds between requests to be safe (allows ~400 RPM)
+        self._min_request_interval = 0.15  # 0.15 seconds between requests
 
     def generate_keywords_prompt(self, patient_data: Dict[str, Any]) -> str:
         """Generate prompt for patient keyword extraction with enhanced molecular marker extraction and few-shot examples"""
@@ -389,42 +391,39 @@ class LLMUtils:
         self._last_request_time = time.time()
     
     def call_llm(self, prompt: str, call_type: str = "llm_call", metadata: Dict[str, Any] = None) -> Dict[str, Any]:
-        """Make LLM API call with retry logic and exponential backoff for 429 errors"""
+        """Make LLM API call with retry logic and exponential backoff for rate limit errors"""
         # Save prompt before sending
         prompt_file = self._save_prompt_to_file(prompt, call_type, metadata)
         if prompt_file:
             print(f"[SAVE] Prompt saved to: {prompt_file}")
         
-        # Retry logic with exponential backoff for 429 errors
-        # Improved backoff: start with longer delays to avoid hitting limits
-        max_retries = GEMINI_MAX_RETRIES
-        base_delay = 5  # Start with 5 seconds (increased from 2)
-        max_delay = 120  # Maximum delay of 120 seconds (increased from 60)
+        # Retry logic with exponential backoff for rate limit errors
+        max_retries = OPENAI_MAX_RETRIES
+        base_delay = 2  # Start with 2 seconds
+        max_delay = 60  # Maximum delay of 60 seconds
+        response = None
         
         for attempt in range(max_retries + 1):
             try:
                 # Enforce rate limiting
                 self._rate_limit()
                 
-                # Configure generation settings with max_output_tokens
-                # For batch evaluations, we need more tokens (up to 8192 for Gemini models)
-                # Use higher limit for batch calls to prevent truncation
-                generation_config = {
-                    "temperature": GEMINI_TEMPERATURE,
-                    "max_output_tokens": GEMINI_MAX_TOKENS,  # Use config value (default 8000, can be increased to 8192)
-                }
-                
-                # Make the API call with generation config
-                response = self.model.generate_content(
-                    prompt,
-                    generation_config=generation_config
+                # Make the API call to OpenAI
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=OPENAI_TEMPERATURE,
+                    max_tokens=OPENAI_MAX_TOKENS,
+                    timeout=OPENAI_TIMEOUT
                 )
                 
                 # If we get here, the request succeeded
                 break
                 
-            except google_exceptions.ResourceExhausted as e:
-                # Handle 429 Resource Exhausted errors with exponential backoff
+            except RateLimitError as e:
+                # Handle 429 Rate Limit errors with exponential backoff
                 if attempt < max_retries:
                     # Calculate exponential backoff delay
                     delay = min(base_delay * (2 ** attempt), max_delay)
@@ -432,22 +431,52 @@ class LLMUtils:
                     jitter = delay * 0.1 * (0.5 - time.time() % 1)
                     total_delay = delay + jitter
                     
-                    print(f"⚠️ Rate limit hit (429 Resource Exhausted). Retrying in {total_delay:.1f} seconds... (attempt {attempt + 1}/{max_retries + 1})")
+                    print(f"⚠️ Rate limit hit (429). Retrying in {total_delay:.1f} seconds... (attempt {attempt + 1}/{max_retries + 1})")
                     time.sleep(total_delay)
                     continue
                 else:
                     # Max retries exceeded
-                    print(f"❌ Max retries ({max_retries}) exceeded for 429 error. Falling back to individual processing.")
+                    print(f"❌ Max retries ({max_retries}) exceeded for rate limit error.")
                     return {
-                        "error": f"429 Resource exhausted after {max_retries} retries. Please try again later.",
-                        "error_type": "ResourceExhausted",
+                        "error": f"Rate limit exceeded after {max_retries} retries. Please try again later.",
+                        "error_type": "RateLimitError",
                         "retries_attempted": max_retries
                     }
             
-            except Exception as e:
-                # For other exceptions, check if it's a rate limit related error
+            except APITimeoutError as e:
+                # Handle timeout errors
+                if attempt < max_retries:
+                    delay = min(base_delay * (2 ** attempt), max_delay)
+                    print(f"⚠️ API timeout. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries + 1})")
+                    time.sleep(delay)
+                    continue
+                else:
+                    print(f"❌ Max retries ({max_retries}) exceeded for timeout error.")
+                    return {
+                        "error": f"API timeout after {max_retries} retries.",
+                        "error_type": "APITimeoutError",
+                        "retries_attempted": max_retries
+                    }
+            
+            except APIConnectionError as e:
+                # Handle connection errors
+                if attempt < max_retries:
+                    delay = min(base_delay * (2 ** attempt), max_delay)
+                    print(f"⚠️ API connection error. Retrying in {delay:.1f} seconds... (attempt {attempt + 1}/{max_retries + 1})")
+                    time.sleep(delay)
+                    continue
+                else:
+                    print(f"❌ Max retries ({max_retries}) exceeded for connection error.")
+                    return {
+                        "error": f"API connection error after {max_retries} retries.",
+                        "error_type": "APIConnectionError",
+                        "retries_attempted": max_retries
+                    }
+            
+            except APIError as e:
+                # Handle other API errors
                 error_str = str(e).lower()
-                if "429" in error_str or "resource exhausted" in error_str or "rate limit" in error_str:
+                if "429" in error_str or "rate limit" in error_str:
                     if attempt < max_retries:
                         delay = min(base_delay * (2 ** attempt), max_delay)
                         jitter = delay * 0.1 * (0.5 - time.time() % 1)
@@ -469,27 +498,31 @@ class LLMUtils:
                     import traceback
                     traceback.print_exc()
                     return {
-                        "error": str(e)
+                        "error": str(e),
+                        "error_type": type(e).__name__
                     }
+            
+            except Exception as e:
+                # For unexpected errors, don't retry
+                print(f"Unexpected error calling LLM: {e}")
+                import traceback
+                traceback.print_exc()
+                return {
+                    "error": str(e),
+                    "error_type": type(e).__name__
+                }
         
         # If we get here, check if we have a valid response
-        try:
-            if not response or not response.text:
-                return {
-                    "error": "Empty response from LLM",
-                    "raw_response": ""
-                }
-        except NameError:
-            # Response was never set (all retries failed)
+        if not response or not response.choices or len(response.choices) == 0:
             return {
-                "error": "Failed to get response after all retries",
-                "retries_attempted": max_retries
+                "error": "Empty response from LLM",
+                "raw_response": ""
             }
         
         # Process successful response
         try:
-            # Clean the response - remove code block markers (more thorough)
-            response_text = response.text.strip()
+            # Extract response text from OpenAI response
+            response_text = response.choices[0].message.content.strip()
             
             # Remove markdown code blocks (handle various formats)
             if response_text.startswith("```json"):
@@ -515,13 +548,13 @@ class LLMUtils:
             
             # Parse JSON
             result = json.loads(response_text)
-            return {"response": response.text, **result}
+            return {"response": response_text, **result}
         except json.JSONDecodeError as e:
             print(f"Failed to parse JSON response: {str(e)}")
             print(f"JSON Error at line {e.lineno}, column {e.colno}")
             print(f"Error message: {e.msg}")
-            print(f"Response text (first 1000 chars): {response.text[:1000]}")
-            print(f"Response text length: {len(response.text)}")
+            print(f"Response text (first 1000 chars): {response_text[:1000]}")
+            print(f"Response text length: {len(response_text)}")
             # Save full response to file for debugging
             try:
                 import os
@@ -532,7 +565,7 @@ class LLMUtils:
                     f.write("=== PROMPT ===\n")
                     f.write(prompt)
                     f.write("\n\n=== RESPONSE ===\n")
-                    f.write(response.text)
+                    f.write(response_text)
                     f.write("\n\n=== ERROR ===\n")
                     f.write(str(e))
                 print(f"[SAVE] Full response saved to: {debug_file}")
@@ -541,7 +574,7 @@ class LLMUtils:
             
             return {
                 "error": f"Failed to parse JSON response: {str(e)}",
-                "raw_response": response.text,
+                "raw_response": response_text,
                 "error_details": {
                     "line": e.lineno,
                     "column": e.colno,
