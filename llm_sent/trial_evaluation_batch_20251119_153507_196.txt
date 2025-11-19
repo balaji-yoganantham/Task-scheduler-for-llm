@@ -1,0 +1,844 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 186
+mrn: 98938054
+batch_size: 10
+trial_ids: ['NCT04792684', 'NCT05673148', 'NCT04221893', 'NCT06699836', 'NCT06599502', 'NCT05592626', 'NCT04929223', 'NCT05080673', 'NCT05461430', 'NCT03452774']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 10 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 186
+        MRN: 98938054
+        Age: 35
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Victor
+Patient MRN: 98938054
+Age: 35, Gender: Female
+Date of Visit: 2025-06-17
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Nausea, Cramping, Weight loss
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 31, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: May 31, 2025; T4bN2aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 16, 2025 - peritoneum, lung metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Nausea, Cramping, Weight loss, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Celiac disease
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Office administrator
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 112/86, HR 96, RR 16, Temp 99.2°F, SpO2 96% on room air, Weight 201 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.8 × 10³/µL, ANC: 8.8 × 10³/µL
+- Hgb: 14.3 g/dL, Platelets: 375 × 10³/µL
+- Chemistry:
+- Creatinine: 0.9 mg/dL, eGFR: 31 mL/min/1.73m²
+- LFTs:
+- AST: 46 U/L, ALT: 14 U/L
+- Alkaline phosphatase: 64 U/L, Total bilirubin: 2.9 mg/dL
+- CEA: 101.7 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: V600E
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 16, 2025):
+Primary transverse colon mass (6.6 cm), circumferential thickening
+6 pulmonary nodules (largest 4.0 cm), peritoneal disease
+Other findings: Degenerative spine changes
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.8 × 10³/µL, ANC: 8.8 × 10³/µL
+- Hgb: 14.3 g/dL, Platelets: 375 × 10³/µL
+- Chemistry:
+- Creatinine: 0.9 mg/dL, eGFR: 31 mL/min/1.73m²
+- LFTs:
+- AST: 46 U/L, ALT: 14 U/L
+- Alkaline phosphatase: 64 U/L, Total bilirubin: 2.9 mg/dL
+- CEA: 101.7 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: V600E
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 16, 2025):
+Primary transverse colon mass (6.6 cm), circumferential thickening
+6 pulmonary nodules (largest 4.0 cm), peritoneal disease
+Other findings: Degenerative spine changes
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 16, 2025):
+Primary transverse colon mass (6.6 cm), circumferential thickening
+6 pulmonary nodules (largest 4.0 cm), peritoneal disease
+Other findings: Degenerative spine changes
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: [{"heart_rate":96,"blood_pressure":"112/86","temperature_c":37.3}]
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (peritoneum, lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04792684
+        Title: Collection of Samples From the United States Population for Optimization and Evaluation of Colorectal Cancer (CRC) Plasma Circulating Free-DNA (cfDNA) Marker Panel Performance ("USOPTIVAL")
+        Condition: ["Colorectal Cancer (CRC)", "Advanced Adenomas (AA)"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 45 Years - 84 Years
+        Gender: ALL
+        Hybrid Score: 5.219
+        
+        Brief Summary: A prospective multi-center observational study. The study will enroll eligible subjects from the United States to optimize the biomarker panel and evaluate the performance of a cfDNA marker panel selected by the Sponsor for CRC and advanced adenoma detection.
+        
+        Detailed Description: This study is designed to prospectively collect blood samples and clinical data from subjects that have a suspected advanced adenoma or have been newly diagnosed with CRC scheduled for resection surgery, as well as subjects who are at average-risk of colorectal cancer and who are scheduled for routine colonoscopy examination.
+
+Subjects interested in participation and who meet inclusion criteria and provide written informed consent will be enrolled in the study. By accepting participation in the study, subjects will consent to provide up to 40 ml of blood at the study visit.
+        
+        Inclusion Criteria: ["Arm A:", "1. Must be 45-84 years of age.", "2. Must have a suspected advanced adenoma or be newly diagnosed with CRC, still not resected, and scheduled for surgery.", "3. Able to comprehend, sign, and date the written informed consent document.", "Arm B:", "1. Must be 45-84 years of age.", "2. Able and willing to undergo a standard-of-care screening colonoscopy within 60 days.", "3. Able to comprehend, sign, and date the written informed consent document."]
+        
+        Exclusion Criteria: ["Arm A Only:", "1\\. Subject with curative biopsy during colonoscopy.", "Arm B Only:", "1. Subjects with positive FIT Test results in the 6 months preceding enrollment.", "2. Subject has a current diagnosis of cancer.", "Arms A \\& B:", "1. Subject has a personal history of aerodigestive or digestive tract cancers.", "2. Subjects having undergone previous partial surgical removal of one or more portions of their colon due to a reason other than colorectal cancer.", "3. Has a known diagnosis or personal history of any of the following high-risk indications for colorectal cancer:", "1. Inflammatory bowel disease (IBD) including chronic ulcerative colitis (CUC) and Crohn's disease.", "2. Familial adenomatous polyposis (\"FAP\", including attenuated FAP).", "3. Hereditary non-polyposis colorectal cancer syndrome (\"HNPCC\" or \"Lynch Syndrome\").", "4. Serrated polyposis syndrome", "5. 2 first-degree relatives (e.g., parents, siblings, and offspring) who have been diagnosed with colon cancer.", "6. One first-degree relative with CRC diagnosed before the age of 60.", "4. A significant disease which, in the Investigator's opinion, would exclude the subject from the study.", "5. Legal incapacity or limited mental capacity.", "6. Medical or psychological conditions that would not permit the subject to complete the study or sign informed consent.", "7. The patient has a known or documented previous or current medical history of infectious diseases that can be transmitted through blood (E.g. Hepatitis, HIV, etc.), including patients that have been treated, are currently being treated, or have not been treated for that conditions.", "8. The patient is known to be pregnant when recruited or during her participation in the study."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+Arm A:
+
+1. Must be 45-84 years of age.
+2. Must have a suspected advanced adenoma or be newly diagnosed with CRC, still not resected, and scheduled for surgery.
+3. Able to comprehend, sign, and date the written informed consent document.
+
+Arm B:
+
+1. Must be 45-84 years of age.
+2. Able and willing to undergo a standard-of-care screening colonoscopy within 60 days.
+3. Able to comprehend, sign, and date the written informed consent document.
+
+Exclusion Criteria:
+
+Arm A Only:
+
+1\. Subject with curative biopsy during colonoscopy.
+
+Arm B Only:
+
+1. Subjects with positive FIT Test results in the 6 months preceding enrollment.
+2. Subject has a current diagnosis of cancer.
+
+Arms A \& B:
+
+1. Subject has a personal history of aerodigestive or digestive tract cancers.
+2. Subjects having undergone previous partial surgical removal of one or more portions of their colon due to a reason other than colorectal cancer.
+3. Has a known diagnosis or personal history of any of the following high-risk indications for colorectal cancer:
+
+   1. Inflammatory bowel disease (IBD) including chronic ulcerative colitis (CUC) and Crohn's disease.
+   2. Familial adenomatous polyposis ("FAP", including attenuated FAP).
+   3. Hereditary non-polyposis colorectal cancer syndrome ("HNPCC" or "Lynch Syndrome").
+   4. Serrated polyposis syndrome
+   5. 2 first-degree relatives (e.g., parents, siblings, and offspring) who have been diagnosed with colon cancer.
+   6. One first-degree relative with CRC diagnosed before the age of 60.
+4. A significant disease which, in the Investigator's opinion, would exclude the subject from the study.
+5. Legal incapacity or limited mental capacity.
+6. Medical or psychological conditions that would not permit the subject to complete the study or sign informed consent.
+7. The patient has a known or documented previous or current medical history of infectious diseases that can be transmitted through blood (E.g. Hepatitis, HIV, etc.), including patients that have been treated, are currently being treated, or have not been treated for that conditions.
+8. The patient is known to be pregnant when recruited or during her participation in the study.
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT05673148
+        Title: A Pragmatic Randomized Phase III Trial Evaluating Total Ablative Therapy for Patients With Limited Metastatic Colorectal Cancer: Evaluating Radiation, Ablation, and Surgery (ERASur)
+        Condition: ["Metastatic Colorectal Adenocarcinoma", "Stage IV Colorectal Cancer AJCC v8"]
+        Phase: PHASE3
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.211
+        
+        Brief Summary: This phase III trial compares total ablative therapy and usual systemic therapy to usual systemic therapy alone in treating patients with colorectal cancer that has spread to up to 4 body sites (limited metastatic). The usual approach for patients who are not participating in a study is treatment with intravenous (IV) (through a vein) and/or oral medications (systemic therapy) to help stop the cancer sites from getting larger and the spread of the cancer to additional body sites. Ablative means that the intention of the local treatment is to eliminate the cancer at that metastatic site. The ablative local therapy will consist of very focused, intensive radiotherapy called stereotactic ablative radiotherapy (SABR) with or without surgical resection and/or microwave ablation, which is a procedure where a needle is temporarily inserted in the tumor and heat is used to destroy the cancer cells. SABR, surgical resection, and microwave ablation have been tested for safety, but it is not scientifically proven that the addition of these treatments are beneficial for your stage of cancer. The addition of ablative local therapy to all known metastatic sites to the usual approach of systemic therapy could shrink or remove the tumor(s) or prevent the tumor(s) from returning.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To evaluate and compare overall survival (OS) (measured from time of randomization) in patients with newly diagnosed oligometastatic colorectal cancer (oCRC) treated with total ablative therapy (TAT) in addition to standard of care (SOC) systemic therapy versus SOC systemic therapy.
+
+SECONDARY OBJECTIVES:
+
+I. To evaluate and compare event-free survival (EFS) (measured from time of randomization) between the two treatment arms.
+
+II. To assess the adverse events (AE) profile within each of the two treatment arms.
+
+III. To evaluate the time to local recurrence (TLR) (measured from completion of TAT) in patients with newly diagnosed oCRC treated with TAT + SOC systemic therapy.
+
+OUTLINE: Patients are randomized to 1 of 2 arms.
+
+ARM 1: Patients undergo TAT on study, consisting of SABR with or without surgical resection and/or microwave ablation. Patients also receive SOC chemotherapy on study. Patients also undergo computed tomography (CT) or magnetic resonance imaging (MRI) or positron emission tomography (PET)/CT scans throughout the trial.
+
+ARM 2: Patients receive SOC chemotherapy on study. Patients also undergo Patients also undergo CT or MRI or PET/CT scans throughout the trial.
+        
+        Inclusion Criteria: ["* PRE-REGISTRATION (STEP 0): Histologically-confirmed metastatic colorectal adenocarcinoma", "* PRE-REGISTRATION (STEP 0): No known microsatellite instable (MSI) tumor", "* PRE-REGISTRATION (STEP 0): No known BRAF V600E mutation", "* PRE-REGISTRATION (STEP 0): Patients with treated brain metastases are eligible if follow-up brain imaging after central nervous system (CNS)-directed therapy shows no evidence of progression. No known peritoneal and/or omental metastases. If radiologic studies suggest the presence of peritoneal disease, a diagnostic laparoscopy is recommended to verify the absence of peritoneal implants", "* PRE-REGISTRATION (STEP 0): Primary tumor is already resected OR primary tumor is surgically amenable to resection, as determined by consultation and documentation with surgeon or documentation of discussion in the institutional multi-disciplinary tumor board where a surgeon confirms resectability. Patients with unresectable primary tumors are not eligible", "* PRE-REGISTRATION (STEP 0): Four (4) or fewer apparent sites of metastatic disease based on review by local medical team of baseline radiographic imaging obtained prior to initiation of systemic therapy.", "* Sites of metastatic disease must be radiographically evident, but pathologic confirmation is not required.", "* Liver-only metastatic disease is NOT permitted. For patients with liver metastases, there must be at least one other site of metastasis in addition to the liver to be eligible for this study.", "* Metastatic lesions must be amenable to any combination of surgical resection, microwave ablation, and/or stereotactic ablative body radiation therapy (SABR). SABR is required for at least one lesion. Therefore, the patient must be seen by a radiation oncologist in consultation to verify eligibility.", "* Single sites include:", "* Each hemiliver (right and left), each lobe of the lungs, each adrenal gland, lymph nodes amenable to a single resection or treatment in a single SABR field, bone metastases amenable to treatment in a single SABR field", "* PRE-REGISTRATION (STEP 0): Patients must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version (v)1.1", "* PRE-REGISTRATION (STEP 0): A maximum of 16 weeks (4 months) of systemic therapy may be administered prior to pre-registration", "* REGISTRATION (STEP 1): Patients must have no overt evidence of disease progression during systemic therapy prior to registration", "* REGISTRATION (STEP 1): Not eligible for hepatic artery infusion pump (HAIP) therapy or benefit of HAIP therapy is undefined", "* REGISTRATION (STEP 1): Patients must have measurable disease per RECIST v1.1", "* REGISTRATION (STEP 1): Patients must be receiving (or have received) first-line systemic therapy for metastatic disease for a minimum of 16 weeks (4 months) and a maximum of 24 weeks (6 months)", "* REGISTRATION (STEP 1): Prior definitive therapy, including adjuvant chemotherapy, must have been completed at least 12 months prior to diagnosis of metastatic disease", "* REGISTRATION (STEP 1): Not pregnant and not nursing, because this study involves an agent or treatment that has known genotoxic, mutagenic, and teratogenic effects.", "\\* Therefore, for women of childbearing potential only, a negative pregnancy test done =\\< 14 days prior to registration is required", "* REGISTRATION (STEP 1): Age \\>= 18 years", "* REGISTRATION (STEP 1): Eastern Cooperative Oncology Group (ECOG) performance status: 0-2", "* REGISTRATION (STEP 1): Absolute neutrophil count (ANC) \\>= 1,500/mm\\^3", "* REGISTRATION (STEP 1): Platelet count \\>= 50,000/mm\\^3", "* REGISTRATION (STEP 1): Creatinine =\\< 1.5 x upper limit of normal (ULN) OR calculated (calc.) creatinine clearance \\>= 30 mL/min", "\\* Calculated using the Cockcroft-Gault equation", "* REGISTRATION (STEP 1): Total bilirubin =\\< 1.5 x ULN", "* REGISTRATION (STEP 1): Aspartate aminotransferase (AST)(serum glutamic-oxaloacetic transaminase \\[SGOT\\]) / alanine aminotransferase (ALT)(serum glutamate pyruvate transaminase \\[SGPT\\]) =\\< 3.0 x ULN", "\\* In the event of metastatic liver disease, =\\< 5 x ULN", "* REGISTRATION (STEP 1): Human immunodeficiency virus (HIV)-infected patients on effective anti-retroviral therapy with undetectable viral load within 6 months are eligible for this trial. Note: HIV testing is not required for eligibility", "* REGISTRATION (STEP 1): No other planned concurrent investigational agents while on study"]
+        
+        Exclusion Criteria: ["* N/A"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* PRE-REGISTRATION (STEP 0): Histologically-confirmed metastatic colorectal adenocarcinoma
+* PRE-REGISTRATION (STEP 0): No known microsatellite instable (MSI) tumor
+* PRE-REGISTRATION (STEP 0): No known BRAF V600E mutation
+* PRE-REGISTRATION (STEP 0): Patients with treated brain metastases are eligible if follow-up brain imaging after central nervous system (CNS)-directed therapy shows no evidence of progression. No known peritoneal and/or omental metastases. If radiologic studies suggest the presence of peritoneal disease, a diagnostic laparoscopy is recommended to verify the absence of peritoneal implants
+* PRE-REGISTRATION (STEP 0): Primary tumor is already resected OR primary tumor is surgically amenable to resection, as determined by consultation and documentation with surgeon or documentation of discussion in the institutional multi-disciplinary tumor board where a surgeon confirms resectability. Patients with unresectable primary tumors are not eligible
+* PRE-REGISTRATION (STEP 0): Four (4) or fewer apparent sites of metastatic disease based on review by local medical team of baseline radiographic imaging obtained prior to initiation of systemic therapy.
+
+  * Sites of metastatic disease must be radiographically evident, but pathologic confirmation is not required.
+  * Liver-only metastatic disease is NOT permitted. For patients with liver metastases, there must be at least one other site of metastasis in addition to the liver to be eligible for this study.
+  * Metastatic lesions must be amenable to any combination of surgical resection, microwave ablation, and/or stereotactic ablative body radiation therapy (SABR). SABR is required for at least one lesion. Therefore, the patient must be seen by a radiation oncologist in consultation to verify eligibility.
+  * Single sites include:
+
+    * Each hemiliver (right and left), each lobe of the lungs, each adrenal gland, lymph nodes amenable to a single resection or treatment in a single SABR field, bone metastases amenable to treatment in a single SABR field
+* PRE-REGISTRATION (STEP 0): Patients must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) version (v)1.1
+* PRE-REGISTRATION (STEP 0): A maximum of 16 weeks (4 months) of systemic therapy may be administered prior to pre-registration
+* REGISTRATION (STEP 1): Patients must have no overt evidence of disease progression during systemic therapy prior to registration
+* REGISTRATION (STEP 1): Not eligible for hepatic artery infusion pump (HAIP) therapy or benefit of HAIP therapy is undefined
+* REGISTRATION (STEP 1): Patients must have measurable disease per RECIST v1.1
+* REGISTRATION (STEP 1): Patients must be receiving (or have received) first-line systemic therapy for metastatic disease for a minimum of 16 weeks (4 months) and a maximum of 24 weeks (6 months)
+* REGISTRATION (STEP 1): Prior definitive therapy, including adjuvant chemotherapy, must have been completed at least 12 months prior to diagnosis of metastatic disease
+* REGISTRATION (STEP 1): Not pregnant and not nursing, because this study involves an agent or treatment that has known genotoxic, mutagenic, and teratogenic effects.
+
+  \* Therefore, for women of childbearing potential only, a negative pregnancy test done =\< 14 days prior to registration is required
+* REGISTRATION (STEP 1): Age \>= 18 years
+* REGISTRATION (STEP 1): Eastern Cooperative Oncology Group (ECOG) performance status: 0-2
+* REGISTRATION (STEP 1): Absolute neutrophil count (ANC) \>= 1,500/mm\^3
+* REGISTRATION (STEP 1): Platelet count \>= 50,000/mm\^3
+* REGISTRATION (STEP 1): Creatinine =\< 1.5 x upper limit of normal (ULN) OR calculated (calc.) creatinine clearance \>= 30 mL/min
+
+  \* Calculated using the Cockcroft-Gault equation
+* REGISTRATION (STEP 1): Total bilirubin =\< 1.5 x ULN
+* REGISTRATION (STEP 1): Aspartate aminotransferase (AST)(serum glutamic-oxaloacetic transaminase \[SGOT\]) / alanine aminotransferase (ALT)(serum glutamate pyruvate transaminase \[SGPT\]) =\< 3.0 x ULN
+
+  \* In the event of metastatic liver disease, =\< 5 x ULN
+* REGISTRATION (STEP 1): Human immunodeficiency virus (HIV)-infected patients on effective anti-retroviral therapy with undetectable viral load within 6 months are eligible for this trial. Note: HIV testing is not required for eligibility
+* REGISTRATION (STEP 1): No other planned concurrent investigational agents while on study
+
+Exclusion Criteria:
+
+* N/A
+        
+        ============================================================
+        TRIAL 3:
+        ============================================================
+        Trial ID: NCT04221893
+        Title: Phase II Study of Hypofractionated Radiation Therapy to Augment Immune Response in Patients With Metastatic GastroIntestinal Malignancies Progressing on Immune Therapy (ARM-GI)
+        Condition: ["Stage IV Esophageal Adenocarcinoma", "Stage IV Esophageal Squamous Cell Carcinoma", "Stage IV Gastric Cancer", "Stage IV Adenocarcinoma of the Gastroesophageal Junction", "Stage IVA Esophageal Adenocarcinoma", "Stage IVA Esophageal Squamous Cell Carcinoma", "Stage IVA Gastric Cancer", "Stage IVA Adenocarcinoma of the Gastroesophageal Junction", "Stage IVB Esophageal Adenocarcinoma", "Stage IVB Esophageal Squamous Cell Carcinoma", "Stage IVB Gastric Cancer", "Stage IVB Gastroesophageal Junction Adenocarcinoma", "Metastatic Anal Canal Carcinoma", "Metastatic Colorectal Carcinoma", "Metastatic Esophageal Carcinoma", "Metastatic Gastric Carcinoma", "Metastatic Gastroesophageal Junction Adenocarcinoma", "Metastatic Hepatocellular Carcinoma", "Metastatic Malignant Digestive System Neoplasm", "Metastatic Small Intestinal Carcinoma", "Pancreatobiliary Carcinoma", "Pathologic Stage IV Gastric Cancer AJCC v8", "Pathologic Stage IVA Esophageal Adenocarcinoma AJCC v8", "Pathologic Stage IVA Esophageal Squamous Cell Carcinoma AJCC v8", "Pathologic Stage IVB Esophageal Adenocarcinoma AJCC v8", "Pathologic Stage IVB Esophageal Squamous Cell Carcinoma AJCC v8", "Pathologic Stage IVB Gastroesophageal Junction Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IV Esophageal Squamous Cell Carcinoma AJCC v8", "Postneoadjuvant Therapy Stage IV Gastric Cancer AJCC v8", "Postneoadjuvant Therapy Stage IV Gastroesophageal Junction Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVA Esophageal Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVA Esophageal Squamous Cell Carcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVA Gastroesophageal Junction Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVB Esophageal Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVB Esophageal Squamous Cell Carcinoma AJCC V8", "Postneoadjuvant Therapy Stage IVB Gastroesophageal Junction Adenocarcinoma AJCC v8", "Stage IV Anal Cancer AJCC v8", "Stage IV Colorectal Cancer AJCC v8", "Stage IV Hepatocellular Carcinoma AJCC v8", "Stage IVA Colorectal Cancer AJCC v8", "Stage IVA Hepatocellular Carcinoma AJCC v8", "Stage IVB Colorectal Cancer AJCC v8", "Stage IVB Hepatocellular Carcinoma AJCC v8", "Stage IVC Colorectal Cancer AJCC v8"]
+        Phase: NA
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.196
+        
+        Brief Summary: This phase II trial studies how well radiation therapy works for the treatment of gastrointestinal cancer that are spreading to other places in the body (metastatic). Radiation therapy uses high energy x-rays to kill cancer cells and shrink tumors. This trial is being done to determine if giving radiation therapy to patients who are being treated with immunotherapy and whose cancers are progressing (getting worse) can slow or stop the growth of their cancers. It may also help researchers determine if giving radiation therapy to one tumor can stimulate the immune system to attack other tumors in the body that are not targeted by the radiation therapy.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To determine whether radiation therapy can convert overall response rates from progressive disease to stable or responsive disease as measured by Response Evaluation Criteria in Solid Tumors (RECIST) version (v.) 1.1.
+
+SECONDARY OBJECTIVES:
+
+I. To define overall response rate by immune-Modified Response Evaluation Criteria in Solid Tumors (iRECIST) criteria.
+
+II. To determine time to progression. III. To determine overall survival. IV. To determine local control in radiated lesion(s). V. To characterize the effect of distant radiation on unirradiated target lesions.
+
+VI. To describe the incidence of new metastatic lesions. VII. To determine treatment safety by Common Terminology Criteria for Adverse Events (CTCAE) v. 5.0.
+
+VIII. To describe time to new systemic therapy.
+
+EXPLORATORY OBJECTIVES:
+
+I. To define radiation-induced effects on circulating immune cells. II. To describe remodeling of the circulating T cell repertoire by deep sequencing of variable, diversity and joining (VDJ) regions of T cell receptors (TCRs).
+
+III. To describe changes in circulating tumor deoxyribonucleic acid (DNA) (ctDNA).
+
+OUTLINE:
+
+Patients undergo radiation therapy for a total of 5 treatments over 5-9 calendar days in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed up at 14 day, 6 months, and then up to 36 months.
+        
+        Inclusion Criteria: ["1. Patients must have a histologically, cytologically, or radiographically confirmed metastatic gastrointestinal (GI) malignancy (esophageal, gastroesophageal, gastric, small intestine, hepatocellular, pancreaticobiliary, colorectal, or anal cancer).", "2. Patients must be receiving immunotherapy (checkpoint inhibitor or CTLA4 inhibitor) with overall response of progressive disease by RECIST criteria.", "3. Patients must have at least two metastases which are individually progressing as per RECIST criteria, one of which can be safely unirradiated as adjudicated by the treating radiation oncologist (e.g. lesions for which small increases in dimensions are unlikely to precipitate significant symptoms).", "4. Patients must have 1-5 sites of disease meeting standard-of-care indications for palliative radiation therapy as adjudicated by the treating radiation oncologist. For example:", "* Symptomatic disease causing pain, bleeding, dyspnea, dysphagia, or nausea", "* At-risk for neurologic, respiratory, cardiovascular, gastrointestinal, musculoskeletal, or hepatobiliary compromise", "5. Evaluation by a radiation oncologist within 28 days of study registration.", "6. Must have adequate organ function to administer radiation therapy and immunotherapy as per standard of care.", "7. Age \\>= 18 years.", "8. Life expectancy exceeding 6 months.", "9. Eastern Cooperative Oncology Group (ECOG) 0-2 or Karnofsky performance status \\>= 50.", "10. Radiation therapy is known to be teratogenic and therefore women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control) prior to study entry and for the duration of radiation therapy. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study and for 3 months after completion of radiation therapy. Contraception requirements during the follow-up period of 6 months will be according to standard of care for immunotherapy administration.", "a. If a woman is of child-bearing potential, a negative pregnancy test within 28 days prior to study enrollment is required.", "11. Ability to understand a written informed consent document, and the willingness to sign it."]
+        
+        Exclusion Criteria: ["1. Enrollment on immunotherapy clinical trial for which radiation therapy is not permitted.", "2. Administration of radiation therapy within 4 weeks prior to study enrollment.", "3. Treatment with systemic corticosteroids or other immunosuppressive medications which would significantly diminish the effect of immunotherapy as judged by the treating physician.", "4. Radiation therapy is contraindicated as adjudicated by the radiation oncologist."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Patients must have a histologically, cytologically, or radiographically confirmed metastatic gastrointestinal (GI) malignancy (esophageal, gastroesophageal, gastric, small intestine, hepatocellular, pancreaticobiliary, colorectal, or anal cancer).
+2. Patients must be receiving immunotherapy (checkpoint inhibitor or CTLA4 inhibitor) with overall response of progressive disease by RECIST criteria.
+3. Patients must have at least two metastases which are individually progressing as per RECIST criteria, one of which can be safely unirradiated as adjudicated by the treating radiation oncologist (e.g. lesions for which small increases in dimensions are unlikely to precipitate significant symptoms).
+4. Patients must have 1-5 sites of disease meeting standard-of-care indications for palliative radiation therapy as adjudicated by the treating radiation oncologist. For example:
+
+   * Symptomatic disease causing pain, bleeding, dyspnea, dysphagia, or nausea
+   * At-risk for neurologic, respiratory, cardiovascular, gastrointestinal, musculoskeletal, or hepatobiliary compromise
+5. Evaluation by a radiation oncologist within 28 days of study registration.
+6. Must have adequate organ function to administer radiation therapy and immunotherapy as per standard of care.
+7. Age \>= 18 years.
+8. Life expectancy exceeding 6 months.
+9. Eastern Cooperative Oncology Group (ECOG) 0-2 or Karnofsky performance status \>= 50.
+10. Radiation therapy is known to be teratogenic and therefore women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control) prior to study entry and for the duration of radiation therapy. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study and for 3 months after completion of radiation therapy. Contraception requirements during the follow-up period of 6 months will be according to standard of care for immunotherapy administration.
+
+    a. If a woman is of child-bearing potential, a negative pregnancy test within 28 days prior to study enrollment is required.
+11. Ability to understand a written informed consent document, and the willingness to sign it.
+
+Exclusion Criteria:
+
+1. Enrollment on immunotherapy clinical trial for which radiation therapy is not permitted.
+2. Administration of radiation therapy within 4 weeks prior to study enrollment.
+3. Treatment with systemic corticosteroids or other immunosuppressive medications which would significantly diminish the effect of immunotherapy as judged by the treating physician.
+4. Radiation therapy is contraindicated as adjudicated by the radiation oncologist.
+        
+        ============================================================
+        TRIAL 4:
+        ============================================================
+        Trial ID: NCT06699836
+        Title: A Phase Two Study Evaluating Two Doses of Leronlimab (Pro 140) In Combination With Trifluridine + Tipiracil (TAS-102) + Bevacizumab in Participants With CCR5+, Microsatellite Stable (MSS), Relapsed Refractory Metastatic Colorectal Cancer (mCRC)
+        Condition: ["Metastatic Colorectal Cancer (mCRC)"]
+        Phase: PHASE2
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.186
+        
+        Brief Summary: This is an open label, randomized, two arm, multi-center study to explore the effect of leronlimab on the overall response rate/ overall survival and safety and tolerability when used in combination with trifluridine and tipiracil + bevacizumab in patients with CCR5+, MSS, mCRC who have progressed on prior treatment before participating in the study. The main questions this study aims to answer are:
+
+1. Can leronlimab, in combination with standard of care therapies trifluridine and tipiracil+ bevacizumab, increase the objective response rate in persons with CCR5+, MSS, mCRC who have progressed on prior treatment before participating in the study.
+2. Is leronlimab safe and well tolerated in these subjects when used in combination with standard of care therapies trifluridine and tipiracil+ bevacizumab.
+        
+        Detailed Description: This is an open label, randomized, two arm, multi-center study to explore the effect of leronlimab on the overall response rate/ overall survival and the safety and tolerability when used in combination with trifluridine and tipiracil + bevacizumab in patients with CCR5+, MSS, relapsed refractory, mCRC who have been previously treated with fluoropyrimidine, oxaliplatin, and irinotecan-based chemotherapy, an anti-VEGF therapy, and, if RAS wild-type and medically appropriate, an anti-EGFR therapy.
+
+This study will enroll approximately 60 participants, 30 participants in each of two arms evaluating either 350 mg or 700 mg of leronlimab, who are 18 years of age or older, with histologically confirmed metastatic colorectal cancer that is microsatellite stable (MSS) and CCR5+ (confirmed by an immunohistochemistry (IHC) assay). Participants will be randomized 1:1 to each arm, where approximately 30 participants will receive 350 mg of leronlimab + trifluridine and tipiracil + bevacizumab and approximately 30 will receive 700 mg of leronlimab + trifluridine and tipiracil + bevacizumab.
+        
+        Inclusion Criteria: ["1. Male or female subjects age \u2265 18 years with a history of treated colorectal cancer with unresectable metastases of the primary colorectal cancer to other organs.", "2. If HIV-1 positive, viral load must be \\< 50 copies/ml and participant must be on stable ART for at least 3 months.", "3. Demonstrate positive tumor expression of CCR5 by IHC.", "4. Adult patients with metastatic colorectal cancer (mCRC) who have been previously treated with fluoropyrimidine-, oxaliplatin-, and irinotecan-based chemotherapy, an anti-VEGF therapy, and, if RAS wild-type and medically appropriate, an anti-EGFR therapy.", "5. Histologically confirmed for microsatellite stable MSS colorectal cancer by PCR, Immunohistochemistry (IHC) or Next-generation sequencing (NGS).", "6. Have measurable disease per RECIST 1.1", "7. Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.", "8. Expected survival of at least three months", "9. No anti-cancer treatment within the last four weeks or at least 5 half-lives prior to treatment (except for palliative radiation therapy from which the patient has recovered from all adverse events).", "10. Patients must have adequate organ and bone marrow function within 28 days prior to registration, defined as:", "i. Acceptable liver function:", "1. Total bilirubin \u2264 1.5 \u00d7 upper limit of normal (ULN) OR direct bilirubin \u2264 ULN for participants with total bilirubin levels \\> 1.5 \u00d7 ULN", "2. Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) \u2264 2.5 \u00d7 ULN (\u2264 5 \u00d7 ULN for participants with liver metastases).", "ii. Acceptable renal function:", "a) GFR \u2265 30 mL/min iii. Acceptable hematologic status:", "1. Hemoglobin \u2265 9 g/dL Note: Criteria must be met without packed red blood cell (pRBC) transfusion within the prior 2 weeks. Participants can be on stable dose of erythropoietin (\u2265 approximately 3 months).", "2. White blood cells \\> 2500/\u00b5L", "3. Absolute neutrophil count \\> 1500/\u00b5L", "4. Platelet count \\> 100 000/\u00b5L.", "11. Clinically normal resting 12-lead ECG at Screening Visit or, if abnormal, considered not clinically significant by the Principal Investigator.", "a) No QTC interval exceeding 460 milliseconds (ms) for females, no QTC interval exceeding 450 ms for males.", "12. Both male and female patients and their partners of childbearing potential must agree to use two medically accepted methods of contraception (e.g., barrier contraceptives \\[male condom, female condom, or diaphragm with a spermicidal gel\\], hormonal contraceptives \\[implants, injectables, combination oral contraceptives, transdermal patches, or contraceptive rings\\], or one of the following methods of birth control (intrauterine devices, tubal sterilization or vasectomy) or must practice complete abstinence from intercourse of reproductive potential from study entry to 6 months after the last day of treatment (excluding women who are not of childbearing potential and men who have been sterilized).", "13. Females of childbearing potential (FOCBP) must have a negative serum pregnancy test at Screening Visit and negative urine pregnancy test prior to receiving the first dose of study.", "14. Male participants must agree to use contraception and refrain from donating sperm for at least 120 days after the last dose of study intervention.", "15. Patients must have the ability to understand and the willingness to sign a written informed consent prior to registration on study."]
+        
+        Exclusion Criteria: ["1. Known severe hypersensitivity towards monoclonal antibodies.", "2. Clinically significant active coronary heart disease and cardiovascular insufficiency with hypotension (systolic blood pressure \\<100 mmHg) per PI discretion", "3. Prior history of other malignancies, except early-stage prostate cancer or basal cell carcinoma that has been surgically resected.", "4. Active hepatitis B (defined as having a positive hepatitis B surface antigen \\[HBsAg\\] test) or hepatitis C or known viral infections.", "5. Are pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the study, starting with the Screening Visit through 120 days after the last dose of study intervention.", "6. Has known psychiatric or substance abuse disorders that would interfere with cooperation with the requirements of the trial.", "7. Stroke and/or transient ischemic attack within 6 months prior to screening.", "8. Placement of a cardiac stent or bypass surgery within 6 months of screening", "9. Tumor invasion of a large vascular structure (e.g., pulmonary artery, superior or inferior vena cava).", "10. Is currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to the first dose of study treatment.", "Note: Participants who have entered the follow-up phase of an investigational study may participate as long as it has been 4 weeks after the last dose of the previous investigational agent.", "11. Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.", "12. Inability to follow protocol."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Male or female subjects age ≥ 18 years with a history of treated colorectal cancer with unresectable metastases of the primary colorectal cancer to other organs.
+2. If HIV-1 positive, viral load must be \< 50 copies/ml and participant must be on stable ART for at least 3 months.
+3. Demonstrate positive tumor expression of CCR5 by IHC.
+4. Adult patients with metastatic colorectal cancer (mCRC) who have been previously treated with fluoropyrimidine-, oxaliplatin-, and irinotecan-based chemotherapy, an anti-VEGF therapy, and, if RAS wild-type and medically appropriate, an anti-EGFR therapy.
+5. Histologically confirmed for microsatellite stable MSS colorectal cancer by PCR, Immunohistochemistry (IHC) or Next-generation sequencing (NGS).
+6. Have measurable disease per RECIST 1.1
+7. Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.
+8. Expected survival of at least three months
+9. No anti-cancer treatment within the last four weeks or at least 5 half-lives prior to treatment (except for palliative radiation therapy from which the patient has recovered from all adverse events).
+10. Patients must have adequate organ and bone marrow function within 28 days prior to registration, defined as:
+
+    i. Acceptable liver function:
+    1. Total bilirubin ≤ 1.5 × upper limit of normal (ULN) OR direct bilirubin ≤ ULN for participants with total bilirubin levels \> 1.5 × ULN
+    2. Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5 × ULN for participants with liver metastases).
+
+    ii. Acceptable renal function:
+
+    a) GFR ≥ 30 mL/min iii. Acceptable hematologic status:
+    1. Hemoglobin ≥ 9 g/dL Note: Criteria must be met without packed red blood cell (pRBC) transfusion within the prior 2 weeks. Participants can be on stable dose of erythropoietin (≥ approximately 3 months).
+    2. White blood cells \> 2500/µL
+    3. Absolute neutrophil count \> 1500/µL
+    4. Platelet count \> 100 000/µL.
+11. Clinically normal resting 12-lead ECG at Screening Visit or, if abnormal, considered not clinically significant by the Principal Investigator.
+
+    a) No QTC interval exceeding 460 milliseconds (ms) for females, no QTC interval exceeding 450 ms for males.
+12. Both male and female patients and their partners of childbearing potential must agree to use two medically accepted methods of contraception (e.g., barrier contraceptives \[male condom, female condom, or diaphragm with a spermicidal gel\], hormonal contraceptives \[implants, injectables, combination oral contraceptives, transdermal patches, or contraceptive rings\], or one of the following methods of birth control (intrauterine devices, tubal sterilization or vasectomy) or must practice complete abstinence from intercourse of reproductive potential from study entry to 6 months after the last day of treatment (excluding women who are not of childbearing potential and men who have been sterilized).
+13. Females of childbearing potential (FOCBP) must have a negative serum pregnancy test at Screening Visit and negative urine pregnancy test prior to receiving the first dose of study.
+14. Male participants must agree to use contraception and refrain from donating sperm for at least 120 days after the last dose of study intervention.
+15. Patients must have the ability to understand and the willingness to sign a written informed consent prior to registration on study.
+
+Exclusion Criteria:
+
+1. Known severe hypersensitivity towards monoclonal antibodies.
+2. Clinically significant active coronary heart disease and cardiovascular insufficiency with hypotension (systolic blood pressure \<100 mmHg) per PI discretion
+3. Prior history of other malignancies, except early-stage prostate cancer or basal cell carcinoma that has been surgically resected.
+4. Active hepatitis B (defined as having a positive hepatitis B surface antigen \[HBsAg\] test) or hepatitis C or known viral infections.
+5. Are pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the study, starting with the Screening Visit through 120 days after the last dose of study intervention.
+6. Has known psychiatric or substance abuse disorders that would interfere with cooperation with the requirements of the trial.
+7. Stroke and/or transient ischemic attack within 6 months prior to screening.
+8. Placement of a cardiac stent or bypass surgery within 6 months of screening
+9. Tumor invasion of a large vascular structure (e.g., pulmonary artery, superior or inferior vena cava).
+10. Is currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to the first dose of study treatment.
+
+    Note: Participants who have entered the follow-up phase of an investigational study may participate as long as it has been 4 weeks after the last dose of the previous investigational agent.
+11. Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.
+12. Inability to follow protocol.
+        
+        ============================================================
+        TRIAL 5:
+        ============================================================
+        Trial ID: NCT06599502
+        Title: A Phase I/IIa, Open-label, Multi-centre Study to Assess the Safety, Tolerability, Pharmacokinetics, and Preliminary Efficacy of AZD0022 Monotherapy and in Combination With Anti-cancer Agents in Participants With Tumours Harbouring a KRASG12D Mutation (ALAFOSS-01)
+        Condition: ["Advanced Solid Tumours", "Non-Small Cell Lung Cancer (NSCLC)", "Pancreatic Ductal Adenocarcinoma (PDAC)", "Colorectal Cancer (CRC)"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.168
+        
+        Brief Summary: This is a first-in-human, modular, Phase I/IIa, open-label, multi-centre study to assess the safety, tolerability, PK, and preliminary efficacy of AZD0022 monotherapy in combination with other anti-cancer agents in participants with tumours harbouring a KRASG12D mutation.
+        
+        Detailed Description: This first time in human, open-label, multi-centre study will administer AZD0022 orally to participants with tumours harbouring a KRASG12D mutation.
+
+This study will have initially 2 modules.
+
+* Module 1: AZD0022 monotherapy
+* Module 2: AZD0022 in combination with other anti-cancer agents (Cetuximab)
+
+Each Module has 3 parts. Dose Escalation (Part A), Dose Optimisation (Part B) and Potential Efficacy Expansion (Part C).
+        
+        Inclusion Criteria: ["For whole study:", "1. Participant must be \u2265 18 years or the legal age of consent in the jurisdiction in which the study is taking place at the time of signing the ICF.", "2. Participants must have a histologically or cytologically confirmed metastatic or locally advanced tumour. Further details on tumour types are specified in Module-specific inclusion criteria.", "3. Participants must have received and progressed on, are refractory or are intolerant to standard therapy for the specific tumour type, or as per Module-specific criteria. Participants with contraindications to, or who refuse SoC therapy may be considered, provided that it is documented and the participant has been informed about all available therapeutic options.", "4. Documented KRASG12D mutation in tissue or liquid biopsy.", "5. Provision of a FFPE tumour sample.", "6. Participants must have at least one measurable target lesion per RECIST v1.1.", "7. Adequate organ and marrow function as defined in study protocol.", "Module 1 Key Inclusion Criteria", "1. Type of tumours with a KRASG12D mutation:", "1. For NSCLC: Patients must have NSCLC that is not amenable to curative treatment and should have progressed on at least one prior line of SoC treatment for metastatic NSCLC (including but not limited to platinum-based chemotherapy, immunotherapy, targeted therapy or first line SoC combinations); prior experimental treatments are allowed.", "2. For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior experimental treatments are allowed.", "3. For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatments are allowed.", "4. For patients enrolled in Part C (NSCLC and PDAC): at least one but no more than 2 lines of prior treatment in metastatic settings; prior experimental treatments are allowed.", "2. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, chemoradiotherapy, etc) will be considered as a first line of treatment.", "3. For Part B food-effect cohort, participants must be able to eat a standard high-fat meal and must be able to fast for at least 10 hours.", "Module 2 Inclusion Criteria", "1. For Part A (M2A, dose escalation) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.", "2. For Part B (M2B, dose optimisation) participants must have pathologically documented locally advanced or metastatic, PDAC or CRC with a KRASG12D mutation.", "3. For Part C (M2C, potential efficacy expansion) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.", "4(a) For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior treatment are allowed.", "(b) For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatment are allowed.", "(c) For patients enrolled in Part C (M2C), at least 2 but no more than 3 lines of prior treatment in metastatic setting; prior experimental treatment are allowed.", "5\\. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, and chemoradiotherapy) will be considered as a first line of treatment."]
+        
+        Exclusion Criteria: ["For whole study:", "1. Any significant laboratory finding or any severe and uncontrolled medical condition.", "2. Any evidence of clinically significant current or prior ILD (eg, required IV steroids or high supplemental oxygen) or where a new suspected ILD cannot be ruled out by imaging at screening.", "3. Spinal cord compression, leptomeningeal disease, or active brain metastases. Asymptomatic brain metastases are allowed", "4. History of allogenic organ transplantation.", "5. Participants with any of the following cardiac criteria:", "* Mean resting QTcF \\> 470 milliseconds on screening", "* Any factors that increase the risk of QT prolongation", "* Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (eg, complete left bundle branch block, second- or third-degree atrioventricular block), and clinically significant sinus node dysfunction not treated with pacemaker.", "* Bradycardia defined as a heart rate less than 60 beats per minute and/or hypotension defined as a blood pressure reading lower than 90 mm Hg for the top number (systolic) or 60 mm Hg for the bottom number (diastolic).", "* Baseline LVEF below the institutional lower limit of normal or \\< 50%, whichever is lower.", "* Symptomatic heart failure (as defined by New York Heart Association class \u2265 2).", "* Acute coronary syndrome/acute myocardial infarction, unstable angina pectoris, coronary intervention procedure with percutaneous coronary intervention, or coronary artery bypass grafting within 6 months before C1D1.", "6. Prior exposure to any direct small molecule KRAS inhibitor.", "7. Herbal preparations/medications are not allowed during treatment with study drug.", "8. Any concomitant medications that are known strong inhibitors or inducers of CYP3A4/5, or sensitive CYP3A4/5 substrates or CYP3A4/5 substrates with a narrow therapeutic range. This also applies to moderate inhibitors and moderate inducers of CYP3A4/5 during Parts A and B of Modules 1 and 2.", "9. Receipt of a cytotoxic or non-cytotoxic drug: 21 days or 5 half-lives, whichever is shorter, before the first dose of study intervention. Biological therapy including immune-oncology and monoclonal antibodies 28 days or 5 half-lives.", "10. Less than or equal to 4 weeks for radiation therapy given with curative intent or \u2264 2 weeks for limited field radiation for palliation prior to the first dose of study treatment"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+For whole study:
+
+1. Participant must be ≥ 18 years or the legal age of consent in the jurisdiction in which the study is taking place at the time of signing the ICF.
+2. Participants must have a histologically or cytologically confirmed metastatic or locally advanced tumour. Further details on tumour types are specified in Module-specific inclusion criteria.
+3. Participants must have received and progressed on, are refractory or are intolerant to standard therapy for the specific tumour type, or as per Module-specific criteria. Participants with contraindications to, or who refuse SoC therapy may be considered, provided that it is documented and the participant has been informed about all available therapeutic options.
+4. Documented KRASG12D mutation in tissue or liquid biopsy.
+5. Provision of a FFPE tumour sample.
+6. Participants must have at least one measurable target lesion per RECIST v1.1.
+7. Adequate organ and marrow function as defined in study protocol.
+
+Module 1 Key Inclusion Criteria
+
+1. Type of tumours with a KRASG12D mutation:
+
+   1. For NSCLC: Patients must have NSCLC that is not amenable to curative treatment and should have progressed on at least one prior line of SoC treatment for metastatic NSCLC (including but not limited to platinum-based chemotherapy, immunotherapy, targeted therapy or first line SoC combinations); prior experimental treatments are allowed.
+   2. For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior experimental treatments are allowed.
+   3. For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatments are allowed.
+   4. For patients enrolled in Part C (NSCLC and PDAC): at least one but no more than 2 lines of prior treatment in metastatic settings; prior experimental treatments are allowed.
+2. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, chemoradiotherapy, etc) will be considered as a first line of treatment.
+3. For Part B food-effect cohort, participants must be able to eat a standard high-fat meal and must be able to fast for at least 10 hours.
+
+Module 2 Inclusion Criteria
+
+1. For Part A (M2A, dose escalation) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.
+2. For Part B (M2B, dose optimisation) participants must have pathologically documented locally advanced or metastatic, PDAC or CRC with a KRASG12D mutation.
+3. For Part C (M2C, potential efficacy expansion) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.
+
+4(a) For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior treatment are allowed.
+
+(b) For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatment are allowed.
+
+(c) For patients enrolled in Part C (M2C), at least 2 but no more than 3 lines of prior treatment in metastatic setting; prior experimental treatment are allowed.
+
+5\. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, and chemoradiotherapy) will be considered as a first line of treatment.
+
+Exclusion Criteria:
+
+For whole study:
+
+1. Any significant laboratory finding or any severe and uncontrolled medical condition.
+2. Any evidence of clinically significant current or prior ILD (eg, required IV steroids or high supplemental oxygen) or where a new suspected ILD cannot be ruled out by imaging at screening.
+3. Spinal cord compression, leptomeningeal disease, or active brain metastases. Asymptomatic brain metastases are allowed
+4. History of allogenic organ transplantation.
+5. Participants with any of the following cardiac criteria:
+
+   * Mean resting QTcF \> 470 milliseconds on screening
+   * Any factors that increase the risk of QT prolongation
+   * Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (eg, complete left bundle branch block, second- or third-degree atrioventricular block), and clinically significant sinus node dysfunction not treated with pacemaker.
+   * Bradycardia defined as a heart rate less than 60 beats per minute and/or hypotension defined as a blood pressure reading lower than 90 mm Hg for the top number (systolic) or 60 mm Hg for the bottom number (diastolic).
+   * Baseline LVEF below the institutional lower limit of normal or \< 50%, whichever is lower.
+   * Symptomatic heart failure (as defined by New York Heart Association class ≥ 2).
+   * Acute coronary syndrome/acute myocardial infarction, unstable angina pectoris, coronary intervention procedure with percutaneous coronary intervention, or coronary artery bypass grafting within 6 months before C1D1.
+6. Prior exposure to any direct small molecule KRAS inhibitor.
+7. Herbal preparations/medications are not allowed during treatment with study drug.
+8. Any concomitant medications that are known strong inhibitors or inducers of CYP3A4/5, or sensitive CYP3A4/5 substrates or CYP3A4/5 substrates with a narrow therapeutic range. This also applies to moderate inhibitors and moderate inducers of CYP3A4/5 during Parts A and B of Modules 1 and 2.
+9. Receipt of a cytotoxic or non-cytotoxic drug: 21 days or 5 half-lives, whichever is shorter, before the first dose of study intervention. Biological therapy including immune-oncology and monoclonal antibodies 28 days or 5 half-lives.
+10. Less than or equal to 4 weeks for radiation therapy given with curative intent or ≤ 2 weeks for limited field radiation for palliation prior to the first dose of study treatment
+        
+        ============================================================
+        TRIAL 6:
+        ============================================================
+        Trial ID: NCT05592626
+        Title: A Phase 1/2, First-in-Human, Open-Label, Dose Escalation and Expansion Study of STAR0602, a Selective T Cell Receptor (TCR) Targeting, Bifunctional Antibody-fusion Molecule, in Subjects With Unresectable, Locally Advanced, or Metastatic Solid Tumors That Are Antigen-rich (START-001)
+        Condition: ["Advanced Solid Tumors", "Genital Neoplasm, Female", "Urogenital Neoplasms", "Lung Neoplasm", "Neoplasms by Site", "Papillomavirus Infection", "Epstein-Barr Virus Infections", "Carcinoma", "Neoplasms", "Vulvar Neoplasms", "Vulvar Diseases", "Abdominal Neoplasm"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.155
+        
+        Brief Summary: This is an open label, multicenter, phase 1/2 study to assess the safety/tolerability and preliminary clinical activity of STAR0602 as a single agent administered intravenously in participants with advanced solid tumors that are antigen-rich.
+        
+        Detailed Description: This Phase 1/2 study consists of two parts: Phase 1 Dose Escalation and Phase 2 Dose Expansion. In Phase 1 Dose Escalation, STAR0602 will be administered intravenously in participants with advanced solid tumors to assess safety/tolerability profile of STAR0602 and to determine the maximum tolerated dose (MTD) and/or recommended Phase 2 dose (RP2D) of STAR0602. In Phase 2 Dose Expansion, STAR0602 at RP2D will be administered to participants with advanced, antigen-rich solid tumors to further evaluate safety and assess preliminary clinical activity of STAR0602. Clinical activity will be evaluated by objective tumor response rate (ORR), duration of response (DOR), disease control rate (DCR), and progression free survival (PFS).
+        
+        Inclusion Criteria: ["1. Participants must have histologically confirmed solid tumors that are unresectable, locally advanced, or metastatic and for which standard curative therapies do not exist or are no longer effective or have intolerable toxicities. Subjects should not have received more than three lines of prior therapies for their advanced or metastatic diseases.", "2. For Phase 1, participants must have one of the following solid tumors:", "1. High mutational burden (TMB-H)", "2. Microsatellite Instability (MSI-H)/DNA mismatch repair (dMMR)", "3. Virally associated tumors", "3. For Phase 2, participants must have one of the following solid tumors:", "1. TMB-H", "2. MSI-H/dMMR", "3. CRC (both Ras wild type and mutant)", "4. Virally associated tumors", "5. Metastatic triple negative breast cancer", "6. Platinum-resistant epithelial ovarian cancer", "7. Metastatic castration-resistance prostate cancer", "8. Primary stage IV or recurrent non-small cell lung cancer", "9. Immunogenic solid tumors", "(Other tumor histologies may also be included in Phase 2 as additional data emerge to support their inclusion.)", "4. Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for \u2265 14 days, and meet the following at the time of enrollment:", "* No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids \\> 10 mg prednisone/day or equivalent);", "* No concurrent leptomeningeal disease or cord compression."]
+        
+        Exclusion Criteria: ["1. Participants with a history of known autoimmune disease with exceptions of:", "* Vitiligo;", "* Psoriasis, atopic dermatitis or other autoimmune skin condition not requiring systemic treatment;", "* History of Graves' disease, now euthyroid for \\> 4 weeks;", "* Hypothyroidism managed by thyroid replacement;", "* Alopecia;", "* Arthritis managed without systemic therapy beyond oral nonsteroidal anti-inflammatory drugs.", "* Adrenal insufficiency well controlled on replacement therapy.", "2. Major surgery or traumatic injury within 8 weeks before first dose of study drug.", "3. Unhealed wounds from surgery or injury.", "4. Treatment with \\>10 mg per day of prednisone (or equivalent) or other immune-suppressive drugs within 7 days prior to the initiation of study drug. Exceptions may be made for patients who have had allergic reaction to iodinated contrast media. Steroids for topical, ophthalmic, inhaled, or nasal administration are allowed.", "5. Clinically significant cardiovascular/vascular disease, gastrointestinal disorders, inflammatory processes, pulmonary compromises", "6. Active viral, bacterial, or systemic fungal infection requiring parenteral treatment within 7 days prior to the initiation of study drug.", "7. Vaccination with any live virus vaccine within 4 weeks prior to the initiation of study drug administration. Inactivated annual influenza vaccination is allowed.", "8. Participants who are known to be human immunodeficiency virus positive or hepatitis B or C positive and have uncontrolled disease.", "9. Second primary invasive malignancy not in remission for \u2265 1 year. Exceptions include non-melanoma locally advanced skin cancer, cervical carcinoma in situ, localized prostate cancer (Gleason score \u2264 7), resected melanoma in situ, or any malignancy considered to be indolent and never required systemic therapy, with the exception of indolent lymphomas.", "10. Pregnant, likely to become pregnant, or lactating women (where pregnancy is defined as the state of a female after conception and until the termination of gestation).", "11. Hepatic metastases unless adequately treated, either locally (e.g., by surgery, radiofrequency ablation, or chemoembolization) or systemically or both, and stable for 3 months."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Participants must have histologically confirmed solid tumors that are unresectable, locally advanced, or metastatic and for which standard curative therapies do not exist or are no longer effective or have intolerable toxicities. Subjects should not have received more than three lines of prior therapies for their advanced or metastatic diseases.
+2. For Phase 1, participants must have one of the following solid tumors:
+
+   1. High mutational burden (TMB-H)
+   2. Microsatellite Instability (MSI-H)/DNA mismatch repair (dMMR)
+   3. Virally associated tumors
+3. For Phase 2, participants must have one of the following solid tumors:
+
+   1. TMB-H
+   2. MSI-H/dMMR
+   3. CRC (both Ras wild type and mutant)
+   4. Virally associated tumors
+   5. Metastatic triple negative breast cancer
+   6. Platinum-resistant epithelial ovarian cancer
+   7. Metastatic castration-resistance prostate cancer
+   8. Primary stage IV or recurrent non-small cell lung cancer
+   9. Immunogenic solid tumors
+
+   (Other tumor histologies may also be included in Phase 2 as additional data emerge to support their inclusion.)
+4. Symptomatic central nervous system (CNS) metastases must have been treated, be asymptomatic for ≥ 14 days, and meet the following at the time of enrollment:
+
+   * No concurrent treatment for CNS disease (e.g., surgery, radiation, corticosteroids \> 10 mg prednisone/day or equivalent);
+   * No concurrent leptomeningeal disease or cord compression.
+
+Exclusion Criteria:
+
+1. Participants with a history of known autoimmune disease with exceptions of:
+
+   * Vitiligo;
+   * Psoriasis, atopic dermatitis or other autoimmune skin condition not requiring systemic treatment;
+   * History of Graves' disease, now euthyroid for \> 4 weeks;
+   * Hypothyroidism managed by thyroid replacement;
+   * Alopecia;
+   * Arthritis managed without systemic therapy beyond oral nonsteroidal anti-inflammatory drugs.
+   * Adrenal insufficiency well controlled on replacement therapy.
+2. Major surgery or traumatic injury within 8 weeks before first dose of study drug.
+3. Unhealed wounds from surgery or injury.
+4. Treatment with \>10 mg per day of prednisone (or equivalent) or other immune-suppressive drugs within 7 days prior to the initiation of study drug. Exceptions may be made for patients who have had allergic reaction to iodinated contrast media. Steroids for topical, ophthalmic, inhaled, or nasal administration are allowed.
+5. Clinically significant cardiovascular/vascular disease, gastrointestinal disorders, inflammatory processes, pulmonary compromises
+6. Active viral, bacterial, or systemic fungal infection requiring parenteral treatment within 7 days prior to the initiation of study drug.
+7. Vaccination with any live virus vaccine within 4 weeks prior to the initiation of study drug administration. Inactivated annual influenza vaccination is allowed.
+8. Participants who are known to be human immunodeficiency virus positive or hepatitis B or C positive and have uncontrolled disease.
+9. Second primary invasive malignancy not in remission for ≥ 1 year. Exceptions include non-melanoma locally advanced skin cancer, cervical carcinoma in situ, localized prostate cancer (Gleason score ≤ 7), resected melanoma in situ, or any malignancy considered to be indolent and never required systemic therapy, with the exception of indolent lymphomas.
+10. Pregnant, likely to become pregnant, or lactating women (where pregnancy is defined as the state of a female after conception and until the termination of gestation).
+11. Hepatic metastases unless adequately treated, either locally (e.g., by surgery, radiofrequency ablation, or chemoembolization) or systemically or both, and stable for 3 months.
+        
+        ============================================================
+        TRIAL 7:
+        ============================================================
+        Trial ID: NCT04929223
+        Title: A Phase I/Ib Global, Multicenter, Open-label Umbrella Study Evaluating the Safety and Efficacy of Targeted Therapies in Subpopulations of Patients With Metastatic Colorectal Cancer (INTRINSIC)
+        Condition: ["Metastatic Colorectal Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.154
+        
+        Brief Summary: This open-label, exploratory study is designed to evaluate the safety and efficacy of targeted therapies or immunotherapy as single agents or combinations, in participants with metastatic colorectal cancer (mCRC) whose tumors are biomarker positive as per treatment arm-specific definition. Eligible participants with mCRC will be enrolled into specific treatment arms based on their biomarker assay results.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: Not available
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: Inclusion Criteria
+
+* Signed cohort-specific Informed Consent Form
+* Age \>= 18 years at time of signing Informed Consent Form
+* Biomarker eligibility as determined by:
+
+  * A validated test approved by local health authorities for detection of the specified biomarkers/mutations.
+  * A validated test performed at a College of American Pathologists/clinical laboratory improvement amendments (CAP/CLIA) -certified or equivalently accredited diagnostic laboratory using a validated test for detection of the specified biomarkers.
+  * Prior test results completed before signing cohort-specific Informed Consent Form or local test results generated prior to or during screening, and availability of a full report of the testing results OR
+  * Blood-based FoundationOne Liquid CDx biomarker eligibility test result generated prior to or during screening or, in case of re-enrollment after treatment discontinuation, prior to starting a new anti-cancer therapy.
+* Eastern Cooperative Oncology Group (ECOG) Performance Status of \<= 1
+* Life expectancy \>= 3 months, as determined by the investigator
+* Histologically confirmed adenocarcinoma originating from the colon or rectum
+* Metastatic disease
+* Prior therapies for metastatic disease
+* Ability to comply with the study protocol, in the investigators judgment
+* Measurable disease (at least one target lesion) according to Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST v1.1)
+* Baseline tumor tissue samples will be collected from all participants for exploratory biomarker research
+* Adequate hematologic and organ function within 14 days prior to initiation of study treatment
+* For women of childbearing potential: agreement to remain abstinent (refrain from heterosexual intercourse) or use contraceptive measures
+* For men: agreement to remain abstinent or use contraceptive measures, and agreement to refrain from donating sperm
+
+Exclusion Criteria
+
+* Current participation or enrollment in another interventional clinical trial. Participants who are participating in the follow-up period of an interventional clinical trial are eligible for the study.
+* Any systemic anti-cancer treatment within 2 weeks or 5 half-lives (whichever is shorter) prior to start of study treatment
+* Treatment with investigational therapy within 28 days prior to initiation of study treatment
+* Pregnant or breastfeeding, or intending to become pregnant during the study
+* History of or concurrent serious medical condition or abnormality in clinical laboratory tests that, in the investigator's judgment, precludes the patient's safe participation in and completion of the study or confounds the ability to interpret data from the study
+* Severe infection within 4 weeks prior to initiation of study treatment or any active infection that, in the opinion of the investigator, could impact patient safety
+* Incomplete recovery from any surgery prior to the start of study treatment that would interfere with the determination of safety or efficacy of study treatment
+* Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (once monthly or more frequently)
+* Uncontrolled tumor-related pain
+* Uncontrolled or symptomatic hypercalcemia
+* Clinically significant and active liver disease
+* Negative HIV test at screening, with the following exception: Participants with a positive HIV test at screening are eligible provided they are stable on anti-retroviral therapy for at least 4 weeks, have a CD4 count greater than or equal to 200/uL, have an undetectable viral load, and have not had a history of opportunistic infection attributable to AIDS within the last 12 months.
+* Symptomatic, untreated, or actively progressing CNS metastases
+* History of leptomeningeal disease or carcinomatous meningitis
+* History of malignancy other than CRC within 2 years prior to screening, with the exception of malignancies with a negligible risk of metastasis or death
+* Any other disease, unresolved toxicity from prior therapy, metabolic dysfunction, physical examination finding, or clinical laboratory finding that contraindicates the use of an investigational drug, may affect the interpretation of the results, or may render the participant at high risk from treatment complications
+* Requirement for treatment with any medicinal product that contraindicates the use of any of the study treatments, may interfere with the planned treatment, affects participant compliance, or puts the patient at higher risk for treatment-related complications
+        
+        ============================================================
+        TRIAL 8:
+        ============================================================
+        Trial ID: NCT05080673
+        Title: Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps
+        Condition: ["Adenocarcinoma of the Colon", "Adenocarcinoma of the Rectum"]
+        Phase: NA
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 45 Years - 70 Years
+        Gender: ALL
+        Hybrid Score: 5.142
+        
+        Brief Summary: This trial examines colorectal cancer incidence in participants with 1 to 2 non-advanced adenomas randomized to surveillance colonoscopy at 10 years compared to participants randomized to surveillance colonoscopy at 5 and 10 years.
+        
+        Detailed Description: Colorectal cancer (CRC) is the fourth most common cancer and the second leading cause of cancer death among men and women in the United States (US). The lifetime risk of colorectal cancer in both men and women in the US is approximately 6%. About 93% of colorectal cancer (CRC) diagnoses are in patients older than 50 years (Siegel 2014). Randomized controlled trials show that screening for CRC significantly decreases CRC incidence and mortality (Schoen 2012, Atkin 2010, Mandel 1999, Mandel 2000). CRC screening has received a Grade A recommendation from the US Preventive Services Task Force.
+
+In the U.S., colonoscopy is the most utilized screening modality for CRC. On a population basis, screening rates, which were around 40-50%, have now increased to 65%, and a goal to increase to 80% compliance is being promoted (CDC 2011, CDC 2013, Meester 2015).
+
+Adenomatous polyps are the acknowledged precursors of colorectal cancer. Identification and removal of adenomas is the mechanism by which screening is effective in reducing CRC incidence and subsequent mortality. "Advanced" adenomas are adenomas which are greater than or equal to 1 cm, or have a "villous" component (tubulovillous or villous), or have foci of high grade dysplasia. Advanced adenomas are associated with increased long-term risk of cancer, even years after colonoscopy (Click 2018). The prevalence of advanced adenomas at screening colonoscopy is 5-10% (Ferlitsch 2011, Imperiale 2014). Non-advanced adenomas are adenomas greater than 1 cm with neither villous components nor high grade dysplasia. Non-advanced adenomas are much more common than advanced adenomas, present in around 30% of colonoscopy exams (Ferlitsch 2011, Imperiale 2014).
+
+After detection of adenomas, patients are advised to return periodically for surveillance colonoscopy. Patients with 1-2 non-advanced adenomas are recommended by guidelines to return in 5 - 10 years for follow-up surveillance colonoscopy (Lieberman 2012). However, there are no guidelines on how to triage individuals to 5 as opposed to 10 years. Furthermore, there is limited evidence supporting the effectiveness of surveillance colonoscopy in reducing CRC incidence. A retrospective study in patients with advanced adenomas demonstrated benefit (Atkin 2017), but the study was not randomized and did not include patients with 1-2 non-advanced adenomas. The only randomized trial of surveillance colonoscopy was reported in the early 1990's, when participants were randomized to 3 vs. 1- and 3- year surveillance (Winawer 1993). No difference in advanced adenoma detection was observed when comparing participants examined at the two screening intervals, and as a result, guidelines were modified with participants advised to return every 3 years after adenomatous polyp detection. The recommended interval for non-advanced adenomas was gradually lengthened to the current standard, but there is no randomized, controlled data to support that interval. Furthermore, observational data of surveillance colonoscopy practice in the U.S. demonstrate that recommended intervals are often not adhered to, and individuals return for repeat testing well ahead of guideline recommendations (Schoen 2010, Lieberman 2014).
+
+Furthermore, if anything, retrospective, natural history studies of non-advanced adenomas do not support the association of non-advanced adenoma with a higher risk of subsequent colorectal cancer (Atkin 1992, Spencer 1984, Loberg 2014). For example, in a classic study from the United Kingdom, patients with small rectosigmoid adenomas, even if multiple, did not have an increased risk of CRC compared to the general population, over a 14-year mean follow-up time (Atkin 1992). In a recent observational study from Norway, participants with a low-risk adenoma followed over a median of 7.7 years (maximum 19 years) without subsequent surveillance colonoscopy, had a lower CRC mortality than the general population (Loberg 2014), implying that although the initial colonoscopy may be protective, subsequent follow-up colonoscopy was not required. More recently, several studies have reported that individuals with non-advanced adenomas do not have an increased risk of colorectal cancer compared to those with no adenomas (Click 2018, Lieberman 2019, Lee 2019).
+
+Another recent major development affecting screening is that practitioners of colonoscopy are now recommended to monitor and insure their adenoma detection rates are high. Data from Poland (Kaminski 2010) and Kaiser Permanente in California (Corley 2014) have demonstrated that a higher adenoma detection rate (ADR) is associated with a lower long-term risk of interval CRC, or cancer occurring after colonoscopy. Our understanding of these observations is premised on the notion that leaving pre-neoplastic tissue (adenomas) in situ, (such as what occurs with a lower ADR), increases the chance that an adenoma left behind will subsequently transform into cancer. The concern over interval cancers has stimulated quality concerns about the practice of colonoscopy. Guidelines for a recommended ADR at screening colonoscopy are rising, from the initial targets of 15% in women and 25% in men (Lieberman 2012) to 20% in women and 30% in men or 25% overall. ADRs in clinical studies are now commonly over 30% and some practitioners report rates exceeding 50%. However, adenomas that are detected when the ADR is high or as it increases over time are generally small, non-advanced adenomas.
+
+Current clinical practice favoring colonoscopy-based screening with increased emphasis on detection of adenomas, most of which will turn out to be small, non-advanced adenomas, will greatly increase demand for utilization of surveillance colonoscopy exams in the coming decades. Yet, the evidence for determining the benefit, optimal timing, and recommended frequency of surveillance colonoscopy is unknown. A randomized, clinical trial to demonstrate the difference in yield between 5- or 10-year surveillance for participants with non-advanced adenoma is needed to guide clinical practice. Only a randomized trial will be authoritative enough to define good clinical practice and directly influence clinical care.
+        
+        Inclusion Criteria: ["* The participant must have signed and dated an IRB-approved consent form that conforms to federal and institutional guidelines.", "* Participants greater than or equal to 45 and less than 70 years of age at the time of colonoscopy.", "* Participants with a first-time diagnosis of 1-2 non-advanced tubular adenomas (less than 10 mm without tubulovillous or villous changes or high grade or severe dysplasia) from the qualifying colonoscopy within 4 years prior to randomization.", "* Sessile serrated polyps/adenomas, as long as they do not meet the criteria for advanced adenomas, will be considered as non-advanced adenomas.", "* Qualifying colonoscopy must be a complete colonoscopy with visualization of the cecum and with adequate cleansing within 4 years prior to randomization.", "* Complete excision of all observed polyps in qualifying colonoscopy", "* Participants must be able to read or understand English or Spanish."]
+        
+        Exclusion Criteria: ["* \u2022 Prior history of colorectal cancer or colorectal adenomas including sessile serrated polyps/adenomas excluding those found on the qualifying colonoscopy.", "* Prior history of a hyperplastic polyp measuring greater than or equal to 1 cm in size.", "* Traditional serrated adenomas found on the qualifying colonoscopy.", "* Hyperplastic polyp measuring greater than or equal to 1 cm in size found on the qualifying colonoscopy.", "* Previous malignancies unless the patient has been disease-free for 5 or more years prior to randomization and is deemed by the physician to be at low risk for recurrence. Patients with the following cancers are eligible if diagnosed and treated within the past 5 years: all in situ cancers and basal cell and squamous cell carcinoma of the skin.", "* Colonoscopy performed after the qualifying colonoscopy but prior to randomization.", "* Incomplete qualifying colonoscopy (e.g., cecum not visualized).", "* Incomplete endoscopic excision of adenomatous polyps based on colonoscopist impression at qualifying colonoscopy. (Excision of all hyperplastic rectosigmoid polyps is not required.)", "* Sub-total colectomy or total proctocolectomy. (Segmental resections are allowed.)", "* Family history of CRC diagnosed at less than or equal to 60 years of age in a first degree relative (mother, father, child, sibling) or in two first degree relatives with CRC at any age.", "* Participants with a clinical diagnosis of a significant heritable risk for colorectal cancer (Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \\[Lynch Syndrome\\]).", "* Participants tested positive for a Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \\[Lynch Syndrome\\] genetic mutation that increases risk of colorectal cancer.", "* Inflammatory bowel disease (e.g., Crohn's Disease, ulcerative colitis).", "* Life expectancy less than 10 years due to comorbid conditions in the opinion of the investigator.", "* Other comorbid conditions that would prevent the participant from having colonoscopies or would prevent required follow-up."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* The participant must have signed and dated an IRB-approved consent form that conforms to federal and institutional guidelines.
+* Participants greater than or equal to 45 and less than 70 years of age at the time of colonoscopy.
+* Participants with a first-time diagnosis of 1-2 non-advanced tubular adenomas (less than 10 mm without tubulovillous or villous changes or high grade or severe dysplasia) from the qualifying colonoscopy within 4 years prior to randomization.
+* Sessile serrated polyps/adenomas, as long as they do not meet the criteria for advanced adenomas, will be considered as non-advanced adenomas.
+* Qualifying colonoscopy must be a complete colonoscopy with visualization of the cecum and with adequate cleansing within 4 years prior to randomization.
+* Complete excision of all observed polyps in qualifying colonoscopy
+* Participants must be able to read or understand English or Spanish.
+
+Exclusion Criteria:
+
+* • Prior history of colorectal cancer or colorectal adenomas including sessile serrated polyps/adenomas excluding those found on the qualifying colonoscopy.
+
+  * Prior history of a hyperplastic polyp measuring greater than or equal to 1 cm in size.
+  * Traditional serrated adenomas found on the qualifying colonoscopy.
+  * Hyperplastic polyp measuring greater than or equal to 1 cm in size found on the qualifying colonoscopy.
+  * Previous malignancies unless the patient has been disease-free for 5 or more years prior to randomization and is deemed by the physician to be at low risk for recurrence. Patients with the following cancers are eligible if diagnosed and treated within the past 5 years: all in situ cancers and basal cell and squamous cell carcinoma of the skin.
+  * Colonoscopy performed after the qualifying colonoscopy but prior to randomization.
+  * Incomplete qualifying colonoscopy (e.g., cecum not visualized).
+  * Incomplete endoscopic excision of adenomatous polyps based on colonoscopist impression at qualifying colonoscopy. (Excision of all hyperplastic rectosigmoid polyps is not required.)
+  * Sub-total colectomy or total proctocolectomy. (Segmental resections are allowed.)
+  * Family history of CRC diagnosed at less than or equal to 60 years of age in a first degree relative (mother, father, child, sibling) or in two first degree relatives with CRC at any age.
+  * Participants with a clinical diagnosis of a significant heritable risk for colorectal cancer (Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \[Lynch Syndrome\]).
+  * Participants tested positive for a Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \[Lynch Syndrome\] genetic mutation that increases risk of colorectal cancer.
+  * Inflammatory bowel disease (e.g., Crohn's Disease, ulcerative colitis).
+  * Life expectancy less than 10 years due to comorbid conditions in the opinion of the investigator.
+  * Other comorbid conditions that would prevent the participant from having colonoscopies or would prevent required follow-up.
+        
+        ============================================================
+        TRIAL 9:
+        ============================================================
+        Trial ID: NCT05461430
+        Title: Mass Response of Tumor Cells as a Biomarker for Rapid Therapy Guidance
+        Condition: ["Pleural Effusion, Malignant", "Ascites, Malignant", "Carcinoma", "Carcinoma, Hepatocellular", "Carcinoma, Renal Cell", "Carcinoma, Renal", "Carcinoma, Small Cell", "Carcinoma, Non-Small-Cell Lung", "Carcinoma, Pancreatic Ductal", "Carcinoma, Neuroendocrine", "Carcinoma, Thymic", "Carcinoma, Pancreatic", "Carcinoma Breast", "Carcinoma, Ovarian", "Carcinoma Bladder", "Carcinoma of Unknown Primary", "Carcinoma of the Head and Neck", "Carcinoma of the Oropharynx", "Carcinoma of the Larynx", "Carcinoma of the Bladder", "Carcinoma of Esophagus", "Carcinoma of the Nasopharynx", "Carcinoma of the Penis", "Carcinoma of the Cervix", "Carcinoma of the Anus", "Carcinoma of the Vulva", "Carcinoma of the Appendix", "Carcinoma of the Oral Cavity", "Cholangiocarcinoma", "Melanoma", "Mesothelioma", "Pancreatic Cancer"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.135
+        
+        Brief Summary: The primary objective of this study, sponsored by Travera Inc. in Massachusetts, is to validate whether the mass response biomarker has potential to predict response of patients to specific therapies or therapeutic combinations using isolated tumor cells from various specimen formats including malignant fluids such as pleural effusions and ascites, core needle biopsies, fine needle aspirates, or resections.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["1. Patient is \u226518 years of age", "2. Written Informed Consent provided by patient", "3. Diagnosis of any kind of carcinoma", "4. Malignant fluid (e.g. pleural effusion or ascites) drainage OR tumor tissue resection OR tumor tissue needle biopsy is clinically indicated as part of SOC", "5. Proceeding onto therapy for treatment", "6. Informed consent obtained for the XCELSIOR longitudinal outcomes registry (NCT03793088)"]
+        
+        Exclusion Criteria: ["1. Lack of informed consent", "2. Unable to obtain sufficient sample"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Patient is ≥18 years of age
+2. Written Informed Consent provided by patient
+3. Diagnosis of any kind of carcinoma
+4. Malignant fluid (e.g. pleural effusion or ascites) drainage OR tumor tissue resection OR tumor tissue needle biopsy is clinically indicated as part of SOC
+5. Proceeding onto therapy for treatment
+6. Informed consent obtained for the XCELSIOR longitudinal outcomes registry (NCT03793088)
+
+Exclusion Criteria:
+
+1. Lack of informed consent
+2. Unable to obtain sufficient sample
+        
+        ============================================================
+        TRIAL 10:
+        ============================================================
+        Trial ID: NCT03452774
+        Title: SYNERGY-AI: Artificial Intelligence Based Precision Oncology Clinical Trial Matching and Registry
+        Condition: ["Cancer, Metastatic", "Cancer", "Cancer of Pancreas", "Cancer of Liver", "Cancer of Stomach", "Cancer Liver", "Cancer of Rectum", "Cancer of Kidney", "Cancer of Esophagus", "Cancer of Cervix", "Cancer of Colon", "Cancer of Larynx", "Cancer, Lung", "Cancer, Breast", "Cancer, Advanced", "Cancer Prostate", "Cancer of Neck", "Cancer of Skin", "Neuroendocrine Tumors", "Carcinoma", "Mismatch Repair Deficiency", "BRCA Gene Rearrangement", "Non Hodgkin Lymphoma", "Leukemia", "Non Small Cell Lung Cancer", "Cholangiocarcinoma", "Glioblastoma", "Central Nervous System Tumor", "Melanoma", "Urothelial Carcinoma", "Bladder Cancer", "Ovarian Cancer", "Endometrial Cancer", "Testicular Cancer", "Breast Cancer", "COVID", "Myelofibrosis", "Myeloproliferative Neoplasm", "Myeloproliferative Disorders", "Follicular Lymphoma", "Mantle Cell Lymphoma", "Marginal Zone Lymphoma", "Myelodysplastic Syndromes"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range:  - 
+        Gender: ALL
+        Hybrid Score: 5.131
+        
+        Brief Summary: International registry for cancer patients evaluating the feasibility and clinical utility of an Artificial Intelligence-based precision oncology clinical trial matching tool, powered by a virtual tumor boards (VTB) program, and its clinical impact on pts with advanced cancer to facilitate clinical trial enrollment (CTE), as well as the financial impact, and potential outcomes of the intervention.
+        
+        Detailed Description: The SYNERGY Registry is an international prospective, observational cohort study of eligible adult and pediatric pts with advanced solid and hematological malignancies, for whom the decision to consider CTE has already been made by their primary providers (PP). Using a proprietary application programming interface (API) linked to existing electronic health records (EHR) platforms, individual clinical data is extracted, analyzed and matched to a parametric database of existing institutional and non-institutional CT. Machine learning algorithms allow for dynamic matching based on CT allocation and availability for optimized matching. Patients voluntarily enroll into the registry, which is non-interventional with no protocol-mandated tests/procedures - all treatment decisions are made at the discretion of PP in consultation with their pts, based on the AI CT matching report, and VTB support. CTE will be assessed on variables including biomarkers, barriers to enrollment. Study duration anticipated as \~36 mo (\~24-mo enrollment followed by 12 mo of data collection, to occur every 3 mo). The primary analysis will be performed 12 mo after last pt enrolled. The impact time to initiation of CTE on PFS and OS will be estimated by Kaplan-Meier and Cox multivariable survival analysis. Enrollment is ongoing, with a target of ≥50,000 patients.
+        
+        Inclusion Criteria: ["* Pts with solid and hematological malignancies;", "* Pts cancer-related biomarkers, gene variants, fusion and rearrangements (by immunohistochemistry, PCR, FISH or NGS): PD-L1, MSI (MMR), Claudin18.2, HER2/Neu, Tumor mutational burden/load (TMB), ABL1, ACVR1B, AKT1, AKT2, AKT3, ALK, APC, AR, ATM, ATRX, AURKA, AURKB, BAP1, BCL2, BCL6, BRAF, BRCA1, BRCA2, BTK, CCND1, CCND2, CCND3, CDK4, CDK6, CDKN1A/B, CEBPA, CHEK1, CHEK2, CSF1R, CTNNB1, DAXX, DDR1/2, DNMT3A, EGFR, ERBB2, ERBB3, ERBB4, ERCC4, ER, ESR1, FANCA, FAS, FBXW7, FGFR1, FGFR2, FGFR3, FGFR4, FLT3, GATA3, GATA6, GNAS, HDAC1, HGF, HRAS, IDH1, IDH2, IGF1R, JAK1, JAK2, JAK3, KDR (VEGFR2), KIT, KRAS, MAP2K2 (MEK2), MAP3K1, MCL1, MDM2, MDM4, MEN1, MET, MSH2, MSH3, MSH6, MTOR, MUTYH, MYC, MYCL (MYCL1), NF1, NF2, NOTCH1, NPM1, NRAS, NTRK1, NTRK2, NTRK3, PALB2, PARP1, PARP2, PARP3, PBRM1, PDCD1 (PD1), PDCD1LG2 (PD-L2), PDGFRA, PDGFRB, PIK3C, PMS2, POLD1, POLE, PRDM1, PTCH1, PTEN, RAF1, RB1, RET, RICTOR, ROS1, RPTOR, SDHA/B/C, SMAD, SMARC, SMO, STK11, TGFBR2, TP53, TSC1, TSC2, VEGFA, VHL, WT1, ZNF217, ZNF703, CEACAM, NRG1, among others.", "These biomarkers should be determined by local laboratory, external vendor, or next generation sequencing platform", "* Decision to consider clinical trial pre-screening enrollment (CTE) by primary provider and/or patient"]
+        
+        Exclusion Criteria: ["* ECOG PS \\> 2;", "* Abnormal organ function;", "* Hospice enrollment"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Pts with solid and hematological malignancies;
+* Pts cancer-related biomarkers, gene variants, fusion and rearrangements (by immunohistochemistry, PCR, FISH or NGS): PD-L1, MSI (MMR), Claudin18.2, HER2/Neu, Tumor mutational burden/load (TMB), ABL1, ACVR1B, AKT1, AKT2, AKT3, ALK, APC, AR, ATM, ATRX, AURKA, AURKB, BAP1, BCL2, BCL6, BRAF, BRCA1, BRCA2, BTK, CCND1, CCND2, CCND3, CDK4, CDK6, CDKN1A/B, CEBPA, CHEK1, CHEK2, CSF1R, CTNNB1, DAXX, DDR1/2, DNMT3A, EGFR, ERBB2, ERBB3, ERBB4, ERCC4, ER, ESR1, FANCA, FAS, FBXW7, FGFR1, FGFR2, FGFR3, FGFR4, FLT3, GATA3, GATA6, GNAS, HDAC1, HGF, HRAS, IDH1, IDH2, IGF1R, JAK1, JAK2, JAK3, KDR (VEGFR2), KIT, KRAS, MAP2K2 (MEK2), MAP3K1, MCL1, MDM2, MDM4, MEN1, MET, MSH2, MSH3, MSH6, MTOR, MUTYH, MYC, MYCL (MYCL1), NF1, NF2, NOTCH1, NPM1, NRAS, NTRK1, NTRK2, NTRK3, PALB2, PARP1, PARP2, PARP3, PBRM1, PDCD1 (PD1), PDCD1LG2 (PD-L2), PDGFRA, PDGFRB, PIK3C, PMS2, POLD1, POLE, PRDM1, PTCH1, PTEN, RAF1, RB1, RET, RICTOR, ROS1, RPTOR, SDHA/B/C, SMAD, SMARC, SMO, STK11, TGFBR2, TP53, TSC1, TSC2, VEGFA, VHL, WT1, ZNF217, ZNF703, CEACAM, NRG1, among others.
+
+These biomarkers should be determined by local laboratory, external vendor, or next generation sequencing platform
+
+* Decision to consider clinical trial pre-screening enrollment (CTE) by primary provider and/or patient
+
+Exclusion Criteria:
+
+* ECOG PS \> 2;
+* Abnormal organ function;
+* Hospice enrollment
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04792684",
+                    "trial_title": "Collection of Samples From the United States Population for Optimization and Evaluation of Colorectal Cancer (CRC) Plasma Circulating Free-DNA (cfDNA) Marker Panel Performance ("USOPTIVAL")",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT05673148",
+                    "trial_title": "A Pragmatic Randomized Phase III Trial Evaluating Total Ablative Therapy for Patients With Limited Metastatic Colorectal Cancer: Evaluating Radiation, Ablation, and Surgery (ERASur)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 10 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 10,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-19T15:35:07.196855"
+            }
+        }
+        

@@ -18,6 +18,8 @@ from config import (
     AUTO_EVAL_POLL_INTERVAL,
     AUTO_EVAL_PATIENT_BATCH_SIZE,
     AUTO_EVAL_TRIAL_BATCH_SIZE,
+    AUTO_EVAL_PATIENT_BATCH_SIZE_INT,
+    AUTO_EVAL_TRIAL_BATCH_SIZE_INT,
     AUTO_EVAL_ENABLE_PATIENTS,
     AUTO_EVAL_ENABLE_TRIALS,
     AUTO_EVAL_PATIENT_TIMEOUT,
@@ -48,7 +50,10 @@ class AutoEvaluationMonitor:
         
         try:
             self.db_utils = DatabaseUtils()
-            logger.info("✅ DatabaseUtils initialized successfully")
+            logger.info("✅ DatabaseUtils initialized successfully with connection pooling")
+            logger.info("   - Pool size: 2 connections")
+            logger.info("   - Max overflow: 3 connections")
+            logger.info("   - Total max connections: 5 per instance")
         except Exception as e:
             logger.error(f"❌ Failed to initialize DatabaseUtils: {e}")
             raise
@@ -66,8 +71,8 @@ class AutoEvaluationMonitor:
         logger.info(f"   - Polling Interval: {AUTO_EVAL_POLL_INTERVAL} seconds")
         logger.info(f"   - Patient Processing: {'ENABLED' if AUTO_EVAL_ENABLE_PATIENTS else 'DISABLED'}")
         logger.info(f"   - Trial Processing: {'ENABLED' if AUTO_EVAL_ENABLE_TRIALS else 'DISABLED'}")
-        logger.info(f"   - Patient Batch Size: {AUTO_EVAL_PATIENT_BATCH_SIZE}")
-        logger.info(f"   - Trial Batch Size: {AUTO_EVAL_TRIAL_BATCH_SIZE}")
+        logger.info(f"   - Patient Batch Size: {AUTO_EVAL_PATIENT_BATCH_SIZE} ({'ALL' if AUTO_EVAL_PATIENT_BATCH_SIZE_INT is None else 'LIMITED'})")
+        logger.info(f"   - Trial Batch Size: {AUTO_EVAL_TRIAL_BATCH_SIZE} ({'ALL' if AUTO_EVAL_TRIAL_BATCH_SIZE_INT is None else 'LIMITED'})")
         logger.info(f"   - Patient Timeout: {AUTO_EVAL_PATIENT_TIMEOUT}s")
         logger.info(f"   - Trial Timeout: {AUTO_EVAL_TRIAL_TIMEOUT}s")
         logger.info("=" * 80)
@@ -99,28 +104,36 @@ class AutoEvaluationMonitor:
         self.running = False
     
     async def _check_and_process(self):
-        """Check for unevaluated items and process them"""
+        """Check for unevaluated items and process them one at a time (sequentially)"""
         if not self.db_utils:
             logger.error("Database utils not initialized")
             return
         
-        # Process patients and trials concurrently
-        tasks = []
+        print(f"\n{'='*80}")
+        print(f"⏰ [{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Checking for unevaluated items...")
+        print(f"{'='*80}")
         
+        # Process patients and trials sequentially (one at a time)
+        # First process patients, then process trials
         if AUTO_EVAL_ENABLE_PATIENTS:
-            tasks.append(self._process_unevaluated_patients())
+            await self._process_unevaluated_patients()
         
         if AUTO_EVAL_ENABLE_TRIALS:
-            tasks.append(self._process_unevaluated_trials())
+            await self._process_unevaluated_trials()
         
-        if tasks:
-            await asyncio.gather(*tasks, return_exceptions=True)
+        print(f"\n💤 Waiting {AUTO_EVAL_POLL_INTERVAL} seconds before next check...\n")
     
     async def _process_unevaluated_patients(self):
         """Process unevaluated patients through patient-to-trial pipeline"""
         try:
             # Get unevaluated patient IDs
-            patient_ids = self.db_utils.get_unevaluated_patient_ids(limit=AUTO_EVAL_PATIENT_BATCH_SIZE)
+            # Use a large limit if "all" is specified, otherwise use the batch size
+            limit = AUTO_EVAL_PATIENT_BATCH_SIZE_INT if AUTO_EVAL_PATIENT_BATCH_SIZE_INT is not None else 1000
+            patient_ids = self.db_utils.get_unevaluated_patient_ids(limit=limit)
+            
+            # If batch size is limited, only process that many
+            if AUTO_EVAL_PATIENT_BATCH_SIZE_INT is not None:
+                patient_ids = patient_ids[:AUTO_EVAL_PATIENT_BATCH_SIZE_INT]
             
             if not patient_ids:
                 return
@@ -134,9 +147,10 @@ class AutoEvaluationMonitor:
                 # Mark as being processed
                 self.processed_patients.update(new_patients)
             
+            print(f"\n🔍 [PATIENT CHECK] Found {len(new_patients)} unevaluated patient(s) to process")
             logger.info(f"📋 Found {len(new_patients)} unevaluated patients to process")
             
-            # Process each patient
+            # Process each patient one at a time (sequentially)
             for patient_id in new_patients:
                 try:
                     await self._run_patient_pipeline(patient_id)
@@ -146,6 +160,10 @@ class AutoEvaluationMonitor:
                     # Remove from processing set
                     async with self._patient_lock:
                         self.processed_patients.discard(patient_id)
+                
+                # Wait a bit between patients to avoid overwhelming the system
+                if len(new_patients) > 1:
+                    await asyncio.sleep(1)
                     
         except Exception as e:
             logger.error(f"Error processing unevaluated patients: {e}")
@@ -154,7 +172,13 @@ class AutoEvaluationMonitor:
         """Process unevaluated trials through trial-to-patient pipeline"""
         try:
             # Get unevaluated trial IDs
-            trial_ids = self.db_utils.get_unevaluated_trial_ids(limit=AUTO_EVAL_TRIAL_BATCH_SIZE)
+            # Use a large limit if "all" is specified, otherwise use the batch size
+            limit = AUTO_EVAL_TRIAL_BATCH_SIZE_INT if AUTO_EVAL_TRIAL_BATCH_SIZE_INT is not None else 1000
+            trial_ids = self.db_utils.get_unevaluated_trial_ids(limit=limit)
+            
+            # If batch size is limited, only process that many
+            if AUTO_EVAL_TRIAL_BATCH_SIZE_INT is not None:
+                trial_ids = trial_ids[:AUTO_EVAL_TRIAL_BATCH_SIZE_INT]
             
             if not trial_ids:
                 return
@@ -168,9 +192,10 @@ class AutoEvaluationMonitor:
                 # Mark as being processed
                 self.processed_trials.update(new_trials)
             
+            print(f"\n🔍 [TRIAL CHECK] Found {len(new_trials)} unevaluated trial(s) to process")
             logger.info(f"📋 Found {len(new_trials)} unevaluated trials to process")
             
-            # Process each trial
+            # Process each trial one at a time (sequentially)
             for trial_id in new_trials:
                 try:
                     await self._run_trial_pipeline(trial_id)
@@ -180,24 +205,42 @@ class AutoEvaluationMonitor:
                     # Remove from processing set
                     async with self._trial_lock:
                         self.processed_trials.discard(trial_id)
+                
+                # Wait a bit between trials to avoid overwhelming the system
+                if len(new_trials) > 1:
+                    await asyncio.sleep(1)
                     
         except Exception as e:
             logger.error(f"Error processing unevaluated trials: {e}")
     
     async def _run_patient_pipeline(self, patient_id: int):
         """Run patient-to-trial pipeline for a single patient"""
+        print("\n" + "="*80)
+        print(f"🔄 PATIENT-TO-TRIAL FLOW - Processing Patient ID: {patient_id}")
+        print("="*80)
         logger.info(f"🔄 Processing patient {patient_id} through patient-to-trial pipeline...")
         
         # Get patient MRN first
         patient_data = self.db_utils.get_patient_by_id(patient_id)
         if not patient_data:
+            print(f"⚠️  Patient {patient_id} not found in database")
             logger.warning(f"Patient {patient_id} not found in database")
             return
         
         mrn = patient_data.get('mrn')
         if not mrn:
+            print(f"⚠️  Patient {patient_id} has no MRN")
             logger.warning(f"Patient {patient_id} has no MRN")
             return
+        
+        print(f"📋 Patient Details:")
+        print(f"   - Patient ID: {patient_id}")
+        print(f"   - MRN: {mrn}")
+        print(f"   - Starting patient-to-trial matching pipeline...")
+        print(f"   - Timeout: {AUTO_EVAL_PATIENT_TIMEOUT} seconds")
+        print("-"*80)
+        print("📊 PIPELINE OUTPUT (Real-time):")
+        print("-"*80)
         
         # Execute: python patient_to_trial_pipeline.py --patient-id <mrn>
         cmd = [
@@ -213,15 +256,35 @@ class AutoEvaluationMonitor:
                 timeout=AUTO_EVAL_PATIENT_TIMEOUT
             )
             duration = time.time() - start_time
+            print("-"*80)
+            print(f"✅ Patient {patient_id} (MRN: {mrn}) processed successfully in {duration:.2f}s")
+            print("="*80 + "\n")
             logger.info(f"✅ Patient {patient_id} (MRN: {mrn}) processed successfully in {duration:.2f}s")
         except asyncio.TimeoutError:
+            print("-"*80)
+            print(f"⏱️  Patient {patient_id} (MRN: {mrn}) processing timed out after {AUTO_EVAL_PATIENT_TIMEOUT}s")
+            print("="*80 + "\n")
             logger.error(f"⏱️ Patient {patient_id} (MRN: {mrn}) processing timed out after {AUTO_EVAL_PATIENT_TIMEOUT}s")
         except Exception as e:
+            print("-"*80)
+            print(f"❌ Error processing patient {patient_id} (MRN: {mrn}): {e}")
+            print("="*80 + "\n")
             logger.error(f"❌ Error processing patient {patient_id} (MRN: {mrn}): {e}")
     
     async def _run_trial_pipeline(self, trial_id: str):
         """Run trial-to-patient pipeline for a single trial"""
+        print("\n" + "="*80)
+        print(f"🔄 TRIAL-TO-PATIENT FLOW - Processing Trial ID: {trial_id}")
+        print("="*80)
         logger.info(f"🔄 Processing trial {trial_id} through trial-to-patient pipeline...")
+        
+        print(f"📋 Trial Details:")
+        print(f"   - Trial ID: {trial_id}")
+        print(f"   - Starting trial-to-patient matching pipeline...")
+        print(f"   - Timeout: {AUTO_EVAL_TRIAL_TIMEOUT} seconds")
+        print("-"*80)
+        print("📊 PIPELINE OUTPUT (Real-time):")
+        print("-"*80)
         
         # Execute: python trial_to_patient_pipeline.py --trial-id <trial_id>
         cmd = [
@@ -237,24 +300,36 @@ class AutoEvaluationMonitor:
                 timeout=AUTO_EVAL_TRIAL_TIMEOUT
             )
             duration = time.time() - start_time
+            print("-"*80)
+            print(f"✅ Trial {trial_id} processed successfully in {duration:.2f}s")
+            print("="*80 + "\n")
             logger.info(f"✅ Trial {trial_id} processed successfully in {duration:.2f}s")
         except asyncio.TimeoutError:
+            print("-"*80)
+            print(f"⏱️  Trial {trial_id} processing timed out after {AUTO_EVAL_TRIAL_TIMEOUT}s")
+            print("="*80 + "\n")
             logger.error(f"⏱️ Trial {trial_id} processing timed out after {AUTO_EVAL_TRIAL_TIMEOUT}s")
         except Exception as e:
+            print("-"*80)
+            print(f"❌ Error processing trial {trial_id}: {e}")
+            print("="*80 + "\n")
             logger.error(f"❌ Error processing trial {trial_id}: {e}")
     
     async def _run_pipeline_cmd(self, cmd: List[str], context: Optional[dict] = None) -> None:
         """Run a pipeline command with detailed logging"""
         context = context or {}
         cmd_str = ' '.join(cmd)
-        logger.debug(f"Running command: {cmd_str} | context={context}")
+        print(f"▶️  Executing: {cmd_str}")
+        logger.info(f"▶️  Executing: {cmd_str}")
         
         try:
+            # Use unbuffered output and ensure real-time streaming
             process = await asyncio.create_subprocess_exec(
                 *cmd,
                 stdout=PIPE,
                 stderr=PIPE,
-                bufsize=0  # Unbuffered
+                bufsize=0,  # Unbuffered
+                env={**os.environ, 'PYTHONUNBUFFERED': '1'}  # Force unbuffered Python output
             )
             
             async def stream_output(stream, prefix="OUT"):
@@ -266,7 +341,15 @@ class AutoEvaluationMonitor:
                             break
                         decoded = line.decode(errors='ignore').rstrip()
                         if decoded:  # Only log non-empty lines
-                            logger.debug(f"[{prefix}] {decoded}")
+                            # Filter out FutureWarnings to reduce noise
+                            if "FutureWarning" in decoded or "resume_download" in decoded or "warnings.warn" in decoded:
+                                # Still show warnings but with less emphasis
+                                print(f"  ⚠️  [WARNING] {decoded[:100]}...")
+                            else:
+                                # Print directly to terminal for visibility - this is the actual pipeline output
+                                print(f"  [{prefix}] {decoded}")
+                            # Also log it
+                            logger.info(f"[{prefix}] {decoded}")
                 except Exception as e:
                     logger.error(f"Error reading {prefix} stream: {e}")
             
@@ -282,12 +365,12 @@ class AutoEvaluationMonitor:
             await stderr_task
             
             if returncode == 0:
-                logger.debug(f"[SUCCESS] Command succeeded | context={context}")
+                logger.info(f"✅ Command completed successfully | context={context}")
             else:
-                logger.warning(f"[FAILED] Command failed (exit {returncode}) | context={context}")
+                logger.warning(f"⚠️  Command failed (exit code: {returncode}) | context={context}")
                 
         except Exception as e:
-            logger.error(f"Failed to execute command: {cmd_str} | context={context} | error={e}")
+            logger.error(f"❌ Failed to execute command: {cmd_str} | context={context} | error={e}")
             raise
 
 

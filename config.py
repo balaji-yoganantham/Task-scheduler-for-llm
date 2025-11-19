@@ -111,15 +111,20 @@ TRIAL_CHUNK_WEIGHTS = {
 AUTO_EVAL_POLL_INTERVAL = int(os.getenv("AUTO_EVAL_POLL_INTERVAL", "5"))  # Check every 5 seconds
 
 # Batch size limits - how many items to process per polling cycle
-AUTO_EVAL_PATIENT_BATCH_SIZE = int(os.getenv("AUTO_EVAL_PATIENT_BATCH_SIZE", "10"))  # Max patients per cycle
-AUTO_EVAL_TRIAL_BATCH_SIZE = int(os.getenv("AUTO_EVAL_TRIAL_BATCH_SIZE", "5"))  # Max trials per cycle
+# Set to 1 to process one at a time, or "all" to process all available items
+AUTO_EVAL_PATIENT_BATCH_SIZE = os.getenv("AUTO_EVAL_PATIENT_BATCH_SIZE", "1")  # "1" or "all" - patients per cycle
+AUTO_EVAL_TRIAL_BATCH_SIZE = os.getenv("AUTO_EVAL_TRIAL_BATCH_SIZE", "1")  # "1" or "all" - trials per cycle
+
+# Convert "all" to None (unlimited), otherwise convert to int
+AUTO_EVAL_PATIENT_BATCH_SIZE_INT = None if AUTO_EVAL_PATIENT_BATCH_SIZE.lower() == "all" else int(AUTO_EVAL_PATIENT_BATCH_SIZE)
+AUTO_EVAL_TRIAL_BATCH_SIZE_INT = None if AUTO_EVAL_TRIAL_BATCH_SIZE.lower() == "all" else int(AUTO_EVAL_TRIAL_BATCH_SIZE)
 
 # Enable/disable flows
 AUTO_EVAL_ENABLE_PATIENTS = os.getenv("AUTO_EVAL_ENABLE_PATIENTS", "true").lower() == "true"  # Process patients
 AUTO_EVAL_ENABLE_TRIALS = os.getenv("AUTO_EVAL_ENABLE_TRIALS", "true").lower() == "true"  # Process trials
 
 # Timeout settings (seconds) - max time per pipeline run
-AUTO_EVAL_PATIENT_TIMEOUT = int(os.getenv("AUTO_EVAL_PATIENT_TIMEOUT", "300"))  # 5 minutes per patient
+AUTO_EVAL_PATIENT_TIMEOUT = int(os.getenv("AUTO_EVAL_PATIENT_TIMEOUT", "1000"))  # 1000 seconds (~16.7 minutes) per patient
 AUTO_EVAL_TRIAL_TIMEOUT = int(os.getenv("AUTO_EVAL_TRIAL_TIMEOUT", "600"))  # 10 minutes per trial
 
 # API Configuration
@@ -153,7 +158,7 @@ print(f"\nAuto Evaluation Monitor Configuration:")
 print(f"  - AUTO_EVAL_POLL_INTERVAL: {AUTO_EVAL_POLL_INTERVAL} seconds")
 print(f"  - AUTO_EVAL_ENABLE_PATIENTS: {AUTO_EVAL_ENABLE_PATIENTS} (Patient processing: {'ON' if AUTO_EVAL_ENABLE_PATIENTS else 'OFF'})")
 print(f"  - AUTO_EVAL_ENABLE_TRIALS: {AUTO_EVAL_ENABLE_TRIALS} (Trial processing: {'ON' if AUTO_EVAL_ENABLE_TRIALS else 'OFF'})")
-print(f"  - AUTO_EVAL_PATIENT_BATCH_SIZE: {AUTO_EVAL_PATIENT_BATCH_SIZE}")
-print(f"  - AUTO_EVAL_TRIAL_BATCH_SIZE: {AUTO_EVAL_TRIAL_BATCH_SIZE}")
+print(f"  - AUTO_EVAL_PATIENT_BATCH_SIZE: {AUTO_EVAL_PATIENT_BATCH_SIZE} ({'ALL items' if AUTO_EVAL_PATIENT_BATCH_SIZE_INT is None else f'{AUTO_EVAL_PATIENT_BATCH_SIZE_INT} item(s)'} per cycle)")
+print(f"  - AUTO_EVAL_TRIAL_BATCH_SIZE: {AUTO_EVAL_TRIAL_BATCH_SIZE} ({'ALL items' if AUTO_EVAL_TRIAL_BATCH_SIZE_INT is None else f'{AUTO_EVAL_TRIAL_BATCH_SIZE_INT} item(s)'} per cycle)")
 print(f"  - AUTO_EVAL_PATIENT_TIMEOUT: {AUTO_EVAL_PATIENT_TIMEOUT}s")
 print(f"  - AUTO_EVAL_TRIAL_TIMEOUT: {AUTO_EVAL_TRIAL_TIMEOUT}s")

@@ -27,7 +27,21 @@ def safe_json_dump(data, file_path, **kwargs):
 
 class DatabaseUtils:
     def __init__(self):
-        self.engine = create_engine(DATABASE_URL)
+        # Configure connection pooling to prevent connection exhaustion
+        # pool_size: number of connections to maintain persistently
+        # max_overflow: maximum number of connections beyond pool_size
+        # pool_recycle: recycle connections after 3600 seconds (1 hour) to prevent stale connections
+        # pool_pre_ping: verify connections before using them
+        # Reduced pool size to prevent database connection exhaustion
+        self.engine = create_engine(
+            DATABASE_URL,
+            pool_size=2,              # Keep only 2 connections in the pool (reduced from 5)
+            max_overflow=3,           # Allow up to 3 additional connections (total: 5 max per instance)
+            pool_recycle=3600,        # Recycle connections after 1 hour
+            pool_pre_ping=True,       # Verify connections before using
+            pool_timeout=30,          # Wait up to 30 seconds for a connection from the pool
+            echo=False                # Set to True for SQL query logging
+        )
     
     def _safe_json_load(self, data):
         """Safely load JSON data, handling both string and list formats"""
