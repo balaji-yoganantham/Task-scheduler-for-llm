@@ -1,0 +1,2615 @@
+{
+  "summary": {
+    "total_evaluations": 100,
+    "eligible_count": 2,
+    "not_eligible_count": 98,
+    "need_more_info_count": 0,
+    "error_count": 0,
+    "patients_processed": 20
+  },
+  "evaluations": {
+    "35294426": {
+      "patient_info": {
+        "mrn": "35294426",
+        "patient_id": 35294426,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.119178395796257,
+          "embedding_score": "6.979385",
+          "bm25_score": 7.78696554662246,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the clinical trial due to the presence of brain metastases, which violates the exclusion criteria. Additionally, the patient's metastatic colorectal cancer is classified as Stage IV with metastases to the brain, which is a critical exclusion criterion. Although the patient meets other inclusion criteria such as age, performance status, and molecular markers, the presence of brain metastases is a definitive disqualifier.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "RAS wild-type",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain/leptomeningeal metastases"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider discussing alternative clinical trials that may accept patients with brain metastases or explore treatment options for the patient's current condition."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.085699488965544,
+          "embedding_score": "7.148185",
+          "bm25_score": 2.7323381850412436,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer (mCRC), but the BRAF mutation status is critical for eligibility. The patient is reported as BRAF wild-type, which does not meet the inclusion criteria requiring a confirmed BRAF V600E mutation. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1",
+              "ECOG 0"
+            ],
+            "exclusion_criteria_violated": [
+              "Active symptomatic brain metastasis",
+              "BRAF V600E mutation not present"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative clinical trials that do not require BRAF V600E mutation or that are suitable for patients with symptomatic brain metastasis."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 5.018969710845696,
+          "embedding_score": "6.887017",
+          "bm25_score": 6.601932319632748,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has brain metastasis, which may be considered uncontrolled CNS metastasis depending on the specific criteria of the trial. Therefore, the patient does not meet critical inclusion requirements.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "Progression post 2-3 prior systemic therapies",
+              "Uncontrolled CNS metastasis"
+            ],
+            "inclusion_criteria_met_count": 3,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that accept treatment-na\u00efve patients or those with newly diagnosed metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.9720310428619126,
+          "embedding_score": "6.8824344",
+          "bm25_score": 5.144232838947717,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to the presence of brain metastases, which violates the exclusion criteria. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after specified chemotherapy.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "ECOG <= 1",
+              "Life expectancy >= 3 months",
+              "Histologically/cytologically confirmed MSS mCRC"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain metastases except as described",
+              "Progression after specified chemotherapy"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative clinical trials that accept newly diagnosed patients or those with brain metastases. Further evaluation of the patient's overall health and treatment options may be necessary."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.748315394754242,
+          "embedding_score": "6.678862",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient is newly diagnosed and treatment-na\u00efve, which meets the inclusion criteria for prior treatments. The patient's ECOG performance status is 0, which is acceptable. The patient is 65 years old, meeting the age requirement. However, the patient's MSI/MMR status is MSS, which is not an exclusion criterion. The patient does not have prolonged QTcF, unresolved toxicity from prior therapy, known DPD deficiency, severe infection, or pregnancy/lactation. Therefore, the patient does not violate any exclusion criteria. However, the critical inclusion criteria regarding molecular markers must be confirmed, as the patient has not been tested for MSI-H or dMMR. Without this information, the eligibility cannot be fully confirmed.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Confirm the patient's MSI/MMR status to ensure no exclusion criteria are violated. If the patient is MSS, they may be eligible; if MSI-H or dMMR, they would be ineligible. Additionally, consider assessing laboratory values to ensure adequate organ function."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "59779266": {
+      "patient_info": {
+        "mrn": "59779266",
+        "patient_id": 59779266,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.972759533758379,
+          "embedding_score": "6.9762564",
+          "bm25_score": 2.979335812575842,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria for the BRAF V600E mutation, as their molecular marker shows BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative treatment options for the patient that are suitable for BRAF wild-type metastatic colorectal cancer. Additionally, evaluate the patient's performance status and consider supportive care if necessary."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.840347399555611,
+          "embedding_score": "6.7859716",
+          "bm25_score": 3.0055750159080765,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with MSI-H status, which violates the exclusion criteria for this trial. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not conflict with the inclusion criteria, but the MSI-H status is a critical exclusion. Therefore, the patient cannot be considered eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI-H or dMMR CRC"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative trials that accept patients with MSI-H status or explore other treatment options for this patient."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.8184863132047635,
+          "embedding_score": "6.6445303",
+          "bm25_score": 5.577170192559485,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has an ECOG performance status of 2, which does not meet the inclusion criterion of ECOG 0-1. Additionally, the patient has early-stage dementia, which may affect their ability to provide informed consent and adhere to the trial protocol. Although the patient meets other inclusion criteria such as age, diagnosis, and molecular markers, the violation of the performance status and potential issues with informed consent lead to a determination of ineligibility.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type",
+              "BRAF-V600E negative"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG performance status > 1",
+              "Potential issues with informed consent due to early-stage dementia"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing the patient's cognitive status with the oncologist to assess the ability to provide informed consent. If the cognitive issues can be managed or if the patient can be deemed capable of consent, reevaluate the eligibility. Otherwise, explore alternative treatment options outside of this clinical trial."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.795391169454954,
+          "embedding_score": "6.604119",
+          "bm25_score": 5.750266421712155,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient does not meet the inclusion criteria for prior treatments, as they are newly diagnosed and treatment-na\u00efve. The trial requires patients to have progressed post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider enrolling the patient in a different trial that accommodates newly diagnosed metastatic colorectal cancer patients or those with a higher ECOG performance status."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.652000923883852,
+          "embedding_score": "6.4705544",
+          "bm25_score": 4.087095920640151,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after specified chemotherapy. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed of 1. Therefore, the patient does not meet critical inclusion criteria and is also not eligible due to performance status.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative treatment options for the patient, as they are newly diagnosed and treatment-na\u00efve. Further evaluation of the patient's overall health and management of comorbidities may also be beneficial."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "30913714": {
+      "patient_info": {
+        "mrn": "30913714",
+        "patient_id": 30913714,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.029859585710331,
+          "embedding_score": "6.9226875",
+          "bm25_score": 6.13261047826754,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with RAS mutation (NRAS Q61H), which does not meet the inclusion criteria requiring RAS wild-type status. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed ECOG of 1. These factors disqualify the patient from participation in the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "RAS wild-type requirement",
+              "ECOG performance status requirement"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "The patient should be considered for alternative clinical trials that accommodate RAS-mutated metastatic colorectal cancer patients or other treatment options suitable for their condition."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.992257775655374,
+          "embedding_score": "7.001938",
+          "bm25_score": 3.030042310257253,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The patient is BRAF wild-type, whereas the trial specifically requires a confirmed BRAF V600E mutation. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria. These factors lead to a definitive conclusion of ineligibility.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider other clinical trials that may accept patients with BRAF wild-type metastatic colorectal cancer or those with an ECOG performance status of 2. Further evaluation of the patient's overall health and potential treatment options is recommended."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.919942396827282,
+          "embedding_score": "6.821872",
+          "bm25_score": 4.821061092871483,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a performance status of ECOG 2, which does not meet the inclusion criterion of ECOG <= 1. Additionally, the patient has brain metastases, which are excluded unless specified otherwise, and they are newly diagnosed and treatment-na\u00efve, which does not align with the requirement of having progressed after specified chemotherapy.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "ECOG > 1",
+              "Brain metastases (unless specified otherwise)",
+              "Treatment-na\u00efve (not progressed after chemotherapy)"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 3,
+            "recommendations": "Consider discussing alternative clinical trials that may be suitable for newly diagnosed patients or those with a higher ECOG performance status. Additionally, further evaluation of the patient's brain metastases and overall treatment plan may be necessary."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.899725833699612,
+          "embedding_score": "6.775724",
+          "bm25_score": 5.223969325936768,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to several critical factors. Firstly, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed ECOG of 1. These two factors alone are sufficient to classify the patient as not eligible, despite meeting other inclusion criteria.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RECIST v1.1 measurable lesion",
+              "Life expectancy \u226512 weeks",
+              "Signed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Performance status (ECOG > 1)",
+              "Prior treatments (treatment-na\u00efve)"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative trials that accept treatment-na\u00efve patients or those with a higher ECOG performance status. Additionally, further evaluation of the patient's overall health and comorbidities may be beneficial for future treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.6763515481455,
+          "embedding_score": "6.5616894",
+          "bm25_score": 2.7722994787920667,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has chronic kidney disease, which may affect organ function and is considered a comorbidity that could impact eligibility. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which aligns with the inclusion criteria. However, the patient's performance status is ECOG 2, which is acceptable. The patient's molecular markers indicate MSS, which is also acceptable. The critical issue is the presence of chronic kidney disease, which may violate the adequate organ function requirement. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Adequate organ function (chronic kidney disease may impact this)"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider further evaluation of the patient's kidney function and overall health status. If kidney function is stable and meets the trial's organ function criteria, re-evaluate eligibility. Otherwise, explore alternative treatment options."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "98938054": {
+      "patient_info": {
+        "mrn": "98938054",
+        "patient_id": 98938054,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.000910089974297,
+          "embedding_score": "7.010364",
+          "bm25_score": 3.1218417010271793,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has a confirmed diagnosis of Stage IV metastatic colorectal cancer with a BRAF V600E mutation, which meets the primary diagnosis and molecular marker requirements. However, the patient has not been reported to have any active infections or symptomatic brain metastasis, which are exclusion criteria. The patient's ECOG performance status is 0, and they have not received any prior treatments, which aligns with the inclusion criteria. The patient is 65 years old, which meets the age requirement. Therefore, the only potential concern is the exclusion criteria regarding active infections, but there is no indication of such in the provided information. However, due to the strict adherence to exclusion criteria, the patient is marked as NOT_ELIGIBLE.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC with BRAF V600E mutation",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Confirm the absence of active infections and any other potential exclusion criteria. If the patient is free from active infections and symptomatic brain metastasis, consider re-evaluating eligibility."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.881933059252943,
+          "embedding_score": "6.737597",
+          "bm25_score": 5.520505572611945,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with RAS wild-type status, which meets the primary diagnosis and molecular marker requirements. However, the patient is BRAF V600E positive, which violates the inclusion criteria that require BRAF V600E to be negative. Additionally, the patient has celiac disease, which is not explicitly listed as an exclusion criterion but may raise concerns regarding adequate organ function and overall health. Given that the critical inclusion criteria regarding BRAF status is not met, the patient is marked as NOT_ELIGIBLE.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "BRAF-V600E negative"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider discussing alternative treatment options for the patient that are suitable for BRAF V600E positive metastatic colorectal cancer. Additionally, monitor the patient's celiac disease to ensure it does not interfere with treatment."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.843598154199128,
+          "embedding_score": "6.704391",
+          "bm25_score": 5.017481744686943,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has not undergone any prior treatments, which is a critical requirement for eligibility.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "ECOG 0-1",
+              "Life expectancy \u226512 weeks",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "The patient should be considered for other clinical trials that are suitable for treatment-na\u00efve patients with metastatic colorectal cancer. Further assessment of treatment options should be discussed with the oncologist."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.8283366742590506,
+          "embedding_score": "6.7871532",
+          "bm25_score": 2.577646781535445,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a BRAF V600E mutation, which is not specified as an acceptable molecular marker for this trial. Additionally, the patient has no prior treatments, which aligns with the inclusion criteria. The patient's ECOG performance status is 0, which is acceptable. However, the presence of the BRAF V600E mutation is a significant factor that violates the inclusion criteria, leading to a determination of NOT_ELIGIBLE.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Prior chemotherapy/antiangiogenic agents",
+              "Known DPD deficiency",
+              "Other specified illnesses"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 3,
+            "recommendations": "Consider discussing alternative clinical trials that accept patients with BRAF V600E mutations or explore targeted therapies for this specific mutation."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.725741188556426,
+          "embedding_score": "6.548416",
+          "bm25_score": 4.728329738990254,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after specified chemotherapy. Additionally, the patient has celiac disease, which may complicate treatment but is not explicitly listed as an exclusion criterion. However, the primary reason for ineligibility is the lack of prior chemotherapy treatment.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "ECOG <= 1",
+              "Life expectancy >= 3 months",
+              "Histologically/cytologically confirmed MSS mCRC",
+              "Measurable metastatic disease"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 6,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider enrolling the patient in a trial that accepts treatment-na\u00efve patients or explore other treatment options for newly diagnosed metastatic colorectal cancer."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "21080851": {
+      "patient_info": {
+        "mrn": "21080851",
+        "patient_id": 21080851,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.043816451565672,
+          "embedding_score": "7.0652795",
+          "bm25_score": 3.2706937636351845,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer with a confirmed BRAF V600E mutation, which meets the primary diagnosis and molecular marker requirements. However, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria for inclusion. Additionally, the patient has symptomatic brain metastasis, which is an exclusion criterion. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC with BRAF V600E mutation",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1"
+            ],
+            "exclusion_criteria_violated": [
+              "Symptomatic brain metastasis"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider discussing alternative treatment options for the patient that may be suitable given their current performance status and the presence of symptomatic brain metastasis."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.987023298388401,
+          "embedding_score": "6.845032",
+          "bm25_score": 6.516691593517169,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the clinical trial due to the presence of BRAF-V600E mutation, which is a critical exclusion criterion. Although the patient meets other inclusion criteria such as age, performance status, and being treatment-na\u00efve, the presence of this mutation disqualifies them from participation. Additionally, the patient has brain metastases, which is also an exclusion criterion.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "BRAF-V600E positive",
+              "Brain metastases"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative treatment options with the oncologist, as the patient is not eligible for this specific trial due to the BRAF mutation and brain metastases."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.951611117992985,
+          "embedding_score": "6.8046794",
+          "bm25_score": 6.277851411838945,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient does not meet the inclusion criteria for prior treatments, as they are newly diagnosed and treatment-na\u00efve. The trial requires patients to have progressed after 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG performance status > 1",
+              "No prior treatments"
+            ],
+            "inclusion_criteria_met_count": 3,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider enrolling the patient in a different trial that accommodates treatment-na\u00efve patients or those with an ECOG performance status of 2. Monitor the patient's condition and treatment response for future trial opportunities."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.798440039987396,
+          "embedding_score": "6.7504687",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a match for the trial's primary diagnosis. However, the patient has a BRAF V600E mutation, which is not specified as an exclusion criterion but may indicate a different treatment pathway. The patient is 65 years old, which meets the age requirement. The ECOG performance status is 2, which is acceptable. The patient is treatment-na\u00efve, which meets the inclusion criteria for prior treatments. However, the presence of multiple comorbidities, particularly heart failure, raises concerns about the patient's ability to tolerate the trial regimen, especially given the potential for severe side effects from chemotherapy and the investigational drug. Therefore, while the patient meets many criteria, the overall assessment leans towards NOT_ELIGIBLE due to the potential complications from comorbidities and the specific mutation.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Known DPD deficiency",
+              "Severe infection",
+              "Pregnancy/lactation",
+              "Other specified illnesses"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider further evaluation of the patient's comorbidities and potential for managing them during the trial. Additionally, consult with the oncologist regarding the implications of the BRAF V600E mutation on treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.757978413391087,
+          "embedding_score": "6.576645",
+          "bm25_score": 5.144232838947717,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for active brain metastases unless specified otherwise. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG performance status of 1 or lower. These two factors lead to the conclusion that the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "Histologically/cytologically confirmed MSS mCRC",
+              "Life expectancy >= 3 months",
+              "Measurable metastatic disease"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG > 1",
+              "Active brain metastases"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative clinical trials that accept patients with ECOG 2 and those with brain metastases. Additionally, further evaluation of the patient's overall health and treatment options may be warranted."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "29936192": {
+      "patient_info": {
+        "mrn": "29936192",
+        "patient_id": 29936192,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.130759028927732,
+          "embedding_score": "7.189483",
+          "bm25_score": 3.2706937636351845,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a confirmed diagnosis of metastatic colorectal cancer (CRC) with a BRAF V600E mutation, which meets the primary diagnosis and molecular marker requirements. However, the patient's performance status is ECOG 2, which does not meet the required ECOG 0-1 criteria for inclusion. Additionally, the patient has symptomatic brain metastasis, which is an exclusion criterion. Therefore, the patient is not eligible for this clinical trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC with BRAF V600E mutation",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1"
+            ],
+            "exclusion_criteria_violated": [
+              "Symptomatic brain metastasis"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative treatment options for the patient that do not have the same exclusion criteria, particularly focusing on managing the symptomatic brain metastasis and improving performance status."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.884095775669469,
+          "embedding_score": "6.7229757",
+          "bm25_score": 5.9337588014090805,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for known brain/leptomeningeal metastases. Additionally, the patient is BRAF V600E positive, which is also a violation of the inclusion criteria requiring RAS wild-type and BRAF-V600E negative status. Therefore, the patient does not meet the critical inclusion criteria and violates exclusion criteria.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain/leptomeningeal metastases",
+              "BRAF-V600E positive"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative clinical trials that accommodate patients with brain metastases and BRAF V600E positive status."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.83512033989358,
+          "embedding_score": "6.6975026",
+          "bm25_score": 4.895617024874724,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative clinical trials that are suitable for newly diagnosed, treatment-na\u00efve patients with metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.83392115914328,
+          "embedding_score": "6.801156",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a primary diagnosis match. However, the patient is excluded due to the presence of the BRAF V600E mutation, which is not compatible with the trial's inclusion criteria. Additionally, the patient has an ECOG performance status of 2, which is acceptable. The patient is 65 years old, meeting the age requirement. Since the patient has not received prior treatments, this criterion is met. Overall, the presence of the BRAF V600E mutation is a critical exclusion criterion that disqualifies the patient from eligibility.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "BRAF: V600E"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that accept patients with BRAF V600E mutations or explore other treatment options for metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.7125373918205895,
+          "embedding_score": "6.554418",
+          "bm25_score": 4.148157697221964,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer with brain metastases, which is a violation of the exclusion criteria. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 1 or lower. These factors disqualify the patient from eligibility for the trial.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "Histologically confirmed MSS mCRC",
+              "Measurable metastatic disease",
+              "Adequate organ function"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG > 1",
+              "Brain metastases"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that may be suitable for patients with ECOG 2 status and those with brain metastases."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "28543394": {
+      "patient_info": {
+        "mrn": "28543394",
+        "patient_id": 28543394,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.234962089875766,
+          "embedding_score": "7.3550377",
+          "bm25_score": 2.8811902476492484,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to the presence of a BRAF wild-type mutation, which does not meet the required inclusion criteria of having a BRAF V600E mutation. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "ECOG 0-1",
+              "Adequate organ function"
+            ],
+            "exclusion_criteria_violated": [
+              "Symptomatic brain metastasis"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that do not have the BRAF V600E mutation requirement or that are suitable for patients with symptomatic brain metastasis."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.167723658852335,
+          "embedding_score": "7.005254",
+          "bm25_score": 8.801533486199263,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with RAS mutation (NRAS Q61H), which does not meet the inclusion criteria requiring RAS wild-type status. Additionally, the patient has brain metastases, which is an exclusion criterion. Therefore, the patient does not meet critical eligibility requirements.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "ECOG 0-1",
+              "Life expectancy \u226516 weeks",
+              "Adequate organ and hematologic function"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type (KRAS, NRAS) and BRAF-V600E negative",
+              "Brain/leptomeningeal metastases"
+            ],
+            "inclusion_criteria_met_count": 7,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "The patient should be considered for alternative clinical trials that accept RAS-mutated metastatic colorectal cancer patients or focus on treatment options for patients with brain metastases."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 5.013301637780671,
+          "embedding_score": "6.9468246",
+          "bm25_score": 5.017481744686943,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient does not meet the inclusion criteria for prior treatments, as they are newly diagnosed and treatment-na\u00efve. The trial requires patients to have progressed after 2-3 prior systemic therapies, which this patient does not fulfill. Additionally, the patient has multiple metastatic sites, which could complicate eligibility based on the trial's focus on post-progression treatment. All other criteria are met, but the violation of the critical inclusion criteria leads to a NOT_ELIGIBLE status.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "ECOG 0-1",
+              "Life expectancy \u226512 weeks",
+              "Adequate hepatic/renal function"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider enrolling the patient in a different trial that accommodates treatment-na\u00efve patients or explore standard treatment options for newly diagnosed metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.902690212345593,
+          "embedding_score": "6.7748275",
+          "bm25_score": 5.343699204142679,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases, which violates the exclusion criteria regarding brain metastases. Additionally, the patient has inflammatory bowel disease, which may be considered an active autoimmune disease, further violating the exclusion criteria. Although the patient meets several inclusion criteria, the presence of these exclusion criteria makes them ineligible for the trial.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "ECOG <= 1",
+              "Histologically/cytologically confirmed MSS mCRC",
+              "Measurable metastatic disease"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain metastases except as described",
+              "Active or history of autoimmune disease"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that may be suitable for patients with brain metastases or autoimmune diseases. Additionally, review the patient's treatment options given their newly diagnosed status."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.8623144212225515,
+          "embedding_score": "6.835693",
+          "bm25_score": 2.577646781535445,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has chronic fatigue syndrome and inflammatory bowel disease, which may be considered under the exclusion criteria for 'other specified illnesses.' Additionally, the patient is treatment-na\u00efve, which meets the inclusion criteria. However, the presence of comorbidities raises concerns about eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to potential exclusion criteria violations.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Other specified illnesses"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Further evaluation of the patient's comorbidities is recommended to determine if they can be managed adequately to allow for participation in the trial. Consultation with the oncologist regarding the patient's overall health and treatment plan is also advised."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "34694074": {
+      "patient_info": {
+        "mrn": "34694074",
+        "patient_id": 34694074,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.224768773283272,
+          "embedding_score": "7.1117215",
+          "bm25_score": 8.21879041081366,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer with RAS mutation (NRAS Q61H), which does not meet the inclusion criteria requiring RAS wild-type status. Additionally, the patient has brain metastases, which is listed as an exclusion criterion. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "ECOG 0-1",
+              "Life expectancy \u226516 weeks",
+              "Adequate organ and hematologic function"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain metastases",
+              "RAS wild-type requirement not met"
+            ],
+            "inclusion_criteria_met_count": 7,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative clinical trials that accept patients with RAS mutations or those with brain metastases."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.197899158814975,
+          "embedding_score": "7.3020906",
+          "bm25_score": 2.8811902476492484,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has a confirmed diagnosis of metastatic colorectal cancer (Stage IV), but the BRAF mutation status is critical for eligibility. The patient is BRAF wild-type, which does not meet the inclusion criteria requiring a confirmed BRAF V600E mutation. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "ECOG 0-1",
+              "Adequate organ function"
+            ],
+            "exclusion_criteria_violated": [
+              "Symptomatic brain metastasis"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that do not require BRAF V600E mutation or that are suitable for patients with symptomatic brain metastasis."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 5.01960164400233,
+          "embedding_score": "6.9068484",
+          "bm25_score": 6.160258085294966,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has multiple metastatic sites, which is consistent with the diagnosis but does not fulfill the requirement of having received prior treatments. Therefore, the patient does not meet the critical inclusion criteria.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider enrolling the patient in a different clinical trial that is suitable for treatment-na\u00efve patients with metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.923200362424576,
+          "embedding_score": "6.736623",
+          "bm25_score": 6.918813172331261,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to the presence of brain metastases, which violates the exclusion criteria. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement for progression after specified chemotherapy.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "ECOG <= 1",
+              "Life expectancy >= 3 months",
+              "Histologically/cytologically confirmed MSS mCRC",
+              "Measurable metastatic disease",
+              "Adequate organ function"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain metastases except as described",
+              "Progression after specified chemotherapy"
+            ],
+            "inclusion_criteria_met_count": 7,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative treatment options for the patient, as they do not meet the eligibility criteria for this clinical trial."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.872868306894475,
+          "embedding_score": "6.8484526",
+          "bm25_score": 2.6317169752178398,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which is the primary diagnosis required for the trial. However, the patient has a known NRAS mutation (NRAS Q61H), which is not specified in the inclusion criteria but may be considered a disqualifying factor based on the trial's focus on specific molecular markers. Additionally, the patient has not received prior treatments, which aligns with the inclusion criteria. The patient's ECOG performance status is 1, which is acceptable. However, the presence of the NRAS mutation raises concerns about eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to the potential violation of molecular marker requirements.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Known DPD deficiency (if applicable due to NRAS mutation)"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consult with the oncologist regarding the implications of the NRAS mutation and whether it is a disqualifying factor for this trial. Consider alternative trials that may accept patients with NRAS mutations."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "76190966": {
+      "patient_info": {
+        "mrn": "76190966",
+        "patient_id": 76190966,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 5.034753159225366,
+          "embedding_score": "6.918048",
+          "bm25_score": 6.403987524919403,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the clinical trial due to several critical factors. Firstly, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Furthermore, the patient's chronic kidney disease (stage 2-3) may raise concerns regarding adequate renal function, which is a requirement for eligibility. Overall, the patient does not meet the critical inclusion criteria and has a performance status that violates the trial's requirements.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "ECOG performance status > 1",
+              "No prior treatments (treatment-na\u00efve)"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider referring the patient to a different clinical trial that accommodates treatment-na\u00efve patients or those with an ECOG performance status of 2 or higher."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.969509418824741,
+          "embedding_score": "6.9758196",
+          "bm25_score": 2.881190247649248,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, as their molecular marker shows BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. These factors lead to a determination of ineligibility.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider alternative clinical trials that do not require the BRAF V600E mutation or have different performance status criteria. Further evaluation of the patient's overall health and treatment options may also be warranted."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.952905187528218,
+          "embedding_score": "6.788001",
+          "bm25_score": 6.710148172937665,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a KRAS G12D mutation, which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These critical inclusion criteria are not met, leading to the conclusion that the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "BRAF-V600E negative",
+              "Measurable lesion per RECIST1.1",
+              "Life expectancy \u226516 weeks",
+              "Adequate organ and hematologic function"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type (KRAS, NRAS) and BRAF-V600E negative"
+            ],
+            "inclusion_criteria_met_count": 8,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider genetic testing for other clinical trials that accept patients with RAS mutations. Additionally, assess the patient's performance status and manage comorbidities to potentially improve eligibility for future trials."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.907860295959423,
+          "embedding_score": "6.7370586",
+          "bm25_score": 6.397308276365527,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after specified chemotherapy. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed of 1. Therefore, the patient does not meet critical inclusion criteria and violates exclusion criteria.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "ECOG > 1",
+              "Not progressed after specified chemotherapy"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials for treatment-na\u00efve patients with metastatic colorectal cancer. Additionally, address the patient's performance status and manage comorbidities before considering participation in future trials."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.776420349241496,
+          "embedding_score": "6.69862",
+          "bm25_score": 2.9128819823662937,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a performance status of ECOG 2, which is acceptable. The patient is 65 years old, meeting the age requirement. The patient is treatment-na\u00efve, which meets the inclusion criteria for prior treatments. However, the patient has chronic kidney disease stage 2-3, which may be a concern under the exclusion criteria regarding adequate organ function. Additionally, the patient's molecular markers indicate MSS (microsatellite stable), which is acceptable. Therefore, the primary reason for ineligibility is the potential impact of chronic kidney disease on organ function, which may violate the inclusion criteria for adequate organ function.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Adequate organ function"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Further assessment of the patient's renal function and overall health status is recommended to determine if they can achieve adequate organ function. If renal function is deemed adequate, the patient may be reconsidered for eligibility."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "46385580": {
+      "patient_info": {
+        "mrn": "46385580",
+        "patient_id": 46385580,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.031036975823107,
+          "embedding_score": "6.8112373",
+          "bm25_score": 8.772361372651757,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a KRAS G12D mutation, which is a RAS mutation. The trial specifically requires RAS wild-type status, and this patient's molecular marker does not meet that criterion. Additionally, the patient has chronic kidney disease stage 2-3, which could potentially complicate eligibility due to the exclusion criteria regarding severe lung/liver disease and renal replacement. Therefore, the patient does not meet the critical inclusion criteria for RAS status and may also be affected by comorbidities.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "ECOG 0-1",
+              "Life expectancy \u226516 weeks"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type (KRAS, NRAS) and BRAF-V600E negative",
+              "Chronic kidney disease stage 2-3"
+            ],
+            "inclusion_criteria_met_count": 6,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that accept patients with RAS mutations or those with chronic kidney disease. Additionally, ensure that the patient's comorbidities are managed appropriately."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.928723599759611,
+          "embedding_score": "6.9239335",
+          "bm25_score": 2.732338185041243,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The trial specifically requires patients to have a confirmed BRAF V600E mutation, and this patient has a wild-type BRAF status. Additionally, the patient has chronic kidney disease, which may complicate eligibility, but the primary reason for ineligibility is the BRAF mutation requirement.",
+            "inclusion_criteria_met": [
+              "Age \u226516 for Phase 3",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider genetic testing for BRAF mutations and explore other clinical trials that may be suitable for patients with wild-type BRAF status. Additionally, manage comorbidities such as chronic kidney disease and diabetes."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.884497537020959,
+          "embedding_score": "6.7854295",
+          "bm25_score": 4.489896754560153,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to not meeting the inclusion criteria of having undergone 2-3 prior systemic therapies. The patient is newly diagnosed and treatment-na\u00efve, which directly violates this critical inclusion criterion. Additionally, the patient's chronic kidney disease may raise concerns regarding adequate renal function, though this specific lab value is not provided. Therefore, the patient cannot be considered eligible.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "Prior treatments: None - newly diagnosed, treatment-na\u00efve"
+            ],
+            "inclusion_criteria_met_count": 3,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider referring the patient to other clinical trials that accept treatment-na\u00efve patients with metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.820900917957512,
+          "embedding_score": "6.7681885",
+          "bm25_score": 2.7722994787920667,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient is excluded due to the presence of chronic kidney disease stage 2-3, which may affect organ function and is considered a severe comorbidity. Additionally, the patient's molecular markers indicate MSS, which is acceptable, but the overall health status due to comorbidities raises concerns about eligibility.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Other specified illnesses (chronic kidney disease stage 2-3)"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider addressing the patient's chronic kidney disease and evaluating its impact on eligibility. If resolved or managed, re-evaluate eligibility for the trial."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.781132191844049,
+          "embedding_score": "6.6203303",
+          "bm25_score": 4.896698608241579,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after specified chemotherapy. Additionally, the patient has chronic kidney disease stage 2-3, which may affect organ function and could be a concern for eligibility. Therefore, the patient does not meet the critical inclusion criteria.",
+            "inclusion_criteria_met": [
+              "age >= 18",
+              "ECOG <= 1",
+              "life expectancy >= 3 months",
+              "histologically/cytologically confirmed MSS mCRC",
+              "measurable metastatic disease"
+            ],
+            "exclusion_criteria_violated": [
+              "need for systemic immunosuppression",
+              "active bleeding",
+              "severe toxicity"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative treatment options for the patient, as they are not eligible for this trial due to being treatment-na\u00efve and potentially concerning comorbidities."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "48727925": {
+      "patient_info": {
+        "mrn": "48727925",
+        "patient_id": 48727925,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 5.001102646269554,
+          "embedding_score": "6.884048",
+          "bm25_score": 6.075635223857361,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's chronic kidney disease may affect their eligibility due to potential concerns regarding adequate renal function.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RECIST v1.1 measurable lesion",
+              "ECOG 0",
+              "Life expectancy \u226512 weeks"
+            ],
+            "exclusion_criteria_violated": [
+              "Prior treatments: None - newly diagnosed, treatment-na\u00efve",
+              "Chronic kidney disease may affect eligibility"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that accept treatment-na\u00efve patients or those with different eligibility criteria."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.969782032529021,
+          "embedding_score": "6.7781706",
+          "bm25_score": 7.502087419546466,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a KRAS mutation (KRAS G12D), which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient has chronic kidney disease, which may raise concerns regarding adequate organ function, although this is not explicitly listed as an exclusion criterion. However, the primary reason for ineligibility is the RAS mutation.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "ECOG 0-1",
+              "Life expectancy \u226516 weeks"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type requirement not met"
+            ],
+            "inclusion_criteria_met_count": 6,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "The patient should be informed about the ineligibility due to the RAS mutation. Consider discussing alternative treatment options that may be available for patients with RAS-mutated metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.940832516030785,
+          "embedding_score": "6.9476113",
+          "bm25_score": 2.5834861224332384,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer, but the BRAF mutation status is critical for eligibility. The patient is BRAF wild-type, which does not meet the inclusion criteria requiring a confirmed BRAF V600E mutation. Additionally, the patient has a history of chronic kidney disease, which may raise concerns regarding organ function, although this is not explicitly stated as a violation. Overall, the primary reason for ineligibility is the lack of the required BRAF mutation.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1",
+              "ECOG 0"
+            ],
+            "exclusion_criteria_violated": [
+              "Confirmed BRAF V600E mutation not present"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider genetic testing for BRAF mutation status and explore other clinical trials that may be suitable for BRAF wild-type metastatic colorectal cancer patients."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.85853224477558,
+          "embedding_score": "6.7250433",
+          "bm25_score": 5.033397900193488,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is diagnosed with metastatic colorectal cancer and is 65 years old, which meets the age eligibility. However, the patient is treatment-na\u00efve and has not progressed on prior chemotherapy, which violates the inclusion criteria requiring progression after specified chemotherapy. Additionally, the patient's performance status is ECOG 0, which is acceptable. The patient's molecular markers indicate MSS, which is required. Therefore, the critical inclusion criteria are not met due to the lack of prior treatment and progression.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "ECOG <= 1",
+              "Histologically/cytologically confirmed MSS mCRC",
+              "Measurable metastatic disease"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "The patient should be considered for standard treatment options for newly diagnosed metastatic colorectal cancer before re-evaluating eligibility for clinical trials."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.803985983417376,
+          "embedding_score": "6.7523665",
+          "bm25_score": 2.577646781535445,
+          "llm_evaluation": {
+            "eligibility_status": "ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a confirmed diagnosis of metastatic colorectal adenocarcinoma, which is the primary condition for the trial. The patient's age of 65 meets the age requirement of 18 years or older. The ECOG performance status is 0, which is within the acceptable range (ECOG \u22642). The patient is treatment-na\u00efve, which aligns with the inclusion criteria as there are no prior treatments that would disqualify them. Additionally, the molecular markers indicate MSS status, which does not violate any exclusion criteria. No exclusion criteria are violated based on the provided information.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Proceed with the informed consent process and schedule the patient for the trial as they meet all eligibility criteria."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 1,
+      "not_eligible_trials": 4,
+      "need_more_info_trials": 0
+    },
+    "18228455": {
+      "patient_info": {
+        "mrn": "18228455",
+        "patient_id": 18228455,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.0711200903493765,
+          "embedding_score": "7.123151",
+          "bm25_score": 2.8304837499678372,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, as their molecular marker indicates BRAF wild-type. Additionally, the patient is MSI-H, which is an exclusion criterion unless an immune checkpoint inhibitor is not possible. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI-H/dMMR unless immune checkpoint inhibitor not possible",
+              "BRAF V600E mutation requirement"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that do not have the BRAF V600E mutation requirement or explore treatment options for MSI-H patients."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.019177198547243,
+          "embedding_score": "6.862759",
+          "bm25_score": 7.174860640966865,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer and meets the age requirement. However, the patient has a history of chronic fatigue syndrome and asthma, which may not directly violate the exclusion criteria but could impact overall health status. More importantly, the patient has a diagnosis of MSI-H, which is not compatible with the inclusion criteria that require RAS wild-type and BRAF-V600E negative. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI/MMR: MSI-H"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider discussing alternative clinical trials that accept patients with MSI-H status or explore other treatment options for metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.918640865132308,
+          "embedding_score": "6.6983404",
+          "bm25_score": 7.660085798803166,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has a performance status of ECOG 1, which is acceptable, but the lack of prior treatments disqualifies them from eligibility. All other inclusion criteria are met, but the critical requirement regarding prior treatments is not satisfied.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RAS wild-type",
+              "RECIST v1.1 measurable lesion",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider enrolling the patient in a different trial that accommodates treatment-na\u00efve patients or explore standard treatment options for newly diagnosed metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.786540766178196,
+          "embedding_score": "6.7174473",
+          "bm25_score": 2.8109223186514547,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but is classified as MSI-H, which violates the exclusion criteria for this trial. Additionally, the patient has not received prior treatments, which aligns with the inclusion criteria, but the presence of MSI-H disqualifies them from participation.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI-H or dMMR CRC"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that accept patients with MSI-H colorectal cancer or explore other treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.769196246367668,
+          "embedding_score": "6.6190434",
+          "bm25_score": 4.528863373795293,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to the requirement of having microsatellite stable (MSS) metastatic colorectal cancer. The patient's molecular markers indicate MSI-H, which disqualifies them from this trial focused on MSS mCRC. Additionally, the patient is newly diagnosed and treatment-na\u00efve, whereas the trial requires progression after specified chemotherapy.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider referring the patient to trials that focus on MSI-H metastatic colorectal cancer or other suitable treatment options for newly diagnosed patients."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "88044380": {
+      "patient_info": {
+        "mrn": "88044380",
+        "patient_id": 88044380,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.043435343125888,
+          "embedding_score": "7.081428",
+          "bm25_score": 2.8811902476492484,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria for the BRAF V600E mutation, as their molecular marker shows BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative treatment options with the oncologist, as this patient does not qualify for the current trial due to the lack of the required BRAF mutation and performance status."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.994944837858972,
+          "embedding_score": "6.843352",
+          "bm25_score": 6.819951639264741,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a KRAS mutation (KRAS G12D), which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These two critical criteria not being met leads to the conclusion that the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "Measurable lesion per RECIST1.1",
+              "Life expectancy \u226516 weeks",
+              "Adequate organ and hematologic function"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type (KRAS, NRAS) and BRAF-V600E negative",
+              "ECOG 0-1"
+            ],
+            "inclusion_criteria_met_count": 7,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that accept patients with KRAS mutations or those with an ECOG performance status of 2. Additionally, ensure the patient receives appropriate treatment for their metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.976874569070344,
+          "embedding_score": "6.894786",
+          "bm25_score": 5.017481744686942,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "Life expectancy \u226512 weeks"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG >1",
+              "No prior treatments (treatment-na\u00efve)"
+            ],
+            "inclusion_criteria_met_count": 3,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing other clinical trial options that may be suitable for newly diagnosed, treatment-na\u00efve patients with metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.906360584959793,
+          "embedding_score": "6.737382",
+          "bm25_score": 6.339774345868432,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a performance status of ECOG 2, which does not meet the inclusion criterion of ECOG <= 1. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which violates the requirement of progression after specified chemotherapy. Therefore, the patient does not meet critical inclusion criteria.",
+            "inclusion_criteria_met": [
+              "age >= 18",
+              "histologically/cytologically confirmed MSS mCRC",
+              "measurable metastatic disease",
+              "adequate organ function"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "The patient should be considered for other clinical trials that accommodate treatment-na\u00efve patients or those with a higher ECOG performance status. Further evaluation of treatment options for newly diagnosed metastatic colorectal cancer may also be warranted."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.882342917011126,
+          "embedding_score": "6.864305",
+          "bm25_score": 2.577646781535445,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which is the primary diagnosis required for the trial. However, the patient has not been previously treated, which aligns with the inclusion criteria. The patient's ECOG performance status is 2, which meets the criteria. The age of the patient is 65, which is above the minimum age requirement of 18. However, the patient has a known MSI/MMR status of MSS, which does not violate the exclusion criteria. The primary concern is that the patient has not received prior treatments, which is not a violation but indicates they are treatment-na\u00efve. The patient does not have any exclusion criteria violations such as prolonged QTcF, unresolved toxicity, or known DPD deficiency. Therefore, the patient is not eligible due to the lack of prior treatments, which is a critical requirement for the trial.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing with the oncologist the possibility of alternative trials that accept treatment-na\u00efve patients or explore other treatment options for the patient."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "11800359": {
+      "patient_info": {
+        "mrn": "11800359",
+        "patient_id": 11800359,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.982447602767745,
+          "embedding_score": "6.8177915",
+          "bm25_score": 6.999785980217948,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a diagnosis of metastatic colorectal cancer but does not meet the molecular marker requirements for eligibility. The patient is NRAS Q61H positive, which violates the inclusion criteria for RAS wild-type status. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "BRAF-V600E negative",
+              "Measurable lesion per RECIST1.1",
+              "Life expectancy \u226516 weeks",
+              "Adequate organ and hematologic function"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type requirement not met",
+              "ECOG performance status not met"
+            ],
+            "inclusion_criteria_met_count": 8,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that may accept patients with NRAS mutations or those with an ECOG performance status of 2."
+          }
+        },
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.972871795003375,
+          "embedding_score": "6.999761",
+          "bm25_score": 2.4346340598252336,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the required molecular marker criteria. The trial specifically requires patients to have a confirmed BRAF V600E mutation, and this patient has a wild-type BRAF status. Additionally, the patient's ECOG performance status is 2, which does not meet the trial's requirement of ECOG 0-1. Therefore, the patient is not eligible for this clinical trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative clinical trials that may be suitable for patients with wild-type BRAF status or those with an ECOG performance status of 2."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.8917119749083415,
+          "embedding_score": "6.7329984",
+          "bm25_score": 5.953770504045142,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These two critical criteria are not met, leading to the conclusion of ineligibility.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RECIST v1.1 measurable lesion",
+              "Life expectancy \u226512 weeks",
+              "Signed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG >1",
+              "No prior treatments (treatment-na\u00efve)"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider enrolling the patient in a different trial that accommodates treatment-na\u00efve patients or those with an ECOG performance status of 2."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.693386495461969,
+          "embedding_score": "6.468055",
+          "bm25_score": 5.524938515521046,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a performance status of ECOG 2, which does not meet the required ECOG <= 1 criterion for inclusion. Additionally, the patient is treatment-na\u00efve, while the trial requires progression after specified chemotherapy, which the patient has not experienced. Therefore, the patient does not meet critical inclusion criteria.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative clinical trials that may be suitable for treatment-na\u00efve patients or those with a higher ECOG performance status."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.6883984693239436,
+          "embedding_score": "6.5932665",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a match for the trial's primary diagnosis. However, the patient has a known NRAS mutation (Q61H), which is not specified in the inclusion criteria but may be relevant for the trial's eligibility. Additionally, the patient is treatment-na\u00efve, which meets the inclusion criteria for prior treatments. The patient is 65 years old, which meets the age eligibility. The ECOG performance status is 2, which is acceptable. However, the patient's molecular markers indicate MSS (microsatellite stable), which does not violate exclusion criteria but raises concerns about the trial's focus on specific molecular characteristics. Therefore, while the patient meets many criteria, the presence of the NRAS mutation and the lack of clarity on its impact on eligibility leads to a determination of NOT_ELIGIBLE.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Known DPD deficiency",
+              "Severe infection",
+              "Pregnancy/lactation",
+              "Other specified illnesses"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Further clarification is needed regarding the impact of the NRAS mutation on eligibility for this trial. It may be beneficial to consult with the trial's principal investigator or review the trial protocol for specific molecular marker requirements."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "66328674": {
+      "patient_info": {
+        "mrn": "66328674",
+        "patient_id": 66328674,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.166678979245694,
+          "embedding_score": "7.26387",
+          "bm25_score": 2.7323381850412436,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer, but they do not meet the inclusion criteria due to the absence of the required BRAF V600E mutation, as their BRAF status is wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative clinical trials that may be suitable for patients with wild-type BRAF status or those with an ECOG performance status of 2."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.005639548707393,
+          "embedding_score": "6.867152",
+          "bm25_score": 6.621099962406282,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient is diagnosed with metastatic colorectal cancer but has a KRAS mutation (G13D), which is not RAS wild-type as required by the trial. Additionally, the patient has brain metastases, which is explicitly listed as an exclusion criterion. Therefore, the patient does not meet the critical inclusion criteria and violates exclusion criteria.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type (KRAS, NRAS) and BRAF-V600E negative",
+              "Brain/leptomeningeal metastases"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "The patient should be informed of their ineligibility for this trial due to the presence of a KRAS mutation and brain metastases. Consider discussing alternative treatment options that are suitable for patients with KRAS-mutated metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.957230497170915,
+          "embedding_score": "6.8265963",
+          "bm25_score": 5.953770504045142,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient does not meet the inclusion criteria for prior treatments, as they are newly diagnosed and treatment-na\u00efve. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing other clinical trial options that may be available for treatment-na\u00efve patients with metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.849385465020966,
+          "embedding_score": "6.823248",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis requirement. However, the patient is excluded due to the presence of unresolved toxicity from prior therapy, as they are newly diagnosed and treatment-na\u00efve. Additionally, the patient's performance status (ECOG 2) meets the criteria, and they are within the age range. However, the exclusion criteria for unresolved toxicity from prior therapy cannot be met as they are newly diagnosed and have not received any treatment yet. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Unresolved toxicity from prior therapy"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider discussing alternative treatment options with the oncologist, as the patient is newly diagnosed and may benefit from standard treatment protocols for metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.800741346517245,
+          "embedding_score": "6.6804237",
+          "bm25_score": 4.148157697221964,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to a violation of the exclusion criteria. The patient has brain metastases, which is explicitly mentioned as an exclusion criterion unless specified otherwise. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG status of <= 1. These two factors lead to a determination of ineligibility.",
+            "inclusion_criteria_met": [
+              "Documented informed consent",
+              "Age >= 18",
+              "Histologically/cytologically confirmed MSS mCRC",
+              "Measurable metastatic disease",
+              "Life expectancy >= 3 months"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain metastases except as described",
+              "ECOG > 1"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that may accept patients with brain metastases or those with a higher ECOG performance status. Additionally, further evaluation of the patient's overall health and treatment options may be warranted."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "88760810": {
+      "patient_info": {
+        "mrn": "88760810",
+        "patient_id": 88760810,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.087008638246715,
+          "embedding_score": "7.1458488",
+          "bm25_score": 2.8304837499678372,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, as their molecular markers indicate BRAF is wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider testing for BRAF V600E mutation and reassess eligibility for other clinical trials that may be suitable for patients with wild-type BRAF. Additionally, address the patient's performance status to improve treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 5.027759711130049,
+          "embedding_score": "6.816105",
+          "bm25_score": 8.549542962961269,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a performance status of ECOG 2, which does not meet the inclusion criteria requiring ECOG 0-1. Additionally, the patient has metastatic disease with involvement of bone, lymph nodes, and liver, which is consistent with the diagnosis but does not meet the performance status requirement. All other inclusion criteria are met, including age, molecular markers, and no prior treatments. However, the violation of the performance status criterion is critical and leads to ineligibility.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type and BRAF-V600E negative"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative treatment options with the oncologist, as the patient's performance status may need to be improved before considering participation in clinical trials."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.933904126398562,
+          "embedding_score": "6.810844",
+          "bm25_score": 5.5437788404623305,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These two critical criteria are not met, leading to a determination of ineligibility.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "RAS wild-type"
+            ],
+            "exclusion_criteria_violated": [
+              "ECOG performance status >1",
+              "Progression post 2-3 prior systemic therapies not met"
+            ],
+            "inclusion_criteria_met_count": 3,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider enrolling the patient in a different trial designed for treatment-na\u00efve patients with metastatic colorectal cancer or explore standard treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.780269260822361,
+          "embedding_score": "6.708488",
+          "bm25_score": 2.8109223186514547,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer, which is a primary diagnosis match. However, the patient is MSI-H, which violates the exclusion criteria for this trial. Additionally, the patient is 65 years old, has an ECOG performance status of 2, and is treatment-na\u00efve, which aligns with the inclusion criteria. Despite meeting several inclusion criteria, the violation of the exclusion criteria due to MSI-H status leads to a determination of not eligible.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI-H or dMMR CRC"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that accept patients with MSI-H metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.658091239418798,
+          "embedding_score": "6.5291595",
+          "bm25_score": 2.922651909663074,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria for microsatellite stability (MSS). The patient's molecular markers indicate MSI-H, which is a critical exclusion for this trial that requires MSS mCRC. Additionally, the patient's ECOG performance status is 2, which exceeds the trial's requirement of ECOG <= 1. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "ECOG > 1",
+              "Molecular markers not MSS"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative trials that accept patients with MSI-H colorectal cancer or those with a higher ECOG performance status. Further evaluation of the patient's overall health and treatment options may be necessary."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "92533443": {
+      "patient_info": {
+        "mrn": "92533443",
+        "patient_id": 92533443,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.072044303266081,
+          "embedding_score": "7.1286774",
+          "bm25_score": 2.7323381850412436,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer, but the BRAF mutation status is critical for eligibility. The patient is BRAF wild-type, which does not meet the inclusion criteria requiring a confirmed BRAF V600E mutation. Additionally, the presence of symptomatic brain metastasis (as indicated by the diagnosis of brain metastasis) violates the exclusion criteria. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516 for Phase 3",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "BRAF mutation status (must be BRAF V600E)",
+              "Symptomatic brain metastasis"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider alternative clinical trials that do not have the BRAF V600E mutation requirement or that are suitable for patients with wild-type BRAF status."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.983308473789543,
+          "embedding_score": "6.851703",
+          "bm25_score": 6.237208563879141,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is diagnosed with metastatic colorectal cancer and is treatment-na\u00efve, which meets the inclusion criteria for prior treatments. However, the patient has a KRAS G13D mutation, which makes them RAS mutant and not RAS wild-type, violating a critical inclusion criterion. Additionally, the patient has brain metastases, which is an exclusion criterion. Therefore, the patient does not meet the eligibility requirements for this clinical trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "RAS wild-type (KRAS, NRAS) and BRAF-V600E negative",
+              "Brain/leptomeningeal metastases"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that accept patients with RAS mutations or those with brain metastases. Additionally, further evaluation of the patient's overall health and treatment options may be beneficial."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.922830958866358,
+          "embedding_score": "6.8228035",
+          "bm25_score": 4.895617024874723,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has multiple metastatic sites (lung, bone, brain), which may complicate eligibility based on the requirement for RECIST v1.1 measurable lesions. Although the patient meets the age and performance status criteria, the critical requirement of prior treatments is not met.",
+            "inclusion_criteria_met": [
+              "Age \u226518",
+              "Histologically/cytologically proven mCRC",
+              "ECOG 0-1"
+            ],
+            "exclusion_criteria_violated": [
+              "Progression post 2-3 prior systemic therapies"
+            ],
+            "inclusion_criteria_met_count": 3,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider enrolling the patient in a trial designed for treatment-na\u00efve patients with metastatic colorectal cancer or provide standard treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.847784473354419,
+          "embedding_score": "6.6787906",
+          "bm25_score": 5.754369161354184,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for active brain metastases unless specified otherwise. Additionally, the patient is treatment-na\u00efve, which does not meet the requirement for progression after specified chemotherapy. Therefore, the patient does not meet critical inclusion criteria and violates exclusion criteria.",
+            "inclusion_criteria_met": [
+              "age >= 18",
+              "ECOG <= 1",
+              "life expectancy >= 3 months",
+              "histologically confirmed MSS mCRC"
+            ],
+            "exclusion_criteria_violated": [
+              "active brain metastases",
+              "progression after specified chemotherapy"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative treatment options for the patient, as they do not meet the eligibility criteria for this trial. Further evaluation of the patient's overall treatment plan may be necessary."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.796898949975799,
+          "embedding_score": "6.748267",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient is excluded due to the presence of the KRAS mutation (KRAS G13D), which is a known exclusion criterion for this trial. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which meets the inclusion criteria, but the presence of the KRAS mutation violates the exclusion criteria. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "Prior chemotherapy/antiangiogenic agents",
+              "Known DPD deficiency",
+              "Severe infection",
+              "Pregnancy/lactation",
+              "Other specified illnesses"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that accept patients with KRAS mutations or explore other treatment options for the patient."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "52965770": {
+      "patient_info": {
+        "mrn": "52965770",
+        "patient_id": 52965770,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 4.998294606511553,
+          "embedding_score": "7.0360794",
+          "bm25_score": 2.4346340598252336,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, as their BRAF status is wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the requirement of ECOG 0-1. These factors lead to a determination of ineligibility.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1"
+            ],
+            "exclusion_criteria_violated": [
+              "BRAF V600E mutation requirement not met",
+              "ECOG performance status requirement not met"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider genetic testing for BRAF mutation status and evaluate treatment options for wild-type BRAF metastatic colorectal cancer. Discuss potential clinical trials that are suitable for patients with wild-type BRAF status."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.924301412124434,
+          "embedding_score": "6.7347255",
+          "bm25_score": 6.999785980217948,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a KRAS G13D mutation, which indicates that they are not RAS wild-type. This is a critical inclusion criterion for the trial, which requires RAS wild-type status. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. Both of these factors make the patient ineligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "Measurable lesion per RECIST1.1"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative trials that accept patients with KRAS mutations or those with a higher ECOG performance status. Additionally, ensure that the patient is aware of their molecular marker status and its implications for treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.854339070820094,
+          "embedding_score": "6.724958",
+          "bm25_score": 4.895617024874724,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient does not meet critical inclusion criteria.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider enrolling the patient in a different clinical trial designed for treatment-na\u00efve patients with metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.808326114053558,
+          "embedding_score": "6.7645917",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has a confirmed diagnosis of metastatic colorectal adenocarcinoma, which is the primary condition for the trial. The disease is at Stage IV, which is compatible with the trial's inclusion criteria. The patient is 65 years old, meeting the age requirement of 18 years or older. The performance status is ECOG 2, which is within the acceptable range. The patient is treatment-na\u00efve, which aligns with the trial's requirements as there are no prior treatments that would violate the inclusion criteria. Additionally, the molecular markers indicate MSS status, which does not violate the exclusion criteria. No exclusion criteria are violated based on the provided information.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Proceed with the informed consent process and initiate screening for the trial. Ensure that all laboratory values and organ function tests are within acceptable limits before enrollment."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.7365079147636635,
+          "embedding_score": "6.5723457",
+          "bm25_score": 4.528863373795293,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after specified chemotherapy. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowable ECOG of 1. Therefore, the patient does not meet critical inclusion criteria and is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative clinical trials that accept treatment-na\u00efve patients or those with a higher ECOG performance status."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 1,
+      "not_eligible_trials": 4,
+      "need_more_info_trials": 0
+    },
+    "44631066": {
+      "patient_info": {
+        "mrn": "44631066",
+        "patient_id": 44631066,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.156406766779197,
+          "embedding_score": "7.23223",
+          "bm25_score": 3.128187875183847,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer (mCRC) but does not meet the critical inclusion criteria due to the absence of the required BRAF V600E mutation. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria. Therefore, the patient is not eligible for this trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "Symptomatic brain metastasis"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Consider alternative clinical trials that do not have the BRAF V600E mutation requirement or that are suitable for patients with symptomatic brain metastasis."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.938383369968909,
+          "embedding_score": "6.806031",
+          "bm25_score": 5.805383699687939,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is not eligible for the trial due to the presence of brain metastases, which violates the exclusion criteria. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. Although the patient meets other inclusion criteria, the violation of these critical exclusion criteria renders them ineligible.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "RAS wild-type",
+              "No prior systemic chemotherapy for metastatic CRC"
+            ],
+            "exclusion_criteria_violated": [
+              "Brain/leptomeningeal metastases",
+              "ECOG > 1"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "The patient should be considered for alternative treatment options that are suitable for individuals with brain metastases and an ECOG performance status of 2. Further evaluation of treatment options specific to their condition is recommended."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.862137015838372,
+          "embedding_score": "6.66297",
+          "bm25_score": 6.601932319632748,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient does not meet critical inclusion criteria.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative clinical trials for treatment-na\u00efve patients with metastatic colorectal cancer or explore standard treatment options."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.8203492836342505,
+          "embedding_score": "6.765745",
+          "bm25_score": 2.8109223186514547,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but is excluded due to the presence of MSI-H (Microsatellite Instability-High) status, which is listed as an exclusion criterion for this trial. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which aligns with the inclusion criteria, but the MSI-H status is a critical exclusion that cannot be overlooked.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI-H or dMMR CRC"
+            ],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "The patient should be informed about the exclusion due to MSI-H status. Consider discussing alternative clinical trials that may be suitable for patients with MSI-H colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.726069076696078,
+          "embedding_score": "6.573749",
+          "bm25_score": 4.148157697221964,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer with brain metastases, which violates the exclusion criteria regarding brain metastases. Additionally, the patient is classified as ECOG 2, which does not meet the required performance status of ECOG <= 1. The patient is also newly diagnosed and treatment-na\u00efve, which does not align with the requirement of having progressed after specified chemotherapy.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "Brain metastases",
+              "ECOG > 1",
+              "Treatment-na\u00efve"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 3,
+            "recommendations": "Consider alternative clinical trials that accept newly diagnosed patients or those with brain metastases. Additionally, further assessment of the patient's treatment options may be warranted."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    },
+    "28786181": {
+      "patient_info": {
+        "mrn": "28786181",
+        "patient_id": 28786181,
+        "age": 65,
+        "gender": "Unknown"
+      },
+      "evaluations": [
+        {
+          "trial_id": "NCT04607421",
+          "trial_title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "hybrid_score": 5.032509675328692,
+          "embedding_score": "7.084958",
+          "bm25_score": 2.4346340598252336,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, as their molecular marker shows BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [
+              "Age \u226516",
+              "Confirmed Stage IV CRC",
+              "0-1 prior regimens in metastatic setting",
+              "Measurable disease per RECIST 1.1"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 4,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider genetic testing for BRAF mutation and explore other clinical trials that may be suitable for patients with BRAF wild-type metastatic colorectal cancer."
+          }
+        },
+        {
+          "trial_id": "NCT04835142",
+          "trial_title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "hybrid_score": 4.892028133254972,
+          "embedding_score": "6.7071276",
+          "bm25_score": 6.567961116026746,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has an ECOG performance status of 2, which does not meet the inclusion criteria requiring ECOG 0-1. Additionally, the patient has comorbidities (endometriosis and thyroid disorder) that may complicate eligibility, but the primary reason for ineligibility is the performance status. All other inclusion criteria are met, including age, diagnosis, and molecular markers.",
+            "inclusion_criteria_met": [
+              "Age 18-75",
+              "Signed informed consent",
+              "Histologically proven diagnosis of metastatic colorectal cancer",
+              "No prior systemic chemotherapy for metastatic CRC",
+              "RAS wild-type and BRAF wild-type",
+              "Measurable lesion per RECIST1.1",
+              "Life expectancy \u226516 weeks",
+              "Adequate organ and hematologic function"
+            ],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 8,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider addressing the patient's performance status and comorbidities. If the patient's ECOG status improves to 0-1, re-evaluate eligibility for this trial or consider alternative trials that may accommodate a higher ECOG status."
+          }
+        },
+        {
+          "trial_id": "NCT05513742",
+          "trial_title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "hybrid_score": 4.891531213302361,
+          "embedding_score": "6.704962",
+          "bm25_score": 6.601932319632748,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression after 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 0,
+            "recommendations": "Consider discussing alternative treatment options for the patient, as they do not qualify for this clinical trial due to being treatment-na\u00efve and having an ECOG performance status of 2."
+          }
+        },
+        {
+          "trial_id": "NCT06696768",
+          "trial_title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "hybrid_score": 4.762751639718841,
+          "embedding_score": "6.6994853",
+          "bm25_score": 2.437064277961218,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 95,
+            "reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient is newly diagnosed and treatment-na\u00efve, which meets the inclusion criteria for prior treatments. The patient's ECOG performance status is 2, which is acceptable. However, the patient has not been tested for MSI-H or dMMR status, which is critical since the exclusion criteria specifically state that patients with MSI-H or dMMR CRC are not eligible. Given that the patient's molecular markers indicate MSS, this would typically be acceptable, but without explicit confirmation of MSI status, there is uncertainty. Therefore, the patient is marked as NOT_ELIGIBLE due to the potential violation of exclusion criteria regarding MSI status.",
+            "inclusion_criteria_met": [
+              "Histologically/cytologically confirmed colorectal adenocarcinoma",
+              "Unresectable/metastatic disease measurable by RECIST 1.1",
+              "Age \u226518",
+              "ECOG \u22642",
+              "Ability and willingness for informed consent"
+            ],
+            "exclusion_criteria_violated": [
+              "MSI-H or dMMR CRC"
+            ],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 1,
+            "recommendations": "Confirm the MSI status of the patient to determine eligibility. If the patient is confirmed to be MSS, they may be reconsidered for eligibility. If they are found to be MSI-H or dMMR, they will remain ineligible."
+          }
+        },
+        {
+          "trial_id": "NCT05672316",
+          "trial_title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "hybrid_score": 4.730669125302715,
+          "embedding_score": "6.5474644",
+          "bm25_score": 4.91480219311458,
+          "llm_evaluation": {
+            "eligibility_status": "NOT_ELIGIBLE",
+            "confidence_score": 90,
+            "reasoning": "The patient has metastatic colorectal cancer but is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after specified chemotherapy. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed of 1. Therefore, the patient does not meet critical inclusion criteria and is also in violation of the performance status requirement.",
+            "inclusion_criteria_met": [],
+            "exclusion_criteria_violated": [
+              "ECOG > 1",
+              "Progression after specified chemotherapy"
+            ],
+            "inclusion_criteria_met_count": 0,
+            "exclusion_criteria_violated_count": 2,
+            "recommendations": "Consider discussing alternative clinical trials that accept treatment-na\u00efve patients or those with a higher ECOG performance status. Further evaluation of the patient's overall treatment plan may also be warranted."
+          }
+        }
+      ],
+      "total_trials_evaluated": 5,
+      "eligible_trials": 0,
+      "not_eligible_trials": 5,
+      "need_more_info_trials": 0
+    }
+  },
+  "generated_at": "2025-11-20T19:27:15.577165"
+}

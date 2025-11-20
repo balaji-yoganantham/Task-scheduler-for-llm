@@ -1,0 +1,81 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_single
+patient_id: 21080851
+mrn: 21080851
+trial_id: NCT06696768
+trial_title: Clinical Trial of an Anti-cancer Drug, CA-4948 (Em...
+
+
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
+        
+        Evaluate the eligibility of this patient for the given clinical trial.
+        
+        CLINICAL TRIAL INFORMATION:
+        Title: Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer
+        Condition: Metastatic Colorectal Adenocarcinoma
+        Phase: Phase 1
+        Status: Recruiting
+        Investigator: National Cancer Institute (NCI)
+        Brief Summary: Phase I trial of CA-4948 (emavusertib) in combination with FOLFOX and bevacizumab for metastatic colorectal cancer.
+        Detailed Description: Assess dose-limiting toxicities (DLTs), safety, pharmacodynamics, and pharmacokinetics of CA-4948/FOLFOX/bevacizumab, with dose escalation and expansion.
+        Age Range: 18 Years - 
+        Sex Eligibility: All
+        
+        INCLUSION CRITERIA:
+        Histologically/cytologically confirmed colorectal adenocarcinoma, unresectable/metastatic disease measurable by RECIST 1.1; age ≥18; ECOG ≤2; adequate organ function; ability and willingness for informed consent.
+        
+        EXCLUSION CRITERIA:
+        MSI-H or dMMR CRC; prolonged QTcF >450ms; unresolved toxicity from prior therapy; prior chemotherapy/antiangiogenic agents; known DPD deficiency; severe infection; pregnancy/lactation; other specified illnesses.
+        
+        PATIENT INFORMATION:
+        MRN: 21080851
+        Age: 65
+        Gender: Unknown
+        Oncologist: Dr. Sarah Mitchell, MD
+        Date of Visit: June 14, 2025
+        
+        PATIENT MEDICAL RECORD:
+        Diagnosis: Metastatic colorectal cancer (lymph nodes, bone, brain) Primary tumor site: Transverse colon (right colon) TNM Stage: T4bN1aM1 Overall Stage: Stage IV Metastatic sites: Lymph nodes, Bone, Brain Performance Status: ECOG 2 Prior treatments: None - newly diagnosed, treatment-naïve Molecular markers: RAS: Wild-type, BRAF: V600E, MSI/MMR: MSS Symptoms: Rectal bleeding, Vomiting, Abdominal pain, Bloating, Constipation Comorbidities: Hyperlipidemia, GERD, Fibromyalgia, Type 2 diabetes, Heart failure
+        
+        EVALUATION CRITERIA:
+        1. Primary diagnosis match
+        2. Disease stage compatibility
+        3. Age eligibility
+        4. Gender eligibility
+        5. Performance status
+        6. Prior treatments
+        7. Comorbidities
+        8. Laboratory values
+        9. Exclusion criteria
+        10. Overall eligibility assessment
+        
+        CRITICAL ELIGIBILITY RULES:
+        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        
+        Return ONLY a valid JSON object with this structure:
+        {
+            "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+            "confidence_score": 85,
+            "reasoning": "Detailed explanation of eligibility assessment",
+            "inclusion_criteria_met": ["criteria1", "criteria2", ...],
+            "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "total_inclusion_criteria": 8,
+            "total_exclusion_criteria": 12,
+            "recommendations": "Specific recommendations for next steps",
+            "evaluation_timestamp": "2025-11-20T18:44:56.791935"
+        }
+        

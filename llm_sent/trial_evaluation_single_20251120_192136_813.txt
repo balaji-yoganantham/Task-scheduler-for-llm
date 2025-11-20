@@ -1,0 +1,81 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_single
+patient_id: 48727925
+mrn: 48727925
+trial_id: NCT04835142
+trial_title: Comparison of A140 and Erbitux Combined With mfolf...
+
+
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
+        
+        Evaluate the eligibility of this patient for the given clinical trial.
+        
+        CLINICAL TRIAL INFORMATION:
+        Title: Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC
+        Condition: Metastatic Colorectal Cancer
+        Phase: Phase 3
+        Status: Completed
+        Investigator: Sichuan Kelun Pharmaceutical Research Institute Co., Ltd.
+        Brief Summary: Compare the objective remission rate of A140 and Erbitux combined with mfolfox6 regimen in the first-line treatment of Ras wild-type metastatic colorectal cancer for 12 weeks.
+        Detailed Description: Randomized, double-blind, controlled trial comparing efficacy and safety of A140 or Erbitux plus mfolfox6 as first-line therapy in RAS wild-type mCRC patients.
+        Age Range: 18 Years - 75 Years
+        Sex Eligibility: All
+        
+        INCLUSION CRITERIA:
+        Age 18-75; signed informed consent; histologically proven diagnosis of metastatic colorectal cancer; no prior systemic chemotherapy for metastatic CRC; RAS wild-type (KRAS, NRAS) and BRAF-V600E negative; measurable lesion per RECIST1.1; ECOG 0-1; life expectancy ≥16 weeks; adequate organ and hematologic function.
+        
+        EXCLUSION CRITERIA:
+        Known drug allergy; recent local treatment or surgery; brain/leptomeningeal metastases; bowel obstruction; active severe clinical infection; uncontrolled diabetes or severe lung/liver disease; significant cardiovascular disease; renal replacement; Grade >1 peripheral neuropathy; previous organ/stem cell transplant; history of other malignancy (except specified) within 5 years; HIV/HBV/HCV infection; coagulation dysfunction; prior VEGF or EGFR-targeted therapy; prior experimental/immunotherapy/hormone therapy as defined; pregnancy/lactation; alcohol/drug dependence; active psychiatric/neurological disease; unresolved adverse events from prior therapy.
+        
+        PATIENT INFORMATION:
+        MRN: 48727925
+        Age: 65
+        Gender: Unknown
+        Oncologist: Dr. Sarah Mitchell, MD
+        Date of Visit: May 26, 2025
+        
+        PATIENT MEDICAL RECORD:
+        Diagnosis: Metastatic colorectal cancer (lung) Primary tumor site: Transverse colon (right colon) TNM Stage: T2N2aM1 Overall Stage: Stage IV Metastatic sites: Lung Performance Status: ECOG 0 Prior treatments: None - newly diagnosed, treatment-naïve Molecular markers: RAS: KRAS G12D, BRAF: Wild-type, MSI/MMR: MSS Symptoms: Diarrhea, Change in bowel habits, Constipation Comorbidities: Osteoporosis, Stroke history, Chronic kidney disease
+        
+        EVALUATION CRITERIA:
+        1. Primary diagnosis match
+        2. Disease stage compatibility
+        3. Age eligibility
+        4. Gender eligibility
+        5. Performance status
+        6. Prior treatments
+        7. Comorbidities
+        8. Laboratory values
+        9. Exclusion criteria
+        10. Overall eligibility assessment
+        
+        CRITICAL ELIGIBILITY RULES:
+        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        
+        Return ONLY a valid JSON object with this structure:
+        {
+            "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+            "confidence_score": 85,
+            "reasoning": "Detailed explanation of eligibility assessment",
+            "inclusion_criteria_met": ["criteria1", "criteria2", ...],
+            "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "total_inclusion_criteria": 8,
+            "total_exclusion_criteria": 12,
+            "recommendations": "Specific recommendations for next steps",
+            "evaluation_timestamp": "2025-11-20T19:21:36.813764"
+        }
+        

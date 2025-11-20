@@ -1,0 +1,1533 @@
+{
+  "summary": {
+    "total_patients": 20,
+    "total_trials": 5,
+    "patients_processed": 20,
+    "total_matches_found": 100,
+    "patients_with_matches": 20,
+    "patients_without_matches": 0
+  },
+  "results": {
+    "35294426": {
+      "patient_info": {
+        "mrn": "35294426",
+        "patient_id": 35294426,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.119178395796257,
+          "embedding_score": "6.979385",
+          "bm25_score": 7.78696554662246
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.085699488965544,
+          "embedding_score": "7.148185",
+          "bm25_score": 2.7323381850412436
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 5.018969710845696,
+          "embedding_score": "6.887017",
+          "bm25_score": 6.601932319632748
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.9720310428619126,
+          "embedding_score": "6.8824344",
+          "bm25_score": 5.144232838947717
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.748315394754242,
+          "embedding_score": "6.678862",
+          "bm25_score": 2.437064277961218
+        }
+      ],
+      "match_count": 5
+    },
+    "59779266": {
+      "patient_info": {
+        "mrn": "59779266",
+        "patient_id": 59779266,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.972759533758379,
+          "embedding_score": "6.9762564",
+          "bm25_score": 2.979335812575842
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.840347399555611,
+          "embedding_score": "6.7859716",
+          "bm25_score": 3.0055750159080765
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.8184863132047635,
+          "embedding_score": "6.6445303",
+          "bm25_score": 5.577170192559485
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.795391169454954,
+          "embedding_score": "6.604119",
+          "bm25_score": 5.750266421712155
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.652000923883852,
+          "embedding_score": "6.4705544",
+          "bm25_score": 4.087095920640151
+        }
+      ],
+      "match_count": 5
+    },
+    "30913714": {
+      "patient_info": {
+        "mrn": "30913714",
+        "patient_id": 30913714,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.029859585710331,
+          "embedding_score": "6.9226875",
+          "bm25_score": 6.13261047826754
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.992257775655374,
+          "embedding_score": "7.001938",
+          "bm25_score": 3.030042310257253
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.919942396827282,
+          "embedding_score": "6.821872",
+          "bm25_score": 4.821061092871483
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.899725833699612,
+          "embedding_score": "6.775724",
+          "bm25_score": 5.223969325936768
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.6763515481455,
+          "embedding_score": "6.5616894",
+          "bm25_score": 2.7722994787920667
+        }
+      ],
+      "match_count": 5
+    },
+    "98938054": {
+      "patient_info": {
+        "mrn": "98938054",
+        "patient_id": 98938054,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.000910089974297,
+          "embedding_score": "7.010364",
+          "bm25_score": 3.1218417010271793
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.881933059252943,
+          "embedding_score": "6.737597",
+          "bm25_score": 5.520505572611945
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.843598154199128,
+          "embedding_score": "6.704391",
+          "bm25_score": 5.017481744686943
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.8283366742590506,
+          "embedding_score": "6.7871532",
+          "bm25_score": 2.577646781535445
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.725741188556426,
+          "embedding_score": "6.548416",
+          "bm25_score": 4.728329738990254
+        }
+      ],
+      "match_count": 5
+    },
+    "21080851": {
+      "patient_info": {
+        "mrn": "21080851",
+        "patient_id": 21080851,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.043816451565672,
+          "embedding_score": "7.0652795",
+          "bm25_score": 3.2706937636351845
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.987023298388401,
+          "embedding_score": "6.845032",
+          "bm25_score": 6.516691593517169
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.951611117992985,
+          "embedding_score": "6.8046794",
+          "bm25_score": 6.277851411838945
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.798440039987396,
+          "embedding_score": "6.7504687",
+          "bm25_score": 2.437064277961218
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.757978413391087,
+          "embedding_score": "6.576645",
+          "bm25_score": 5.144232838947717
+        }
+      ],
+      "match_count": 5
+    },
+    "29936192": {
+      "patient_info": {
+        "mrn": "29936192",
+        "patient_id": 29936192,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.130759028927732,
+          "embedding_score": "7.189483",
+          "bm25_score": 3.2706937636351845
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.884095775669469,
+          "embedding_score": "6.7229757",
+          "bm25_score": 5.9337588014090805
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.83512033989358,
+          "embedding_score": "6.6975026",
+          "bm25_score": 4.895617024874724
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.83392115914328,
+          "embedding_score": "6.801156",
+          "bm25_score": 2.437064277961218
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.7125373918205895,
+          "embedding_score": "6.554418",
+          "bm25_score": 4.148157697221964
+        }
+      ],
+      "match_count": 5
+    },
+    "28543394": {
+      "patient_info": {
+        "mrn": "28543394",
+        "patient_id": 28543394,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.234962089875766,
+          "embedding_score": "7.3550377",
+          "bm25_score": 2.8811902476492484
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.167723658852335,
+          "embedding_score": "7.005254",
+          "bm25_score": 8.801533486199263
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 5.013301637780671,
+          "embedding_score": "6.9468246",
+          "bm25_score": 5.017481744686943
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.902690212345593,
+          "embedding_score": "6.7748275",
+          "bm25_score": 5.343699204142679
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.8623144212225515,
+          "embedding_score": "6.835693",
+          "bm25_score": 2.577646781535445
+        }
+      ],
+      "match_count": 5
+    },
+    "34694074": {
+      "patient_info": {
+        "mrn": "34694074",
+        "patient_id": 34694074,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.224768773283272,
+          "embedding_score": "7.1117215",
+          "bm25_score": 8.21879041081366
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.197899158814975,
+          "embedding_score": "7.3020906",
+          "bm25_score": 2.8811902476492484
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 5.01960164400233,
+          "embedding_score": "6.9068484",
+          "bm25_score": 6.160258085294966
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.923200362424576,
+          "embedding_score": "6.736623",
+          "bm25_score": 6.918813172331261
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.872868306894475,
+          "embedding_score": "6.8484526",
+          "bm25_score": 2.6317169752178398
+        }
+      ],
+      "match_count": 5
+    },
+    "76190966": {
+      "patient_info": {
+        "mrn": "76190966",
+        "patient_id": 76190966,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 5.034753159225366,
+          "embedding_score": "6.918048",
+          "bm25_score": 6.403987524919403
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.969509418824741,
+          "embedding_score": "6.9758196",
+          "bm25_score": 2.881190247649248
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.952905187528218,
+          "embedding_score": "6.788001",
+          "bm25_score": 6.710148172937665
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.907860295959423,
+          "embedding_score": "6.7370586",
+          "bm25_score": 6.397308276365527
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.776420349241496,
+          "embedding_score": "6.69862",
+          "bm25_score": 2.9128819823662937
+        }
+      ],
+      "match_count": 5
+    },
+    "46385580": {
+      "patient_info": {
+        "mrn": "46385580",
+        "patient_id": 46385580,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.031036975823107,
+          "embedding_score": "6.8112373",
+          "bm25_score": 8.772361372651757
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.928723599759611,
+          "embedding_score": "6.9239335",
+          "bm25_score": 2.732338185041243
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.884497537020959,
+          "embedding_score": "6.7854295",
+          "bm25_score": 4.489896754560153
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.820900917957512,
+          "embedding_score": "6.7681885",
+          "bm25_score": 2.7722994787920667
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.781132191844049,
+          "embedding_score": "6.6203303",
+          "bm25_score": 4.896698608241579
+        }
+      ],
+      "match_count": 5
+    },
+    "48727925": {
+      "patient_info": {
+        "mrn": "48727925",
+        "patient_id": 48727925,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 5.001102646269554,
+          "embedding_score": "6.884048",
+          "bm25_score": 6.075635223857361
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.969782032529021,
+          "embedding_score": "6.7781706",
+          "bm25_score": 7.502087419546466
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.940832516030785,
+          "embedding_score": "6.9476113",
+          "bm25_score": 2.5834861224332384
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.85853224477558,
+          "embedding_score": "6.7250433",
+          "bm25_score": 5.033397900193488
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.803985983417376,
+          "embedding_score": "6.7523665",
+          "bm25_score": 2.577646781535445
+        }
+      ],
+      "match_count": 5
+    },
+    "18228455": {
+      "patient_info": {
+        "mrn": "18228455",
+        "patient_id": 18228455,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.0711200903493765,
+          "embedding_score": "7.123151",
+          "bm25_score": 2.8304837499678372
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.019177198547243,
+          "embedding_score": "6.862759",
+          "bm25_score": 7.174860640966865
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.918640865132308,
+          "embedding_score": "6.6983404",
+          "bm25_score": 7.660085798803166
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.786540766178196,
+          "embedding_score": "6.7174473",
+          "bm25_score": 2.8109223186514547
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.769196246367668,
+          "embedding_score": "6.6190434",
+          "bm25_score": 4.528863373795293
+        }
+      ],
+      "match_count": 5
+    },
+    "88044380": {
+      "patient_info": {
+        "mrn": "88044380",
+        "patient_id": 88044380,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.043435343125888,
+          "embedding_score": "7.081428",
+          "bm25_score": 2.8811902476492484
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.994944837858972,
+          "embedding_score": "6.843352",
+          "bm25_score": 6.819951639264741
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.976874569070344,
+          "embedding_score": "6.894786",
+          "bm25_score": 5.017481744686942
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.906360584959793,
+          "embedding_score": "6.737382",
+          "bm25_score": 6.339774345868432
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.882342917011126,
+          "embedding_score": "6.864305",
+          "bm25_score": 2.577646781535445
+        }
+      ],
+      "match_count": 5
+    },
+    "11800359": {
+      "patient_info": {
+        "mrn": "11800359",
+        "patient_id": 11800359,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.982447602767745,
+          "embedding_score": "6.8177915",
+          "bm25_score": 6.999785980217948
+        },
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.972871795003375,
+          "embedding_score": "6.999761",
+          "bm25_score": 2.4346340598252336
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.8917119749083415,
+          "embedding_score": "6.7329984",
+          "bm25_score": 5.953770504045142
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.693386495461969,
+          "embedding_score": "6.468055",
+          "bm25_score": 5.524938515521046
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.6883984693239436,
+          "embedding_score": "6.5932665",
+          "bm25_score": 2.437064277961218
+        }
+      ],
+      "match_count": 5
+    },
+    "66328674": {
+      "patient_info": {
+        "mrn": "66328674",
+        "patient_id": 66328674,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.166678979245694,
+          "embedding_score": "7.26387",
+          "bm25_score": 2.7323381850412436
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.005639548707393,
+          "embedding_score": "6.867152",
+          "bm25_score": 6.621099962406282
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.957230497170915,
+          "embedding_score": "6.8265963",
+          "bm25_score": 5.953770504045142
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.849385465020966,
+          "embedding_score": "6.823248",
+          "bm25_score": 2.437064277961218
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.800741346517245,
+          "embedding_score": "6.6804237",
+          "bm25_score": 4.148157697221964
+        }
+      ],
+      "match_count": 5
+    },
+    "88760810": {
+      "patient_info": {
+        "mrn": "88760810",
+        "patient_id": 88760810,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.087008638246715,
+          "embedding_score": "7.1458488",
+          "bm25_score": 2.8304837499678372
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 5.027759711130049,
+          "embedding_score": "6.816105",
+          "bm25_score": 8.549542962961269
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.933904126398562,
+          "embedding_score": "6.810844",
+          "bm25_score": 5.5437788404623305
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.780269260822361,
+          "embedding_score": "6.708488",
+          "bm25_score": 2.8109223186514547
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.658091239418798,
+          "embedding_score": "6.5291595",
+          "bm25_score": 2.922651909663074
+        }
+      ],
+      "match_count": 5
+    },
+    "92533443": {
+      "patient_info": {
+        "mrn": "92533443",
+        "patient_id": 92533443,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.072044303266081,
+          "embedding_score": "7.1286774",
+          "bm25_score": 2.7323381850412436
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.983308473789543,
+          "embedding_score": "6.851703",
+          "bm25_score": 6.237208563879141
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.922830958866358,
+          "embedding_score": "6.8228035",
+          "bm25_score": 4.895617024874723
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.847784473354419,
+          "embedding_score": "6.6787906",
+          "bm25_score": 5.754369161354184
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.796898949975799,
+          "embedding_score": "6.748267",
+          "bm25_score": 2.437064277961218
+        }
+      ],
+      "match_count": 5
+    },
+    "52965770": {
+      "patient_info": {
+        "mrn": "52965770",
+        "patient_id": 52965770,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 4.998294606511553,
+          "embedding_score": "7.0360794",
+          "bm25_score": 2.4346340598252336
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.924301412124434,
+          "embedding_score": "6.7347255",
+          "bm25_score": 6.999785980217948
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.854339070820094,
+          "embedding_score": "6.724958",
+          "bm25_score": 4.895617024874724
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.808326114053558,
+          "embedding_score": "6.7645917",
+          "bm25_score": 2.437064277961218
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.7365079147636635,
+          "embedding_score": "6.5723457",
+          "bm25_score": 4.528863373795293
+        }
+      ],
+      "match_count": 5
+    },
+    "44631066": {
+      "patient_info": {
+        "mrn": "44631066",
+        "patient_id": 44631066,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.156406766779197,
+          "embedding_score": "7.23223",
+          "bm25_score": 3.128187875183847
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.938383369968909,
+          "embedding_score": "6.806031",
+          "bm25_score": 5.805383699687939
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.862137015838372,
+          "embedding_score": "6.66297",
+          "bm25_score": 6.601932319632748
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.8203492836342505,
+          "embedding_score": "6.765745",
+          "bm25_score": 2.8109223186514547
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.726069076696078,
+          "embedding_score": "6.573749",
+          "bm25_score": 4.148157697221964
+        }
+      ],
+      "match_count": 5
+    },
+    "28786181": {
+      "patient_info": {
+        "mrn": "28786181",
+        "patient_id": 28786181,
+        "age": 65,
+        "gender": null
+      },
+      "matches": [
+        {
+          "trial_id": "NCT04607421",
+          "title": "A Study of Encorafenib Plus Cetuximab With or Without Chemotherapy in People With Previously Untreated Metastatic Colorectal Cancer",
+          "condition": "Neoplasms",
+          "phase": "Phase 3",
+          "status": "Active, not recruiting",
+          "embedding_index": 2,
+          "is_evaluated": 0,
+          "index": "2",
+          "hybrid_score": 5.032509675328692,
+          "embedding_score": "7.084958",
+          "bm25_score": 2.4346340598252336
+        },
+        {
+          "trial_id": "NCT04835142",
+          "title": "Comparison of A140 and Erbitux Combined With mfolfox6 to Evaluate Efficacy and Safety of First-line Treatment for Ras Wild-type mCRC",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 3",
+          "status": "Completed",
+          "embedding_index": 1,
+          "is_evaluated": 0,
+          "index": "1",
+          "hybrid_score": 4.892028133254972,
+          "embedding_score": "6.7071276",
+          "bm25_score": 6.567961116026746
+        },
+        {
+          "trial_id": "NCT05513742",
+          "title": "A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)",
+          "condition": "Metastatic Colorectal Cancer",
+          "phase": "Phase 2",
+          "status": "Completed",
+          "embedding_index": 4,
+          "is_evaluated": 0,
+          "index": "4",
+          "hybrid_score": 4.891531213302361,
+          "embedding_score": "6.704962",
+          "bm25_score": 6.601932319632748
+        },
+        {
+          "trial_id": "NCT06696768",
+          "title": "Clinical Trial of an Anti-cancer Drug, CA-4948 (Emavusertib), in Combination With Chemotherapy Treatment (FOLFOX Plus Bevacizumab) in Metastatic Colorectal Cancer",
+          "condition": "Metastatic Colorectal Adenocarcinoma",
+          "phase": "Phase 1",
+          "status": "Recruiting",
+          "embedding_index": 3,
+          "is_evaluated": 0,
+          "index": "3",
+          "hybrid_score": 4.762751639718841,
+          "embedding_score": "6.6994853",
+          "bm25_score": 2.437064277961218
+        },
+        {
+          "trial_id": "NCT05672316",
+          "title": "Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy",
+          "condition": "Advanced Colorectal Adenocarcinoma",
+          "phase": "Phase 1/Phase 2",
+          "status": "Active, not recruiting",
+          "embedding_index": 0,
+          "is_evaluated": 0,
+          "index": "0",
+          "hybrid_score": 4.730669125302715,
+          "embedding_score": "6.5474644",
+          "bm25_score": 4.91480219311458
+        }
+      ],
+      "match_count": 5
+    }
+  },
+  "generated_at": "2025-11-20T19:13:04.915678"
+}

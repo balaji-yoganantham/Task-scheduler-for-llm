@@ -77,6 +77,9 @@ class LLMUtils:
 
     def patient_trial_evaluation_prompt(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> str:
         """Generate prompt for patient-trial eligibility evaluation"""
+        # Get trial data from raw_data if available
+        raw_trial = trial_info.get('raw_data', {})
+        
         return f"""
         You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
         
@@ -87,7 +90,17 @@ class LLMUtils:
         Condition: {trial_info['condition']}
         Phase: {trial_info['phase']}
         Status: {trial_info['status']}
-        Investigator: {trial_info['investigator']}
+        Investigator: {trial_info.get('investigator', raw_trial.get('lead_sponsor_name', 'Not available'))}
+        Brief Summary: {trial_info.get('brief_summary', raw_trial.get('brief_summary', 'Not available'))}
+        Detailed Description: {trial_info.get('detailed_description', raw_trial.get('detailed_description', 'Not available'))}
+        Age Range: {trial_info.get('minimum_age', raw_trial.get('minimum_age', 'Not specified'))} - {trial_info.get('maximum_age', raw_trial.get('maximum_age', 'Not specified'))}
+        Sex Eligibility: {trial_info.get('sex', raw_trial.get('sex', 'Not specified'))}
+        
+        INCLUSION CRITERIA:
+        {trial_info.get('inclusion_criteria', raw_trial.get('inclusion_criteria', 'Not available'))}
+        
+        EXCLUSION CRITERIA:
+        {trial_info.get('exclusion_criteria', raw_trial.get('exclusion_criteria', 'Not available'))}
         
         PATIENT INFORMATION:
         MRN: {patient_info['mrn']}
@@ -142,6 +155,9 @@ class LLMUtils:
 
     def trial_patient_evaluation_prompt(self, trial_info: Dict[str, Any], patient_info: Dict[str, Any]) -> str:
         """Generate prompt for trial-patient eligibility evaluation"""
+        # Get trial data from raw_data if available
+        raw_trial = trial_info.get('raw_data', {})
+        
         return f"""
         You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
         
@@ -152,7 +168,17 @@ class LLMUtils:
         Condition: {trial_info['condition']}
         Phase: {trial_info['phase']}
         Status: {trial_info['status']}
-        Investigator: {trial_info['investigator']}
+        Investigator: {trial_info.get('investigator', raw_trial.get('lead_sponsor_name', 'Not available'))}
+        Brief Summary: {trial_info.get('brief_summary', raw_trial.get('brief_summary', 'Not available'))}
+        Detailed Description: {trial_info.get('detailed_description', raw_trial.get('detailed_description', 'Not available'))}
+        Age Range: {trial_info.get('minimum_age', raw_trial.get('minimum_age', 'Not specified'))} - {trial_info.get('maximum_age', raw_trial.get('maximum_age', 'Not specified'))}
+        Sex Eligibility: {trial_info.get('sex', raw_trial.get('sex', 'Not specified'))}
+        
+        INCLUSION CRITERIA:
+        {trial_info.get('inclusion_criteria', raw_trial.get('inclusion_criteria', 'Not available'))}
+        
+        EXCLUSION CRITERIA:
+        {trial_info.get('exclusion_criteria', raw_trial.get('exclusion_criteria', 'Not available'))}
         
         PATIENT INFORMATION:
         MRN: {patient_info['mrn']}

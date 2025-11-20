@@ -1,0 +1,384 @@
+{
+  "total_patients": 20,
+  "correct_matches": 13,
+  "partial_matches": 0,
+  "incorrect_matches": 20,
+  "missing_matches": 2,
+  "precision": 0.15000000000000002,
+  "recall": 0.65,
+  "f1_score": 0.2404761904761905,
+  "detailed_results": [
+    {
+      "mrn": "35294426",
+      "correct": 2,
+      "incorrect": 3,
+      "missing": 0,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1_score": 0.5714285714285715,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT04835142",
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "59779266",
+      "correct": 0,
+      "incorrect": 3,
+      "missing": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": []
+    },
+    {
+      "mrn": "30913714",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "98938054",
+      "correct": 2,
+      "incorrect": 3,
+      "missing": 0,
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1_score": 0.5714285714285715,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768",
+        "NCT04607421"
+      ]
+    },
+    {
+      "mrn": "21080851",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "29936192",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "28543394",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "34694074",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "76190966",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "46385580",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "48727925",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "18228455",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT04835142"
+      ]
+    },
+    {
+      "mrn": "88044380",
+      "correct": 0,
+      "incorrect": 2,
+      "missing": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": []
+    },
+    {
+      "mrn": "11800359",
+      "correct": 0,
+      "incorrect": 3,
+      "missing": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": []
+    },
+    {
+      "mrn": "66328674",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "88760810",
+      "correct": 0,
+      "incorrect": 4,
+      "missing": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "PD-1/CTLA-4"
+      ]
+    },
+    {
+      "mrn": "92533443",
+      "correct": 0,
+      "incorrect": 2,
+      "missing": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": []
+    },
+    {
+      "mrn": "52965770",
+      "correct": 1,
+      "incorrect": 4,
+      "missing": 0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1_score": 0.33333333333333337,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "NCT06696768"
+      ]
+    },
+    {
+      "mrn": "44631066",
+      "correct": 0,
+      "incorrect": 4,
+      "missing": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": [
+        "PD-1/CTLA-4"
+      ]
+    },
+    {
+      "mrn": "28786181",
+      "correct": 0,
+      "incorrect": 3,
+      "missing": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "predicted_trials": [
+        "NCT05513742",
+        "NCT04835142",
+        "NCT05672316",
+        "NCT06696768",
+        "NCT04607421"
+      ],
+      "ground_truth_eligible": []
+    }
+  ]
+}

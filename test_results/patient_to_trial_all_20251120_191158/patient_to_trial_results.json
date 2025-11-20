@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "total_patients": 20,
+    "total_trials": 5,
+    "patients_processed": 20,
+    "total_matches_found": 100,
+    "patients_with_matches": 20,
+    "patients_without_matches": 0
+  },
+  "results": {
+    "35294426": {
+      "patient_info": {
+        "mrn": "35294426",
+        "patient_id": 35294426
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "59779266": {
+      "patient_info": {
+        "mrn": "59779266",
+        "patient_id": 59779266
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "30913714": {
+      "patient_info": {
+        "mrn": "30913714",
+        "patient_id": 30913714
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "98938054": {
+      "patient_info": {
+        "mrn": "98938054",
+        "patient_id": 98938054
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "21080851": {
+      "patient_info": {
+        "mrn": "21080851",
+        "patient_id": 21080851
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "29936192": {
+      "patient_info": {
+        "mrn": "29936192",
+        "patient_id": 29936192
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "28543394": {
+      "patient_info": {
+        "mrn": "28543394",
+        "patient_id": 28543394
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "34694074": {
+      "patient_info": {
+        "mrn": "34694074",
+        "patient_id": 34694074
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "76190966": {
+      "patient_info": {
+        "mrn": "76190966",
+        "patient_id": 76190966
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "46385580": {
+      "patient_info": {
+        "mrn": "46385580",
+        "patient_id": 46385580
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "48727925": {
+      "patient_info": {
+        "mrn": "48727925",
+        "patient_id": 48727925
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "18228455": {
+      "patient_info": {
+        "mrn": "18228455",
+        "patient_id": 18228455
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "88044380": {
+      "patient_info": {
+        "mrn": "88044380",
+        "patient_id": 88044380
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "11800359": {
+      "patient_info": {
+        "mrn": "11800359",
+        "patient_id": 11800359
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "66328674": {
+      "patient_info": {
+        "mrn": "66328674",
+        "patient_id": 66328674
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "88760810": {
+      "patient_info": {
+        "mrn": "88760810",
+        "patient_id": 88760810
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "92533443": {
+      "patient_info": {
+        "mrn": "92533443",
+        "patient_id": 92533443
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "52965770": {
+      "patient_info": {
+        "mrn": "52965770",
+        "patient_id": 52965770
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "44631066": {
+      "patient_info": {
+        "mrn": "44631066",
+        "patient_id": 44631066
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    },
+    "28786181": {
+      "patient_info": {
+        "mrn": "28786181",
+        "patient_id": 28786181
+      },
+      "matches": [],
+      "match_count": 0,
+      "error": "'charmap' codec can't encode character '\\u2713' in position 3: character maps to <undefined>"
+    }
+  },
+  "generated_at": "2025-11-20T19:12:04.152357"
+}

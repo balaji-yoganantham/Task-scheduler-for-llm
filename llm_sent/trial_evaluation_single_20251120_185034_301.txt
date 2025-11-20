@@ -1,0 +1,81 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_single
+patient_id: 66328674
+mrn: 66328674
+trial_id: NCT05513742
+trial_title: A Study of CTX-009 in Adult Patients With Metastat...
+
+
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
+        
+        Evaluate the eligibility of this patient for the given clinical trial.
+        
+        CLINICAL TRIAL INFORMATION:
+        Title: A Study of CTX-009 in Adult Patients With Metastatic Colorectal Cancer (COMPANION-003)
+        Condition: Metastatic Colorectal Cancer
+        Phase: Phase 2
+        Status: Completed
+        Investigator: Compass Therapeutics
+        Brief Summary: Open-label, adaptive Simon Two-Stage study evaluating efficacy of CTX-009 in metastatic colorectal cancer after two or three prior systemic therapy regimens.
+        Detailed Description: Simon Two-Stage adaptive design, ~37 patients first stage, additional 47 if criteria met, total ~84. CTX-009 for post-progression/relapse mCRC after specified prior regimens.
+        Age Range: 18 Years - 
+        Sex Eligibility: All
+        
+        INCLUSION CRITERIA:
+        Age ≥18, histologically/cytologically proven mCRC with >3mo since resection, progression post 2-3 prior systemic therapies incl. fluoropyrimidine, oxaliplatin, irinotecan, bevacizumab ± anti-EGFR for RAS wild-type; targeted therapies for available mutations; RECIST v1.1 measurable lesion; ECOG 0-1; life expectancy ≥12 weeks; adequate hepatic/renal function; negative pregnancy test; contraception reqs; signed consent.
+        
+        EXCLUSION CRITERIA:
+         ≤4 weeks since major surgery/radiation/chemo/targeted therapy/immunotherapy; recent CV events (as described); uncontrolled CNS metastasis (asymptomatic allowed); active hemorrhage/diathesis; recent GI disease/events; need for antiplatelet/anticoagulants; need for chronic NSAIDs/systemic corticosteroids; severe active infection; active HBV/HCV, uncontrolled illnesses; abnormal ECG/QTcF >450ms.
+        
+        PATIENT INFORMATION:
+        MRN: 66328674
+        Age: 65
+        Gender: Unknown
+        Oncologist: Dr. Lisa Park, MD
+        Date of Visit: June 17, 2025
+        
+        PATIENT MEDICAL RECORD:
+        Diagnosis: Metastatic colorectal cancer (brain, peritoneum) Primary tumor site: Ascending colon (right colon) TNM Stage: T3N0M1 Overall Stage: Stage IV Metastatic sites: Brain, Peritoneum Performance Status: ECOG 2 Prior treatments: None - newly diagnosed, treatment-naïve Molecular markers: RAS: KRAS G13D, BRAF: Wild-type, MSI/MMR: MSS Symptoms: Cramping, Change in bowel habits, Diarrhea, Abdominal pain Comorbidities: ADHD, Endometriosis, Chronic fatigue syndrome
+        
+        EVALUATION CRITERIA:
+        1. Primary diagnosis match
+        2. Disease stage compatibility
+        3. Age eligibility
+        4. Gender eligibility
+        5. Performance status
+        6. Prior treatments
+        7. Comorbidities
+        8. Laboratory values
+        9. Exclusion criteria
+        10. Overall eligibility assessment
+        
+        CRITICAL ELIGIBILITY RULES:
+        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        
+        Return ONLY a valid JSON object with this structure:
+        {
+            "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+            "confidence_score": 85,
+            "reasoning": "Detailed explanation of eligibility assessment",
+            "inclusion_criteria_met": ["criteria1", "criteria2", ...],
+            "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "total_inclusion_criteria": 8,
+            "total_exclusion_criteria": 12,
+            "recommendations": "Specific recommendations for next steps",
+            "evaluation_timestamp": "2025-11-20T18:50:34.301810"
+        }
+        

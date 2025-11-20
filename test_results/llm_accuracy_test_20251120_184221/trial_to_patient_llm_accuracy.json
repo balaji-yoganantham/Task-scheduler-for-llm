@@ -1,0 +1,1719 @@
+{
+  "metrics": {
+    "total_evaluations": 100,
+    "correct_predictions": 88,
+    "incorrect_predictions": 12,
+    "true_positives": 4,
+    "true_negatives": 84,
+    "false_positives": 1,
+    "false_negatives": 11,
+    "accuracy": 0.88,
+    "precision": 0.8,
+    "recall": 0.26666666666666666,
+    "f1_score": 0.4,
+    "detailed_results": [
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "76190966",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "35294426",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "46385580",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "98938054",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "44631066",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "48727925",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "88044380",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "30913714",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "28786181",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "28543394",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "29936192",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "59779266",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "88760810",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "18228455",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "21080851",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "11800359",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "52965770",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "66328674",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "92533443",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05672316",
+        "mrn": "34694074",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "46385580",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "76190966",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "48727925",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "98938054",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "88044380",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "28543394",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "35294426",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "21080851",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "44631066",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "30913714",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "88760810",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "34694074",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "92533443",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "11800359",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "52965770",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "18228455",
+        "llm_decision": "ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "59779266",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "28786181",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "29936192",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04835142",
+        "mrn": "66328674",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "44631066",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "98938054",
+        "llm_decision": "ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "29936192",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "35294426",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "21080851",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "46385580",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "92533443",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "88044380",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "28543394",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "76190966",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "48727925",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "59779266",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "88760810",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "28786181",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "52965770",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "18228455",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "34694074",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "11800359",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "66328674",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT04607421",
+        "mrn": "30913714",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "44631066",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "98938054",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "46385580",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "35294426",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "59779266",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "88760810",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "52965770",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "28786181",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "88044380",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "76190966",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "92533443",
+        "llm_decision": "ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "48727925",
+        "llm_decision": "ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "28543394",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "11800359",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "21080851",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "66328674",
+        "llm_decision": "ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "18228455",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "29936192",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "30913714",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT06696768",
+        "mrn": "34694074",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "ELIGIBLE",
+        "is_correct": false
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "76190966",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "44631066",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "18228455",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "28786181",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "48727925",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "35294426",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "46385580",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "98938054",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "28543394",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "88760810",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "11800359",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "21080851",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "88044380",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "52965770",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "29936192",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "59779266",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "92533443",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "66328674",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "30913714",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      },
+      {
+        "trial_id": "NCT05513742",
+        "mrn": "34694074",
+        "llm_decision": "NOT_ELIGIBLE",
+        "ground_truth": "NOT_ELIGIBLE",
+        "is_correct": true
+      }
+    ]
+  },
+  "evaluations": {
+    "NCT05672316_76190966": {
+      "trial_id": "NCT05672316",
+      "mrn": "76190966",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to their ECOG performance status of 2, which exceeds the maximum allowed of 1. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after specified chemotherapy. These two critical factors lead to a determination of ineligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.601727421010145
+    },
+    "NCT05672316_35294426": {
+      "trial_id": "NCT05672316",
+      "mrn": "35294426",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for active brain metastases. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after specified chemotherapy. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.569001028306583
+    },
+    "NCT05672316_46385580": {
+      "trial_id": "NCT05672316",
+      "mrn": "46385580",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer, which matches the primary diagnosis. However, the patient is treatment-na\u00efve and has not progressed after prior chemotherapy, which is a critical inclusion criterion that is not met. Additionally, the patient has chronic kidney disease stage 2-3, which may raise concerns regarding organ function, although it is not explicitly listed as an exclusion criterion. Therefore, the patient does not meet the requirement of having progressed after specified chemotherapy.",
+      "confidence": 90,
+      "hybrid_score": 4.559984438945214
+    },
+    "NCT05672316_98938054": {
+      "trial_id": "NCT05672316",
+      "mrn": "98938054",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to the exclusion criteria regarding prior treatments. The patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after specified chemotherapy. Additionally, the patient's comorbidity of celiac disease does not directly violate any exclusion criteria, but it may raise concerns regarding adequate organ function, which is required for eligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.546329377659896
+    },
+    "NCT05672316_44631066": {
+      "trial_id": "NCT05672316",
+      "mrn": "44631066",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is diagnosed with metastatic colorectal cancer with brain metastases, which violates the exclusion criteria that specify brain metastases are not allowed except as described. Additionally, the patient has an ECOG performance status of 2, which does not meet the required ECOG status of 1 or lower. Therefore, the patient does not meet the critical inclusion and exclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.5393474855482845
+    },
+    "NCT05672316_48727925": {
+      "trial_id": "NCT05672316",
+      "mrn": "48727925",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer, which matches the primary diagnosis. However, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after specified chemotherapy. Additionally, the patient has a history of stroke, which may raise concerns regarding uncontrolled hypertension and cardiovascular events, potentially violating exclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.521610739289707
+    },
+    "NCT05672316_88044380": {
+      "trial_id": "NCT05672316",
+      "mrn": "88044380",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for brain metastases unless specified otherwise. Additionally, the patient's ECOG performance status is 2, which does not meet the inclusion criteria of ECOG <= 1. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.512204357517119
+    },
+    "NCT05672316_30913714": {
+      "trial_id": "NCT05672316",
+      "mrn": "30913714",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a performance status of ECOG 2, which does not meet the inclusion criteria of ECOG <= 1. Additionally, the patient has brain metastases, which is an exclusion criterion unless specified otherwise. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.50130352469322
+    },
+    "NCT05672316_28786181": {
+      "trial_id": "NCT05672316",
+      "mrn": "28786181",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to not meeting the inclusion criteria of having progressed after specified chemotherapy. The patient is newly diagnosed and treatment-na\u00efve, which contradicts the requirement of having progressed on prior chemotherapy. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowable ECOG of 1.",
+      "confidence": 90,
+      "hybrid_score": 4.492532901400815
+    },
+    "NCT05672316_28543394": {
+      "trial_id": "NCT05672316",
+      "mrn": "28543394",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has newly diagnosed metastatic colorectal cancer but has not progressed after prior chemotherapy, which is a critical inclusion criterion for the trial. Additionally, the patient has brain metastases, which is an exclusion criterion unless specified otherwise. Therefore, the patient does not meet the eligibility requirements for this clinical trial.",
+      "confidence": 90,
+      "hybrid_score": 4.446786364056215
+    },
+    "NCT05672316_29936192": {
+      "trial_id": "NCT05672316",
+      "mrn": "29936192",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for active brain metastases. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG performance status of 1 or lower. These two factors render the patient ineligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.442112973157548
+    },
+    "NCT05672316_59779266": {
+      "trial_id": "NCT05672316",
+      "mrn": "59779266",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to their performance status (ECOG 2), which exceeds the maximum allowed (ECOG <= 1). Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after specified chemotherapy. Furthermore, the patient has a diagnosis of MSI-H, while the trial specifically requires MSS mCRC.",
+      "confidence": 90,
+      "hybrid_score": 4.436311897422678
+    },
+    "NCT05672316_88760810": {
+      "trial_id": "NCT05672316",
+      "mrn": "88760810",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer, but they are newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after specified chemotherapy. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed of 1. Therefore, the patient does not meet critical inclusion criteria and is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.433984259611395
+    },
+    "NCT05672316_18228455": {
+      "trial_id": "NCT05672316",
+      "mrn": "18228455",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer, but they are newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after specified chemotherapy. Additionally, the patient's molecular markers indicate MSI-H status, while the trial specifically requires MSS (microsatellite stable) mCRC. These two critical factors lead to the conclusion that the patient is not eligible for this trial.",
+      "confidence": 90,
+      "hybrid_score": 4.4238446178256945
+    },
+    "NCT05672316_21080851": {
+      "trial_id": "NCT05672316",
+      "mrn": "21080851",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to a violation of the exclusion criteria. The patient has brain metastases, which is explicitly mentioned in the exclusion criteria unless described otherwise. Additionally, the patient's ECOG performance status is 2, which does not meet the requirement of ECOG <= 1. These factors disqualify the patient from participating in the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.406490996305131
+    },
+    "NCT05672316_11800359": {
+      "trial_id": "NCT05672316",
+      "mrn": "11800359",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a performance status of ECOG 2, which does not meet the required ECOG <= 1 criterion for inclusion. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which violates the inclusion criterion of having progressed after specified chemotherapy. Therefore, the patient does not meet the critical inclusion criteria necessary for eligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.39885553931554
+    },
+    "NCT05672316_52965770": {
+      "trial_id": "NCT05672316",
+      "mrn": "52965770",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to their ECOG performance status of 2, which exceeds the maximum allowed ECOG of 1. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after specified chemotherapy. Therefore, both critical inclusion criteria are not met.",
+      "confidence": 90,
+      "hybrid_score": 4.398429048698606
+    },
+    "NCT05672316_66328674": {
+      "trial_id": "NCT05672316",
+      "mrn": "66328674",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to a violation of the exclusion criteria. The patient has a performance status of ECOG 2, which exceeds the maximum allowed ECOG of 1. Additionally, the patient has brain metastases, which are specifically excluded unless described otherwise in the trial criteria. These two factors make the patient ineligible.",
+      "confidence": 90,
+      "hybrid_score": 4.381068067187558
+    },
+    "NCT05672316_92533443": {
+      "trial_id": "NCT05672316",
+      "mrn": "92533443",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has newly diagnosed metastatic colorectal cancer and is treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after specified chemotherapy. Additionally, the patient has brain metastases, which is a violation of the exclusion criteria unless specified otherwise, and the trial does not allow for patients with active brain metastases. Therefore, the patient is not eligible for this trial.",
+      "confidence": 90,
+      "hybrid_score": 4.353382402928851
+    },
+    "NCT05672316_34694074": {
+      "trial_id": "NCT05672316",
+      "mrn": "34694074",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases. The presence of brain metastases is a significant exclusion criterion unless specified otherwise, which is not the case here. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after specified chemotherapy. Therefore, the patient does not meet critical inclusion criteria and violates exclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.324712166089185
+    },
+    "NCT04835142_46385580": {
+      "trial_id": "NCT04835142",
+      "mrn": "46385580",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a KRAS mutation (KRAS G12D), which makes them ineligible for the trial that requires RAS wild-type status. Additionally, the patient has chronic kidney disease, which may not meet the adequate organ function requirement. Therefore, the patient does not meet the critical inclusion criteria for molecular markers and may also be affected by exclusion criteria regarding comorbidities.",
+      "confidence": 90,
+      "hybrid_score": 4.992092132003444
+    },
+    "NCT04835142_76190966": {
+      "trial_id": "NCT04835142",
+      "mrn": "76190966",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to the RAS mutation status. The patient has a KRAS G12D mutation, which is not compatible with the trial's requirement for RAS wild-type status. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These two critical criteria being unmet lead to the conclusion of ineligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.981233930943863
+    },
+    "NCT04835142_48727925": {
+      "trial_id": "NCT04835142",
+      "mrn": "48727925",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a KRAS mutation (KRAS G12D), which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient has chronic kidney disease, which may be a concern given the exclusion criteria regarding adequate organ function. Therefore, the patient does not meet the critical inclusion criteria for molecular markers and may also have issues with organ function.",
+      "confidence": 90,
+      "hybrid_score": 4.92067633730323
+    },
+    "NCT04835142_98938054": {
+      "trial_id": "NCT04835142",
+      "mrn": "98938054",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer and is within the age range. However, the patient is BRAF V600E positive, which violates the inclusion criteria that require RAS wild-type and BRAF-V600E negative status. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.90466123540665
+    },
+    "NCT04835142_88044380": {
+      "trial_id": "NCT04835142",
+      "mrn": "88044380",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with a KRAS G12D mutation, which does not meet the inclusion criteria of being RAS wild-type. This is a critical requirement for eligibility. Additionally, the patient's ECOG performance status is 2, which exceeds the maximum allowed of 1. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.9044662385757745
+    },
+    "NCT04835142_28543394": {
+      "trial_id": "NCT04835142",
+      "mrn": "28543394",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with RAS mutation (NRAS Q61H), which does not meet the inclusion criteria requiring RAS wild-type status. Additionally, the patient has brain metastases, which is an exclusion criterion. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.890961483444902
+    },
+    "NCT04835142_35294426": {
+      "trial_id": "NCT04835142",
+      "mrn": "35294426",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for known brain/leptomeningeal metastases. Additionally, the patient has chronic obstructive pulmonary disease (COPD), which may complicate eligibility due to potential respiratory issues, although it is not explicitly listed as an exclusion criterion. The patient meets other inclusion criteria such as age, performance status, and molecular markers.",
+      "confidence": 90,
+      "hybrid_score": 4.850910365657235
+    },
+    "NCT04835142_21080851": {
+      "trial_id": "NCT04835142",
+      "mrn": "21080851",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the presence of brain metastases, which violates the exclusion criteria. Although the patient meets the age requirement, has a RAS wild-type status, and has not received prior systemic chemotherapy, the presence of brain metastases is a critical exclusion criterion. Additionally, the patient's ECOG performance status is 2, which does not meet the trial's requirement of ECOG 0-1.",
+      "confidence": 90,
+      "hybrid_score": 4.8464383046875295
+    },
+    "NCT04835142_44631066": {
+      "trial_id": "NCT04835142",
+      "mrn": "44631066",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases, which violates the exclusion criteria of having brain/leptomeningeal metastases. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria for inclusion. Although the patient meets other inclusion criteria such as age, RAS wild-type status, and no prior treatments, the violations of exclusion criteria and critical inclusion criteria render the patient ineligible.",
+      "confidence": 90,
+      "hybrid_score": 4.830233274349403
+    },
+    "NCT04835142_30913714": {
+      "trial_id": "NCT04835142",
+      "mrn": "30913714",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the presence of brain metastases, which violates the exclusion criteria. Additionally, the patient's RAS status is not wild-type, as they have NRAS Q61H mutation, which also disqualifies them from participation. Although the patient meets other inclusion criteria such as age, performance status, and no prior treatments, the critical violations of exclusion criteria lead to an overall determination of ineligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.818791976952437
+    },
+    "NCT04835142_88760810": {
+      "trial_id": "NCT04835142",
+      "mrn": "88760810",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to a performance status of ECOG 2, which does not meet the required ECOG 0-1 criteria. Additionally, the patient has metastatic disease with multiple sites involved (bone, lymph nodes, liver), which is consistent with the diagnosis but raises concerns about overall health and treatment tolerance. The patient meets the age, gender, and molecular marker criteria, but the performance status is a critical exclusion. No other exclusion criteria were violated.",
+      "confidence": 90,
+      "hybrid_score": 4.799159789805852
+    },
+    "NCT04835142_34694074": {
+      "trial_id": "NCT04835142",
+      "mrn": "34694074",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is diagnosed with metastatic colorectal cancer but has a RAS mutation (NRAS Q61H), which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient has brain metastases, which is listed as an exclusion criterion. Therefore, the patient does not meet the critical eligibility requirements for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.792636899690238
+    },
+    "NCT04835142_92533443": {
+      "trial_id": "NCT04835142",
+      "mrn": "92533443",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with a KRAS G13D mutation, which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient has brain metastases, which is an exclusion criterion. Therefore, the patient does not meet the critical requirements for eligibility.",
+      "confidence": 95,
+      "hybrid_score": 4.780217456563806
+    },
+    "NCT04835142_11800359": {
+      "trial_id": "NCT04835142",
+      "mrn": "11800359",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with RAS mutation (NRAS Q61H), which does not meet the inclusion criteria requiring RAS wild-type status. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These critical factors lead to the conclusion that the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.779973228047413
+    },
+    "NCT04835142_52965770": {
+      "trial_id": "NCT04835142",
+      "mrn": "52965770",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a KRAS mutation (G13D), which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. Therefore, the patient does not meet critical eligibility requirements.",
+      "confidence": 90,
+      "hybrid_score": 4.77380755669034
+    },
+    "NCT04835142_18228455": {
+      "trial_id": "NCT04835142",
+      "mrn": "18228455",
+      "llm_decision": "ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient meets all the inclusion criteria and does not violate any exclusion criteria. The patient is 65 years old, which is within the age range of 18-75. They have a histologically proven diagnosis of metastatic colorectal cancer, specifically RAS wild-type and BRAF wild-type, and are treatment-na\u00efve. The patient's ECOG performance status is 1, which is acceptable. There are no prior treatments that would disqualify them, and their life expectancy is estimated to be greater than 16 weeks. Additionally, the patient does not have any known drug allergies, recent local treatments, brain metastases, bowel obstruction, severe infections, uncontrolled comorbidities, or any other exclusionary conditions.",
+      "confidence": 90,
+      "hybrid_score": 4.75783842089313
+    },
+    "NCT04835142_59779266": {
+      "trial_id": "NCT04835142",
+      "mrn": "59779266",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to a performance status of ECOG 2, which does not meet the required ECOG 0-1. Additionally, the patient has early-stage dementia, which may complicate informed consent and adherence to the trial protocol. While the patient meets other inclusion criteria, the violation of the performance status and the presence of dementia are critical factors leading to ineligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.745614082777301
+    },
+    "NCT04835142_28786181": {
+      "trial_id": "NCT04835142",
+      "mrn": "28786181",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a performance status of ECOG 2, which does not meet the inclusion criteria requiring ECOG 0-1. Additionally, the patient has comorbidities (endometriosis and thyroid disorder) that may complicate treatment, but these do not directly violate exclusion criteria. However, the primary reason for ineligibility is the performance status.",
+      "confidence": 90,
+      "hybrid_score": 4.731046758541297
+    },
+    "NCT04835142_29936192": {
+      "trial_id": "NCT04835142",
+      "mrn": "29936192",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a diagnosis of metastatic colorectal cancer with brain metastases, which violates the exclusion criteria for brain/leptomeningeal metastases. Additionally, the patient is BRAF-V600E positive, which also disqualifies them from eligibility as the trial requires BRAF-V600E negative status. Although the patient meets other inclusion criteria such as age, performance status, and treatment-na\u00efve status, the presence of brain metastases and BRAF-V600E positivity are critical factors leading to ineligibility.",
+      "confidence": 95,
+      "hybrid_score": 4.720847215441272
+    },
+    "NCT04835142_66328674": {
+      "trial_id": "NCT04835142",
+      "mrn": "66328674",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the presence of RAS mutation (KRAS G13D), which violates the inclusion criteria requiring RAS wild-type status. Additionally, the patient has brain metastases, which is listed as an exclusion criterion. These two critical factors lead to a definitive conclusion of ineligibility.",
+      "confidence": 95,
+      "hybrid_score": 4.659991019528112
+    },
+    "NCT04607421_44631066": {
+      "trial_id": "NCT04607421",
+      "mrn": "44631066",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The trial requires patients to have a confirmed BRAF V600E mutation, and this patient has a wild-type BRAF status. Additionally, the patient has symptomatic brain metastases, which violates the exclusion criteria. Therefore, the patient is not eligible for this trial.",
+      "confidence": 90,
+      "hybrid_score": 4.83958054189641
+    },
+    "NCT04607421_98938054": {
+      "trial_id": "NCT04607421",
+      "mrn": "98938054",
+      "llm_decision": "ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient meets all the inclusion criteria for the clinical trial. They are 65 years old, which is above the minimum age requirement of 16. The patient has a confirmed diagnosis of Stage IV metastatic colorectal cancer with a BRAF V600E mutation, which is a critical requirement for eligibility. They have not received any prior treatments, aligning with the inclusion criteria of 0-1 prior regimens in the metastatic setting. The patient's ECOG performance status is 0, which is acceptable. There are no exclusion criteria violated, as the patient does not have MSI-H/dMMR status, active infections, or symptomatic brain metastasis. Overall, the patient is a suitable candidate for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.818987425258935
+    },
+    "NCT04607421_29936192": {
+      "trial_id": "NCT04607421",
+      "mrn": "29936192",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal cancer (Stage IV) with a BRAF V600E mutation, which meets the primary diagnosis match and molecular marker requirement. However, the patient's performance status is ECOG 2, which does not meet the required ECOG 0-1 performance status criterion. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.741381102563385
+    },
+    "NCT04607421_35294426": {
+      "trial_id": "NCT04607421",
+      "mrn": "35294426",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The trial specifically requires patients to have a confirmed BRAF V600E mutation, and this patient has a wild-type BRAF status. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria. Therefore, the patient is not eligible for this trial.",
+      "confidence": 90,
+      "hybrid_score": 4.734462199536118
+    },
+    "NCT04607421_21080851": {
+      "trial_id": "NCT04607421",
+      "mrn": "21080851",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal cancer with a BRAF V600E mutation, which meets the primary diagnosis and molecular marker requirements. However, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria for inclusion. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.732097512246613
+    },
+    "NCT04607421_46385580": {
+      "trial_id": "NCT04607421",
+      "mrn": "46385580",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the presence of a BRAF wild-type mutation. The trial specifically requires patients to have a confirmed BRAF V600E mutation, which this patient does not have. Additionally, the patient's KRAS mutation (KRAS G12D) further complicates eligibility as it may affect treatment response. All other inclusion criteria are met, but the critical requirement for the BRAF mutation is not satisfied.",
+      "confidence": 95,
+      "hybrid_score": 4.7003127875394535
+    },
+    "NCT04607421_92533443": {
+      "trial_id": "NCT04607421",
+      "mrn": "92533443",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The trial specifically requires a confirmed BRAF V600E mutation, and the patient's molecular marker indicates that they are BRAF wild-type. Additionally, the patient has symptomatic brain metastasis, which is an exclusion criterion. Therefore, the patient is not eligible for the trial.",
+      "confidence": 95,
+      "hybrid_score": 4.6921106176719665
+    },
+    "NCT04607421_88044380": {
+      "trial_id": "NCT04607421",
+      "mrn": "88044380",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The trial specifically requires a confirmed BRAF V600E mutation, and the patient's molecular marker indicates that they are BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria for inclusion. Therefore, the patient is not eligible for this trial.",
+      "confidence": 95,
+      "hybrid_score": 4.687232042996921
+    },
+    "NCT04607421_28543394": {
+      "trial_id": "NCT04607421",
+      "mrn": "28543394",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the presence of a BRAF wild-type mutation, which does not meet the inclusion criteria requiring a confirmed BRAF V600E mutation. Additionally, the patient has symptomatic brain metastasis, which violates the exclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.6809644944920015
+    },
+    "NCT04607421_76190966": {
+      "trial_id": "NCT04607421",
+      "mrn": "76190966",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the trial. Specifically, the patient has a BRAF wild-type status, whereas the trial requires a confirmed BRAF V600E mutation. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. These factors disqualify the patient from eligibility.",
+      "confidence": 95,
+      "hybrid_score": 4.6746080578614215
+    },
+    "NCT04607421_48727925": {
+      "trial_id": "NCT04607421",
+      "mrn": "48727925",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the absence of the required BRAF V600E mutation. The inclusion criteria specify that patients must have a confirmed BRAF V600E mutation, and the patient's molecular markers indicate that they are BRAF wild-type. Additionally, the patient's KRAS mutation (KRAS G12D) may also affect eligibility, as certain trials may have restrictions based on RAS mutations. All other inclusion criteria are met, including age, disease stage, performance status, and prior treatments.",
+      "confidence": 95,
+      "hybrid_score": 4.6701863960949614
+    },
+    "NCT04607421_59779266": {
+      "trial_id": "NCT04607421",
+      "mrn": "59779266",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the required BRAF V600E mutation criteria, as their molecular markers indicate BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the trial's requirement of ECOG 0-1. These factors lead to a determination of ineligibility.",
+      "confidence": 95,
+      "hybrid_score": 4.666393832225073
+    },
+    "NCT04607421_88760810": {
+      "trial_id": "NCT04607421",
+      "mrn": "88760810",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the required molecular marker criteria for eligibility. Specifically, the patient has a BRAF wild-type status, while the trial requires a confirmed BRAF V600E mutation. Additionally, the patient's ECOG performance status is 2, which does not meet the trial's requirement of ECOG 0-1. Therefore, the patient is not eligible for this clinical trial.",
+      "confidence": 90,
+      "hybrid_score": 4.654230505275316
+    },
+    "NCT04607421_28786181": {
+      "trial_id": "NCT04607421",
+      "mrn": "28786181",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, which is required for eligibility in this trial. The patient's molecular markers indicate that they are BRAF wild-type, which disqualifies them from participating in this study. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria. Therefore, the patient is not eligible for this trial.",
+      "confidence": 95,
+      "hybrid_score": 4.636594427373098
+    },
+    "NCT04607421_52965770": {
+      "trial_id": "NCT04607421",
+      "mrn": "52965770",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the required molecular marker criteria for eligibility. The trial specifically requires patients to have a confirmed BRAF V600E mutation, while this patient has a wild-type BRAF status. Additionally, the patient's ECOG performance status is 2, which does not meet the trial's requirement of ECOG 0-1. Therefore, the patient is not eligible for this trial.",
+      "confidence": 95,
+      "hybrid_score": 4.633111749020371
+    },
+    "NCT04607421_18228455": {
+      "trial_id": "NCT04607421",
+      "mrn": "18228455",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria for the BRAF V600E mutation, as their molecular marker shows BRAF wild-type. Additionally, the patient has MSI-H status, which is an exclusion criterion unless an immune checkpoint inhibitor is not possible. Therefore, the patient is not eligible for this trial.",
+      "confidence": 90,
+      "hybrid_score": 4.601512119778359
+    },
+    "NCT04607421_34694074": {
+      "trial_id": "NCT04607421",
+      "mrn": "34694074",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to the presence of a BRAF wild-type mutation. The trial specifically requires patients to have a confirmed BRAF V600E mutation, which this patient does not have. Additionally, the patient has symptomatic brain metastasis, which is an exclusion criterion. Therefore, both critical inclusion criteria are not met, and exclusion criteria are violated.",
+      "confidence": 95,
+      "hybrid_score": 4.5812536942274
+    },
+    "NCT04607421_11800359": {
+      "trial_id": "NCT04607421",
+      "mrn": "11800359",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the inclusion criteria due to the BRAF mutation status. The patient is BRAF wild-type, while the trial specifically requires a confirmed BRAF V600E mutation. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for this trial.",
+      "confidence": 95,
+      "hybrid_score": 4.571681137424025
+    },
+    "NCT04607421_66328674": {
+      "trial_id": "NCT04607421",
+      "mrn": "66328674",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer but does not meet the critical inclusion criteria for the BRAF V600E mutation, as their BRAF status is wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. These factors lead to the conclusion that the patient is not eligible for the trial.",
+      "confidence": 95,
+      "hybrid_score": 4.565139187123465
+    },
+    "NCT04607421_30913714": {
+      "trial_id": "NCT04607421",
+      "mrn": "30913714",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal cancer; however, they do not meet the inclusion criteria due to the absence of the required BRAF V600E mutation, as their molecular markers indicate BRAF wild-type. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Both of these factors lead to the conclusion that the patient is not eligible for the trial.",
+      "confidence": 95,
+      "hybrid_score": 4.558441910851349
+    },
+    "NCT06696768_44631066": {
+      "trial_id": "NCT06696768",
+      "mrn": "44631066",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer with an MSI-H status, which violates the exclusion criteria for this trial. Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not conflict with inclusion criteria but does not help in meeting the trial's requirements. The patient's age, performance status, and primary diagnosis are compatible, but the exclusion criteria take precedence.",
+      "confidence": 95,
+      "hybrid_score": 4.85263747710202
+    },
+    "NCT06696768_98938054": {
+      "trial_id": "NCT06696768",
+      "mrn": "98938054",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a BRAF V600E mutation, which is not specified in the inclusion criteria and may be considered a disqualifying factor based on the trial's focus on specific molecular markers. Additionally, the patient has no prior treatments, which meets the inclusion criteria. The patient's ECOG performance status is 0, which is acceptable. However, the presence of the BRAF mutation raises concerns about eligibility, leading to a conclusion of NOT_ELIGIBLE.",
+      "confidence": 95,
+      "hybrid_score": 4.745226609190966
+    },
+    "NCT06696768_46385580": {
+      "trial_id": "NCT06696768",
+      "mrn": "46385580",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a match for the trial's primary diagnosis. The patient is 65 years old, meeting the age requirement. The ECOG performance status is 1, which is acceptable. However, the patient has chronic kidney disease stage 2-3, which may affect organ function, and the trial requires adequate organ function. Additionally, the patient has not received prior treatments, which is acceptable. The critical exclusion criteria regarding unresolved toxicity from prior therapy is not applicable as the patient is treatment-na\u00efve. However, the presence of chronic kidney disease raises concerns about organ function adequacy, which is a critical aspect of eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to potential organ function issues.",
+      "confidence": 90,
+      "hybrid_score": 4.728245269812813
+    },
+    "NCT06696768_35294426": {
+      "trial_id": "NCT06696768",
+      "mrn": "35294426",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. The patient's age (65) is within the eligible range, and their ECOG performance status is 0, which is acceptable. However, the patient has not undergone any prior treatments, which is consistent with the inclusion criteria. The critical issue is that the patient has metastatic disease to the brain, which may raise concerns regarding the exclusion criteria related to unresolved toxicity from prior therapy or severe infection. Additionally, the patient's molecular markers indicate MSS, which is acceptable. However, the presence of brain metastases could potentially violate the exclusion criteria regarding other specified illnesses or complications. Therefore, the patient is marked as NOT_ELIGIBLE due to potential concerns regarding the brain metastasis.",
+      "confidence": 90,
+      "hybrid_score": 4.689044549553478
+    },
+    "NCT06696768_59779266": {
+      "trial_id": "NCT06696768",
+      "mrn": "59779266",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which is the primary diagnosis required for the trial. However, the patient is MSI-H, which is explicitly listed as an exclusion criterion for this trial. Additionally, the patient is 65 years old, which meets the age requirement, and has an ECOG performance status of 2, which is acceptable. The patient has not received prior treatments, aligning with the trial's inclusion criteria for treatment-na\u00efve patients. Overall, the violation of the exclusion criterion regarding MSI status leads to the conclusion that the patient is not eligible.",
+      "confidence": 95,
+      "hybrid_score": 4.686300974534694
+    },
+    "NCT06696768_88760810": {
+      "trial_id": "NCT06696768",
+      "mrn": "88760810",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer, which matches the primary diagnosis. However, the patient is MSI-H, which is explicitly listed as an exclusion criterion for this trial. Additionally, the patient is 65 years old, which meets the age requirement, and has an ECOG performance status of 2, which is acceptable. The patient has not received prior treatments, aligning with the trial's inclusion criteria. However, the violation of the exclusion criterion regarding MSI-H status disqualifies the patient from eligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.68264727133725
+    },
+    "NCT06696768_52965770": {
+      "trial_id": "NCT06696768",
+      "mrn": "52965770",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal adenocarcinoma and meets the age and performance status criteria. However, the patient is excluded due to the presence of MSI/MMR status, which is MSS (microsatellite stable), and does not meet the exclusion criteria for MSI-H or dMMR CRC. Therefore, the patient is not eligible for the trial.",
+      "confidence": 95,
+      "hybrid_score": 4.681039359657849
+    },
+    "NCT06696768_28786181": {
+      "trial_id": "NCT06696768",
+      "mrn": "28786181",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient is newly diagnosed and treatment-na\u00efve, which meets the inclusion criteria. The patient's ECOG performance status is 2, which is acceptable. The patient is 65 years old, which meets the age requirement. However, the patient has not undergone any prior treatments, which is acceptable, but the exclusion criteria state that prior chemotherapy or antiangiogenic agents are not allowed. The patient does not have MSI-H or dMMR CRC, which is also a requirement. Therefore, the patient does not violate any exclusion criteria, but the overall eligibility is affected by the lack of prior treatments. Since the patient is treatment-na\u00efve, they do not meet the requirement for prior treatments, leading to a NOT_ELIGIBLE status.",
+      "confidence": 95,
+      "hybrid_score": 4.671599795501071
+    },
+    "NCT06696768_88044380": {
+      "trial_id": "NCT06696768",
+      "mrn": "88044380",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a known KRAS mutation (KRAS G12D), which is not specified in the inclusion criteria and may fall under the exclusion criteria for prior treatments or molecular markers. Additionally, the patient is treatment-na\u00efve, which aligns with the trial's requirements. The patient's age, performance status (ECOG 2), and organ function are acceptable. However, the presence of the KRAS mutation raises concerns about eligibility, leading to a determination of NOT_ELIGIBLE.",
+      "confidence": 95,
+      "hybrid_score": 4.660314816445678
+    },
+    "NCT06696768_76190966": {
+      "trial_id": "NCT06696768",
+      "mrn": "76190966",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a primary diagnosis match. However, the patient is excluded due to the presence of chronic kidney disease stage 2-3, which may impact organ function and is considered a severe comorbidity. Additionally, the patient has a history of stroke and coronary artery disease, which could further complicate eligibility. The patient meets the age and performance status criteria, and has not received prior treatments, but the exclusion criteria related to comorbidities are violated.",
+      "confidence": 95,
+      "hybrid_score": 4.658797649478534
+    },
+    "NCT06696768_92533443": {
+      "trial_id": "NCT06696768",
+      "mrn": "92533443",
+      "llm_decision": "ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has a histologically confirmed diagnosis of metastatic colorectal adenocarcinoma, which is the primary condition for the trial. The disease is unresectable and metastatic, with measurable lesions in the lung, bone, and brain, aligning with the trial's requirements. The patient is 65 years old, meeting the age criteria of \u226518. The ECOG performance status is 1, which is within the acceptable range (\u22642). The patient is treatment-na\u00efve, which is compatible with the trial's inclusion criteria as there are no prior treatments. Molecular markers indicate MSS status, which does not violate any exclusion criteria. No exclusion criteria are violated based on the provided information.",
+      "confidence": 90,
+      "hybrid_score": 4.645945733381855
+    },
+    "NCT06696768_48727925": {
+      "trial_id": "NCT06696768",
+      "mrn": "48727925",
+      "llm_decision": "ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal adenocarcinoma, which is the primary condition for the trial. The patient's age is 65, which meets the minimum age requirement of 18 years. The ECOG performance status is 0, indicating that the patient is fully active and meets the performance status requirement of ECOG \u22642. The patient is treatment-na\u00efve, which aligns with the inclusion criteria as there are no prior treatments that would disqualify them. Additionally, the molecular markers indicate MSS status, which does not violate any exclusion criteria. No exclusion criteria are violated based on the provided information.",
+      "confidence": 90,
+      "hybrid_score": 4.641873515764047
+    },
+    "NCT06696768_28543394": {
+      "trial_id": "NCT06696768",
+      "mrn": "28543394",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a match for the primary diagnosis. However, the patient has chronic fatigue syndrome and inflammatory bowel disease, which may be considered under the exclusion criteria for 'other specified illnesses.' Additionally, the patient is newly diagnosed and treatment-na\u00efve, which does not violate any prior treatment criteria. The patient's ECOG performance status is 1, which is acceptable. However, the presence of comorbidities raises concerns about eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to potential exclusion criteria violations.",
+      "confidence": 90,
+      "hybrid_score": 4.621756089120871
+    },
+    "NCT06696768_11800359": {
+      "trial_id": "NCT06696768",
+      "mrn": "11800359",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a confirmed NRAS mutation (NRAS Q61H), which is not specified in the inclusion criteria and may be considered a disqualifying factor based on the trial's focus on specific molecular markers. Additionally, the patient is treatment-na\u00efve, which meets the inclusion criteria, but the presence of the NRAS mutation raises concerns regarding eligibility. Therefore, the patient is not eligible due to the potential exclusion based on molecular markers.",
+      "confidence": 90,
+      "hybrid_score": 4.61869224034833
+    },
+    "NCT06696768_21080851": {
+      "trial_id": "NCT06696768",
+      "mrn": "21080851",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a BRAF V600E mutation, which is not specified as an exclusion criterion but may indicate a different treatment pathway. Additionally, the patient has an ECOG performance status of 2, which is acceptable. The patient is also treatment-na\u00efve and meets the age requirement. However, the presence of the BRAF mutation raises concerns about the appropriateness of this trial for the patient, as it may indicate a need for targeted therapy rather than the proposed combination. Therefore, while the patient meets many inclusion criteria, the potential implications of the BRAF mutation lead to a conclusion of NOT_ELIGIBLE due to the uncertainty regarding the appropriateness of the treatment plan.",
+      "confidence": 90,
+      "hybrid_score": 4.616095149087295
+    },
+    "NCT06696768_66328674": {
+      "trial_id": "NCT06696768",
+      "mrn": "66328674",
+      "llm_decision": "ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal adenocarcinoma, which is the primary condition for the trial. The disease is at Stage IV with measurable metastatic sites, meeting the inclusion criteria for unresectable/metastatic disease. The patient is 65 years old, which is within the age eligibility range. The ECOG performance status is 2, which is acceptable according to the trial criteria. The patient is treatment-na\u00efve, which aligns with the inclusion criteria as there are no prior treatments that would violate the eligibility. Additionally, the molecular markers indicate MSS status, which does not violate the exclusion criteria. No exclusion criteria are violated, and all critical inclusion criteria are met.",
+      "confidence": 90,
+      "hybrid_score": 4.603240420501071
+    },
+    "NCT06696768_18228455": {
+      "trial_id": "NCT06696768",
+      "mrn": "18228455",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient has metastatic colorectal cancer with an MSI-H status, which violates the exclusion criteria for this clinical trial. All other inclusion criteria are met, but the presence of MSI-H disqualifies the patient from participation.",
+      "confidence": 95,
+      "hybrid_score": 4.596598752774452
+    },
+    "NCT06696768_29936192": {
+      "trial_id": "NCT06696768",
+      "mrn": "29936192",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which matches the primary diagnosis. However, the patient has a BRAF V600E mutation, which is not specified as eligible for this trial. The trial's exclusion criteria include patients with MSI-H or dMMR CRC, but the patient's molecular markers indicate MSS. The patient is 65 years old, which meets the age requirement, and has an ECOG performance status of 2, which is acceptable. The patient is treatment-na\u00efve, which meets the inclusion criteria. However, the presence of the BRAF V600E mutation raises concerns regarding eligibility, as it may be considered a factor in the exclusion criteria. Therefore, the patient is marked as NOT_ELIGIBLE due to the potential implications of the BRAF mutation.",
+      "confidence": 90,
+      "hybrid_score": 4.595172106789931
+    },
+    "NCT06696768_30913714": {
+      "trial_id": "NCT06696768",
+      "mrn": "30913714",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has metastatic colorectal adenocarcinoma, which is a match for the trial's primary diagnosis. However, the patient has chronic kidney disease, which may affect organ function and is a comorbidity that could complicate eligibility. Additionally, the patient's ECOG performance status is 2, which is acceptable. The patient is 65 years old, meeting the age requirement. Importantly, the patient has not received any prior treatments, which aligns with the trial's inclusion criteria. However, the presence of chronic kidney disease raises concerns regarding adequate organ function, which is a critical inclusion criterion. Therefore, the patient is marked as NOT_ELIGIBLE due to potential organ function issues.",
+      "confidence": 90,
+      "hybrid_score": 4.513648519626428
+    },
+    "NCT06696768_34694074": {
+      "trial_id": "NCT06696768",
+      "mrn": "34694074",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "ELIGIBLE",
+      "is_correct": false,
+      "llm_reasoning": "The patient has a confirmed diagnosis of metastatic colorectal adenocarcinoma and meets the age and performance status criteria. However, the patient has not undergone any prior treatments, which is acceptable, but the exclusion criteria for MSI-H or dMMR CRC must be considered. The patient's molecular markers indicate MSS (microsatellite stable), which does not violate the exclusion criteria. Therefore, the primary reason for ineligibility is the presence of severe comorbidities, specifically early-stage dementia, which may impact the patient's ability to provide informed consent and adhere to the trial protocol. Additionally, the patient's hypertension and osteoporosis may pose risks during treatment. Overall, while the patient meets several inclusion criteria, the comorbidities raise significant concerns regarding eligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.495932414709632
+    },
+    "NCT05513742_76190966": {
+      "trial_id": "NCT05513742",
+      "mrn": "76190966",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to the requirement of having undergone 2-3 prior systemic therapies, which this patient does not meet as they are newly diagnosed and treatment-na\u00efve. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1.",
+      "confidence": 90,
+      "hybrid_score": 4.70745557732991
+    },
+    "NCT05513742_44631066": {
+      "trial_id": "NCT05513742",
+      "mrn": "44631066",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the inclusion criteria of ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.699633939827646
+    },
+    "NCT05513742_18228455": {
+      "trial_id": "NCT05513742",
+      "mrn": "18228455",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria of having progressed after 2-3 prior systemic therapies. Additionally, the patient has not undergone any prior treatments, which is a critical requirement for eligibility. Therefore, the patient cannot be considered eligible for this trial.",
+      "confidence": 90,
+      "hybrid_score": 4.670410229360477
+    },
+    "NCT05513742_28786181": {
+      "trial_id": "NCT05513742",
+      "mrn": "28786181",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to the requirement of having undergone 2-3 prior systemic therapies, which this patient has not met as they are newly diagnosed and treatment-na\u00efve. Additionally, the patient's ECOG performance status is 2, which does not meet the requirement of ECOG 0-1. These critical criteria are not met, leading to a determination of ineligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.650621469582285
+    },
+    "NCT05513742_48727925": {
+      "trial_id": "NCT05513742",
+      "mrn": "48727925",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion requiring progression post 2-3 prior systemic therapies. Additionally, the patient has chronic kidney disease, which may affect eligibility based on adequate renal function requirements.",
+      "confidence": 90,
+      "hybrid_score": 4.64556464903515
+    },
+    "NCT05513742_35294426": {
+      "trial_id": "NCT05513742",
+      "mrn": "35294426",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has brain metastasis, which may complicate eligibility due to the exclusion criteria regarding uncontrolled CNS metastasis. Overall, the patient does not fulfill the critical inclusion criteria for prior treatments.",
+      "confidence": 90,
+      "hybrid_score": 4.643956143454006
+    },
+    "NCT05513742_46385580": {
+      "trial_id": "NCT05513742",
+      "mrn": "46385580",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having progressed after 2-3 prior systemic therapies. Additionally, the patient has chronic kidney disease, which may impact eligibility based on adequate hepatic/renal function criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.640707509659425
+    },
+    "NCT05513742_98938054": {
+      "trial_id": "NCT05513742",
+      "mrn": "98938054",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion of having progressed after 2-3 prior systemic therapies. Additionally, the patient has not undergone any prior treatments, which is a critical requirement for eligibility in this trial. Therefore, the patient does not meet the necessary inclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.632902800079257
+    },
+    "NCT05513742_28543394": {
+      "trial_id": "NCT05513742",
+      "mrn": "28543394",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the requirement of having undergone 2-3 prior systemic therapies. Additionally, the patient has multiple metastases (bone, liver, brain), which may complicate eligibility based on the trial's focus on post-progression/relapse mCRC. The patient's ECOG performance status is acceptable, and they meet the age and gender criteria. However, the critical inclusion criteria regarding prior treatments are not met.",
+      "confidence": 90,
+      "hybrid_score": 4.624932535376516
+    },
+    "NCT05513742_88760810": {
+      "trial_id": "NCT05513742",
+      "mrn": "88760810",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, while the trial requires an ECOG status of 0-1. Therefore, the patient does not meet critical inclusion criteria and is also ineligible due to performance status.",
+      "confidence": 90,
+      "hybrid_score": 4.60267344292518
+    },
+    "NCT05513742_11800359": {
+      "trial_id": "NCT05513742",
+      "mrn": "11800359",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to not meeting the inclusion criteria regarding prior treatments. The trial requires patients to have undergone 2-3 prior systemic therapies, but this patient is newly diagnosed and treatment-na\u00efve. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1 criteria.",
+      "confidence": 95,
+      "hybrid_score": 4.577237444022307
+    },
+    "NCT05513742_21080851": {
+      "trial_id": "NCT05513742",
+      "mrn": "21080851",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient does not meet critical inclusion criteria and is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.576626106228585
+    },
+    "NCT05513742_88044380": {
+      "trial_id": "NCT05513742",
+      "mrn": "88044380",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the clinical trial due to several critical factors. Firstly, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. These two factors alone disqualify the patient from eligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.576190250921703
+    },
+    "NCT05513742_52965770": {
+      "trial_id": "NCT05513742",
+      "mrn": "52965770",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient is not eligible for the trial.",
+      "confidence": 90,
+      "hybrid_score": 4.575477134179617
+    },
+    "NCT05513742_29936192": {
+      "trial_id": "NCT05513742",
+      "mrn": "29936192",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to not meeting the inclusion criteria of having undergone 2-3 prior systemic therapies. The patient is newly diagnosed and treatment-na\u00efve, which directly violates this critical inclusion requirement. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG status of 0-1. These two factors lead to a definitive conclusion of ineligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.570990245121821
+    },
+    "NCT05513742_59779266": {
+      "trial_id": "NCT05513742",
+      "mrn": "59779266",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient does not meet critical inclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.570132978638728
+    },
+    "NCT05513742_92533443": {
+      "trial_id": "NCT05513742",
+      "mrn": "92533443",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has multiple metastatic sites (lung, bone, brain) which may complicate eligibility based on the trial's focus on post-progression treatment. The patient does not meet the critical requirement of having received prior systemic therapies, which is essential for eligibility.",
+      "confidence": 90,
+      "hybrid_score": 4.550701255070195
+    },
+    "NCT05513742_66328674": {
+      "trial_id": "NCT05513742",
+      "mrn": "66328674",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Therefore, the patient does not fulfill critical inclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.516413156268692
+    },
+    "NCT05513742_30913714": {
+      "trial_id": "NCT05513742",
+      "mrn": "30913714",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is not eligible for the trial due to several critical factors. Firstly, the patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criterion requiring progression post 2-3 prior systemic therapies. Additionally, the patient's ECOG performance status is 2, which does not meet the required ECOG 0-1. Furthermore, the presence of chronic kidney disease and other comorbidities may complicate eligibility, but the primary reasons for ineligibility are the lack of prior treatments and the performance status.",
+      "confidence": 90,
+      "hybrid_score": 4.503077589308141
+    },
+    "NCT05513742_34694074": {
+      "trial_id": "NCT05513742",
+      "mrn": "34694074",
+      "llm_decision": "NOT_ELIGIBLE",
+      "ground_truth": "NOT_ELIGIBLE",
+      "is_correct": true,
+      "llm_reasoning": "The patient is newly diagnosed and treatment-na\u00efve, which does not meet the inclusion criteria requiring progression post 2-3 prior systemic therapies. Additionally, the patient has multiple metastatic sites (brain, liver, lung), which complicates eligibility under the criteria for RECIST v1.1 measurable lesions and may also raise concerns regarding uncontrolled CNS metastasis. Therefore, the patient does not meet the critical inclusion criteria.",
+      "confidence": 90,
+      "hybrid_score": 4.434339193616621
+    }
+  }
+}

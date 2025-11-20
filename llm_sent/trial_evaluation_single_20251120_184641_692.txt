@@ -1,0 +1,81 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_single
+patient_id: 34694074
+mrn: 34694074
+trial_id: NCT05672316
+trial_title: Botensilimab, Balstilimab and Regorafenib for the ...
+
+
+        You are an expert clinical trial coordinator specializing in patient-trial matching for oncology trials.
+        
+        Evaluate the eligibility of this patient for the given clinical trial.
+        
+        CLINICAL TRIAL INFORMATION:
+        Title: Botensilimab, Balstilimab and Regorafenib for the Treatment of Patients With Microsatellite Stable Metastatic Colorectal Cancer Who Have Progressed on Prior Chemotherapy
+        Condition: Advanced Colorectal Adenocarcinoma
+        Phase: Phase 1/Phase 2
+        Status: Active, not recruiting
+        Investigator: City of Hope Medical Center
+        Brief Summary: This phase I/II trial tests how well botensilimab, balstilimab, and regorafenib works in treating patients with microsatellite stable colorectal cancer that has spread and who have progressed on prior chemotherapy.
+        Detailed Description: Combination immunotherapy with botensilimab and balstilimab plus regorafenib may improve outcomes. The primary objectives are to identify the recommended Phase 2 dose (RP2D) and to estimate response rate (ORR).
+        Age Range: 18 Years - 
+        Sex Eligibility: All
+        
+        INCLUSION CRITERIA:
+        Documented informed consent; age >= 18; ECOG <= 1; life expectancy >= 3 months; histologically/ cytologically confirmed MSS mCRC; progression after specified chemotherapy; measurable metastatic disease; adequate organ function; specific requirements for women/men of childbearing potential.
+        
+        EXCLUSION CRITERIA:
+        Prior immunotherapy targeting PD-1, PD-L1, or CTLA-4; need for systemic immunosuppression; prior transplant; recent surgery; hypersensitivity; active or history of autoimmune disease; uncontrolled hypertension; cardiovascular events; active bleeding, severe toxicity; brain metastases except as described; second malignancy requiring treatment; interstitial lung disease; psychiatric/substance abuse interfering with study compliance; uncontrolled HIV/HBV/HCV infection; pregnancy/lactation.
+        
+        PATIENT INFORMATION:
+        MRN: 34694074
+        Age: 65
+        Gender: Unknown
+        Oncologist: Dr. Jennifer Rodriguez, MD
+        Date of Visit: June 11, 2025
+        
+        PATIENT MEDICAL RECORD:
+        Diagnosis: Metastatic colorectal cancer (brain, liver, lung) Primary tumor site: Transverse colon (right colon) TNM Stage: T4aN1bM1 Overall Stage: Stage IV Metastatic sites: Brain, Liver, Lung Performance Status: ECOG 1 Prior treatments: None - newly diagnosed, treatment-naïve Molecular markers: RAS: NRAS Q61H, BRAF: Wild-type, MSI/MMR: MSS Symptoms: Nausea, Weight loss, Cramping, Rectal bleeding, Fatigue Comorbidities: Hypertension, Osteoporosis, Dementia (early stage)
+        
+        EVALUATION CRITERIA:
+        1. Primary diagnosis match
+        2. Disease stage compatibility
+        3. Age eligibility
+        4. Gender eligibility
+        5. Performance status
+        6. Prior treatments
+        7. Comorbidities
+        8. Laboratory values
+        9. Exclusion criteria
+        10. Overall eligibility assessment
+        
+        CRITICAL ELIGIBILITY RULES:
+        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        
+        Return ONLY a valid JSON object with this structure:
+        {
+            "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+            "confidence_score": 85,
+            "reasoning": "Detailed explanation of eligibility assessment",
+            "inclusion_criteria_met": ["criteria1", "criteria2", ...],
+            "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
+            "inclusion_criteria_met_count": 5,
+            "exclusion_criteria_violated_count": 0,
+            "total_inclusion_criteria": 8,
+            "total_exclusion_criteria": 12,
+            "recommendations": "Specific recommendations for next steps",
+            "evaluation_timestamp": "2025-11-20T18:46:41.692062"
+        }
+        
