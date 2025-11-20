@@ -498,5 +498,235 @@
     "created_at": "2025-11-10T16:45:39.413121+00:00",
     "patient_text_length": 4596,
     "embedding_index": 49
+  },
+  "133": {
+    "mrn": "49271178",
+    "age": 53,
+    "gender": "Female",
+    "oncologist": "Dr. Lisa Park, MD",
+    "date_of_visit": "2025-06-14",
+    "created_at": "2025-11-10T16:45:12.798093+00:00",
+    "patient_text_length": 4450,
+    "embedding_index": 50
+  },
+  "132": {
+    "mrn": "48727925",
+    "age": 50,
+    "gender": "Male",
+    "oncologist": "Dr. Sarah Mitchell, MD",
+    "date_of_visit": "2025-05-26",
+    "created_at": "2025-11-10T16:45:04.542988+00:00",
+    "patient_text_length": 4492,
+    "embedding_index": 51
+  },
+  "129": {
+    "mrn": "47601870",
+    "age": 60,
+    "gender": "Male",
+    "oncologist": "Dr. Lisa Park, MD",
+    "date_of_visit": "2025-05-28",
+    "created_at": "2025-11-10T16:44:44.073505+00:00",
+    "patient_text_length": 4446,
+    "embedding_index": 52
+  },
+  "127": {
+    "mrn": "47094555",
+    "age": 58,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-06-14",
+    "created_at": "2025-11-10T16:44:26.372957+00:00",
+    "patient_text_length": 4430,
+    "embedding_index": 53
+  },
+  "126": {
+    "mrn": "46385580",
+    "age": 63,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD",
+    "date_of_visit": "2025-06-08",
+    "created_at": "2025-11-10T16:44:17.763700+00:00",
+    "patient_text_length": 4764,
+    "embedding_index": 54
+  },
+  "125": {
+    "mrn": "44631066",
+    "age": 47,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-06-11",
+    "created_at": "2025-11-10T16:44:09.943601+00:00",
+    "patient_text_length": 4564,
+    "embedding_index": 55
+  },
+  "123": {
+    "mrn": "42016742",
+    "age": 27,
+    "gender": "Male",
+    "oncologist": "Dr. Lisa Park, MD",
+    "date_of_visit": "2025-06-05",
+    "created_at": "2025-11-10T16:43:57.138010+00:00",
+    "patient_text_length": 4552,
+    "embedding_index": 56
+  },
+  "120": {
+    "mrn": "37654454",
+    "age": 32,
+    "gender": "Male",
+    "oncologist": "Dr. Lisa Park, MD",
+    "date_of_visit": "2025-05-20",
+    "created_at": "2025-11-10T16:43:47.238105+00:00",
+    "patient_text_length": 4515,
+    "embedding_index": 57
+  },
+  "118": {
+    "mrn": "35879553",
+    "age": 83,
+    "gender": "Male",
+    "oncologist": "Dr. Sarah Mitchell, MD",
+    "date_of_visit": "2025-05-26",
+    "created_at": "2025-11-10T16:43:38.523162+00:00",
+    "patient_text_length": 4675,
+    "embedding_index": 58
+  },
+  "116": {
+    "mrn": "35162470",
+    "age": 51,
+    "gender": "Male",
+    "oncologist": "Dr. Sarah Mitchell, MD",
+    "date_of_visit": "2025-05-28",
+    "created_at": "2025-11-10T16:43:26.003073+00:00",
+    "patient_text_length": 4642,
+    "embedding_index": 59
+  },
+  "114": {
+    "mrn": "33439724",
+    "age": 41,
+    "gender": "Male",
+    "oncologist": "Dr. Lisa Park, MD",
+    "date_of_visit": "2025-06-04",
+    "created_at": "2025-11-10T16:43:18.833474+00:00",
+    "patient_text_length": 4384,
+    "embedding_index": 60
+  },
+  "113": {
+    "mrn": "32053379",
+    "age": 33,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD",
+    "date_of_visit": "2025-06-15",
+    "created_at": "2025-11-10T16:43:13.843204+00:00",
+    "patient_text_length": 4638,
+    "embedding_index": 61
+  },
+  "107": {
+    "mrn": "28786181",
+    "age": 84,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-05-22",
+    "created_at": "2025-11-10T16:42:49.397937+00:00",
+    "patient_text_length": 4466,
+    "embedding_index": 62
+  },
+  "103": {
+    "mrn": "25665253",
+    "age": 53,
+    "gender": "Male",
+    "oncologist": "Dr. Michael Chen, MD",
+    "date_of_visit": "2025-05-24",
+    "created_at": "2025-11-10T16:42:33.732937+00:00",
+    "patient_text_length": 4526,
+    "embedding_index": 63
+  },
+  "101": {
+    "mrn": "19001527",
+    "age": 42,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-05-24",
+    "created_at": "2025-11-10T16:42:21.277972+00:00",
+    "patient_text_length": 4675,
+    "embedding_index": 64
+  },
+  "100": {
+    "mrn": "18835665",
+    "age": 55,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD",
+    "date_of_visit": "2025-05-22",
+    "created_at": "2025-11-10T16:42:18.558091+00:00",
+    "patient_text_length": 4691,
+    "embedding_index": 65
+  },
+  "99": {
+    "mrn": "18228455",
+    "age": 75,
+    "gender": "Male",
+    "oncologist": "Dr. Michael Chen, MD",
+    "date_of_visit": "2025-06-13",
+    "created_at": "2025-11-10T16:42:15.863012+00:00",
+    "patient_text_length": 4567,
+    "embedding_index": 66
+  },
+  "98": {
+    "mrn": "18118308",
+    "age": 27,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD",
+    "date_of_visit": "2025-05-30",
+    "created_at": "2025-11-10T16:42:11.082983+00:00",
+    "patient_text_length": 4746,
+    "embedding_index": 67
+  },
+  "97": {
+    "mrn": "17894757",
+    "age": 52,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-06-05",
+    "created_at": "2025-11-10T16:42:07.598795+00:00",
+    "patient_text_length": 4461,
+    "embedding_index": 68
+  },
+  "96": {
+    "mrn": "16151860",
+    "age": 67,
+    "gender": "Male",
+    "oncologist": "Dr. Michael Chen, MD",
+    "date_of_visit": "2025-05-24",
+    "created_at": "2025-11-10T16:42:02.617885+00:00",
+    "patient_text_length": 4884,
+    "embedding_index": 69
+  },
+  "92": {
+    "mrn": "14728493",
+    "age": 71,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-05-26",
+    "created_at": "2025-11-10T16:41:38.982990+00:00",
+    "patient_text_length": 4756,
+    "embedding_index": 70
+  },
+  "90": {
+    "mrn": "11800359",
+    "age": 52,
+    "gender": "Male",
+    "oncologist": "Dr. Jennifer Rodriguez, MD",
+    "date_of_visit": "2025-06-17",
+    "created_at": "2025-11-10T16:41:24.213134+00:00",
+    "patient_text_length": 4902,
+    "embedding_index": 71
+  },
+  "14": {
+    "mrn": "35294426",
+    "age": 44,
+    "gender": "Male",
+    "oncologist": "Dr. Michael Chen, MD",
+    "date_of_visit": "2025-05-23",
+    "created_at": "2025-11-05T01:02:50.916644+00:00",
+    "patient_text_length": 4649,
+    "embedding_index": 72
   }
 }
