@@ -1,0 +1,1105 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: patient_evaluation_batch
+trial_id: NCT05538130
+trial_title: A PHASE 1A/B OPEN-LABEL MASTER STUDY OF PF-0779954...
+batch_size: 8
+patient_ids: [175, 177, 144, 170, 158, 143, 165, 139]
+mrns: ['86504025', '88760810', '57569409', '84184554', '69472124', '57418600', '78352483', '53972854']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 8 patients for the given clinical trial and determine eligibility.
+
+        
+        CLINICAL TRIAL INFORMATION:
+        Trial ID: NCT05538130
+        Title: A PHASE 1A/B OPEN-LABEL MASTER STUDY OF PF-07799544 AS A SINGLE-AGENT AND IN COMBINATION WITH OTHER TARGETED AGENTS IN PARTICIPANTS WITH ADVANCED SOLID TUMORS
+        Condition: ["Melanoma", "Glioma", "Thyroid Cancer", "Non-Small Cell Lung Cancer", "Malignant Neoplasms", "Brain Neoplasms", "Colorectal Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 16 Years - 
+        Gender: ALL
+        
+        Brief Summary: The purpose of this clinical trial is to learn the safety and effects of the study medicine (PF-07799544) administered as a single agent and in combination with other study medications in people with solid tumors. This study is seeking participants who have an advanced solid tumor for which the available treatments are no longer effective in controlling their cancer. All participants in this study will receive PF-07799544. PF-07799544 comes as a tablet to take by mouth daily (initially 2 times per day, but this could change to once daily or another frequency). Depending on the part of the study, participants may also receive another study medicine.
+
+* In the first part of the study, people with melanoma or other solid tumors may also receive encorafenib. Encorafenib comes as a capsule and is taken once per day.
+* In the second part of the study, people with melanoma or other cancers with abnormalities in a gene called "BRAF" will receive PF-07799544 with other study medicines (for example, PF-07799933).
+
+Participants may receive the study medicines for about 2 years. The study team will monitor how each participant is doing with the study treatment during regular visits at the study clinic.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Diagnosis of advanced/metastatic solid tumor including primary brain tumor for monotherapy phase 1a dose escalation", "* Disease progressed during/following last prior treatment and no satisfactory alternative treatment options for monotherapy phase 1a dose escalation", "* For Substudy B, histological or cytological diagnosis of advanced/metastatic melanoma", "* For Substudy C, unresectable or adv/metastatic solid tumor progressed on, or with demonstrated intolerance to SOC, excluding melanoma,", "* For Substudy B and C, measurable disease by RECIST version 1.1", "* For Substudy B, evidence of a BRAF V600 mutation or BRAF Class II/III alteration in tumor tissue and/or blood", "* For Substudy C, evidence of a BRAF founder alteration (non-V600 Class II/III BRAF alteration)"]
+        
+        Exclusion Criteria: ["* Brain metastasis larger than 4 cm", "* History or current evidence of retinal vein occlusion (RVO) or concurrent neuromuscular disorder associated with elevated creatine kinase (CK)"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Diagnosis of advanced/metastatic solid tumor including primary brain tumor for monotherapy phase 1a dose escalation
+* Disease progressed during/following last prior treatment and no satisfactory alternative treatment options for monotherapy phase 1a dose escalation
+* For Substudy B, histological or cytological diagnosis of advanced/metastatic melanoma
+* For Substudy C, unresectable or adv/metastatic solid tumor progressed on, or with demonstrated intolerance to SOC, excluding melanoma,
+* For Substudy B and C, measurable disease by RECIST version 1.1
+* For Substudy B, evidence of a BRAF V600 mutation or BRAF Class II/III alteration in tumor tissue and/or blood
+* For Substudy C, evidence of a BRAF founder alteration (non-V600 Class II/III BRAF alteration)
+
+Exclusion Criteria:
+
+* Brain metastasis larger than 4 cm
+* History or current evidence of retinal vein occlusion (RVO) or concurrent neuromuscular disorder associated with elevated creatine kinase (CK)
+        
+
+        PATIENTS TO EVALUATE:
+        
+        ============================================================
+        PATIENT 1:
+        ============================================================
+        Patient ID: 175
+        MRN: 86504025
+        Age: 41
+        Gender: Female
+        Oncologist: Dr. Michael Chen, MD
+        Hybrid Score: 4.668
+        
+        Combined Medical Record: Patient Name: Patty Rodriguez
+Patient MRN: 86504025
+Age: 41, Gender: Female
+Date of Visit: 2025-05-18
+Oncologist: Dr. Michael Chen, MD
+
+Chief Complaint: - Nausea, Abdominal pain, Weight loss
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 07, 2025
+- Site of primary tumor: Ascending colon (right colon)
+- Date of initial diagnosis and TNM stage: May 07, 2025; T4aN0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 15, 2025 - lung, peritoneum metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Nausea, Abdominal pain, Weight loss, Early satiety, Fatigue, Cramping
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Migraine headaches
+- Depression
+- PCOS
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Accountant
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Penicillin (rash), Shellfish (hives)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Penicillin (rash), Shellfish (hives)
+
+Physical Examination: - Vitals: BP 128/76, HR 80, RR 15, Temp 98.9°F, SpO2 99% on room air, Weight 163 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 14.1 × 10³/µL, ANC: 3.9 × 10³/µL
+- Hgb: 12.1 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 1.9 mg/dL, eGFR: 82 mL/min/1.73m²
+- LFTs:
+- AST: 75 U/L, ALT: 60 U/L
+- Alkaline phosphatase: 272 U/L, Total bilirubin: 1.7 mg/dL
+- CEA: 11.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G13D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 15, 2025):
+Primary ascending colon mass (6.0 cm), polypoid mass
+1 pulmonary nodules (largest 1.0 cm), peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 14.1 × 10³/µL, ANC: 3.9 × 10³/µL
+- Hgb: 12.1 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 1.9 mg/dL, eGFR: 82 mL/min/1.73m²
+- LFTs:
+- AST: 75 U/L, ALT: 60 U/L
+- Alkaline phosphatase: 272 U/L, Total bilirubin: 1.7 mg/dL
+- CEA: 11.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G13D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 15, 2025):
+Primary ascending colon mass (6.0 cm), polypoid mass
+1 pulmonary nodules (largest 1.0 cm), peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 15, 2025):
+Primary ascending colon mass (6.0 cm), polypoid mass
+1 pulmonary nodules (largest 1.0 cm), peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/76, HR 80, RR 15, Temp 98.9°F, SpO2 99% on room air, Weight 163 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung, peritoneum)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 2:
+        ============================================================
+        Patient ID: 177
+        MRN: 88760810
+        Age: 35
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Hybrid Score: 4.661
+        
+        Combined Medical Record: Patient Name: Irene Flores
+Patient MRN: 88760810
+Age: 35, Gender: Female
+Date of Visit: 2025-05-23
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Change in bowel habits, Cramping, Nausea
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 15, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: April 15, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 16, 2025 - bone, lymph nodes, liver
+metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Change in bowel habits, Cramping, Nausea, Early satiety, Abdominal pain
+- Performance status: ECOG 2
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- None
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: No known family history of cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 5 years ago (15 pack-year history)
+- Alcohol use: Social drinking, 2-3 drinks per week
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Nurse
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 124/71, HR 95, RR 15, Temp 99.2°F, SpO2 97% on room air, Weight 162 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 7.0 × 10³/µL, ANC: 6.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 179 × 10³/µL
+- Chemistry:
+- Creatinine: 0.8 mg/dL, eGFR: 118 mL/min/1.73m²
+- LFTs:
+- AST: 34 U/L, ALT: 23 U/L
+- Alkaline phosphatase: 63 U/L, Total bilirubin: 1.0 mg/dL
+- CEA: 112.0 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 16, 2025):
+Primary transverse colon mass (6.3 cm), polypoid mass
+8 hepatic metastases (largest 6.4 cm), enlarged lymph nodes (largest 2.6 cm), osseous metastases
+Other findings: Pulmonary nodules (likely benign), Atherosclerotic calcifications, Diverticulosis
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 7.0 × 10³/µL, ANC: 6.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 179 × 10³/µL
+- Chemistry:
+- Creatinine: 0.8 mg/dL, eGFR: 118 mL/min/1.73m²
+- LFTs:
+- AST: 34 U/L, ALT: 23 U/L
+- Alkaline phosphatase: 63 U/L, Total bilirubin: 1.0 mg/dL
+- CEA: 112.0 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 16, 2025):
+Primary transverse colon mass (6.3 cm), polypoid mass
+8 hepatic metastases (largest 6.4 cm), enlarged lymph nodes (largest 2.6 cm), osseous metastases
+Other findings: Pulmonary nodules (likely benign), Atherosclerotic calcifications, Diverticulosis
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 16, 2025):
+Primary transverse colon mass (6.3 cm), polypoid mass
+8 hepatic metastases (largest 6.4 cm), enlarged lymph nodes (largest 2.6 cm), osseous metastases
+Other findings: Pulmonary nodules (likely benign), Atherosclerotic calcifications, Diverticulosis
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 124/71, HR 95, RR 15, Temp 99.2°F, SpO2 97% on room air, Weight 162 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (bone, lymph nodes, liver)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 3:
+        ============================================================
+        Patient ID: 144
+        MRN: 57569409
+        Age: 55
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Hybrid Score: 4.654
+        
+        Combined Medical Record: Patient Name: Camila Vargas
+Patient MRN: 57569409
+Age: 55, Gender: Female
+Date of Visit: 2025-05-22
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Bloating, Weight loss, Fatigue
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: March 31, 2025
+- Site of primary tumor: Ascending colon (right colon)
+- Date of initial diagnosis and TNM stage: March 31, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - liver, lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Bloating, Weight loss, Fatigue
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Migraine headaches
+- Surgical history:
+- Circumcision (2010)
+
+Family History: - Colorectal or other cancers in first-degree relatives: No known family history of cancer
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Engineer
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Penicillin (rash)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Penicillin (rash)
+
+Physical Examination: - Vitals: BP 126/89, HR 76, RR 20, Temp 99.4°F, SpO2 100% on room air, Weight 185 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 5.3 × 10³/µL, ANC: 11.1 × 10³/µL
+- Hgb: 10.5 g/dL, Platelets: 370 × 10³/µL
+- Chemistry:
+- Creatinine: 1.1 mg/dL, eGFR: 56 mL/min/1.73m²
+- LFTs:
+- AST: 54 U/L, ALT: 79 U/L
+- Alkaline phosphatase: 97 U/L, Total bilirubin: 2.9 mg/dL
+- CEA: 154.7 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: V600E
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary ascending colon mass (4.2 cm), polypoid mass
+5 hepatic metastases (largest 5.7 cm), 2 pulmonary nodules (largest 3.8 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 5.3 × 10³/µL, ANC: 11.1 × 10³/µL
+- Hgb: 10.5 g/dL, Platelets: 370 × 10³/µL
+- Chemistry:
+- Creatinine: 1.1 mg/dL, eGFR: 56 mL/min/1.73m²
+- LFTs:
+- AST: 54 U/L, ALT: 79 U/L
+- Alkaline phosphatase: 97 U/L, Total bilirubin: 2.9 mg/dL
+- CEA: 154.7 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: V600E
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary ascending colon mass (4.2 cm), polypoid mass
+5 hepatic metastases (largest 5.7 cm), 2 pulmonary nodules (largest 3.8 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary ascending colon mass (4.2 cm), polypoid mass
+5 hepatic metastases (largest 5.7 cm), 2 pulmonary nodules (largest 3.8 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 126/89, HR 76, RR 20, Temp 99.4°F, SpO2 100% on room air, Weight 185 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver, lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 4:
+        ============================================================
+        Patient ID: 170
+        MRN: 84184554
+        Age: 47
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Hybrid Score: 4.652
+        
+        Combined Medical Record: Patient Name: Gloria Ramirez
+Patient MRN: 84184554
+Age: 47, Gender: Female
+Date of Visit: 2025-06-14
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Fatigue, Vomiting, Diarrhea
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 06, 2025
+- Site of primary tumor: Ascending colon (right colon)
+- Date of initial diagnosis and TNM stage: June 06, 2025; T3N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 16, 2025 - lung, liver metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Fatigue, Vomiting, Diarrhea, Rectal bleeding, Cramping, Change in bowel
+habits
+- Performance status: ECOG 2
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Hyperlipidemia
+- Depression
+- COPD
+- Surgical history:
+- Vasectomy (2011)
+- Circumcision (2015)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Maternal grandmother with ovarian cancer
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Denies alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- Simvastatin 40mg daily
+- Multivitamin daily
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- Simvastatin 40mg daily
+- Multivitamin daily
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 116/90, HR 73, RR 17, Temp 98.7°F, SpO2 100% on room air, Weight 178 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.9 × 10³/µL, ANC: 4.0 × 10³/µL
+- Hgb: 12.8 g/dL, Platelets: 243 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 78 mL/min/1.73m²
+- LFTs:
+- AST: 34 U/L, ALT: 19 U/L
+- Alkaline phosphatase: 142 U/L, Total bilirubin: 0.5 mg/dL
+- CEA: 56.5 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 16, 2025):
+Primary ascending colon mass (5.5 cm), circumferential thickening
+2 hepatic metastases (largest 5.3 cm), 6 pulmonary nodules (largest 3.7 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.9 × 10³/µL, ANC: 4.0 × 10³/µL
+- Hgb: 12.8 g/dL, Platelets: 243 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 78 mL/min/1.73m²
+- LFTs:
+- AST: 34 U/L, ALT: 19 U/L
+- Alkaline phosphatase: 142 U/L, Total bilirubin: 0.5 mg/dL
+- CEA: 56.5 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 16, 2025):
+Primary ascending colon mass (5.5 cm), circumferential thickening
+2 hepatic metastases (largest 5.3 cm), 6 pulmonary nodules (largest 3.7 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 16, 2025):
+Primary ascending colon mass (5.5 cm), circumferential thickening
+2 hepatic metastases (largest 5.3 cm), 6 pulmonary nodules (largest 3.7 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 116/90, HR 73, RR 17, Temp 98.7°F, SpO2 100% on room air, Weight 178 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung, liver)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 5:
+        ============================================================
+        Patient ID: 158
+        MRN: 69472124
+        Age: 56
+        Gender: Female
+        Oncologist: Dr. Lisa Park, MD
+        Hybrid Score: 4.643
+        
+        Combined Medical Record: Patient Name: Clara Dominguez
+Patient MRN: 69472124
+Age: 56, Gender: Female
+Date of Visit: 2025-06-08
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Vomiting, Constipation, Cramping
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 14, 2025
+- Site of primary tumor: Upper rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 14, 2025; T4aN1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - peritoneum metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Vomiting, Constipation, Cramping
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Benign prostatic hyperplasia
+- Osteoarthritis
+- Atrial fibrillation
+- GERD
+- Surgical history:
+- Tubal ligation (2012)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: No known familial syndromes
+
+Social History: - Smoking: Former smoker, quit 5 years ago (15 pack-year history)
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Sales manager
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- Multivitamin daily
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- Multivitamin daily
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 116/80, HR 84, RR 15, Temp 98.1°F, SpO2 98% on room air, Weight 191 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 8.2 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.1 g/dL, Platelets: 202 × 10³/µL
+- Chemistry:
+- Creatinine: 1.1 mg/dL, eGFR: 96 mL/min/1.73m²
+- LFTs:
+- AST: 25 U/L, ALT: 30 U/L
+- Alkaline phosphatase: 92 U/L, Total bilirubin: 0.6 mg/dL
+- CEA: 177.2 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: V600E
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary upper rectum mass (3.6 cm), near-obstructing lesion
+peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 8.2 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.1 g/dL, Platelets: 202 × 10³/µL
+- Chemistry:
+- Creatinine: 1.1 mg/dL, eGFR: 96 mL/min/1.73m²
+- LFTs:
+- AST: 25 U/L, ALT: 30 U/L
+- Alkaline phosphatase: 92 U/L, Total bilirubin: 0.6 mg/dL
+- CEA: 177.2 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: V600E
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary upper rectum mass (3.6 cm), near-obstructing lesion
+peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary upper rectum mass (3.6 cm), near-obstructing lesion
+peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 116/80, HR 84, RR 15, Temp 98.1°F, SpO2 98% on room air, Weight 191 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (peritoneum)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 6:
+        ============================================================
+        Patient ID: 143
+        MRN: 57418600
+        Age: 59
+        Gender: Female
+        Oncologist: Dr. Jennifer Rodriguez, MD
+        Hybrid Score: 4.639
+        
+        Combined Medical Record: Patient Name: Luna Chavez
+Patient MRN: 57418600
+Age: 59, Gender: Female
+Date of Visit: 2025-06-16
+Oncologist: Dr. Jennifer Rodriguez, MD
+
+Chief Complaint: - Abdominal pain, Rectal bleeding, Diarrhea
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 09, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: May 09, 2025; T4aN2bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 07, 2025 - liver metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Abdominal pain, Rectal bleeding, Diarrhea, Vomiting, Fatigue
+- Performance status: ECOG 2
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Psoriasis
+- Endometriosis
+- ADHD
+- Osteoarthritis
+- Surgical history:
+- Arthroscopy (1991)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 5 years ago (15 pack-year history)
+- Alcohol use: Denies alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Engineer
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 130/84, HR 72, RR 15, Temp 99.4°F, SpO2 99% on room air, Weight 186 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 12.1 × 10³/µL, ANC: 2.4 × 10³/µL
+- Hgb: 13.7 g/dL, Platelets: 312 × 10³/µL
+- Chemistry:
+- Creatinine: 1.1 mg/dL, eGFR: 56 mL/min/1.73m²
+- LFTs:
+- AST: 26 U/L, ALT: 116 U/L
+- Alkaline phosphatase: 254 U/L, Total bilirubin: 2.0 mg/dL
+- CEA: 149.1 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 07, 2025):
+Primary mid rectum mass (7.0 cm), polypoid mass
+4 hepatic metastases (largest 4.5 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 12.1 × 10³/µL, ANC: 2.4 × 10³/µL
+- Hgb: 13.7 g/dL, Platelets: 312 × 10³/µL
+- Chemistry:
+- Creatinine: 1.1 mg/dL, eGFR: 56 mL/min/1.73m²
+- LFTs:
+- AST: 26 U/L, ALT: 116 U/L
+- Alkaline phosphatase: 254 U/L, Total bilirubin: 2.0 mg/dL
+- CEA: 149.1 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 07, 2025):
+Primary mid rectum mass (7.0 cm), polypoid mass
+4 hepatic metastases (largest 4.5 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 07, 2025):
+Primary mid rectum mass (7.0 cm), polypoid mass
+4 hepatic metastases (largest 4.5 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 130/84, HR 72, RR 15, Temp 99.4°F, SpO2 99% on room air, Weight 186 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 7:
+        ============================================================
+        Patient ID: 165
+        MRN: 78352483
+        Age: 73
+        Gender: Female
+        Oncologist: Dr. Jennifer Rodriguez, MD
+        Hybrid Score: 4.638
+        
+        Combined Medical Record: Patient Name: Carmen Reyes
+Patient MRN: 78352483
+Age: 73, Gender: Female
+Date of Visit: 2025-06-01
+Oncologist: Dr. Jennifer Rodriguez, MD
+
+Chief Complaint: - Vomiting, Rectal bleeding, Change in bowel habits
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 08, 2025
+- Site of primary tumor: Hepatic flexure (right colon)
+- Date of initial diagnosis and TNM stage: April 08, 2025; T3N1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 11, 2025 - lymph nodes, lung, liver
+metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Vomiting, Rectal bleeding, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Hypothyroidism
+- Osteoarthritis
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Social drinking, 2-3 drinks per week
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Accountant
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- Multivitamin daily
+- Allergies: Penicillin (rash)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- Multivitamin daily
+- Allergies: Penicillin (rash)
+
+Physical Examination: - Vitals: BP 137/71, HR 92, RR 15, Temp 99.4°F, SpO2 100% on room air, Weight 175 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 9.4 × 10³/µL, ANC: 3.8 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 214 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 117 mL/min/1.73m²
+- LFTs:
+- AST: 19 U/L, ALT: 19 U/L
+- Alkaline phosphatase: 102 U/L, Total bilirubin: 1.0 mg/dL
+- CEA: 114.7 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 11, 2025):
+Primary hepatic flexure mass (3.7 cm), infiltrative mass
+8 hepatic metastases (largest 6.1 cm), 5 pulmonary nodules (largest 3.8 cm), enlarged lymph nodes
+(largest 1.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 9.4 × 10³/µL, ANC: 3.8 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 214 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 117 mL/min/1.73m²
+- LFTs:
+- AST: 19 U/L, ALT: 19 U/L
+- Alkaline phosphatase: 102 U/L, Total bilirubin: 1.0 mg/dL
+- CEA: 114.7 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 11, 2025):
+Primary hepatic flexure mass (3.7 cm), infiltrative mass
+8 hepatic metastases (largest 6.1 cm), 5 pulmonary nodules (largest 3.8 cm), enlarged lymph nodes
+(largest 1.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 11, 2025):
+Primary hepatic flexure mass (3.7 cm), infiltrative mass
+8 hepatic metastases (largest 6.1 cm), 5 pulmonary nodules (largest 3.8 cm), enlarged lymph nodes
+(largest 1.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 137/71, HR 92, RR 15, Temp 99.4°F, SpO2 100% on room air, Weight 175 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes, lung, liver)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 8:
+        ============================================================
+        Patient ID: 139
+        MRN: 53972854
+        Age: 48
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Hybrid Score: 4.636
+        
+        Combined Medical Record: Patient Name: Charlotte Reed
+Patient MRN: 53972854
+Age: 48, Gender: Female
+Date of Visit: 2025-06-05
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Early satiety, Constipation, Nausea
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 12, 2025
+- Site of primary tumor: Cecum (right colon)
+- Date of initial diagnosis and TNM stage: April 12, 2025; T3N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - peritoneum, liver, lung
+metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Constipation, Nausea, Bloating
+- Performance status: ECOG 2
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- PCOS
+- Fibromyalgia
+- Chronic back pain
+- Surgical history:
+- Appendectomy (1994)
+- Tonsillectomy (1990)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Maternal grandmother with ovarian cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Social drinking, 2-3 drinks per week
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Accountant
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- Multivitamin daily
+- Allergies: Penicillin (rash)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- Multivitamin daily
+- Allergies: Penicillin (rash)
+
+Physical Examination: - Vitals: BP 138/71, HR 75, RR 18, Temp 98.4°F, SpO2 96% on room air, Weight 180 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 10.1 × 10³/µL, ANC: 7.3 × 10³/µL
+- Hgb: 14.6 g/dL, Platelets: 178 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 87 mL/min/1.73m²
+- LFTs:
+- AST: 38 U/L, ALT: 15 U/L
+- Alkaline phosphatase: 137 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 58.4 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary cecum mass (5.9 cm), near-obstructing lesion
+6 hepatic metastases (largest 6.2 cm), 5 pulmonary nodules (largest 3.0 cm), peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 10.1 × 10³/µL, ANC: 7.3 × 10³/µL
+- Hgb: 14.6 g/dL, Platelets: 178 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 87 mL/min/1.73m²
+- LFTs:
+- AST: 38 U/L, ALT: 15 U/L
+- Alkaline phosphatase: 137 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 58.4 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary cecum mass (5.9 cm), near-obstructing lesion
+6 hepatic metastases (largest 6.2 cm), 5 pulmonary nodules (largest 3.0 cm), peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary cecum mass (5.9 cm), near-obstructing lesion
+6 hepatic metastases (largest 6.2 cm), 5 pulmonary nodules (largest 3.0 cm), peritoneal disease
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 75, RR 18, Temp 98.4°F, SpO2 96% on room air, Weight 180 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (peritoneum, liver, lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        Instructions:
+        1. For EACH patient, evaluate their eligibility for the trial based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Consider each patient's medical history, current condition, and trial requirements
+        5. Be thorough but concise in your analysis
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "patient_id": 175,
+                    "mrn": "86504025",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": [ "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this patient"
+                },
+                {
+                    "patient_id": 177,
+                    "mrn": "88760810",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this patient"
+                }
+                // ... continue for all 8 patients
+            ],
+            "batch_summary": {
+                "total_patients_evaluated": 8,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Patient 1 - Best match due to...",
+                    "Patient 2 - Good alternative because...",
+                    "Patient 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-20T08:59:24.183571"
+            }
+        }
+        

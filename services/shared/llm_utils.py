@@ -11,7 +11,7 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 from openai import OpenAI
 from openai import APIError, RateLimitError, APIConnectionError, APITimeoutError
-from config import OPENAI_API_KEY, MAX_KEYWORD_BATCH_SIZE, OPENAI_MAX_RETRIES, OPENAI_TIMEOUT, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE, OPENAI_MODEL
+from config import OPENAI_API_KEY, MAX_KEYWORD_BATCH_SIZE, OPENAI_MAX_RETRIES, OPENAI_TIMEOUT, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE, OPENAI_MODEL, SAVE_LLM_SENT_TO_FOLDER
 
 class LLMUtils:
     def __init__(self):
@@ -206,7 +206,25 @@ class LLMUtils:
         """
 
     def _save_prompt_to_file(self, prompt: str, call_type: str = "llm_call", metadata: Dict[str, Any] = None) -> Path:
-        """Save prompt to file with timestamp and metadata"""
+        """
+        Save prompt to file with timestamp and metadata
+        
+        For patient-to-trial and trial-to-patient evaluation calls, this respects the
+        SAVE_LLM_SENT_TO_FOLDER config flag. If False, skips folder saving (only saves to database).
+        Other call types (like keyword generation) always save to folder regardless of the flag.
+        """
+        # Check if this is an evaluation call type that should respect the config flag
+        evaluation_call_types = [
+            "trial_evaluation_single",
+            "trial_evaluation_batch",
+            "patient_evaluation_single",
+            "patient_evaluation_batch"
+        ]
+        
+        # If it's an evaluation call and the flag is False, skip folder saving
+        if call_type in evaluation_call_types and not SAVE_LLM_SENT_TO_FOLDER:
+            return None
+        
         try:
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S_%f')[:-3]  # Include milliseconds
             
@@ -240,7 +258,7 @@ class LLMUtils:
     
     def call_llm(self, prompt: str, call_type: str = "llm_call", metadata: Dict[str, Any] = None) -> Dict[str, Any]:
         """Make LLM API call with retry logic and exponential backoff for rate limit errors"""
-        # Save prompt before sending
+        # Save prompt before sending (may return None if folder saving is disabled for evaluation calls)
         prompt_file = self._save_prompt_to_file(prompt, call_type, metadata)
         if prompt_file:
             print(f"[SAVE] Prompt saved to: {prompt_file}")

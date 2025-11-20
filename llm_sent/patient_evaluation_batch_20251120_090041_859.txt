@@ -1,0 +1,294 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: patient_evaluation_batch
+trial_id: NCT05538130
+trial_title: A PHASE 1A/B OPEN-LABEL MASTER STUDY OF PF-0779954...
+batch_size: 2
+patient_ids: [148, 218]
+mrns: ['59779266', '00114466']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 patients for the given clinical trial and determine eligibility.
+
+        
+        CLINICAL TRIAL INFORMATION:
+        Trial ID: NCT05538130
+        Title: A PHASE 1A/B OPEN-LABEL MASTER STUDY OF PF-07799544 AS A SINGLE-AGENT AND IN COMBINATION WITH OTHER TARGETED AGENTS IN PARTICIPANTS WITH ADVANCED SOLID TUMORS
+        Condition: ["Melanoma", "Glioma", "Thyroid Cancer", "Non-Small Cell Lung Cancer", "Malignant Neoplasms", "Brain Neoplasms", "Colorectal Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 16 Years - 
+        Gender: ALL
+        
+        Brief Summary: The purpose of this clinical trial is to learn the safety and effects of the study medicine (PF-07799544) administered as a single agent and in combination with other study medications in people with solid tumors. This study is seeking participants who have an advanced solid tumor for which the available treatments are no longer effective in controlling their cancer. All participants in this study will receive PF-07799544. PF-07799544 comes as a tablet to take by mouth daily (initially 2 times per day, but this could change to once daily or another frequency). Depending on the part of the study, participants may also receive another study medicine.
+
+* In the first part of the study, people with melanoma or other solid tumors may also receive encorafenib. Encorafenib comes as a capsule and is taken once per day.
+* In the second part of the study, people with melanoma or other cancers with abnormalities in a gene called "BRAF" will receive PF-07799544 with other study medicines (for example, PF-07799933).
+
+Participants may receive the study medicines for about 2 years. The study team will monitor how each participant is doing with the study treatment during regular visits at the study clinic.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Diagnosis of advanced/metastatic solid tumor including primary brain tumor for monotherapy phase 1a dose escalation", "* Disease progressed during/following last prior treatment and no satisfactory alternative treatment options for monotherapy phase 1a dose escalation", "* For Substudy B, histological or cytological diagnosis of advanced/metastatic melanoma", "* For Substudy C, unresectable or adv/metastatic solid tumor progressed on, or with demonstrated intolerance to SOC, excluding melanoma,", "* For Substudy B and C, measurable disease by RECIST version 1.1", "* For Substudy B, evidence of a BRAF V600 mutation or BRAF Class II/III alteration in tumor tissue and/or blood", "* For Substudy C, evidence of a BRAF founder alteration (non-V600 Class II/III BRAF alteration)"]
+        
+        Exclusion Criteria: ["* Brain metastasis larger than 4 cm", "* History or current evidence of retinal vein occlusion (RVO) or concurrent neuromuscular disorder associated with elevated creatine kinase (CK)"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Diagnosis of advanced/metastatic solid tumor including primary brain tumor for monotherapy phase 1a dose escalation
+* Disease progressed during/following last prior treatment and no satisfactory alternative treatment options for monotherapy phase 1a dose escalation
+* For Substudy B, histological or cytological diagnosis of advanced/metastatic melanoma
+* For Substudy C, unresectable or adv/metastatic solid tumor progressed on, or with demonstrated intolerance to SOC, excluding melanoma,
+* For Substudy B and C, measurable disease by RECIST version 1.1
+* For Substudy B, evidence of a BRAF V600 mutation or BRAF Class II/III alteration in tumor tissue and/or blood
+* For Substudy C, evidence of a BRAF founder alteration (non-V600 Class II/III BRAF alteration)
+
+Exclusion Criteria:
+
+* Brain metastasis larger than 4 cm
+* History or current evidence of retinal vein occlusion (RVO) or concurrent neuromuscular disorder associated with elevated creatine kinase (CK)
+        
+
+        PATIENTS TO EVALUATE:
+        
+        ============================================================
+        PATIENT 1:
+        ============================================================
+        Patient ID: 148
+        MRN: 59779266
+        Age: 51
+        Gender: Female
+        Oncologist: Dr. Lisa Park, MD
+        Hybrid Score: 4.527
+        
+        Combined Medical Record: Patient Name: Daniela Ortiz
+Patient MRN: 59779266
+Age: 51, Gender: Female
+Date of Visit: 2025-06-17
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Nausea, Fatigue
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: May 16, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: May 16, 2025; T3N2aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Nausea, Fatigue, Diarrhea
+- Performance status: ECOG 2
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Osteoporosis
+- Dementia (early stage)
+- Hypertension
+- Osteoarthritis
+- Surgical history:
+- Appendectomy (2012)
+- Tonsillectomy (1991)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Mother with breast cancer at age 72
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Current smoker (10 pack-years)
+- Alcohol use: Denies alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Sales manager
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies: Penicillin (rash), Shellfish (hives)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies: Penicillin (rash), Shellfish (hives)
+
+Physical Examination: - Vitals: BP 131/78, HR 81, RR 14, Temp 98.7°F, SpO2 97% on room air, Weight 124 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 4.1 × 10³/µL, ANC: 1.9 × 10³/µL
+- Hgb: 13.3 g/dL, Platelets: 351 × 10³/µL
+- Chemistry:
+- Creatinine: 1.0 mg/dL, eGFR: 96 mL/min/1.73m²
+- LFTs:
+- AST: 27 U/L, ALT: 14 U/L
+- Alkaline phosphatase: 54 U/L, Total bilirubin: 0.5 mg/dL
+- CEA: 13.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary sigmoid colon mass (3.7 cm), annular narrowing
+enlarged lymph nodes (largest 3.0 cm)
+Other findings: Hiatal hernia
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 4.1 × 10³/µL, ANC: 1.9 × 10³/µL
+- Hgb: 13.3 g/dL, Platelets: 351 × 10³/µL
+- Chemistry:
+- Creatinine: 1.0 mg/dL, eGFR: 96 mL/min/1.73m²
+- LFTs:
+- AST: 27 U/L, ALT: 14 U/L
+- Alkaline phosphatase: 54 U/L, Total bilirubin: 0.5 mg/dL
+- CEA: 13.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: Wild-type
+- BRAF: Wild-type
+- MSI/MMR status: MSI-H
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary sigmoid colon mass (3.7 cm), annular narrowing
+enlarged lymph nodes (largest 3.0 cm)
+Other findings: Hiatal hernia
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary sigmoid colon mass (3.7 cm), annular narrowing
+enlarged lymph nodes (largest 3.0 cm)
+Other findings: Hiatal hernia
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 131/78, HR 81, RR 14, Temp 98.7°F, SpO2 97% on room air, Weight 124 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+        ============================================================
+        PATIENT 2:
+        ============================================================
+        Patient ID: 218
+        MRN: 00114466
+        Age: 23
+        Gender: Male
+        Oncologist: None
+        Hybrid Score: 4.418
+        
+        Combined Medical Record: Patient Name: vsdfsd
+Patient MRN: 00114466
+Age: 23, Gender: Male
+Date of Visit: Not specified
+Oncologist: Not specified
+
+Chief Complaint: Not specified
+
+History of Present Illness: Not specified
+
+Past Medical History: Not specified
+
+Family History: Not specified
+
+Social History: Not specified
+
+Review of Systems: Not specified
+
+Medications and Allergies: Not specified
+
+Physical Examination: BMI: 19.8; HR: -18; BP: 120/30; Temp: 48.9°F
+
+Laboratory and Imaging Results: Not specified
+
+Imaging: Not specified
+
+Vital Signs: [{"bmi":19.8,"heart_rate":-18,"temperature_c":9.4,"blood_pressure":"120/30"}]
+
+Assessment: Not specified
+        
+
+        Instructions:
+        1. For EACH patient, evaluate their eligibility for the trial based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Consider each patient's medical history, current condition, and trial requirements
+        5. Be thorough but concise in your analysis
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "patient_id": 148,
+                    "mrn": "59779266",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": [ "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this patient"
+                },
+                {
+                    "patient_id": 218,
+                    "mrn": "00114466",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this patient"
+                }
+                // ... continue for all 2 patients
+            ],
+            "batch_summary": {
+                "total_patients_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Patient 1 - Best match due to...",
+                    "Patient 2 - Good alternative because...",
+                    "Patient 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-20T09:00:41.859452"
+            }
+        }
+        

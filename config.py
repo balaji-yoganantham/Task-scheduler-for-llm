@@ -127,6 +127,12 @@ AUTO_EVAL_ENABLE_TRIALS = os.getenv("AUTO_EVAL_ENABLE_TRIALS", "true").lower() =
 AUTO_EVAL_PATIENT_TIMEOUT = int(os.getenv("AUTO_EVAL_PATIENT_TIMEOUT", "1000"))  # 1000 seconds (~16.7 minutes) per patient
 AUTO_EVAL_TRIAL_TIMEOUT = int(os.getenv("AUTO_EVAL_TRIAL_TIMEOUT", "600"))  # 10 minutes per trial
 
+# LLM Sent Text Saving Configuration
+# If True: Save LLM prompts/responses to llm_sent/ folder AND database (for patient-to-trial and trial-to-patient pipelines)
+# If False: Save only to database, skip folder saving (for patient-to-trial and trial-to-patient pipelines)
+# Note: This only affects evaluation calls (trial_evaluation_*, patient_evaluation_*), not keyword generation
+SAVE_LLM_SENT_TO_FOLDER = os.getenv("SAVE_LLM_SENT_TO_FOLDER", "true").lower() == "true"
+
 # API Configuration
 API_TITLE = "Task Scheduler LLM Service"
 API_DESCRIPTION = "Standalone task scheduler for LLM processing"
@@ -162,3 +168,5 @@ print(f"  - AUTO_EVAL_PATIENT_BATCH_SIZE: {AUTO_EVAL_PATIENT_BATCH_SIZE} ({'ALL 
 print(f"  - AUTO_EVAL_TRIAL_BATCH_SIZE: {AUTO_EVAL_TRIAL_BATCH_SIZE} ({'ALL items' if AUTO_EVAL_TRIAL_BATCH_SIZE_INT is None else f'{AUTO_EVAL_TRIAL_BATCH_SIZE_INT} item(s)'} per cycle)")
 print(f"  - AUTO_EVAL_PATIENT_TIMEOUT: {AUTO_EVAL_PATIENT_TIMEOUT}s")
 print(f"  - AUTO_EVAL_TRIAL_TIMEOUT: {AUTO_EVAL_TRIAL_TIMEOUT}s")
+print(f"\nLLM Sent Text Saving Configuration:")
+print(f"  - SAVE_LLM_SENT_TO_FOLDER: {SAVE_LLM_SENT_TO_FOLDER} (Save to folder: {'ON' if SAVE_LLM_SENT_TO_FOLDER else 'OFF'} - only affects patient-to-trial and trial-to-patient evaluation calls)")

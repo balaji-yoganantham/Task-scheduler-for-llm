@@ -321,19 +321,10 @@ class PatientMatcher:
             # Perform hybrid search
             matching_trials = self.hybrid_search_trials_for_patient(patient_data)
             
-            # Apply filters
-            filtered_trials = []
-            for trial in matching_trials:
-                # Check phase filter
-                if phase_filter:
-                    trial_phase = trial.get('phase', '')
-                    if trial_phase and trial_phase not in phase_filter:
-                        continue
-                
-                filtered_trials.append(trial)
+            # No phase filtering - use all matching trials
+            filtered_trials = matching_trials
             
-            print(f"Found {len(matching_trials)} trials before filtering")
-            print(f"Found {len(filtered_trials)} trials after phase filtering")
+            print(f"Found {len(matching_trials)} trials from hybrid search")
             
             # Apply location filtering if enabled and patient location is available
             if LOCATION_ENABLED and self.location_utils and identified_location and patient_lat and patient_lon:
@@ -457,7 +448,7 @@ class PatientMatcher:
                 
                 print(f"\nLocation Filtering Results:")
                 print(f"   Total trials from hybrid search: {len(matching_trials)}")
-                print(f"   Trials after phase filtering: {trials_before_location_filter}")
+                print(f"   Trials before location filtering: {trials_before_location_filter}")
                 print(f"   ────────────────────────────────────────────")
                 print(f"   Trials with location data: {trials_with_location}")
                 print(f"   Trials without location data: {trials_without_location}")
