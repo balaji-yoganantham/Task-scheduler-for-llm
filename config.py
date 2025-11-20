@@ -15,7 +15,7 @@ USE_DATABASE = os.getenv("USE_DATABASE", "true").lower() == "true"
 # OpenAI API Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")  # GPT-4o Mini model
-OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.2"))
+OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.0"))  # Set to 0.0 for deterministic outputs
 OPENAI_MAX_TOKENS = int(os.getenv("OPENAI_MAX_TOKENS", "8192"))  # Max output tokens
 OPENAI_TIMEOUT = int(os.getenv("OPENAI_TIMEOUT", "300"))  # Increased to 5 minutes for batch operations
 OPENAI_MAX_RETRIES = int(os.getenv("OPENAI_MAX_RETRIES", "3"))

@@ -1,0 +1,832 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 41
+mrn: 39000017
+batch_size: 10
+trial_ids: ['NCT05334069', 'NCT04314401', 'NCT06147037', 'NCT05783622', 'NCT04585750', 'NCT05581004', 'NCT06128551', 'NCT05086692', 'NCT05514717', 'NCT03093116']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 10 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 41
+        MRN: 39000017
+        Age: 42
+        Gender: Male
+        Oncologist: Dr. Kavita Desai, MD
+        Combined Medical Record: Patient Name: Gregory Smith
+Patient MRN: 39000017
+Age: 42, Gender: Male
+Date of Visit: August 10, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 07, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: June 07, 2025; T4N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: August 02, 2025 - brain, peritoneum metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Asthma, Coronary artery disease
+- Surgical history: Appendectomy (2011)
+
+Family History: - Father with colon polyps
+- Awaiting genetic testing results
+
+Social History: - Smoking: Occasional smoker (social use)
+- Alcohol use: Rare
+- Living situation: Lives alone
+- Occupation: Engineer
+- Functional status: Fully independent
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+--- Page 25 ---
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches improving
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 8.4 ×10³/µL, Hgb 11.3 g/dL, Platelets 280 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 110 mL/min/1.73m²
+- LFTs: AST 44 U/L, ALT 49 U/L, ALP 228 U/L, Total bilirubin 1.9 mg/dL
+- CEA: 139.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 2 hepatic metastases (largest 3.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 8.4 ×10³/µL, Hgb 11.3 g/dL, Platelets 280 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 110 mL/min/1.73m²
+- LFTs: AST 44 U/L, ALT 49 U/L, ALP 228 U/L, Total bilirubin 1.9 mg/dL
+- CEA: 139.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 2 hepatic metastases (largest 3.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 125/70, HR 82, RR 18, Temp 98.4°F, SpO2 99%, Weight 137 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (brain, peritoneum)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05334069
+        Title: Blinded Reference Set for Multicancer Early Detection Blood Tests
+        Condition: ["Acute Lymphoblastic Leukemia", "Acute Myeloid Leukemia", "Ann Arbor Stage I Lymphoma", "Ann Arbor Stage II Lymphoma", "Ann Arbor Stage III Lymphoma", "Ann Arbor Stage IV Lymphoma", "Chronic Lymphocytic Leukemia", "Chronic Myeloid Leukemia", "Gastroesophageal Junction Adenocarcinoma", "Head and Neck Carcinoma", "Hematopoietic and Lymphoid Cell Neoplasm", "Invasive Breast Carcinoma", "Kidney Carcinoma", "Malignant Hepatobiliary Neoplasm", "Malignant Solid Neoplasm", "Melanoma", "Muscle-Invasive Bladder Carcinoma", "RISS Stage I Plasma Cell Myeloma", "RISS Stage II Plasma Cell Myeloma", "RISS Stage III Plasma Cell Myeloma", "Sarcoma", "Stage I Bladder Cancer AJCC v6 and v7", "Stage I Breast Cancer AJCC v7", "Stage I Colorectal Cancer AJCC v6 and v7", "Stage I Esophageal Cancer AJCC V7", "Stage I Gastric Cancer AJCC V7", "Stage I Lung Cancer AJCC v7", "Stage I Ovarian Cancer AJCC v6 and v7", "Stage I Pancreatic Cancer AJCC v6 and v7", "Stage I Prostate Cancer AJCC v7", "Stage I Uterine Corpus Cancer AJCC v7", "Stage II Bladder Cancer AJCC v6 and v7", "Stage II Breast Cancer AJCC v6 and v7", "Stage II Colorectal Cancer AJCC v7", "Stage II Esophageal Cancer AJCC v7", "Stage II Gastric Cancer AJCC v7", "Stage II Lung Cancer AJCC v7", "Stage II Ovarian Cancer AJCC v6 and v7", "Stage II Pancreatic Cancer AJCC v6 and v7", "Stage II Prostate Cancer AJCC v7", "Stage II Uterine Corpus Cancer AJCC v7", "Stage III Bladder Cancer AJCC v6 and v7", "Stage III Breast Cancer AJCC v7", "Stage III Colorectal Cancer AJCC v7", "Stage III Esophageal Cancer AJCC v7", "Stage III Gastric Cancer AJCC v7", "Stage III Lung Cancer AJCC v7", "Stage III Ovarian Cancer AJCC v6 and v7", "Stage III Pancreatic Cancer AJCC v6 and v7", "Stage III Prostate Cancer AJCC v7", "Stage III Uterine Corpus Cancer AJCC v7", "Stage IV Bladder Cancer AJCC v7", "Stage IV Breast Cancer AJCC v6 and v7", "Stage IV Colorectal Cancer AJCC v7", "Stage IV Esophageal Cancer AJCC v7", "Stage IV Gastric Cancer AJCC v7", "Stage IV Lung Cancer AJCC v7", "Stage IV Ovarian Cancer AJCC v6 and v7", "Stage IV Pancreatic Cancer AJCC v6 and v7", "Stage IV Prostate Cancer AJCC v7", "Stage IV Uterine Corpus Cancer AJCC v7", "Thyroid Gland Carcinoma"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 40 Years - 75 Years
+        Gender: ALL
+        Hybrid Score: 5.106
+        
+        Brief Summary: This study collects blood and tissue samples from patients with cancer and without cancer to evaluate tests for early cancer detection. Collecting and storing samples of blood and tissue from patients with and without cancer to study in the laboratory may help researchers develop tests for the early detection of cancers.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To provide a blinded reference set of cancer versus (vs.) non-cancer blood samples that will be used to validate assays for inclusion in a prospective clinical trial focused on utility of blood-based multi-cancer early detection.
+
+SECONDARY OBJECTIVES:
+
+I. Evaluate test performance at the time of initial cancer diagnosis by tumor type.
+
+II. Evaluate test performance at the time of initial cancer diagnosis by clinical stage.
+
+OUTLINE:
+
+Participants complete a questionnaire at baseline. Participants undergo collection of blood samples at registration and at 12 months after registration. Patients with a cancer diagnosis may undergo collection of tissue samples at registration and 12 months after registration.
+
+After completion of study, participants are followed up at 1 year.
+        
+        Inclusion Criteria: ["* Participants with a cancer diagnosis: Documentation of disease:", "* Histologic documentation: Histologically confirmed diagnosis of invasive cancer", "* Stage: Stage I-IV per American Joint Committee on Cancer (AJCC) 7th edition, with the exception of patients with leukemia, lymphoma, and multiple myeloma", "* For leukemia: Type (chronic lymphocytic leukemia \\[CLL\\], chronic myeloid leukemia \\[CML\\], acute lymphoblastic lymphoma \\[ALL\\], acute myeloid leukemia \\[AML\\])", "* For lymphoma: Stage I-IV based on Ann Arbor staging", "* For multiple myeloma: Stage I, II, III based on Revised International Staging System (RISS)", "* One of the following tumor types:", "* Colorectal", "* Bladder", "* Head and neck", "* Hepatobiliary", "* Lung", "* Lymphoma", "* Leukemia", "* Ovary \\*\\*\\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Pancreas \\*\\*\\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Multiple myeloma", "* Gastric, esophageal or gastroesophageal", "* Breast", "* Thyroid", "* Kidney", "* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Endometrium", "* Prostate", "* Melanoma", "\\*\\*\\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment", "* Sarcoma", "* Participants with a cancer diagnosis: No prior definitive systemic or local anti-cancer intervention", "* Participants with a cancer diagnosis: Age \\>= 40 and =\\< 75", "* Participants with a cancer diagnosis: No known current pregnancy by self-report", "* Participants with a cancer diagnosis: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis", "* Participants with a cancer diagnosis: Willingness to provide blood samples for research use", "* Participants with a cancer diagnosis: Absence of medical contraindications to a research blood draw volume of 60 mL", "* Participants with a cancer diagnosis: No history of organ transplantation", "* Participants with a cancer diagnosis: Ability to read and comprehend English or Spanish", "\\* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages", "* Participants without a cancer diagnosis and without suspicion of cancer: Age \\>= 40 and =\\< 75", "* Participants without a cancer diagnosis and without suspicion of cancer: No known current pregnancy by self-report", "* Participants without a cancer diagnosis and without suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers)", "* Participants without a cancer diagnosis and without suspicion of cancer: Willingness to provide blood samples for research use", "* Participants without a cancer diagnosis and without suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL", "* Participants without a cancer diagnosis and without suspicion of cancer: No history of organ transplantation", "* Participants without a cancer diagnosis and without suspicion of cancer: Ability to read and comprehend English or Spanish", "\\* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages", "* Participants with a high suspicion of cancer: High suspicion of ovarian cancer, pancreatic cancer, kidney cancer, or melanoma by clinical and/or radiological assessment, with plans for histologic or cytologic confirmation within 28 days after study blood draw", "\\* Examples of highly suspicious cases include: elevated CA125 and abnormal transvaginal ultrasound, suspicious renal or pancreatic mass on imaging, suspicious cutaneous lesion concerning for melanoma", "* Participants with a high suspicion of cancer: Central review of radiology reports and/or clinical documentation conducted by study chairs", "* Participants with a high suspicion of cancer: Age \\>= 40 and =\\< 75", "* Participants with a high suspicion of cancer: No known current pregnancy by self-report", "* Participants with a high suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis", "* Participants with a high suspicion of cancer: Willingness to provide blood samples for research use", "* Participants with a high suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL", "* Participants with a high suspicion of cancer: No history or organ transplantation", "* Participants with a high suspicion of cancer: Ability to read and comprehend English or Spanish \\* Eligibility is restricted to individuals who can comprehend and read English and Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages"]
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Participants with a cancer diagnosis: Documentation of disease:
+
+  * Histologic documentation: Histologically confirmed diagnosis of invasive cancer
+  * Stage: Stage I-IV per American Joint Committee on Cancer (AJCC) 7th edition, with the exception of patients with leukemia, lymphoma, and multiple myeloma
+
+    * For leukemia: Type (chronic lymphocytic leukemia \[CLL\], chronic myeloid leukemia \[CML\], acute lymphoblastic lymphoma \[ALL\], acute myeloid leukemia \[AML\])
+    * For lymphoma: Stage I-IV based on Ann Arbor staging
+    * For multiple myeloma: Stage I, II, III based on Revised International Staging System (RISS)
+  * One of the following tumor types:
+
+    * Colorectal
+    * Bladder
+    * Head and neck
+    * Hepatobiliary
+    * Lung
+    * Lymphoma
+    * Leukemia
+    * Ovary \*\*\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Pancreas \*\*\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Multiple myeloma
+    * Gastric, esophageal or gastroesophageal
+    * Breast
+    * Thyroid
+    * Kidney
+
+      * For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Endometrium
+    * Prostate
+    * Melanoma
+
+      \*\*\* For these specific cancer types only, patients may be enrolled prior to histologic confirmation of malignancy. Sites are required to contact the study chairs to review appropriateness for enrollment
+    * Sarcoma
+* Participants with a cancer diagnosis: No prior definitive systemic or local anti-cancer intervention
+* Participants with a cancer diagnosis: Age \>= 40 and =\< 75
+* Participants with a cancer diagnosis: No known current pregnancy by self-report
+* Participants with a cancer diagnosis: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis
+* Participants with a cancer diagnosis: Willingness to provide blood samples for research use
+* Participants with a cancer diagnosis: Absence of medical contraindications to a research blood draw volume of 60 mL
+* Participants with a cancer diagnosis: No history of organ transplantation
+* Participants with a cancer diagnosis: Ability to read and comprehend English or Spanish
+
+  \* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages
+* Participants without a cancer diagnosis and without suspicion of cancer: Age \>= 40 and =\< 75
+* Participants without a cancer diagnosis and without suspicion of cancer: No known current pregnancy by self-report
+* Participants without a cancer diagnosis and without suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers)
+* Participants without a cancer diagnosis and without suspicion of cancer: Willingness to provide blood samples for research use
+* Participants without a cancer diagnosis and without suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL
+* Participants without a cancer diagnosis and without suspicion of cancer: No history of organ transplantation
+* Participants without a cancer diagnosis and without suspicion of cancer: Ability to read and comprehend English or Spanish
+
+  \* Eligibility is restricted to individuals who can comprehend and read English or Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages
+* Participants with a high suspicion of cancer: High suspicion of ovarian cancer, pancreatic cancer, kidney cancer, or melanoma by clinical and/or radiological assessment, with plans for histologic or cytologic confirmation within 28 days after study blood draw
+
+  \* Examples of highly suspicious cases include: elevated CA125 and abnormal transvaginal ultrasound, suspicious renal or pancreatic mass on imaging, suspicious cutaneous lesion concerning for melanoma
+* Participants with a high suspicion of cancer: Central review of radiology reports and/or clinical documentation conducted by study chairs
+* Participants with a high suspicion of cancer: Age \>= 40 and =\< 75
+* Participants with a high suspicion of cancer: No known current pregnancy by self-report
+* Participants with a high suspicion of cancer: No known or prior history of in situ or invasive malignancy (excluding in situ non-melanoma skin cancers) other than the current cancer diagnosis
+* Participants with a high suspicion of cancer: Willingness to provide blood samples for research use
+* Participants with a high suspicion of cancer: Absence of medical contraindications to a research blood draw volume of 60 mL
+* Participants with a high suspicion of cancer: No history or organ transplantation
+* Participants with a high suspicion of cancer: Ability to read and comprehend English or Spanish \* Eligibility is restricted to individuals who can comprehend and read English and Spanish given that participation in the study will require the ability to read and complete questionnaires that are available only in those two languages
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT04314401
+        Title: Cancer Moonshot Biobank Research Protocol
+        Condition: ["Acute Myeloid Leukemia", "Anatomic Stage III Breast Cancer AJCC v8", "Anatomic Stage IV Breast Cancer AJCC v8", "Clinical Stage IV Esophageal Adenocarcinoma AJCC v8", "Clinical Stage IV Gastric Cancer AJCC v8", "Clinical Stage IV Gastroesophageal Junction Adenocarcinoma AJCC v8", "Esophageal Carcinoma", "Fallopian Tube Carcinoma", "Gastric Carcinoma", "Hormone Receptor-Positive Breast Carcinoma", "Invasive Breast Carcinoma", "Lung Non-Small Cell Carcinoma", "Lung Small Cell Carcinoma", "Malignant Solid Neoplasm", "Melanoma", "Metastatic Prostate Carcinoma", "Multiple Myeloma", "Ovarian Carcinoma", "Ovarian High Grade Serous Adenocarcinoma", "Primary Peritoneal Carcinoma", "Stage III Fallopian Tube Cancer AJCC v8", "Stage III Lung Cancer AJCC v8", "Stage III Ovarian Cancer AJCC v8", "Stage IV Colorectal Cancer AJCC v8", "Stage IV Fallopian Tube Cancer AJCC v8", "Stage IV Lung Cancer AJCC v8", "Stage IV Ovarian Cancer AJCC v8", "Stage IVB Prostate Cancer AJCC v8", "Triple-Negative Breast Carcinoma"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 13 Years - 
+        Gender: ALL
+        Hybrid Score: 5.100
+        
+        Brief Summary: This trial collects multiple tissue and blood samples, along with medical information, from cancer patients. The "Cancer Moonshot Biobank" is a longitudinal study. This means it collects and stores samples and information over time, throughout the course of a patient's cancer treatment. By looking at samples and information collected from the same people over time, researchers hope to better understand how cancer changes over time and over the course of medical treatments.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To support current and future investigations into drug resistance and sensitivity and other National Cancer Institute (NCI)-sponsored cancer research initiatives through the procurement and distribution of multiple longitudinal biospecimens and associated data from a diverse group of cancer patients who are undergoing standard of care treatment at NCI Community Oncology Research Program (NCORP) sites and other National Clinical Trials Network (NCTN) sites.
+
+SECONDARY OBJECTIVES:
+
+I. To provide a service of value to study participants and their medical providers through the performance of molecular profiling assays on tumor samples in a Clinical Laboratory Improvement Act (CLIA)-certified laboratory and reporting of results to physicians and patients that they may opt to use in clinical management, including analysis of data for acquired resistance mechanisms.
+
+II. To enable the development of patient-derived models such as cell lines and xenografts for cancer researchers through the provision of biospecimens from up to 20% of study participants to the NCI's Patient Derived Models Repository (PDMR), a national resource available to investigators.
+
+III. To develop and implement robust approaches in patient and provider engagement to improve understanding of biobanking and its relationship to cancer research and increase representation of minority and underserved study participants in cancer research.
+
+IV. To develop increased capabilities in United States (U.S.) community hospitals and clinics for contribution to cancer research through biobanking activities.
+
+V. To enable secondary research generated from the project through deposition of data in public repositories such as Cancer Research Data Commons (CRDC), The Cancer Imaging Archive (TCIA) and database of Genotypes and Phenotypes (dbGaP) and other potential NCI databases, including clinical, radiology and pathology data with an emphasis on treatment response and outcome data.
+
+VI. To provide residual biospecimens and associated data from the project to the cancer research community.
+
+OUTLINE:
+
+Patients undergo collection of tissue samples during baseline and at time of disease progression and collection of blood samples throughout the study, including at time of disease progression. Patients with hematological malignancies also undergo collection of bone marrow and cerebral spinal fluid at the same time points. Archival blood and tissue, as well as bone marrow of patients with hematological malignancies, is also collected if available. Additionally, patients may undergo computed tomography (CT), positron emission tomography (PET)/CT and/or magnetic resonance imaging (MRI) throughout the study, and may undergo paracentesis on study. Patient medical records are reviewed, and data is collected for at least 5 years.
+        
+        Inclusion Criteria: ["* Is consistent with OR has been diagnosed with one of the following:", "* Colorectal cancer: stage IV", "* Non-small cell or small cell lung cancer: stage III/IV", "* Prostate cancer: metastatic prostate cancer", "* Gastric cancer, not otherwise specified (NOS): stage IV", "* Esophageal cancer, NOS: stage IV", "* Adenocarcinoma of gastroesophageal junction: stage IV", "* High grade serous ovarian cancer: stage III/IV", "* Invasive breast carcinoma: stage III/IV", "* Melanoma: stage III/IV", "* Acute myeloid leukemia", "* Multiple myeloma", "* For the purposes of this study,", "* Re-staging is allowed", "* Having more than one primary cancer is allowed, if the patient is being treated solely for one of the eligible cancers listed above", "* Patient should fit in one of the following four clinical scenarios (a-d)", "* Undergoing diagnostic workup for one of the diseases listed for which treatment will likely include a new regimen of standard of care therapy OR", "* Scheduled to begin treatment with a new regimen of standard of care therapy OR", "* Currently progressing on a regimen of standard of care therapy OR", "* Currently being treated with a regimen standard of care therapy, without evidence of progression", "* Requirements for fresh tissue biospecimen collections at enrollment:", "* For clinical scenarios a, b, and c above, freshly collected tumor tissue or bone marrow (BM) aspirate must be submitted at enrollment", "* For clinical scenarios a and b, the fresh tissue collection must be prior to starting therapy", "* For clinical scenario a, the biospecimen collection must be part of a standard of care medical procedure", "* For clinical scenarios b or c, the biospecimen collection may be part of a standard of care medical procedure OR", "* The biospecimen collection may be part of a study-specific procedure (\"research only biopsy\"), when the patient has a tumor amenable to image guided or direct vision biopsy and is willing and able to undergo a tumor biopsy for molecular profiling", "* Note: For research-only biopsies, the biopsy must not be associated with a significant risk of severe or major complications or death; the procedure cannot be a mediastinal, laparoscopic, open or endoscopic biopsy; nor can the procedure be a brain biopsy; nor can the patient be under the age of majority as determined by each U.S. state", "* Requirements for archival tissue:", "* For clinical scenarios a and b above, archival tissue as outlined below must be submitted IF AVAILABLE", "* For clinical scenarios c and d above, archival tissue as outlined below is REQUIRED", "* Pre-existing archival material (formalin-fixed, paraffin-embedded \\[FFPE\\] block, BM aspirate, or unstained slides) that:", "* Contains the cancer type for which the participant is enrolled, and", "* Was collected no more than 5 years prior to initiation of therapy, and", "* Contains at least a surface area of 5 mm\\^2 and optimal surface area of 25 mm\\^2 or 3-5 mL cryopreserved bone marrow aspirate to yield 200 million bone marrow mononuclear cells, and", "* Contains at least 10% tumor content. 70% tumor content is optimal, and", "* No more than 1 line of standard of care systemic therapy was administered from the date of archival material collection to the date of initiation of therapy", "* Requirements for blood collection: ALL scenarios require fresh blood collection at enrollment", "* Blood collection for clinical scenarios a, b, and c must take place within 1 week of fresh tumor specimen collection", "* Blood collection for clinical scenario d must take place within 4 weeks of enrollment, and while patient is on treatment", "* Age 13 or older", "* Any sex", "* Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2", "* Ability to understand and willingness to sign an informed consent document. Consent may be provided by a Legally Authorized Representative (LAR) in accordance with 45 CFR 46.102(i)", "* NCI PDMR INCLUSION CRITERIA: Patients with CRC with mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status", "* NCI PDMR INCLUSION CRITERIA: Patients with CRC who are 40 years old or younger at time of collection irrespective of mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status", "* NCI PDMR INCLUSION CRITERIA: Patients with BRCA that are either", "* Any race/ethnicity with hormone receptor positive (ER+PR+, ER+PR-, or ER-PR+)", "* African American with triple negative (ER-PR-HER2-)", "* NCI PDMR INCLUSION CRITERIA: Patients with lung cancer (LCA), prostate cancer (PCA), gastroesophageal cancer (GEC), ovarian cancer (OV), acute myeloid leukemia (AML), multiple myeloma (MML)"]
+        
+        Exclusion Criteria: ["* Treated with or has already begun treatment with a non-standard of care therapeutic agent (investigational) in an interventional clinical trial", "* For the purposes of this study, past enrollment in clinical trials whereby the patient was randomized and treated with standard-of-care anti-cancer treatment (chemotherapy regimen, surgery and radiation therapy) is allowed", "* Uncontrolled intercurrent illness that in the physician's assessment would pose undue risk for biopsy", "* Use of full dose coumarin-derivative anticoagulants such as warfarin are prohibited. Patients may be switched to low molecular weight (LMW) heparin at physician discretion", "* Low molecular weight (LMW) heparin is permitted for prophylactic or therapeutic use", "* Factor X inhibitors are permitted", "* Use of anti-platelet drugs are permitted", "* Stopping the anticoagulation treatment for biopsy, bone marrow aspirate, or resection should be per site standard operating procedure (SOP)", "* NCI PDMR EXCLUSION CRITERIA: Patients with complete response", "* NCI PDMR EXCLUSION CRITERIA: Patients with invasive fungal infections", "* NCI PDMR EXCLUSION CRITERIA: Patients with active and/or uncontrolled infections or who are still recovering from an infection", "* Actively febrile patients with uncertain etiology of febrile episode", "* All antibiotics for non-prophylactic treatment of infection should be completed at least 1 week (7 days) prior to collection", "* No recurrence of fever or other symptoms related to infection for at least 1 week (7 days) following completion of antibiotics", "* NCI PDMR EXCLUSION CRITERIA: Patients with human immunodeficiency virus (HIV), active or chronic hepatitis (i.e. quantifiable hepatitis B virus \\[HBV\\]-deoxyribonucleic acid \\[DNA\\] and/or positive hepatitis B surface antigen \\[HbsAg\\], quantifiable hepatitis C virus \\[HCV\\]-ribonucleic acid \\[RNA\\]) or known history of HBV/HCV without documented resolution"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Is consistent with OR has been diagnosed with one of the following:
+
+  * Colorectal cancer: stage IV
+  * Non-small cell or small cell lung cancer: stage III/IV
+  * Prostate cancer: metastatic prostate cancer
+  * Gastric cancer, not otherwise specified (NOS): stage IV
+  * Esophageal cancer, NOS: stage IV
+  * Adenocarcinoma of gastroesophageal junction: stage IV
+  * High grade serous ovarian cancer: stage III/IV
+  * Invasive breast carcinoma: stage III/IV
+  * Melanoma: stage III/IV
+  * Acute myeloid leukemia
+  * Multiple myeloma
+
+    * For the purposes of this study,
+
+      * Re-staging is allowed
+      * Having more than one primary cancer is allowed, if the patient is being treated solely for one of the eligible cancers listed above
+* Patient should fit in one of the following four clinical scenarios (a-d)
+
+  * Undergoing diagnostic workup for one of the diseases listed for which treatment will likely include a new regimen of standard of care therapy OR
+  * Scheduled to begin treatment with a new regimen of standard of care therapy OR
+  * Currently progressing on a regimen of standard of care therapy OR
+  * Currently being treated with a regimen standard of care therapy, without evidence of progression
+* Requirements for fresh tissue biospecimen collections at enrollment:
+
+  * For clinical scenarios a, b, and c above, freshly collected tumor tissue or bone marrow (BM) aspirate must be submitted at enrollment
+
+    * For clinical scenarios a and b, the fresh tissue collection must be prior to starting therapy
+    * For clinical scenario a, the biospecimen collection must be part of a standard of care medical procedure
+    * For clinical scenarios b or c, the biospecimen collection may be part of a standard of care medical procedure OR
+    * The biospecimen collection may be part of a study-specific procedure ("research only biopsy"), when the patient has a tumor amenable to image guided or direct vision biopsy and is willing and able to undergo a tumor biopsy for molecular profiling
+
+      * Note: For research-only biopsies, the biopsy must not be associated with a significant risk of severe or major complications or death; the procedure cannot be a mediastinal, laparoscopic, open or endoscopic biopsy; nor can the procedure be a brain biopsy; nor can the patient be under the age of majority as determined by each U.S. state
+* Requirements for archival tissue:
+
+  * For clinical scenarios a and b above, archival tissue as outlined below must be submitted IF AVAILABLE
+  * For clinical scenarios c and d above, archival tissue as outlined below is REQUIRED
+  * Pre-existing archival material (formalin-fixed, paraffin-embedded \[FFPE\] block, BM aspirate, or unstained slides) that:
+
+    * Contains the cancer type for which the participant is enrolled, and
+    * Was collected no more than 5 years prior to initiation of therapy, and
+    * Contains at least a surface area of 5 mm\^2 and optimal surface area of 25 mm\^2 or 3-5 mL cryopreserved bone marrow aspirate to yield 200 million bone marrow mononuclear cells, and
+    * Contains at least 10% tumor content. 70% tumor content is optimal, and
+    * No more than 1 line of standard of care systemic therapy was administered from the date of archival material collection to the date of initiation of therapy
+* Requirements for blood collection: ALL scenarios require fresh blood collection at enrollment
+
+  * Blood collection for clinical scenarios a, b, and c must take place within 1 week of fresh tumor specimen collection
+  * Blood collection for clinical scenario d must take place within 4 weeks of enrollment, and while patient is on treatment
+* Age 13 or older
+* Any sex
+* Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2
+* Ability to understand and willingness to sign an informed consent document. Consent may be provided by a Legally Authorized Representative (LAR) in accordance with 45 CFR 46.102(i)
+* NCI PDMR INCLUSION CRITERIA: Patients with CRC with mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status
+* NCI PDMR INCLUSION CRITERIA: Patients with CRC who are 40 years old or younger at time of collection irrespective of mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status
+* NCI PDMR INCLUSION CRITERIA: Patients with BRCA that are either
+
+  * Any race/ethnicity with hormone receptor positive (ER+PR+, ER+PR-, or ER-PR+)
+  * African American with triple negative (ER-PR-HER2-)
+* NCI PDMR INCLUSION CRITERIA: Patients with lung cancer (LCA), prostate cancer (PCA), gastroesophageal cancer (GEC), ovarian cancer (OV), acute myeloid leukemia (AML), multiple myeloma (MML)
+
+Exclusion Criteria:
+
+* Treated with or has already begun treatment with a non-standard of care therapeutic agent (investigational) in an interventional clinical trial
+
+  * For the purposes of this study, past enrollment in clinical trials whereby the patient was randomized and treated with standard-of-care anti-cancer treatment (chemotherapy regimen, surgery and radiation therapy) is allowed
+* Uncontrolled intercurrent illness that in the physician's assessment would pose undue risk for biopsy
+* Use of full dose coumarin-derivative anticoagulants such as warfarin are prohibited. Patients may be switched to low molecular weight (LMW) heparin at physician discretion
+
+  * Low molecular weight (LMW) heparin is permitted for prophylactic or therapeutic use
+  * Factor X inhibitors are permitted
+  * Use of anti-platelet drugs are permitted
+
+    * Stopping the anticoagulation treatment for biopsy, bone marrow aspirate, or resection should be per site standard operating procedure (SOP)
+* NCI PDMR EXCLUSION CRITERIA: Patients with complete response
+* NCI PDMR EXCLUSION CRITERIA: Patients with invasive fungal infections
+* NCI PDMR EXCLUSION CRITERIA: Patients with active and/or uncontrolled infections or who are still recovering from an infection
+
+  * Actively febrile patients with uncertain etiology of febrile episode
+  * All antibiotics for non-prophylactic treatment of infection should be completed at least 1 week (7 days) prior to collection
+  * No recurrence of fever or other symptoms related to infection for at least 1 week (7 days) following completion of antibiotics
+* NCI PDMR EXCLUSION CRITERIA: Patients with human immunodeficiency virus (HIV), active or chronic hepatitis (i.e. quantifiable hepatitis B virus \[HBV\]-deoxyribonucleic acid \[DNA\] and/or positive hepatitis B surface antigen \[HbsAg\], quantifiable hepatitis C virus \[HCV\]-ribonucleic acid \[RNA\]) or known history of HBV/HCV without documented resolution
+        
+        ============================================================
+        TRIAL 3:
+        ============================================================
+        Trial ID: NCT06147037
+        Title: A Phase 1, First-in-human, Multicentre, Open-label, Dose Escalation Study of [225Ac]-FPI-2068 in Adult Patients With Advanced Solid Tumours
+        Condition: ["Advanced Solid Tumor", "Metastatic Colorectal Carcinoma", "Head and Neck Squamous Cell Carcinoma", "Non-small Cell Lung Cancer", "Pancreatic Ductal Adenocarcinoma", "Gastric Cancer", "Renal Cell Carcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.099
+        
+        Brief Summary: This is a first-in-human, Phase 1, non-randomized, multicenter, open-label clinical study designed to investigate the safety, tolerability, dosimetry, biodistribution, and pharmacokinetics (PK) of \[225Ac\]-FPI-2068, \[111In\]-FPI-2107, and FPI-2053 in metastatic and/or recurrent solid tumors (HNSCC, NSCLC, mCRC, PDAC, GC, RCC).
+        
+        Detailed Description: The study will be conducted in 2 parts:
+
+Part A: optimization of the FPI-2053 dose (treatment with dose level 1 of \[225Ac\]-FPI-2068 - fixed dose).
+
+Part B: dose escalation of \[225Ac\]-FPI-2068 with optimal FPI-2053. Part B will commence once the optimal dose of FPI-2053 is determined in Part A. The RP2D will be determined from Part B based on all available safety, efficacy, PK, and dosimetry information.
+        
+        Inclusion Criteria: ["Histologically and/or cytologically confirmed solid tumor that is metastatic, locally advanced, recurrent or inoperable.", "Disease that has progressed despite prior treatment, and for which additional effective standard therapy is not available or is contraindicated, not tolerable, or the participant refuses standard therapy.", "Measurable disease as defined by RECIST Version 1.1", "ECOG Performance status of 0 or 1", "Adequate organ function", "Key"]
+        
+        Exclusion Criteria: ["Previous treatment with any systemic radiopharmaceutical", "Prior anti-cancer therapy unless adequate washout and recovery from toxicities", "Contraindications to or inability to perform the imaging procedures required in this study", "Radiation therapy (RT) within 28 days prior to the first dose of \\[111In\\]-FPI-2107", "Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (\u2265 once per month)", "Patients with known CNS metastatic disease unless treated and stable"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+Histologically and/or cytologically confirmed solid tumor that is metastatic, locally advanced, recurrent or inoperable.
+
+Disease that has progressed despite prior treatment, and for which additional effective standard therapy is not available or is contraindicated, not tolerable, or the participant refuses standard therapy.
+
+Measurable disease as defined by RECIST Version 1.1
+
+ECOG Performance status of 0 or 1
+
+Adequate organ function
+
+Key Exclusion Criteria:
+
+Previous treatment with any systemic radiopharmaceutical
+
+Prior anti-cancer therapy unless adequate washout and recovery from toxicities
+
+Contraindications to or inability to perform the imaging procedures required in this study
+
+Radiation therapy (RT) within 28 days prior to the first dose of \[111In\]-FPI-2107
+
+Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (≥ once per month)
+
+Patients with known CNS metastatic disease unless treated and stable
+        
+        ============================================================
+        TRIAL 4:
+        ============================================================
+        Trial ID: NCT05783622
+        Title: An Open-Label, Multicenter, Phase 1/1b Study of JANX008 in Subjects With Advanced or Metastatic Solid Tumor Malignancies
+        Condition: ["Non-Small Cell Lung Cancer", "Renal Cell Carcinoma", "Squamous Cell Carcinoma of the Head and Neck", "Colorectal Carcinoma", "Small Cell Lung Cancer", "Pancreatic Ductal Adenocarcinoma", "Triple-negative Breast Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 100 Years
+        Gender: ALL
+        Hybrid Score: 5.097
+        
+        Brief Summary: This study is a first-in-human (FIH), Phase 1/1b, open-label, multicenter dose escalation and dose expansion study to assess the safety, tolerability, pharmacokinetics (PK), pharmacodynamics (PD), and preliminary anti-tumor activity of JANX008 in adult subjects with advanced or metastatic carcinoma expressing EGFR.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Subjects \u226518 years of age at the time of signing informed consent", "* Histologically or cytologically documented locally advanced or metastatic NSCLC, SCCHN, CRC, RCC, SCLC, PDAC, TNBC", "* Progressed or was intolerant to all available therapies known to confer clinical benefit appropriate for the tumor type", "* Adequate organ function", "* At least 1 measurable lesion per RECIST 1.1"]
+        
+        Exclusion Criteria: ["* Treatment with anti-cancer therapy within 28 days or \u22645 elimination half-lives, whichever is earlier, before enrollment", "* Prior treatment with EGFR-targeted bispecific T cell engager or CAR-T cell therapy", "* Prior treatment with CD3 engaging bispecific antibodies", "* Clinically significant cardiovascular diseases", "* Active clinically significant infection (bacterial, viral, fungal, mycobacteria, or other)", "* On supplemental oxygen", "* Any medical condition or clinical laboratory abnormality likely to interfere with assessment of safety or efficacy of study treatment"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Subjects ≥18 years of age at the time of signing informed consent
+* Histologically or cytologically documented locally advanced or metastatic NSCLC, SCCHN, CRC, RCC, SCLC, PDAC, TNBC
+* Progressed or was intolerant to all available therapies known to confer clinical benefit appropriate for the tumor type
+* Adequate organ function
+* At least 1 measurable lesion per RECIST 1.1
+
+Exclusion Criteria:
+
+* Treatment with anti-cancer therapy within 28 days or ≤5 elimination half-lives, whichever is earlier, before enrollment
+* Prior treatment with EGFR-targeted bispecific T cell engager or CAR-T cell therapy
+* Prior treatment with CD3 engaging bispecific antibodies
+* Clinically significant cardiovascular diseases
+* Active clinically significant infection (bacterial, viral, fungal, mycobacteria, or other)
+* On supplemental oxygen
+* Any medical condition or clinical laboratory abnormality likely to interfere with assessment of safety or efficacy of study treatment
+        
+        ============================================================
+        TRIAL 5:
+        ============================================================
+        Trial ID: NCT04585750
+        Title: A Phase 1/2 Open-label, Multicenter Study to Assess the Safety, Tolerability, Pharmacokinetics, Pharmacodynamics, and Efficacy of PC14586 in Patients With Locally Advanced or Metastatic Solid Tumors Harboring a TP53 Y220C Mutation (PYNNACLE)
+        Condition: ["Advanced Solid Tumor", "Advanced Malignant Neoplasm", "Metastatic Cancer", "Metastatic Solid Tumor", "Lung Cancer", "Ovarian Cancer", "Endometrial Cancer", "Prostate Cancer", "Colorectal Cancer", "Breast Cancer", "Other Cancer", "Locally Advanced", "Head and Neck Cancer", "Gall Bladder Cancer", "Small Cell Lung Cancer", "Small Cell Lung Cancer ( SCLC )", "Small Cell Lung Carcinoma", "NSCLC", "NSCLC (Non-small Cell Lung Cancer)", "SCLC", "Non-Small Cell Lung Carcinoma", "Triple Negative Breast Cancer", "TNBC", "HER2+ Breast Cancer", "Non-Small Cell Lung Cancer", "ER/PR Positive Breast Cancer", "HER2- Breast Cancer", "HER2-positive Breast Cancer", "HER2-negative Breast Cancer", "ER/PR(+), Her2(-) Breast Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 12 Years - 
+        Gender: ALL
+        Hybrid Score: 5.083
+        
+        Brief Summary: The Phase 2 monotherapy portion of this study is currently enrolling and will evaluate the efficacy and safety of PC14586 (INN rezatapopt) in participants with locally advanced or metastatic solid tumors harboring a TP53 Y220C mutation. The Phase 1 portion of the study will assess the safety, tolerability and preliminary efficacy of multiple dose levels of rezatapopt as monotherapy and in Phase 1b in combination with pembrolizumab.
+        
+        Detailed Description: Rezatapopt is a first-in-class, oral, small molecule p53 reactivator that is selective for the TP53 Y220C mutation.
+
+The primary objective of Phase 2 Monotherapy is to evaluate the efficacy of rezatapopt at the Recommended Phase 2 Dose (RP2D) including the Overall Response Rate (ORR) in the Ovarian Cancer Cohort and the ORR across all cohorts as determined by blinded independent central review. Secondary objectives of Phase 2 are to characterize the safety, pharmacokinetic (PK) properties, quality of life, and other efficacy measures of PC14586 rezatapopt at the RP2D. Enrollment is open for the Phase 2 Monotherapy portion of the study.
+
+The primary objective of Phase 1 Monotherapy is to establish the maximum tolerated dose (MTD) and RP2D of rezatapopt. Secondary objectives are to characterize the PK properties, safety and tolerability, and to assess preliminary efficacy including ORR. Enrollment into Phase 1 Monotherapy is complete.
+
+The primary objective of Phase 1b Combination Therapy is to establish the MTD/RP2D of rezatapopt when administered in combination with pembrolizumab. Secondary objectives of Phase 1b Combination Therapy are to characterize PK, safety and tolerability, and to assess preliminary efficacy of rezatapopt when administered in combination with pembrolizumab, including ORR. Enrollment into Phase 1b Combination Therapy is complete.
+        
+        Inclusion Criteria: ["* At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.", "* Locally advanced or metastatic solid malignancy with a TP53 Y220C mutation", "* Eastern Cooperative Oncology Group (ECOG) status of 0 or 1", "* Previously treated with one or more lines of anticancer therapy and progressive disease", "* Adequate organ function", "* Measurable disease per RECIST v1.1 (Phase 2)", "Additional Criteria for Inclusion in Phase 1b (rezatapopt) + pembrolizumab combination)", "* Anti-PD-1/PD-L1 naive or must have progressed on treatment", "* Measurable disease"]
+        
+        Exclusion Criteria: ["* Anti-cancer therapy within 21 days (or 5 half-lives) of receiving the study drug", "* Radiotherapy within 28 days of receiving the study drug", "* Primary CNS tumor", "* History of leptomeningeal disease or spinal cord compression", "* Brain metastases, unless neurologically stable and do not require steroids to treat associated neurological symptoms", "* Stroke or transient ischemic attack within 6 months prior to screening", "* Heart conditions such as unstable angina, uncontrolled hypertension, a heart attack within 6 months prior to screening, congestive heart failure, prolongation of QT interval, or other rhythm abnormalities", "* Strong CYP3A4 inducers", "* History of gastrointestinal (GI) disease that may interfere with absorption of study drug or patients unable to take oral medication", "* History of prior organ transplant", "* Known, active malignancy, except for treated cervical intraepithelial neoplasia, or non-melanoma skin cancer", "* Known, active uncontrolled Hepatitis B, Hepatitis C, or human immunodeficiency virus infection", "Additional Criteria for Exclusion from Phase 2 (rezatapopt monotherapy)", "* Known KRAS mutation, defined as a single nucleotide variant (SNV) (Phase 2)", "Additional Criteria for Exclusion from Phase 1b (rezatapopt) + pembrolizumab combination)", "* Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor and discontinued from that treatment due to a Grade 3 or higher immune-related AE (irAE)", "* Received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention", "* Diagnosis of immunodeficiency or receiving chronic systemic steroid therapy within 7 days prior to the first dose of study drug", "* Hypersensitivity (\u2265 Grade 3) to pembrolizumab and/or any of its excipients", "* Active autoimmune disease that has required systemic treatment in past 2 years", "* History of radiation pneumonitis", "* History of (non-infectious) or active pneumonitis / interstitial lung disease that required steroids", "* Active infection requiring systemic therapy", "* Known history of HIV infection", "* Has previously received rezatapopt"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* At least 18 years of age or 12 to 17 years of age after Safety Review Committee approval.
+* Locally advanced or metastatic solid malignancy with a TP53 Y220C mutation
+* Eastern Cooperative Oncology Group (ECOG) status of 0 or 1
+* Previously treated with one or more lines of anticancer therapy and progressive disease
+* Adequate organ function
+* Measurable disease per RECIST v1.1 (Phase 2)
+
+Additional Criteria for Inclusion in Phase 1b (rezatapopt) + pembrolizumab combination)
+
+* Anti-PD-1/PD-L1 naive or must have progressed on treatment
+* Measurable disease
+
+Exclusion Criteria:
+
+* Anti-cancer therapy within 21 days (or 5 half-lives) of receiving the study drug
+* Radiotherapy within 28 days of receiving the study drug
+* Primary CNS tumor
+* History of leptomeningeal disease or spinal cord compression
+* Brain metastases, unless neurologically stable and do not require steroids to treat associated neurological symptoms
+* Stroke or transient ischemic attack within 6 months prior to screening
+* Heart conditions such as unstable angina, uncontrolled hypertension, a heart attack within 6 months prior to screening, congestive heart failure, prolongation of QT interval, or other rhythm abnormalities
+* Strong CYP3A4 inducers
+* History of gastrointestinal (GI) disease that may interfere with absorption of study drug or patients unable to take oral medication
+* History of prior organ transplant
+* Known, active malignancy, except for treated cervical intraepithelial neoplasia, or non-melanoma skin cancer
+* Known, active uncontrolled Hepatitis B, Hepatitis C, or human immunodeficiency virus infection
+
+Additional Criteria for Exclusion from Phase 2 (rezatapopt monotherapy)
+
+* Known KRAS mutation, defined as a single nucleotide variant (SNV) (Phase 2)
+
+Additional Criteria for Exclusion from Phase 1b (rezatapopt) + pembrolizumab combination)
+
+* Received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor and discontinued from that treatment due to a Grade 3 or higher immune-related AE (irAE)
+* Received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention
+* Diagnosis of immunodeficiency or receiving chronic systemic steroid therapy within 7 days prior to the first dose of study drug
+* Hypersensitivity (≥ Grade 3) to pembrolizumab and/or any of its excipients
+* Active autoimmune disease that has required systemic treatment in past 2 years
+* History of radiation pneumonitis
+* History of (non-infectious) or active pneumonitis / interstitial lung disease that required steroids
+* Active infection requiring systemic therapy
+* Known history of HIV infection
+* Has previously received rezatapopt
+        
+        ============================================================
+        TRIAL 6:
+        ============================================================
+        Trial ID: NCT05581004
+        Title: A Phase Ia/Ib, Open Label, Multicenter, Dose-escalation Study to Evaluate the Safety, Pharmacokinetics, and Activity of RO7502175 as a Single Agent and in Combination With Checkpoint Inhibitor in Patients With Locally Advanced or Metastatic Solid Tumors
+        Condition: ["Locally Advanced or Metastatic Solid Tumors", "NSCLC", "HNSCC", "Melanoma", "TNBC", "Esophageal Cancer", "Gastric Cancer", "Cervical Cancer", "Colorectal Cancer", "Urothelial Carcinoma", "Clear Cell RCC", "HCC"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.077
+        
+        Brief Summary: This is a first-in-human study to evaluate the safety, tolerability, pharmacokinetics (PK), and anti-tumor activity of RO7502175 when administered as a single agent and in combination with atezolizumab or pembrolizumab in adult participants with locally advanced or metastatic solid tumors, including non-small-cell lung cancer (NSCLC), head and neck squamous cell carcinoma (HNSCC), melanoma, triple-negative breast cancer (TNBC), esophageal cancer, gastric cancer, cervical cancer, colorectal cancer (CRC), urothelial carcinoma (UC), clear cell renal cell carcinoma (RCC) and hepatocellular carcinoma (HCC). Participants will be enrolled in 2 stages: dose escalation and dose expansion.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Life expectancy at least 12 weeks", "* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1", "* Measurable disease according to Response Evaluation criteria in Solid Tumors (RECIST) Version 1.1", "* Histologically confirmed locally advanced, recurrent, or metastatic incurable solid tumor malignancy", "* Tumor Specimen availability"]
+        
+        Exclusion Criteria: ["* Pregnant or breastfeeding or intention of becoming pregnant during the study or within 4 months after the final dose of RO7501275, or 4 months after the final dose of pembrolizumab, or 5 months after the final dose of atezolizumab", "* Any anti-cancer therapy, whether investigational or approved, including chemotherapy, hormonal therapy, or radiotherapy, within 3 weeks prior to initiation of study treatment", "* Active hepatitis B or C or tuberculosis", "* Positive test for human immunodeficiency virus (HIV) infection", "* Acute or chronic active Epstein-Barr virus (EBV) infection at screening", "* Administration of a live, attenuated vaccine (e.g., FluMist) within 4 weeks before first RO7502175 infusion", "* Symptomatic, untreated, or actively progressing central nervous system (CNS) metastases", "* Active or history of autoimmune disease", "* Prior allogeneic stem cell or organ transplantation"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Life expectancy at least 12 weeks
+* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1
+* Measurable disease according to Response Evaluation criteria in Solid Tumors (RECIST) Version 1.1
+* Histologically confirmed locally advanced, recurrent, or metastatic incurable solid tumor malignancy
+* Tumor Specimen availability
+
+Exclusion Criteria:
+
+* Pregnant or breastfeeding or intention of becoming pregnant during the study or within 4 months after the final dose of RO7501275, or 4 months after the final dose of pembrolizumab, or 5 months after the final dose of atezolizumab
+* Any anti-cancer therapy, whether investigational or approved, including chemotherapy, hormonal therapy, or radiotherapy, within 3 weeks prior to initiation of study treatment
+* Active hepatitis B or C or tuberculosis
+* Positive test for human immunodeficiency virus (HIV) infection
+* Acute or chronic active Epstein-Barr virus (EBV) infection at screening
+* Administration of a live, attenuated vaccine (e.g., FluMist) within 4 weeks before first RO7502175 infusion
+* Symptomatic, untreated, or actively progressing central nervous system (CNS) metastases
+* Active or history of autoimmune disease
+* Prior allogeneic stem cell or organ transplantation
+        
+        ============================================================
+        TRIAL 7:
+        ============================================================
+        Trial ID: NCT06128551
+        Title: Phase 1b, Multicenter, Open-Label, Dose Escalation and Dose Expansion Study of RMC-6291 in Combination with RMC-6236 in Participants with Advanced KRAS G12C Mutant Solid Tumors
+        Condition: ["Non-Small Cell Lung Cancer (NSCLC)", "Colorectal Cancer", "Pancreatic Ductal Adenocarcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 125 Years
+        Gender: ALL
+        Hybrid Score: 5.073
+        
+        Brief Summary: This study is to evaluate the safety, tolerability, and PK profiles of RMC-6291 and RMC-6236 in adults with KRAS G12C-mutated solid tumors.
+        
+        Detailed Description: This is an open-label, multicenter, Phase 1b study of RMC-6291 in combination with RMC-6236 in participants with advanced KRAS G12C-mutated solid tumors, to identify the maximum tolerated dose (MTD) and/or recommended Phase 2 dose and schedule (RP2DS) and provide a preliminary assessment of the antitumor activity of RMC-6291 in participants with KRASG12C tumors.
+
+The study consists of two parts: Part 1 - Dose-Escalation and Part 2 Dose-Expansion.
+        
+        Inclusion Criteria: ["* 18 years of age", "* Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy", "1. Part 1. Dose Escalation: solid tumors, previously treated", "2. Part 2. Dose Expansion:", "i. NSCLC, previously treated with immunotherapy, chemotherapy, and KRAS G12C (OFF) inhibitors, ii. NSCLC, previously treated with immunotherapy and chemotherapy, na\u00efve to KRAS G12C (OFF) inhibitors, iii. NSCLC, previously treated with immunotherapy, chemotherapy, with untreated, asymptomatic central nervous system (CNS) metastases \\<2 cm in size iv. Solid tumors, previously treated, na\u00efve to KRAS G12C (OFF) inhibitors.", "* ECOG performance status 0 or 1", "* Adequate organ function"]
+        
+        Exclusion Criteria: ["* Primary central nervous system (CNS) tumors", "* Active brain metastases", "* Known impairment of GI function that would alter the absorption", "* Major surgical procedures within 28 days or non-study related minor procedures within 7 days of treatment"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* 18 years of age
+* Histology: pathologically documented, KRAS G12C-mutated, advanced or metastatic solid tumors not amendable to curative therapy
+
+  1. Part 1. Dose Escalation: solid tumors, previously treated
+  2. Part 2. Dose Expansion:
+
+  i. NSCLC, previously treated with immunotherapy, chemotherapy, and KRAS G12C (OFF) inhibitors, ii. NSCLC, previously treated with immunotherapy and chemotherapy, naïve to KRAS G12C (OFF) inhibitors, iii. NSCLC, previously treated with immunotherapy, chemotherapy, with untreated, asymptomatic central nervous system (CNS) metastases \<2 cm in size iv. Solid tumors, previously treated, naïve to KRAS G12C (OFF) inhibitors.
+* ECOG performance status 0 or 1
+* Adequate organ function
+
+Exclusion Criteria:
+
+* Primary central nervous system (CNS) tumors
+* Active brain metastases
+* Known impairment of GI function that would alter the absorption
+* Major surgical procedures within 28 days or non-study related minor procedures within 7 days of treatment
+        
+        ============================================================
+        TRIAL 8:
+        ============================================================
+        Trial ID: NCT05086692
+        Title: A Phase 1/2 Open Label, Dose Escalation and Expansion Study of MDNA11, IL-2 Superkine, Administered Alone or in Combination With Immune Checkpoint Inhibitor in Patients With Advanced Solid Tumors
+        Condition: ["Advanced Solid Tumor", "Unresectable Solid Tumor", "Clear Cell Renal Cell Carcinoma", "Triple Negative Breast Cancer", "Non-Small Cell Lung Cancer Squamous", "Non-Small Cell Lung Cancer Non-squamous", "Colorectal Cancer (MSI-H)", "Gastric Cancer", "Cervical Cancer", "Basal Cell Carcinoma", "Bladder Cancer", "Merkel Cell Carcinoma", "Squamous Cell Carcinoma of Head and Neck", "Cutaneous Squamous Cell Carcinoma", "Pleural Mesothelioma", "Esophageal Cancer", "Endometrial Carcinoma", "Solid Tumor", "Solid Tumor, Adult", "MSI-H Solid Malignant Tumor", "Cancer With A High Tumor Mutational Burden", "Epithelial Ovarian Carcinoma", "Primary Peritoneal Cancer", "Gastroesophageal Junction (GEJ) Cancer", "Acral Melanoma", "Mucosal Melanoma", "Cutaneous Melanoma", "DMMR Solid Malignant Tumor", "Fallopian Tube Cancer", "Ovarian Cancer", "MSI-H Cancer", "DMMR Cancer", "Pancreas Adenocarcinoma (MSI-H)", "Skin Cancer", "Viral Cancer", "Cervical Cancers", "Endometrial Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.068
+        
+        Brief Summary: This is a Phase 1/2, multi-center, open-label, dose-escalation and expansion study to evaluate safety and tolerability, PK, pharmacodynamic, and early signal of anti-tumor activity of MDNA11 alone or in combination with a checkpoint inhibitor in patients with advanced solid tumors.
+        
+        Detailed Description: The study drug, MDNA11, long-acting "beta-only" recombinant interleukin-2 (rIL-2). MDNA11 specifically engineered to overcome the shortcomings of rhIL-2 (aldesleukin) by preferentially activating immune effector cells (CD8+ T- and NK cells) responsible for killing cancer cells, with minimal or no stimulation of immunosuppressive Tregs. It is designed to potentially enhance host immune response and fusion to albumin increases the half-life further avoiding frequent dosing required with rhIL-2.
+
+The study will be conducted at up to 30 clinical sites following regulatory authority and institutional review board / independent ethics committee (IRB/ IEC) approval and completion of informed consent. The study will be conducted in multiple parts:
+
+* Monotherapy (MDNA11 alone) dose escalation
+* Monotherapy (MDNA11 alone) dose expansion in select tumor types
+* Combination (MDNA11 + pembrolizumab) dose escalation
+* Combination (MDNA11 + pembrolizumab) dose expansion in select tumor types
+
+Approximately 115 patients will be enrolled.
+
+After commencing treatment (first exposure of MDNA11 alone or MDNA11 + pembrolizumab), tumor assessment by CT/MRI will be performed every 8 weeks ± 1 week until immune confirmed progressive disease ("iCPD") by iRECIST, discontinuation of study drug(s), withdrawal of consent or loss to follow-up. Treatment beyond progression may be permitted if criteria are met. Patients can withdraw from participation at any time.
+        
+        Inclusion Criteria: ["1. Aged at least 18 years (inclusive at the time of informed consent).", "2. Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.", "3. Must be able and willing to provide written informed consent prior to start of any study procedures and assessments and must be willing to comply with all study procedures.", "4. Histologically or cytologically confirmed locally advanced or metastatic solid tumor (see tumor types listed under conditions)", "5. Demonstrated adequate organ function", "6. Measurable disease as per Response Evaluation Criteria in Solid Tumors, (RECIST v1.1) and documented by CT and/or MRI.", "7. Life expectancy of \u2265 12 weeks.", "8. Women of childbearing potential (WOCBP) must have a negative pregnancy test at screening and within 72 hours before the first dose of study drug(s). Women must not be breastfeeding.", "9. Agree to use highly effective contraception methods. WOCBP must agree to use highly effective birth control.", "Key"]
+        
+        Exclusion Criteria: ["1. Last administration of prior antitumor therapy:", "* Prior systemic anti-cancer therapy including investigational agents within 4 weeks (could consider shorter interval for kinase inhibitors or other short half-life drugs) prior to start of treatment.", "* Prior radiotherapy within 2 weeks prior to start of treatment or has had a history of radiation pneumonitis. A 1-week washout is required for palliative radiation (\\<2 weeks of radiotherapy) to non-CNS disease.", "* Radiation therapy to the lung that is \\> 30Gy within 6 months prior to start of treatment.", "* Currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to start of treatment. Concomitant participation in an observational study must be discussed on a case-by-case basis with the MM for approval.", "2. Has known active CNS metastases and/or carcinomatous meningitis. Patients with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging (note that the repeat imaging should be performed during study screening), clinically stable and without requirement of steroid treatment for at least 14 days prior to start of treatment, subject to discussion with MM.", "3. Active malignancy (other than the disease under treatment in the study) within the previous 3 years except for curable cancers.", "4. Condition requiring long-term systemic treatment with either corticosteroids \\> 10 mg daily prednisone equivalent or any other form of immunosuppressive therapy within 7 days prior to start of treatment.", "5. Clinically significant active, known or suspected autoimmune disease, or diseases that can be exacerbated with immunotherapy.", "6. Severe pulmonary, cardiac or other systemic disease.", "7. Known hepatitis B or C virus infection.", "8. Females who are pregnant or lactating or planning to become pregnant during the study.", "9. Has had an allogeneic tissue/solid organ transplant.", "10. Active infection requiring systemic therapy.", "11. Any medical, emotional or psychiatric condition that interfere with the patient's ability to adhere to the protocol", "12. Any other underlying medical conditions that, in the Investigator's opinion, will make the administration of study drug(s) unsafe or obscure the interpretation of toxicity determination or adverse events.", "13. Known severe hypersensitivity to any component of study drug(s).", "14. Inability to comply with study and follow up procedures as judged by the Investigator."]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+1. Aged at least 18 years (inclusive at the time of informed consent).
+2. Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.
+3. Must be able and willing to provide written informed consent prior to start of any study procedures and assessments and must be willing to comply with all study procedures.
+4. Histologically or cytologically confirmed locally advanced or metastatic solid tumor (see tumor types listed under conditions)
+5. Demonstrated adequate organ function
+6. Measurable disease as per Response Evaluation Criteria in Solid Tumors, (RECIST v1.1) and documented by CT and/or MRI.
+7. Life expectancy of ≥ 12 weeks.
+8. Women of childbearing potential (WOCBP) must have a negative pregnancy test at screening and within 72 hours before the first dose of study drug(s). Women must not be breastfeeding.
+9. Agree to use highly effective contraception methods. WOCBP must agree to use highly effective birth control.
+
+Key Exclusion Criteria:
+
+1. Last administration of prior antitumor therapy:
+
+   * Prior systemic anti-cancer therapy including investigational agents within 4 weeks (could consider shorter interval for kinase inhibitors or other short half-life drugs) prior to start of treatment.
+   * Prior radiotherapy within 2 weeks prior to start of treatment or has had a history of radiation pneumonitis. A 1-week washout is required for palliative radiation (\<2 weeks of radiotherapy) to non-CNS disease.
+   * Radiation therapy to the lung that is \> 30Gy within 6 months prior to start of treatment.
+   * Currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to start of treatment. Concomitant participation in an observational study must be discussed on a case-by-case basis with the MM for approval.
+2. Has known active CNS metastases and/or carcinomatous meningitis. Patients with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging (note that the repeat imaging should be performed during study screening), clinically stable and without requirement of steroid treatment for at least 14 days prior to start of treatment, subject to discussion with MM.
+3. Active malignancy (other than the disease under treatment in the study) within the previous 3 years except for curable cancers.
+4. Condition requiring long-term systemic treatment with either corticosteroids \> 10 mg daily prednisone equivalent or any other form of immunosuppressive therapy within 7 days prior to start of treatment.
+5. Clinically significant active, known or suspected autoimmune disease, or diseases that can be exacerbated with immunotherapy.
+6. Severe pulmonary, cardiac or other systemic disease.
+7. Known hepatitis B or C virus infection.
+8. Females who are pregnant or lactating or planning to become pregnant during the study.
+9. Has had an allogeneic tissue/solid organ transplant.
+10. Active infection requiring systemic therapy.
+11. Any medical, emotional or psychiatric condition that interfere with the patient's ability to adhere to the protocol
+12. Any other underlying medical conditions that, in the Investigator's opinion, will make the administration of study drug(s) unsafe or obscure the interpretation of toxicity determination or adverse events.
+13. Known severe hypersensitivity to any component of study drug(s).
+14. Inability to comply with study and follow up procedures as judged by the Investigator.
+        
+        ============================================================
+        TRIAL 9:
+        ============================================================
+        Trial ID: NCT05514717
+        Title: A Phase 1, First-in-Human, Dose Escalation and Expansion, Multicenter Study of XMT-2056 in Participants With Advanced/Recurrent Solid Tumors That Express HER2
+        Condition: ["HER2-positive Breast Cancer", "HER2-positive Gastric Cancer", "HER2-positive Non-Small Cell Lung Cancer", "HER2-positive Colorectal Cancer", "HER2-positive Tumors", "HER2 Low Breast Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.065
+        
+        Brief Summary: A Study of XMT-2056 in advanced/recurrent solid tumors that express HER2.
+        
+        Detailed Description: The first-in-human (FIH) study of XMT-2056 is a Phase 1, open-label study of XMT-2056 in previously treated patients with advanced/recurrent solid tumors expressing HER2. The XMT-2056 monotherapy trial will consist of dose escalation (DES) and expansion (EXP) parts.
+
+DES will be the dose-finding portion of the study to assess the safety and tolerability of XMT-2056 and determine the maximum tolerated dose (MTD) and/or Recommended Phase 2 Dose (RP2D). The RP2D will be determined based on the totality of the clinical data, including safety and preliminary anti-tumor effect, PK, and relevant biomarker data.
+        
+        Inclusion Criteria: ["* Participant has recurrent or metastatic solid tumors with HER2 expression and has disease progression after treatment, is intolerant to treatment, or is contraindicated with available anti-cancer therapies known to confer benefit, based on investigator's judgement. Note: Participants must have HER2 positivity per the results of their most recent tumor tissue testing, defined as IHC 3+ or IHC 2+ in combination with in situ hybridization (ISH)+. Participants with ERBB2-activating mutations or ERBB2 gene amplification in the absence of HER2 positivity are considered ineligible.", "* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.", "* Participant must have measurable disease as defined by RECIST version 1.1.", "* Participant has fresh tumor biopsy tissue available for submission to central laboratory. If obtaining fresh tumor tissue is medically contraindicated, archival tumor tissue can be submitted following written approval of the request by the study Medical Monitor. Samples must be obtained after the participant's most recent HER2-targeting therapy unless determined to be medically contraindicated after discussion with the medical monitor."]
+        
+        Exclusion Criteria: ["* \u2022 Participant is receiving immunosuppressive doses of systemic medications, (doses \\>10 mg/day prednisone or equivalent) that cannot be discontinued for at least 2 weeks before the first dose and during study drug treatment administration. Note: physiologic hormone replacement therapy is an exception.", "* Participant has received prior treatment targeting STING pathway.", "* Diagnosis of additional malignancy that required active treatment (including surgery, systemic therapy, and radiation) within the last 2 years, expect for adequately treated basal cell or squamous cell skin cancer or carcinoma in situ of the breast or the cervix. Participants with an additional malignancy that has a low risk for recurrence may be eligible after discussion with the study Medical Monitor.", "* Participants have untreated CNS metastases (including new and progressive brain metastases), history of leptomeningeal metastasis, or carcinomatous meningitis.", "1. Participants are eligible if CNS metastases are adequately treated and participants are neurologically stable for at least 2 weeks prior to enrollment.", "2. In addition, participants must be either off corticosteroids, or on a stable/decreasing dose of \u2264 10 mg prednisone daily (or equivalent)."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Participant has recurrent or metastatic solid tumors with HER2 expression and has disease progression after treatment, is intolerant to treatment, or is contraindicated with available anti-cancer therapies known to confer benefit, based on investigator's judgement. Note: Participants must have HER2 positivity per the results of their most recent tumor tissue testing, defined as IHC 3+ or IHC 2+ in combination with in situ hybridization (ISH)+. Participants with ERBB2-activating mutations or ERBB2 gene amplification in the absence of HER2 positivity are considered ineligible.
+* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.
+* Participant must have measurable disease as defined by RECIST version 1.1.
+* Participant has fresh tumor biopsy tissue available for submission to central laboratory. If obtaining fresh tumor tissue is medically contraindicated, archival tumor tissue can be submitted following written approval of the request by the study Medical Monitor. Samples must be obtained after the participant's most recent HER2-targeting therapy unless determined to be medically contraindicated after discussion with the medical monitor.
+
+Exclusion Criteria:
+
+* • Participant is receiving immunosuppressive doses of systemic medications, (doses \>10 mg/day prednisone or equivalent) that cannot be discontinued for at least 2 weeks before the first dose and during study drug treatment administration. Note: physiologic hormone replacement therapy is an exception.
+* Participant has received prior treatment targeting STING pathway.
+* Diagnosis of additional malignancy that required active treatment (including surgery, systemic therapy, and radiation) within the last 2 years, expect for adequately treated basal cell or squamous cell skin cancer or carcinoma in situ of the breast or the cervix. Participants with an additional malignancy that has a low risk for recurrence may be eligible after discussion with the study Medical Monitor.
+* Participants have untreated CNS metastases (including new and progressive brain metastases), history of leptomeningeal metastasis, or carcinomatous meningitis.
+
+  1. Participants are eligible if CNS metastases are adequately treated and participants are neurologically stable for at least 2 weeks prior to enrollment.
+  2. In addition, participants must be either off corticosteroids, or on a stable/decreasing dose of ≤ 10 mg prednisone daily (or equivalent).
+        
+        ============================================================
+        TRIAL 10:
+        ============================================================
+        Trial ID: NCT03093116
+        Title: A Phase 1/2, Open-Label, Multi-Center, First-in-Human Study of the Safety, Tolerability, Pharmacokinetics, and Anti-Tumor Activity of TPX-0005 in Patients With Advanced Solid Tumors Harboring ALK, ROS1, or NTRK1-3 Rearrangements (TRIDENT-1)
+        Condition: ["Locally Advanced Solid Tumors", "Metastatic Solid Tumors"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 12 Years - 
+        Gender: ALL
+        Hybrid Score: 5.055
+        
+        Brief Summary: Phase 1 dose escalation will determine the first cycle dose-limiting toxicities (DLTs), the maximum tolerated dose (MTD), the biologically effective dose and recommended Phase 2 dose (RP2D) of repotrectinib given to adult subjects with advanced solid malignancies harboring an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement.
+
+Midazolam DDI substudy will examine effect of of repotrectinib on CYP3A induction.
+
+Phase 2 will determine the confirmed Overall Response Rate (ORR) as assessed by Blinded Independent Central Review (BICR) of repotrectinib in each subject population expansion cohort of advanced solid tumors that harbor a ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement. The secondary objective will include the duration of response (DOR), time to response (TTR), progression-free survival (PFS), overall survival (OS) and clinical benefit rate (CBR) of repotrectinib in each expansion cohort of advanced solid tumors that harbor a ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement.
+        
+        Detailed Description: In Phase 2, study subjects will be enrolled into 6 distinct expansion (EXP) cohorts:
+
+* EXP-1: ROS1 TKI-naïve ROS1+ NSCLC. Up to one prior line of chemotherapy OR immunotherapy is allowed
+* EXP-2: 1 Prior ROS1 TKI AND 1 Platinum-based Chemotherapy ROS1+ NSCLC. Disease progression, or intolerant to one prior line of a ROS1 TKI. Must have received one prior line of platinum based chemotherapy OR one prior line of platinum based chemotherapy in combination with immunotherapy before or after a ROS1 TKI
+* EXP-3: 2 Prior ROS1 TKIs AND NO Chemotherapy ROS1+ NSCLC. Disease progression, or intolerant to 2 prior lines of a ROS1 TKI treatment. No prior lines of chemotherapy or immunotherapy are allowed.
+* EXP-4: 1 Prior ROS1 TKI and NO Chemotherapy or Immunotherapy. Disease progression or intolerant to one prior line of a ROS1 TKI. No prior lines of chemotherapy or immunotherapy are allowed.
+* EXP-5: TRK TKI-naïve NTRK+ solid tumors. Any number of prior lines of chemo or immunotherapy is allowed.
+* EXP-6: TRK TKI-pretreated NTRK+ solid tumors. Disease progression, or intolerant to 1 or 2 prior TRK TKIs. Any number of prior lines of chemo- or immunotherapy are allowed.
+        
+        Inclusion Criteria: ["1. Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.", "2. ECOG PS 0-1.", "3. Age \u226518 (or age \u2265 20 of age as required by local regulation).", "4. Capability to swallow capsules intact (without chewing, crushing, or opening).", "5. At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.", "6. Prior cytotoxic chemotherapy is allowed.", "7. Prior immunotherapy is allowed.", "8. Resolution of all acute toxic effects (excluding alopecia) of any prior anti-cancer therapy to National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) Version 4.03 Grade less than or equal to 1.", "9. Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.", "10. Baseline laboratory values fulfilling the following requirements:Absolute neutrophils count (ANC) \u22651500/mm3 (1.5 \u00d7 109/L); Platelets (PLTs) \u2265100,000/mm3 (100 \u00d7 109/L); Hemoglobin \u2265 9.0 g/dL transfusions are allowed; Serum creatinine or creatinine clearance Within normal limits or \\> 40 mL/min; Total serum bilirubin \\< 1.5 \u00d7 ULN; Liver transaminases (ASTs/ALTs) \\< 2.5 \u00d7 ULN; \\< 5 \u00d7 ULN if liver metastases are present Alkaline phosphatase (ALP); \\< 2.5 \u00d7 ULN; \\< 5 \u00d7 ULN if liver and/or bone metastasis are present; Serum calcium, magnesium, and potassium Normal or CTCAE grade \u2264 1 with or without supplementation", "11. Life expectancy \u2265 3 months.", "PHASE 2 Key Inclusion Criteria", "1. Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) that harbors a ROS1, or NTRK1-3 gene fusion.", "2. Subject must have a documented ROS1 or NTRK1-3 gene fusion determined by tissue-based local testing using either:", "1. a next-generation sequencing (NGS) or quantitative polymerase chain reaction (qPCR) test will be accepted to determine molecular eligibility.", "\u2022 Adequate tumor tissue needs to be sent to the Sponsor designated central diagnostic laboratory for retrospective confirmation by a central diagnostic laboratory test selected by the Sponsor.", "OR", "2. a fluorescence in situ hybridization (FISH) test AND prospective confirmation of fusion status by a central diagnostic laboratory test selected by the Sponsor PRIOR to enrollment will be accepted to determine molecular eligibility.", "* Adequate tumor tissue must be sent to the Sponsor designated central diagnostic laboratory for prospective confirmation by a central diagnostic laboratory test selected by the Sponsor PRIOR to enrollment.", "3. Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.", "4. Age \u226512 (or age \u2265 20 as required by local regulation).", "5. Willing and able to provide written institutional review board (IRB)/institutional ethics committee-approved Informed Consent or an Assent signed by a parent or legal guardian for subjects age 12 to 17.", "6. At least 1 measurable target lesion according to RECIST (v1.1) prospectively confirmed by Blinded Independent Central Radiology Review (BICR), selected by Sponsor, PRIOR to enrollment. Subjects with CNS-only measurable disease \u226510 mm as defined by RECIST (v1.1) are eligible.", "7. Subjects with advanced solid tumors harboring ROS1, NTRK1, NTRK2, or NTRK3 rearrangement will be assigned into 6 distinct expansion (EXP) cohorts provided all inclusion and exclusion criteria are met.", "i. EXP-1: ROS1 TKI-na\u00efve ROS1+ NSCLC ii. EXP-2: 1 Prior ROS1 TKI and 1 Platinum based chemo ROS1+ NSCLC iii. EXP-3: 2 Prior ROS1 TKIs ROS1+ NSCLC (No Chemo or IO) iv. EXP-4: 1 Prior ROS1 TKI ROS1+ NSCLC (No Chemo or IO) v. EXP-5: TRK TKI-na\u00efve NTRK+ solid tumors vi. EXP-6: TRK TKI-pretreated NTRK+ solid tumors", "8. Subjects with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.", "9. Baseline laboratory values fulfilling the following requirements:Absolute neutrophils count (ANC) \u22651500/mm3 (1.5 \u00d7 109/L); Platelets (PLTs) \u2265100,000/mm3 (100 \u00d7 109/L); Hemoglobin \u2265 9.0 g/dL transfusions are allowed; Serum creatinine or creatinine clearance \\> 40 mL/min; Total serum bilirubin \\< 1.5 \u00d7 ULN; Liver transaminases (ASTs/ALTs) \\< 2.5 \u00d7 ULN; \\< 5 \u00d7 ULN if liver metastases are present Alkaline phosphatase (ALP); \\< 2.5 \u00d7 ULN; \\< 5 \u00d7 ULN if liver and/or bone metastasis are present; Serum calcium, magnesium, and potassium Normal or CTCAE grade \u2264 1 with or without supplementation", "10. Life expectancy \u2265 3 months.", "Key Exclusion Criteria PHASE 1 and PHASE 2", "1. Concurrent participation in another therapeutic clinical trial.", "2. Symptomatic brain metastases or leptomeningeal involvement.", "3. History of previous cancer, except for squamous cell or basal-cell carcinoma of the skin, or any in situ carcinoma that has been completely resected, requiring therapy within the previous 2 years.", "4. Major surgery within 4 weeks of start of repotrectinib treatment. Radiation therapy (except palliative to relieve bone pain) within 2 weeks of study entry. Palliative radiation (\u226410 fractions) must have been completed at least 48 hours prior to study entry", "5. Clinically significant cardiovascular disease (either active or within 6 months prior to enrollment): myocardial infarction, unstable angina, coronary/peripheral artery bypass graft, symptomatic congestive heart failure (New York Heart Association Classification Class \u2265 II), cerebrovascular accident or transient ischemic attack, symptomatic bradycardia, requirement for anti-arrhythmic medication. Ongoing cardiac dysrhythmias of NCI CTCAE grade \u22652", "6. Any of the following cardiac criteria:", "Mean resting corrected QT interval (ECG interval measured from the onset of the QRS complex to the end of the T wave) for heart rate (QTcF) \\> 470 msec obtained from 3 ECGs, using the screening clinic ECG machine-derived QTc value Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (e.g., complete left bundle branch block, third degree heart block, second degree heart block, PR interval \\> 250 msec) Any factors that increase the risk of QTc prolongation or risk of arrhythmic events such as heart failure, hypokalemia, congenital long QT syndrome, family history of long QT syndrome, or any concomitant medication known to prolong the QT interval.", "7. Known active infections (bacterial, fungal, viral including HIV positivity).", "8. Gastrointestinal disease (e.g., Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would impact drug absorption.", "9. Peripheral neuropathy of CTCAE \u2265grade 2.", "10. History of extensive, disseminated, bilateral, or presence of CTCAE grade 3 or 4 interstitial fibrosis or interstitial lung disease including a history of pneumonitis, hypersensitivity pneumonitis, interstitial pneumonia, interstitial lung disease, obliterative bronchiolitis, and pulmonary fibrosis. Subjects with history of prior radiation pneumonitis are not excluded."]
+        
+        Exclusion Criteria: Not available
+        
+        Eligibility Criteria: PHASE 1
+
+Key Inclusion Criteria:
+
+1. Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) (Stage IV, American Joint Committee on Cancer v.7) that harbors an ALK, ROS1, NTRK1, NTRK2, or NTRK3 gene rearrangement by protocol specified tests.
+2. ECOG PS 0-1.
+3. Age ≥18 (or age ≥ 20 of age as required by local regulation).
+4. Capability to swallow capsules intact (without chewing, crushing, or opening).
+5. At least 1 measurable target lesion according to RECIST version 1.1. CNS-only measurable disease as defined by RECIST version 1.1 is allowed.
+6. Prior cytotoxic chemotherapy is allowed.
+7. Prior immunotherapy is allowed.
+8. Resolution of all acute toxic effects (excluding alopecia) of any prior anti-cancer therapy to National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) Version 4.03 Grade less than or equal to 1.
+9. Patients with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.
+10. Baseline laboratory values fulfilling the following requirements:Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L); Platelets (PLTs) ≥100,000/mm3 (100 × 109/L); Hemoglobin ≥ 9.0 g/dL transfusions are allowed; Serum creatinine or creatinine clearance Within normal limits or \> 40 mL/min; Total serum bilirubin \< 1.5 × ULN; Liver transaminases (ASTs/ALTs) \< 2.5 × ULN; \< 5 × ULN if liver metastases are present Alkaline phosphatase (ALP); \< 2.5 × ULN; \< 5 × ULN if liver and/or bone metastasis are present; Serum calcium, magnesium, and potassium Normal or CTCAE grade ≤ 1 with or without supplementation
+11. Life expectancy ≥ 3 months.
+
+PHASE 2 Key Inclusion Criteria
+
+1. Histologically or cytologically confirmed diagnosis of locally advanced, or metastatic solid tumor (including primary CNS tumors) that harbors a ROS1, or NTRK1-3 gene fusion.
+2. Subject must have a documented ROS1 or NTRK1-3 gene fusion determined by tissue-based local testing using either:
+
+   1. a next-generation sequencing (NGS) or quantitative polymerase chain reaction (qPCR) test will be accepted to determine molecular eligibility.
+
+      • Adequate tumor tissue needs to be sent to the Sponsor designated central diagnostic laboratory for retrospective confirmation by a central diagnostic laboratory test selected by the Sponsor.
+
+      OR
+   2. a fluorescence in situ hybridization (FISH) test AND prospective confirmation of fusion status by a central diagnostic laboratory test selected by the Sponsor PRIOR to enrollment will be accepted to determine molecular eligibility.
+
+      * Adequate tumor tissue must be sent to the Sponsor designated central diagnostic laboratory for prospective confirmation by a central diagnostic laboratory test selected by the Sponsor PRIOR to enrollment.
+3. Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.
+4. Age ≥12 (or age ≥ 20 as required by local regulation).
+5. Willing and able to provide written institutional review board (IRB)/institutional ethics committee-approved Informed Consent or an Assent signed by a parent or legal guardian for subjects age 12 to 17.
+6. At least 1 measurable target lesion according to RECIST (v1.1) prospectively confirmed by Blinded Independent Central Radiology Review (BICR), selected by Sponsor, PRIOR to enrollment. Subjects with CNS-only measurable disease ≥10 mm as defined by RECIST (v1.1) are eligible.
+7. Subjects with advanced solid tumors harboring ROS1, NTRK1, NTRK2, or NTRK3 rearrangement will be assigned into 6 distinct expansion (EXP) cohorts provided all inclusion and exclusion criteria are met.
+
+   i. EXP-1: ROS1 TKI-naïve ROS1+ NSCLC ii. EXP-2: 1 Prior ROS1 TKI and 1 Platinum based chemo ROS1+ NSCLC iii. EXP-3: 2 Prior ROS1 TKIs ROS1+ NSCLC (No Chemo or IO) iv. EXP-4: 1 Prior ROS1 TKI ROS1+ NSCLC (No Chemo or IO) v. EXP-5: TRK TKI-naïve NTRK+ solid tumors vi. EXP-6: TRK TKI-pretreated NTRK+ solid tumors
+8. Subjects with asymptomatic CNS metastases (treated or untreated) and/or asymptomatic leptomeningeal carcinomatosis are eligible to enroll if they satisfy the protocol specified criteria.
+9. Baseline laboratory values fulfilling the following requirements:Absolute neutrophils count (ANC) ≥1500/mm3 (1.5 × 109/L); Platelets (PLTs) ≥100,000/mm3 (100 × 109/L); Hemoglobin ≥ 9.0 g/dL transfusions are allowed; Serum creatinine or creatinine clearance \> 40 mL/min; Total serum bilirubin \< 1.5 × ULN; Liver transaminases (ASTs/ALTs) \< 2.5 × ULN; \< 5 × ULN if liver metastases are present Alkaline phosphatase (ALP); \< 2.5 × ULN; \< 5 × ULN if liver and/or bone metastasis are present; Serum calcium, magnesium, and potassium Normal or CTCAE grade ≤ 1 with or without supplementation
+10. Life expectancy ≥ 3 months.
+
+Key Exclusion Criteria PHASE 1 and PHASE 2
+
+1. Concurrent participation in another therapeutic clinical trial.
+2. Symptomatic brain metastases or leptomeningeal involvement.
+3. History of previous cancer, except for squamous cell or basal-cell carcinoma of the skin, or any in situ carcinoma that has been completely resected, requiring therapy within the previous 2 years.
+4. Major surgery within 4 weeks of start of repotrectinib treatment. Radiation therapy (except palliative to relieve bone pain) within 2 weeks of study entry. Palliative radiation (≤10 fractions) must have been completed at least 48 hours prior to study entry
+5. Clinically significant cardiovascular disease (either active or within 6 months prior to enrollment): myocardial infarction, unstable angina, coronary/peripheral artery bypass graft, symptomatic congestive heart failure (New York Heart Association Classification Class ≥ II), cerebrovascular accident or transient ischemic attack, symptomatic bradycardia, requirement for anti-arrhythmic medication. Ongoing cardiac dysrhythmias of NCI CTCAE grade ≥2
+6. Any of the following cardiac criteria:
+
+   Mean resting corrected QT interval (ECG interval measured from the onset of the QRS complex to the end of the T wave) for heart rate (QTcF) \> 470 msec obtained from 3 ECGs, using the screening clinic ECG machine-derived QTc value Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (e.g., complete left bundle branch block, third degree heart block, second degree heart block, PR interval \> 250 msec) Any factors that increase the risk of QTc prolongation or risk of arrhythmic events such as heart failure, hypokalemia, congenital long QT syndrome, family history of long QT syndrome, or any concomitant medication known to prolong the QT interval.
+7. Known active infections (bacterial, fungal, viral including HIV positivity).
+8. Gastrointestinal disease (e.g., Crohn's disease, ulcerative colitis, or short gut syndrome) or other malabsorption syndromes that would impact drug absorption.
+9. Peripheral neuropathy of CTCAE ≥grade 2.
+10. History of extensive, disseminated, bilateral, or presence of CTCAE grade 3 or 4 interstitial fibrosis or interstitial lung disease including a history of pneumonitis, hypersensitivity pneumonitis, interstitial pneumonia, interstitial lung disease, obliterative bronchiolitis, and pulmonary fibrosis. Subjects with history of prior radiation pneumonitis are not excluded.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. Provide detailed reasoning for each evaluation
+        3. Consider the patient's medical history, current condition, and trial requirements
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05334069",
+                    "trial_title": "Blinded Reference Set for Multicancer Early Detection Blood Tests",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT04314401",
+                    "trial_title": "Cancer Moonshot Biobank Research Protocol",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 10 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 10,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-20T06:38:54.589144"
+            }
+        }
+        

@@ -89,6 +89,10 @@ class PatientEvaluator:
             print("No detailed trial information found")
             return {}
         
+        # Sort trials consistently by trial_id to ensure deterministic ordering
+        # This ensures the same trials are always processed in the same order
+        detailed_trials.sort(key=lambda x: x.get('trial_id', ''))
+        
         print(f"Patient: MRN {patient_info['mrn']} (Age: {patient_info['age']}, Gender: {patient_info['gender']})")
         print(f"Processing {len(detailed_trials)} trials in batches of {PATIENT_TRIAL_LLM_BATCH_SIZE}...")
         

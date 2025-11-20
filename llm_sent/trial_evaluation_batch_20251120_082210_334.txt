@@ -1,0 +1,605 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 41
+mrn: 39000017
+batch_size: 8
+trial_ids: ['NCT06147037', 'NCT06179160', 'NCT06244771', 'NCT06281678', 'NCT06298916', 'NCT06599502', 'NCT06662786', 'NCT06723236']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 8 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 41
+        MRN: 39000017
+        Age: 42
+        Gender: Male
+        Oncologist: Dr. Kavita Desai, MD
+        Combined Medical Record: Patient Name: Gregory Smith
+Patient MRN: 39000017
+Age: 42, Gender: Male
+Date of Visit: August 10, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 07, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: June 07, 2025; T4N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: August 02, 2025 - brain, peritoneum metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Asthma, Coronary artery disease
+- Surgical history: Appendectomy (2011)
+
+Family History: - Father with colon polyps
+- Awaiting genetic testing results
+
+Social History: - Smoking: Occasional smoker (social use)
+- Alcohol use: Rare
+- Living situation: Lives alone
+- Occupation: Engineer
+- Functional status: Fully independent
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+--- Page 25 ---
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches improving
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 8.4 ×10³/µL, Hgb 11.3 g/dL, Platelets 280 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 110 mL/min/1.73m²
+- LFTs: AST 44 U/L, ALT 49 U/L, ALP 228 U/L, Total bilirubin 1.9 mg/dL
+- CEA: 139.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 2 hepatic metastases (largest 3.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 8.4 ×10³/µL, Hgb 11.3 g/dL, Platelets 280 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 110 mL/min/1.73m²
+- LFTs: AST 44 U/L, ALT 49 U/L, ALP 228 U/L, Total bilirubin 1.9 mg/dL
+- CEA: 139.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 2 hepatic metastases (largest 3.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 125/70, HR 82, RR 18, Temp 98.4°F, SpO2 99%, Weight 137 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (brain, peritoneum)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT06147037
+        Title: A Phase 1, First-in-human, Multicentre, Open-label, Dose Escalation Study of [225Ac]-FPI-2068 in Adult Patients With Advanced Solid Tumours
+        Condition: ["Advanced Solid Tumor", "Metastatic Colorectal Carcinoma", "Head and Neck Squamous Cell Carcinoma", "Non-small Cell Lung Cancer", "Pancreatic Ductal Adenocarcinoma", "Gastric Cancer", "Renal Cell Carcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.099
+        
+        Brief Summary: This is a first-in-human, Phase 1, non-randomized, multicenter, open-label clinical study designed to investigate the safety, tolerability, dosimetry, biodistribution, and pharmacokinetics (PK) of \[225Ac\]-FPI-2068, \[111In\]-FPI-2107, and FPI-2053 in metastatic and/or recurrent solid tumors (HNSCC, NSCLC, mCRC, PDAC, GC, RCC).
+        
+        Detailed Description: The study will be conducted in 2 parts:
+
+Part A: optimization of the FPI-2053 dose (treatment with dose level 1 of \[225Ac\]-FPI-2068 - fixed dose).
+
+Part B: dose escalation of \[225Ac\]-FPI-2068 with optimal FPI-2053. Part B will commence once the optimal dose of FPI-2053 is determined in Part A. The RP2D will be determined from Part B based on all available safety, efficacy, PK, and dosimetry information.
+        
+        Inclusion Criteria: ["Histologically and/or cytologically confirmed solid tumor that is metastatic, locally advanced, recurrent or inoperable.", "Disease that has progressed despite prior treatment, and for which additional effective standard therapy is not available or is contraindicated, not tolerable, or the participant refuses standard therapy.", "Measurable disease as defined by RECIST Version 1.1", "ECOG Performance status of 0 or 1", "Adequate organ function", "Key"]
+        
+        Exclusion Criteria: ["Previous treatment with any systemic radiopharmaceutical", "Prior anti-cancer therapy unless adequate washout and recovery from toxicities", "Contraindications to or inability to perform the imaging procedures required in this study", "Radiation therapy (RT) within 28 days prior to the first dose of \\[111In\\]-FPI-2107", "Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (\u2265 once per month)", "Patients with known CNS metastatic disease unless treated and stable"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+Histologically and/or cytologically confirmed solid tumor that is metastatic, locally advanced, recurrent or inoperable.
+
+Disease that has progressed despite prior treatment, and for which additional effective standard therapy is not available or is contraindicated, not tolerable, or the participant refuses standard therapy.
+
+Measurable disease as defined by RECIST Version 1.1
+
+ECOG Performance status of 0 or 1
+
+Adequate organ function
+
+Key Exclusion Criteria:
+
+Previous treatment with any systemic radiopharmaceutical
+
+Prior anti-cancer therapy unless adequate washout and recovery from toxicities
+
+Contraindications to or inability to perform the imaging procedures required in this study
+
+Radiation therapy (RT) within 28 days prior to the first dose of \[111In\]-FPI-2107
+
+Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (≥ once per month)
+
+Patients with known CNS metastatic disease unless treated and stable
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT06179160
+        Title: A Phase 1, Open-Label, Multicenter Study of INCB161734 in Participants With Advanced or Metastatic Solid Tumors With KRAS G12D Mutation
+        Condition: ["Solid Tumors"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.017
+        
+        Brief Summary: This study is conducted to determine the safety and tolerability of INCB161734 as a single agent or in combination with other anticancer therapies.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* \u226518 years old.", "* Locally advanced or metastatic solid tumor with KRAS G12D mutation.", "* For Part 1a and Part 2 Combination Groups 1, 2, and 7: Disease progression on prior standard treatment, intolerance to or ineligibility for standard treatment, declined available therapies that are known to confer clinical benefit, or no standard available treatment to improve the disease outcome.", "* Cohort specific requirements aas defined in the protocol.", "* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."]
+        
+        Exclusion Criteria: ["* Prior treatment with any KRAS G12D inhibitor", "* Known additional invasive malignancy within 1 year of the first dose of study drug", "* History of organ transplant, including allogeneic stem cell transplantation", "* Significant, uncontrolled medical condition", "* History or presence of an ECG abnormality", "* Inadequate organ function", "Other protocol-defined Inclusion/Exclusion Criteria may apply"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* ≥18 years old.
+* Locally advanced or metastatic solid tumor with KRAS G12D mutation.
+* For Part 1a and Part 2 Combination Groups 1, 2, and 7: Disease progression on prior standard treatment, intolerance to or ineligibility for standard treatment, declined available therapies that are known to confer clinical benefit, or no standard available treatment to improve the disease outcome.
+* Cohort specific requirements aas defined in the protocol.
+* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.
+
+Exclusion Criteria:
+
+* Prior treatment with any KRAS G12D inhibitor
+* Known additional invasive malignancy within 1 year of the first dose of study drug
+* History of organ transplant, including allogeneic stem cell transplantation
+* Significant, uncontrolled medical condition
+* History or presence of an ECG abnormality
+* Inadequate organ function
+
+Other protocol-defined Inclusion/Exclusion Criteria may apply
+        
+        ============================================================
+        TRIAL 3:
+        ============================================================
+        Trial ID: NCT06244771
+        Title: An Open-Label, Phase 1/2 Dose Escalation, Dose Expansion and Cohort Expansion Study Evaluating the Safety, PK and Clinical Activity of FMC-376 in Participants With KRAS G12C Mutated Locally Advanced Unresectable or Metastatic Solid Tumors
+        Condition: ["Advanced Solid Tumors With KRAS G12C Mutations", "Solid Tumor, Adult", "Unresectable Solid Tumor", "Metastatic Solid Tumor", "Non Small Cell Lung Cancer", "Colorectal Cancer", "KRAS G12C", "Pancreatic Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.014
+        
+        Brief Summary: The goal of this clinical trial is to evaluate FMC-376 in participants with advanced solid tumors with KRAS G12C mutations. This clinical trial will be conducted in 3 parts: Phase 1A (Dose Escalation), Phase 1B (Dose Expansion), and Phase 2 (Cohort Expansion). Multiple dose levels in participants with advanced solid tumors will be evaluated.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation", "* Received and progressed or been intolerant to prior standard therapy OR standard therapy is considered inappropriate OR an investigational agent is considered standard of care", "* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1", "* Adequate hematological, renal, and hepatic function", "* Agrees not to participate in another interventional study while receiving study drug"]
+        
+        Exclusion Criteria: ["* Leptomeningeal disease or carcinomatous meningitis", "* Clinically significant toxicity resulting from prior cancer therapies", "* Known or suspected hypersensitivity to FMC-376 or any components of the study drug", "* Condition that would interfere with study drug absorption", "* Any illness or medical history that would impact safety or compliance with study requirements or impact ability to interpret study data"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Histologically or cytologically confirmed locally advanced unresectable or metastatic solid tumors with KRAS G12C mutation
+* Received and progressed or been intolerant to prior standard therapy OR standard therapy is considered inappropriate OR an investigational agent is considered standard of care
+* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1
+* Adequate hematological, renal, and hepatic function
+* Agrees not to participate in another interventional study while receiving study drug
+
+Exclusion Criteria:
+
+* Leptomeningeal disease or carcinomatous meningitis
+* Clinically significant toxicity resulting from prior cancer therapies
+* Known or suspected hypersensitivity to FMC-376 or any components of the study drug
+* Condition that would interfere with study drug absorption
+* Any illness or medical history that would impact safety or compliance with study requirements or impact ability to interpret study data
+        
+        ============================================================
+        TRIAL 4:
+        ============================================================
+        Trial ID: NCT06281678
+        Title: A Phase 2, Open-label, Multicenter Study of IBI363 (PD1-IL2m) in Subjects with Advanced Solid Malignancies
+        Condition: ["Melanoma", "Non-small Cell Lung Cancer", "Colorectal Cancer", "Renal Cell Cancer"]
+        Phase: PHASE2
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.017
+        
+        Brief Summary: This is a Phase 2, open-label, multicenter study designed to evaluate the efficacy, safety and tolerability of IBI363 (study drug) in subjects with advanced, refractory solid malignancies.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["1. Subjects have the ability to understand and give written informed consent for participation in this trial, including all evaluations and procedures as specified by this protocol;", "2. Male or female subjects \u2265 18 years old;", "3. Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1;", "4. Anticipated life expectancy of \u2265 3 months;"]
+        
+        Exclusion Criteria: ["1. Inadequate bone marrow and organ function;", "2. Received previous anti-tumor therapy: Any chemotherapy or targeted small molecule therapy (standard or investigational) within 2 weeks or 5 plasma half-lives. Received Nitrosoureas and mitomycin C within 6 weeks prior to first dose of study drug and during study; Any anti-cancer monoclonal antibody (mAb) within 4 weeks prior to first dose", "3. Received live vaccines within 28 days prior to first administration of the study drug or plan on receiving any live vaccine during the study;", "4. Has adverse reactions resulting from previous antitumor therapies, which have not resolved to Grade 0 or 1 toxicity according to NCI-CTCAE v5.0 (except for alopecia, fatigue, pigmentation and other conditions with no safety risk according to investigator' discretion) or baseline prior to the first dose of the study drug;", "5. Undergone major surgery (Craniotomy, thoracotomy or laparotomy, and other surgery according to investigator' discretion, excluding needle biopsy) within 4 weeks prior to the first dose of the study drug, or who are expected to undergo major surgery during the study period, or who have severe unhealed wounds, trauma, ulcers, etc."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Subjects have the ability to understand and give written informed consent for participation in this trial, including all evaluations and procedures as specified by this protocol;
+2. Male or female subjects ≥ 18 years old;
+3. Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0 or 1;
+4. Anticipated life expectancy of ≥ 3 months;
+
+Exclusion Criteria:
+
+1. Inadequate bone marrow and organ function;
+2. Received previous anti-tumor therapy: Any chemotherapy or targeted small molecule therapy (standard or investigational) within 2 weeks or 5 plasma half-lives. Received Nitrosoureas and mitomycin C within 6 weeks prior to first dose of study drug and during study; Any anti-cancer monoclonal antibody (mAb) within 4 weeks prior to first dose
+3. Received live vaccines within 28 days prior to first administration of the study drug or plan on receiving any live vaccine during the study;
+4. Has adverse reactions resulting from previous antitumor therapies, which have not resolved to Grade 0 or 1 toxicity according to NCI-CTCAE v5.0 (except for alopecia, fatigue, pigmentation and other conditions with no safety risk according to investigator' discretion) or baseline prior to the first dose of the study drug;
+5. Undergone major surgery (Craniotomy, thoracotomy or laparotomy, and other surgery according to investigator' discretion, excluding needle biopsy) within 4 weeks prior to the first dose of the study drug, or who are expected to undergo major surgery during the study period, or who have severe unhealed wounds, trauma, ulcers, etc.
+        
+        ============================================================
+        TRIAL 5:
+        ============================================================
+        Trial ID: NCT06298916
+        Title: A Phase 1/2a Study Utilizing 64Cu-LNTH-1363S (64Cu Radiolabeled FAPi PET/CT Imaging Agent) in Patients With Sarcoma or Gastrointestinal Tract Cancer (PHANTOM Trial)
+        Condition: ["Metastatic Sarcoma", "Esophageal Cancer", "Gastric Cancer", "Pancreatic Cancer", "Colorectal Cancer", "Sarcoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 15 Years - 
+        Gender: ALL
+        Hybrid Score: 4.982
+        
+        Brief Summary: This is a multicenter, open-label, prospective Phase 1/2a study to assess safety and tolerability, establish dosimetry and to identify an optimal imaging dose (radioactivity) and imaging time window of 64Cu-LNTH-1363S, and to compare its imaging biodistribution with FAP expression by IHC in patients with sarcomas or GIT cancers. The study will be conducted in 2 parts (Part 1 and Part 2).
+        
+        Detailed Description: Part 1 will determine the biodistribution, dosimetry, optimal dose (radioactivity) and imaging time window of 64Cu-LNTH-1363S in 6 evaluable patients with supposed FAP-expressing solid tumors (metastatic sarcomas). All six patients will receive 8 ± 1 mCi (\~90 μg mass dose) in this study. All images will undergo analysis by blinded central readers. Optimal radioactivity and timing window will be determined based on image quality scores and measured tumor-to-background ratio. Part 1 of the study will last approximately 3 weeks for each patient and includes a Screening Period (up to 14 days), a 1-day Intervention Period and a Safety Follow-up Period (7 days post dose).
+
+Part 2 will evaluate 64Cu-LNTH-1363S correlation with FAP expression measured by IHC (SUVmax and SUVmean vs IHC score) in 20 evaluable patients with non-metastatic, operable, supposed FAP-expressing solid tumors (sarcomas, esophageal, gastric, pancreatic, colorectal) planned for surgery within 60 days (from study imaging). If the optimal radioactivity determined from Part 1 is less than 8 ± 1 mCi, the first 6 patients in Part 2 will be used to validate this optimal radioactivity.
+
+Part 2 of the study will last approximately 10 to 11 weeks and includes: a Screening Period (up to 14 days), a 1-day Intervention Period, a 1 day Safety Followup Period (Day 2) and a Scheduled Surgery IHC Sample Collection Period (from Day 2 to Day 60).
+
+Both Part 1 and Part 2 of the study will also monitor cardiac safety by detecting changes in HR, T wave, ST segment and other ECG parameters and characterizing the concentration-response relationship of 64Cu-LNTH-1363S for QT and corrected QT interval (QTc) prolongation.
+        
+        Inclusion Criteria: ["Part 1", "Patients are eligible to be included in the study only if all of the following criteria apply:", "1. Patient must be \u2265 15 years of age and must have provided written informed consent and assent, where applicable (by patient or legal guardian). Those aged \u226515 to \\<18 years must weigh at least 55 kg.", "2. Patients with suspected FAP-expressing metastatic sarcoma.", "3. Patients must have histological, pathological, and/or cytological confirmation of a metastatic sarcoma (e.g., undifferentiated pleomorphic sarcoma, liposarcoma, Leiomyosarcoma, myxofibrosarcoma, solitary fibrous tumor, Ewing's sarcoma, synovial sarcoma, sarcoma not otherwise specified, osteosarcoma).", "4. Patients must be willing to consent to provide sufficient and adequate archived tumor tissue samples (formalin fixed, paraffin embedded sample), preferably from a biopsy of a tumor lesion obtained either at the time of or after the diagnosis of disease; if archival tissue sample is unavailable, a new biopsy should be performed on the most accessible lesion(s) to obtain the tumor tissue sample.", "5. Adequate renal function as determined by a calculated creatinine clearance \u2265 60 mL/min (Cockcroft Gault equation).", "6. Women of childbearing potential (WOCBP) must have a negative beta-human chorionic gonadotropin (\u03b2-hCG) test and must not be breastfeeding. WOCBP must agree to use a highly effective method of contraception during the study and for 28 days after the last injection of the study drug.", "7. Male subjects who are able to father a child must agree to avoid impregnating a partner, to adhere to a highly effective method of contraception and to not donate sperm during the study and for 28 days after the last injection of the study drug."]
+        
+        Exclusion Criteria: ["Part 1", "Patients are excluded from the study if any of the following criteria apply:", "1. Unlikely to comply with protocol procedures, restrictions and requirements as judged by the Investigator.", "2. Known pregnancy or breastfeeding.", "3. Any PET scan done within 10 physical half-lives of the PET agent prior to receiving study intervention.", "4. Patients participating in another clinical trial at the time of screening for this study.", "5. Patients who have had systemic anti-cancer therapy administered in the 14 days prior to IP administration.", "6. Has undergone or plans to undergo PET or single-photon emission computerized tomography (SPECT) imaging with any other FAPi imaging agent within 6 months prior to or after participating in this trial.", "7. History of QT/QTc interval prolongation, a marked baseline QT/QTc interval prolongation (e.g., repeated demonstration of a QTc interval, calculated with Fridericia's correction, \\> 450 milliseconds) or taking medication known to cause QT/QTc prolongation.", "8. A history of additional risk factors for Torsades de Pointes (e.g., heart failure, hypokalemia, family history of long QT syndrome)."]
+        
+        Eligibility Criteria: Inclusion Criteria: Part 1
+
+Patients are eligible to be included in the study only if all of the following criteria apply:
+
+1. Patient must be ≥ 15 years of age and must have provided written informed consent and assent, where applicable (by patient or legal guardian). Those aged ≥15 to \<18 years must weigh at least 55 kg.
+2. Patients with suspected FAP-expressing metastatic sarcoma.
+3. Patients must have histological, pathological, and/or cytological confirmation of a metastatic sarcoma (e.g., undifferentiated pleomorphic sarcoma, liposarcoma, Leiomyosarcoma, myxofibrosarcoma, solitary fibrous tumor, Ewing's sarcoma, synovial sarcoma, sarcoma not otherwise specified, osteosarcoma).
+4. Patients must be willing to consent to provide sufficient and adequate archived tumor tissue samples (formalin fixed, paraffin embedded sample), preferably from a biopsy of a tumor lesion obtained either at the time of or after the diagnosis of disease; if archival tissue sample is unavailable, a new biopsy should be performed on the most accessible lesion(s) to obtain the tumor tissue sample.
+5. Adequate renal function as determined by a calculated creatinine clearance ≥ 60 mL/min (Cockcroft Gault equation).
+6. Women of childbearing potential (WOCBP) must have a negative beta-human chorionic gonadotropin (β-hCG) test and must not be breastfeeding. WOCBP must agree to use a highly effective method of contraception during the study and for 28 days after the last injection of the study drug.
+7. Male subjects who are able to father a child must agree to avoid impregnating a partner, to adhere to a highly effective method of contraception and to not donate sperm during the study and for 28 days after the last injection of the study drug.
+
+Inclusion Criteria: Part 2
+
+1. Patient must be ≥ 15 years of age and must have provided written informed consent and assent, where applicable (by patient or legal guardian). Those aged ≥15 to \<18 years must weigh at least 55 kg.
+2. Patients must have histological, pathological, and/or cytological confirmation of a sarcoma or GIT cancers e.g., esophageal, gastric, pancreatic, colorectal cancer.
+3. Patients must have suspected FAP expressing sarcoma or GIT cancers and planned for surgery within 60 days (from study imaging).
+4. Patients must be willing to consent to provide sufficient and adequate tumor tissue samples (formalin fixed, paraffin embedded sample), from their planned surgery after participating in study imaging.
+5. Adequate renal function as determined by a calculated creatinine clearance ≥ 60 mL/min (Cockcroft Gault equation).
+6. Women of childbearing potential (WOCBP) must have a negative beta-human chorionic gonadotropin (β-hCG) test and must not be breastfeeding. WOCBP must agree to use a highly effective method of contraception during the study and for 28 days after the last injection of the study drug.
+7. Male subjects who are able to father a child must agree to avoid impregnating a partner, to adhere to a highly effective method of contraception and to not donate sperm during the study and for 28 days after the last injection of the study drug.
+
+Exclusion Criteria: Part 1
+
+Patients are excluded from the study if any of the following criteria apply:
+
+1. Unlikely to comply with protocol procedures, restrictions and requirements as judged by the Investigator.
+2. Known pregnancy or breastfeeding.
+3. Any PET scan done within 10 physical half-lives of the PET agent prior to receiving study intervention.
+4. Patients participating in another clinical trial at the time of screening for this study.
+5. Patients who have had systemic anti-cancer therapy administered in the 14 days prior to IP administration.
+6. Has undergone or plans to undergo PET or single-photon emission computerized tomography (SPECT) imaging with any other FAPi imaging agent within 6 months prior to or after participating in this trial.
+7. History of QT/QTc interval prolongation, a marked baseline QT/QTc interval prolongation (e.g., repeated demonstration of a QTc interval, calculated with Fridericia's correction, \> 450 milliseconds) or taking medication known to cause QT/QTc prolongation.
+8. A history of additional risk factors for Torsades de Pointes (e.g., heart failure, hypokalemia, family history of long QT syndrome).
+
+Exclusion Criteria: Part 2
+
+1. Patients who have had neoadjuvant anti-cancer therapy administered in the 14 days prior to IP administration.
+2. Evidence of metastatic or advanced, inoperable disease.
+3. Unlikely to comply with protocol procedures, restrictions and requirements and judged by the investigator to be unsuitable for participation.
+4. Known pregnancy or breastfeeding.
+5. Any PET scan done within 10 physical half-lives of the PET agent prior to receiving study intervention.
+6. Patients participating in another clinical trial at the time of screening for this study.
+7. Has undergone or plans to undergo PET or SPECT imaging with any other FAPi imaging agent within 6 months prior to or after participating in this trial.
+8. History of QT/QTc interval prolongation, a marked baseline QT/QTc interval prolongation (e.g., repeated demonstration of a QTc interval, calculated with Fridericia's correction, \> 450 milliseconds) or taking drugs known to cause QT/QTc prolongation.
+9. A history of additional risk factors for Torsades de Pointes (e.g., heart failure, hypokalemia, family history of long QT syndrome
+        
+        ============================================================
+        TRIAL 6:
+        ============================================================
+        Trial ID: NCT06599502
+        Title: A Phase I/IIa, Open-label, Multi-centre Study to Assess the Safety, Tolerability, Pharmacokinetics, and Preliminary Efficacy of AZD0022 Monotherapy and in Combination With Anti-cancer Agents in Participants With Tumours Harbouring a KRASG12D Mutation (ALAFOSS-01)
+        Condition: ["Advanced Solid Tumours", "Non-Small Cell Lung Cancer (NSCLC)", "Pancreatic Ductal Adenocarcinoma (PDAC)", "Colorectal Cancer (CRC)"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.150
+        
+        Brief Summary: This is a first-in-human, modular, Phase I/IIa, open-label, multi-centre study to assess the safety, tolerability, PK, and preliminary efficacy of AZD0022 monotherapy in combination with other anti-cancer agents in participants with tumours harbouring a KRASG12D mutation.
+        
+        Detailed Description: This first time in human, open-label, multi-centre study will administer AZD0022 orally to participants with tumours harbouring a KRASG12D mutation.
+
+This study will have initially 2 modules.
+
+* Module 1: AZD0022 monotherapy
+* Module 2: AZD0022 in combination with other anti-cancer agents (Cetuximab)
+
+Each Module has 3 parts. Dose Escalation (Part A), Dose Optimisation (Part B) and Potential Efficacy Expansion (Part C).
+        
+        Inclusion Criteria: ["For whole study:", "1. Participant must be \u2265 18 years or the legal age of consent in the jurisdiction in which the study is taking place at the time of signing the ICF.", "2. Participants must have a histologically or cytologically confirmed metastatic or locally advanced tumour. Further details on tumour types are specified in Module-specific inclusion criteria.", "3. Participants must have received and progressed on, are refractory or are intolerant to standard therapy for the specific tumour type, or as per Module-specific criteria. Participants with contraindications to, or who refuse SoC therapy may be considered, provided that it is documented and the participant has been informed about all available therapeutic options.", "4. Documented KRASG12D mutation in tissue or liquid biopsy.", "5. Provision of a FFPE tumour sample.", "6. Participants must have at least one measurable target lesion per RECIST v1.1.", "7. Adequate organ and marrow function as defined in study protocol.", "Module 1 Key Inclusion Criteria", "1. Type of tumours with a KRASG12D mutation:", "1. For NSCLC: Patients must have NSCLC that is not amenable to curative treatment and should have progressed on at least one prior line of SoC treatment for metastatic NSCLC (including but not limited to platinum-based chemotherapy, immunotherapy, targeted therapy or first line SoC combinations); prior experimental treatments are allowed.", "2. For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior experimental treatments are allowed.", "3. For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatments are allowed.", "4. For patients enrolled in Part C (NSCLC and PDAC): at least one but no more than 2 lines of prior treatment in metastatic settings; prior experimental treatments are allowed.", "2. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, chemoradiotherapy, etc) will be considered as a first line of treatment.", "3. For Part B food-effect cohort, participants must be able to eat a standard high-fat meal and must be able to fast for at least 10 hours.", "Module 2 Inclusion Criteria", "1. For Part A (M2A, dose escalation) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.", "2. For Part B (M2B, dose optimisation) participants must have pathologically documented locally advanced or metastatic, PDAC or CRC with a KRASG12D mutation.", "3. For Part C (M2C, potential efficacy expansion) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.", "4(a) For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior treatment are allowed.", "(b) For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatment are allowed.", "(c) For patients enrolled in Part C (M2C), at least 2 but no more than 3 lines of prior treatment in metastatic setting; prior experimental treatment are allowed.", "5\\. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, and chemoradiotherapy) will be considered as a first line of treatment."]
+        
+        Exclusion Criteria: ["For whole study:", "1. Any significant laboratory finding or any severe and uncontrolled medical condition.", "2. Any evidence of clinically significant current or prior ILD (eg, required IV steroids or high supplemental oxygen) or where a new suspected ILD cannot be ruled out by imaging at screening.", "3. Spinal cord compression, leptomeningeal disease, or active brain metastases. Asymptomatic brain metastases are allowed", "4. History of allogenic organ transplantation.", "5. Participants with any of the following cardiac criteria:", "* Mean resting QTcF \\> 470 milliseconds on screening", "* Any factors that increase the risk of QT prolongation", "* Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (eg, complete left bundle branch block, second- or third-degree atrioventricular block), and clinically significant sinus node dysfunction not treated with pacemaker.", "* Bradycardia defined as a heart rate less than 60 beats per minute and/or hypotension defined as a blood pressure reading lower than 90 mm Hg for the top number (systolic) or 60 mm Hg for the bottom number (diastolic).", "* Baseline LVEF below the institutional lower limit of normal or \\< 50%, whichever is lower.", "* Symptomatic heart failure (as defined by New York Heart Association class \u2265 2).", "* Acute coronary syndrome/acute myocardial infarction, unstable angina pectoris, coronary intervention procedure with percutaneous coronary intervention, or coronary artery bypass grafting within 6 months before C1D1.", "6. Prior exposure to any direct small molecule KRAS inhibitor.", "7. Herbal preparations/medications are not allowed during treatment with study drug.", "8. Any concomitant medications that are known strong inhibitors or inducers of CYP3A4/5, or sensitive CYP3A4/5 substrates or CYP3A4/5 substrates with a narrow therapeutic range. This also applies to moderate inhibitors and moderate inducers of CYP3A4/5 during Parts A and B of Modules 1 and 2.", "9. Receipt of a cytotoxic or non-cytotoxic drug: 21 days or 5 half-lives, whichever is shorter, before the first dose of study intervention. Biological therapy including immune-oncology and monoclonal antibodies 28 days or 5 half-lives.", "10. Less than or equal to 4 weeks for radiation therapy given with curative intent or \u2264 2 weeks for limited field radiation for palliation prior to the first dose of study treatment"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+For whole study:
+
+1. Participant must be ≥ 18 years or the legal age of consent in the jurisdiction in which the study is taking place at the time of signing the ICF.
+2. Participants must have a histologically or cytologically confirmed metastatic or locally advanced tumour. Further details on tumour types are specified in Module-specific inclusion criteria.
+3. Participants must have received and progressed on, are refractory or are intolerant to standard therapy for the specific tumour type, or as per Module-specific criteria. Participants with contraindications to, or who refuse SoC therapy may be considered, provided that it is documented and the participant has been informed about all available therapeutic options.
+4. Documented KRASG12D mutation in tissue or liquid biopsy.
+5. Provision of a FFPE tumour sample.
+6. Participants must have at least one measurable target lesion per RECIST v1.1.
+7. Adequate organ and marrow function as defined in study protocol.
+
+Module 1 Key Inclusion Criteria
+
+1. Type of tumours with a KRASG12D mutation:
+
+   1. For NSCLC: Patients must have NSCLC that is not amenable to curative treatment and should have progressed on at least one prior line of SoC treatment for metastatic NSCLC (including but not limited to platinum-based chemotherapy, immunotherapy, targeted therapy or first line SoC combinations); prior experimental treatments are allowed.
+   2. For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior experimental treatments are allowed.
+   3. For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatments are allowed.
+   4. For patients enrolled in Part C (NSCLC and PDAC): at least one but no more than 2 lines of prior treatment in metastatic settings; prior experimental treatments are allowed.
+2. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, chemoradiotherapy, etc) will be considered as a first line of treatment.
+3. For Part B food-effect cohort, participants must be able to eat a standard high-fat meal and must be able to fast for at least 10 hours.
+
+Module 2 Inclusion Criteria
+
+1. For Part A (M2A, dose escalation) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.
+2. For Part B (M2B, dose optimisation) participants must have pathologically documented locally advanced or metastatic, PDAC or CRC with a KRASG12D mutation.
+3. For Part C (M2C, potential efficacy expansion) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.
+
+4(a) For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior treatment are allowed.
+
+(b) For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatment are allowed.
+
+(c) For patients enrolled in Part C (M2C), at least 2 but no more than 3 lines of prior treatment in metastatic setting; prior experimental treatment are allowed.
+
+5\. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, and chemoradiotherapy) will be considered as a first line of treatment.
+
+Exclusion Criteria:
+
+For whole study:
+
+1. Any significant laboratory finding or any severe and uncontrolled medical condition.
+2. Any evidence of clinically significant current or prior ILD (eg, required IV steroids or high supplemental oxygen) or where a new suspected ILD cannot be ruled out by imaging at screening.
+3. Spinal cord compression, leptomeningeal disease, or active brain metastases. Asymptomatic brain metastases are allowed
+4. History of allogenic organ transplantation.
+5. Participants with any of the following cardiac criteria:
+
+   * Mean resting QTcF \> 470 milliseconds on screening
+   * Any factors that increase the risk of QT prolongation
+   * Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (eg, complete left bundle branch block, second- or third-degree atrioventricular block), and clinically significant sinus node dysfunction not treated with pacemaker.
+   * Bradycardia defined as a heart rate less than 60 beats per minute and/or hypotension defined as a blood pressure reading lower than 90 mm Hg for the top number (systolic) or 60 mm Hg for the bottom number (diastolic).
+   * Baseline LVEF below the institutional lower limit of normal or \< 50%, whichever is lower.
+   * Symptomatic heart failure (as defined by New York Heart Association class ≥ 2).
+   * Acute coronary syndrome/acute myocardial infarction, unstable angina pectoris, coronary intervention procedure with percutaneous coronary intervention, or coronary artery bypass grafting within 6 months before C1D1.
+6. Prior exposure to any direct small molecule KRAS inhibitor.
+7. Herbal preparations/medications are not allowed during treatment with study drug.
+8. Any concomitant medications that are known strong inhibitors or inducers of CYP3A4/5, or sensitive CYP3A4/5 substrates or CYP3A4/5 substrates with a narrow therapeutic range. This also applies to moderate inhibitors and moderate inducers of CYP3A4/5 during Parts A and B of Modules 1 and 2.
+9. Receipt of a cytotoxic or non-cytotoxic drug: 21 days or 5 half-lives, whichever is shorter, before the first dose of study intervention. Biological therapy including immune-oncology and monoclonal antibodies 28 days or 5 half-lives.
+10. Less than or equal to 4 weeks for radiation therapy given with curative intent or ≤ 2 weeks for limited field radiation for palliation prior to the first dose of study treatment
+        
+        ============================================================
+        TRIAL 7:
+        ============================================================
+        Trial ID: NCT06662786
+        Title: A Randomized, Open-label Phase 3 Study of Amivantamab and mFOLFOX6 or FOLFIRI Versus Cetuximab and mFOLFOX6 or FOLFIRI as First-line Treatment in Participants With KRAS/NRAS and BRAF Wild-type Unresectable or Metastatic Left-sided Colorectal Cancer
+        Condition: ["Colorectal Neoplasms"]
+        Phase: PHASE3
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 4.936
+        
+        Brief Summary: The purpose of this study is to compare how long the participants are disease-free (progression-free survival) when treated with amivantamab and chemotherapy with 5-fluorouracil, leucovorin calcium (folinic acid) or levoleucovorin, oxaliplatin (mFOLFOX6) or 5-fluorouracil, leucovorin calcium (folinic acid) or levoleucovorin, and irinotecan hydrochloride (FOLFIRI) versus cetuximab and mFOLFOX6 or FOLFIRI in adult participants with Kirsten rat sarcoma viral oncogene homolog (KRAS)/ Neuroblastoma RAS viral oncogene homolog (NRAS) and v-Raf murine sarcoma viral oncogene homolog B1 (BRAF) wild type (WT) unresectable or metastatic left-sided colorectal cancer.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Have histologically or cytologically confirmed adenocarcinoma of the left-sided colorectal cancer. Participants must have unresectable or metastatic disease", "* Determined to have Kirsten rat sarcoma viral oncogene (KRAS), neuroblastoma RAS viral oncogene homolog (NRAS), and v-raf murine sarcoma viral oncogene homolog B (BRAF) wild-type (WT) tumor by local and/or central testing (if available)", "* Must agree to the submission of fresh tumor tissue", "* Have measurable disease according to RECIST v1.1", "* Have an eastern cooperative oncology group (ECOG) performance status (PS) of 0 or 1"]
+        
+        Exclusion Criteria: ["* Has medical history of (noninfectious) interstitial lung disease (ILD) /pneumonitis/pulmonary fibrosis or has current ILD/pneumonitis/pulmonary fibrosis, or where suspected ILD/pneumonitis/pulmonary fibrosis cannot be ruled out by imaging at screening", "* Has known allergies, hypersensitivity, or intolerance to excipients of any of the following: (a) amivantamab or cetuximab, (b) any component of mFOLFOX6 and, (c) any component of FOLFIRI", "* Has a prior or concurrent second malignancy other than the disease under study or one whose natural history or treatment is likely to interfere with any study endpoints of safety or the efficacy of the study treatment(s)", "* Participant with known mismatch repair deficiency (dMMR)/ high microsatellite instability (MSI-H) status and human epidermal growth factor receptor 2 (HER2)-positive/amplified tumor", "* Has prior exposure to any agents that target epidermal growth factor receptor (EGFR) or mesenchymal epithelial transition (MET)"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Have histologically or cytologically confirmed adenocarcinoma of the left-sided colorectal cancer. Participants must have unresectable or metastatic disease
+* Determined to have Kirsten rat sarcoma viral oncogene (KRAS), neuroblastoma RAS viral oncogene homolog (NRAS), and v-raf murine sarcoma viral oncogene homolog B (BRAF) wild-type (WT) tumor by local and/or central testing (if available)
+* Must agree to the submission of fresh tumor tissue
+* Have measurable disease according to RECIST v1.1
+* Have an eastern cooperative oncology group (ECOG) performance status (PS) of 0 or 1
+
+Exclusion Criteria:
+
+* Has medical history of (noninfectious) interstitial lung disease (ILD) /pneumonitis/pulmonary fibrosis or has current ILD/pneumonitis/pulmonary fibrosis, or where suspected ILD/pneumonitis/pulmonary fibrosis cannot be ruled out by imaging at screening
+* Has known allergies, hypersensitivity, or intolerance to excipients of any of the following: (a) amivantamab or cetuximab, (b) any component of mFOLFOX6 and, (c) any component of FOLFIRI
+* Has a prior or concurrent second malignancy other than the disease under study or one whose natural history or treatment is likely to interfere with any study endpoints of safety or the efficacy of the study treatment(s)
+* Participant with known mismatch repair deficiency (dMMR)/ high microsatellite instability (MSI-H) status and human epidermal growth factor receptor 2 (HER2)-positive/amplified tumor
+* Has prior exposure to any agents that target epidermal growth factor receptor (EGFR) or mesenchymal epithelial transition (MET)
+        
+        ============================================================
+        TRIAL 8:
+        ============================================================
+        Trial ID: NCT06723236
+        Title: A Phase 1, First-in-Human, Open Label, Dose Escalation and Cohort Expansion Study of MGC028 in Participants With Advanced Solid Tumors
+        Condition: ["Advanced Solid Tumors", "NSCLC Adenocarcinoma", "Cholangiocarcinoma", "Pancreatic Carcinoma", "Colorectal Carcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 4.986
+        
+        Brief Summary: The goal of this clinical trial is to characterize the safety, tolerability, dose-limiting toxicities (DLT), and maximum tolerated dose (MTD) or maximum administered dose of MGC028 (if no MTD is defined). The study will enroll adult participants with relapsed or refractory, unresectable, locally advanced of metastatic solid tumors known to express ADAM9.
+
+The main question the study aims to answer is:
+
+* What types of side effects will participants experience when receiving MGC028?
+* Can MGC028 cause cancer to shrink, remain stable, or able to control disease progression of participants with advanced solid tumors?
+
+Participants will
+
+* Undergo screening procedures to determine eligibility
+* Receive study treatments initially every 3 weeks.
+* Have blood samples taken for routine and research tests
+* Have other examinations to check heart and lung function, and general health status
+* Be asked about any side effects that may be happening or other medications you are taking. The study doctor will provide treatment for side effects, if necessary.
+* Have the study doctor assess your tumor status at regular intervals to determine how you are responding to treatment.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Participants in dose escalation or supplemental cohorts must have histologically proven unresectable, locally advanced or metastatic solid tumor limited to one of the following types: NSCLC adenocarcinoma, cholangiocarcinoma, colorectal carcinoma (CRC), or pancreatic carcinoma that is refractory to standard therapy, or for which standard therapy does not exist, has proven to be intolerable, or has been refused by the participant.", "* Participants in expansion cohorts must have either", "* NSCLC adenocarcinoma with", "* progression on or following anti-PD-1/PD-L1 inhibitor, unless contraindicated", "* progression on or following therapy for actionable mutations (e.g. EGFR or ALK mutations), if present", "* no more than 2 prior lines of cytotoxic chemotherapy for advanced or metastatic disease.", "* Pancreatic cancer", "* following at least 1 systemic therapy", "* no more than 2 prior lines of cytotoxic therapy for advanced or metastatic disease.", "* Colorectal adenocarcinoma with", "* Progression during or following standard therapy with a fluoropyrimidine-based chemotherapy, oxaliplatin and irinotecan unless contraindicated, refused or unavailable", "* Progression after prior targeted treatment for CRC with actionable mutations such as EGFR, KRAS, BRAF and MSI- H/dMMR, if present.", "* No more that 2 lines of cytotoxic chemotherapy for advanced or metastatic disease", "* No more than 4 lines of systemic regimens for advanced or metastatic disease", "* Participants must have at least one lesion that meets the definition of measurable disease by RECIST v1.1.", "* Participants must have an available archival or formalin-fixed paraffin-embedded tumor tissue or be willing to undergo a biopsy procedure to obtain a fresh tumor sample.", "* Participants have acceptable physical condition and laboratory values.", "* Participants of childbearing potential must agree to use highly effective methods of birth control.", "* Participants must not be pregnant, planning to be pregnant, or breastfeeding."]
+        
+        Exclusion Criteria: ["* Any underlying medical or psychiatric condition impairing participant's ability to receive, tolerate, or comply with the planned treatment or study procedures.", "* Active brain metastases or leptomeningeal metastases.", "* Prior stem cell, tissue, or solid organ transplant.", "* Another malignancy that required treatment within the past 2 years, with the exception of those with a negligible risk of metastasis or death such as adequately treated non-melanomatous skin cancer, localized prostate cancer (Gleason Score \\< 6), or carcinoma in situ.", "* Active viral, bacterial, or fungal infection", "* Prior treatment with ADAM9 targeted agent for cancer.", "* Prior treatment with major surgery, mediastinal or lung radiation, vaccination with live virus vaccines, systemic cancer treatment, chimeric antigen receptor (CAR)-T cell therapy, or experimental treatment within 4 weeks of the start of study treatment."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Participants in dose escalation or supplemental cohorts must have histologically proven unresectable, locally advanced or metastatic solid tumor limited to one of the following types: NSCLC adenocarcinoma, cholangiocarcinoma, colorectal carcinoma (CRC), or pancreatic carcinoma that is refractory to standard therapy, or for which standard therapy does not exist, has proven to be intolerable, or has been refused by the participant.
+* Participants in expansion cohorts must have either
+
+  * NSCLC adenocarcinoma with
+
+    * progression on or following anti-PD-1/PD-L1 inhibitor, unless contraindicated
+    * progression on or following therapy for actionable mutations (e.g. EGFR or ALK mutations), if present
+    * no more than 2 prior lines of cytotoxic chemotherapy for advanced or metastatic disease.
+  * Pancreatic cancer
+
+    * following at least 1 systemic therapy
+    * no more than 2 prior lines of cytotoxic therapy for advanced or metastatic disease.
+  * Colorectal adenocarcinoma with
+
+    * Progression during or following standard therapy with a fluoropyrimidine-based chemotherapy, oxaliplatin and irinotecan unless contraindicated, refused or unavailable
+    * Progression after prior targeted treatment for CRC with actionable mutations such as EGFR, KRAS, BRAF and MSI- H/dMMR, if present.
+    * No more that 2 lines of cytotoxic chemotherapy for advanced or metastatic disease
+    * No more than 4 lines of systemic regimens for advanced or metastatic disease
+* Participants must have at least one lesion that meets the definition of measurable disease by RECIST v1.1.
+* Participants must have an available archival or formalin-fixed paraffin-embedded tumor tissue or be willing to undergo a biopsy procedure to obtain a fresh tumor sample.
+* Participants have acceptable physical condition and laboratory values.
+* Participants of childbearing potential must agree to use highly effective methods of birth control.
+* Participants must not be pregnant, planning to be pregnant, or breastfeeding.
+
+Exclusion Criteria:
+
+* Any underlying medical or psychiatric condition impairing participant's ability to receive, tolerate, or comply with the planned treatment or study procedures.
+* Active brain metastases or leptomeningeal metastases.
+* Prior stem cell, tissue, or solid organ transplant.
+* Another malignancy that required treatment within the past 2 years, with the exception of those with a negligible risk of metastasis or death such as adequately treated non-melanomatous skin cancer, localized prostate cancer (Gleason Score \< 6), or carcinoma in situ.
+* Active viral, bacterial, or fungal infection
+* Prior treatment with ADAM9 targeted agent for cancer.
+* Prior treatment with major surgery, mediastinal or lung radiation, vaccination with live virus vaccines, systemic cancer treatment, chimeric antigen receptor (CAR)-T cell therapy, or experimental treatment within 4 weeks of the start of study treatment.
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT06147037",
+                    "trial_title": "A Phase 1, First-in-human, Multicentre, Open-label, Dose Escalation Study of [225Ac]-FPI-2068 in Adult Patients With Advanced Solid Tumours",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT06179160",
+                    "trial_title": "A Phase 1, Open-Label, Multicenter Study of INCB161734 in Participants With Advanced or Metastatic Solid Tumors With KRAS G12D Mutation",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 8 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 8,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-20T08:22:10.334498"
+            }
+        }
+        

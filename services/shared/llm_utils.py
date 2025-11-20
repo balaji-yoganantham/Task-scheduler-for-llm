@@ -111,10 +111,16 @@ class LLMUtils:
         9. Exclusion criteria
         10. Overall eligibility assessment
         
+        CRITICAL ELIGIBILITY RULES:
+        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        
         Provide a comprehensive evaluation with:
         - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
         - Confidence score (0-100)
-        - Detailed reasoning
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
         - Specific inclusion/exclusion criteria met or not met
         - Recommendations for next steps
         
@@ -170,10 +176,16 @@ class LLMUtils:
         9. Exclusion criteria
         10. Overall eligibility assessment
         
+        CRITICAL ELIGIBILITY RULES:
+        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        
         Provide a comprehensive evaluation with:
         - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
         - Confidence score (0-100)
-        - Detailed reasoning
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
         - Specific inclusion/exclusion criteria met or not met
         - Recommendations for next steps
         
@@ -233,12 +245,14 @@ class LLMUtils:
         if prompt_file:
             print(f"[SAVE] Prompt saved to: {prompt_file}")
         
-        # Determine timeout based on call type (batch operations need more time)
+        # Determine timeout and max_tokens based on call type (batch operations need more resources)
         timeout = OPENAI_TIMEOUT
+        max_tokens = OPENAI_MAX_TOKENS
         if call_type in ["keyword_generation_batch", "trial_evaluation_batch", "patient_evaluation_batch"]:
-            # Batch operations get 2x timeout
+            # Batch operations get 2x timeout and 2x tokens
             timeout = OPENAI_TIMEOUT * 2
-            print(f"[INFO] Using extended timeout of {timeout} seconds for batch operation")
+            max_tokens = OPENAI_MAX_TOKENS * 2  # 2x = 16,384 tokens (if base is 8192)
+            print(f"[INFO] Using extended timeout of {timeout} seconds and max_tokens of {max_tokens} for batch operation")
         
         # Retry logic with exponential backoff for rate limit errors
         max_retries = OPENAI_MAX_RETRIES
@@ -262,7 +276,7 @@ class LLMUtils:
                         {"role": "user", "content": prompt}
                     ],
                     temperature=OPENAI_TEMPERATURE,
-                    max_tokens=OPENAI_MAX_TOKENS,
+                    max_tokens=max_tokens,
                     timeout=timeout
                 )
                 
@@ -404,8 +418,18 @@ class LLMUtils:
         
         # Process successful response
         try:
+            # Check if response was truncated
+            finish_reason = response.choices[0].finish_reason if response.choices else None
+            was_truncated = (finish_reason == "length")
+            
             # Extract response text from OpenAI response
             response_text = response.choices[0].message.content.strip()
+            
+            # Warn if truncated
+            if was_truncated:
+                print(f"⚠️ WARNING: Response was truncated (finish_reason='length')")
+                print(f"   This means the response hit the max_tokens limit ({max_tokens})")
+                print(f"   Consider: 1) Increasing max_tokens, 2) Reducing batch size, 3) Making prompt more concise")
             
             # Remove markdown code blocks (handle various formats)
             if response_text.startswith("```json"):
@@ -859,8 +883,12 @@ class LLMUtils:
            - Gender requirements
            - Inclusion/exclusion criteria
            - Overall medical compatibility
-        2. Provide detailed reasoning for each evaluation
-        3. Consider the patient's medical history, current condition, and trial requirements
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
         4. Be thorough but concise in your analysis
         5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
         6. Ensure all strings use double quotes and escape special characters properly
@@ -1019,10 +1047,27 @@ class LLMUtils:
                     }
                     evaluation['hybrid_score'] = trials[i].get('hybrid_score', 0)
             
+            # Recalculate batch_summary from actual evaluations (LLM's summary may be incorrect if count mismatch)
+            actual_eligible = len([e for e in evaluations if e.get('eligibility_status') == 'ELIGIBLE'])
+            actual_not_eligible = len([e for e in evaluations if e.get('eligibility_status') == 'NOT_ELIGIBLE'])
+            actual_need_more_info = len([e for e in evaluations if e.get('eligibility_status') == 'NEED_MORE_INFO'])
+            actual_avg_confidence = sum(e.get('confidence_score', 0) for e in evaluations) / len(evaluations) if evaluations else 0
+            
+            # Use LLM's batch_summary as base, but override counts with actual values
+            llm_batch_summary = result.get("batch_summary", {})
+            corrected_batch_summary = {
+                **llm_batch_summary,  # Keep other fields from LLM (like top_recommendations, generated_at)
+                "total_trials_evaluated": len(evaluations),  # Use actual count
+                "eligible_count": actual_eligible,
+                "not_eligible_count": actual_not_eligible,
+                "need_more_info_count": actual_need_more_info,
+                "average_confidence": actual_avg_confidence
+            }
+            
             return {
                 "success": True,
                 "evaluations": evaluations,
-                "batch_summary": result.get("batch_summary", {}),
+                "batch_summary": corrected_batch_summary,
                 "total_evaluations": len(evaluations),
                 "generated_at": datetime.now().isoformat()
             }
@@ -1155,9 +1200,14 @@ class LLMUtils:
            - Gender requirements
            - Inclusion/exclusion criteria
            - Overall medical compatibility
-        2. Provide detailed reasoning for each evaluation
-        3. Consider each patient's medical history, current condition, and trial requirements
-        4. Be thorough but concise in your analysis
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Consider each patient's medical history, current condition, and trial requirements
+        5. Be thorough but concise in your analysis
 
         Return ONLY a valid JSON object with this structure:
         {{
@@ -1290,10 +1340,27 @@ class LLMUtils:
                     }
                     evaluation['hybrid_score'] = patients[i].get('hybrid_score', 0)
             
+            # Recalculate batch_summary from actual evaluations (LLM's summary may be incorrect if count mismatch)
+            actual_eligible = len([e for e in evaluations if e.get('eligibility_status') == 'ELIGIBLE'])
+            actual_not_eligible = len([e for e in evaluations if e.get('eligibility_status') == 'NOT_ELIGIBLE'])
+            actual_need_more_info = len([e for e in evaluations if e.get('eligibility_status') == 'NEED_MORE_INFO'])
+            actual_avg_confidence = sum(e.get('confidence_score', 0) for e in evaluations) / len(evaluations) if evaluations else 0
+            
+            # Use LLM's batch_summary as base, but override counts with actual values
+            llm_batch_summary = result.get("batch_summary", {})
+            corrected_batch_summary = {
+                **llm_batch_summary,  # Keep other fields from LLM (like top_recommendations, generated_at)
+                "total_patients_evaluated": len(evaluations),  # Use actual count
+                "eligible_count": actual_eligible,
+                "not_eligible_count": actual_not_eligible,
+                "need_more_info_count": actual_need_more_info,
+                "average_confidence": actual_avg_confidence
+            }
+            
             return {
                 "success": True,
                 "evaluations": evaluations,
-                "batch_summary": result.get("batch_summary", {}),
+                "batch_summary": corrected_batch_summary,
                 "total_evaluations": len(evaluations),
                 "generated_at": datetime.now().isoformat()
             }

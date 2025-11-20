@@ -1,0 +1,317 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 41
+mrn: 39000017
+batch_size: 2
+trial_ids: ['NCT03947385', 'NCT05967533']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 2 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 41
+        MRN: 39000017
+        Age: 42
+        Gender: Male
+        Oncologist: Dr. Kavita Desai, MD
+        Combined Medical Record: Patient Name: Gregory Smith
+Patient MRN: 39000017
+Age: 42, Gender: Male
+Date of Visit: August 10, 2025
+Oncologist: Dr. Kavita Desai, MD
+
+Chief Complaint: - Early satiety, Abdominal pain, Constipation
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: June 07, 2025
+- Site of primary tumor: Transverse colon (right colon)
+- Date of initial diagnosis and TNM stage: June 07, 2025; T4N0M1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: August 02, 2025 - brain, peritoneum metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Early satiety, Abdominal pain, Constipation
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities: Asthma, Coronary artery disease
+- Surgical history: Appendectomy (2011)
+
+Family History: - Father with colon polyps
+- Awaiting genetic testing results
+
+Social History: - Smoking: Occasional smoker (social use)
+- Alcohol use: Rare
+- Living situation: Lives alone
+- Occupation: Engineer
+- Functional status: Fully independent
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+--- Page 25 ---
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No new neurologic deficits; headaches improving
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+
+Medications and Allergies: - Current medications:
+- Metoprolol 50mg twice daily
+- Multivitamin daily
+- Allergies:
+- Penicillin (rash)
+
+Physical Examination: - General: Alert, mild pallor
+- Abdomen: Soft, mild tenderness, no masses palpable, no ascites
+- Rectal exam: Guaiac positive stool
+- No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- CBC: WBC 8.4 ×10³/µL, Hgb 11.3 g/dL, Platelets 280 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 110 mL/min/1.73m²
+- LFTs: AST 44 U/L, ALT 49 U/L, ALP 228 U/L, Total bilirubin 1.9 mg/dL
+- CEA: 139.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+- Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 2 hepatic metastases (largest 3.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Laboratory and Imaging Results: - CBC: WBC 8.4 ×10³/µL, Hgb 11.3 g/dL, Platelets 280 ×10³/µL
+- Chemistry: Creatinine 0.9 mg/dL, eGFR 110 mL/min/1.73m²
+- LFTs: AST 44 U/L, ALT 49 U/L, ALP 228 U/L, Total bilirubin 1.9 mg/dL
+- CEA: 139.4 ng/mL (elevated)
+- Molecular markers: KRAS G12D mutant, MSS
+
+Imaging: - Imaging: CT shows transverse colon (right colon) mass (5.8 cm), 2 hepatic metastases (largest 3.2 cm)
+- Colonoscopy: Moderately differentiated adenocarcinoma
+
+Vital Signs: BP 125/70, HR 82, RR 18, Temp 98.4°F, SpO2 99%, Weight 137 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (brain, peritoneum)
+- Disease status: None - newly diagnosed, treatment-naïve
+- Treatment-related toxicities: None
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+Patient Information
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT03947385
+        Title: A Phase 1/2 Study of IDE196 in Patients with Solid Tumors Harboring GNAQ/11 Mutations or PRKC Fusions
+        Condition: ["Metastatic Uveal Melanoma", "Cutaneous Melanoma", "Colorectal Cancer", "Other Solid Tumors"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 4.888
+        
+        Brief Summary: This is a Phase 1/2, multi-center, open-label basket study designed to evaluate the safety and anti-tumor activity of IDE196 in patients with solid tumors harboring GNAQ or GNA11 (GNAQ/11) mutations or PRKC fusions, including metastatic uveal melanoma (MUM), cutaneous melanoma, colorectal cancer, and other solid tumors.
+
+Phase 1 (dose escalation - monotherapy) will assess safety, tolerability and pharmacokinetics of IDE196 via standard dose escalation scheme and determine the recommended Phase 2 dose. Safety and anti-tumor activity will be assessed in the Phase 2 (dose expansion) part of the study.
+
+Phase 1 (dose escalation - binimetib combination) will assess safety, tolerability and pharmacokinetics of IDE196 and binimetinib via standard dose escalation scheme and determine the recommended Phase 2 dose. Safety and anti-tumor activity will be assessed in the Phase 2 (dose expansion) part of the study.
+
+Phase 1 (dose escalation - crizotinib combination) will assess safety, tolerability and pharmacokinetics of IDE196 and crizotinib via standard dose escalation scheme and determine the recommended Phase 2 dose. Safety and anti-tumor activity will be assessed in the Phase 2 (dose expansion) part of the study. Evaluation of safety and efficacy across multiple doses may be explored in the dose optimization part of the study.
+
+Crizotinib monotherapy with crossover to combination cohort may be assessed for safety and to show the contribution of each study drug to anti-tumor activity.
+
+As of Protocol Amendment 10, Phase 1, Phase 2 dose expansion in IDE196 monotherapy, and Phase 2 dose expansion of IDE196 in combination with binimetinib have been fully enrolled. There were no patients enrolled in the crizotinib monotherapy cohorts.
+        
+        Detailed Description: 
+        
+        Inclusion Criteria: ["* Patient must be \u226518 years of age and able to provide written informed consent", "* Diagnosis of the following:", "o MUM: Uveal melanoma with histological or cytological confirmed metastatic disease. Metastatic disease may be treatment na\u00efve or have progressed on or after most recent therapy. If the most recent therapy was an immune-oncology agent, PD must be confirmed.", "\\- If a patient is treatment na\u00efve and human leukocyte antigen (HLA)-A\\*02:01 positive\\*\\*\\*, documentation is required to provide rationale why treatment with tebentafusp is not the ideal firstline treatment approach or of the patient's intolerance to tebentafusp.", "\\*\\*\\*To be enrolled in the HLA-A\\*02:01 positive cohort, HLA status must be documented by test results from a CAP/CLIA-certified laboratory.", "* Measurable disease per RECIST v1.1", "* Eastern Cooperative Oncology Group \u22641 and expected life expectancy of \\> 3 months", "* Adequate organ function at screening", "* Adequate contraceptive measures for non-sterilized male and female patients of childbearing potential", "Crizotinib Combination Additional"]
+        
+        Exclusion Criteria: ["* Previous treatment with a PKC inhibitor", "* Known MSI-H/dMMR tumors who have not previously received immune checkpoint inhibitors", "* Known symptomatic brain metastases", "* Adverse events from prior anti-cancer therapy that have not resolved", "* Known acquired immunodeficiency syndrome (AIDS)-related illness, hepatitis B virus, or hepatitis C virus", "* Active infection requiring ongoing therapy", "* Recent surgery or radiotherapy", "* Prior gastrectomy or upper bowel removal or any other gastrointestinal disorder or defect", "* Females who are pregnant or breastfeeding", "* Impaired cardiac function", "* Treatment with prohibited medications that cannot be discontinued prior to study entry", "* For patients receiving IDE196 powder-in-capsule (PIC) formulation or crizotinib, allergy to mammalian meat products and gelatin", "Crizotinib Combination Additional"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Patient must be ≥18 years of age and able to provide written informed consent
+* Diagnosis of the following:
+
+  o MUM: Uveal melanoma with histological or cytological confirmed metastatic disease. Metastatic disease may be treatment naïve or have progressed on or after most recent therapy. If the most recent therapy was an immune-oncology agent, PD must be confirmed.
+
+  \- If a patient is treatment naïve and human leukocyte antigen (HLA)-A\*02:01 positive\*\*\*, documentation is required to provide rationale why treatment with tebentafusp is not the ideal firstline treatment approach or of the patient's intolerance to tebentafusp.
+
+  \*\*\*To be enrolled in the HLA-A\*02:01 positive cohort, HLA status must be documented by test results from a CAP/CLIA-certified laboratory.
+* Measurable disease per RECIST v1.1
+* Eastern Cooperative Oncology Group ≤1 and expected life expectancy of \> 3 months
+* Adequate organ function at screening
+* Adequate contraceptive measures for non-sterilized male and female patients of childbearing potential
+
+Crizotinib Combination Additional Inclusion Criteria:
+
+* Prior chemotherapy other therapies as applicable or major surgeries must have been completed at least 4 weeks prior to initiation of crizotinib
+* Patients with preexisting peripheral neuropathy can be included if it is Grade 1 or lower, prior to initiation of crizotinib Biopsy-eligible patients
+* Accessible lesion(s) that permit a total of at least two biopsies without unacceptable risk of a significant procedural complication.
+
+Exclusion Criteria:
+
+* Previous treatment with a PKC inhibitor
+* Known MSI-H/dMMR tumors who have not previously received immune checkpoint inhibitors
+* Known symptomatic brain metastases
+* Adverse events from prior anti-cancer therapy that have not resolved
+* Known acquired immunodeficiency syndrome (AIDS)-related illness, hepatitis B virus, or hepatitis C virus
+* Active infection requiring ongoing therapy
+* Recent surgery or radiotherapy
+* Prior gastrectomy or upper bowel removal or any other gastrointestinal disorder or defect
+* Females who are pregnant or breastfeeding
+* Impaired cardiac function
+* Treatment with prohibited medications that cannot be discontinued prior to study entry
+* For patients receiving IDE196 powder-in-capsule (PIC) formulation or crizotinib, allergy to mammalian meat products and gelatin
+
+Crizotinib Combination Additional Exclusion Criteria:
+
+* Prior therapy directly targeting ALK, MET, or ROS1
+* Spinal cord compression
+* History of pneumonitis or interstitial lung disease
+* History of syncope
+* History of thromboembolic or cerebrovascular events ≤12 weeks prior to first dose of study treatment
+
+PK Substudy (optional) with Pravastatin Additional Exclusion Criteria:
+
+* Taken any dose of statin or inhibitor of organic anion transporting polypeptide within 7 days prior to enrollment in the study and cannot refrain from them through C2D1
+* Taken drugs that interfere with the absorption, metabolism, or elimination of pravastatin
+* Any contraindication associated to the use of statins or hypersensitivity component of pravastatin
+* Active liver disease
+        
+        ============================================================
+        TRIAL 2:
+        ============================================================
+        Trial ID: NCT05967533
+        Title: Single Arm Study to Assess the Immune Effects of Fermented Wheat Germ (FWG) Nutritional Supplementation in Patients With Advanced Malignancies Being Treated With Standard of Care Checkpoint Inhibitor-Based Therapy
+        Condition: ["Advanced Colorectal Carcinoma", "Advanced Lung Non-Small Cell Carcinoma", "Advanced Malignant Solid Neoplasm", "Advanced Melanoma", "Advanced Renal Cell Carcinoma", "Advanced Triple-Negative Breast Carcinoma", "Anatomic Stage III Breast Cancer AJCC v8", "Anatomic Stage IV Breast Cancer (AJCC) v8", "Clinical Stage III Cutaneous Melanoma AJCC v8", "Clinical Stage IV Cutaneous Melanoma AJCC v8", "Stage III Colorectal Cancer AJCC v8", "Stage III Lung Cancer AJCC v8", "Stage III Renal Cell Cancer AJCC v8", "Stage IV Colorectal Cancer AJCC v8", "Stage IV Lung Cancer AJCC v8", "Stage IV Renal Cell Cancer AJCC v8"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 4.879
+        
+        Brief Summary: This phase I clinical trial tests the immune effects of fermented wheat germ in patients with advanced solid tumor cancers who are being treated with standard of care checkpoint inhibitors. Fermented wheat germ is a nutritional supplement that some claim is a "dietary food for special medical purposes for cancer patients" to support them in treatment. There have also been claims that fermented wheat germ is "clinically proven" and "recognized by medical experts" to "enhance oncological treatment" and boost immune response to cancer; however, there are currently no documented therapeutic effects of fermented wheat germ as a nutritional supplement. Checkpoint inhibitors, given as part of standard of care for advanced solid tumors, are a type of immunotherapy that may help the body's immune system attack the cancer and may interfere with the ability of tumor cells to grow and spread. The information gained from this trial may allow researchers to determine if there is any value of giving fermented wheat germ with standard of care checkpoint inhibitors for patients with advanced solid tumor malignancies.
+        
+        Detailed Description: PRIMARY OBJECTIVE: I. To assess the effect of fermented wheat germ (FWG) nutritional supplementation on natural killer (NK) cell killing activity in peripheral blood of cancer patients being treated with standard of care (SOC) immunotherapy who have voluntarily decided to take the FWG nutritional supplement.
+
+SECONDARY OBJECTIVES:
+
+I. To assess immunologic effects of FWG in subjects with cancer treated with checkpoint inhibitor (CPi)-based therapy.
+
+II. To archive stool specimens of subjects with cancer treated with CPi-based therapy for future non-interventional studies for subsequent analysis at completion of study.
+
+III. To evaluate toxicities of FWG in subjects with cancer treated with checkpoint inhibitor (CPi)-based therapy.
+
+IV. To assess immunologic effects of FWG in patients with cancer treated with CPi immune-oncology-based therapy (Immune Correlates).
+        
+        Inclusion Criteria: ["* Histologically or cytologically confirmed non small cell lung carcinoma (NSCLC), renal cell carcinoma (RCC), melanoma, colorectal carcinoma (CRC) and triple-negative breast cancer (TNBC) solid tumor malignancies deemed appropriate to receive standard-of-care checkpoint inhibitor (CPi)-based therapy", "* Age \\>= 18 years of age at time of consent", "* Eastern Cooperative Oncology Group (ECOG) performance status =\\< 2 (Karnofsky \\>= 60%)", "* Life expectancy of greater than 6 months", "* Women of child-bearing potential must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) for the duration of study participation (including dosing interruptions) and for 5 months (150 days) after the last dose of study agent. Women must agree to refrain from egg donation during this timeframe", "* Male subjects must agree to employ an effective method of birth control starting dose from cycle 1 day 1, including dosing interruptions through 90 days after receipt of the last dose of fermented wheat germ (FWG). Male subjects must agree to refrain from sperm donation while taking FWG during study treatment for at least 90 days after the last dose of FWG", "* Ability to understand and the willingness to sign a written informed consent document", "* Must be able to swallow study treatment"]
+        
+        Exclusion Criteria: ["* Prior allogeneic bone marrow transplantation or solid organ transplantation", "* Chemotherapy or radiotherapy within 2 weeks (6 weeks for nitrosoureas or mitomycin C) prior to cycle 1 day 1. However, the following therapies are allowed: \\* Hormone-replacement therapy or oral contraceptives \\* Herbal therapy intended as anticancer therapy must be discontinued for at least 1 week prior to enrollment)", "* Any subject who have not recovered to at least grade 2 from adverse events (other than alopecia) due to agents administered more than 2 weeks earlier. Treatment with any other investigational agent within 3 weeks", "* Currently taking FWG", "* Treatment with systemic immunostimulatory agents (for example, interferon \\[IFN\\]-alpha or interleukin \\[IL\\]-2) within 6 weeks prior", "* Current or prior use of immunosuppressive medications (for example, corticosteroid, cyclophosphamide, azathioprine, methotrexate, thalidomide, calcineurin inhibitors, and anti-tumor necrosis factor \\[anti-TNF\\] agents) within 14 days prior to first dose of FWG. The following are exceptions to this criterion: \\* Intranasal, inhaled, topical or local steroid injections (e.g., intra-articular injection); steroids as premedication for hypersensitivity reactions; systemic corticosteroid at physiologic doses not to exceed 10 mg/day of prednisone or equivalent may be enrolled \\* Patients who have received acute, low dose, systemic immunosuppressant medications (e.g., a one-time dose of dexamethasone for nausea) may be enrolled \\* The use of inhaled corticosteroids and mineralocorticoids (e.g., fludrocortisone) for patients with orthostatic hypotension or adrenocortical insufficiency is allowed", "* Patients taking bisphosphonate therapy for hypercalcemia. Use of bisphosphonate therapy for other reasons (e.g., bone metastasis or osteoporosis) is allowed", "* Known history of allergic reactions or sensitivity attributed to compounds of similar chemical or biologic composition to the study agent (e.g., gluten)", "* Active or prior documented autoimmune or inflammatory disorders (including inflammatory bowel disease \\[e.g., colitis, Crohn's disease\\], diverticulitis with the exception of a prior episode that has resolved or diverticulosis, celiac disease, irritable bowel disease, or other serious gastrointestinal chronic conditions associated with diarrhea; systemic lupus erythematosus; Wegener's syndrome \\[granulomatosis with polyangiitis\\]; myasthenia gravis; Graves' disease; rheumatoid arthritis; hypophysitis; uveitis; etc.) within the past 3 years prior to the start of treatment. The following are exceptions to this criterion: subjects with vitiligo or alopecia; subjects with hypothyroidism (e.g., following Hashimoto syndrome) stable on hormone replacement; or subjects with psoriasis not requiring systemic treatment", "* History of idiopathic pulmonary fibrosis, pneumonitis (including drug induced), organizing pneumonia (i.e., bronchiolitis obliterans, cryptogenic organizing pneumonia, etc.), or evidence of active pneumonitis on screening chest computed tomography (CT) scan.History of radiation pneumonitis in the radiation field (fibrosis) is permitted \\* Patients with a history of autoimmune hypothyroidism on a stable dose of thyroid replacement hormone are eligible \\* Patients with controlled type 1 diabetes mellitus on a stable insulin regimen are eligible", "* Patients with known active tuberculosis", "* Major surgical procedure within 28 days prior to cycle 1, day 1 or anticipation of need for a major surgical procedure during the study", "* Administration of a live, attenuated vaccine within 4 weeks before cycle 1, day 1 or anticipation that such a live, attenuated vaccine will be required during the study and up to 5 months after the last dose of FWG", "* Must not have received live, attenuated influenza vaccine within 4 weeks prior to cycle 1, day 1 or at any time during the study", "* Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would interfere with patient safety or limit compliance with study requirements", "* Female subjects who are pregnant or breast-feeding", "* Any condition that would prohibit the understanding or rendering of informed consent in the opinion of the investigator", "* Prior intolerance to checkpoint inhibitor (CPi)-based therapies", "* Any medical condition that in the opinion of the investigator would interfere with the patient's safety or compliance while on trial"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Histologically or cytologically confirmed non small cell lung carcinoma (NSCLC), renal cell carcinoma (RCC), melanoma, colorectal carcinoma (CRC) and triple-negative breast cancer (TNBC) solid tumor malignancies deemed appropriate to receive standard-of-care checkpoint inhibitor (CPi)-based therapy
+* Age \>= 18 years of age at time of consent
+* Eastern Cooperative Oncology Group (ECOG) performance status =\< 2 (Karnofsky \>= 60%)
+* Life expectancy of greater than 6 months
+* Women of child-bearing potential must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) for the duration of study participation (including dosing interruptions) and for 5 months (150 days) after the last dose of study agent. Women must agree to refrain from egg donation during this timeframe
+* Male subjects must agree to employ an effective method of birth control starting dose from cycle 1 day 1, including dosing interruptions through 90 days after receipt of the last dose of fermented wheat germ (FWG). Male subjects must agree to refrain from sperm donation while taking FWG during study treatment for at least 90 days after the last dose of FWG
+* Ability to understand and the willingness to sign a written informed consent document
+* Must be able to swallow study treatment
+
+Exclusion Criteria:
+
+* Prior allogeneic bone marrow transplantation or solid organ transplantation
+* Chemotherapy or radiotherapy within 2 weeks (6 weeks for nitrosoureas or mitomycin C) prior to cycle 1 day 1. However, the following therapies are allowed: \* Hormone-replacement therapy or oral contraceptives \* Herbal therapy intended as anticancer therapy must be discontinued for at least 1 week prior to enrollment)
+* Any subject who have not recovered to at least grade 2 from adverse events (other than alopecia) due to agents administered more than 2 weeks earlier. Treatment with any other investigational agent within 3 weeks
+* Currently taking FWG
+* Treatment with systemic immunostimulatory agents (for example, interferon \[IFN\]-alpha or interleukin \[IL\]-2) within 6 weeks prior
+* Current or prior use of immunosuppressive medications (for example, corticosteroid, cyclophosphamide, azathioprine, methotrexate, thalidomide, calcineurin inhibitors, and anti-tumor necrosis factor \[anti-TNF\] agents) within 14 days prior to first dose of FWG. The following are exceptions to this criterion: \* Intranasal, inhaled, topical or local steroid injections (e.g., intra-articular injection); steroids as premedication for hypersensitivity reactions; systemic corticosteroid at physiologic doses not to exceed 10 mg/day of prednisone or equivalent may be enrolled \* Patients who have received acute, low dose, systemic immunosuppressant medications (e.g., a one-time dose of dexamethasone for nausea) may be enrolled \* The use of inhaled corticosteroids and mineralocorticoids (e.g., fludrocortisone) for patients with orthostatic hypotension or adrenocortical insufficiency is allowed
+* Patients taking bisphosphonate therapy for hypercalcemia. Use of bisphosphonate therapy for other reasons (e.g., bone metastasis or osteoporosis) is allowed
+* Known history of allergic reactions or sensitivity attributed to compounds of similar chemical or biologic composition to the study agent (e.g., gluten)
+* Active or prior documented autoimmune or inflammatory disorders (including inflammatory bowel disease \[e.g., colitis, Crohn's disease\], diverticulitis with the exception of a prior episode that has resolved or diverticulosis, celiac disease, irritable bowel disease, or other serious gastrointestinal chronic conditions associated with diarrhea; systemic lupus erythematosus; Wegener's syndrome \[granulomatosis with polyangiitis\]; myasthenia gravis; Graves' disease; rheumatoid arthritis; hypophysitis; uveitis; etc.) within the past 3 years prior to the start of treatment. The following are exceptions to this criterion: subjects with vitiligo or alopecia; subjects with hypothyroidism (e.g., following Hashimoto syndrome) stable on hormone replacement; or subjects with psoriasis not requiring systemic treatment
+* History of idiopathic pulmonary fibrosis, pneumonitis (including drug induced), organizing pneumonia (i.e., bronchiolitis obliterans, cryptogenic organizing pneumonia, etc.), or evidence of active pneumonitis on screening chest computed tomography (CT) scan.History of radiation pneumonitis in the radiation field (fibrosis) is permitted \* Patients with a history of autoimmune hypothyroidism on a stable dose of thyroid replacement hormone are eligible \* Patients with controlled type 1 diabetes mellitus on a stable insulin regimen are eligible
+* Patients with known active tuberculosis
+* Major surgical procedure within 28 days prior to cycle 1, day 1 or anticipation of need for a major surgical procedure during the study
+* Administration of a live, attenuated vaccine within 4 weeks before cycle 1, day 1 or anticipation that such a live, attenuated vaccine will be required during the study and up to 5 months after the last dose of FWG
+* Must not have received live, attenuated influenza vaccine within 4 weeks prior to cycle 1, day 1 or at any time during the study
+* Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would interfere with patient safety or limit compliance with study requirements
+* Female subjects who are pregnant or breast-feeding
+* Any condition that would prohibit the understanding or rendering of informed consent in the opinion of the investigator
+* Prior intolerance to checkpoint inhibitor (CPi)-based therapies
+* Any medical condition that in the opinion of the investigator would interfere with the patient's safety or compliance while on trial
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT03947385",
+                    "trial_title": "A Phase 1/2 Study of IDE196 in Patients with Solid Tumors Harboring GNAQ/11 Mutations or PRKC Fusions",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "NCT05967533",
+                    "trial_title": "Single Arm Study to Assess the Immune Effects of Fermented Wheat Germ (FWG) Nutritional Supplementation in Patients With Advanced Malignancies Being Treated With Standard of Care Checkpoint Inhibitor-Based Therapy",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 2 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 2,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-20T08:12:41.034478"
+            }
+        }
+        
