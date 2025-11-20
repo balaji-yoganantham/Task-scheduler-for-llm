@@ -22,7 +22,7 @@
       "inclusion_criteria": "Documented informed consent; age >= 18; ECOG <= 1; life expectancy >= 3 months; histologically/ cytologically confirmed MSS mCRC; progression after specified chemotherapy; measurable metastatic disease; adequate organ function; specific requirements for women/men of childbearing potential.",
       "exclusion_criteria": "Prior immunotherapy targeting PD-1, PD-L1, or CTLA-4; need for systemic immunosuppression; prior transplant; recent surgery; hypersensitivity; active or history of autoimmune disease; uncontrolled hypertension; cardiovascular events; active bleeding, severe toxicity; brain metastases except as described; second malignancy requiring treatment; interstitial lung disease; psychiatric/substance abuse interfering with study compliance; uncontrolled HIV/HBV/HCV infection; pregnancy/lactation.",
       "eligibility_criteria": "See Inclusion/Exclusion above",
-      "is_evaluated": 1,
+      "is_evaluated": 0,
       "created_at": null
     },
     {
@@ -41,7 +41,7 @@
       "inclusion_criteria": "Age 18-75; signed informed consent; histologically proven diagnosis of metastatic colorectal cancer; no prior systemic chemotherapy for metastatic CRC; RAS wild-type (KRAS, NRAS) and BRAF-V600E negative; measurable lesion per RECIST1.1; ECOG 0-1; life expectancy ≥16 weeks; adequate organ and hematologic function.",
       "exclusion_criteria": "Known drug allergy; recent local treatment or surgery; brain/leptomeningeal metastases; bowel obstruction; active severe clinical infection; uncontrolled diabetes or severe lung/liver disease; significant cardiovascular disease; renal replacement; Grade >1 peripheral neuropathy; previous organ/stem cell transplant; history of other malignancy (except specified) within 5 years; HIV/HBV/HCV infection; coagulation dysfunction; prior VEGF or EGFR-targeted therapy; prior experimental/immunotherapy/hormone therapy as defined; pregnancy/lactation; alcohol/drug dependence; active psychiatric/neurological disease; unresolved adverse events from prior therapy.",
       "eligibility_criteria": "See Inclusion/Exclusion above",
-      "is_evaluated": 1,
+      "is_evaluated": 0,
       "created_at": null
     },
     {
@@ -60,7 +60,7 @@
       "inclusion_criteria": "Age ≥16 for Phase 3; confirmed Stage IV CRC with BRAF V600E mutation; 0-1 prior regimens in metastatic setting, measurable disease per RECIST 1.1, ECOG 0-1, adequate organ function.",
       "exclusion_criteria": "MSI-H/dMMR unless immune checkpoint inhibitor not possible; active infections in prior 2 weeks; symptomatic brain metastasis.",
       "eligibility_criteria": "See Inclusion/Exclusion above",
-      "is_evaluated": 1,
+      "is_evaluated": 0,
       "created_at": null
     },
     {
@@ -84,7 +84,7 @@
       "inclusion_criteria": "Histologically/cytologically confirmed colorectal adenocarcinoma, unresectable/metastatic disease measurable by RECIST 1.1; age ≥18; ECOG ≤2; adequate organ function; ability and willingness for informed consent.",
       "exclusion_criteria": "MSI-H or dMMR CRC; prolonged QTcF >450ms; unresolved toxicity from prior therapy; prior chemotherapy/antiangiogenic agents; known DPD deficiency; severe infection; pregnancy/lactation; other specified illnesses.",
       "eligibility_criteria": "See Inclusion/Exclusion above",
-      "is_evaluated": 1,
+      "is_evaluated": 0,
       "created_at": null
     },
     {
@@ -107,7 +107,7 @@
       "inclusion_criteria": "Age ≥18, histologically/cytologically proven mCRC with >3mo since resection, progression post 2-3 prior systemic therapies incl. fluoropyrimidine, oxaliplatin, irinotecan, bevacizumab ± anti-EGFR for RAS wild-type; targeted therapies for available mutations; RECIST v1.1 measurable lesion; ECOG 0-1; life expectancy ≥12 weeks; adequate hepatic/renal function; negative pregnancy test; contraception reqs; signed consent.",
       "exclusion_criteria": " ≤4 weeks since major surgery/radiation/chemo/targeted therapy/immunotherapy; recent CV events (as described); uncontrolled CNS metastasis (asymptomatic allowed); active hemorrhage/diathesis; recent GI disease/events; need for antiplatelet/anticoagulants; need for chronic NSAIDs/systemic corticosteroids; severe active infection; active HBV/HCV, uncontrolled illnesses; abnormal ECG/QTcF >450ms.",
       "eligibility_criteria": "See Inclusion/Exclusion above",
-      "is_evaluated": 1,
+      "is_evaluated": 0,
       "created_at": null
     }
   ]
