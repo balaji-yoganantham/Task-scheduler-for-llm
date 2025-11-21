@@ -66,3 +66,6 @@ pathlib2==2.3.7
 
 # Location and geocoding
 geopy==2.4.1
+
+# Excel file generation
+openpyxl==3.1.2

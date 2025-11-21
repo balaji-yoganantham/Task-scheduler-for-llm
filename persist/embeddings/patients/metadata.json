@@ -1,44 +1,4 @@
 {
-  "218": {
-    "mrn": "00114466",
-    "age": 23,
-    "gender": "Male",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-11-19T11:42:05.791485+00:00",
-    "patient_text_length": 627,
-    "embedding_index": 0
-  },
-  "217": {
-    "mrn": "00112233",
-    "age": 45,
-    "gender": "Male",
-    "oncologist": null,
-    "date_of_visit": null,
-    "created_at": "2025-11-19T11:36:37.914955+00:00",
-    "patient_text_length": 523,
-    "embedding_index": 1
-  },
-  "186": {
-    "mrn": "98938054",
-    "age": 35,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-06-17",
-    "created_at": "2025-11-10T16:50:10.341081+00:00",
-    "patient_text_length": 4559,
-    "embedding_index": 2
-  },
-  "183": {
-    "mrn": "97136901",
-    "age": 37,
-    "gender": "Male",
-    "oncologist": "Dr. David Thompson, MD",
-    "date_of_visit": "2025-05-22",
-    "created_at": "2025-11-10T16:49:57.106012+00:00",
-    "patient_text_length": 4699,
-    "embedding_index": 3
-  },
   "182": {
     "mrn": "95231752",
     "age": 50,
@@ -47,17 +7,7 @@
     "date_of_visit": "2025-06-10",
     "created_at": "2025-11-10T16:49:53.081127+00:00",
     "patient_text_length": 4654,
-    "embedding_index": 4
-  },
-  "181": {
-    "mrn": "94833643",
-    "age": 63,
-    "gender": "Male",
-    "oncologist": "Dr. Michael Chen, MD",
-    "date_of_visit": "2025-05-25",
-    "created_at": "2025-11-10T16:49:50.041140+00:00",
-    "patient_text_length": 4712,
-    "embedding_index": 5
+    "embedding_index": 0
   },
   "180": {
     "mrn": "93949889",
@@ -67,7 +17,7 @@
     "date_of_visit": "2025-06-05",
     "created_at": "2025-11-10T16:49:47.140964+00:00",
     "patient_text_length": 4339,
-    "embedding_index": 6
+    "embedding_index": 1
   },
   "179": {
     "mrn": "92533443",
@@ -77,7 +27,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:49:43.280948+00:00",
     "patient_text_length": 4534,
-    "embedding_index": 7
+    "embedding_index": 2
   },
   "178": {
     "mrn": "90280004",
@@ -87,17 +37,7 @@
     "date_of_visit": "2025-06-03",
     "created_at": "2025-11-10T16:49:39.281163+00:00",
     "patient_text_length": 4372,
-    "embedding_index": 8
-  },
-  "177": {
-    "mrn": "88760810",
-    "age": 35,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-05-23",
-    "created_at": "2025-11-10T16:49:35.191047+00:00",
-    "patient_text_length": 4927,
-    "embedding_index": 9
+    "embedding_index": 3
   },
   "176": {
     "mrn": "88044380",
@@ -107,17 +47,7 @@
     "date_of_visit": "2025-05-27",
     "created_at": "2025-11-10T16:49:32.080983+00:00",
     "patient_text_length": 4496,
-    "embedding_index": 10
-  },
-  "175": {
-    "mrn": "86504025",
-    "age": 41,
-    "gender": "Female",
-    "oncologist": "Dr. Michael Chen, MD",
-    "date_of_visit": "2025-05-18",
-    "created_at": "2025-11-10T16:49:29.261029+00:00",
-    "patient_text_length": 4530,
-    "embedding_index": 11
+    "embedding_index": 4
   },
   "174": {
     "mrn": "86474119",
@@ -127,17 +57,7 @@
     "date_of_visit": "2025-05-19",
     "created_at": "2025-11-10T16:49:25.401003+00:00",
     "patient_text_length": 4748,
-    "embedding_index": 12
-  },
-  "173": {
-    "mrn": "86140084",
-    "age": 69,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-05-24",
-    "created_at": "2025-11-10T16:49:20.166083+00:00",
-    "patient_text_length": 4734,
-    "embedding_index": 13
+    "embedding_index": 5
   },
   "172": {
     "mrn": "85414897",
@@ -147,17 +67,7 @@
     "date_of_visit": "2025-05-23",
     "created_at": "2025-11-10T16:49:10.796053+00:00",
     "patient_text_length": 4518,
-    "embedding_index": 14
-  },
-  "171": {
-    "mrn": "85048858",
-    "age": 72,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-05-24",
-    "created_at": "2025-11-10T16:49:04.081004+00:00",
-    "patient_text_length": 4332,
-    "embedding_index": 15
+    "embedding_index": 6
   },
   "170": {
     "mrn": "84184554",
@@ -167,7 +77,7 @@
     "date_of_visit": "2025-06-14",
     "created_at": "2025-11-10T16:48:56.821077+00:00",
     "patient_text_length": 4690,
-    "embedding_index": 16
+    "embedding_index": 7
   },
   "169": {
     "mrn": "82646700",
@@ -177,7 +87,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:48:52.011613+00:00",
     "patient_text_length": 4441,
-    "embedding_index": 17
+    "embedding_index": 8
   },
   "168": {
     "mrn": "82446651",
@@ -187,37 +97,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:48:47.555976+00:00",
     "patient_text_length": 4641,
-    "embedding_index": 18
-  },
-  "167": {
-    "mrn": "82074147",
-    "age": 33,
-    "gender": "Female",
-    "oncologist": "Dr. Lisa Park, MD",
-    "date_of_visit": "2025-06-06",
-    "created_at": "2025-11-10T16:48:42.306930+00:00",
-    "patient_text_length": 4403,
-    "embedding_index": 19
-  },
-  "166": {
-    "mrn": "80132218",
-    "age": 63,
-    "gender": "Female",
-    "oncologist": "Dr. David Thompson, MD",
-    "date_of_visit": "2025-05-19",
-    "created_at": "2025-11-10T16:48:39.236107+00:00",
-    "patient_text_length": 4753,
-    "embedding_index": 20
-  },
-  "165": {
-    "mrn": "78352483",
-    "age": 73,
-    "gender": "Female",
-    "oncologist": "Dr. Jennifer Rodriguez, MD",
-    "date_of_visit": "2025-06-01",
-    "created_at": "2025-11-10T16:48:34.721224+00:00",
-    "patient_text_length": 4739,
-    "embedding_index": 21
+    "embedding_index": 9
   },
   "164": {
     "mrn": "78006419",
@@ -227,7 +107,7 @@
     "date_of_visit": "2025-06-10",
     "created_at": "2025-11-10T16:48:28.076032+00:00",
     "patient_text_length": 4677,
-    "embedding_index": 22
+    "embedding_index": 10
   },
   "163": {
     "mrn": "76190966",
@@ -237,7 +117,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:48:20.941136+00:00",
     "patient_text_length": 4561,
-    "embedding_index": 23
+    "embedding_index": 11
   },
   "162": {
     "mrn": "74332303",
@@ -247,17 +127,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:48:16.335985+00:00",
     "patient_text_length": 4640,
-    "embedding_index": 24
-  },
-  "161": {
-    "mrn": "71696200",
-    "age": 44,
-    "gender": "Female",
-    "oncologist": "Dr. Michael Chen, MD",
-    "date_of_visit": "2025-06-11",
-    "created_at": "2025-11-10T16:48:11.776244+00:00",
-    "patient_text_length": 4516,
-    "embedding_index": 25
+    "embedding_index": 12
   },
   "160": {
     "mrn": "71406421",
@@ -267,7 +137,7 @@
     "date_of_visit": "2025-06-02",
     "created_at": "2025-11-10T16:48:08.381040+00:00",
     "patient_text_length": 4370,
-    "embedding_index": 26
+    "embedding_index": 13
   },
   "159": {
     "mrn": "70906771",
@@ -277,17 +147,7 @@
     "date_of_visit": "2025-05-24",
     "created_at": "2025-11-10T16:48:04.981107+00:00",
     "patient_text_length": 4516,
-    "embedding_index": 27
-  },
-  "158": {
-    "mrn": "69472124",
-    "age": 56,
-    "gender": "Female",
-    "oncologist": "Dr. Lisa Park, MD",
-    "date_of_visit": "2025-06-08",
-    "created_at": "2025-11-10T16:48:01.586441+00:00",
-    "patient_text_length": 4444,
-    "embedding_index": 28
+    "embedding_index": 14
   },
   "157": {
     "mrn": "69326125",
@@ -297,7 +157,7 @@
     "date_of_visit": "2025-05-21",
     "created_at": "2025-11-10T16:47:58.641373+00:00",
     "patient_text_length": 4640,
-    "embedding_index": 29
+    "embedding_index": 15
   },
   "156": {
     "mrn": "66569548",
@@ -307,37 +167,7 @@
     "date_of_visit": "2025-06-04",
     "created_at": "2025-11-10T16:47:52.706612+00:00",
     "patient_text_length": 4502,
-    "embedding_index": 30
-  },
-  "155": {
-    "mrn": "66328674",
-    "age": 69,
-    "gender": "Female",
-    "oncologist": "Dr. Lisa Park, MD",
-    "date_of_visit": "2025-06-17",
-    "created_at": "2025-11-10T16:47:45.691164+00:00",
-    "patient_text_length": 4477,
-    "embedding_index": 31
-  },
-  "154": {
-    "mrn": "65601747",
-    "age": 82,
-    "gender": "Female",
-    "oncologist": "Dr. Jennifer Rodriguez, MD",
-    "date_of_visit": "2025-06-05",
-    "created_at": "2025-11-10T16:47:38.326475+00:00",
-    "patient_text_length": 4743,
-    "embedding_index": 32
-  },
-  "153": {
-    "mrn": "65281705",
-    "age": 34,
-    "gender": "Female",
-    "oncologist": "Dr. David Thompson, MD",
-    "date_of_visit": "2025-05-20",
-    "created_at": "2025-11-10T16:47:31.341086+00:00",
-    "patient_text_length": 4525,
-    "embedding_index": 33
+    "embedding_index": 16
   },
   "152": {
     "mrn": "63472383",
@@ -347,7 +177,7 @@
     "date_of_visit": "2025-06-10",
     "created_at": "2025-11-10T16:47:27.141075+00:00",
     "patient_text_length": 4620,
-    "embedding_index": 34
+    "embedding_index": 17
   },
   "151": {
     "mrn": "63210266",
@@ -357,7 +187,7 @@
     "date_of_visit": "2025-06-03",
     "created_at": "2025-11-10T16:47:22.226814+00:00",
     "patient_text_length": 4408,
-    "embedding_index": 35
+    "embedding_index": 18
   },
   "150": {
     "mrn": "63043709",
@@ -367,17 +197,7 @@
     "date_of_visit": "2025-05-21",
     "created_at": "2025-11-10T16:47:15.196116+00:00",
     "patient_text_length": 4548,
-    "embedding_index": 36
-  },
-  "149": {
-    "mrn": "60774091",
-    "age": 39,
-    "gender": "Female",
-    "oncologist": "Dr. Lisa Park, MD",
-    "date_of_visit": "2025-06-13",
-    "created_at": "2025-11-10T16:47:08.686092+00:00",
-    "patient_text_length": 4498,
-    "embedding_index": 37
+    "embedding_index": 19
   },
   "148": {
     "mrn": "59779266",
@@ -387,17 +207,7 @@
     "date_of_visit": "2025-06-17",
     "created_at": "2025-11-10T16:47:03.466144+00:00",
     "patient_text_length": 4643,
-    "embedding_index": 38
-  },
-  "147": {
-    "mrn": "59145335",
-    "age": 42,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-06-01",
-    "created_at": "2025-11-10T16:46:55.871423+00:00",
-    "patient_text_length": 4397,
-    "embedding_index": 39
+    "embedding_index": 20
   },
   "146": {
     "mrn": "58918645",
@@ -407,47 +217,7 @@
     "date_of_visit": "2025-05-25",
     "created_at": "2025-11-10T16:46:48.876098+00:00",
     "patient_text_length": 4627,
-    "embedding_index": 40
-  },
-  "145": {
-    "mrn": "57795494",
-    "age": 63,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-05-27",
-    "created_at": "2025-11-10T16:46:40.441020+00:00",
-    "patient_text_length": 4597,
-    "embedding_index": 41
-  },
-  "144": {
-    "mrn": "57569409",
-    "age": 55,
-    "gender": "Female",
-    "oncologist": "Dr. Sarah Mitchell, MD",
-    "date_of_visit": "2025-05-22",
-    "created_at": "2025-11-10T16:46:34.636117+00:00",
-    "patient_text_length": 4441,
-    "embedding_index": 42
-  },
-  "143": {
-    "mrn": "57418600",
-    "age": 59,
-    "gender": "Female",
-    "oncologist": "Dr. Jennifer Rodriguez, MD",
-    "date_of_visit": "2025-06-16",
-    "created_at": "2025-11-10T16:46:27.600989+00:00",
-    "patient_text_length": 4428,
-    "embedding_index": 43
-  },
-  "142": {
-    "mrn": "57391738",
-    "age": 78,
-    "gender": "Female",
-    "oncologist": "Dr. David Thompson, MD",
-    "date_of_visit": "2025-05-24",
-    "created_at": "2025-11-10T16:46:20.646914+00:00",
-    "patient_text_length": 4753,
-    "embedding_index": 44
+    "embedding_index": 21
   },
   "141": {
     "mrn": "56838444",
@@ -457,7 +227,7 @@
     "date_of_visit": "2025-06-06",
     "created_at": "2025-11-10T16:46:17.021110+00:00",
     "patient_text_length": 4800,
-    "embedding_index": 45
+    "embedding_index": 22
   },
   "140": {
     "mrn": "55525103",
@@ -467,7 +237,7 @@
     "date_of_visit": "2025-05-31",
     "created_at": "2025-11-10T16:46:11.326052+00:00",
     "patient_text_length": 4542,
-    "embedding_index": 46
+    "embedding_index": 23
   },
   "139": {
     "mrn": "53972854",
@@ -477,7 +247,7 @@
     "date_of_visit": "2025-06-05",
     "created_at": "2025-11-10T16:45:59.593016+00:00",
     "patient_text_length": 4645,
-    "embedding_index": 47
+    "embedding_index": 24
   },
   "138": {
     "mrn": "53280812",
@@ -487,7 +257,7 @@
     "date_of_visit": "2025-06-10",
     "created_at": "2025-11-10T16:45:51.842948+00:00",
     "patient_text_length": 4647,
-    "embedding_index": 48
+    "embedding_index": 25
   },
   "137": {
     "mrn": "52965770",
@@ -497,7 +267,7 @@
     "date_of_visit": "2025-05-21",
     "created_at": "2025-11-10T16:45:39.413121+00:00",
     "patient_text_length": 4596,
-    "embedding_index": 49
+    "embedding_index": 26
   },
   "133": {
     "mrn": "49271178",
@@ -507,7 +277,7 @@
     "date_of_visit": "2025-06-14",
     "created_at": "2025-11-10T16:45:12.798093+00:00",
     "patient_text_length": 4450,
-    "embedding_index": 50
+    "embedding_index": 27
   },
   "132": {
     "mrn": "48727925",
@@ -517,7 +287,7 @@
     "date_of_visit": "2025-05-26",
     "created_at": "2025-11-10T16:45:04.542988+00:00",
     "patient_text_length": 4492,
-    "embedding_index": 51
+    "embedding_index": 28
   },
   "129": {
     "mrn": "47601870",
@@ -527,7 +297,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:44:44.073505+00:00",
     "patient_text_length": 4446,
-    "embedding_index": 52
+    "embedding_index": 29
   },
   "127": {
     "mrn": "47094555",
@@ -537,7 +307,7 @@
     "date_of_visit": "2025-06-14",
     "created_at": "2025-11-10T16:44:26.372957+00:00",
     "patient_text_length": 4430,
-    "embedding_index": 53
+    "embedding_index": 30
   },
   "126": {
     "mrn": "46385580",
@@ -547,7 +317,7 @@
     "date_of_visit": "2025-06-08",
     "created_at": "2025-11-10T16:44:17.763700+00:00",
     "patient_text_length": 4764,
-    "embedding_index": 54
+    "embedding_index": 31
   },
   "125": {
     "mrn": "44631066",
@@ -557,7 +327,7 @@
     "date_of_visit": "2025-06-11",
     "created_at": "2025-11-10T16:44:09.943601+00:00",
     "patient_text_length": 4564,
-    "embedding_index": 55
+    "embedding_index": 32
   },
   "123": {
     "mrn": "42016742",
@@ -567,7 +337,7 @@
     "date_of_visit": "2025-06-05",
     "created_at": "2025-11-10T16:43:57.138010+00:00",
     "patient_text_length": 4552,
-    "embedding_index": 56
+    "embedding_index": 33
   },
   "120": {
     "mrn": "37654454",
@@ -577,7 +347,7 @@
     "date_of_visit": "2025-05-20",
     "created_at": "2025-11-10T16:43:47.238105+00:00",
     "patient_text_length": 4515,
-    "embedding_index": 57
+    "embedding_index": 34
   },
   "118": {
     "mrn": "35879553",
@@ -587,7 +357,7 @@
     "date_of_visit": "2025-05-26",
     "created_at": "2025-11-10T16:43:38.523162+00:00",
     "patient_text_length": 4675,
-    "embedding_index": 58
+    "embedding_index": 35
   },
   "116": {
     "mrn": "35162470",
@@ -597,7 +367,7 @@
     "date_of_visit": "2025-05-28",
     "created_at": "2025-11-10T16:43:26.003073+00:00",
     "patient_text_length": 4642,
-    "embedding_index": 59
+    "embedding_index": 36
   },
   "114": {
     "mrn": "33439724",
@@ -607,7 +377,7 @@
     "date_of_visit": "2025-06-04",
     "created_at": "2025-11-10T16:43:18.833474+00:00",
     "patient_text_length": 4384,
-    "embedding_index": 60
+    "embedding_index": 37
   },
   "113": {
     "mrn": "32053379",
@@ -617,7 +387,7 @@
     "date_of_visit": "2025-06-15",
     "created_at": "2025-11-10T16:43:13.843204+00:00",
     "patient_text_length": 4638,
-    "embedding_index": 61
+    "embedding_index": 38
   },
   "107": {
     "mrn": "28786181",
@@ -627,7 +397,7 @@
     "date_of_visit": "2025-05-22",
     "created_at": "2025-11-10T16:42:49.397937+00:00",
     "patient_text_length": 4466,
-    "embedding_index": 62
+    "embedding_index": 39
   },
   "103": {
     "mrn": "25665253",
@@ -637,7 +407,7 @@
     "date_of_visit": "2025-05-24",
     "created_at": "2025-11-10T16:42:33.732937+00:00",
     "patient_text_length": 4526,
-    "embedding_index": 63
+    "embedding_index": 40
   },
   "101": {
     "mrn": "19001527",
@@ -647,7 +417,7 @@
     "date_of_visit": "2025-05-24",
     "created_at": "2025-11-10T16:42:21.277972+00:00",
     "patient_text_length": 4675,
-    "embedding_index": 64
+    "embedding_index": 41
   },
   "100": {
     "mrn": "18835665",
@@ -657,7 +427,7 @@
     "date_of_visit": "2025-05-22",
     "created_at": "2025-11-10T16:42:18.558091+00:00",
     "patient_text_length": 4691,
-    "embedding_index": 65
+    "embedding_index": 42
   },
   "99": {
     "mrn": "18228455",
@@ -667,7 +437,7 @@
     "date_of_visit": "2025-06-13",
     "created_at": "2025-11-10T16:42:15.863012+00:00",
     "patient_text_length": 4567,
-    "embedding_index": 66
+    "embedding_index": 43
   },
   "98": {
     "mrn": "18118308",
@@ -677,7 +447,7 @@
     "date_of_visit": "2025-05-30",
     "created_at": "2025-11-10T16:42:11.082983+00:00",
     "patient_text_length": 4746,
-    "embedding_index": 67
+    "embedding_index": 44
   },
   "97": {
     "mrn": "17894757",
@@ -687,7 +457,7 @@
     "date_of_visit": "2025-06-05",
     "created_at": "2025-11-10T16:42:07.598795+00:00",
     "patient_text_length": 4461,
-    "embedding_index": 68
+    "embedding_index": 45
   },
   "96": {
     "mrn": "16151860",
@@ -697,7 +467,7 @@
     "date_of_visit": "2025-05-24",
     "created_at": "2025-11-10T16:42:02.617885+00:00",
     "patient_text_length": 4884,
-    "embedding_index": 69
+    "embedding_index": 46
   },
   "92": {
     "mrn": "14728493",
@@ -707,7 +477,7 @@
     "date_of_visit": "2025-05-26",
     "created_at": "2025-11-10T16:41:38.982990+00:00",
     "patient_text_length": 4756,
-    "embedding_index": 70
+    "embedding_index": 47
   },
   "90": {
     "mrn": "11800359",
@@ -717,7 +487,7 @@
     "date_of_visit": "2025-06-17",
     "created_at": "2025-11-10T16:41:24.213134+00:00",
     "patient_text_length": 4902,
-    "embedding_index": 71
+    "embedding_index": 48
   },
   "14": {
     "mrn": "35294426",
@@ -727,6 +497,16 @@
     "date_of_visit": "2025-05-23",
     "created_at": "2025-11-05T01:02:50.916644+00:00",
     "patient_text_length": 4649,
-    "embedding_index": 72
+    "embedding_index": 49
+  },
+  "219": {
+    "mrn": "11223344",
+    "age": 23,
+    "gender": "Male",
+    "oncologist": null,
+    "date_of_visit": null,
+    "created_at": "2025-11-20T13:21:21.168264+00:00",
+    "patient_text_length": 622,
+    "embedding_index": 50
   }
 }
