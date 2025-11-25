@@ -1,0 +1,448 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT06599502']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT06599502
+        Title: A Phase I/IIa, Open-label, Multi-centre Study to Assess the Safety, Tolerability, Pharmacokinetics, and Preliminary Efficacy of AZD0022 Monotherapy and in Combination With Anti-cancer Agents in Participants With Tumours Harbouring a KRASG12D Mutation (ALAFOSS-01)
+        Condition: ["Advanced Solid Tumours", "Non-Small Cell Lung Cancer (NSCLC)", "Pancreatic Ductal Adenocarcinoma (PDAC)", "Colorectal Cancer (CRC)"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.166
+        
+        Brief Summary: This is a first-in-human, modular, Phase I/IIa, open-label, multi-centre study to assess the safety, tolerability, PK, and preliminary efficacy of AZD0022 monotherapy in combination with other anti-cancer agents in participants with tumours harbouring a KRASG12D mutation.
+        
+        Detailed Description: This first time in human, open-label, multi-centre study will administer AZD0022 orally to participants with tumours harbouring a KRASG12D mutation.
+
+This study will have initially 2 modules.
+
+* Module 1: AZD0022 monotherapy
+* Module 2: AZD0022 in combination with other anti-cancer agents (Cetuximab)
+
+Each Module has 3 parts. Dose Escalation (Part A), Dose Optimisation (Part B) and Potential Efficacy Expansion (Part C).
+        
+        Inclusion Criteria: ["For whole study:", "1. Participant must be \u2265 18 years or the legal age of consent in the jurisdiction in which the study is taking place at the time of signing the ICF.", "2. Participants must have a histologically or cytologically confirmed metastatic or locally advanced tumour. Further details on tumour types are specified in Module-specific inclusion criteria.", "3. Participants must have received and progressed on, are refractory or are intolerant to standard therapy for the specific tumour type, or as per Module-specific criteria. Participants with contraindications to, or who refuse SoC therapy may be considered, provided that it is documented and the participant has been informed about all available therapeutic options.", "4. Documented KRASG12D mutation in tissue or liquid biopsy.", "5. Provision of a FFPE tumour sample.", "6. Participants must have at least one measurable target lesion per RECIST v1.1.", "7. Adequate organ and marrow function as defined in study protocol.", "Module 1 Key Inclusion Criteria", "1. Type of tumours with a KRASG12D mutation:", "1. For NSCLC: Patients must have NSCLC that is not amenable to curative treatment and should have progressed on at least one prior line of SoC treatment for metastatic NSCLC (including but not limited to platinum-based chemotherapy, immunotherapy, targeted therapy or first line SoC combinations); prior experimental treatments are allowed.", "2. For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior experimental treatments are allowed.", "3. For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatments are allowed.", "4. For patients enrolled in Part C (NSCLC and PDAC): at least one but no more than 2 lines of prior treatment in metastatic settings; prior experimental treatments are allowed.", "2. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, chemoradiotherapy, etc) will be considered as a first line of treatment.", "3. For Part B food-effect cohort, participants must be able to eat a standard high-fat meal and must be able to fast for at least 10 hours.", "Module 2 Inclusion Criteria", "1. For Part A (M2A, dose escalation) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.", "2. For Part B (M2B, dose optimisation) participants must have pathologically documented locally advanced or metastatic, PDAC or CRC with a KRASG12D mutation.", "3. For Part C (M2C, potential efficacy expansion) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.", "4(a) For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior treatment are allowed.", "(b) For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatment are allowed.", "(c) For patients enrolled in Part C (M2C), at least 2 but no more than 3 lines of prior treatment in metastatic setting; prior experimental treatment are allowed.", "5\\. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, and chemoradiotherapy) will be considered as a first line of treatment."]
+        
+        Exclusion Criteria: ["For whole study:", "1. Any significant laboratory finding or any severe and uncontrolled medical condition.", "2. Any evidence of clinically significant current or prior ILD (eg, required IV steroids or high supplemental oxygen) or where a new suspected ILD cannot be ruled out by imaging at screening.", "3. Spinal cord compression, leptomeningeal disease, or active brain metastases. Asymptomatic brain metastases are allowed", "4. History of allogenic organ transplantation.", "5. Participants with any of the following cardiac criteria:", "* Mean resting QTcF \\> 470 milliseconds on screening", "* Any factors that increase the risk of QT prolongation", "* Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (eg, complete left bundle branch block, second- or third-degree atrioventricular block), and clinically significant sinus node dysfunction not treated with pacemaker.", "* Bradycardia defined as a heart rate less than 60 beats per minute and/or hypotension defined as a blood pressure reading lower than 90 mm Hg for the top number (systolic) or 60 mm Hg for the bottom number (diastolic).", "* Baseline LVEF below the institutional lower limit of normal or \\< 50%, whichever is lower.", "* Symptomatic heart failure (as defined by New York Heart Association class \u2265 2).", "* Acute coronary syndrome/acute myocardial infarction, unstable angina pectoris, coronary intervention procedure with percutaneous coronary intervention, or coronary artery bypass grafting within 6 months before C1D1.", "6. Prior exposure to any direct small molecule KRAS inhibitor.", "7. Herbal preparations/medications are not allowed during treatment with study drug.", "8. Any concomitant medications that are known strong inhibitors or inducers of CYP3A4/5, or sensitive CYP3A4/5 substrates or CYP3A4/5 substrates with a narrow therapeutic range. This also applies to moderate inhibitors and moderate inducers of CYP3A4/5 during Parts A and B of Modules 1 and 2.", "9. Receipt of a cytotoxic or non-cytotoxic drug: 21 days or 5 half-lives, whichever is shorter, before the first dose of study intervention. Biological therapy including immune-oncology and monoclonal antibodies 28 days or 5 half-lives.", "10. Less than or equal to 4 weeks for radiation therapy given with curative intent or \u2264 2 weeks for limited field radiation for palliation prior to the first dose of study treatment"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+For whole study:
+
+1. Participant must be ≥ 18 years or the legal age of consent in the jurisdiction in which the study is taking place at the time of signing the ICF.
+2. Participants must have a histologically or cytologically confirmed metastatic or locally advanced tumour. Further details on tumour types are specified in Module-specific inclusion criteria.
+3. Participants must have received and progressed on, are refractory or are intolerant to standard therapy for the specific tumour type, or as per Module-specific criteria. Participants with contraindications to, or who refuse SoC therapy may be considered, provided that it is documented and the participant has been informed about all available therapeutic options.
+4. Documented KRASG12D mutation in tissue or liquid biopsy.
+5. Provision of a FFPE tumour sample.
+6. Participants must have at least one measurable target lesion per RECIST v1.1.
+7. Adequate organ and marrow function as defined in study protocol.
+
+Module 1 Key Inclusion Criteria
+
+1. Type of tumours with a KRASG12D mutation:
+
+   1. For NSCLC: Patients must have NSCLC that is not amenable to curative treatment and should have progressed on at least one prior line of SoC treatment for metastatic NSCLC (including but not limited to platinum-based chemotherapy, immunotherapy, targeted therapy or first line SoC combinations); prior experimental treatments are allowed.
+   2. For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior experimental treatments are allowed.
+   3. For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatments are allowed.
+   4. For patients enrolled in Part C (NSCLC and PDAC): at least one but no more than 2 lines of prior treatment in metastatic settings; prior experimental treatments are allowed.
+2. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, chemoradiotherapy, etc) will be considered as a first line of treatment.
+3. For Part B food-effect cohort, participants must be able to eat a standard high-fat meal and must be able to fast for at least 10 hours.
+
+Module 2 Inclusion Criteria
+
+1. For Part A (M2A, dose escalation) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.
+2. For Part B (M2B, dose optimisation) participants must have pathologically documented locally advanced or metastatic, PDAC or CRC with a KRASG12D mutation.
+3. For Part C (M2C, potential efficacy expansion) participants must have pathologically documented locally advanced or metastatic CRC with a KRASG12D mutation.
+
+4(a) For CRC: Patients must have CRC that is not amenable to curative treatment and should have progressed on at least 2 prior lines of SoC treatment for metastatic CRC; prior treatment are allowed.
+
+(b) For PDAC: Patients must have PDAC that is not amenable to curative treatment and should have progressed at least one prior line of SoC treatment for metastatic PDAC (including but not limited to FOLFIRINOX, gemcitabine plus abraxane and gemcitabine monotherapy); prior experimental treatment are allowed.
+
+(c) For patients enrolled in Part C (M2C), at least 2 but no more than 3 lines of prior treatment in metastatic setting; prior experimental treatment are allowed.
+
+5\. Progression or recurrence of the disease within 6 months of completing neo/adjuvant treatment (ie, chemotherapy, immunotherapy, and chemoradiotherapy) will be considered as a first line of treatment.
+
+Exclusion Criteria:
+
+For whole study:
+
+1. Any significant laboratory finding or any severe and uncontrolled medical condition.
+2. Any evidence of clinically significant current or prior ILD (eg, required IV steroids or high supplemental oxygen) or where a new suspected ILD cannot be ruled out by imaging at screening.
+3. Spinal cord compression, leptomeningeal disease, or active brain metastases. Asymptomatic brain metastases are allowed
+4. History of allogenic organ transplantation.
+5. Participants with any of the following cardiac criteria:
+
+   * Mean resting QTcF \> 470 milliseconds on screening
+   * Any factors that increase the risk of QT prolongation
+   * Any clinically important abnormalities in rhythm, conduction or morphology of resting ECG (eg, complete left bundle branch block, second- or third-degree atrioventricular block), and clinically significant sinus node dysfunction not treated with pacemaker.
+   * Bradycardia defined as a heart rate less than 60 beats per minute and/or hypotension defined as a blood pressure reading lower than 90 mm Hg for the top number (systolic) or 60 mm Hg for the bottom number (diastolic).
+   * Baseline LVEF below the institutional lower limit of normal or \< 50%, whichever is lower.
+   * Symptomatic heart failure (as defined by New York Heart Association class ≥ 2).
+   * Acute coronary syndrome/acute myocardial infarction, unstable angina pectoris, coronary intervention procedure with percutaneous coronary intervention, or coronary artery bypass grafting within 6 months before C1D1.
+6. Prior exposure to any direct small molecule KRAS inhibitor.
+7. Herbal preparations/medications are not allowed during treatment with study drug.
+8. Any concomitant medications that are known strong inhibitors or inducers of CYP3A4/5, or sensitive CYP3A4/5 substrates or CYP3A4/5 substrates with a narrow therapeutic range. This also applies to moderate inhibitors and moderate inducers of CYP3A4/5 during Parts A and B of Modules 1 and 2.
+9. Receipt of a cytotoxic or non-cytotoxic drug: 21 days or 5 half-lives, whichever is shorter, before the first dose of study intervention. Biological therapy including immune-oncology and monoclonal antibodies 28 days or 5 half-lives.
+10. Less than or equal to 4 weeks for radiation therapy given with curative intent or ≤ 2 weeks for limited field radiation for palliation prior to the first dose of study treatment
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT06599502",
+                    "trial_title": "A Phase I/IIa, Open-label, Multi-centre Study to Assess the Safety, Tolerability, Pharmacokinetics, and Preliminary Efficacy of AZD0022 Monotherapy and in Combination With Anti-cancer Agents in Participants With Tumours Harbouring a KRASG12D Mutation (ALAFOSS-01)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T13:18:26.293707"
+            }
+        }
+        

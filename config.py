@@ -16,6 +16,8 @@ USE_DATABASE = os.getenv("USE_DATABASE", "true").lower() == "true"
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")  # GPT-4o Mini model
 OPENAI_TEMPERATURE = float(os.getenv("OPENAI_TEMPERATURE", "0.0"))  # Set to 0.0 for deterministic outputs
+OPENAI_TOP_K = int(os.getenv("OPENAI_TOP_K", "1"))  # Top-k sampling (1 = most deterministic, only most likely token)
+OPENAI_TOP_P = float(os.getenv("OPENAI_TOP_P", "0.1"))  # Nucleus sampling (0.1 = very focused, top 10% probability mass)
 OPENAI_MAX_TOKENS = int(os.getenv("OPENAI_MAX_TOKENS", "8192"))  # Max output tokens
 OPENAI_TIMEOUT = int(os.getenv("OPENAI_TIMEOUT", "300"))  # Increased to 5 minutes for batch operations
 OPENAI_MAX_RETRIES = int(os.getenv("OPENAI_MAX_RETRIES", "3"))
@@ -170,3 +172,7 @@ print(f"  - AUTO_EVAL_PATIENT_TIMEOUT: {AUTO_EVAL_PATIENT_TIMEOUT}s")
 print(f"  - AUTO_EVAL_TRIAL_TIMEOUT: {AUTO_EVAL_TRIAL_TIMEOUT}s")
 print(f"\nLLM Sent Text Saving Configuration:")
 print(f"  - SAVE_LLM_SENT_TO_FOLDER: {SAVE_LLM_SENT_TO_FOLDER} (Save to folder: {'ON' if SAVE_LLM_SENT_TO_FOLDER else 'OFF'} - only affects patient-to-trial and trial-to-patient evaluation calls)")
+print(f"\nLLM Sampling Parameters (Maximum Determinism):")
+print(f"  - OPENAI_TEMPERATURE: {OPENAI_TEMPERATURE} (0.0 = deterministic)")
+print(f"  - OPENAI_TOP_P: {OPENAI_TOP_P} (0.1 = very focused, top 10% probability mass)")
+print(f"  - OPENAI_TOP_K: {OPENAI_TOP_K} (Note: OpenAI chat models don't support top_k, only top_p is used)")

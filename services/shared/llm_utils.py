@@ -11,7 +11,7 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 from openai import OpenAI
 from openai import APIError, RateLimitError, APIConnectionError, APITimeoutError
-from config import OPENAI_API_KEY, MAX_KEYWORD_BATCH_SIZE, OPENAI_MAX_RETRIES, OPENAI_TIMEOUT, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE, OPENAI_MODEL, SAVE_LLM_SENT_TO_FOLDER
+from config import OPENAI_API_KEY, MAX_KEYWORD_BATCH_SIZE, OPENAI_MAX_RETRIES, OPENAI_TIMEOUT, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE, OPENAI_TOP_K, OPENAI_TOP_P, OPENAI_MODEL, SAVE_LLM_SENT_TO_FOLDER
 
 class LLMUtils:
     def __init__(self):
@@ -99,24 +99,168 @@ class LLMUtils:
         PATIENT MEDICAL RECORD:
         {patient_info['combined_text']}
         
-        EVALUATION CRITERIA:
-        1. Primary diagnosis match
-        2. Disease stage compatibility
-        3. Age eligibility
-        4. Gender eligibility
-        5. Performance status
-        6. Prior treatments
-        7. Comorbidities
-        8. Laboratory values
-        9. Exclusion criteria
-        10. Overall eligibility assessment
-        
-        CRITICAL ELIGIBILITY RULES:
-        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
-        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
-        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
-        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
-        
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
         Provide a comprehensive evaluation with:
         - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
         - Confidence score (0-100)
@@ -127,8 +271,7 @@ class LLMUtils:
         Return ONLY a valid JSON object with this structure:
         {{
             "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
-            "confidence_score": 85,
-            "reasoning": "Detailed explanation of eligibility assessment",
+            "confidence_score": 85,  "reasoning": "Detailed explanation of eligibility assessment",
             "inclusion_criteria_met": ["criteria1", "criteria2", ...],
             "exclusion_criteria_violated": ["criteria1", "criteria2", ...],
             "inclusion_criteria_met_count": 5,
@@ -164,31 +307,168 @@ class LLMUtils:
         PATIENT MEDICAL RECORD:
         {patient_info['combined_text']}
         
-        EVALUATION CRITERIA:
-        1. Primary diagnosis match
-        2. Disease stage compatibility
-        3. Age eligibility
-        4. Gender eligibility
-        5. Performance status
-        6. Prior treatments
-        7. Comorbidities
-        8. Laboratory values
-        9. Exclusion criteria
-        10. Overall eligibility assessment
-        
-        CRITICAL ELIGIBILITY RULES:
-        - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
-        - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
-        - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
-        - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
-        
-        Provide a comprehensive evaluation with:
-        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
-        - Confidence score (0-100)
-        - Detailed reasoning that clearly explains why the patient is or is not eligible
-        - Specific inclusion/exclusion criteria met or not met
-        - Recommendations for next steps
-        
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+
         Return ONLY a valid JSON object with this structure:
         {{
             "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
@@ -287,13 +567,16 @@ class LLMUtils:
                 if attempt == 0:
                     print(f"[INFO] Sending LLM request (timeout: {timeout}s, attempt {attempt + 1}/{max_retries + 1})...")
                 
-                # Make the API call to OpenAI
+                # Make the API call to OpenAI with maximum determinism settings
+                # Note: OpenAI chat models support top_p but not top_k
+                # For maximum determinism: temperature=0.0 + top_p=0.1 ensures only most likely tokens are considered
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[
                         {"role": "user", "content": prompt}
                     ],
-                    temperature=OPENAI_TEMPERATURE,
+                    temperature=OPENAI_TEMPERATURE,  # 0.0 for deterministic outputs
+                    top_p=OPENAI_TOP_P,  # 0.1 for maximum determinism (only top 10% probability mass)
                     max_tokens=max_tokens,
                     timeout=timeout
                 )
@@ -894,20 +1177,174 @@ class LLMUtils:
         CLINICAL TRIALS TO EVALUATE:
         {trials_text}
 
-        Instructions:
-        1. For EACH trial, evaluate the patient's eligibility based on:
-           - Medical condition match
-           - Age requirements
-           - Gender requirements
-           - Inclusion/exclusion criteria
-           - Overall medical compatibility
-        2. CRITICAL ELIGIBILITY RULES:
-           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
-           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
-           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
-           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
-        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
-        4. Be thorough but concise in your analysis
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
         5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
         6. Ensure all strings use double quotes and escape special characters properly
         7. Make sure all brackets and braces are properly closed
@@ -1210,19 +1647,174 @@ class LLMUtils:
 
         PATIENTS TO EVALUATE:
         {patients_text}
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
 
-        Instructions:
-        1. For EACH patient, evaluate their eligibility for the trial based on:
-           - Medical condition match
-           - Age requirements
-           - Gender requirements
-           - Inclusion/exclusion criteria
-           - Overall medical compatibility
-        2. CRITICAL ELIGIBILITY RULES:
-           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
-           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
-           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
-           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1: FATAL EXCLUSION VIOLATION (PRIORITY 1)**
+    If the patient violates ANY single Exclusion Criterion (Protocol or General Safety), the patient is **NOT_ELIGIBLE**.
+    STOP ALL OTHER EVALUATION and document the specific violated criterion/data point in the 'reasoning' field.
+    
+    RULE 2: CRITICAL INCLUSION FAILURE (PRIORITY 2)**
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
         3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
         4. Consider each patient's medical history, current condition, and trial requirements
         5. Be thorough but concise in your analysis
