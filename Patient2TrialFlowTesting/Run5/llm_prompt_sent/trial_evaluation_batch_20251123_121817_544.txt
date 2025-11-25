@@ -1,0 +1,431 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT04221893']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04221893
+        Title: Phase II Study of Hypofractionated Radiation Therapy to Augment Immune Response in Patients With Metastatic GastroIntestinal Malignancies Progressing on Immune Therapy (ARM-GI)
+        Condition: ["Stage IV Esophageal Adenocarcinoma", "Stage IV Esophageal Squamous Cell Carcinoma", "Stage IV Gastric Cancer", "Stage IV Adenocarcinoma of the Gastroesophageal Junction", "Stage IVA Esophageal Adenocarcinoma", "Stage IVA Esophageal Squamous Cell Carcinoma", "Stage IVA Gastric Cancer", "Stage IVA Adenocarcinoma of the Gastroesophageal Junction", "Stage IVB Esophageal Adenocarcinoma", "Stage IVB Esophageal Squamous Cell Carcinoma", "Stage IVB Gastric Cancer", "Stage IVB Gastroesophageal Junction Adenocarcinoma", "Metastatic Anal Canal Carcinoma", "Metastatic Colorectal Carcinoma", "Metastatic Esophageal Carcinoma", "Metastatic Gastric Carcinoma", "Metastatic Gastroesophageal Junction Adenocarcinoma", "Metastatic Hepatocellular Carcinoma", "Metastatic Malignant Digestive System Neoplasm", "Metastatic Small Intestinal Carcinoma", "Pancreatobiliary Carcinoma", "Pathologic Stage IV Gastric Cancer AJCC v8", "Pathologic Stage IVA Esophageal Adenocarcinoma AJCC v8", "Pathologic Stage IVA Esophageal Squamous Cell Carcinoma AJCC v8", "Pathologic Stage IVB Esophageal Adenocarcinoma AJCC v8", "Pathologic Stage IVB Esophageal Squamous Cell Carcinoma AJCC v8", "Pathologic Stage IVB Gastroesophageal Junction Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IV Esophageal Squamous Cell Carcinoma AJCC v8", "Postneoadjuvant Therapy Stage IV Gastric Cancer AJCC v8", "Postneoadjuvant Therapy Stage IV Gastroesophageal Junction Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVA Esophageal Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVA Esophageal Squamous Cell Carcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVA Gastroesophageal Junction Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVB Esophageal Adenocarcinoma AJCC v8", "Postneoadjuvant Therapy Stage IVB Esophageal Squamous Cell Carcinoma AJCC V8", "Postneoadjuvant Therapy Stage IVB Gastroesophageal Junction Adenocarcinoma AJCC v8", "Stage IV Anal Cancer AJCC v8", "Stage IV Colorectal Cancer AJCC v8", "Stage IV Hepatocellular Carcinoma AJCC v8", "Stage IVA Colorectal Cancer AJCC v8", "Stage IVA Hepatocellular Carcinoma AJCC v8", "Stage IVB Colorectal Cancer AJCC v8", "Stage IVB Hepatocellular Carcinoma AJCC v8", "Stage IVC Colorectal Cancer AJCC v8"]
+        Phase: NA
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.198
+        
+        Brief Summary: This phase II trial studies how well radiation therapy works for the treatment of gastrointestinal cancer that are spreading to other places in the body (metastatic). Radiation therapy uses high energy x-rays to kill cancer cells and shrink tumors. This trial is being done to determine if giving radiation therapy to patients who are being treated with immunotherapy and whose cancers are progressing (getting worse) can slow or stop the growth of their cancers. It may also help researchers determine if giving radiation therapy to one tumor can stimulate the immune system to attack other tumors in the body that are not targeted by the radiation therapy.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To determine whether radiation therapy can convert overall response rates from progressive disease to stable or responsive disease as measured by Response Evaluation Criteria in Solid Tumors (RECIST) version (v.) 1.1.
+
+SECONDARY OBJECTIVES:
+
+I. To define overall response rate by immune-Modified Response Evaluation Criteria in Solid Tumors (iRECIST) criteria.
+
+II. To determine time to progression. III. To determine overall survival. IV. To determine local control in radiated lesion(s). V. To characterize the effect of distant radiation on unirradiated target lesions.
+
+VI. To describe the incidence of new metastatic lesions. VII. To determine treatment safety by Common Terminology Criteria for Adverse Events (CTCAE) v. 5.0.
+
+VIII. To describe time to new systemic therapy.
+
+EXPLORATORY OBJECTIVES:
+
+I. To define radiation-induced effects on circulating immune cells. II. To describe remodeling of the circulating T cell repertoire by deep sequencing of variable, diversity and joining (VDJ) regions of T cell receptors (TCRs).
+
+III. To describe changes in circulating tumor deoxyribonucleic acid (DNA) (ctDNA).
+
+OUTLINE:
+
+Patients undergo radiation therapy for a total of 5 treatments over 5-9 calendar days in the absence of disease progression or unacceptable toxicity.
+
+After completion of study treatment, patients are followed up at 14 day, 6 months, and then up to 36 months.
+        
+        Inclusion Criteria: ["1. Patients must have a histologically, cytologically, or radiographically confirmed metastatic gastrointestinal (GI) malignancy (esophageal, gastroesophageal, gastric, small intestine, hepatocellular, pancreaticobiliary, colorectal, or anal cancer).", "2. Patients must be receiving immunotherapy (checkpoint inhibitor or CTLA4 inhibitor) with overall response of progressive disease by RECIST criteria.", "3. Patients must have at least two metastases which are individually progressing as per RECIST criteria, one of which can be safely unirradiated as adjudicated by the treating radiation oncologist (e.g. lesions for which small increases in dimensions are unlikely to precipitate significant symptoms).", "4. Patients must have 1-5 sites of disease meeting standard-of-care indications for palliative radiation therapy as adjudicated by the treating radiation oncologist. For example:", "* Symptomatic disease causing pain, bleeding, dyspnea, dysphagia, or nausea", "* At-risk for neurologic, respiratory, cardiovascular, gastrointestinal, musculoskeletal, or hepatobiliary compromise", "5. Evaluation by a radiation oncologist within 28 days of study registration.", "6. Must have adequate organ function to administer radiation therapy and immunotherapy as per standard of care.", "7. Age \\>= 18 years.", "8. Life expectancy exceeding 6 months.", "9. Eastern Cooperative Oncology Group (ECOG) 0-2 or Karnofsky performance status \\>= 50.", "10. Radiation therapy is known to be teratogenic and therefore women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control) prior to study entry and for the duration of radiation therapy. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study and for 3 months after completion of radiation therapy. Contraception requirements during the follow-up period of 6 months will be according to standard of care for immunotherapy administration.", "a. If a woman is of child-bearing potential, a negative pregnancy test within 28 days prior to study enrollment is required.", "11. Ability to understand a written informed consent document, and the willingness to sign it."]
+        
+        Exclusion Criteria: ["1. Enrollment on immunotherapy clinical trial for which radiation therapy is not permitted.", "2. Administration of radiation therapy within 4 weeks prior to study enrollment.", "3. Treatment with systemic corticosteroids or other immunosuppressive medications which would significantly diminish the effect of immunotherapy as judged by the treating physician.", "4. Radiation therapy is contraindicated as adjudicated by the radiation oncologist."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Patients must have a histologically, cytologically, or radiographically confirmed metastatic gastrointestinal (GI) malignancy (esophageal, gastroesophageal, gastric, small intestine, hepatocellular, pancreaticobiliary, colorectal, or anal cancer).
+2. Patients must be receiving immunotherapy (checkpoint inhibitor or CTLA4 inhibitor) with overall response of progressive disease by RECIST criteria.
+3. Patients must have at least two metastases which are individually progressing as per RECIST criteria, one of which can be safely unirradiated as adjudicated by the treating radiation oncologist (e.g. lesions for which small increases in dimensions are unlikely to precipitate significant symptoms).
+4. Patients must have 1-5 sites of disease meeting standard-of-care indications for palliative radiation therapy as adjudicated by the treating radiation oncologist. For example:
+
+   * Symptomatic disease causing pain, bleeding, dyspnea, dysphagia, or nausea
+   * At-risk for neurologic, respiratory, cardiovascular, gastrointestinal, musculoskeletal, or hepatobiliary compromise
+5. Evaluation by a radiation oncologist within 28 days of study registration.
+6. Must have adequate organ function to administer radiation therapy and immunotherapy as per standard of care.
+7. Age \>= 18 years.
+8. Life expectancy exceeding 6 months.
+9. Eastern Cooperative Oncology Group (ECOG) 0-2 or Karnofsky performance status \>= 50.
+10. Radiation therapy is known to be teratogenic and therefore women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control) prior to study entry and for the duration of radiation therapy. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study and for 3 months after completion of radiation therapy. Contraception requirements during the follow-up period of 6 months will be according to standard of care for immunotherapy administration.
+
+    a. If a woman is of child-bearing potential, a negative pregnancy test within 28 days prior to study enrollment is required.
+11. Ability to understand a written informed consent document, and the willingness to sign it.
+
+Exclusion Criteria:
+
+1. Enrollment on immunotherapy clinical trial for which radiation therapy is not permitted.
+2. Administration of radiation therapy within 4 weeks prior to study enrollment.
+3. Treatment with systemic corticosteroids or other immunosuppressive medications which would significantly diminish the effect of immunotherapy as judged by the treating physician.
+4. Radiation therapy is contraindicated as adjudicated by the radiation oncologist.
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04221893",
+                    "trial_title": "Phase II Study of Hypofractionated Radiation Therapy to Augment Immune Response in Patients With Metastatic GastroIntestinal Malignancies Progressing on Immune Therapy (ARM-GI)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T12:18:17.544223"
+            }
+        }
+        

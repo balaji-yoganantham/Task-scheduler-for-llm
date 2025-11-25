@@ -1,0 +1,47 @@
+{
+  "trial_id": "NCT05086692",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 114,
+  "patient_mrn": "33439724",
+  "patient_info": {
+    "age": 41,
+    "gender": "Male",
+    "oncologist": "Dr. Lisa Park, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Marcos Rivera, has a diagnosis of metastatic colorectal cancer (Stage IV, T4bN1aM1) with lymph node metastases. However, the trial eligibility criteria cannot be evaluated due to the lack of specific trial information regarding primary diagnosis match, disease stage compatibility, and required molecular markers. The patient is treatment-naïve, which may or may not align with trial requirements for prior treatments. The patient's age (41) and performance status (ECOG 1) are within typical eligibility ranges. The primary disqualifying factor is the absence of trial-specific information, which prevents a definitive assessment of eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to the inability to confirm alignment with trial criteria.\",\n    \"inclusion_criteria_met\": [\"Age eligibility\", \"Performance status\"],\n    \"exclusion_criteria_violated\": [],\n    \"inclusion_criteria_met_count\": 2,\n    \"exclusion_criteria_violated_count\": 0,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Obtain detailed clinical trial information to evaluate eligibility accurately. Specifically, clarify the primary diagnosis match, disease stage requirements, and required molecular markers.\",\n    \"evaluation_timestamp\": \"2025-11-21T14:32:05.476239\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Marcos Rivera, has a diagnosis of metastatic colorectal cancer (Stage IV, T4bN1aM1) with lymph node metastases. However, the trial eligibility criteria cannot be evaluated due to the lack of specific trial information regarding primary diagnosis match, disease stage compatibility, and required molecular markers. The patient is treatment-naïve, which may or may not align with trial requirements for prior treatments. The patient's age (41) and performance status (ECOG 1) are within typical eligibility ranges. The primary disqualifying factor is the absence of trial-specific information, which prevents a definitive assessment of eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to the inability to confirm alignment with trial criteria.",
+    "inclusion_criteria_met": [
+      "Age eligibility",
+      "Performance status"
+    ],
+    "exclusion_criteria_violated": [],
+    "inclusion_criteria_met_count": 2,
+    "exclusion_criteria_violated_count": 0,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Obtain detailed clinical trial information to evaluate eligibility accurately. Specifically, clarify the primary diagnosis match, disease stage requirements, and required molecular markers.",
+    "evaluation_timestamp": "2025-11-21T14:32:05.476239",
+    "patient_info": {
+      "patient_id": 114,
+      "mrn": "33439724",
+      "age": 41,
+      "gender": "Male",
+      "oncologist": "Dr. Lisa Park, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT05086692",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T14:32:17.228067"
+}

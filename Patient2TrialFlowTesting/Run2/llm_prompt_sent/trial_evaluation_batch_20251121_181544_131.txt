@@ -1,0 +1,247 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 114
+mrn: 33439724
+batch_size: 1
+trial_ids: ['NCT06778863']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 114
+        MRN: 33439724
+        Age: 41
+        Gender: Male
+        Oncologist: Dr. Lisa Park, MD
+        Combined Medical Record: Patient Name: Marcos Rivera
+Patient MRN: 33439724
+Age: 41, Gender: Male
+Date of Visit: 2025-06-04
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Constipation, Bloating
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 22, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 22, 2025; T4bN1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Constipation, Bloating
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Type 1 diabetes
+- Chronic back pain
+- Depression
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT06778863
+        Title: GUARDIAN-101: A Phase 1 Dose Escalation and Expansion Study of CLSP-1025 in Adult Patients With Solid Tumors That Harbor the p53 R175H Mutation
+        Condition: ["Advanced Solid Tumor", "Unresectable Solid Tumor", "Metastatic Solid Tumor", "Colorectal Adenocarcinoma", "Pancreatic Adenocarcinoma", "Lung Cancer", "Ovarian Cancer", "Breast Cancer", "Head and Neck Squamous Cell Carcinoma", "Prostate Cancer", "Bladder Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 4.932
+        
+        Brief Summary: Phase 1 dose escalation and expansion study of CLSP-1025, a first-in-class HLA-A\*02:01 specific T cell engager (TCE) targeting solid tumors that harbor the p53 R175H mutation.
+        
+        Detailed Description: This Phase 1, open-label, multicenter study is designed to evaluate the safety, tolerability, pharmacokinetics (PK), pharmacodynamics (PD), and preliminary clinical activity of CLSP-1025 when administered to HLA-A\*02:01-positive adult patients with advanced solid tumors that harbor the p53 R175H mutation. The study will be conducted in 2 parts: Part A Monotherapy Dose Escalation to determine the recommended dose(s) for expansion (RDE\[s\]) and Part B Monotherapy Expansion to explore the preliminary antitumor activity as well as further characterize the safety, tolerability, PK, and PD of CLSP-1025 at the RDE(s).
+        
+        Inclusion Criteria: ["* Patients must be at least 18 years of age at the time of signing the informed consent.", "* Patients must be willing and able to provide written informed consent", "* Patients must have locally advanced or metastatic solid tumors that have progressed after standard of care therapy or for which no standard therapy exists", "* Tumors must harbor a TP53 R175H variant mutation confirmed by an accredited laboratory-based test", "* Patients must be HLA-A\\*02:01 positive by central assay", "* Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at the time of enrollment", "* Adequate hematological, renal and hepatic function", "* Per Investigator judgement, patient is willing and able to complete study visits and/or procedures per the protocol and comply with study requirements for study participation", "Key"]
+        
+        Exclusion Criteria: ["* Patients with Li-Fraumeni syndrome or other known germline p53 R175H mutation", "* Patients who have received other p53 R175H-directed therapies", "* Patients who have not fully recovered from adverse events due to previous anticancer therapies", "* Patients with active infection requiring systemic antimicrobial therapy", "* Any other primary malignancy within the 2 years prior to enrollment (except for non- melanoma skin cancer, carcinoma in situ (eg, cervix, bladder, breast) or prostate cancer in remission.", "* Known active central nervous system metastases and/or carcinomatous meningitis"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+* Patients must be at least 18 years of age at the time of signing the informed consent.
+* Patients must be willing and able to provide written informed consent
+* Patients must have locally advanced or metastatic solid tumors that have progressed after standard of care therapy or for which no standard therapy exists
+* Tumors must harbor a TP53 R175H variant mutation confirmed by an accredited laboratory-based test
+* Patients must be HLA-A\*02:01 positive by central assay
+* Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 1 at the time of enrollment
+* Adequate hematological, renal and hepatic function
+* Per Investigator judgement, patient is willing and able to complete study visits and/or procedures per the protocol and comply with study requirements for study participation
+
+Key Exclusion Criteria:
+
+* Patients with Li-Fraumeni syndrome or other known germline p53 R175H mutation
+* Patients who have received other p53 R175H-directed therapies
+* Patients who have not fully recovered from adverse events due to previous anticancer therapies
+* Patients with active infection requiring systemic antimicrobial therapy
+* Any other primary malignancy within the 2 years prior to enrollment (except for non- melanoma skin cancer, carcinoma in situ (eg, cervix, bladder, breast) or prostate cancer in remission.
+* Known active central nervous system metastases and/or carcinomatous meningitis
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT06778863",
+                    "trial_title": "GUARDIAN-101: A Phase 1 Dose Escalation and Expansion Study of CLSP-1025 in Adult Patients With Solid Tumors That Harbor the p53 R175H Mutation",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-21T18:15:44.131966"
+            }
+        }
+        

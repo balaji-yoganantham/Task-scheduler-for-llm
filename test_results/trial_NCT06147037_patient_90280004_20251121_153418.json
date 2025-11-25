@@ -1,0 +1,48 @@
+{
+  "trial_id": "NCT06147037",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 178,
+  "patient_mrn": "90280004",
+  "patient_info": {
+    "age": 35,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for the trial. However, the specific trial requirements are unknown, and without that information, we cannot confirm eligibility. The patient is treatment-naïve, which may be a requirement for some trials, but this cannot be verified without trial details. The patient is 35 years old, male, with an ECOG performance status of 1, which typically meets eligibility criteria. The patient has a KRAS G13D mutation, which may or may not be compatible with trial requirements depending on the specific trial's biomarker criteria. Therefore, the lack of trial-specific information leads to a determination of NOT_ELIGIBLE due to the inability to confirm alignment with inclusion criteria.\",\n    \"inclusion_criteria_met\": [\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [],\n    \"inclusion_criteria_met_count\": 3,\n    \"exclusion_criteria_violated_count\": 0,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Obtain specific trial details to assess eligibility accurately. Clarify inclusion and exclusion criteria related to the primary diagnosis, disease stage, and biomarker requirements.\",\n    \"evaluation_timestamp\": \"2025-11-21T15:34:09.657461\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for the trial. However, the specific trial requirements are unknown, and without that information, we cannot confirm eligibility. The patient is treatment-naïve, which may be a requirement for some trials, but this cannot be verified without trial details. The patient is 35 years old, male, with an ECOG performance status of 1, which typically meets eligibility criteria. The patient has a KRAS G13D mutation, which may or may not be compatible with trial requirements depending on the specific trial's biomarker criteria. Therefore, the lack of trial-specific information leads to a determination of NOT_ELIGIBLE due to the inability to confirm alignment with inclusion criteria.",
+    "inclusion_criteria_met": [
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [],
+    "inclusion_criteria_met_count": 3,
+    "exclusion_criteria_violated_count": 0,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Obtain specific trial details to assess eligibility accurately. Clarify inclusion and exclusion criteria related to the primary diagnosis, disease stage, and biomarker requirements.",
+    "evaluation_timestamp": "2025-11-21T15:34:09.657461",
+    "patient_info": {
+      "patient_id": 178,
+      "mrn": "90280004",
+      "age": 35,
+      "gender": "Male",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT06147037",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T15:34:18.374800"
+}

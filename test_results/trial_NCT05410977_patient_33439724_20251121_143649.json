@@ -1,0 +1,53 @@
+{
+  "trial_id": "NCT05410977",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 114,
+  "patient_mrn": "33439724",
+  "patient_info": {
+    "age": 41,
+    "gender": "Male",
+    "oncologist": "Dr. Lisa Park, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Marcos Rivera, has a diagnosis of metastatic colorectal cancer (Stage IV, T4bN1aM1) with lymph node metastases. However, he is newly diagnosed and treatment-naïve, which may not align with the trial's requirement for prior treatments, depending on the specific protocol details. Additionally, the patient's KRAS mutation (KRAS G12D) may not meet the biomarker requirements if the trial specifies a need for wild-type KRAS. Therefore, he is not eligible due to potential violations of inclusion criteria regarding prior treatments and biomarker status.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"DISEASE STAGE COMPATIBILITY\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"PRIOR TREATMENTS\",\n        \"BIOMARKERS AND MOLECULAR MARKERS\"\n    ],\n    \"inclusion_criteria_met_count\": 5,\n    \"exclusion_criteria_violated_count\": 2,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Review the specific trial protocol for required prior treatments and biomarker status. If the trial allows treatment-naïve patients or has a different biomarker requirement, the patient may be eligible.\",\n    \"evaluation_timestamp\": \"2025-11-21T14:36:39.467316\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Marcos Rivera, has a diagnosis of metastatic colorectal cancer (Stage IV, T4bN1aM1) with lymph node metastases. However, he is newly diagnosed and treatment-naïve, which may not align with the trial's requirement for prior treatments, depending on the specific protocol details. Additionally, the patient's KRAS mutation (KRAS G12D) may not meet the biomarker requirements if the trial specifies a need for wild-type KRAS. Therefore, he is not eligible due to potential violations of inclusion criteria regarding prior treatments and biomarker status.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "DISEASE STAGE COMPATIBILITY",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "PRIOR TREATMENTS",
+      "BIOMARKERS AND MOLECULAR MARKERS"
+    ],
+    "inclusion_criteria_met_count": 5,
+    "exclusion_criteria_violated_count": 2,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Review the specific trial protocol for required prior treatments and biomarker status. If the trial allows treatment-naïve patients or has a different biomarker requirement, the patient may be eligible.",
+    "evaluation_timestamp": "2025-11-21T14:36:39.467316",
+    "patient_info": {
+      "patient_id": 114,
+      "mrn": "33439724",
+      "age": 41,
+      "gender": "Male",
+      "oncologist": "Dr. Lisa Park, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT05410977",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T14:36:49.677800"
+}

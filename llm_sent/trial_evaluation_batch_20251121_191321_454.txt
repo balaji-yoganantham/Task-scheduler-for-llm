@@ -1,0 +1,246 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 114
+mrn: 33439724
+batch_size: 1
+trial_ids: ['NCT05514717']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 114
+        MRN: 33439724
+        Age: 41
+        Gender: Male
+        Oncologist: Dr. Lisa Park, MD
+        Combined Medical Record: Patient Name: Marcos Rivera
+Patient MRN: 33439724
+Age: 41, Gender: Male
+Date of Visit: 2025-06-04
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Constipation, Bloating
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 22, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 22, 2025; T4bN1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Constipation, Bloating
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Type 1 diabetes
+- Chronic back pain
+- Depression
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05514717
+        Title: A Phase 1, First-in-Human, Dose Escalation and Expansion, Multicenter Study of XMT-2056 in Participants With Advanced/Recurrent Solid Tumors That Express HER2
+        Condition: ["HER2-positive Breast Cancer", "HER2-positive Gastric Cancer", "HER2-positive Non-Small Cell Lung Cancer", "HER2-positive Colorectal Cancer", "HER2-positive Tumors", "HER2 Low Breast Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.068
+        
+        Brief Summary: A Study of XMT-2056 in advanced/recurrent solid tumors that express HER2.
+        
+        Detailed Description: The first-in-human (FIH) study of XMT-2056 is a Phase 1, open-label study of XMT-2056 in previously treated patients with advanced/recurrent solid tumors expressing HER2. The XMT-2056 monotherapy trial will consist of dose escalation (DES) and expansion (EXP) parts.
+
+DES will be the dose-finding portion of the study to assess the safety and tolerability of XMT-2056 and determine the maximum tolerated dose (MTD) and/or Recommended Phase 2 Dose (RP2D). The RP2D will be determined based on the totality of the clinical data, including safety and preliminary anti-tumor effect, PK, and relevant biomarker data.
+        
+        Inclusion Criteria: ["* Participant has recurrent or metastatic solid tumors with HER2 expression and has disease progression after treatment, is intolerant to treatment, or is contraindicated with available anti-cancer therapies known to confer benefit, based on investigator's judgement. Note: Participants must have HER2 positivity per the results of their most recent tumor tissue testing, defined as IHC 3+ or IHC 2+ in combination with in situ hybridization (ISH)+. Participants with ERBB2-activating mutations or ERBB2 gene amplification in the absence of HER2 positivity are considered ineligible.", "* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.", "* Participant must have measurable disease as defined by RECIST version 1.1.", "* Participant has fresh tumor biopsy tissue available for submission to central laboratory. If obtaining fresh tumor tissue is medically contraindicated, archival tumor tissue can be submitted following written approval of the request by the study Medical Monitor. Samples must be obtained after the participant's most recent HER2-targeting therapy unless determined to be medically contraindicated after discussion with the medical monitor."]
+        
+        Exclusion Criteria: ["* \u2022 Participant is receiving immunosuppressive doses of systemic medications, (doses \\>10 mg/day prednisone or equivalent) that cannot be discontinued for at least 2 weeks before the first dose and during study drug treatment administration. Note: physiologic hormone replacement therapy is an exception.", "* Participant has received prior treatment targeting STING pathway.", "* Diagnosis of additional malignancy that required active treatment (including surgery, systemic therapy, and radiation) within the last 2 years, expect for adequately treated basal cell or squamous cell skin cancer or carcinoma in situ of the breast or the cervix. Participants with an additional malignancy that has a low risk for recurrence may be eligible after discussion with the study Medical Monitor.", "* Participants have untreated CNS metastases (including new and progressive brain metastases), history of leptomeningeal metastasis, or carcinomatous meningitis.", "1. Participants are eligible if CNS metastases are adequately treated and participants are neurologically stable for at least 2 weeks prior to enrollment.", "2. In addition, participants must be either off corticosteroids, or on a stable/decreasing dose of \u2264 10 mg prednisone daily (or equivalent)."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Participant has recurrent or metastatic solid tumors with HER2 expression and has disease progression after treatment, is intolerant to treatment, or is contraindicated with available anti-cancer therapies known to confer benefit, based on investigator's judgement. Note: Participants must have HER2 positivity per the results of their most recent tumor tissue testing, defined as IHC 3+ or IHC 2+ in combination with in situ hybridization (ISH)+. Participants with ERBB2-activating mutations or ERBB2 gene amplification in the absence of HER2 positivity are considered ineligible.
+* Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1.
+* Participant must have measurable disease as defined by RECIST version 1.1.
+* Participant has fresh tumor biopsy tissue available for submission to central laboratory. If obtaining fresh tumor tissue is medically contraindicated, archival tumor tissue can be submitted following written approval of the request by the study Medical Monitor. Samples must be obtained after the participant's most recent HER2-targeting therapy unless determined to be medically contraindicated after discussion with the medical monitor.
+
+Exclusion Criteria:
+
+* • Participant is receiving immunosuppressive doses of systemic medications, (doses \>10 mg/day prednisone or equivalent) that cannot be discontinued for at least 2 weeks before the first dose and during study drug treatment administration. Note: physiologic hormone replacement therapy is an exception.
+* Participant has received prior treatment targeting STING pathway.
+* Diagnosis of additional malignancy that required active treatment (including surgery, systemic therapy, and radiation) within the last 2 years, expect for adequately treated basal cell or squamous cell skin cancer or carcinoma in situ of the breast or the cervix. Participants with an additional malignancy that has a low risk for recurrence may be eligible after discussion with the study Medical Monitor.
+* Participants have untreated CNS metastases (including new and progressive brain metastases), history of leptomeningeal metastasis, or carcinomatous meningitis.
+
+  1. Participants are eligible if CNS metastases are adequately treated and participants are neurologically stable for at least 2 weeks prior to enrollment.
+  2. In addition, participants must be either off corticosteroids, or on a stable/decreasing dose of ≤ 10 mg prednisone daily (or equivalent).
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05514717",
+                    "trial_title": "A Phase 1, First-in-Human, Dose Escalation and Expansion, Multicenter Study of XMT-2056 in Participants With Advanced/Recurrent Solid Tumors That Express HER2",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-21T19:13:21.454252"
+            }
+        }
+        

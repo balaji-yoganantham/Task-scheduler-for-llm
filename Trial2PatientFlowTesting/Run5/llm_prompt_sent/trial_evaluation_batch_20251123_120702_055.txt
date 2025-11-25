@@ -1,0 +1,484 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT04657068']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04657068
+        Title: A Phase I/IIa, Open-label, Multi-center Study to Assess the Safety, Tolerability, Pharmacokinetics and Preliminary Efficacy of the ATR Kinase Inhibitor ART0380 Administered Orally as Monotherapy and in Combination to Patients With Advanced or Metastatic Solid Tumors
+        Condition: ["Advanced Cancer", "Metastatic Cancer", "Ovarian Cancer", "Primary Peritoneal Cancer", "Fallopian Tube Cancer", "Endometrial Cancer", "Metastatic Colorectal Cancer", "Pancreatic Ductal Adenocarcinoma", "Acinar Cell Carcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.070
+        
+        Brief Summary: This clinical trial is evaluating a drug called ART0380 in participants with advanced or metastatic solid tumors. The main goals of this study are to:
+
+* Find the recommended dose of ART0380 that can be given safely to participants alone and in combination with gemcitabine or irinotecan
+* Learn more about the side effects of ART0380 alone and in combination with gemcitabine or irinotecan
+* Learn more about the effectiveness of ART0380 alone and in combination with gemcitabine or irinotecan
+        
+        Detailed Description: ART0380 is a new investigational medicinal product that is a potent and selective inhibitor of Ataxia telangiectasia and Rad3-related (ATR). ART0380 is being developed as an oral anti-cancer agent for the treatment of participants with cancers that harbor defects in deoxyribonucleic acid (DNA) repair and in combination with agents including those that cause DNA damage.
+
+This study is an open-label Phase I/IIa study designed to evaluate the safety, tolerability, PK and preliminary efficacy of ART0380 as monotherapy or in combination with gemcitabine or irinotecan in participants with advanced or metastatic solid tumors, advanced or solid tumors that fail to express Ataxia-Telangiectasia Mutated protein kinase (ATM) by immunohistochemistry, and high grade serous ovarian, primary peritoneal or fallopian tube carcinoma.
+        
+        Inclusion Criteria: ["* Signed informed consent", "* Discontinued all previous treatments for cancer for at least 21 days or 5 half-lives, whichever is shorter, and recovered from the acute effects of therapy to CTCAE Grade \u22641. Palliative radiotherapy must have completed 1 week prior to start of study treatment.", "* If patients have a known germline BRCA mutation or a cancer with a somatic BRCA mutations or which is HRD positive and for which there is an approved PARP inhibitor, participants should have received such treatment before participating in the study unless contra-indicated", "* At least 1 radiologically evaluable lesion (measurable and/or non-measurable) that can be assessed at baseline and is suitable for repeated radiological evaluation by RECIST v1.1 or Prostate Cancer Working Group-3 Guidelines (PCWG-3)", "* Acceptable hematologic, renal, hepatic, and coagulation functions independent of transfusions and granulocyte colony-stimulating factor", "* Non-irradiated tumor tissue sample (archival or newly obtained core biopsy of a tumor lesion) available for submission for analysis.", "* Female patients of childbearing potential and male patients with female partners of childbearing potential are required to use highly effective contraception plus one barrier method during their participation in the study and for 7 months and 5 months respectively following the last dose. For male and female patients given gemcitabine or irinotecan, highly effective contraception plus one barrier method must be used from study entry until 6 months after the last dose of study treatment. Male patients are required to refrain from donating sperm and female patients are required to refrain from donating eggs, during their participation in the study and for 6 months following last dose.", "* Estimated life expectancy of \u226512 weeks", "* Reliable and willing to make themselves available for the duration of the study and are willing to follow study procedures", "* Performance status of 0-1 on the ECOG Scale", "Additional inclusion criteria for participants in dose escalation (Part A1):", "* Advanced or metastatic cancer which is refractory to standard therapies, or for which no standard therapies exist, or for which the investigator feels no other active therapy is required for the duration of the study", "* Performance status of 0-1 on the Eastern Cooperative Oncology Group (ECOG) scale", "Additional inclusion criteria for participants in dose escalation (Part A2):", "\u2022Advanced or metastatic cancer for which gemcitabine is an appropriate treatment. Prior treatment with gemcitabine is permitted.", "Additional inclusion criteria for participants in dose escalation (Part A3):", "* Advanced or metastatic cancer for which irinotecan is an appropriate treatment. Prior treatment with irinotecan is permitted.", "* For food effect cohort only: Patients must be able to eat a high-fat meal within a 30 minute period, as provided by the study site.", "Additional inclusion criteria for participants in dose expansion (Part B1):", "* Patients with advanced or metastatic solid tumors with alterations to the ATM gene likely to predict for loss of ATM protein", "* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1", "* For France only ART0380 Monotherapy; Patient that is not eligible for curative treatment, for whom all standard of care therapies have failed and no therapies known to provide clinical benefit are available.", "* Combination arms; Patients for which irinotecan is an appropriate treatment. Prior treatment with irinotecan is permitted.", "* For Spain only ART0380 Combination therapy, Patient that is not eligible for curative treatment, for whom standard of care therapies have failed.", "Additional inclusion criteria for participants in dose expansion (Part B2):", "* Patients with a known germline BRCA mutation, or a cancer with a known somatic BRCA mutation, or which is known to be HRD positive, and for which there is an approved PARP inhibitor should have received such treatment before participating in the study, unless contra-indicated.", "* Females with histologically-confirmed diagnosis of high grade serous carcinoma of the ovary, fallopian tube or primary peritoneum that is not amenable to curative therapy", "* Platinum-resistant disease, defined as disease progression within 6 months of last receipt of platinum-based chemotherapy. Patients must not have had primary platinum-refractory disease (disease that progressed during first-line platinum-based therapy).", "* No more than one prior regimen in the platinum-resistant setting. Hormonal therapies and antiangiogenic therapies (as single agents) and PARP inhibitors used as maintenance therapy are not considered as separate lines of therapy. Patients should have previously received bevacizumab and chemotherapy unless contra-indicated.", "* Have not received prior treatment with gemcitabine unless administered in combination with a platinum with no disease progression within 12 months after completion of that regimen", "* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1", "Inclusion criteria specific to Part B3", "* Persistent or recurrent endometrial cancer with biological selection.:", "* Patients should have received taxane/platinum chemotherapy, unless contraindicated.", "* Measurable disease.", "Inclusion criteria specific to Part B4", "* Advanced or metastatic solid cancers of any histology with biological selection", "* If a PD-1/PDL-1 inhibitor (eg, pembrolizumab) is approved and available for the patient's cancer, the patient should have received such treatment before participating in this study.", "* Radiologically evaluable disease", "* Performance status of 0-1 on the ECOG scale", "Inclusion criteria specific to Part B5 and B7", "* Metastatic CRC with alterations to the ATM gene", "* Participants should have previously received appropriate prior lines of therapy in this setting.", "* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1.", "* Part B5 (3L) only:", "* Patients must have received a maximum of exactly 2 prior chemotherapy regimens for the treatment of CRC which must have included a fluoropyrimidine, oxaliplatin and irinotecan unless contraindicated or unavailable", "* Part B7 (2L) only:", "* Patients must have received exactly 1 prior chemotherapy regimen for the treatment of CRC which must have included a fluoropyrimidine unless contraindicated or unavailable", "Inclusion criteria specific to Part B6:", "* Metastatic or locally advanced PDAC or acinar cell carcinoma with alterations to the ATM gene", "* Participants should have previously received prior lines of therapy in this setting", "* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1", "* Serum albumin \u22653g/dL within 7 days prior to first dose.", "General"]
+        
+        Exclusion Criteria: ["* Women who are pregnant, breast feeding, or who plan to become pregnant while in the study or within 7 months after the last administration of study treatment", "* Men who plan to father a child while in the study or within5 months after the last administration of study treatment", "* Serious concomitant systemic disorder that would compromise the participants ability to adhere to the protocol including: one or more opportunistic HIV/AIDs-related infections within the past 12 months, a known hepatitis B virus, or known hepatitis C virus; documented active or chronic tuberculosis infection; malignancy prior to the one currently being treated that is not in remission", "* Have ongoing interstitial lung disease or pneumonitis (whether symptomatic or asymptomatic).", "* Moderate or severe cardiovascular disease", "* Valvulopathy that is severe, moderate, or deemed clinically significant", "* Documented major electrocardiogram (ECG) abnormalities which are clinically significant", "* Symptomatic or uncontrolled brain metastases, spinal cord compression, or leptomeningeal disease requiring concurrent treatment", "* Received a live vaccine within 30 days before the first dose of study treatment", "* History or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the patient's participation for the full duration of the study, or is not in the best interest of the patient to participate", "* Recent major surgery within 4 weeks prior to entry into the study or minor surgery within 1 week of entry into the study", "* Significant bleeding disorder or vasculitis or had a Grade \u22653 bleeding episode within 12 weeks prior to enrollment", "* Currently enrolled in a clinical trial involving an investigational product or any other type of medical research judged not to be scientifically or medically compatible with this study", "Additional exclusion criteria for participants in dose escalation (Part A3, B1, B5, B6, and B7 in combination with irinotecan):", "* Patients who have symptoms or signs of clinically unacceptable deterioration of the primary disease at the time of screening.", "* Patients receiving inhibitors of UGT1A1 within 2 weeks before the first dose of study treatment", "* Part A3 Fed-fasted cohort only: Patients receiving acid reducing agents within 1 week before the first dose of study treatment will be excluded", "* Part B6 only: Neuroendocrine (carcinoid, islet cell) or adenosquamous carcinoma pancreatic cancer"]
+        
+        Eligibility Criteria: General Inclusion Criteria:
+
+* Signed informed consent
+* Discontinued all previous treatments for cancer for at least 21 days or 5 half-lives, whichever is shorter, and recovered from the acute effects of therapy to CTCAE Grade ≤1. Palliative radiotherapy must have completed 1 week prior to start of study treatment.
+* If patients have a known germline BRCA mutation or a cancer with a somatic BRCA mutations or which is HRD positive and for which there is an approved PARP inhibitor, participants should have received such treatment before participating in the study unless contra-indicated
+* At least 1 radiologically evaluable lesion (measurable and/or non-measurable) that can be assessed at baseline and is suitable for repeated radiological evaluation by RECIST v1.1 or Prostate Cancer Working Group-3 Guidelines (PCWG-3)
+* Acceptable hematologic, renal, hepatic, and coagulation functions independent of transfusions and granulocyte colony-stimulating factor
+* Non-irradiated tumor tissue sample (archival or newly obtained core biopsy of a tumor lesion) available for submission for analysis.
+* Female patients of childbearing potential and male patients with female partners of childbearing potential are required to use highly effective contraception plus one barrier method during their participation in the study and for 7 months and 5 months respectively following the last dose. For male and female patients given gemcitabine or irinotecan, highly effective contraception plus one barrier method must be used from study entry until 6 months after the last dose of study treatment. Male patients are required to refrain from donating sperm and female patients are required to refrain from donating eggs, during their participation in the study and for 6 months following last dose.
+* Estimated life expectancy of ≥12 weeks
+* Reliable and willing to make themselves available for the duration of the study and are willing to follow study procedures
+* Performance status of 0-1 on the ECOG Scale
+
+Additional inclusion criteria for participants in dose escalation (Part A1):
+
+* Advanced or metastatic cancer which is refractory to standard therapies, or for which no standard therapies exist, or for which the investigator feels no other active therapy is required for the duration of the study
+* Performance status of 0-1 on the Eastern Cooperative Oncology Group (ECOG) scale
+
+Additional inclusion criteria for participants in dose escalation (Part A2):
+
+•Advanced or metastatic cancer for which gemcitabine is an appropriate treatment. Prior treatment with gemcitabine is permitted.
+
+Additional inclusion criteria for participants in dose escalation (Part A3):
+
+* Advanced or metastatic cancer for which irinotecan is an appropriate treatment. Prior treatment with irinotecan is permitted.
+* For food effect cohort only: Patients must be able to eat a high-fat meal within a 30 minute period, as provided by the study site.
+
+Additional inclusion criteria for participants in dose expansion (Part B1):
+
+* Patients with advanced or metastatic solid tumors with alterations to the ATM gene likely to predict for loss of ATM protein
+* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1
+* For France only ART0380 Monotherapy; Patient that is not eligible for curative treatment, for whom all standard of care therapies have failed and no therapies known to provide clinical benefit are available.
+* Combination arms; Patients for which irinotecan is an appropriate treatment. Prior treatment with irinotecan is permitted.
+* For Spain only ART0380 Combination therapy, Patient that is not eligible for curative treatment, for whom standard of care therapies have failed.
+
+Additional inclusion criteria for participants in dose expansion (Part B2):
+
+* Patients with a known germline BRCA mutation, or a cancer with a known somatic BRCA mutation, or which is known to be HRD positive, and for which there is an approved PARP inhibitor should have received such treatment before participating in the study, unless contra-indicated.
+* Females with histologically-confirmed diagnosis of high grade serous carcinoma of the ovary, fallopian tube or primary peritoneum that is not amenable to curative therapy
+* Platinum-resistant disease, defined as disease progression within 6 months of last receipt of platinum-based chemotherapy. Patients must not have had primary platinum-refractory disease (disease that progressed during first-line platinum-based therapy).
+* No more than one prior regimen in the platinum-resistant setting. Hormonal therapies and antiangiogenic therapies (as single agents) and PARP inhibitors used as maintenance therapy are not considered as separate lines of therapy. Patients should have previously received bevacizumab and chemotherapy unless contra-indicated.
+* Have not received prior treatment with gemcitabine unless administered in combination with a platinum with no disease progression within 12 months after completion of that regimen
+* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1
+
+Inclusion criteria specific to Part B3
+
+* Persistent or recurrent endometrial cancer with biological selection.:
+* Patients should have received taxane/platinum chemotherapy, unless contraindicated.
+* Measurable disease.
+
+Inclusion criteria specific to Part B4
+
+* Advanced or metastatic solid cancers of any histology with biological selection
+* If a PD-1/PDL-1 inhibitor (eg, pembrolizumab) is approved and available for the patient's cancer, the patient should have received such treatment before participating in this study.
+* Radiologically evaluable disease
+* Performance status of 0-1 on the ECOG scale
+
+Inclusion criteria specific to Part B5 and B7
+
+* Metastatic CRC with alterations to the ATM gene
+* Participants should have previously received appropriate prior lines of therapy in this setting.
+* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1.
+* Part B5 (3L) only:
+* Patients must have received a maximum of exactly 2 prior chemotherapy regimens for the treatment of CRC which must have included a fluoropyrimidine, oxaliplatin and irinotecan unless contraindicated or unavailable
+* Part B7 (2L) only:
+* Patients must have received exactly 1 prior chemotherapy regimen for the treatment of CRC which must have included a fluoropyrimidine unless contraindicated or unavailable
+
+Inclusion criteria specific to Part B6:
+
+* Metastatic or locally advanced PDAC or acinar cell carcinoma with alterations to the ATM gene
+* Participants should have previously received prior lines of therapy in this setting
+* Have at least 1 measurable lesion assessable using standard techniques by RECIST v1.1
+* Serum albumin ≥3g/dL within 7 days prior to first dose.
+
+General Exclusion Criteria:
+
+* Women who are pregnant, breast feeding, or who plan to become pregnant while in the study or within 7 months after the last administration of study treatment
+* Men who plan to father a child while in the study or within5 months after the last administration of study treatment
+* Serious concomitant systemic disorder that would compromise the participants ability to adhere to the protocol including: one or more opportunistic HIV/AIDs-related infections within the past 12 months, a known hepatitis B virus, or known hepatitis C virus; documented active or chronic tuberculosis infection; malignancy prior to the one currently being treated that is not in remission
+* Have ongoing interstitial lung disease or pneumonitis (whether symptomatic or asymptomatic).
+* Moderate or severe cardiovascular disease
+* Valvulopathy that is severe, moderate, or deemed clinically significant
+* Documented major electrocardiogram (ECG) abnormalities which are clinically significant
+* Symptomatic or uncontrolled brain metastases, spinal cord compression, or leptomeningeal disease requiring concurrent treatment
+* Received a live vaccine within 30 days before the first dose of study treatment
+* History or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the patient's participation for the full duration of the study, or is not in the best interest of the patient to participate
+* Recent major surgery within 4 weeks prior to entry into the study or minor surgery within 1 week of entry into the study
+* Significant bleeding disorder or vasculitis or had a Grade ≥3 bleeding episode within 12 weeks prior to enrollment
+* Currently enrolled in a clinical trial involving an investigational product or any other type of medical research judged not to be scientifically or medically compatible with this study
+
+Additional exclusion criteria for participants in dose escalation (Part A3, B1, B5, B6, and B7 in combination with irinotecan):
+
+* Patients who have symptoms or signs of clinically unacceptable deterioration of the primary disease at the time of screening.
+* Patients receiving inhibitors of UGT1A1 within 2 weeks before the first dose of study treatment
+* Part A3 Fed-fasted cohort only: Patients receiving acid reducing agents within 1 week before the first dose of study treatment will be excluded
+* Part B6 only: Neuroendocrine (carcinoid, islet cell) or adenosquamous carcinoma pancreatic cancer
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04657068",
+                    "trial_title": "A Phase I/IIa, Open-label, Multi-center Study to Assess the Safety, Tolerability, Pharmacokinetics and Preliminary Efficacy of the ATR Kinase Inhibitor ART0380 Administered Orally as Monotherapy and in Combination to Patients With Advanced or Metastatic Solid Tumors",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T12:07:02.055025"
+            }
+        }
+        

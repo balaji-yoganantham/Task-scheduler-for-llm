@@ -1,0 +1,51 @@
+{
+  "trial_id": "NCT06147037",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 178,
+  "patient_mrn": "90280004",
+  "patient_info": {
+    "age": 35,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for many oncology trials. However, the specific trial criteria are unknown, making it difficult to assess eligibility fully. The patient is treatment-naïve, which may be a requirement for some trials. The patient's age (35) and performance status (ECOG 1) are within acceptable ranges for most oncology trials. However, the presence of lung metastases may violate exclusion criteria for certain trials that require no evidence of metastatic disease. Additionally, the patient's KRAS mutation (G13D) may also be a disqualifying factor depending on the trial's biomarker requirements. Therefore, without specific trial details, the patient cannot be deemed eligible.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"METASTATIC DISEASE\"\n    ],\n    \"inclusion_criteria_met_count\": 4,\n    \"exclusion_criteria_violated_count\": 1,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Obtain specific trial details to assess eligibility accurately, particularly regarding exclusion criteria related to metastatic disease and biomarker requirements.\",\n    \"evaluation_timestamp\": \"2025-11-21T15:31:57.160722\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for many oncology trials. However, the specific trial criteria are unknown, making it difficult to assess eligibility fully. The patient is treatment-naïve, which may be a requirement for some trials. The patient's age (35) and performance status (ECOG 1) are within acceptable ranges for most oncology trials. However, the presence of lung metastases may violate exclusion criteria for certain trials that require no evidence of metastatic disease. Additionally, the patient's KRAS mutation (G13D) may also be a disqualifying factor depending on the trial's biomarker requirements. Therefore, without specific trial details, the patient cannot be deemed eligible.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "METASTATIC DISEASE"
+    ],
+    "inclusion_criteria_met_count": 4,
+    "exclusion_criteria_violated_count": 1,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Obtain specific trial details to assess eligibility accurately, particularly regarding exclusion criteria related to metastatic disease and biomarker requirements.",
+    "evaluation_timestamp": "2025-11-21T15:31:57.160722",
+    "patient_info": {
+      "patient_id": 178,
+      "mrn": "90280004",
+      "age": 35,
+      "gender": "Male",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT06147037",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T15:32:06.601246"
+}

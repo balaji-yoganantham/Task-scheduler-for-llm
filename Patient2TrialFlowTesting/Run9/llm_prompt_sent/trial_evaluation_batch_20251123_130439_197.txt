@@ -1,0 +1,422 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT05080673']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05080673
+        Title: Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps
+        Condition: ["Adenocarcinoma of the Colon", "Adenocarcinoma of the Rectum"]
+        Phase: NA
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 45 Years - 70 Years
+        Gender: ALL
+        Hybrid Score: 5.134
+        
+        Brief Summary: This trial examines colorectal cancer incidence in participants with 1 to 2 non-advanced adenomas randomized to surveillance colonoscopy at 10 years compared to participants randomized to surveillance colonoscopy at 5 and 10 years.
+        
+        Detailed Description: Colorectal cancer (CRC) is the fourth most common cancer and the second leading cause of cancer death among men and women in the United States (US). The lifetime risk of colorectal cancer in both men and women in the US is approximately 6%. About 93% of colorectal cancer (CRC) diagnoses are in patients older than 50 years (Siegel 2014). Randomized controlled trials show that screening for CRC significantly decreases CRC incidence and mortality (Schoen 2012, Atkin 2010, Mandel 1999, Mandel 2000). CRC screening has received a Grade A recommendation from the US Preventive Services Task Force.
+
+In the U.S., colonoscopy is the most utilized screening modality for CRC. On a population basis, screening rates, which were around 40-50%, have now increased to 65%, and a goal to increase to 80% compliance is being promoted (CDC 2011, CDC 2013, Meester 2015).
+
+Adenomatous polyps are the acknowledged precursors of colorectal cancer. Identification and removal of adenomas is the mechanism by which screening is effective in reducing CRC incidence and subsequent mortality. "Advanced" adenomas are adenomas which are greater than or equal to 1 cm, or have a "villous" component (tubulovillous or villous), or have foci of high grade dysplasia. Advanced adenomas are associated with increased long-term risk of cancer, even years after colonoscopy (Click 2018). The prevalence of advanced adenomas at screening colonoscopy is 5-10% (Ferlitsch 2011, Imperiale 2014). Non-advanced adenomas are adenomas greater than 1 cm with neither villous components nor high grade dysplasia. Non-advanced adenomas are much more common than advanced adenomas, present in around 30% of colonoscopy exams (Ferlitsch 2011, Imperiale 2014).
+
+After detection of adenomas, patients are advised to return periodically for surveillance colonoscopy. Patients with 1-2 non-advanced adenomas are recommended by guidelines to return in 5 - 10 years for follow-up surveillance colonoscopy (Lieberman 2012). However, there are no guidelines on how to triage individuals to 5 as opposed to 10 years. Furthermore, there is limited evidence supporting the effectiveness of surveillance colonoscopy in reducing CRC incidence. A retrospective study in patients with advanced adenomas demonstrated benefit (Atkin 2017), but the study was not randomized and did not include patients with 1-2 non-advanced adenomas. The only randomized trial of surveillance colonoscopy was reported in the early 1990's, when participants were randomized to 3 vs. 1- and 3- year surveillance (Winawer 1993). No difference in advanced adenoma detection was observed when comparing participants examined at the two screening intervals, and as a result, guidelines were modified with participants advised to return every 3 years after adenomatous polyp detection. The recommended interval for non-advanced adenomas was gradually lengthened to the current standard, but there is no randomized, controlled data to support that interval. Furthermore, observational data of surveillance colonoscopy practice in the U.S. demonstrate that recommended intervals are often not adhered to, and individuals return for repeat testing well ahead of guideline recommendations (Schoen 2010, Lieberman 2014).
+
+Furthermore, if anything, retrospective, natural history studies of non-advanced adenomas do not support the association of non-advanced adenoma with a higher risk of subsequent colorectal cancer (Atkin 1992, Spencer 1984, Loberg 2014). For example, in a classic study from the United Kingdom, patients with small rectosigmoid adenomas, even if multiple, did not have an increased risk of CRC compared to the general population, over a 14-year mean follow-up time (Atkin 1992). In a recent observational study from Norway, participants with a low-risk adenoma followed over a median of 7.7 years (maximum 19 years) without subsequent surveillance colonoscopy, had a lower CRC mortality than the general population (Loberg 2014), implying that although the initial colonoscopy may be protective, subsequent follow-up colonoscopy was not required. More recently, several studies have reported that individuals with non-advanced adenomas do not have an increased risk of colorectal cancer compared to those with no adenomas (Click 2018, Lieberman 2019, Lee 2019).
+
+Another recent major development affecting screening is that practitioners of colonoscopy are now recommended to monitor and insure their adenoma detection rates are high. Data from Poland (Kaminski 2010) and Kaiser Permanente in California (Corley 2014) have demonstrated that a higher adenoma detection rate (ADR) is associated with a lower long-term risk of interval CRC, or cancer occurring after colonoscopy. Our understanding of these observations is premised on the notion that leaving pre-neoplastic tissue (adenomas) in situ, (such as what occurs with a lower ADR), increases the chance that an adenoma left behind will subsequently transform into cancer. The concern over interval cancers has stimulated quality concerns about the practice of colonoscopy. Guidelines for a recommended ADR at screening colonoscopy are rising, from the initial targets of 15% in women and 25% in men (Lieberman 2012) to 20% in women and 30% in men or 25% overall. ADRs in clinical studies are now commonly over 30% and some practitioners report rates exceeding 50%. However, adenomas that are detected when the ADR is high or as it increases over time are generally small, non-advanced adenomas.
+
+Current clinical practice favoring colonoscopy-based screening with increased emphasis on detection of adenomas, most of which will turn out to be small, non-advanced adenomas, will greatly increase demand for utilization of surveillance colonoscopy exams in the coming decades. Yet, the evidence for determining the benefit, optimal timing, and recommended frequency of surveillance colonoscopy is unknown. A randomized, clinical trial to demonstrate the difference in yield between 5- or 10-year surveillance for participants with non-advanced adenoma is needed to guide clinical practice. Only a randomized trial will be authoritative enough to define good clinical practice and directly influence clinical care.
+        
+        Inclusion Criteria: ["* The participant must have signed and dated an IRB-approved consent form that conforms to federal and institutional guidelines.", "* Participants greater than or equal to 45 and less than 70 years of age at the time of colonoscopy.", "* Participants with a first-time diagnosis of 1-2 non-advanced tubular adenomas (less than 10 mm without tubulovillous or villous changes or high grade or severe dysplasia) from the qualifying colonoscopy within 4 years prior to randomization.", "* Sessile serrated polyps/adenomas, as long as they do not meet the criteria for advanced adenomas, will be considered as non-advanced adenomas.", "* Qualifying colonoscopy must be a complete colonoscopy with visualization of the cecum and with adequate cleansing within 4 years prior to randomization.", "* Complete excision of all observed polyps in qualifying colonoscopy", "* Participants must be able to read or understand English or Spanish."]
+        
+        Exclusion Criteria: ["* \u2022 Prior history of colorectal cancer or colorectal adenomas including sessile serrated polyps/adenomas excluding those found on the qualifying colonoscopy.", "* Prior history of a hyperplastic polyp measuring greater than or equal to 1 cm in size.", "* Traditional serrated adenomas found on the qualifying colonoscopy.", "* Hyperplastic polyp measuring greater than or equal to 1 cm in size found on the qualifying colonoscopy.", "* Previous malignancies unless the patient has been disease-free for 5 or more years prior to randomization and is deemed by the physician to be at low risk for recurrence. Patients with the following cancers are eligible if diagnosed and treated within the past 5 years: all in situ cancers and basal cell and squamous cell carcinoma of the skin.", "* Colonoscopy performed after the qualifying colonoscopy but prior to randomization.", "* Incomplete qualifying colonoscopy (e.g., cecum not visualized).", "* Incomplete endoscopic excision of adenomatous polyps based on colonoscopist impression at qualifying colonoscopy. (Excision of all hyperplastic rectosigmoid polyps is not required.)", "* Sub-total colectomy or total proctocolectomy. (Segmental resections are allowed.)", "* Family history of CRC diagnosed at less than or equal to 60 years of age in a first degree relative (mother, father, child, sibling) or in two first degree relatives with CRC at any age.", "* Participants with a clinical diagnosis of a significant heritable risk for colorectal cancer (Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \\[Lynch Syndrome\\]).", "* Participants tested positive for a Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \\[Lynch Syndrome\\] genetic mutation that increases risk of colorectal cancer.", "* Inflammatory bowel disease (e.g., Crohn's Disease, ulcerative colitis).", "* Life expectancy less than 10 years due to comorbid conditions in the opinion of the investigator.", "* Other comorbid conditions that would prevent the participant from having colonoscopies or would prevent required follow-up."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* The participant must have signed and dated an IRB-approved consent form that conforms to federal and institutional guidelines.
+* Participants greater than or equal to 45 and less than 70 years of age at the time of colonoscopy.
+* Participants with a first-time diagnosis of 1-2 non-advanced tubular adenomas (less than 10 mm without tubulovillous or villous changes or high grade or severe dysplasia) from the qualifying colonoscopy within 4 years prior to randomization.
+* Sessile serrated polyps/adenomas, as long as they do not meet the criteria for advanced adenomas, will be considered as non-advanced adenomas.
+* Qualifying colonoscopy must be a complete colonoscopy with visualization of the cecum and with adequate cleansing within 4 years prior to randomization.
+* Complete excision of all observed polyps in qualifying colonoscopy
+* Participants must be able to read or understand English or Spanish.
+
+Exclusion Criteria:
+
+* • Prior history of colorectal cancer or colorectal adenomas including sessile serrated polyps/adenomas excluding those found on the qualifying colonoscopy.
+
+  * Prior history of a hyperplastic polyp measuring greater than or equal to 1 cm in size.
+  * Traditional serrated adenomas found on the qualifying colonoscopy.
+  * Hyperplastic polyp measuring greater than or equal to 1 cm in size found on the qualifying colonoscopy.
+  * Previous malignancies unless the patient has been disease-free for 5 or more years prior to randomization and is deemed by the physician to be at low risk for recurrence. Patients with the following cancers are eligible if diagnosed and treated within the past 5 years: all in situ cancers and basal cell and squamous cell carcinoma of the skin.
+  * Colonoscopy performed after the qualifying colonoscopy but prior to randomization.
+  * Incomplete qualifying colonoscopy (e.g., cecum not visualized).
+  * Incomplete endoscopic excision of adenomatous polyps based on colonoscopist impression at qualifying colonoscopy. (Excision of all hyperplastic rectosigmoid polyps is not required.)
+  * Sub-total colectomy or total proctocolectomy. (Segmental resections are allowed.)
+  * Family history of CRC diagnosed at less than or equal to 60 years of age in a first degree relative (mother, father, child, sibling) or in two first degree relatives with CRC at any age.
+  * Participants with a clinical diagnosis of a significant heritable risk for colorectal cancer (Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \[Lynch Syndrome\]).
+  * Participants tested positive for a Familial Adenomatous Polyposis, Hereditary Nonpolyposis Colorectal Cancer \[Lynch Syndrome\] genetic mutation that increases risk of colorectal cancer.
+  * Inflammatory bowel disease (e.g., Crohn's Disease, ulcerative colitis).
+  * Life expectancy less than 10 years due to comorbid conditions in the opinion of the investigator.
+  * Other comorbid conditions that would prevent the participant from having colonoscopies or would prevent required follow-up.
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05080673",
+                    "trial_title": "Five or Ten Year Colonoscopy for 1-2 Non-Advanced Adenomatous Polyps",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T13:04:39.197803"
+            }
+        }
+        

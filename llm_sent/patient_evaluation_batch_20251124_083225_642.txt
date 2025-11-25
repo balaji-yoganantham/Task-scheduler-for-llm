@@ -1,0 +1,425 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: patient_evaluation_batch
+trial_id: NCT05086692
+trial_title: A Phase 1/2 Open Label, Dose Escalation and Expans...
+batch_size: 1
+patient_ids: [162]
+mrns: ['74332303']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 patients for the given clinical trial and determine eligibility.
+
+        
+        CLINICAL TRIAL INFORMATION:
+        Trial ID: NCT05086692
+        Title: A Phase 1/2 Open Label, Dose Escalation and Expansion Study of MDNA11, IL-2 Superkine, Administered Alone or in Combination With Immune Checkpoint Inhibitor in Patients With Advanced Solid Tumors
+        Condition: ["Advanced Solid Tumor", "Unresectable Solid Tumor", "Clear Cell Renal Cell Carcinoma", "Triple Negative Breast Cancer", "Non-Small Cell Lung Cancer Squamous", "Non-Small Cell Lung Cancer Non-squamous", "Colorectal Cancer (MSI-H)", "Gastric Cancer", "Cervical Cancer", "Basal Cell Carcinoma", "Bladder Cancer", "Merkel Cell Carcinoma", "Squamous Cell Carcinoma of Head and Neck", "Cutaneous Squamous Cell Carcinoma", "Pleural Mesothelioma", "Esophageal Cancer", "Endometrial Carcinoma", "Solid Tumor", "Solid Tumor, Adult", "MSI-H Solid Malignant Tumor", "Cancer With A High Tumor Mutational Burden", "Epithelial Ovarian Carcinoma", "Primary Peritoneal Cancer", "Gastroesophageal Junction (GEJ) Cancer", "Acral Melanoma", "Mucosal Melanoma", "Cutaneous Melanoma", "DMMR Solid Malignant Tumor", "Fallopian Tube Cancer", "Ovarian Cancer", "MSI-H Cancer", "DMMR Cancer", "Pancreas Adenocarcinoma (MSI-H)", "Skin Cancer", "Viral Cancer", "Cervical Cancers", "Endometrial Cancer"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        
+        Brief Summary: This is a Phase 1/2, multi-center, open-label, dose-escalation and expansion study to evaluate safety and tolerability, PK, pharmacodynamic, and early signal of anti-tumor activity of MDNA11 alone or in combination with a checkpoint inhibitor in patients with advanced solid tumors.
+        
+        Detailed Description: The study drug, MDNA11, long-acting "beta-only" recombinant interleukin-2 (rIL-2). MDNA11 specifically engineered to overcome the shortcomings of rhIL-2 (aldesleukin) by preferentially activating immune effector cells (CD8+ T- and NK cells) responsible for killing cancer cells, with minimal or no stimulation of immunosuppressive Tregs. It is designed to potentially enhance host immune response and fusion to albumin increases the half-life further avoiding frequent dosing required with rhIL-2.
+
+The study will be conducted at up to 30 clinical sites following regulatory authority and institutional review board / independent ethics committee (IRB/ IEC) approval and completion of informed consent. The study will be conducted in multiple parts:
+
+* Monotherapy (MDNA11 alone) dose escalation
+* Monotherapy (MDNA11 alone) dose expansion in select tumor types
+* Combination (MDNA11 + pembrolizumab) dose escalation
+* Combination (MDNA11 + pembrolizumab) dose expansion in select tumor types
+
+Approximately 115 patients will be enrolled.
+
+After commencing treatment (first exposure of MDNA11 alone or MDNA11 + pembrolizumab), tumor assessment by CT/MRI will be performed every 8 weeks ± 1 week until immune confirmed progressive disease ("iCPD") by iRECIST, discontinuation of study drug(s), withdrawal of consent or loss to follow-up. Treatment beyond progression may be permitted if criteria are met. Patients can withdraw from participation at any time.
+        
+        Inclusion Criteria: ["1. Aged at least 18 years (inclusive at the time of informed consent).", "2. Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.", "3. Must be able and willing to provide written informed consent prior to start of any study procedures and assessments and must be willing to comply with all study procedures.", "4. Histologically or cytologically confirmed locally advanced or metastatic solid tumor (see tumor types listed under conditions)", "5. Demonstrated adequate organ function", "6. Measurable disease as per Response Evaluation Criteria in Solid Tumors, (RECIST v1.1) and documented by CT and/or MRI.", "7. Life expectancy of \u2265 12 weeks.", "8. Women of childbearing potential (WOCBP) must have a negative pregnancy test at screening and within 72 hours before the first dose of study drug(s). Women must not be breastfeeding.", "9. Agree to use highly effective contraception methods. WOCBP must agree to use highly effective birth control.", "Key"]
+        
+        Exclusion Criteria: ["1. Last administration of prior antitumor therapy:", "* Prior systemic anti-cancer therapy including investigational agents within 4 weeks (could consider shorter interval for kinase inhibitors or other short half-life drugs) prior to start of treatment.", "* Prior radiotherapy within 2 weeks prior to start of treatment or has had a history of radiation pneumonitis. A 1-week washout is required for palliative radiation (\\<2 weeks of radiotherapy) to non-CNS disease.", "* Radiation therapy to the lung that is \\> 30Gy within 6 months prior to start of treatment.", "* Currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to start of treatment. Concomitant participation in an observational study must be discussed on a case-by-case basis with the MM for approval.", "2. Has known active CNS metastases and/or carcinomatous meningitis. Patients with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging (note that the repeat imaging should be performed during study screening), clinically stable and without requirement of steroid treatment for at least 14 days prior to start of treatment, subject to discussion with MM.", "3. Active malignancy (other than the disease under treatment in the study) within the previous 3 years except for curable cancers.", "4. Condition requiring long-term systemic treatment with either corticosteroids \\> 10 mg daily prednisone equivalent or any other form of immunosuppressive therapy within 7 days prior to start of treatment.", "5. Clinically significant active, known or suspected autoimmune disease, or diseases that can be exacerbated with immunotherapy.", "6. Severe pulmonary, cardiac or other systemic disease.", "7. Known hepatitis B or C virus infection.", "8. Females who are pregnant or lactating or planning to become pregnant during the study.", "9. Has had an allogeneic tissue/solid organ transplant.", "10. Active infection requiring systemic therapy.", "11. Any medical, emotional or psychiatric condition that interfere with the patient's ability to adhere to the protocol", "12. Any other underlying medical conditions that, in the Investigator's opinion, will make the administration of study drug(s) unsafe or obscure the interpretation of toxicity determination or adverse events.", "13. Known severe hypersensitivity to any component of study drug(s).", "14. Inability to comply with study and follow up procedures as judged by the Investigator."]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+1. Aged at least 18 years (inclusive at the time of informed consent).
+2. Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 to 1.
+3. Must be able and willing to provide written informed consent prior to start of any study procedures and assessments and must be willing to comply with all study procedures.
+4. Histologically or cytologically confirmed locally advanced or metastatic solid tumor (see tumor types listed under conditions)
+5. Demonstrated adequate organ function
+6. Measurable disease as per Response Evaluation Criteria in Solid Tumors, (RECIST v1.1) and documented by CT and/or MRI.
+7. Life expectancy of ≥ 12 weeks.
+8. Women of childbearing potential (WOCBP) must have a negative pregnancy test at screening and within 72 hours before the first dose of study drug(s). Women must not be breastfeeding.
+9. Agree to use highly effective contraception methods. WOCBP must agree to use highly effective birth control.
+
+Key Exclusion Criteria:
+
+1. Last administration of prior antitumor therapy:
+
+   * Prior systemic anti-cancer therapy including investigational agents within 4 weeks (could consider shorter interval for kinase inhibitors or other short half-life drugs) prior to start of treatment.
+   * Prior radiotherapy within 2 weeks prior to start of treatment or has had a history of radiation pneumonitis. A 1-week washout is required for palliative radiation (\<2 weeks of radiotherapy) to non-CNS disease.
+   * Radiation therapy to the lung that is \> 30Gy within 6 months prior to start of treatment.
+   * Currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to start of treatment. Concomitant participation in an observational study must be discussed on a case-by-case basis with the MM for approval.
+2. Has known active CNS metastases and/or carcinomatous meningitis. Patients with previously treated brain metastases may participate provided they are radiologically stable, i.e., without evidence of progression for at least 4 weeks by repeat imaging (note that the repeat imaging should be performed during study screening), clinically stable and without requirement of steroid treatment for at least 14 days prior to start of treatment, subject to discussion with MM.
+3. Active malignancy (other than the disease under treatment in the study) within the previous 3 years except for curable cancers.
+4. Condition requiring long-term systemic treatment with either corticosteroids \> 10 mg daily prednisone equivalent or any other form of immunosuppressive therapy within 7 days prior to start of treatment.
+5. Clinically significant active, known or suspected autoimmune disease, or diseases that can be exacerbated with immunotherapy.
+6. Severe pulmonary, cardiac or other systemic disease.
+7. Known hepatitis B or C virus infection.
+8. Females who are pregnant or lactating or planning to become pregnant during the study.
+9. Has had an allogeneic tissue/solid organ transplant.
+10. Active infection requiring systemic therapy.
+11. Any medical, emotional or psychiatric condition that interfere with the patient's ability to adhere to the protocol
+12. Any other underlying medical conditions that, in the Investigator's opinion, will make the administration of study drug(s) unsafe or obscure the interpretation of toxicity determination or adverse events.
+13. Known severe hypersensitivity to any component of study drug(s).
+14. Inability to comply with study and follow up procedures as judged by the Investigator.
+        
+
+        PATIENTS TO EVALUATE:
+        
+        ============================================================
+        PATIENT 1:
+        ============================================================
+        Patient ID: 162
+        MRN: 74332303
+        Age: 37
+        Gender: Female
+        Oncologist: Dr. David Thompson, MD
+        Hybrid Score: 4.542
+        
+        Combined Medical Record: Patient Name: Nina Ramirez
+Patient MRN: 74332303
+Age: 37, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. David Thompson, MD
+
+Chief Complaint: - Constipation, Bloating, Nausea
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 21, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 21, 2025; T2N2aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 04, 2025 - liver, lymph nodes, brain
+metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Constipation, Bloating, Nausea, Rectal bleeding, Vomiting
+- Performance status: ECOG 0
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- None
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Maternal grandmother with ovarian cancer
+- Known familial syndromes: No known familial syndromes
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Social drinking, 2-3 drinks per week
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Sales manager
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: NKDA (No Known Drug Allergies)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: NKDA (No Known Drug Allergies)
+
+Physical Examination: - Vitals: BP 110/87, HR 71, RR 19, Temp 99.0°F, SpO2 96% on room air, Weight 128 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 4.3 × 10³/µL, ANC: 6.9 × 10³/µL
+- Hgb: 14.3 g/dL, Platelets: 301 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 34 mL/min/1.73m²
+- LFTs:
+- AST: 86 U/L, ALT: 96 U/L
+- Alkaline phosphatase: 281 U/L, Total bilirubin: 1.4 mg/dL
+- CEA: 178.2 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 04, 2025):
+Primary sigmoid colon mass (6.2 cm), annular narrowing
+6 hepatic metastases (largest 5.1 cm), enlarged lymph nodes (largest 1.6 cm), 3 brain metastases
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 4.3 × 10³/µL, ANC: 6.9 × 10³/µL
+- Hgb: 14.3 g/dL, Platelets: 301 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 34 mL/min/1.73m²
+- LFTs:
+- AST: 86 U/L, ALT: 96 U/L
+- Alkaline phosphatase: 281 U/L, Total bilirubin: 1.4 mg/dL
+- CEA: 178.2 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 04, 2025):
+Primary sigmoid colon mass (6.2 cm), annular narrowing
+6 hepatic metastases (largest 5.1 cm), enlarged lymph nodes (largest 1.6 cm), 3 brain metastases
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 04, 2025):
+Primary sigmoid colon mass (6.2 cm), annular narrowing
+6 hepatic metastases (largest 5.1 cm), enlarged lymph nodes (largest 1.6 cm), 3 brain metastases
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 110/87, HR 71, RR 19, Temp 99.0°F, SpO2 96% on room air, Weight 128 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (liver, lymph nodes, brain)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1: FATAL EXCLUSION VIOLATION (PRIORITY 1)**
+    If the patient violates ANY single Exclusion Criterion (Protocol or General Safety), the patient is **NOT_ELIGIBLE**.
+    STOP ALL OTHER EVALUATION and document the specific violated criterion/data point in the 'reasoning' field.
+    
+    RULE 2: CRITICAL INCLUSION FAILURE (PRIORITY 2)**
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Consider each patient's medical history, current condition, and trial requirements
+        5. Be thorough but concise in your analysis
+
+        Return ONLY a valid JSON object with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "patient_id": 162,
+                    "mrn": "74332303",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": [ "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this patient"
+                },
+                {
+                    "patient_id": N/A,
+                    "mrn": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this patient"
+                }
+                // ... continue for all 1 patients
+            ],
+            "batch_summary": {
+                "total_patients_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Patient 1 - Best match due to...",
+                    "Patient 2 - Good alternative because...",
+                    "Patient 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-24T08:32:25.642596"
+            }
+        }
+        

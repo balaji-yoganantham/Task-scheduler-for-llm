@@ -1,0 +1,433 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT05489211']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05489211
+        Title: A Phase II, Multicentre, Open-label, Master Protocol to Evaluate the Efficacy and Safety of Datopotamab Deruxtecan (Dato-DXd) as Monotherapy and in Combination With Anticancer Agents in Patients With Advanced/Metastatic Solid Tumours
+        Condition: ["Endometrial Cancer", "Gastric Cancer", "Metastatic Castration-resistant Prostate Cancer", "Ovarian Cancer", "Colorectal Cancer", "Urothelial Cancer", "Biliary Tract Cancer"]
+        Phase: PHASE2
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 130 Years
+        Gender: ALL
+        Hybrid Score: 5.073
+        
+        Brief Summary: TROPION-PanTumor03 will investigate the safety, tolerability, and anti-tumour activity of Datopotamab Deruxtecan (Dato-DXd) as Monotherapy and in Combination with Anticancer Agents in Patients with Advanced/Metastatic Solid Tumours.
+        
+        Detailed Description: This Phase II, open-label, uncontrolled, multicentre study evaluating the efficacy and safety of Dato-DXd as monotherapy (MONO) and in combination with anticancer agents (COMBO) in various advanced solid tumour types.
+
+This study has a modular design, as such a master protocol with independent substudies enables simultaneous evaluation of the safety profile, recommended Phase II dose (RP2D), and efficacy of Dato-DXd in multiple disease populations and treatment combinations. This study will evaluate various solid tumour types, including endometrial cancer (Substudy 1), gastric cancer (Substudy 2), metastatic castration-resistant prostate cancer (mCRPC) (Substudy 3), ovarian cancer (Substudy 4), colorectal cancer (CRC) (Substudy 5), urothelial cancer (Substudy 6), and biliary tract cancer (Substudy 7) in the advanced or metastatic setting. Within each substudy, Dato-DXd will be evaluated as monotherapy (for all substudies except Substudy 2) and in combination with approved or novel anticancer agents that may be active in the tumour type being evaluated (for all substudies except Substudy 1 and Substudy 7).
+        
+        Inclusion Criteria: ["* Male and female, \u2265 18 years", "* Documented advanced or metastatic malignancy", "* Eastern Cooperative Oncology Group performance status of 0 or 1 with no deterioration over the 2 weeks prior to baseline or day of first dosing", "* All participants must provide a tumour sample for tissue-based analysis", "* At least 1 measurable lesion not previously irradiated, except Substudy 3 (Prostate Cancer) which allows participants with non measurable bone metastatic disease", "* Adequate bone marrow reserve and organ function", "* Minimum life expectancy of 12 weeks", "* At the time of screening, contraceptive use by men or women should be consistent with local regulations regarding the methods of contraception for those participating in clinical studies", "* All women of childbearing potential must have a negative serum pregnancy test documented during screening", "* Female participants must be 1 year post-menopausal, surgically sterile, or using 1 highly effective form of birth control. Female participants must not donate, or retrieve for their own use, ova at any time during this study", "* Male participants who intend to be sexually active with a female partner of childbearing potential must be surgically sterile, avoid intercourse, or use a highly effective method of contraception. Male participants must not freeze or donate sperm at any time during this study.", "* Capable of giving signed informed consent", "* Provision of signed and dated written optional genetic research informed consent prior to collection of samples for optional genetic research that supports the Genomic Initiative", "Key"]
+        
+        Exclusion Criteria: ["* Any evidence of diseases which, in the investigator's opinion, makes it undesirable for the participant to participate in the study or that would jeopardize compliance with the protocol", "* History of another primary malignancy except for adequately resected basal cell carcinoma or in situ squamous cell carcinoma of the skin, or other solid malignancy treated with curative intent", "* Persistent toxicities caused by previous anticancer therapy, excluding alopecia, not yet improved", "* Irreversible toxicity that is not reasonably expected to be exacerbated by study intervention in the opinion of the investigator, for example hearing loss", "* Spinal cord compression or brain metastases unless treated", "* Leptomeningeal carcinomatosis", "* Clinically significant corneal disease", "* Active hepatitis or uncontrolled hepatitis B or C virus infection", "* Uncontrolled infection requiring IV antibiotics, antivirals or antifungals, for example prodromal symptoms", "* Known HIV infection that is not well controlled", "* Known active tuberculosis infection", "* Mean resting corrected QTcF \\> 470 ms", "* In the judgement of the investigator, history of QT prolongation associated with other medications that required discontinuation of that medication, or any current concomitant medication known to prolong the QT interval and cause TdP", "* In the judgement of the investigator, congenital long QT syndrome, family history of long QT syndrome, or unexplained sudden death under 40 years of age in first-degree relatives", "* Uncontrolled or significant cardiac diseases", "* History of non-infectious Interstitial lung disease (ILD)/pneumonitis that required steroids", "* Has severe pulmonary function compromise", "* Prior exposure to chloroquine/hydroxychloroquine without an adequate treatment washout period", "* Receipt of live, attenuated vaccine within 30 days prior to the first dose of study intervention", "* Prior exposure to anticancer therapies without an adequate treatment washout period prior to enrolment or any concurrent anticancer treatment", "* Palliative radiotherapy with a limited field of radiation within \u2264 2 weeks or to more than 30% of the bone marrow within \u2264 4 weeks before the first dose of study intervention", "* Major surgical procedure or significant traumatic injury within \u2264 3 weeks of the first dose of study intervention or an anticipated need for major surgery during the study", "* Prior treatment with TROP2-directed therapies or other antibody-drug conjugate (ADCs) with deruxtecan payload", "* Herbal or natural products intended as treatment or prophylaxis for any type of cancer that may interfere with the activity of the study intervention", "* Previous treatment in the present study", "* Participation in another clinical study with a study intervention or investigational medicinal device administered in the last 4 weeks prior to first dose of study intervention or concurrent enrolment in another clinical study", "* Severe hypersensitivity to Dato-DXd or any of the excipients, including but not limited to polysorbate 80 or other monoclonal antibodies", "* Involvement in the planning and/or conduct of the study", "* Judgment by the investigator that the participant should not participate in the study if the participant is unlikely to comply with study procedures, restrictions, and requirements", "* Females that are pregnant, breastfeeding, or planning to become pregnant", "* Female participants should refrain from breastfeeding from enrolment throughout the study and for at least 7 months after last dose of Dato-DXd"]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+* Male and female, ≥ 18 years
+* Documented advanced or metastatic malignancy
+* Eastern Cooperative Oncology Group performance status of 0 or 1 with no deterioration over the 2 weeks prior to baseline or day of first dosing
+* All participants must provide a tumour sample for tissue-based analysis
+* At least 1 measurable lesion not previously irradiated, except Substudy 3 (Prostate Cancer) which allows participants with non measurable bone metastatic disease
+* Adequate bone marrow reserve and organ function
+* Minimum life expectancy of 12 weeks
+* At the time of screening, contraceptive use by men or women should be consistent with local regulations regarding the methods of contraception for those participating in clinical studies
+* All women of childbearing potential must have a negative serum pregnancy test documented during screening
+* Female participants must be 1 year post-menopausal, surgically sterile, or using 1 highly effective form of birth control. Female participants must not donate, or retrieve for their own use, ova at any time during this study
+* Male participants who intend to be sexually active with a female partner of childbearing potential must be surgically sterile, avoid intercourse, or use a highly effective method of contraception. Male participants must not freeze or donate sperm at any time during this study.
+* Capable of giving signed informed consent
+* Provision of signed and dated written optional genetic research informed consent prior to collection of samples for optional genetic research that supports the Genomic Initiative
+
+Key Exclusion Criteria:
+
+* Any evidence of diseases which, in the investigator's opinion, makes it undesirable for the participant to participate in the study or that would jeopardize compliance with the protocol
+* History of another primary malignancy except for adequately resected basal cell carcinoma or in situ squamous cell carcinoma of the skin, or other solid malignancy treated with curative intent
+* Persistent toxicities caused by previous anticancer therapy, excluding alopecia, not yet improved
+* Irreversible toxicity that is not reasonably expected to be exacerbated by study intervention in the opinion of the investigator, for example hearing loss
+* Spinal cord compression or brain metastases unless treated
+* Leptomeningeal carcinomatosis
+* Clinically significant corneal disease
+* Active hepatitis or uncontrolled hepatitis B or C virus infection
+* Uncontrolled infection requiring IV antibiotics, antivirals or antifungals, for example prodromal symptoms
+* Known HIV infection that is not well controlled
+* Known active tuberculosis infection
+* Mean resting corrected QTcF \> 470 ms
+* In the judgement of the investigator, history of QT prolongation associated with other medications that required discontinuation of that medication, or any current concomitant medication known to prolong the QT interval and cause TdP
+* In the judgement of the investigator, congenital long QT syndrome, family history of long QT syndrome, or unexplained sudden death under 40 years of age in first-degree relatives
+* Uncontrolled or significant cardiac diseases
+* History of non-infectious Interstitial lung disease (ILD)/pneumonitis that required steroids
+* Has severe pulmonary function compromise
+* Prior exposure to chloroquine/hydroxychloroquine without an adequate treatment washout period
+* Receipt of live, attenuated vaccine within 30 days prior to the first dose of study intervention
+* Prior exposure to anticancer therapies without an adequate treatment washout period prior to enrolment or any concurrent anticancer treatment
+* Palliative radiotherapy with a limited field of radiation within ≤ 2 weeks or to more than 30% of the bone marrow within ≤ 4 weeks before the first dose of study intervention
+* Major surgical procedure or significant traumatic injury within ≤ 3 weeks of the first dose of study intervention or an anticipated need for major surgery during the study
+* Prior treatment with TROP2-directed therapies or other antibody-drug conjugate (ADCs) with deruxtecan payload
+* Herbal or natural products intended as treatment or prophylaxis for any type of cancer that may interfere with the activity of the study intervention
+* Previous treatment in the present study
+* Participation in another clinical study with a study intervention or investigational medicinal device administered in the last 4 weeks prior to first dose of study intervention or concurrent enrolment in another clinical study
+* Severe hypersensitivity to Dato-DXd or any of the excipients, including but not limited to polysorbate 80 or other monoclonal antibodies
+* Involvement in the planning and/or conduct of the study
+* Judgment by the investigator that the participant should not participate in the study if the participant is unlikely to comply with study procedures, restrictions, and requirements
+* Females that are pregnant, breastfeeding, or planning to become pregnant
+* Female participants should refrain from breastfeeding from enrolment throughout the study and for at least 7 months after last dose of Dato-DXd
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05489211",
+                    "trial_title": "A Phase II, Multicentre, Open-label, Master Protocol to Evaluate the Efficacy and Safety of Datopotamab Deruxtecan (Dato-DXd) as Monotherapy and in Combination With Anticancer Agents in Patients With Advanced/Metastatic Solid Tumours",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T12:09:51.804783"
+            }
+        }
+        

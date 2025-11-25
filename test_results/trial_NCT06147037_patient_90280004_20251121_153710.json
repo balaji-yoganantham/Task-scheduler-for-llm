@@ -1,0 +1,53 @@
+{
+  "trial_id": "NCT06147037",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 178,
+  "patient_mrn": "90280004",
+  "patient_info": {
+    "age": 35,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for an oncology trial. However, the patient is currently a smoker, which may violate exclusion criteria related to smoking status in clinical trials. Additionally, the patient has a KRAS mutation (KRAS G13D), which may also be a disqualifying factor depending on the trial's specific biomarker requirements. The patient is treatment-naïve, which is typically favorable for eligibility, and has an ECOG performance status of 1, which meets common trial thresholds. However, the presence of the KRAS mutation and smoking status raises concerns about eligibility. Therefore, the patient is deemed NOT_ELIGIBLE due to potential exclusion criteria violations.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"DISEASE STAGE COMPATIBILITY\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"Current smoker status\",\n        \"KRAS mutation status\"\n    ],\n    \"inclusion_criteria_met_count\": 5,\n    \"exclusion_criteria_violated_count\": 2,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Consider discussing the patient's smoking status and KRAS mutation with the trial investigator to determine if there are any potential waivers or alternative trials that may be more suitable.\",\n    \"evaluation_timestamp\": \"2025-11-21T15:37:02.504699\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for an oncology trial. However, the patient is currently a smoker, which may violate exclusion criteria related to smoking status in clinical trials. Additionally, the patient has a KRAS mutation (KRAS G13D), which may also be a disqualifying factor depending on the trial's specific biomarker requirements. The patient is treatment-naïve, which is typically favorable for eligibility, and has an ECOG performance status of 1, which meets common trial thresholds. However, the presence of the KRAS mutation and smoking status raises concerns about eligibility. Therefore, the patient is deemed NOT_ELIGIBLE due to potential exclusion criteria violations.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "DISEASE STAGE COMPATIBILITY",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "Current smoker status",
+      "KRAS mutation status"
+    ],
+    "inclusion_criteria_met_count": 5,
+    "exclusion_criteria_violated_count": 2,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Consider discussing the patient's smoking status and KRAS mutation with the trial investigator to determine if there are any potential waivers or alternative trials that may be more suitable.",
+    "evaluation_timestamp": "2025-11-21T15:37:02.504699",
+    "patient_info": {
+      "patient_id": 178,
+      "mrn": "90280004",
+      "age": 35,
+      "gender": "Male",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT06147037",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T15:37:10.452794"
+}

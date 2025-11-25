@@ -1,0 +1,278 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 114
+mrn: 33439724
+batch_size: 1
+trial_ids: ['NCT04429542']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 114
+        MRN: 33439724
+        Age: 41
+        Gender: Male
+        Oncologist: Dr. Lisa Park, MD
+        Combined Medical Record: Patient Name: Marcos Rivera
+Patient MRN: 33439724
+Age: 41, Gender: Male
+Date of Visit: 2025-06-04
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Constipation, Bloating
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 22, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 22, 2025; T4bN1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Constipation, Bloating
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Type 1 diabetes
+- Chronic back pain
+- Depression
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04429542
+        Title: First-in-Human, Phase 1/1b, Open-label, Multicenter Study of Bifunctional EGFR/TGFβ Fusion Protein BCA101 Monotherapy and in Combination Therapy in Patients With EGFR-Driven Advanced Solid Tumors
+        Condition: ["Head and Neck Squamous Cell Carcinoma", "Squamous Cell Carcinoma of Anal Canal", "Colorectal Cancer", "Squamous Cell Carcinoma of the Lung", "EGFR Amplification", "Epithelial Ovarian Cancer", "Pancreas Cancer", "Cutaneous Squamous Cell Carcinoma", "Head and Neck Neoplasms", "Carcinoma, Squamous Cell", "Squamous Cell Carcinoma of Head and Neck"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.030
+        
+        Brief Summary: The investigational drug to be studied in this protocol, BCA101, is a first-in-class compound that targets both EGFR with TGFβ. Based on preclinical data, this bifunctional antibody may exert synergistic activity in patients with EGFR-driven tumors.
+        
+        Detailed Description: This is a Phase 1/1b, open-label study, which consists of dose escalation parts (Part A) followed by expansion cohorts (Part B) for both single agent BCA101 and combination BCA101 plus pembrolizumab.
+
+The study population in dose escalation (Part A) of single agent BCA101 consists of subjects with EGFR-driven advanced solid tumors refractory to standard of care or for whom no standard of care is available. Dose escalation (Part A) of combination BCA101 and pembrolizumab consists of subjects with either Squamous Cell Carcinoma of the Head and Neck (HNSCC) or Squamous Cell Carcinoma of the Anal Canal (SCCAC) whose tumors are refractory to standard of care or for whom no standard of care is available.
+
+Once the maximum tolerated dose (MTD) / recommended dose (RD) of single agent BCA101 is determined, the study will continue with expansion cohorts (Part B) with select tumor types. Expansion cohorts for single agent BCA101 will include cutaneous squamous cell carcinoma. Planned expansion cohorts for the combination of BCA101 and pembrolizumab include: 1) HNSCC and 2) SCCAC.
+        
+        Inclusion Criteria: ["* Patient must have measurable disease amendable to biopsy and be willing to undergo both a pre-treatment and on-treatment biopsy, as well as provide archival tumor if available from the primary tumor (a paraffin embedded tumor tissue block sufficient to obtain at least 10 sections of 4 to 5 micrometer thickness).", "* Patient must have a performance status of \u22641 on the Eastern Cooperative Oncology Group Performance Scale.", "* Patients must have evaluable or measurable disease (computed tomography \\[CT\\]/magnetic resonance imaging \\[MRI\\] scans performed within 21 days before the screening visit are acceptable) demonstrating measurable disease, i.e., at least 1 unidimensional measurable lesion as defined by Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST 1.1) and Immune Response Evaluation Criteria in Solid Tumors (iRECIST).", "* Tumor eligibility:", "PART B (Cohort expansion):", "1. Single agent BCA101 - patients with the following tumor type will be eligible:", "\u2022 Expansion Cohort 1: Cutaneous Squamous Cell Carcinoma (CSCC) - i. patients must have received (or been intolerant to or ineligible for) prior anti-PD-1 therapy in the metastatic or locally advanced setting.", "ii. No prior history of treatment with anti-EGFR antibodies in the unresectable/metastatic setting (prior treatment with radiotherapy in the adjuvant setting is allowed).", "2. Combination BCA101 and pembrolizumab - patients with the following tumor types will be eligible:", "\u2022 Expansion Cohort 2: Head and Neck Squamous Cell Carcinoma (HNSCC), metastatic or unresectable, recurrent with a Combined Positive Score (CPS) equal to or greater than 1, as determined by an CLIA-approved laboratory test. Primary tumor locations of oropharynx, oral cavity, hypopharynx, or larynx. Participants may not have a primary tumor site of nasopharynx (any histology).", "i. Patients must have no prior systemic therapy administered in the recurrent or metastatic setting (with the exception of systemic therapy completed \\>6 months prior if given as part of multimodal treatment for locally advanced disease) or prior history of immune checkpoint inhibitors with the exception of neoadjuvant therapy (\\>6 months prior to study drug initiation). No prior history of anti-EGFR antibodies (with the exception of radiosensitizing agents and multimodal treatment for locally advanced disease).", "ii. Patients must provide tissue for PD-L1 biomarker analysis from a core or excisional biopsy (fine needle aspirate is not sufficient): A newly obtained biopsy (within 90 days prior to start of study treatment) is preferred but an archival sample is acceptable.", "iii. Patients must have results from testing of human papillomavirus (HPV) status for oropharyngeal cancer", "* Expansion Cohort 3: Squamous Carcinoma of the Anal Canal (SCAC), locally advanced/unresectable or metastatic.", "i. Patients must have received (or been intolerant to or ineligible for) at least 1 prior line of chemotherapy and received no more than 2 prior lines of systemic treatments for treatment of unresectable and/or metastatic disease. No prior history of immune checkpoint inhibitors.", "* Expansion Cohort 5: Squamous Non-Small Cell Lung Cancer (SqNSCLC) i. Patients must have a histologically or cytologically confirmed diagnosis of stage IV (AJCC 8th edition) squamous NSCLC. Patients with mixed histology (e.g., adenosquamous) are not allowed.", "ii. Patients must have progressed on one prior systemic therapy in the metastatic setting.", "iii. No prior history of treatment with anti-EGFR antibodies in the metastatic setting.", "\u2022 Expansion Cohort 6: Head and Neck Squamous Cell Carcinoma (HNSCC), metastatic or unresectable, recurrent with a Combined Positive Score (CPS) less than 1, as determined by PD-L1 IHC 22C3 pharmDx.", "3. Randomized to either ficerafusp alfa alone or in combination with pembrolizumab \u2022 Expansion Cohort 9: Colorectal cancer (CRC) i. Patients must have received at least 2 and no more than 3 prior lines of systemic therapy including two standard treatment regimens."]
+        
+        Exclusion Criteria: ["* For Part A: Exposure to anti-EGFR antibodies within 4 weeks of the first dose of study drug.", "* Prior treatment with any anti-TGF\u03b2 therapy.", "* Prior history of Grade \u2265 2 intolerance or hypersensitivity reaction to cetuximab or other anti-EGFR therapy or other murine proteins or prior discontinuation of therapy in the setting of toxicity related to treatment.", "* Pregnant or breastfeeding women.", "* Any condition requiring systemic treatment with either corticosteroids (\\>10 mg daily of prednisone or equivalent) or other immunosuppressive medication within 14 days prior to the first dose of study drug, with the exception of topical, intranasal, intrabronchial, or ocular steroids.", "* Known history of a hematologic malignancy (or solid tumor other than the ones indicated for this study), unless the patient has undergone potentially curative therapy with no evidence of that disease for 2 years. Does not include tumors with a negligible risk of metastasis or death (e.g. adequately treated basal or squamous cell carcinoma, stage 1 prostate cancer, or carcinoma in situ of the cervix or carcinoma in situ of the breast). Subjects enrolling in the CSCC cohort may have chronic lymphocytic leukemia as long as the patient is not on active treatment.", "* Known cases of human immunodeficiency virus (HIV) are excluded if patients have a CD4+ T-cell (CD4+) count \\<250 cells/uL. To ensure that effective antiretroviral therapy (ART) is tolerated and that toxicities are not confused with investigational drug toxicities, trial participants should be on established ART for at least four weeks and have an HIV viral load less than 400 copies/mL prior to enrollment.", "* Patients with chronic HBV infection with active disease who meet the criteria for anti-HBV therapy and are not on a suppressive antiviral therapy prior to initiation of study treatment", "* Patients with a known history of hepatitis C who have not completed curative antiviral treatment or have a HCV viral load above the limit of quantification"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Patient must have measurable disease amendable to biopsy and be willing to undergo both a pre-treatment and on-treatment biopsy, as well as provide archival tumor if available from the primary tumor (a paraffin embedded tumor tissue block sufficient to obtain at least 10 sections of 4 to 5 micrometer thickness).
+* Patient must have a performance status of ≤1 on the Eastern Cooperative Oncology Group Performance Scale.
+* Patients must have evaluable or measurable disease (computed tomography \[CT\]/magnetic resonance imaging \[MRI\] scans performed within 21 days before the screening visit are acceptable) demonstrating measurable disease, i.e., at least 1 unidimensional measurable lesion as defined by Response Evaluation Criteria in Solid Tumors, Version 1.1 (RECIST 1.1) and Immune Response Evaluation Criteria in Solid Tumors (iRECIST).
+* Tumor eligibility:
+
+PART B (Cohort expansion):
+
+1. Single agent BCA101 - patients with the following tumor type will be eligible:
+
+   • Expansion Cohort 1: Cutaneous Squamous Cell Carcinoma (CSCC) - i. patients must have received (or been intolerant to or ineligible for) prior anti-PD-1 therapy in the metastatic or locally advanced setting.
+
+   ii. No prior history of treatment with anti-EGFR antibodies in the unresectable/metastatic setting (prior treatment with radiotherapy in the adjuvant setting is allowed).
+2. Combination BCA101 and pembrolizumab - patients with the following tumor types will be eligible:
+
+   • Expansion Cohort 2: Head and Neck Squamous Cell Carcinoma (HNSCC), metastatic or unresectable, recurrent with a Combined Positive Score (CPS) equal to or greater than 1, as determined by an CLIA-approved laboratory test. Primary tumor locations of oropharynx, oral cavity, hypopharynx, or larynx. Participants may not have a primary tumor site of nasopharynx (any histology).
+
+   i. Patients must have no prior systemic therapy administered in the recurrent or metastatic setting (with the exception of systemic therapy completed \>6 months prior if given as part of multimodal treatment for locally advanced disease) or prior history of immune checkpoint inhibitors with the exception of neoadjuvant therapy (\>6 months prior to study drug initiation). No prior history of anti-EGFR antibodies (with the exception of radiosensitizing agents and multimodal treatment for locally advanced disease).
+
+   ii. Patients must provide tissue for PD-L1 biomarker analysis from a core or excisional biopsy (fine needle aspirate is not sufficient): A newly obtained biopsy (within 90 days prior to start of study treatment) is preferred but an archival sample is acceptable.
+
+   iii. Patients must have results from testing of human papillomavirus (HPV) status for oropharyngeal cancer
+   * Expansion Cohort 3: Squamous Carcinoma of the Anal Canal (SCAC), locally advanced/unresectable or metastatic.
+
+     i. Patients must have received (or been intolerant to or ineligible for) at least 1 prior line of chemotherapy and received no more than 2 prior lines of systemic treatments for treatment of unresectable and/or metastatic disease. No prior history of immune checkpoint inhibitors.
+   * Expansion Cohort 5: Squamous Non-Small Cell Lung Cancer (SqNSCLC) i. Patients must have a histologically or cytologically confirmed diagnosis of stage IV (AJCC 8th edition) squamous NSCLC. Patients with mixed histology (e.g., adenosquamous) are not allowed.
+
+   ii. Patients must have progressed on one prior systemic therapy in the metastatic setting.
+
+   iii. No prior history of treatment with anti-EGFR antibodies in the metastatic setting.
+
+   • Expansion Cohort 6: Head and Neck Squamous Cell Carcinoma (HNSCC), metastatic or unresectable, recurrent with a Combined Positive Score (CPS) less than 1, as determined by PD-L1 IHC 22C3 pharmDx.
+3. Randomized to either ficerafusp alfa alone or in combination with pembrolizumab • Expansion Cohort 9: Colorectal cancer (CRC) i. Patients must have received at least 2 and no more than 3 prior lines of systemic therapy including two standard treatment regimens.
+
+Exclusion Criteria:
+
+* For Part A: Exposure to anti-EGFR antibodies within 4 weeks of the first dose of study drug.
+* Prior treatment with any anti-TGFβ therapy.
+* Prior history of Grade ≥ 2 intolerance or hypersensitivity reaction to cetuximab or other anti-EGFR therapy or other murine proteins or prior discontinuation of therapy in the setting of toxicity related to treatment.
+* Pregnant or breastfeeding women.
+* Any condition requiring systemic treatment with either corticosteroids (\>10 mg daily of prednisone or equivalent) or other immunosuppressive medication within 14 days prior to the first dose of study drug, with the exception of topical, intranasal, intrabronchial, or ocular steroids.
+* Known history of a hematologic malignancy (or solid tumor other than the ones indicated for this study), unless the patient has undergone potentially curative therapy with no evidence of that disease for 2 years. Does not include tumors with a negligible risk of metastasis or death (e.g. adequately treated basal or squamous cell carcinoma, stage 1 prostate cancer, or carcinoma in situ of the cervix or carcinoma in situ of the breast). Subjects enrolling in the CSCC cohort may have chronic lymphocytic leukemia as long as the patient is not on active treatment.
+* Known cases of human immunodeficiency virus (HIV) are excluded if patients have a CD4+ T-cell (CD4+) count \<250 cells/uL. To ensure that effective antiretroviral therapy (ART) is tolerated and that toxicities are not confused with investigational drug toxicities, trial participants should be on established ART for at least four weeks and have an HIV viral load less than 400 copies/mL prior to enrollment.
+* Patients with chronic HBV infection with active disease who meet the criteria for anti-HBV therapy and are not on a suppressive antiviral therapy prior to initiation of study treatment
+* Patients with a known history of hepatitis C who have not completed curative antiviral treatment or have a HCV viral load above the limit of quantification
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04429542",
+                    "trial_title": "First-in-Human, Phase 1/1b, Open-label, Multicenter Study of Bifunctional EGFR/TGFβ Fusion Protein BCA101 Monotherapy and in Combination Therapy in Patients With EGFR-Driven Advanced Solid Tumors",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-21T18:39:53.638798"
+            }
+        }
+        

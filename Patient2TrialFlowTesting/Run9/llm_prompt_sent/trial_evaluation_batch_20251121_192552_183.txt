@@ -1,0 +1,272 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 114
+mrn: 33439724
+batch_size: 1
+trial_ids: ['NCT06051695']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 114
+        MRN: 33439724
+        Age: 41
+        Gender: Male
+        Oncologist: Dr. Lisa Park, MD
+        Combined Medical Record: Patient Name: Marcos Rivera
+Patient MRN: 33439724
+Age: 41, Gender: Male
+Date of Visit: 2025-06-04
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Constipation, Bloating
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 22, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 22, 2025; T4bN1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Constipation, Bloating
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Type 1 diabetes
+- Chronic back pain
+- Depression
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT06051695
+        Title: A Seamless Phase 1/2 Study to Evaluate the Safety and Efficacy of A2B694, an Autologous Logic-gated Tmod™ CAR T, in Heterozygous HLA-A*02 Adults With Recurrent Unresectable, Locally Advanced, or Metastatic Solid Tumors That Express MSLN and Have Lost HLA-A*02 Expression
+        Condition: ["Solid Tumor, Adult", "Colorectal Cancer", "NSCLC", "Non Small Cell Lung Cancer", "NSCLC, Recurrent", "Non-Small Cell Squamous Lung Cancer", "Pancreas Cancer", "Pancreatic Neoplasm", "Colorectal Adenocarcinoma", "CRC", "Colon Cancer", "Rectal Cancer", "Cancer", "Ovarian Cancer", "Ovarian Neoplasms", "Mesothelioma", "Mesothelioma, Malignant", "Ovary Cancer", "Lung Cancer", "MESOM"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.045
+        
+        Brief Summary: The goal of this study is to test A2B694, an autologous logic-gated Tmod™ CAR T-cell product in subjects with solid tumors including colorectal cancer (CRC), pancreatic cancer (PANC), non-small cell lung cancer (NSCLC), ovarian cancer (OVCA), mesothelioma (MESO), and other solid tumors that express MSLN and have lost HLA-A\*02 expression.
+
+The main questions this study aims to answer are:
+
+Phase 1: What is the recommended dose of A2B694 that is safe for patients
+
+Phase 2: Does the recommended dose of A2B694 kill the solid tumor cells and protect the patient's healthy cells
+
+Participants will be required to perform study procedures and assessments, and will also receive the following study treatments:
+
+Enrollment and Apheresis in BASECAMP-1 (NCT04981119)
+
+Preconditioning Lymphodepletion (PCLD) Regimen
+
+A2B694 Tmod CAR T cells at the assigned dose
+        
+        Detailed Description: This is a seamless phase 1/2, multi-center, open-label study that enrolls adults with recurrent unresectable, locally advanced, or metastatic (considered non-curative) CRC, NSCLC, PANC, OVCA, MESO or other solid tumors with MSLN expression. Subjects must be germline HLA-A\*02 heterozygous, with tumors that express MSLN and have lost HLA-A\*02 expression. The purpose of Phase 1 of this study is to determine the safety and the optimal dose of A2B694 (after PCLD) in participants with solid tumor disease. The purpose of Phase 2 of this study is to determine the further safety and efficacy (how well it treats the solid tumor disease) of A2B694.
+
+The treatment available for these cancers and other solid tumors can be toxic, debilitating, and fatal. In the recurrent unresectable, locally advanced, or metastatic setting, the intent of standard of care treatment is typically palliative rather than curative, and has not changed significantly in several decades. A2 Bio hypothesizes that A2B694 Tmod CAR T-cell therapy will enable the killing of tumor target cells (those cells that express MSLN and have LOH for HLA-A\*02 protein). Additionally, normal healthy cells that maintain HLA-A\*02 expression and co-express MSLN (eg, lung tissue) will not be targeted due to the blocker portion of the Tmod CAR T cell that acts as a self-regulated safety switch that protects normal tissue from damage. A2 Bio believes this will provide a therapeutic safety window compared to previous solid tumor targeting therapies. This hypothesis will be explored in the study.
+
+Participants for this study must enroll and have their T cells collected (apheresis) in the pre-screening BASECAMP-1 study (NCT04981119). T cells are collected, processed and stored for each participant. Upon disease progression the participant may screen for this study (EVEREST-2) and the participant's T cells are manufactured and then infused following PCLD regimen. There is no time requirement between the studies, and patients may go directly from BASECAMP-1 to EVEREST-2 based on their own disease course.
+        
+        Inclusion Criteria: ["Key"]
+        
+        Exclusion Criteria: ["1. Has disease that is suitable for local therapy or able to receive standard of care therapy that is therapeutic and not palliative", "2. Prior allogeneic stem cell transplant", "3. Prior solid organ transplant", "4. MESO with pleural involvement extending into the peritoneum", "5. Cancer therapy within 3 weeks or 3 half lives of A2B694 infusion", "6. Radiotherapy within 28 days of A2B694 infusion", "7. Unstable angina, arrhythmia, myocardial infarction, or any other significant cardiac disease within the last 6 months", "8. Any new symptomatic pulmonary embolism (PE) or a deep vein thrombosis (DVT) within 3 months of enrollment. Therapeutic dosing of anticoagulants is allowed for history of PE or DVT if greater than 3 months from time of enrollment, and adequately treated", "9. History of interstitial lung disease including drug-induced interstitial lung disease and radiation pneumonitis that requires treatment with prolonged steroids or other immune suppressive agents within 1 year", "10. Requires supplemental home oxygen", "11. Females of childbearing potential who are pregnant or breastfeeding", "12. Subjects, both male and female, of childbearing potential who are not willing to practice birth control from the time of consent through 6 months post infusion of A2B694"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+Key Inclusion Criteria:
+
+1. Appropriately enrolled in the BASECAMP-1 A2 Biotherapeutics, Inc. study, with tissue demonstrating LOH of HLA-A\*02 by NGS (whenever possible from the primary site), successful apheresis and PBMC processing, and with sufficient stored cells available for Tmod CAR T-cell therapy
+2. Histologically confirmed recurrent unresectable, locally advanced, or metastatic CRC, NSCLC, PANC, OVCA, MESO, or other solid tumors with MSLN expression. Measurable disease is required with lesions of \>1.0 cm by CT.
+3. Received previous required therapy for the appropriate solid tumor disease as described in the protocol
+4. Has adequate organ function as described in the protocol
+5. ECOG performance status of 0 to 1
+6. Life expectancy of ≥3 months
+7. Willing to comply with study schedule of assessments including long term safety follow up
+
+Key Exclusion Criteria:
+
+1. Has disease that is suitable for local therapy or able to receive standard of care therapy that is therapeutic and not palliative
+2. Prior allogeneic stem cell transplant
+3. Prior solid organ transplant
+4. MESO with pleural involvement extending into the peritoneum
+5. Cancer therapy within 3 weeks or 3 half lives of A2B694 infusion
+6. Radiotherapy within 28 days of A2B694 infusion
+7. Unstable angina, arrhythmia, myocardial infarction, or any other significant cardiac disease within the last 6 months
+8. Any new symptomatic pulmonary embolism (PE) or a deep vein thrombosis (DVT) within 3 months of enrollment. Therapeutic dosing of anticoagulants is allowed for history of PE or DVT if greater than 3 months from time of enrollment, and adequately treated
+9. History of interstitial lung disease including drug-induced interstitial lung disease and radiation pneumonitis that requires treatment with prolonged steroids or other immune suppressive agents within 1 year
+10. Requires supplemental home oxygen
+11. Females of childbearing potential who are pregnant or breastfeeding
+12. Subjects, both male and female, of childbearing potential who are not willing to practice birth control from the time of consent through 6 months post infusion of A2B694
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT06051695",
+                    "trial_title": "A Seamless Phase 1/2 Study to Evaluate the Safety and Efficacy of A2B694, an Autologous Logic-gated Tmod™ CAR T, in Heterozygous HLA-A*02 Adults With Recurrent Unresectable, Locally Advanced, or Metastatic Solid Tumors That Express MSLN and Have Lost HLA-A*02 Expression",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-21T19:25:52.183365"
+            }
+        }
+        

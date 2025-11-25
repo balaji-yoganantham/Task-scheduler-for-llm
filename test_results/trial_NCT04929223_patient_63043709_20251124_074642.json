@@ -1,0 +1,52 @@
+{
+  "trial_id": "NCT04929223",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 150,
+  "patient_mrn": "63043709",
+  "patient_info": {
+    "age": 67,
+    "gender": "Female",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victoria Santos, has a diagnosis of metastatic colorectal cancer (Stage IV) with a KRAS G12D mutation. However, the trial's specific eligibility criteria regarding required molecular markers are unknown. If the trial requires a specific biomarker status that the patient does not meet, this would disqualify her. Additionally, the absence of trial details prevents a complete assessment of eligibility. The patient is treatment-naïve, which is favorable, but without knowing the trial's requirements, I cannot confirm eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to the potential for exclusion based on unknown criteria.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"DISEASE STAGE COMPATIBILITY\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"Required molecular markers\"\n    ],\n    \"inclusion_criteria_met_count\": 5,\n    \"exclusion_criteria_violated_count\": 1,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Obtain detailed trial criteria, especially regarding required molecular markers and any other specific inclusion/exclusion criteria.\",\n    \"evaluation_timestamp\": \"2025-11-24T07:46:36.191335\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victoria Santos, has a diagnosis of metastatic colorectal cancer (Stage IV) with a KRAS G12D mutation. However, the trial's specific eligibility criteria regarding required molecular markers are unknown. If the trial requires a specific biomarker status that the patient does not meet, this would disqualify her. Additionally, the absence of trial details prevents a complete assessment of eligibility. The patient is treatment-naïve, which is favorable, but without knowing the trial's requirements, I cannot confirm eligibility. Therefore, the patient is marked as NOT_ELIGIBLE due to the potential for exclusion based on unknown criteria.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "DISEASE STAGE COMPATIBILITY",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "Required molecular markers"
+    ],
+    "inclusion_criteria_met_count": 5,
+    "exclusion_criteria_violated_count": 1,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Obtain detailed trial criteria, especially regarding required molecular markers and any other specific inclusion/exclusion criteria.",
+    "evaluation_timestamp": "2025-11-24T07:46:36.191335",
+    "patient_info": {
+      "patient_id": 150,
+      "mrn": "63043709",
+      "age": 67,
+      "gender": "Female",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT04929223",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-24T07:46:42.755909"
+}

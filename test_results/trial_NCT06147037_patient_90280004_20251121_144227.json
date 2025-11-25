@@ -1,0 +1,51 @@
+{
+  "trial_id": "NCT06147037",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 178,
+  "patient_mrn": "90280004",
+  "patient_info": {
+    "age": 35,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victor, has a primary diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with typical oncology trial indications. However, he is newly diagnosed and treatment-naïve, which may not meet the inclusion criteria for trials requiring prior treatments. Additionally, the patient's KRAS G13D mutation status may not align with certain targeted therapy trials that require specific biomarker profiles. The patient's age (35) and performance status (ECOG 1) are within acceptable ranges. However, without specific trial details, the exact eligibility cannot be fully confirmed. The primary disqualifying factor is the lack of prior treatments, which is critical for many oncology trials.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"PRIOR TREATMENTS\"\n    ],\n    \"inclusion_criteria_met_count\": 4,\n    \"exclusion_criteria_violated_count\": 1,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Consider trials that accept treatment-naïve patients or those specifically targeting newly diagnosed metastatic colorectal cancer. Further information on trial-specific inclusion criteria is needed.\",\n    \"evaluation_timestamp\": \"2025-11-21T14:42:17.130875\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victor, has a primary diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with typical oncology trial indications. However, he is newly diagnosed and treatment-naïve, which may not meet the inclusion criteria for trials requiring prior treatments. Additionally, the patient's KRAS G13D mutation status may not align with certain targeted therapy trials that require specific biomarker profiles. The patient's age (35) and performance status (ECOG 1) are within acceptable ranges. However, without specific trial details, the exact eligibility cannot be fully confirmed. The primary disqualifying factor is the lack of prior treatments, which is critical for many oncology trials.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "PRIOR TREATMENTS"
+    ],
+    "inclusion_criteria_met_count": 4,
+    "exclusion_criteria_violated_count": 1,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Consider trials that accept treatment-naïve patients or those specifically targeting newly diagnosed metastatic colorectal cancer. Further information on trial-specific inclusion criteria is needed.",
+    "evaluation_timestamp": "2025-11-21T14:42:17.130875",
+    "patient_info": {
+      "patient_id": 178,
+      "mrn": "90280004",
+      "age": 35,
+      "gender": "Male",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT06147037",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T14:42:27.429486"
+}

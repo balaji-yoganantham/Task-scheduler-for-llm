@@ -1,0 +1,52 @@
+{
+  "trial_id": "NCT06147037",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 178,
+  "patient_mrn": "90280004",
+  "patient_info": {
+    "age": 35,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with common eligibility criteria for oncology trials focused on advanced colorectal cancer. However, the patient has a KRAS mutation (KRAS G13D), which may be a disqualifying factor depending on the specific trial's biomarker requirements. The patient is treatment-naïve, which is often a requirement for first-line trials. His age (35) and performance status (ECOG 1) are within typical eligibility ranges. However, without specific trial details, the KRAS mutation status raises concerns about eligibility. Therefore, the patient is deemed NOT_ELIGIBLE due to potential exclusion based on biomarker status.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"DISEASE STAGE COMPATIBILITY\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"BIOMARKERS AND MOLECULAR MARKERS\"\n    ],\n    \"inclusion_criteria_met_count\": 5,\n    \"exclusion_criteria_violated_count\": 1,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Obtain specific trial details regarding biomarker requirements, particularly concerning KRAS mutations, to confirm eligibility.\",\n    \"evaluation_timestamp\": \"2025-11-21T14:45:30.823092\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with common eligibility criteria for oncology trials focused on advanced colorectal cancer. However, the patient has a KRAS mutation (KRAS G13D), which may be a disqualifying factor depending on the specific trial's biomarker requirements. The patient is treatment-naïve, which is often a requirement for first-line trials. His age (35) and performance status (ECOG 1) are within typical eligibility ranges. However, without specific trial details, the KRAS mutation status raises concerns about eligibility. Therefore, the patient is deemed NOT_ELIGIBLE due to potential exclusion based on biomarker status.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "DISEASE STAGE COMPATIBILITY",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "BIOMARKERS AND MOLECULAR MARKERS"
+    ],
+    "inclusion_criteria_met_count": 5,
+    "exclusion_criteria_violated_count": 1,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Obtain specific trial details regarding biomarker requirements, particularly concerning KRAS mutations, to confirm eligibility.",
+    "evaluation_timestamp": "2025-11-21T14:45:30.823092",
+    "patient_info": {
+      "patient_id": 178,
+      "mrn": "90280004",
+      "age": 35,
+      "gender": "Male",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT06147037",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T14:45:37.936879"
+}

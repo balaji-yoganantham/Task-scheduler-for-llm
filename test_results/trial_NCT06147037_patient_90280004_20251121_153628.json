@@ -1,0 +1,53 @@
+{
+  "trial_id": "NCT06147037",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 178,
+  "patient_mrn": "90280004",
+  "patient_info": {
+    "age": 35,
+    "gender": "Male",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for an oncology trial. However, the patient is currently a smoker, which may violate exclusion criteria related to smoking status. Additionally, the patient has not received any prior treatments, which may be a requirement for the trial. The patient's age (35) and performance status (ECOG 1) meet typical eligibility criteria. However, the smoking status and treatment-naïve condition are critical factors leading to the conclusion of ineligibility.\",\n    \"inclusion_criteria_met\": [\n        \"PRIMARY DIAGNOSIS MATCH\",\n        \"DISEASE STAGE COMPATIBILITY\",\n        \"AGE ELIGIBILITY\",\n        \"GENDER ELIGIBILITY\",\n        \"PERFORMANCE STATUS\"\n    ],\n    \"exclusion_criteria_violated\": [\n        \"Current smoker status\",\n        \"Treatment-naïve status\"\n    ],\n    \"inclusion_criteria_met_count\": 5,\n    \"exclusion_criteria_violated_count\": 2,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Consider smoking cessation programs and re-evaluate eligibility after the patient has completed a smoking cessation period. Additionally, confirm the specific trial requirements regarding prior treatments.\",\n    \"evaluation_timestamp\": \"2025-11-21T15:36:18.049775\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victor, has a diagnosis of metastatic colorectal cancer (Stage IV) with lung metastases, which aligns with the likely indication for an oncology trial. However, the patient is currently a smoker, which may violate exclusion criteria related to smoking status. Additionally, the patient has not received any prior treatments, which may be a requirement for the trial. The patient's age (35) and performance status (ECOG 1) meet typical eligibility criteria. However, the smoking status and treatment-naïve condition are critical factors leading to the conclusion of ineligibility.",
+    "inclusion_criteria_met": [
+      "PRIMARY DIAGNOSIS MATCH",
+      "DISEASE STAGE COMPATIBILITY",
+      "AGE ELIGIBILITY",
+      "GENDER ELIGIBILITY",
+      "PERFORMANCE STATUS"
+    ],
+    "exclusion_criteria_violated": [
+      "Current smoker status",
+      "Treatment-naïve status"
+    ],
+    "inclusion_criteria_met_count": 5,
+    "exclusion_criteria_violated_count": 2,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Consider smoking cessation programs and re-evaluate eligibility after the patient has completed a smoking cessation period. Additionally, confirm the specific trial requirements regarding prior treatments.",
+    "evaluation_timestamp": "2025-11-21T15:36:18.049775",
+    "patient_info": {
+      "patient_id": 178,
+      "mrn": "90280004",
+      "age": 35,
+      "gender": "Male",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT06147037",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-21T15:36:28.644472"
+}

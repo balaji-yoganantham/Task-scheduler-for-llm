@@ -1,0 +1,435 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT06699836']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT06699836
+        Title: A Phase Two Study Evaluating Two Doses of Leronlimab (Pro 140) In Combination With Trifluridine + Tipiracil (TAS-102) + Bevacizumab in Participants With CCR5+, Microsatellite Stable (MSS), Relapsed Refractory Metastatic Colorectal Cancer (mCRC)
+        Condition: ["Metastatic Colorectal Cancer (mCRC)"]
+        Phase: PHASE2
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.166
+        
+        Brief Summary: This is an open label, randomized, two arm, multi-center study to explore the effect of leronlimab on the overall response rate/ overall survival and safety and tolerability when used in combination with trifluridine and tipiracil + bevacizumab in patients with CCR5+, MSS, mCRC who have progressed on prior treatment before participating in the study. The main questions this study aims to answer are:
+
+1. Can leronlimab, in combination with standard of care therapies trifluridine and tipiracil+ bevacizumab, increase the objective response rate in persons with CCR5+, MSS, mCRC who have progressed on prior treatment before participating in the study.
+2. Is leronlimab safe and well tolerated in these subjects when used in combination with standard of care therapies trifluridine and tipiracil+ bevacizumab.
+        
+        Detailed Description: This is an open label, randomized, two arm, multi-center study to explore the effect of leronlimab on the overall response rate/ overall survival and the safety and tolerability when used in combination with trifluridine and tipiracil + bevacizumab in patients with CCR5+, MSS, relapsed refractory, mCRC who have been previously treated with fluoropyrimidine, oxaliplatin, and irinotecan-based chemotherapy, an anti-VEGF therapy, and, if RAS wild-type and medically appropriate, an anti-EGFR therapy.
+
+This study will enroll approximately 60 participants, 30 participants in each of two arms evaluating either 350 mg or 700 mg of leronlimab, who are 18 years of age or older, with histologically confirmed metastatic colorectal cancer that is microsatellite stable (MSS) and CCR5+ (confirmed by an immunohistochemistry (IHC) assay). Participants will be randomized 1:1 to each arm, where approximately 30 participants will receive 350 mg of leronlimab + trifluridine and tipiracil + bevacizumab and approximately 30 will receive 700 mg of leronlimab + trifluridine and tipiracil + bevacizumab.
+        
+        Inclusion Criteria: ["1. Male or female subjects age \u2265 18 years with a history of treated colorectal cancer with unresectable metastases of the primary colorectal cancer to other organs.", "2. If HIV-1 positive, viral load must be \\< 50 copies/ml and participant must be on stable ART for at least 3 months.", "3. Demonstrate positive tumor expression of CCR5 by IHC.", "4. Adult patients with metastatic colorectal cancer (mCRC) who have been previously treated with fluoropyrimidine-, oxaliplatin-, and irinotecan-based chemotherapy, an anti-VEGF therapy, and, if RAS wild-type and medically appropriate, an anti-EGFR therapy.", "5. Histologically confirmed for microsatellite stable MSS colorectal cancer by PCR, Immunohistochemistry (IHC) or Next-generation sequencing (NGS).", "6. Have measurable disease per RECIST 1.1", "7. Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.", "8. Expected survival of at least three months", "9. No anti-cancer treatment within the last four weeks or at least 5 half-lives prior to treatment (except for palliative radiation therapy from which the patient has recovered from all adverse events).", "10. Patients must have adequate organ and bone marrow function within 28 days prior to registration, defined as:", "i. Acceptable liver function:", "1. Total bilirubin \u2264 1.5 \u00d7 upper limit of normal (ULN) OR direct bilirubin \u2264 ULN for participants with total bilirubin levels \\> 1.5 \u00d7 ULN", "2. Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) \u2264 2.5 \u00d7 ULN (\u2264 5 \u00d7 ULN for participants with liver metastases).", "ii. Acceptable renal function:", "a) GFR \u2265 30 mL/min iii. Acceptable hematologic status:", "1. Hemoglobin \u2265 9 g/dL Note: Criteria must be met without packed red blood cell (pRBC) transfusion within the prior 2 weeks. Participants can be on stable dose of erythropoietin (\u2265 approximately 3 months).", "2. White blood cells \\> 2500/\u00b5L", "3. Absolute neutrophil count \\> 1500/\u00b5L", "4. Platelet count \\> 100 000/\u00b5L.", "11. Clinically normal resting 12-lead ECG at Screening Visit or, if abnormal, considered not clinically significant by the Principal Investigator.", "a) No QTC interval exceeding 460 milliseconds (ms) for females, no QTC interval exceeding 450 ms for males.", "12. Both male and female patients and their partners of childbearing potential must agree to use two medically accepted methods of contraception (e.g., barrier contraceptives \\[male condom, female condom, or diaphragm with a spermicidal gel\\], hormonal contraceptives \\[implants, injectables, combination oral contraceptives, transdermal patches, or contraceptive rings\\], or one of the following methods of birth control (intrauterine devices, tubal sterilization or vasectomy) or must practice complete abstinence from intercourse of reproductive potential from study entry to 6 months after the last day of treatment (excluding women who are not of childbearing potential and men who have been sterilized).", "13. Females of childbearing potential (FOCBP) must have a negative serum pregnancy test at Screening Visit and negative urine pregnancy test prior to receiving the first dose of study.", "14. Male participants must agree to use contraception and refrain from donating sperm for at least 120 days after the last dose of study intervention.", "15. Patients must have the ability to understand and the willingness to sign a written informed consent prior to registration on study."]
+        
+        Exclusion Criteria: ["1. Known severe hypersensitivity towards monoclonal antibodies.", "2. Clinically significant active coronary heart disease and cardiovascular insufficiency with hypotension (systolic blood pressure \\<100 mmHg) per PI discretion", "3. Prior history of other malignancies, except early-stage prostate cancer or basal cell carcinoma that has been surgically resected.", "4. Active hepatitis B (defined as having a positive hepatitis B surface antigen \\[HBsAg\\] test) or hepatitis C or known viral infections.", "5. Are pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the study, starting with the Screening Visit through 120 days after the last dose of study intervention.", "6. Has known psychiatric or substance abuse disorders that would interfere with cooperation with the requirements of the trial.", "7. Stroke and/or transient ischemic attack within 6 months prior to screening.", "8. Placement of a cardiac stent or bypass surgery within 6 months of screening", "9. Tumor invasion of a large vascular structure (e.g., pulmonary artery, superior or inferior vena cava).", "10. Is currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to the first dose of study treatment.", "Note: Participants who have entered the follow-up phase of an investigational study may participate as long as it has been 4 weeks after the last dose of the previous investigational agent.", "11. Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.", "12. Inability to follow protocol."]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+1. Male or female subjects age ≥ 18 years with a history of treated colorectal cancer with unresectable metastases of the primary colorectal cancer to other organs.
+2. If HIV-1 positive, viral load must be \< 50 copies/ml and participant must be on stable ART for at least 3 months.
+3. Demonstrate positive tumor expression of CCR5 by IHC.
+4. Adult patients with metastatic colorectal cancer (mCRC) who have been previously treated with fluoropyrimidine-, oxaliplatin-, and irinotecan-based chemotherapy, an anti-VEGF therapy, and, if RAS wild-type and medically appropriate, an anti-EGFR therapy.
+5. Histologically confirmed for microsatellite stable MSS colorectal cancer by PCR, Immunohistochemistry (IHC) or Next-generation sequencing (NGS).
+6. Have measurable disease per RECIST 1.1
+7. Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.
+8. Expected survival of at least three months
+9. No anti-cancer treatment within the last four weeks or at least 5 half-lives prior to treatment (except for palliative radiation therapy from which the patient has recovered from all adverse events).
+10. Patients must have adequate organ and bone marrow function within 28 days prior to registration, defined as:
+
+    i. Acceptable liver function:
+    1. Total bilirubin ≤ 1.5 × upper limit of normal (ULN) OR direct bilirubin ≤ ULN for participants with total bilirubin levels \> 1.5 × ULN
+    2. Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) ≤ 2.5 × ULN (≤ 5 × ULN for participants with liver metastases).
+
+    ii. Acceptable renal function:
+
+    a) GFR ≥ 30 mL/min iii. Acceptable hematologic status:
+    1. Hemoglobin ≥ 9 g/dL Note: Criteria must be met without packed red blood cell (pRBC) transfusion within the prior 2 weeks. Participants can be on stable dose of erythropoietin (≥ approximately 3 months).
+    2. White blood cells \> 2500/µL
+    3. Absolute neutrophil count \> 1500/µL
+    4. Platelet count \> 100 000/µL.
+11. Clinically normal resting 12-lead ECG at Screening Visit or, if abnormal, considered not clinically significant by the Principal Investigator.
+
+    a) No QTC interval exceeding 460 milliseconds (ms) for females, no QTC interval exceeding 450 ms for males.
+12. Both male and female patients and their partners of childbearing potential must agree to use two medically accepted methods of contraception (e.g., barrier contraceptives \[male condom, female condom, or diaphragm with a spermicidal gel\], hormonal contraceptives \[implants, injectables, combination oral contraceptives, transdermal patches, or contraceptive rings\], or one of the following methods of birth control (intrauterine devices, tubal sterilization or vasectomy) or must practice complete abstinence from intercourse of reproductive potential from study entry to 6 months after the last day of treatment (excluding women who are not of childbearing potential and men who have been sterilized).
+13. Females of childbearing potential (FOCBP) must have a negative serum pregnancy test at Screening Visit and negative urine pregnancy test prior to receiving the first dose of study.
+14. Male participants must agree to use contraception and refrain from donating sperm for at least 120 days after the last dose of study intervention.
+15. Patients must have the ability to understand and the willingness to sign a written informed consent prior to registration on study.
+
+Exclusion Criteria:
+
+1. Known severe hypersensitivity towards monoclonal antibodies.
+2. Clinically significant active coronary heart disease and cardiovascular insufficiency with hypotension (systolic blood pressure \<100 mmHg) per PI discretion
+3. Prior history of other malignancies, except early-stage prostate cancer or basal cell carcinoma that has been surgically resected.
+4. Active hepatitis B (defined as having a positive hepatitis B surface antigen \[HBsAg\] test) or hepatitis C or known viral infections.
+5. Are pregnant or breastfeeding or expecting to conceive or father children within the projected duration of the study, starting with the Screening Visit through 120 days after the last dose of study intervention.
+6. Has known psychiatric or substance abuse disorders that would interfere with cooperation with the requirements of the trial.
+7. Stroke and/or transient ischemic attack within 6 months prior to screening.
+8. Placement of a cardiac stent or bypass surgery within 6 months of screening
+9. Tumor invasion of a large vascular structure (e.g., pulmonary artery, superior or inferior vena cava).
+10. Is currently participating in or has participated in a study of an investigational agent or has used an investigational device within 4 weeks prior to the first dose of study treatment.
+
+    Note: Participants who have entered the follow-up phase of an investigational study may participate as long as it has been 4 weeks after the last dose of the previous investigational agent.
+11. Active, uncontrolled bacterial, viral, or fungal infections, requiring systemic therapy.
+12. Inability to follow protocol.
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT06699836",
+                    "trial_title": "A Phase Two Study Evaluating Two Doses of Leronlimab (Pro 140) In Combination With Trifluridine + Tipiracil (TAS-102) + Bevacizumab in Participants With CCR5+, Microsatellite Stable (MSS), Relapsed Refractory Metastatic Colorectal Cancer (mCRC)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T12:49:32.402059"
+            }
+        }
+        

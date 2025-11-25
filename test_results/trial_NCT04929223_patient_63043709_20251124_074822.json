@@ -1,0 +1,49 @@
+{
+  "trial_id": "NCT04929223",
+  "trial_info": {
+    "title": "Unknown",
+    "condition": "Unknown",
+    "phase": "Unknown",
+    "status": "Unknown"
+  },
+  "patient_id": 150,
+  "patient_mrn": "63043709",
+  "patient_info": {
+    "age": 67,
+    "gender": "Female",
+    "oncologist": "Dr. David Thompson, MD"
+  },
+  "evaluation": {
+    "response": "{\n    \"eligibility_status\": \"NOT_ELIGIBLE\",\n    \"confidence_score\": 90,\n    \"reasoning\": \"The patient, Victoria Santos, has a diagnosis of metastatic colorectal cancer (Stage IV) with a KRAS G12D mutation. However, the trial's specific eligibility criteria regarding primary diagnosis, disease stage, and required molecular markers are unknown. Given the patient's KRAS mutation, if the trial requires wild-type KRAS status, she would be ineligible. Additionally, the patient is treatment-naïve, which may or may not align with trial requirements for prior treatments. Without specific trial details, it is impossible to confirm eligibility, but the presence of the KRAS mutation raises a significant concern. Therefore, she is marked as NOT_ELIGIBLE due to the potential exclusion based on molecular marker requirements.\",\n    \"inclusion_criteria_met\": [\"Age eligibility\", \"Performance status\"],\n    \"exclusion_criteria_violated\": [\"Molecular marker requirements (if applicable)\"],\n    \"inclusion_criteria_met_count\": 2,\n    \"exclusion_criteria_violated_count\": 1,\n    \"total_inclusion_criteria\": 8,\n    \"total_exclusion_criteria\": 12,\n    \"recommendations\": \"Obtain specific trial details regarding primary diagnosis, disease stage, and required molecular markers to reassess eligibility.\",\n    \"evaluation_timestamp\": \"2025-11-24T07:48:15.327095\"\n}",
+    "eligibility_status": "NOT_ELIGIBLE",
+    "confidence_score": 90,
+    "reasoning": "The patient, Victoria Santos, has a diagnosis of metastatic colorectal cancer (Stage IV) with a KRAS G12D mutation. However, the trial's specific eligibility criteria regarding primary diagnosis, disease stage, and required molecular markers are unknown. Given the patient's KRAS mutation, if the trial requires wild-type KRAS status, she would be ineligible. Additionally, the patient is treatment-naïve, which may or may not align with trial requirements for prior treatments. Without specific trial details, it is impossible to confirm eligibility, but the presence of the KRAS mutation raises a significant concern. Therefore, she is marked as NOT_ELIGIBLE due to the potential exclusion based on molecular marker requirements.",
+    "inclusion_criteria_met": [
+      "Age eligibility",
+      "Performance status"
+    ],
+    "exclusion_criteria_violated": [
+      "Molecular marker requirements (if applicable)"
+    ],
+    "inclusion_criteria_met_count": 2,
+    "exclusion_criteria_violated_count": 1,
+    "total_inclusion_criteria": 8,
+    "total_exclusion_criteria": 12,
+    "recommendations": "Obtain specific trial details regarding primary diagnosis, disease stage, and required molecular markers to reassess eligibility.",
+    "evaluation_timestamp": "2025-11-24T07:48:15.327095",
+    "patient_info": {
+      "patient_id": 150,
+      "mrn": "63043709",
+      "age": 67,
+      "gender": "Female",
+      "oncologist": "Dr. David Thompson, MD"
+    },
+    "trial_info": {
+      "trial_id": "NCT04929223",
+      "title": "Unknown",
+      "condition": "Unknown",
+      "phase": "Unknown"
+    }
+  },
+  "evaluated_at": "2025-11-24T07:48:22.846552"
+}

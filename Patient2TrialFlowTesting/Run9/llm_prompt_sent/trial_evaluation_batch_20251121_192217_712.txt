@@ -1,0 +1,330 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 114
+mrn: 33439724
+batch_size: 1
+trial_ids: ['NCT04704661']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 114
+        MRN: 33439724
+        Age: 41
+        Gender: Male
+        Oncologist: Dr. Lisa Park, MD
+        Combined Medical Record: Patient Name: Marcos Rivera
+Patient MRN: 33439724
+Age: 41, Gender: Male
+Date of Visit: 2025-06-04
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Constipation, Bloating
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 22, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 22, 2025; T4bN1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Constipation, Bloating
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Type 1 diabetes
+- Chronic back pain
+- Depression
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04704661
+        Title: Phase 1/1B Study of DS-8201a in Combination With ATR Inhibition (AZD6738) in Advanced Solid Tumors With HER2 Expression (DASH Trial)
+        Condition: ["Advanced Breast Carcinoma", "Advanced Colon Carcinoma", "Advanced Colorectal Carcinoma", "Advanced Endometrial Carcinoma", "Advanced Gastric Carcinoma", "Advanced Gastroesophageal Junction Adenocarcinoma", "Advanced Malignant Solid Neoplasm", "Advanced Salivary Gland Carcinoma", "Anatomic Stage III Breast Cancer AJCC v8", "Anatomic Stage IV Breast Cancer AJCC v8", "Clinical Stage III Gastric Cancer AJCC v8", "Clinical Stage III Gastroesophageal Junction Adenocarcinoma AJCC v8", "Clinical Stage IV Gastric Cancer AJCC v8", "Clinical Stage IV Gastroesophageal Junction Adenocarcinoma AJCC v8", "HER2-Positive Breast Carcinoma", "Malignant Hepatobiliary Neoplasm", "Metastatic Breast Carcinoma", "Metastatic Colon Carcinoma", "Metastatic Colorectal Carcinoma", "Metastatic Endometrial Carcinoma", "Metastatic Gastric Carcinoma", "Metastatic Gastroesophageal Junction Adenocarcinoma", "Metastatic Malignant Solid Neoplasm", "Metastatic Salivary Gland Carcinoma", "Stage III Colon Cancer AJCC v8", "Stage III Colorectal Cancer AJCC v8", "Stage III Major Salivary Gland Cancer AJCC v8", "Stage III Uterine Corpus Carcinoma or Carcinosarcoma AJCC v8", "Stage IV Colon Cancer AJCC v8", "Stage IV Colorectal Cancer AJCC v8", "Stage IV Major Salivary Gland Cancer AJCC v8", "Stage IV Uterine Corpus Carcinoma or Carcinosarcoma AJCC v8", "Unresectable Breast Carcinoma", "Unresectable Colon Carcinoma", "Unresectable Colorectal Carcinoma", "Unresectable Endometrial Carcinoma", "Unresectable Gastric Carcinoma", "Unresectable Gastroesophageal Junction Adenocarcinoma", "Unresectable Malignant Solid Neoplasm", "Unresectable Salivary Gland Carcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.118
+        
+        Brief Summary: The dose escalation phase of this trial identifies the safety, side effects and best dose of ceralasertib (AZD6738) when given in combination with trastuzumab deruxtecan (DS-8201a) in treating patients with solid tumors that have a change (mutation) in the HER2 gene or protein and have spread to other places in the body (advanced). The dose expansion phase (phase Ib) of this trial compares how colorectal and gastroesophageal cancers with HER2 mutation respond to treatment with a combination of ceralasertib and trastuzumab deruxtecan versus trastuzumab deruxtecan alone. Ceralasertib may stop the growth of tumor cells and may kill them by blocking some of the enzymes needed for cell growth. Trastuzumab deruxtecan is a monoclonal antibody, called trastuzumab, linked to a chemotherapy drug, called deruxtecan. Trastuzumab attaches to HER2 positive cancer cells in a targeted way and delivers deruxtecan to kill them. Ceralasertib and trastuzumab deruxtecan may be safe, tolerable and effective in treating patients with advanced solid tumors expressing the HER2 protein or gene.
+        
+        Detailed Description: PRIMARY OBJECTIVES:
+
+I. Evaluate safety, tolerability, and recommended phase 2 dose (RP2D) of trastuzumab deruxtecan (DS-8201a) in combination with ceralasertib (AZD6738) in advanced solid tumors with HER2 expression. (Escalation Phase) II. Assess differential pharmacodynamic (PD) profile of tumor tissue (deoxyribonucleic acid \[DNA\] damage \& repair) between Top1 inhibition and dual inhibition of Top1 and ATR in patients with colorectal cancer and gastroesophageal cancer with HER2 expression. (Expansion Phase)
+
+SECONDARY OBJECTIVES:
+
+I. To observe and record anti-tumor activity. II. To evaluate pharmacokinetics (PK) of DS-8201a and AZD6738 and immunogenicity of DS8201a.
+
+EXPLORATORY OBJECTIVES:
+
+I. Evaluate association between HER2 heterogeneity and response to DS-8201a plus (+) AZD6738 therapy using central protein expression assessment.
+
+II. Determine predictive biomarkers (including but not restricted to: HER2 protein levels, HER2 gene copy number, alterations of TP53, ATM and RAS) of DS-8201a + AZD6738 efficacy in advanced solid tumors (specifically colorectal cancer and gastroesophageal cancer) with HER2 expression.
+
+III. To characterize PD biomarkers for efficacy of DS-8201a + AZD6738 efficacy in advanced solid tumors (specifically colorectal cancer and gastroesophageal cancer) with HER2 expression (such as phosphorylated \[p\]RAD50 and SLFN11).
+
+IV. To establish a biorepository of tissue, blood and pre-clinical models (PDXs) for HER2 expressing advanced solid tumors (specifically colorectal cancer and gastroesophageal cancer).
+
+OUTLINE: This is a dose-escalation study of ceralasertib with fixed dose trastuzumab deruxtecan followed by a dose-expansion study.
+
+Patients receive trastuzumab deruxtecan intravenously (IV) over 30-90 minutes on day 1 of each cycle and ceralasertib orally (PO) twice daily (BID) on days 1-7 of each cycle. Cycles repeat every 21 days in the absence of disease progression or unacceptable toxicity. NOTE: During the dose-expansion phase, the first 6 patients in each disease cohort (gastroesophageal cancer \[cohort A\] and colorectal cancer \[cohort B\]) receive only trastuzumab deruxtecan for the first cycle, followed by trastuzumab deruxtecan and ceralasertib together in subsequent cycles. Additionally, patients undergo tissue biopsy on study and blood sample collection, computed tomography (CT) or positron emission tomography (PET)/CT and echocardiography (ECHO) or multigated acquisition scan (MUGA) throughout the study.
+
+After completion of study treatment, patients are followed up every 3 months for 2 years, then every 6 months for 3 years.
+        
+        Inclusion Criteria: ["* DOSE-ESCALATION PHASE: Must have histologically confirmed advanced solid tumor including but not restricted to breast cancer, gastric or gastroesophageal cancer, colon cancer, endometrial cancer, salivary gland tumors, and hepatobiliary tumors", "* DOSE-EXPANSION PHASE: Must have histologically confirmed advanced/metastatic gastroesophageal cancer (cohort A) or colorectal cancer (cohort B)", "* DOSE-EXPANSION PHASE: Patients must have a biopsiable lesion and provide consent for on treatment biopsy", "* Age \\>= 18 years. Because no dosing or adverse event data are currently available on the use of AZD6738 in combination with DS-8201a in patients \\< 18 years of age, children are excluded from this study", "* Patients must have HER2-positive or HER2-expressing tumors determined by a Clinical Laboratory Improvement Act (CLIA)-certified laboratory. As a rule, for HER2 immunohistochemistry (IHC) scoring system trastuzumab for gastric cancer (TOGA) criteria used for gastric/gastroesophageal junction (GEJ) cancers will be employed (Note: in escalation phase, for breast cancer patients that are included, breast cancer criteria can be used). Specific requirement of HER2 status is outlined below:", "* HER2 expression (1-3+) by IHC locally and confirmed centrally OR", "* HER2 expression (1-3+) by IHC tested centrally OR", "* HER2 amplification based on fluorescence in situ hybridization (FISH) or next generation sequencing", "* Must have received at least one line of systemic chemotherapy for either locally advanced or metastatic disease and should have either progressed on this therapy or been intolerant to this therapy", "* For tumors where anti-HER2 therapy is standard of care, patients must have progressed on at least 1 line of anti-HER2 therapy if eligible. For patients where DS8201a is approved as standard of care, prior treatment with DS8201a is not allowed", "* Must have unresectable, advanced/metastatic disease", "* Must have at least 1 measurable lesion on CT scan per Response Evaluation Criteria in Solid Tumors (RECIST) 1.1. Patient without measurable but evaluable disease are allowed for dose-escalation phase", "* Must be willing and able to provide an adequate archival tumor sample available to confirm HER2 status by Central Laboratory (if local testing is used for enrollment), else must be willing and able to provide an adequate archival tumor sample for HER2 testing centrally", "* Must have Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0-1", "* Must have life expectancy of at least 3 months", "* Must have left ventricular ejection fraction (LVEF) \\>= 50% within 28 days before enrollment (study drug treatment) by either an echocardiogram (ECHO) or multigated acquisition (MUGA) scan", "* Must have a negative pregnancy test (if female)", "* Platelets \\>= 100,000/mcL (within 14 days before enrollment)", "* No transfusions with red blood cells or platelets are allowed within 1 week prior to screening assessment", "* Hemoglobin \\>= 9.0 g/dL (within 14 days before enrollment)", "* Absolute neutrophil count \\>= 1,500/mcL (within 14 days before enrollment)", "* No administration of granulocyte colony-stimulating factor (G-CSF) is allowed within 1 week prior to screening assessment", "* Creatinine clearance \\> 45/mL/min (using the Cockcroft-Gault equation) (within 14 days before enrollment)", "* Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase \\[SGOT\\])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase \\[SGPT\\]) =\\< 5 x institutional upper limit of normal (ULN) (within 14 days before enrollment)", "* Total bilirubin =\\< 1.5 x ULN if no liver metastases or \\< 3 x ULN with Gilbert's Syndrome or liver metastases at baseline (within 14 days before enrollment)", "* Leukocytes \\>= 3,000/mcL (within 14 days before enrollment)", "* Albumin \\> 2.5 g/dL (GEJ patients only) (within 14 days before enrollment)", "* International normalized ratio (INR) and either partial thromboplastin time (PTT) or activated (a)PTT =\\< 1.5 x ULN (within 14 days before enrollment)", "* Must have adequate treatment washout period before study treatment, defined as: Major surgery (\\>= 4 weeks), radiation therapy (\\>= 3 weeks; in case of palliative radiation \\>= 2 weeks), systemic therapy (\\>= 3 weeks; in case of investigational drug use \\>= 2 weeks or 5 half-lives, whichever is longer)", "* Patients who are human immunodeficiency virus (HIV) positive may participate IF they meet the following eligibility requirements:", "* They must be stable on their anti-retroviral regimen, and they must be healthy from an HIV perspective", "* They must have a CD4 count of greater than 250 cells/mcL over the past 6 months on this same anti-retroviral regimen and must not have had a CD4 count \\< 200 cells/mcl over the past 2 years, unless it was deemed related to THE CANCER AND/OR CHEMOTHERAPY-induced bone marrow suppression", "* For patients who have received chemotherapy in the past 6 months, a CD4 count \\< 250 cells/mcl during chemotherapy is permitted as long as viral loads were undetectable during this same chemotherapy", "* They must have an undetectable viral load and a CD4 count \\>= 250 cells/mcL within 7 days of enrollment", "* They must not be currently receiving prophylactic therapy for an opportunistic infection and must not have had an opportunistic infection within the past 6 months. HIV-infected patients should be monitored every 12 weeks for viral load and CD4 counts", "* For patients with evidence of chronic hepatitis B virus (HBV) infection, the HBV viral load must be undetectable on suppressive therapy, if indicated", "* Patients with a history of hepatitis C virus (HCV) infection must have been treated and cured. For patients with HCV infection who are currently on treatment, they are eligible if they have an undetectable HCV viral load", "* Subjects with clinically inactive brain metastases may be included. Subjects with treated brain metastases that are no longer symptomatic and who require no treatment with corticosteroids or anticonvulsants may be included in the study if they have recovered from the acute toxic effect of radiotherapy. A minimum of 2 weeks must have elapsed between the end of whole-brain radiation therapy and study treatment", "* Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate central nervous system (CNS) specific treatment is not required and is unlikely to be required for at least 4 weeks (or scheduled assessment after the first cycle of treatment), and a risk-benefit analysis (discussion) by the patient and the investigator favors participation in the clinical trial", "* Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial", "* HER2 antibody conjugated to a topoisomerase 1 inhibitor agents as well as AZD6738 are known to be teratogenic; thus, women of child-bearing potential must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of study participation, and for at least 7 months (women of childbearing potential \\[WOCBP\\] only) after the last dose of study drug. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study, for the duration of study participation, and 6 months after completion of study drug administration", "* Women of non-child-bearing potential defined as pre-menopausal females with a documented tubal ligation or hysterectomy; or postmenopausal defined as 12 months of spontaneous amenorrhea (in questionable cases, a blood sample with simultaneous follicle-stimulating hormone \\[FSH\\] \\> 40 mIU/mL and estradiol \\< 40 pg/mL \\[\\< 147 pmol/L\\] is confirmatory) are eligible. Females on hormone replacement therapy (HRT) and whose menopausal status is in doubt will be required to use one of the contraception methods outlined for women of child-bearing potential if they wish to continue their HRT during the study. Otherwise, they must discontinue HRT to allow confirmation of post-menopausal status prior to study enrollment. For most forms of HRT, at least 2-4 weeks will elapse between the cessation of therapy and the blood draw; this interval depends on the type and dosage of HRT. Following confirmation of their post-menopausal status, they can resume use of HRT during the study without use of a contraceptive method", "* Male subjects must not freeze or donate sperm starting at screening and throughout the study period, and at least 6 months after the final study drug administration. Preservation of sperm should be considered prior to enrolment in this study", "* Female subjects must not donate, or retrieve for their own use, ova from the time of screening and throughout the study treatment period, and for at least 7 months after the final study drug administration", "* Ability to understand and the willingness to sign a written informed consent document. Participants with impaired decision-making capacity (IDMC) who have a legally-authorized representative (LAR) and/or family member available will also be eligible"]
+        
+        Exclusion Criteria: ["* Patients with a history of (non-infectious) interstitial lung disease (ILD)/pneumonitis that required steroids, have current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening. Patient using e-cigarettes/vaping are also excluded", "* Patients with a medical history of myocardial infarction within 6 months before enrollment (study treatment), symptomatic congestive heart failure (New York Heart Association Class II to IV, corrected QT interval (Fridericia's formula-corrected QT interval \\[QTcF\\]) prolongation to \\> 470 ms (females) or \\> 450 ms (males) as corrected by Framingham's formula", "* Patients with spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms", "* Patients with multiple primary malignancies within 2 years, except adequately resected non-melanoma skin cancer, curatively treated in situ disease, or other curatively treated solid tumors", "* Patients with a history of severe hypersensitivity reactions to either the drug substances or inactive ingredients in the drug product", "* Patients with an uncontrolled infection requiring IV antibiotics, antivirals, or antifungals", "* Patients with substance abuse or any other medical conditions that would increase the safety risk to the subject or interfere with participation of the subject or evaluation of the clinical study in the opinion of the investigator", "* Patients with a concomitant medical condition that would increase the risk of toxicity in the opinion of the investigator", "* Patients who have not recovered from adverse events due to prior anti-cancer therapy (i.e., have residual toxicities grade \\>1) with the exception of alopecia. Subjects with chronic grade 2 toxicities may be eligible per discretion of the investigator after discussion with study principal investigator (PI) (e.g., grade 2 chemo-induced neuropathy).", "* Any previous treatment with an ATR inhibitor", "* Patients with any clinically apparent pulmonary compromise resulting from intercurrent pulmonary illnesses including, but not limited to, any underlying pulmonary disorder (i.e., pulmonary emboli within three months of the study enrollment, severe asthma, severe chronic obstructive pulmonary disease \\[COPD\\], restrictive lung disease, pleural effusion, etc.), and any autoimmune, connective tissue or inflammatory disorders with potential pulmonary involvement (i.e., Rheumatoid arthritis, Sjogren's, sarcoidosis, etc.), or prior pneumonectomy", "* Patients with myelodysplastic syndrome/acute myeloid leukemia or with features suggestive of myelodysplastic syndrome (MDS)/acute myeloid leukemia (AML)", "* Patients unable to swallow orally administered medication and patients with gastrointestinal disorders likely to interfere with absorption of the study medication", "* Concomitant use of known strong CYP3A inhibitors (e.g., itraconazole, telithromycin, clarithromycin, protease inhibitors boosted with ritonavir or cobicistat, indinavir, saquinavir, nelfinavir, boceprevir, telaprevir). The required washout period prior to starting study treatment is 2 weeks. Concomitant use of known strong (e.g., phenobarbital, enzalutamide, phenytoin, rifampicin, rifabutin, rifapentine, carbamazepine, nevirapine and St John's Wort ). The required washout period prior to starting study treatment is 5 weeks for enzalutamide or phenobarbital and 3 weeks for other agents", "* Patients with a pleural effusion, ascites, or pericardial effusion that requires drainage, peritoneal shunt, or cell-free and concentrated ascites reinfusion therapy (CART). (Drainage and CART are not allowed within 2 weeks prior to screening assessment)", "* Patients with previous allogeneic bone marrow transplant or double umbilical cord blood transplantation (dUCBT)", "* Whole blood transfusions in the last 120 days prior to entry to the study (packed red blood cells and platelet transfusions are acceptable within the last 28 days as long as they are not within 1 week prior to screening assessment)", "* Patients at risk of brain perfusion problems, e.g., medical history of carotid stenosis or pre-syncopal or syncopal episodes, history of transient ischemic attacks (TIAs)", "* Uncontrolled hypertension (grade 2 or above) requiring clinical intervention", "* Patients with relative hypotension (\\< 90/60 mm Hg) or clinically relevant orthostatic hypotension, including a fall in blood pressure of \\> 20 mm Hg", "* Patients who have received corticosteroids (at a dose \\> 10 mg prednisone/day or equivalent) for any reason within 2 weeks prior to first dose", "* Patients with uncontrolled intercurrent illness", "* Patients with psychiatric illness/social situations that would limit compliance with study requirements", "* Pregnant women are excluded from this study because DS-8201a is a HER2 antibody conjugated to a topoisomerase 1 inhibitor agent with the potential for teratogenic or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with DS-8201a, breastfeeding should be discontinued if the mother is treated with DS-8201a. These potential risks may also apply to AZD6738", "* Patients cannot be receiving chloroquine or hydroxychloroquine. Patients receiving these drugs must have a washout period of \\> 14 days before enrollment/randomization"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* DOSE-ESCALATION PHASE: Must have histologically confirmed advanced solid tumor including but not restricted to breast cancer, gastric or gastroesophageal cancer, colon cancer, endometrial cancer, salivary gland tumors, and hepatobiliary tumors
+* DOSE-EXPANSION PHASE: Must have histologically confirmed advanced/metastatic gastroesophageal cancer (cohort A) or colorectal cancer (cohort B)
+* DOSE-EXPANSION PHASE: Patients must have a biopsiable lesion and provide consent for on treatment biopsy
+* Age \>= 18 years. Because no dosing or adverse event data are currently available on the use of AZD6738 in combination with DS-8201a in patients \< 18 years of age, children are excluded from this study
+* Patients must have HER2-positive or HER2-expressing tumors determined by a Clinical Laboratory Improvement Act (CLIA)-certified laboratory. As a rule, for HER2 immunohistochemistry (IHC) scoring system trastuzumab for gastric cancer (TOGA) criteria used for gastric/gastroesophageal junction (GEJ) cancers will be employed (Note: in escalation phase, for breast cancer patients that are included, breast cancer criteria can be used). Specific requirement of HER2 status is outlined below:
+
+  * HER2 expression (1-3+) by IHC locally and confirmed centrally OR
+  * HER2 expression (1-3+) by IHC tested centrally OR
+  * HER2 amplification based on fluorescence in situ hybridization (FISH) or next generation sequencing
+* Must have received at least one line of systemic chemotherapy for either locally advanced or metastatic disease and should have either progressed on this therapy or been intolerant to this therapy
+* For tumors where anti-HER2 therapy is standard of care, patients must have progressed on at least 1 line of anti-HER2 therapy if eligible. For patients where DS8201a is approved as standard of care, prior treatment with DS8201a is not allowed
+* Must have unresectable, advanced/metastatic disease
+* Must have at least 1 measurable lesion on CT scan per Response Evaluation Criteria in Solid Tumors (RECIST) 1.1. Patient without measurable but evaluable disease are allowed for dose-escalation phase
+* Must be willing and able to provide an adequate archival tumor sample available to confirm HER2 status by Central Laboratory (if local testing is used for enrollment), else must be willing and able to provide an adequate archival tumor sample for HER2 testing centrally
+* Must have Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0-1
+* Must have life expectancy of at least 3 months
+* Must have left ventricular ejection fraction (LVEF) \>= 50% within 28 days before enrollment (study drug treatment) by either an echocardiogram (ECHO) or multigated acquisition (MUGA) scan
+* Must have a negative pregnancy test (if female)
+* Platelets \>= 100,000/mcL (within 14 days before enrollment)
+
+  * No transfusions with red blood cells or platelets are allowed within 1 week prior to screening assessment
+* Hemoglobin \>= 9.0 g/dL (within 14 days before enrollment)
+* Absolute neutrophil count \>= 1,500/mcL (within 14 days before enrollment)
+
+  * No administration of granulocyte colony-stimulating factor (G-CSF) is allowed within 1 week prior to screening assessment
+* Creatinine clearance \> 45/mL/min (using the Cockcroft-Gault equation) (within 14 days before enrollment)
+* Aspartate aminotransferase (AST) (serum glutamic-oxaloacetic transaminase \[SGOT\])/alanine aminotransferase (ALT) (serum glutamate pyruvate transaminase \[SGPT\]) =\< 5 x institutional upper limit of normal (ULN) (within 14 days before enrollment)
+* Total bilirubin =\< 1.5 x ULN if no liver metastases or \< 3 x ULN with Gilbert's Syndrome or liver metastases at baseline (within 14 days before enrollment)
+* Leukocytes \>= 3,000/mcL (within 14 days before enrollment)
+* Albumin \> 2.5 g/dL (GEJ patients only) (within 14 days before enrollment)
+* International normalized ratio (INR) and either partial thromboplastin time (PTT) or activated (a)PTT =\< 1.5 x ULN (within 14 days before enrollment)
+* Must have adequate treatment washout period before study treatment, defined as: Major surgery (\>= 4 weeks), radiation therapy (\>= 3 weeks; in case of palliative radiation \>= 2 weeks), systemic therapy (\>= 3 weeks; in case of investigational drug use \>= 2 weeks or 5 half-lives, whichever is longer)
+* Patients who are human immunodeficiency virus (HIV) positive may participate IF they meet the following eligibility requirements:
+
+  * They must be stable on their anti-retroviral regimen, and they must be healthy from an HIV perspective
+  * They must have a CD4 count of greater than 250 cells/mcL over the past 6 months on this same anti-retroviral regimen and must not have had a CD4 count \< 200 cells/mcl over the past 2 years, unless it was deemed related to THE CANCER AND/OR CHEMOTHERAPY-induced bone marrow suppression
+
+    * For patients who have received chemotherapy in the past 6 months, a CD4 count \< 250 cells/mcl during chemotherapy is permitted as long as viral loads were undetectable during this same chemotherapy
+  * They must have an undetectable viral load and a CD4 count \>= 250 cells/mcL within 7 days of enrollment
+  * They must not be currently receiving prophylactic therapy for an opportunistic infection and must not have had an opportunistic infection within the past 6 months. HIV-infected patients should be monitored every 12 weeks for viral load and CD4 counts
+* For patients with evidence of chronic hepatitis B virus (HBV) infection, the HBV viral load must be undetectable on suppressive therapy, if indicated
+* Patients with a history of hepatitis C virus (HCV) infection must have been treated and cured. For patients with HCV infection who are currently on treatment, they are eligible if they have an undetectable HCV viral load
+* Subjects with clinically inactive brain metastases may be included. Subjects with treated brain metastases that are no longer symptomatic and who require no treatment with corticosteroids or anticonvulsants may be included in the study if they have recovered from the acute toxic effect of radiotherapy. A minimum of 2 weeks must have elapsed between the end of whole-brain radiation therapy and study treatment
+* Patients with new or progressive brain metastases (active brain metastases) or leptomeningeal disease are eligible if the treating physician determines that immediate central nervous system (CNS) specific treatment is not required and is unlikely to be required for at least 4 weeks (or scheduled assessment after the first cycle of treatment), and a risk-benefit analysis (discussion) by the patient and the investigator favors participation in the clinical trial
+* Patients with a prior or concurrent malignancy whose natural history or treatment does not have the potential to interfere with the safety or efficacy assessment of the investigational regimen are eligible for this trial
+* HER2 antibody conjugated to a topoisomerase 1 inhibitor agents as well as AZD6738 are known to be teratogenic; thus, women of child-bearing potential must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of study participation, and for at least 7 months (women of childbearing potential \[WOCBP\] only) after the last dose of study drug. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study, for the duration of study participation, and 6 months after completion of study drug administration
+* Women of non-child-bearing potential defined as pre-menopausal females with a documented tubal ligation or hysterectomy; or postmenopausal defined as 12 months of spontaneous amenorrhea (in questionable cases, a blood sample with simultaneous follicle-stimulating hormone \[FSH\] \> 40 mIU/mL and estradiol \< 40 pg/mL \[\< 147 pmol/L\] is confirmatory) are eligible. Females on hormone replacement therapy (HRT) and whose menopausal status is in doubt will be required to use one of the contraception methods outlined for women of child-bearing potential if they wish to continue their HRT during the study. Otherwise, they must discontinue HRT to allow confirmation of post-menopausal status prior to study enrollment. For most forms of HRT, at least 2-4 weeks will elapse between the cessation of therapy and the blood draw; this interval depends on the type and dosage of HRT. Following confirmation of their post-menopausal status, they can resume use of HRT during the study without use of a contraceptive method
+* Male subjects must not freeze or donate sperm starting at screening and throughout the study period, and at least 6 months after the final study drug administration. Preservation of sperm should be considered prior to enrolment in this study
+* Female subjects must not donate, or retrieve for their own use, ova from the time of screening and throughout the study treatment period, and for at least 7 months after the final study drug administration
+* Ability to understand and the willingness to sign a written informed consent document. Participants with impaired decision-making capacity (IDMC) who have a legally-authorized representative (LAR) and/or family member available will also be eligible
+
+Exclusion Criteria:
+
+* Patients with a history of (non-infectious) interstitial lung disease (ILD)/pneumonitis that required steroids, have current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at screening. Patient using e-cigarettes/vaping are also excluded
+* Patients with a medical history of myocardial infarction within 6 months before enrollment (study treatment), symptomatic congestive heart failure (New York Heart Association Class II to IV, corrected QT interval (Fridericia's formula-corrected QT interval \[QTcF\]) prolongation to \> 470 ms (females) or \> 450 ms (males) as corrected by Framingham's formula
+* Patients with spinal cord compression or clinically active central nervous system metastases, defined as untreated and symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms
+* Patients with multiple primary malignancies within 2 years, except adequately resected non-melanoma skin cancer, curatively treated in situ disease, or other curatively treated solid tumors
+* Patients with a history of severe hypersensitivity reactions to either the drug substances or inactive ingredients in the drug product
+* Patients with an uncontrolled infection requiring IV antibiotics, antivirals, or antifungals
+* Patients with substance abuse or any other medical conditions that would increase the safety risk to the subject or interfere with participation of the subject or evaluation of the clinical study in the opinion of the investigator
+* Patients with a concomitant medical condition that would increase the risk of toxicity in the opinion of the investigator
+* Patients who have not recovered from adverse events due to prior anti-cancer therapy (i.e., have residual toxicities grade \>1) with the exception of alopecia. Subjects with chronic grade 2 toxicities may be eligible per discretion of the investigator after discussion with study principal investigator (PI) (e.g., grade 2 chemo-induced neuropathy).
+* Any previous treatment with an ATR inhibitor
+* Patients with any clinically apparent pulmonary compromise resulting from intercurrent pulmonary illnesses including, but not limited to, any underlying pulmonary disorder (i.e., pulmonary emboli within three months of the study enrollment, severe asthma, severe chronic obstructive pulmonary disease \[COPD\], restrictive lung disease, pleural effusion, etc.), and any autoimmune, connective tissue or inflammatory disorders with potential pulmonary involvement (i.e., Rheumatoid arthritis, Sjogren's, sarcoidosis, etc.), or prior pneumonectomy
+* Patients with myelodysplastic syndrome/acute myeloid leukemia or with features suggestive of myelodysplastic syndrome (MDS)/acute myeloid leukemia (AML)
+* Patients unable to swallow orally administered medication and patients with gastrointestinal disorders likely to interfere with absorption of the study medication
+* Concomitant use of known strong CYP3A inhibitors (e.g., itraconazole, telithromycin, clarithromycin, protease inhibitors boosted with ritonavir or cobicistat, indinavir, saquinavir, nelfinavir, boceprevir, telaprevir). The required washout period prior to starting study treatment is 2 weeks. Concomitant use of known strong (e.g., phenobarbital, enzalutamide, phenytoin, rifampicin, rifabutin, rifapentine, carbamazepine, nevirapine and St John's Wort ). The required washout period prior to starting study treatment is 5 weeks for enzalutamide or phenobarbital and 3 weeks for other agents
+* Patients with a pleural effusion, ascites, or pericardial effusion that requires drainage, peritoneal shunt, or cell-free and concentrated ascites reinfusion therapy (CART). (Drainage and CART are not allowed within 2 weeks prior to screening assessment)
+* Patients with previous allogeneic bone marrow transplant or double umbilical cord blood transplantation (dUCBT)
+* Whole blood transfusions in the last 120 days prior to entry to the study (packed red blood cells and platelet transfusions are acceptable within the last 28 days as long as they are not within 1 week prior to screening assessment)
+* Patients at risk of brain perfusion problems, e.g., medical history of carotid stenosis or pre-syncopal or syncopal episodes, history of transient ischemic attacks (TIAs)
+* Uncontrolled hypertension (grade 2 or above) requiring clinical intervention
+* Patients with relative hypotension (\< 90/60 mm Hg) or clinically relevant orthostatic hypotension, including a fall in blood pressure of \> 20 mm Hg
+* Patients who have received corticosteroids (at a dose \> 10 mg prednisone/day or equivalent) for any reason within 2 weeks prior to first dose
+* Patients with uncontrolled intercurrent illness
+* Patients with psychiatric illness/social situations that would limit compliance with study requirements
+* Pregnant women are excluded from this study because DS-8201a is a HER2 antibody conjugated to a topoisomerase 1 inhibitor agent with the potential for teratogenic or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with DS-8201a, breastfeeding should be discontinued if the mother is treated with DS-8201a. These potential risks may also apply to AZD6738
+* Patients cannot be receiving chloroquine or hydroxychloroquine. Patients receiving these drugs must have a washout period of \> 14 days before enrollment/randomization
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04704661",
+                    "trial_title": "Phase 1/1B Study of DS-8201a in Combination With ATR Inhibition (AZD6738) in Advanced Solid Tumors With HER2 Expression (DASH Trial)",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-21T19:22:17.712516"
+            }
+        }
+        

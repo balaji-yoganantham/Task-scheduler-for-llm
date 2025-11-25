@@ -1,0 +1,332 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 114
+mrn: 33439724
+batch_size: 1
+trial_ids: ['NCT04314401']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 114
+        MRN: 33439724
+        Age: 41
+        Gender: Male
+        Oncologist: Dr. Lisa Park, MD
+        Combined Medical Record: Patient Name: Marcos Rivera
+Patient MRN: 33439724
+Age: 41, Gender: Male
+Date of Visit: 2025-06-04
+Oncologist: Dr. Lisa Park, MD
+
+Chief Complaint: - Cramping, Constipation, Bloating
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 22, 2025
+- Site of primary tumor: Mid rectum (rectum)
+- Date of initial diagnosis and TNM stage: April 22, 2025; T4bN1aM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 09, 2025 - lymph nodes metastases
+identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Cramping, Constipation, Bloating
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- Type 1 diabetes
+- Chronic back pain
+- Depression
+- Surgical history:
+- None
+
+Family History: - Colorectal or other cancers in first-degree relatives: Paternal uncle with prostate cancer
+- Known familial syndromes: Lynch syndrome - negative
+
+Social History: - Smoking: Former smoker, quit 10 years ago (20 pack-year history)
+- Alcohol use: Rare alcohol use
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Retired teacher
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Sulfa drugs (GI upset)
+
+Physical Examination: - Vitals: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 3.8 × 10³/µL, ANC: 2.0 × 10³/µL
+- Hgb: 12.7 g/dL, Platelets: 342 × 10³/µL
+- Chemistry:
+- Creatinine: 0.7 mg/dL, eGFR: 111 mL/min/1.73m²
+- LFTs:
+- AST: 40 U/L, ALT: 27 U/L
+- Alkaline phosphatase: 139 U/L, Total bilirubin: 0.4 mg/dL
+- CEA: 104.9 ng/mL (elevated)
+- Molecular markers:
+- RAS: KRAS G12D
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 09, 2025):
+Primary mid rectum mass (3.8 cm), polypoid mass
+enlarged lymph nodes (largest 2.3 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 138/71, HR 86, RR 17, Temp 98.0°F, SpO2 98% on room air, Weight 182 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lymph nodes)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT04314401
+        Title: Cancer Moonshot Biobank Research Protocol
+        Condition: ["Acute Myeloid Leukemia", "Anatomic Stage III Breast Cancer AJCC v8", "Anatomic Stage IV Breast Cancer AJCC v8", "Clinical Stage IV Esophageal Adenocarcinoma AJCC v8", "Clinical Stage IV Gastric Cancer AJCC v8", "Clinical Stage IV Gastroesophageal Junction Adenocarcinoma AJCC v8", "Esophageal Carcinoma", "Fallopian Tube Carcinoma", "Gastric Carcinoma", "Hormone Receptor-Positive Breast Carcinoma", "Invasive Breast Carcinoma", "Lung Non-Small Cell Carcinoma", "Lung Small Cell Carcinoma", "Malignant Solid Neoplasm", "Melanoma", "Metastatic Prostate Carcinoma", "Multiple Myeloma", "Ovarian Carcinoma", "Ovarian High Grade Serous Adenocarcinoma", "Primary Peritoneal Carcinoma", "Stage III Fallopian Tube Cancer AJCC v8", "Stage III Lung Cancer AJCC v8", "Stage III Ovarian Cancer AJCC v8", "Stage IV Colorectal Cancer AJCC v8", "Stage IV Fallopian Tube Cancer AJCC v8", "Stage IV Lung Cancer AJCC v8", "Stage IV Ovarian Cancer AJCC v8", "Stage IVB Prostate Cancer AJCC v8", "Triple-Negative Breast Carcinoma"]
+        Phase: Not specified
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 13 Years - 
+        Gender: ALL
+        Hybrid Score: 5.086
+        
+        Brief Summary: This trial collects multiple tissue and blood samples, along with medical information, from cancer patients. The "Cancer Moonshot Biobank" is a longitudinal study. This means it collects and stores samples and information over time, throughout the course of a patient's cancer treatment. By looking at samples and information collected from the same people over time, researchers hope to better understand how cancer changes over time and over the course of medical treatments.
+        
+        Detailed Description: PRIMARY OBJECTIVE:
+
+I. To support current and future investigations into drug resistance and sensitivity and other National Cancer Institute (NCI)-sponsored cancer research initiatives through the procurement and distribution of multiple longitudinal biospecimens and associated data from a diverse group of cancer patients who are undergoing standard of care treatment at NCI Community Oncology Research Program (NCORP) sites and other National Clinical Trials Network (NCTN) sites.
+
+SECONDARY OBJECTIVES:
+
+I. To provide a service of value to study participants and their medical providers through the performance of molecular profiling assays on tumor samples in a Clinical Laboratory Improvement Act (CLIA)-certified laboratory and reporting of results to physicians and patients that they may opt to use in clinical management, including analysis of data for acquired resistance mechanisms.
+
+II. To enable the development of patient-derived models such as cell lines and xenografts for cancer researchers through the provision of biospecimens from up to 20% of study participants to the NCI's Patient Derived Models Repository (PDMR), a national resource available to investigators.
+
+III. To develop and implement robust approaches in patient and provider engagement to improve understanding of biobanking and its relationship to cancer research and increase representation of minority and underserved study participants in cancer research.
+
+IV. To develop increased capabilities in United States (U.S.) community hospitals and clinics for contribution to cancer research through biobanking activities.
+
+V. To enable secondary research generated from the project through deposition of data in public repositories such as Cancer Research Data Commons (CRDC), The Cancer Imaging Archive (TCIA) and database of Genotypes and Phenotypes (dbGaP) and other potential NCI databases, including clinical, radiology and pathology data with an emphasis on treatment response and outcome data.
+
+VI. To provide residual biospecimens and associated data from the project to the cancer research community.
+
+OUTLINE:
+
+Patients undergo collection of tissue samples during baseline and at time of disease progression and collection of blood samples throughout the study, including at time of disease progression. Patients with hematological malignancies also undergo collection of bone marrow and cerebral spinal fluid at the same time points. Archival blood and tissue, as well as bone marrow of patients with hematological malignancies, is also collected if available. Additionally, patients may undergo computed tomography (CT), positron emission tomography (PET)/CT and/or magnetic resonance imaging (MRI) throughout the study, and may undergo paracentesis on study. Patient medical records are reviewed, and data is collected for at least 5 years.
+        
+        Inclusion Criteria: ["* Is consistent with OR has been diagnosed with one of the following:", "* Colorectal cancer: stage IV", "* Non-small cell or small cell lung cancer: stage III/IV", "* Prostate cancer: metastatic prostate cancer", "* Gastric cancer, not otherwise specified (NOS): stage IV", "* Esophageal cancer, NOS: stage IV", "* Adenocarcinoma of gastroesophageal junction: stage IV", "* High grade serous ovarian cancer: stage III/IV", "* Invasive breast carcinoma: stage III/IV", "* Melanoma: stage III/IV", "* Acute myeloid leukemia", "* Multiple myeloma", "* For the purposes of this study,", "* Re-staging is allowed", "* Having more than one primary cancer is allowed, if the patient is being treated solely for one of the eligible cancers listed above", "* Patient should fit in one of the following four clinical scenarios (a-d)", "* Undergoing diagnostic workup for one of the diseases listed for which treatment will likely include a new regimen of standard of care therapy OR", "* Scheduled to begin treatment with a new regimen of standard of care therapy OR", "* Currently progressing on a regimen of standard of care therapy OR", "* Currently being treated with a regimen standard of care therapy, without evidence of progression", "* Requirements for fresh tissue biospecimen collections at enrollment:", "* For clinical scenarios a, b, and c above, freshly collected tumor tissue or bone marrow (BM) aspirate must be submitted at enrollment", "* For clinical scenarios a and b, the fresh tissue collection must be prior to starting therapy", "* For clinical scenario a, the biospecimen collection must be part of a standard of care medical procedure", "* For clinical scenarios b or c, the biospecimen collection may be part of a standard of care medical procedure OR", "* The biospecimen collection may be part of a study-specific procedure (\"research only biopsy\"), when the patient has a tumor amenable to image guided or direct vision biopsy and is willing and able to undergo a tumor biopsy for molecular profiling", "* Note: For research-only biopsies, the biopsy must not be associated with a significant risk of severe or major complications or death; the procedure cannot be a mediastinal, laparoscopic, open or endoscopic biopsy; nor can the procedure be a brain biopsy; nor can the patient be under the age of majority as determined by each U.S. state", "* Requirements for archival tissue:", "* For clinical scenarios a and b above, archival tissue as outlined below must be submitted IF AVAILABLE", "* For clinical scenarios c and d above, archival tissue as outlined below is REQUIRED", "* Pre-existing archival material (formalin-fixed, paraffin-embedded \\[FFPE\\] block, BM aspirate, or unstained slides) that:", "* Contains the cancer type for which the participant is enrolled, and", "* Was collected no more than 5 years prior to initiation of therapy, and", "* Contains at least a surface area of 5 mm\\^2 and optimal surface area of 25 mm\\^2 or 3-5 mL cryopreserved bone marrow aspirate to yield 200 million bone marrow mononuclear cells, and", "* Contains at least 10% tumor content. 70% tumor content is optimal, and", "* No more than 1 line of standard of care systemic therapy was administered from the date of archival material collection to the date of initiation of therapy", "* Requirements for blood collection: ALL scenarios require fresh blood collection at enrollment", "* Blood collection for clinical scenarios a, b, and c must take place within 1 week of fresh tumor specimen collection", "* Blood collection for clinical scenario d must take place within 4 weeks of enrollment, and while patient is on treatment", "* Age 13 or older", "* Any sex", "* Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2", "* Ability to understand and willingness to sign an informed consent document. Consent may be provided by a Legally Authorized Representative (LAR) in accordance with 45 CFR 46.102(i)", "* NCI PDMR INCLUSION CRITERIA: Patients with CRC with mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status", "* NCI PDMR INCLUSION CRITERIA: Patients with CRC who are 40 years old or younger at time of collection irrespective of mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status", "* NCI PDMR INCLUSION CRITERIA: Patients with BRCA that are either", "* Any race/ethnicity with hormone receptor positive (ER+PR+, ER+PR-, or ER-PR+)", "* African American with triple negative (ER-PR-HER2-)", "* NCI PDMR INCLUSION CRITERIA: Patients with lung cancer (LCA), prostate cancer (PCA), gastroesophageal cancer (GEC), ovarian cancer (OV), acute myeloid leukemia (AML), multiple myeloma (MML)"]
+        
+        Exclusion Criteria: ["* Treated with or has already begun treatment with a non-standard of care therapeutic agent (investigational) in an interventional clinical trial", "* For the purposes of this study, past enrollment in clinical trials whereby the patient was randomized and treated with standard-of-care anti-cancer treatment (chemotherapy regimen, surgery and radiation therapy) is allowed", "* Uncontrolled intercurrent illness that in the physician's assessment would pose undue risk for biopsy", "* Use of full dose coumarin-derivative anticoagulants such as warfarin are prohibited. Patients may be switched to low molecular weight (LMW) heparin at physician discretion", "* Low molecular weight (LMW) heparin is permitted for prophylactic or therapeutic use", "* Factor X inhibitors are permitted", "* Use of anti-platelet drugs are permitted", "* Stopping the anticoagulation treatment for biopsy, bone marrow aspirate, or resection should be per site standard operating procedure (SOP)", "* NCI PDMR EXCLUSION CRITERIA: Patients with complete response", "* NCI PDMR EXCLUSION CRITERIA: Patients with invasive fungal infections", "* NCI PDMR EXCLUSION CRITERIA: Patients with active and/or uncontrolled infections or who are still recovering from an infection", "* Actively febrile patients with uncertain etiology of febrile episode", "* All antibiotics for non-prophylactic treatment of infection should be completed at least 1 week (7 days) prior to collection", "* No recurrence of fever or other symptoms related to infection for at least 1 week (7 days) following completion of antibiotics", "* NCI PDMR EXCLUSION CRITERIA: Patients with human immunodeficiency virus (HIV), active or chronic hepatitis (i.e. quantifiable hepatitis B virus \\[HBV\\]-deoxyribonucleic acid \\[DNA\\] and/or positive hepatitis B surface antigen \\[HbsAg\\], quantifiable hepatitis C virus \\[HCV\\]-ribonucleic acid \\[RNA\\]) or known history of HBV/HCV without documented resolution"]
+        
+        Eligibility Criteria: Inclusion Criteria:
+
+* Is consistent with OR has been diagnosed with one of the following:
+
+  * Colorectal cancer: stage IV
+  * Non-small cell or small cell lung cancer: stage III/IV
+  * Prostate cancer: metastatic prostate cancer
+  * Gastric cancer, not otherwise specified (NOS): stage IV
+  * Esophageal cancer, NOS: stage IV
+  * Adenocarcinoma of gastroesophageal junction: stage IV
+  * High grade serous ovarian cancer: stage III/IV
+  * Invasive breast carcinoma: stage III/IV
+  * Melanoma: stage III/IV
+  * Acute myeloid leukemia
+  * Multiple myeloma
+
+    * For the purposes of this study,
+
+      * Re-staging is allowed
+      * Having more than one primary cancer is allowed, if the patient is being treated solely for one of the eligible cancers listed above
+* Patient should fit in one of the following four clinical scenarios (a-d)
+
+  * Undergoing diagnostic workup for one of the diseases listed for which treatment will likely include a new regimen of standard of care therapy OR
+  * Scheduled to begin treatment with a new regimen of standard of care therapy OR
+  * Currently progressing on a regimen of standard of care therapy OR
+  * Currently being treated with a regimen standard of care therapy, without evidence of progression
+* Requirements for fresh tissue biospecimen collections at enrollment:
+
+  * For clinical scenarios a, b, and c above, freshly collected tumor tissue or bone marrow (BM) aspirate must be submitted at enrollment
+
+    * For clinical scenarios a and b, the fresh tissue collection must be prior to starting therapy
+    * For clinical scenario a, the biospecimen collection must be part of a standard of care medical procedure
+    * For clinical scenarios b or c, the biospecimen collection may be part of a standard of care medical procedure OR
+    * The biospecimen collection may be part of a study-specific procedure ("research only biopsy"), when the patient has a tumor amenable to image guided or direct vision biopsy and is willing and able to undergo a tumor biopsy for molecular profiling
+
+      * Note: For research-only biopsies, the biopsy must not be associated with a significant risk of severe or major complications or death; the procedure cannot be a mediastinal, laparoscopic, open or endoscopic biopsy; nor can the procedure be a brain biopsy; nor can the patient be under the age of majority as determined by each U.S. state
+* Requirements for archival tissue:
+
+  * For clinical scenarios a and b above, archival tissue as outlined below must be submitted IF AVAILABLE
+  * For clinical scenarios c and d above, archival tissue as outlined below is REQUIRED
+  * Pre-existing archival material (formalin-fixed, paraffin-embedded \[FFPE\] block, BM aspirate, or unstained slides) that:
+
+    * Contains the cancer type for which the participant is enrolled, and
+    * Was collected no more than 5 years prior to initiation of therapy, and
+    * Contains at least a surface area of 5 mm\^2 and optimal surface area of 25 mm\^2 or 3-5 mL cryopreserved bone marrow aspirate to yield 200 million bone marrow mononuclear cells, and
+    * Contains at least 10% tumor content. 70% tumor content is optimal, and
+    * No more than 1 line of standard of care systemic therapy was administered from the date of archival material collection to the date of initiation of therapy
+* Requirements for blood collection: ALL scenarios require fresh blood collection at enrollment
+
+  * Blood collection for clinical scenarios a, b, and c must take place within 1 week of fresh tumor specimen collection
+  * Blood collection for clinical scenario d must take place within 4 weeks of enrollment, and while patient is on treatment
+* Age 13 or older
+* Any sex
+* Eastern Cooperative Oncology Group (ECOG) performance status (PS) of 0, 1, or 2
+* Ability to understand and willingness to sign an informed consent document. Consent may be provided by a Legally Authorized Representative (LAR) in accordance with 45 CFR 46.102(i)
+* NCI PDMR INCLUSION CRITERIA: Patients with CRC with mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status
+* NCI PDMR INCLUSION CRITERIA: Patients with CRC who are 40 years old or younger at time of collection irrespective of mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) status
+* NCI PDMR INCLUSION CRITERIA: Patients with BRCA that are either
+
+  * Any race/ethnicity with hormone receptor positive (ER+PR+, ER+PR-, or ER-PR+)
+  * African American with triple negative (ER-PR-HER2-)
+* NCI PDMR INCLUSION CRITERIA: Patients with lung cancer (LCA), prostate cancer (PCA), gastroesophageal cancer (GEC), ovarian cancer (OV), acute myeloid leukemia (AML), multiple myeloma (MML)
+
+Exclusion Criteria:
+
+* Treated with or has already begun treatment with a non-standard of care therapeutic agent (investigational) in an interventional clinical trial
+
+  * For the purposes of this study, past enrollment in clinical trials whereby the patient was randomized and treated with standard-of-care anti-cancer treatment (chemotherapy regimen, surgery and radiation therapy) is allowed
+* Uncontrolled intercurrent illness that in the physician's assessment would pose undue risk for biopsy
+* Use of full dose coumarin-derivative anticoagulants such as warfarin are prohibited. Patients may be switched to low molecular weight (LMW) heparin at physician discretion
+
+  * Low molecular weight (LMW) heparin is permitted for prophylactic or therapeutic use
+  * Factor X inhibitors are permitted
+  * Use of anti-platelet drugs are permitted
+
+    * Stopping the anticoagulation treatment for biopsy, bone marrow aspirate, or resection should be per site standard operating procedure (SOP)
+* NCI PDMR EXCLUSION CRITERIA: Patients with complete response
+* NCI PDMR EXCLUSION CRITERIA: Patients with invasive fungal infections
+* NCI PDMR EXCLUSION CRITERIA: Patients with active and/or uncontrolled infections or who are still recovering from an infection
+
+  * Actively febrile patients with uncertain etiology of febrile episode
+  * All antibiotics for non-prophylactic treatment of infection should be completed at least 1 week (7 days) prior to collection
+  * No recurrence of fever or other symptoms related to infection for at least 1 week (7 days) following completion of antibiotics
+* NCI PDMR EXCLUSION CRITERIA: Patients with human immunodeficiency virus (HIV), active or chronic hepatitis (i.e. quantifiable hepatitis B virus \[HBV\]-deoxyribonucleic acid \[DNA\] and/or positive hepatitis B surface antigen \[HbsAg\], quantifiable hepatitis C virus \[HCV\]-ribonucleic acid \[RNA\]) or known history of HBV/HCV without documented resolution
+        
+
+        Instructions:
+        1. For EACH trial, evaluate the patient's eligibility based on:
+           - Medical condition match
+           - Age requirements
+           - Gender requirements
+           - Inclusion/exclusion criteria
+           - Overall medical compatibility
+        2. CRITICAL ELIGIBILITY RULES:
+           - If ANY exclusion criteria is violated → Mark as "NOT_ELIGIBLE"
+           - If critical inclusion criteria are NOT met (e.g., required molecular markers, prior treatment requirements, disease stage) → Mark as "NOT_ELIGIBLE"
+           - Only mark as "ELIGIBLE" if ALL critical requirements are met AND no exclusion criteria are violated
+           - Mark as "NEED_MORE_INFO" only if critical information is missing (not if criteria are clearly not met)
+        3. Provide detailed reasoning for each evaluation, clearly explaining why the patient is or is not eligible
+        4. Be thorough but concise in your analysis
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT04314401",
+                    "trial_title": "Cancer Moonshot Biobank Research Protocol",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-21T18:10:13.572539"
+            }
+        }
+        

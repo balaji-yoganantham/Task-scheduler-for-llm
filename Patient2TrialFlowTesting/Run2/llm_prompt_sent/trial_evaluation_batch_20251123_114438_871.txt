@@ -1,0 +1,436 @@
+=== PROMPT ===
+
+=== METADATA ===
+call_type: trial_evaluation_batch
+patient_id: 169
+mrn: 82646700
+batch_size: 1
+trial_ids: ['NCT05107674']
+
+
+        You are a medical research assistant specializing in clinical trial matching. 
+        Evaluate the following 1 clinical trials for the given patient and determine eligibility.
+
+        
+        PATIENT INFORMATION:
+        Patient ID: 169
+        MRN: 82646700
+        Age: 57
+        Gender: Female
+        Oncologist: Dr. Sarah Mitchell, MD
+        Combined Medical Record: Patient Name: Diana Castillo
+Patient MRN: 82646700
+Age: 57, Gender: Female
+Date of Visit: 2025-05-28
+Oncologist: Dr. Sarah Mitchell, MD
+
+Chief Complaint: - Weight loss, Bloating, Vomiting
+
+History of Present Illness: - Date of initial colorectal cancer diagnosis: April 20, 2025
+- Site of primary tumor: Sigmoid colon (left colon)
+- Date of initial diagnosis and TNM stage: April 20, 2025; T3N1bM1 (Stage IV)
+- Date and nature of metastatic disease diagnosis: June 12, 2025 - lung metastases identified
+- Summary of prior treatments: None - newly diagnosed, treatment-naïve
+- Current symptoms: Weight loss, Bloating, Vomiting, Nausea, Change in bowel habits
+- Performance status: ECOG 1
+- Recent complications or hospitalizations: None
+
+Past Medical History: - Other malignancies: None
+- Significant comorbidities:
+- ADHD
+- Endometriosis
+- Chronic back pain
+- Depression
+- Surgical history:
+- Cholecystectomy (2024)
+
+Family History: - Colorectal or other cancers in first-degree relatives: Father with colon cancer at age 68
+- Known familial syndromes: Genetic counseling pending
+
+Social History: - Smoking: Never smoker
+- Alcohol use: Former alcohol use, quit 5 years ago
+- Living situation/support: Lives with spouse, strong family support
+- Occupation: Small business owner
+- Functional status/ADL: Independent in all activities of daily living
+
+Review of Systems: - Constitutional: Fatigue, weight loss, no fever, chills, or night sweats
+- GI: Abdominal pain, change in bowel habits, no hematemesis, early satiety
+- Cardiovascular: No chest pain, palpitations, or shortness of breath
+- Respiratory: No cough, dyspnea, or wheezing
+- Genitourinary: No dysuria, hematuria, or urinary frequency
+- Neurological: No headaches, dizziness, or focal neurological symptoms
+- Musculoskeletal: No new joint pain or muscle weakness
+- Integumentary: No rashes or skin changes
+- Hematologic: No easy bruising or bleeding
+Medications & Allergies
+- Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Medications and Allergies: - Current medications (exclude current anti cancer therapies):
+- None
+- Allergies: Shellfish (mild GI upset)
+
+Physical Examination: - Vitals: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+- General appearance: Alert and oriented, appears stated age, mild pallor
+- Abdominal exam: Soft, mild tenderness, no masses palpable, no ascites, active bowel sounds
+- Rectal exam: No masses palpable, guaiac positive stool
+- Other relevant findings: No lymphadenopathy, no peripheral edema
+Laboratory & Imaging Results
+- Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Laboratory and Imaging Results: - Most recent CBC:
+- WBC: 6.6 × 10³/µL, ANC: 3.1 × 10³/µL
+- Hgb: 15.9 g/dL, Platelets: 218 × 10³/µL
+- Chemistry:
+- Creatinine: 1.2 mg/dL, eGFR: 72 mL/min/1.73m²
+- LFTs:
+- AST: 20 U/L, ALT: 28 U/L
+- Alkaline phosphatase: 53 U/L, Total bilirubin: 0.8 mg/dL
+- CEA: 132.6 ng/mL (elevated)
+- Molecular markers:
+- RAS: NRAS Q61H
+- BRAF: Wild-type
+- MSI/MMR status: MSS
+- Imaging:
+- CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Imaging: - CT chest/abdomen/pelvis (June 12, 2025):
+Primary sigmoid colon mass (6.0 cm), annular narrowing
+3 pulmonary nodules (largest 2.6 cm)
+- Other relevant tests: Colonoscopy with biopsy confirming moderately differentiated
+adenocarcinoma
+
+Vital Signs: BP 128/79, HR 70, RR 19, Temp 98.1°F, SpO2 100% on room air, Weight 198 lbs
+
+Assessment: - Diagnosis: Metastatic colorectal cancer (lung)
+- Disease status: Newly diagnosed, treatment-naïve
+- Treatment-related toxicities/adverse events: None at this time
+- Symptom burden: Moderate - abdominal pain, constitutional symptoms
+        
+
+        CLINICAL TRIALS TO EVALUATE:
+        
+        ============================================================
+        TRIAL 1:
+        ============================================================
+        Trial ID: NCT05107674
+        Title: A Phase 1a, Dose Escalation, Safety and Tolerability Study of NX-1607, a Casitas B-lineage Lymphoma Proto-oncogene (CBL-B) Inhibitor, in Adults With Advanced Malignancies, With Phase 1b Expansion in Select Tumor Types
+        Condition: ["Ovarian Cancer, Epithelial", "Gastric Cancer", "GastroEsophageal Junction (GEJ) Cancer", "Head and Neck Squamous Cell Carcinoma", "Metastatic or Unresectable Melanoma", "Non-small Cell Lung Cancer (NSCLC)", "Metastatic Castration-resistant Prostate Cancer (mCRPC)", "Malignant Pleural Mesothelioma (MPM)", "Triple Negative Breast Cancer (TNBC)", "Metastatic Urothelial Carcinoma", "Cervical Cancer", "Diffuse Large B Cell Lymphoma (DLBCL)", "Richter Transformation", "Microsatellite Stable Colorectal Carcinoma"]
+        Phase: PHASE1
+        Status: RECRUITING
+        Investigator: 
+        Age Range: 18 Years - 
+        Gender: ALL
+        Hybrid Score: 5.027
+        
+        Brief Summary: This is a first-in-human Phase 1a/1b multicenter, open-label oncology study designed to evaluate the safety and anti-cancer activity of NX-1607 in patients with advanced malignancies.
+        
+        Detailed Description: Phase 1a will consist of 2 study arms: Monotherapy and Paclitaxel combo. Phase 1a dose escalation will evaluate the safety and tolerability of NX-1607 in adult patients with advanced solid tumors for which standard therapy with proven clinical benefit does not exist, is no longer effective, or is not appropriate. Indications for monotherapy include platinum resistant epithelial ovarian cancer (EOC), gastric/gastroesophageal junction (GEJ) cancer, squamous cell carcinoma of the head and neck (HNSCC), recurrent and either metastatic or unresectable melanoma, non-small cell lung cancer (NSCLC), metastatic castration-resistant prostate cancer (mCRPC), malignant pleural mesothelioma (MPM), triple-negative breast cancer (TNBC), locally advanced or metastatic urothelial cancer, cervical cancer, and microsatellite stable colorectal cancer (MSS CRC), and diffuse large cell B-cell lymphoma (DLBCL) including patients with Richter transformation (DLBCL-RT). Indications for paclitaxel combo may include, but are not limited to, platinum-resistant EOC, gastric/GEJ cancer, HNSCC, NSCLC, TNBC, locally advanced or metastatic urothelial cancer, and cervical cancer at the Sponsor's discretion.
+
+Phase 1b will investigate the efficacy of NX-1607 as monotherapy or in combination with paclitaxel at the dose(s) selected in Phase 1a in select advanced malignancies for which standard therapy, including immunotherapy, with proven clinical benefit does not exist, is no longer effective, or is not appropriate. Indications include platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma, advanced gastric/GEJ cancer, HNSCC, recurrent and either metastatic or unresectable melanoma, advanced NSCLC, mCRPC, MSS CRC, mixed solid tumor cohort indications consisting of patients with MPM, TNBC, locally advanced or metastatic urothelial cancer, cervical cancer, and DLBCL including patients with DLBCL-RT. In Arm 1 (NX-1607 monotherapy), more than 1 dose level of NX-1607 may be tested in individual indications, each of which will constitute a separate cohort in Phase 1b.
+        
+        Inclusion Criteria: ["* Age \u2265 18 years.", "* Measurable disease per disease-specific response criteria.", "* Patients must have disease that is metastatic or unresectable and have received standard treatment options, are not candidates for standard treatment options, or will otherwise be prevented from receiving any standard treatment options.", "* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.", "* Minimum of 3 weeks or 5 half-lives (whichever is shorter) since last dose of systemic cancer therapy (unless otherwise specified) or minimum of 2 weeks since last radiotherapy, or minimum of 6 weeks since last systemic therapy with nitrosoureas, antibody-drug conjugate, or radio immuno-conjugate therapy.", "* Adequate organ and bone marrow function, in the absence of growth factors (with limited exception for DLBCL), as defined by laboratory parameters.", "* Patients of child-bearing potential must use adequate contraceptive measures to avoid pregnancy for the duration of the study as defined in the protocol.", "* Patient must be willing and able to adhere to the prohibitions and restrictions specified in the protocol.", "* Each patient must sign an informed consent form (ICF).", "* Histological or cytological diagnosis of platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma; gastric/GEJ cancer; HNSCC; recurrent and either metastatic or unresectable melanoma; NSCLC; mCRPC; MPM; TNBC; locally advanced or metastatic urothelial cancer; cervical cancer; MSS CRC; or DLBCL (including DLBCL-RT)", "* Accessible tumor (for all cohorts) or lymph node (DLBCL only) for biopsy (Phase 1b only).", "Key"]
+        
+        Exclusion Criteria: ["* Active untreated brain metastases.", "* Patient has any of the following:", "* Uncontrolled intercurrent illness including, but not limited to, poorly controlled hypertension or diabetes, or ongoing active infection requiring systemic therapy.", "* Patients with primary refractory EOC defined as patients who do not respond to their first platinum-containing regimen or who relapse less than 6 months after completion of that first platinum-containing regimen", "* Psychiatric illness that would limit compliance with study requirements.", "* Treatment with any of the following prior to the first dose of NX-1607: CPI (anti-PD-1, PD-L1, cytotoxic T-lymphocyte-associated protein 4, etc) within 3 weeks; autologous or allogeneic stem cell transplant within 100 days; prior systemic cancer therapy within 3 weeks or 5 half-lives (whichever is shorter) (unless otherwise specified) (including hormonal therapy except for hormonal prophylaxis for a prior malignancy); prior radiotherapy within 2 weeks; prior systemic therapy with nitrosoureas, antibody-drug conjugate, or radio-immuno-conjugate therapy within 6 weeks; use of strong or moderate CYP3A4 inducers or inhibitors within 14 days or 7 days, respectively, or 5 half-lives (whichever is longer)", "* History of CAR-T therapy within 30 days prior to the first dose of NX-1607.", "* Toxicities from previous anti-cancer therapies that have not resolved to baseline levels or to Grade 1 or less except for Grade 2 alopecia and Grade 2 peripheral neuropathy or patients receiving endocrine replacement therapy", "* Patients who experienced Grade 3 or higher irAEs with prior immunotherapy.", "* History of uveitis, or an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.", "* Unable to swallow capsules or has malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel or ulcerative colitis, symptomatic inflammatory bowel disease, or partial or complete bowel obstruction likely to interfere with the delivery, absorption, or metabolism of NX-1607.", "* Known allergies, hypersensitivity, or intolerance to components of NX-1607.", "* Pregnant, breastfeeding, or planning to become pregnant while enrolled in this study or within 6 months after the last dose of NX-1607.", "* Patient is a man who plans to father a child while enrolled in this study or within 3 months after the last dose of NX-1607 and, as applicable, within 6 months after the last dose of paclitaxel.", "* Patient has had major surgery (e.g., requiring general anesthesia) within 4 weeks before the planned first dose of NX-1607, or will not have fully recovered from surgery, or has surgery planned during the time the patient is expected to participate in the study or within 4 weeks after the last dose of NX-1607. Note: Patients with minor planned surgical procedures to be conducted under local anesthesia may participate.", "* Vaccinated with a live vaccine within 28 days (with the exception of the annual inactivated influenza vaccine) or COVID-19 vaccination within 14 days prior to the first dose of NX-1607.", "* Active known second malignancy with the exception of any of the following:", "* Adequately treated basal cell carcinoma, squamous cell carcinoma of the skin, or in situ cervical cancer.", "* Adequately treated Stage I cancer from which the patient is currently in remission and has been in remission for \u2265 2 years.", "* Low-risk prostate cancer with Gleason score \\< 7 and PSA \\< 10 ng/mL.", "* Any other cancer from which the patient has been disease-free for \u2265 2 years.", "* Infection with human immunodeficiency virus (HIV)-1 or HIV-2. Exception: Patients with well controlled HIV (e.g., CD4 \\> 350/mm3 and undetectable viral load) are eligible.", "* Current active hepatitis, including hepatitis A (hepatitis A virus immunoglobulin M \\[IgM\\] positive), hepatitis B (hepatitis B virus \\[HBV\\] surface antigen positive), or hepatitis C (hepatitis C virus \\[HCV\\] antibody positive, confirmed by HCV RNA). Patients with HCV with undetectable virus after treatment are eligible. Patients with prior exposure to HBV may be entered if quantitative PCR is negative.", "* Use of systemic corticosteroids (\\> 20 mg prednisone or equivalent) within 15 days (except for prophylaxis for radio diagnostic contrast reactions and/or prophylaxis for patients receiving paclitaxel), or other immunosuppressive drugs within 30 days, prior to the first dose of NX-1607.", "* Use of biotin (i.e., Vitamin B7) or supplements containing biotin higher than the daily adequate intake of 30 \u00b5g \\[NIH 2020\\] (Note: Patients who switch from a high dose to a dose of 30 \u00b5g/day or less at least 1 day prior to Screening assessments are eligible for study entry).", "* Receipt of an IP or has been treated with an investigational device within 3 weeks or 5 half-lives (whichever is shorter) prior to the first dose of NX-1607.", "* Any of the following within 6 months prior to the first dose of NX-1607 or ongoing:", "* Myocardial infarction", "* Unstable angina", "* Unstable symptomatic ischemic heart disease", "* New York Heart Association Class III or IV heart failure", "* Thromboembolic events (e.g., deep vein thrombosis, pulmonary embolism, or symptomatic cerebrovascular events)", "* Any other significant cardiac condition (e.g., pericardial effusion, restrictive cardiomyopathy, severe untreated valvular stenosis, or severe congenital heart disease)", "* Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating Investigator in consultation with the Medical Monitor."]
+        
+        Eligibility Criteria: Key Inclusion Criteria:
+
+* Age ≥ 18 years.
+* Measurable disease per disease-specific response criteria.
+* Patients must have disease that is metastatic or unresectable and have received standard treatment options, are not candidates for standard treatment options, or will otherwise be prevented from receiving any standard treatment options.
+* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.
+* Minimum of 3 weeks or 5 half-lives (whichever is shorter) since last dose of systemic cancer therapy (unless otherwise specified) or minimum of 2 weeks since last radiotherapy, or minimum of 6 weeks since last systemic therapy with nitrosoureas, antibody-drug conjugate, or radio immuno-conjugate therapy.
+* Adequate organ and bone marrow function, in the absence of growth factors (with limited exception for DLBCL), as defined by laboratory parameters.
+* Patients of child-bearing potential must use adequate contraceptive measures to avoid pregnancy for the duration of the study as defined in the protocol.
+* Patient must be willing and able to adhere to the prohibitions and restrictions specified in the protocol.
+* Each patient must sign an informed consent form (ICF).
+* Histological or cytological diagnosis of platinum-resistant EOC, including primary peritoneal and fallopian tube carcinoma; gastric/GEJ cancer; HNSCC; recurrent and either metastatic or unresectable melanoma; NSCLC; mCRPC; MPM; TNBC; locally advanced or metastatic urothelial cancer; cervical cancer; MSS CRC; or DLBCL (including DLBCL-RT)
+* Accessible tumor (for all cohorts) or lymph node (DLBCL only) for biopsy (Phase 1b only).
+
+Key Exclusion Criteria:
+
+* Active untreated brain metastases.
+* Patient has any of the following:
+* Uncontrolled intercurrent illness including, but not limited to, poorly controlled hypertension or diabetes, or ongoing active infection requiring systemic therapy.
+* Patients with primary refractory EOC defined as patients who do not respond to their first platinum-containing regimen or who relapse less than 6 months after completion of that first platinum-containing regimen
+* Psychiatric illness that would limit compliance with study requirements.
+* Treatment with any of the following prior to the first dose of NX-1607: CPI (anti-PD-1, PD-L1, cytotoxic T-lymphocyte-associated protein 4, etc) within 3 weeks; autologous or allogeneic stem cell transplant within 100 days; prior systemic cancer therapy within 3 weeks or 5 half-lives (whichever is shorter) (unless otherwise specified) (including hormonal therapy except for hormonal prophylaxis for a prior malignancy); prior radiotherapy within 2 weeks; prior systemic therapy with nitrosoureas, antibody-drug conjugate, or radio-immuno-conjugate therapy within 6 weeks; use of strong or moderate CYP3A4 inducers or inhibitors within 14 days or 7 days, respectively, or 5 half-lives (whichever is longer)
+* History of CAR-T therapy within 30 days prior to the first dose of NX-1607.
+* Toxicities from previous anti-cancer therapies that have not resolved to baseline levels or to Grade 1 or less except for Grade 2 alopecia and Grade 2 peripheral neuropathy or patients receiving endocrine replacement therapy
+* Patients who experienced Grade 3 or higher irAEs with prior immunotherapy.
+* History of uveitis, or an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., with use of disease modifying agents, corticosteroids, or immunosuppressive drugs). Replacement therapy (e.g., thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.
+* Unable to swallow capsules or has malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel or ulcerative colitis, symptomatic inflammatory bowel disease, or partial or complete bowel obstruction likely to interfere with the delivery, absorption, or metabolism of NX-1607.
+* Known allergies, hypersensitivity, or intolerance to components of NX-1607.
+* Pregnant, breastfeeding, or planning to become pregnant while enrolled in this study or within 6 months after the last dose of NX-1607.
+* Patient is a man who plans to father a child while enrolled in this study or within 3 months after the last dose of NX-1607 and, as applicable, within 6 months after the last dose of paclitaxel.
+* Patient has had major surgery (e.g., requiring general anesthesia) within 4 weeks before the planned first dose of NX-1607, or will not have fully recovered from surgery, or has surgery planned during the time the patient is expected to participate in the study or within 4 weeks after the last dose of NX-1607. Note: Patients with minor planned surgical procedures to be conducted under local anesthesia may participate.
+* Vaccinated with a live vaccine within 28 days (with the exception of the annual inactivated influenza vaccine) or COVID-19 vaccination within 14 days prior to the first dose of NX-1607.
+* Active known second malignancy with the exception of any of the following:
+
+  * Adequately treated basal cell carcinoma, squamous cell carcinoma of the skin, or in situ cervical cancer.
+  * Adequately treated Stage I cancer from which the patient is currently in remission and has been in remission for ≥ 2 years.
+  * Low-risk prostate cancer with Gleason score \< 7 and PSA \< 10 ng/mL.
+  * Any other cancer from which the patient has been disease-free for ≥ 2 years.
+* Infection with human immunodeficiency virus (HIV)-1 or HIV-2. Exception: Patients with well controlled HIV (e.g., CD4 \> 350/mm3 and undetectable viral load) are eligible.
+* Current active hepatitis, including hepatitis A (hepatitis A virus immunoglobulin M \[IgM\] positive), hepatitis B (hepatitis B virus \[HBV\] surface antigen positive), or hepatitis C (hepatitis C virus \[HCV\] antibody positive, confirmed by HCV RNA). Patients with HCV with undetectable virus after treatment are eligible. Patients with prior exposure to HBV may be entered if quantitative PCR is negative.
+* Use of systemic corticosteroids (\> 20 mg prednisone or equivalent) within 15 days (except for prophylaxis for radio diagnostic contrast reactions and/or prophylaxis for patients receiving paclitaxel), or other immunosuppressive drugs within 30 days, prior to the first dose of NX-1607.
+* Use of biotin (i.e., Vitamin B7) or supplements containing biotin higher than the daily adequate intake of 30 µg \[NIH 2020\] (Note: Patients who switch from a high dose to a dose of 30 µg/day or less at least 1 day prior to Screening assessments are eligible for study entry).
+* Receipt of an IP or has been treated with an investigational device within 3 weeks or 5 half-lives (whichever is shorter) prior to the first dose of NX-1607.
+* Any of the following within 6 months prior to the first dose of NX-1607 or ongoing:
+
+  * Myocardial infarction
+  * Unstable angina
+  * Unstable symptomatic ischemic heart disease
+  * New York Heart Association Class III or IV heart failure
+  * Thromboembolic events (e.g., deep vein thrombosis, pulmonary embolism, or symptomatic cerebrovascular events)
+  * Any other significant cardiac condition (e.g., pericardial effusion, restrictive cardiomyopathy, severe untreated valvular stenosis, or severe congenital heart disease)
+  * Has a history or current evidence of any condition, therapy, or laboratory abnormality that might confound the results of the study, interfere with the participant's participation for the full duration of the study, or is not in the best interest of the participant to participate, in the opinion of the treating Investigator in consultation with the Medical Monitor.
+        
+
+    ============================================================
+    SYSTEMATIC EVALUATION FRAMEWORK
+    ============================================================
+
+    Evaluate EACH criterion below independently and document your findings:
+
+    1. PRIMARY DIAGNOSIS MATCH
+       - Verify exact disease/condition alignment with trial indication
+       - Confirm histological or pathological diagnosis documentation
+       - Assess disease subtype compatibility if specified in trial
+
+    2. DISEASE STAGE COMPATIBILITY
+       - Verify cancer stage matches trial requirements (e.g., Stage III-IV, metastatic, locally advanced)
+       - Confirm measurable disease criteria if required
+       - Document evidence of disease progression if required by protocol
+
+    3. AGE ELIGIBILITY
+       - Confirm patient age falls within trial-specified range
+       - Note any pediatric or geriatric-specific considerations
+
+    4. GENDER ELIGIBILITY
+       - Verify biological sex meets trial requirements
+       - Assess pregnancy status and contraception requirements if applicable
+
+    5. PERFORMANCE STATUS
+       - Evaluate ECOG or Karnofsky performance status score
+       - Confirm score meets trial threshold (typically ECOG 0-1 or 0-2)
+       - Note date of most recent assessment
+
+    6. PRIOR TREATMENTS
+       - Document all prior lines of therapy (chemotherapy, immunotherapy, targeted therapy, radiation, surgery)
+       - Verify required prior treatments have been received (if applicable)
+       - Confirm maximum prior treatment lines not exceeded
+       - Calculate washout periods from last treatment
+       - Identify any prohibited prior therapies
+
+    7. BIOMARKERS AND MOLECULAR MARKERS
+       - Assess required molecular markers (e.g., PD-L1, HER2, EGFR, BRCA, MSI status)
+       - Verify testing methodology and result validity
+       - Confirm biomarker status aligns with trial requirements
+
+    8. ORGAN FUNCTION AND LABORATORY VALUES
+       - Evaluate hematologic parameters: ANC, platelets, hemoglobin
+       - Assess hepatic function: AST, ALT, bilirubin, albumin
+       - Evaluate renal function: creatinine, eGFR/CrCl
+       - Review cardiac function: LVEF, QTc interval if required
+       - Note dates of laboratory assessments and flag outdated values
+
+    9. COMORBIDITIES AND MEDICAL HISTORY
+       - Screen for prohibited concurrent conditions
+       - Assess controlled vs. uncontrolled chronic conditions
+       - Evaluate cardiac history, autoimmune conditions, prior malignancies
+       - Review CNS metastases status and stability
+       - Identify active infections or other acute conditions
+
+    10. CONCOMITANT MEDICATIONS
+        - Screen current medications against prohibited drug list
+        - Identify potential drug-drug interactions
+        - Assess CYP450 inducer/inhibitor conflicts if relevant
+        - Verify adequate washout from prohibited medications
+
+    11. EXCLUSION CRITERIA SCREENING (CRITICAL)
+        - Systematically evaluate EVERY exclusion criterion listed in protocol
+        - Document patient status against each exclusion criterion
+        - Flag ANY exclusion criterion violation as disqualifying
+
+    ============================================================
+    CRITICAL ELIGIBILITY RULES (STRICTLY ENFORCE)
+    ============================================================
+
+    RULE 1 - EXCLUSION VIOLATION:
+    If ANY exclusion criterion is violated → Eligibility = "NOT_ELIGIBLE"
+    (A single exclusion violation is automatically disqualifying)
+
+    RULE 2 - CRITICAL INCLUSION FAILURE:
+    If ANY critical inclusion criterion is NOT met → Eligibility = "NOT_ELIGIBLE"
+    Critical inclusion criteria include:
+    • Primary diagnosis match
+    • Disease stage requirements
+    • Required molecular/biomarker status
+    • Mandatory prior treatment requirements
+    • Age requirements
+    • Performance status threshold
+
+    RULE 3 - ELIGIBLE DETERMINATION:
+    Mark as "ELIGIBLE" ONLY when:
+    • ALL inclusion criteria are satisfied
+    • NO exclusion criteria are violated
+    • All required documentation is present and current
+
+    RULE 4 - NEED_MORE_INFO DETERMINATION:
+    Mark as "NEED_MORE_INFO" ONLY when:
+    • Critical information is genuinely missing from the record
+    • The missing information could change eligibility if obtained
+    • Do NOT use this status if criteria are clearly not met
+
+    ============================================================
+    CONFIDENCE SCORE CALCULATION GUIDELINES
+    ============================================================
+
+    Calculate confidence score (0-100) based on these factors:
+
+    HIGH CONFIDENCE (85-100):
+    - All required data elements present and documented
+    - Laboratory values are recent (within 14-28 days)
+    - Clear alignment or misalignment with all criteria
+    - No ambiguity in eligibility determination
+    - Complete treatment history available
+
+    MODERATE CONFIDENCE (70-84):
+    - Most data elements present with minor gaps
+    - Some laboratory values slightly outdated (28-45 days)
+    - Minor ambiguities that do not affect overall determination
+    - Treatment history substantially complete
+
+    LOW-MODERATE CONFIDENCE (50-69):
+    - Several data elements missing or unclear
+    - Laboratory values outdated (>45 days)
+    - Ambiguities present that may affect determination
+    - Incomplete treatment or medication history
+
+    LOW CONFIDENCE (<50):
+    - Significant data gaps affecting assessment
+    - Critical information missing
+    - Unable to reliably assess multiple criteria
+    - Assessment based on limited documentation
+
+    CONFIDENCE SCORE DEDUCTIONS:
+    - Missing critical lab values: -10 to -15 points
+    - Outdated assessments (>30 days): -5 to -10 points
+    - Incomplete treatment history: -10 to -15 points
+    - Ambiguous biomarker status: -10 to -20 points
+    - Missing performance status: -15 points
+    - Unclear disease staging: -15 to -20 points
+
+    ============================================================
+    REASONING DOCUMENTATION REQUIREMENTS
+    ============================================================
+
+    Your reasoning must include:
+
+    1. CRITERION-BY-CRITERION ANALYSIS
+       - Address each of the 10+ evaluation criteria explicitly
+       - Cite specific patient data supporting each assessment
+       - Note any criteria that could not be evaluated
+
+    2. EVIDENCE-BASED JUSTIFICATION
+       - Reference specific values, dates, and findings from patient record
+       - Quote relevant portions of medical documentation
+       - Identify source of each data point when possible
+
+    3. CLEAR ELIGIBILITY LOGIC
+       - State the primary factor(s) determining eligibility status
+       - Explain the logical pathway to your conclusion
+       - If NOT_ELIGIBLE, clearly identify disqualifying criterion/criteria
+       - If NEED_MORE_INFO, specify exactly what information is required
+
+    4. RISK AND CONSIDERATION NOTES
+       - Flag borderline criteria that warrant clinical review
+       - Note any safety considerations
+       - Identify time-sensitive factors (e.g., expiring lab values)
+       
+        Provide a comprehensive evaluation with:
+        - Eligibility status (ELIGIBLE, NOT_ELIGIBLE, NEED_MORE_INFO)
+        - Confidence score (0-100)
+        - Detailed reasoning that clearly explains why the patient is or is not eligible
+        - Specific inclusion/exclusion criteria met or not met
+        - Recommendations for next steps
+        5. IMPORTANT: Return ONLY valid JSON - no markdown code blocks, no ```json markers, no extra text
+        6. Ensure all strings use double quotes and escape special characters properly
+        7. Make sure all brackets and braces are properly closed
+
+        Return ONLY a valid JSON object (no markdown formatting) with this structure:
+        {
+            "batch_evaluations": [
+                {
+                    "trial_id": "NCT05107674",
+                    "trial_title": "A Phase 1a, Dose Escalation, Safety and Tolerability Study of NX-1607, a Casitas B-lineage Lymphoma Proto-oncogene (CBL-B) Inhibitor, in Adults With Advanced Malignancies, With Phase 1b Expansion in Select Tumor Types",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 85,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2", "criteria3" "Metastatic Colorectal Cancer",
+            "BRAF V600E-mutant",
+            "0 prior regimens",
+            "ECOG PS 0-1",
+            "Measurable disease"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2"],
+                    "inclusion_criteria_met_count": 5,
+                    "exclusion_criteria_violated_count": 0,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                },
+                {
+                    "trial_id": "N/A",
+                    "trial_title": "N/A",
+                    "eligibility_status": "ELIGIBLE|NOT_ELIGIBLE|NEED_MORE_INFO",
+                    "confidence_score": 75,
+                    "reasoning": "Detailed explanation of eligibility decision",
+                    "inclusion_criteria_met": ["criteria1", "criteria2"],
+                    "exclusion_criteria_violated": ["criteria1", "criteria2", "criteria3"],
+                    "inclusion_criteria_met_count": 3,
+                    "exclusion_criteria_violated_count": 2,
+                    "total_inclusion_criteria": 8,
+                    "total_exclusion_criteria": 12,
+                    "recommendations": "Specific recommendations for this trial"
+                }
+                // ... continue for all 1 trials
+            ],
+            "batch_summary": {
+                "total_trials_evaluated": 1,
+                "eligible_count": 5,
+                "not_eligible_count": 10,
+                "need_more_info_count": 5,
+                "average_confidence": 78.5,
+                "top_recommendations": [
+                    "Trial 1 - Best match due to...",
+                    "Trial 2 - Good alternative because...",
+                    "Trial 3 - Consider if..."
+                ],
+                "generated_at": "2025-11-23T11:44:38.871043"
+            }
+        }
+        
